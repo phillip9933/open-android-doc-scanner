@@ -1,0 +1,2 @@
+Source-built libraries published to ${PROJECT_ROOT}\scanner-processing-opencv\src\main\jniLibs
+Build audit and hashes: ${BUILD_USER_HOME}\Documents\Codex\2026-10-01\files-pasted-by-the-user-you\work\native\source-build-v2\audit\native-build-manifest.json

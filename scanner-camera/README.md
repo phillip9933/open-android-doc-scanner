@@ -1,0 +1,25 @@
+# Camera integration
+
+`ScannerCamera(context, lifecycleOwner, previewView, config, onAnalysis, onAutoCapture, onError)` owns only its own CameraX use cases. Request Android CAMERA permission before `bind()`. The binding waits for a nonzero PreviewView layout. `close()` is idempotent and also runs when the owner is destroyed. CameraX stops camera streams with the owner's lifecycle; STOP additionally cancels obsolete analysis and clears the stability window.
+
+`onAnalysis` and `onAutoCapture`, `onError`, and `onSaved` run on the main thread. The host's `onAutoCapture` should choose a destination and call `capture(file) { ... }`. The auto callback reserves that scene until a capture occurs or a sustained different scene appears. A manual call to `capture` remains available on the same document; concurrent capture calls are ignored. Choose a new destination for each capture: existing files are rejected and the final move does not replace a file created by another writer. Pending staging files and committed but undelivered captures are removed on close. No result callback is delivered after close. Capture errors are reported through `onError`.
+
+## Preview and captured image coordinates
+
+PreviewView uses FIT_CENTER. Preview, JPEG capture, and analysis are bound in a single UseCaseGroup with `previewView.viewPort`. Analysis converts CameraX YUV to a separate Bitmap, crops it to ImageProxy.cropRect, rotates by imageInfo.rotationDegrees, and closes the ImageProxy before OpenCV work. Detection corners therefore describe **the cropped, visually upright analysis image**, normalized in [0,1] in TL, TR, BR, BL order.
+
+Use `camera.normalizedToPreview(point)` for PreviewView-local overlay pixels. `analysisImageSize` exposes the current upright dimensions. `ViewportMapping.toPreview` applies `scale = min(viewWidth/imageWidth, viewHeight/imageHeight)` and centered letterbox offsets. Overlay layout must have the same size and origin as PreviewView; drawing over a parent with different padding requires adding the PreviewView's offset. Do not use core Geometry.preview, which describes a center-cropped display. Rebinding after a size or display rotation change discards outdated detection dimensions/results. Only the rear camera is selected, so no mirror correction is needed.
+
+JPEG capture selects the highest available resolution and retains CameraX's crop/EXIF metadata. Import through OpenCvProcessor, which handles EXIF upright orientation. The common viewport aligns normalized analysis/capture content, subject to CameraX sensor-to-output rounding at stream resolutions; full-resolution detection on the saved original remains the final source of editable corners. Do not rotate JPEG pixels again in the UI. Resolution, focus, and flash support depend on the device.
+
+## Analysis and auto capture
+
+KEEP_ONLY_LATEST backpressure plus one worker prevents stale processing queues. Frames are accepted no faster than every 180 ms, and at most one main-thread analysis delivery is pending. The analysis stream requests approximately 960x720 with device-supported fallback; OpenCV also bounds its detection image internally. ImageProxy closes in every path, and all owned Bitmap allocations recycle after use.
+
+The default gate requires confidence >= 0.72, average brightness 0.18 through 0.90, Laplacian variance >= 60, and corners within average normalized distance 0.018 of the stability window's first corners for 900 ms. A gap over 600 ms or a lifecycle pause resets stability. Successful/reserved capture locks a scene using its 64 normalized grayscale cell means. Only mean absolute signature difference >= 0.12 lasting 400 ms unlocks automatic capture; moving identical paper alone does not unlock it. Failed capture unlocks and requires a fresh stable window. Thresholds are conservative heuristics, not OCR or a guarantee of capture quality. Similar-looking consecutive pages may require the manual shutter or moving the page fully out of view; no algorithm can reliably identify different blank pages from these metrics alone.
+
+## Verification
+
+JVM tests cover duration, confidence/exposure/sharpness rejection, gradual cumulative motion, dropped/reversed timestamps, duplicate lockout, transient scene changes, capture concurrency, manual duplicate capture, lifecycle reset, failed-capture retries, throttle rate, and FIT_CENTER mapping/round trips. They do not emulate camera hardware.
+
+Before release, test on physical rear cameras: portrait/landscape and 180-degree display changes; a printed rectangular grid in all four corners; overlay/captured JPEG alignment including EXIF; normal/low light, glare, shadow, motion and focus; torch absence/presence; permission denial; navigation/background/resume while analyzing and while capturing; repeated shutter taps; two similar pages versus a visibly different scene; rotation/resizing during analysis; memory across long sessions; destination storage failure. Confirm every preview/capture stream stops after close and the rest of the app's camera use cases remain intact. The camera module needs no network permission or network calls.

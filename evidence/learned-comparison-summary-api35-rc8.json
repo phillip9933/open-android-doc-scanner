@@ -1,0 +1,97 @@
+{
+  "summary": [
+    {
+      "cohort": "benchmark",
+      "mode": "Standard",
+      "positives": 10,
+      "truePositives": 10,
+      "negatives": 2,
+      "falsePositives": 0,
+      "meanIoU": 0.9962753078757802,
+      "meanMatchedCornerError": 0.0008402485755594341,
+      "p50": 10.6815,
+      "p95": 24.3161,
+      "confidenceEligible": 10
+    },
+    {
+      "cohort": "benchmark",
+      "mode": "AI",
+      "positives": 10,
+      "truePositives": 3,
+      "negatives": 2,
+      "falsePositives": 0,
+      "meanIoU": 0.23862520302958734,
+      "meanMatchedCornerError": 0.060121844778241576,
+      "p50": 20.9256,
+      "p95": 29.9859,
+      "confidenceEligible": 1
+    },
+    {
+      "cohort": "challenge",
+      "mode": "Standard",
+      "positives": 6,
+      "truePositives": 5,
+      "negatives": 4,
+      "falsePositives": 0,
+      "meanIoU": 0.8308601007852215,
+      "meanMatchedCornerError": 0.0007008285572768091,
+      "p50": 9.6641,
+      "p95": 39.7649,
+      "confidenceEligible": 5
+    },
+    {
+      "cohort": "challenge",
+      "mode": "AI",
+      "positives": 6,
+      "truePositives": 1,
+      "negatives": 4,
+      "falsePositives": 0,
+      "meanIoU": 0.0411775135783615,
+      "meanMatchedCornerError": 0.24488816714381684,
+      "p50": 17.7612,
+      "p95": 23.8426,
+      "confidenceEligible": 1
+    },
+    {
+      "cohort": "temporal-shadow",
+      "mode": "Standard",
+      "positives": 32,
+      "truePositives": 29,
+      "negatives": 24,
+      "falsePositives": 0,
+      "meanIoU": 0.9035447209986606,
+      "meanMatchedCornerError": 0.0008376272665464808,
+      "p50": 8.3764,
+      "p95": 18.516,
+      "confidenceEligible": 29
+    },
+    {
+      "cohort": "temporal-shadow",
+      "mode": "AI",
+      "positives": 32,
+      "truePositives": 0,
+      "negatives": 24,
+      "falsePositives": 0,
+      "meanIoU": 0,
+      "meanMatchedCornerError": null,
+      "p50": 20.2381,
+      "p95": 26.343,
+      "confidenceEligible": 0
+    }
+  ],
+  "stability": {
+    "Standard": {
+      "matchedAdjacentPairs": 23,
+      "dropouts": 2,
+      "meanRawMotion": 0.005469926897208384,
+      "meanResidualJitter": 0.00031640605791590816
+    },
+    "AI": {
+      "matchedAdjacentPairs": 0,
+      "dropouts": 0,
+      "meanRawMotion": null,
+      "meanResidualJitter": null
+    }
+  },
+  "coldStartIncludingStandardWarmupMillis": 236.9897
+}

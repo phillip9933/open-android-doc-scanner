@@ -1,0 +1,890 @@
+{
+  "apk_native_libraries": [
+    {
+      "abi": "arm64-v8a",
+      "apk_entry": "lib/arm64-v8a/libandroidx.graphics.path.so",
+      "declared_pom_licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "mapping_gaps": [],
+      "match_method": "exact_sha256",
+      "name": "libandroidx.graphics.path.so",
+      "notice_evidence": [
+        {
+          "apk_entry": "assets/offline-scanner-notices/Android-NDK-NOTICE.toolchain.txt",
+          "basis": "POM Apache-2.0 declaration and full packaged Apache license text",
+          "entry": "assets/offline-scanner-notices/Android-NDK-NOTICE.toolchain.txt",
+          "is_full_apache_text": true,
+          "sha256": "789714a9076571c580cf531bdcebec776a4d889c12c3c1108adafc6e4338710a",
+          "size_bytes": 799639
+        }
+      ],
+      "notice_status": "evidence_collected",
+      "packaged_identity": {
+        "allocated_section_count": 21,
+        "allocated_sections_sha256": "e1faee2e95e9c440efd09716be583265b9dfa6413a29f67a3dc55a72a837462d",
+        "gnu_build_id": "a7846ae06d6bf6cf63fa7c5e056b5de493c71567",
+        "machine": 183
+      },
+      "packaged_sha256": "41e9a793c43a0f4fddb19e33f346bace464f30f888ba7b9eaf96294ea115bfb6",
+      "packaged_size_bytes": 10096,
+      "provenance_status": "reconciled",
+      "source": {
+        "abi": "arm64-v8a",
+        "archive_filename": "graphics-path-1.0.1.aar",
+        "archive_sha256": "8ca4032b6d79b351f0b59ad4b580eddbb9423e1652f7c958830687f1eee2ec03",
+        "coordinate": "androidx.graphics:graphics-path:1.0.1",
+        "identity": {
+          "allocated_section_count": 21,
+          "allocated_sections_sha256": "e1faee2e95e9c440efd09716be583265b9dfa6413a29f67a3dc55a72a837462d",
+          "gnu_build_id": "a7846ae06d6bf6cf63fa7c5e056b5de493c71567",
+          "machine": 183
+        },
+        "kind": "resolved_dependency",
+        "name": "libandroidx.graphics.path.so",
+        "sha256": "41e9a793c43a0f4fddb19e33f346bace464f30f888ba7b9eaf96294ea115bfb6",
+        "size_bytes": 10096,
+        "source_entry": "jni/arm64-v8a/libandroidx.graphics.path.so"
+      }
+    },
+    {
+      "abi": "arm64-v8a",
+      "apk_entry": "lib/arm64-v8a/libc++_shared.so",
+      "mapping_gaps": [],
+      "match_method": "normalized_allocated_sections_sha256",
+      "name": "libc++_shared.so",
+      "notice_evidence": [
+        {
+          "apk_entry": "assets/offline-scanner-notices/Android-NDK-NOTICE.txt",
+          "path": "third-party/native-source-notices/Android-NDK-NOTICE.txt",
+          "sha256": "faf0dc52cf6ce9ab09a04b0c074a378dd2565ee1ed9bc1179d83793bcdba012e",
+          "size_bytes": 516438
+        },
+        {
+          "apk_entry": "assets/offline-scanner-notices/Android-NDK-NOTICE.toolchain.txt",
+          "path": "third-party/native-source-notices/Android-NDK-NOTICE.toolchain.txt",
+          "sha256": "789714a9076571c580cf531bdcebec776a4d889c12c3c1108adafc6e4338710a",
+          "size_bytes": 799639
+        }
+      ],
+      "notice_status": "evidence_collected",
+      "packaged_identity": {
+        "allocated_section_count": 27,
+        "allocated_sections_sha256": "1638139d0f22b023d6baedc8cf468f0db4ac71a9b6603ea0f3bf1b2e0e56d335",
+        "gnu_build_id": "7befe631535aa853c4f4ac1293e49dcea34c9b6e",
+        "machine": 183
+      },
+      "packaged_sha256": "cd61762848882a16c8244c964a6f396c0caa0b440588a210ce9cc4ab0e6d9f0c",
+      "packaged_size_bytes": 1253544,
+      "provenance_status": "reconciled",
+      "source": {
+        "abi": "arm64-v8a",
+        "identity": {
+          "allocated_section_count": 27,
+          "allocated_sections_sha256": "1638139d0f22b023d6baedc8cf468f0db4ac71a9b6603ea0f3bf1b2e0e56d335",
+          "gnu_build_id": "7befe631535aa853c4f4ac1293e49dcea34c9b6e",
+          "machine": 183
+        },
+        "kind": "source_build",
+        "manifest_record": {
+          "bytes": 9236352,
+          "file": "libc++_shared.so",
+          "loadSegmentAlignmentMinimum": 16384,
+          "needed": [
+            "libc.so",
+            "libm.so",
+            "libdl.so"
+          ],
+          "sha256": "ab4e6c71b96b851de45a8a9bd86369e7dbc2130a44b3b4520564be94847910f2"
+        },
+        "modules": [
+          "opencv_core",
+          "opencv_imgproc",
+          "opencv_java_bindings_generator",
+          "opencv_java"
+        ],
+        "name": "libc++_shared.so",
+        "role": "runtime",
+        "sha256": "ab4e6c71b96b851de45a8a9bd86369e7dbc2130a44b3b4520564be94847910f2",
+        "size_bytes": 9236352,
+        "source_archive_sha256": "fa3faf7581f1fa943c9e670cf57dd6ba1c5b4178f363a188a2c8bff1eb28b7e4",
+        "source_path": "scanner-processing-opencv/src/main/jniLibs/arm64-v8a/libc++_shared.so"
+      }
+    },
+    {
+      "abi": "arm64-v8a",
+      "apk_entry": "lib/arm64-v8a/libimage_processing_util_jni.so",
+      "declared_pom_licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        },
+        {
+          "name": "BSD License",
+          "url": "https://chromium.googlesource.com/libyuv/libyuv/+/refs/heads/main/README.chromium"
+        }
+      ],
+      "mapping_gaps": [],
+      "match_method": "exact_sha256",
+      "name": "libimage_processing_util_jni.so",
+      "notice_evidence": [
+        {
+          "apk_entry": "META-INF/androidx/collection/collection/LICENSE.txt",
+          "entry": "META-INF/androidx/camera/camera-core/LICENSE.txt",
+          "sha256": "809fa1ed21450f59827d1e9aec720bbc4b687434fa22283c6cb5dd82a47ab9c0",
+          "size_bytes": 10175
+        },
+        {
+          "apk_entry": "assets/offline-scanner-notices/libyuv-LICENSE.txt",
+          "full_bsd_notice": true,
+          "path": "third-party/libyuv-LICENSE.txt",
+          "sha256": "2b2cc1180c7e6988328ad2033b04b80117419db9c4c584918bbb3cfec7e9364f"
+        }
+      ],
+      "notice_status": "evidence_collected",
+      "packaged_identity": {
+        "allocated_section_count": 22,
+        "allocated_sections_sha256": "d709bea93cba2ce2d616b658bc5c61bfb1469d04e9a243fe6c35d6f43f120588",
+        "gnu_build_id": "e667d7f16c83b70a2cec5d8de25bd854a1a2ba53",
+        "machine": 183
+      },
+      "packaged_sha256": "3e0071afcdc7e321f839e196d266014182f18d0988e4455acc9857a085b2184e",
+      "packaged_size_bytes": 29008,
+      "provenance_status": "reconciled",
+      "source": {
+        "abi": "arm64-v8a",
+        "archive_filename": "camera-core-1.4.2.aar",
+        "archive_sha256": "bbca13760ce1587502eb15723d0e17fa0a3495d084e609c4e4c8d3c2e1c85cf8",
+        "coordinate": "androidx.camera:camera-core:1.4.2",
+        "identity": {
+          "allocated_section_count": 22,
+          "allocated_sections_sha256": "d709bea93cba2ce2d616b658bc5c61bfb1469d04e9a243fe6c35d6f43f120588",
+          "gnu_build_id": "e667d7f16c83b70a2cec5d8de25bd854a1a2ba53",
+          "machine": 183
+        },
+        "kind": "resolved_dependency",
+        "name": "libimage_processing_util_jni.so",
+        "sha256": "3e0071afcdc7e321f839e196d266014182f18d0988e4455acc9857a085b2184e",
+        "size_bytes": 29008,
+        "source_entry": "jni/arm64-v8a/libimage_processing_util_jni.so"
+      }
+    },
+    {
+      "abi": "arm64-v8a",
+      "apk_entry": "lib/arm64-v8a/libonnxruntime.so",
+      "declared_pom_licenses": [
+        {
+          "name": "MIT License",
+          "url": "https://opensource.org/licenses/MIT"
+        }
+      ],
+      "mapping_gaps": [],
+      "match_method": "normalized_allocated_sections_sha256",
+      "name": "libonnxruntime.so",
+      "notice_evidence": [],
+      "notice_status": "gap",
+      "packaged_identity": {
+        "allocated_section_count": 27,
+        "allocated_sections_sha256": "840b5166ab5462df681c7b72e9872b7ca00cbf1684b52a653bd91d33f525b46e",
+        "gnu_build_id": "a15ecc0324c31118e944371e89ae38fa3d75b086",
+        "machine": 183
+      },
+      "packaged_sha256": "50b4619acfd98bef794c85487f3b9dfa3c6939d00f3ab5974d8a49aad5eaca1b",
+      "packaged_size_bytes": 25763824,
+      "provenance_status": "reconciled",
+      "source": {
+        "abi": "arm64-v8a",
+        "archive_filename": "onnxruntime-android-1.24.1.aar",
+        "archive_sha256": "133134e2b01ffb91f8f66d46a3149f7fe402ac2e3e2d1df4f8fc679e999689f6",
+        "coordinate": "com.microsoft.onnxruntime:onnxruntime-android:1.24.1",
+        "identity": {
+          "allocated_section_count": 27,
+          "allocated_sections_sha256": "840b5166ab5462df681c7b72e9872b7ca00cbf1684b52a653bd91d33f525b46e",
+          "gnu_build_id": "a15ecc0324c31118e944371e89ae38fa3d75b086",
+          "machine": 183
+        },
+        "kind": "resolved_dependency",
+        "name": "libonnxruntime.so",
+        "sha256": "71592ea77d4e6aed7877bbc3139a15cb77785c7d2a5b273c2832c3e56aca91b4",
+        "size_bytes": 25763824,
+        "source_entry": "jni/arm64-v8a/libonnxruntime.so"
+      }
+    },
+    {
+      "abi": "arm64-v8a",
+      "apk_entry": "lib/arm64-v8a/libonnxruntime4j_jni.so",
+      "declared_pom_licenses": [
+        {
+          "name": "MIT License",
+          "url": "https://opensource.org/licenses/MIT"
+        }
+      ],
+      "mapping_gaps": [],
+      "match_method": "normalized_allocated_sections_sha256",
+      "name": "libonnxruntime4j_jni.so",
+      "notice_evidence": [],
+      "notice_status": "gap",
+      "packaged_identity": {
+        "allocated_section_count": 19,
+        "allocated_sections_sha256": "c1640889970b839bedc4b395b498b5a25f1f568e76f3ddb4f75c5a8b5b79670a",
+        "gnu_build_id": "9f11e6c3ebfea6e7017f090d4220fae1c719a8e3",
+        "machine": 183
+      },
+      "packaged_sha256": "21570f242553627895bfaa95224d8fc7f6dd0432381fb1739555310ee214f096",
+      "packaged_size_bytes": 83432,
+      "provenance_status": "reconciled",
+      "source": {
+        "abi": "arm64-v8a",
+        "archive_filename": "onnxruntime-android-1.24.1.aar",
+        "archive_sha256": "133134e2b01ffb91f8f66d46a3149f7fe402ac2e3e2d1df4f8fc679e999689f6",
+        "coordinate": "com.microsoft.onnxruntime:onnxruntime-android:1.24.1",
+        "identity": {
+          "allocated_section_count": 19,
+          "allocated_sections_sha256": "c1640889970b839bedc4b395b498b5a25f1f568e76f3ddb4f75c5a8b5b79670a",
+          "gnu_build_id": "9f11e6c3ebfea6e7017f090d4220fae1c719a8e3",
+          "machine": 183
+        },
+        "kind": "resolved_dependency",
+        "name": "libonnxruntime4j_jni.so",
+        "sha256": "05afb25116dc68608cee6195dc074c49521d4b79639195b1755463d0118db469",
+        "size_bytes": 111976,
+        "source_entry": "jni/arm64-v8a/libonnxruntime4j_jni.so"
+      }
+    },
+    {
+      "abi": "arm64-v8a",
+      "apk_entry": "lib/arm64-v8a/libsurface_util_jni.so",
+      "declared_pom_licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        },
+        {
+          "name": "BSD License",
+          "url": "https://chromium.googlesource.com/libyuv/libyuv/+/refs/heads/main/README.chromium"
+        }
+      ],
+      "mapping_gaps": [],
+      "match_method": "exact_sha256",
+      "name": "libsurface_util_jni.so",
+      "notice_evidence": [
+        {
+          "apk_entry": "META-INF/androidx/collection/collection/LICENSE.txt",
+          "entry": "META-INF/androidx/camera/camera-core/LICENSE.txt",
+          "sha256": "809fa1ed21450f59827d1e9aec720bbc4b687434fa22283c6cb5dd82a47ab9c0",
+          "size_bytes": 10175
+        },
+        {
+          "apk_entry": "assets/offline-scanner-notices/libyuv-LICENSE.txt",
+          "full_bsd_notice": true,
+          "path": "third-party/libyuv-LICENSE.txt",
+          "sha256": "2b2cc1180c7e6988328ad2033b04b80117419db9c4c584918bbb3cfec7e9364f"
+        }
+      ],
+      "notice_status": "evidence_collected",
+      "packaged_identity": {
+        "allocated_section_count": 19,
+        "allocated_sections_sha256": "d95f1fb48e10f7ab8a9ff08593ca47be84564052530e3867070beecee31da493",
+        "gnu_build_id": "964a1cbe387c160f0a6286713d31d752e35c6801",
+        "machine": 183
+      },
+      "packaged_sha256": "ee3f0d56f81cc0a301db32dc4fd51274c3216733b4c40172768e38bc5049a265",
+      "packaged_size_bytes": 4832,
+      "provenance_status": "reconciled",
+      "source": {
+        "abi": "arm64-v8a",
+        "archive_filename": "camera-core-1.4.2.aar",
+        "archive_sha256": "bbca13760ce1587502eb15723d0e17fa0a3495d084e609c4e4c8d3c2e1c85cf8",
+        "coordinate": "androidx.camera:camera-core:1.4.2",
+        "identity": {
+          "allocated_section_count": 19,
+          "allocated_sections_sha256": "d95f1fb48e10f7ab8a9ff08593ca47be84564052530e3867070beecee31da493",
+          "gnu_build_id": "964a1cbe387c160f0a6286713d31d752e35c6801",
+          "machine": 183
+        },
+        "kind": "resolved_dependency",
+        "name": "libsurface_util_jni.so",
+        "sha256": "ee3f0d56f81cc0a301db32dc4fd51274c3216733b4c40172768e38bc5049a265",
+        "size_bytes": 4832,
+        "source_entry": "jni/arm64-v8a/libsurface_util_jni.so"
+      }
+    },
+    {
+      "abi": "x86_64",
+      "apk_entry": "lib/x86_64/libandroidx.graphics.path.so",
+      "declared_pom_licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        }
+      ],
+      "mapping_gaps": [],
+      "match_method": "exact_sha256",
+      "name": "libandroidx.graphics.path.so",
+      "notice_evidence": [
+        {
+          "apk_entry": "assets/offline-scanner-notices/Android-NDK-NOTICE.toolchain.txt",
+          "basis": "POM Apache-2.0 declaration and full packaged Apache license text",
+          "entry": "assets/offline-scanner-notices/Android-NDK-NOTICE.toolchain.txt",
+          "is_full_apache_text": true,
+          "sha256": "789714a9076571c580cf531bdcebec776a4d889c12c3c1108adafc6e4338710a",
+          "size_bytes": 799639
+        }
+      ],
+      "notice_status": "evidence_collected",
+      "packaged_identity": {
+        "allocated_section_count": 21,
+        "allocated_sections_sha256": "544cdeca9c73b98c6d0d2f7365bb19f93cb74ac0f9c608639da7bff48a7e0833",
+        "gnu_build_id": "f3e82b0a78f4c567cca77fe6c132199d806987d1",
+        "machine": 62
+      },
+      "packaged_sha256": "4e56c996f13670e70082658de7880c4020eabf4f25e43387f88ed78a713fc9f0",
+      "packaged_size_bytes": 10760,
+      "provenance_status": "reconciled",
+      "source": {
+        "abi": "x86_64",
+        "archive_filename": "graphics-path-1.0.1.aar",
+        "archive_sha256": "8ca4032b6d79b351f0b59ad4b580eddbb9423e1652f7c958830687f1eee2ec03",
+        "coordinate": "androidx.graphics:graphics-path:1.0.1",
+        "identity": {
+          "allocated_section_count": 21,
+          "allocated_sections_sha256": "544cdeca9c73b98c6d0d2f7365bb19f93cb74ac0f9c608639da7bff48a7e0833",
+          "gnu_build_id": "f3e82b0a78f4c567cca77fe6c132199d806987d1",
+          "machine": 62
+        },
+        "kind": "resolved_dependency",
+        "name": "libandroidx.graphics.path.so",
+        "sha256": "4e56c996f13670e70082658de7880c4020eabf4f25e43387f88ed78a713fc9f0",
+        "size_bytes": 10760,
+        "source_entry": "jni/x86_64/libandroidx.graphics.path.so"
+      }
+    },
+    {
+      "abi": "x86_64",
+      "apk_entry": "lib/x86_64/libc++_shared.so",
+      "mapping_gaps": [],
+      "match_method": "normalized_allocated_sections_sha256",
+      "name": "libc++_shared.so",
+      "notice_evidence": [
+        {
+          "apk_entry": "assets/offline-scanner-notices/Android-NDK-NOTICE.txt",
+          "path": "third-party/native-source-notices/Android-NDK-NOTICE.txt",
+          "sha256": "faf0dc52cf6ce9ab09a04b0c074a378dd2565ee1ed9bc1179d83793bcdba012e",
+          "size_bytes": 516438
+        },
+        {
+          "apk_entry": "assets/offline-scanner-notices/Android-NDK-NOTICE.toolchain.txt",
+          "path": "third-party/native-source-notices/Android-NDK-NOTICE.toolchain.txt",
+          "sha256": "789714a9076571c580cf531bdcebec776a4d889c12c3c1108adafc6e4338710a",
+          "size_bytes": 799639
+        }
+      ],
+      "notice_status": "evidence_collected",
+      "packaged_identity": {
+        "allocated_section_count": 26,
+        "allocated_sections_sha256": "b9cafb06ec05f987676fab8317bff2e825cdce73cd2d70651f3eea806dbacf25",
+        "gnu_build_id": "0f8f9b5a33c8898dc08ae1688f9b1d3d10ff68ab",
+        "machine": 62
+      },
+      "packaged_sha256": "2e855857f80819737d25a663109fedf816a5e996a85423166806014a06593256",
+      "packaged_size_bytes": 1229808,
+      "provenance_status": "reconciled",
+      "source": {
+        "abi": "x86_64",
+        "identity": {
+          "allocated_section_count": 26,
+          "allocated_sections_sha256": "b9cafb06ec05f987676fab8317bff2e825cdce73cd2d70651f3eea806dbacf25",
+          "gnu_build_id": "0f8f9b5a33c8898dc08ae1688f9b1d3d10ff68ab",
+          "machine": 62
+        },
+        "kind": "source_build",
+        "manifest_record": {
+          "bytes": 8808664,
+          "file": "libc++_shared.so",
+          "loadSegmentAlignmentMinimum": 16384,
+          "needed": [
+            "libc.so",
+            "libm.so",
+            "libdl.so"
+          ],
+          "sha256": "e4cd73c8a3607269f3be58d15c21f78bff112e27f9398d6261e5f965668f8746"
+        },
+        "modules": [
+          "opencv_core",
+          "opencv_imgproc",
+          "opencv_java_bindings_generator",
+          "opencv_java"
+        ],
+        "name": "libc++_shared.so",
+        "role": "runtime",
+        "sha256": "e4cd73c8a3607269f3be58d15c21f78bff112e27f9398d6261e5f965668f8746",
+        "size_bytes": 8808664,
+        "source_archive_sha256": "fa3faf7581f1fa943c9e670cf57dd6ba1c5b4178f363a188a2c8bff1eb28b7e4",
+        "source_path": "scanner-processing-opencv/src/main/jniLibs/x86_64/libc++_shared.so"
+      }
+    },
+    {
+      "abi": "x86_64",
+      "apk_entry": "lib/x86_64/libimage_processing_util_jni.so",
+      "declared_pom_licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        },
+        {
+          "name": "BSD License",
+          "url": "https://chromium.googlesource.com/libyuv/libyuv/+/refs/heads/main/README.chromium"
+        }
+      ],
+      "mapping_gaps": [],
+      "match_method": "exact_sha256",
+      "name": "libimage_processing_util_jni.so",
+      "notice_evidence": [
+        {
+          "apk_entry": "META-INF/androidx/collection/collection/LICENSE.txt",
+          "entry": "META-INF/androidx/camera/camera-core/LICENSE.txt",
+          "sha256": "809fa1ed21450f59827d1e9aec720bbc4b687434fa22283c6cb5dd82a47ab9c0",
+          "size_bytes": 10175
+        },
+        {
+          "apk_entry": "assets/offline-scanner-notices/libyuv-LICENSE.txt",
+          "full_bsd_notice": true,
+          "path": "third-party/libyuv-LICENSE.txt",
+          "sha256": "2b2cc1180c7e6988328ad2033b04b80117419db9c4c584918bbb3cfec7e9364f"
+        }
+      ],
+      "notice_status": "evidence_collected",
+      "packaged_identity": {
+        "allocated_section_count": 22,
+        "allocated_sections_sha256": "4ec5e85ab4434c5ba4a3f11184aabf1e1115ef125cb5d822bbf94577e0f06634",
+        "gnu_build_id": "2566b1ee2cf751e59072498843ebba4b969ab413",
+        "machine": 62
+      },
+      "packaged_sha256": "676e3e280c10dcb9b71ef5bb727552610dc73c7ec85af54c7c898f82785c33d7",
+      "packaged_size_bytes": 48104,
+      "provenance_status": "reconciled",
+      "source": {
+        "abi": "x86_64",
+        "archive_filename": "camera-core-1.4.2.aar",
+        "archive_sha256": "bbca13760ce1587502eb15723d0e17fa0a3495d084e609c4e4c8d3c2e1c85cf8",
+        "coordinate": "androidx.camera:camera-core:1.4.2",
+        "identity": {
+          "allocated_section_count": 22,
+          "allocated_sections_sha256": "4ec5e85ab4434c5ba4a3f11184aabf1e1115ef125cb5d822bbf94577e0f06634",
+          "gnu_build_id": "2566b1ee2cf751e59072498843ebba4b969ab413",
+          "machine": 62
+        },
+        "kind": "resolved_dependency",
+        "name": "libimage_processing_util_jni.so",
+        "sha256": "676e3e280c10dcb9b71ef5bb727552610dc73c7ec85af54c7c898f82785c33d7",
+        "size_bytes": 48104,
+        "source_entry": "jni/x86_64/libimage_processing_util_jni.so"
+      }
+    },
+    {
+      "abi": "x86_64",
+      "apk_entry": "lib/x86_64/libonnxruntime.so",
+      "declared_pom_licenses": [
+        {
+          "name": "MIT License",
+          "url": "https://opensource.org/licenses/MIT"
+        }
+      ],
+      "mapping_gaps": [],
+      "match_method": "normalized_allocated_sections_sha256",
+      "name": "libonnxruntime.so",
+      "notice_evidence": [],
+      "notice_status": "gap",
+      "packaged_identity": {
+        "allocated_section_count": 27,
+        "allocated_sections_sha256": "47ea1b4ccf372f80f23b3c03c553a98123ee406e6bc17dcb05f107e22e9a69b6",
+        "gnu_build_id": "57dedc2b8b1bac06e31116c056cc73c2b866fe55",
+        "machine": 62
+      },
+      "packaged_sha256": "788d8fcf5942b4d762deb6af3b5f6af0e59ad1a2047447dafacf310950de1465",
+      "packaged_size_bytes": 31239096,
+      "provenance_status": "reconciled",
+      "source": {
+        "abi": "x86_64",
+        "archive_filename": "onnxruntime-android-1.24.1.aar",
+        "archive_sha256": "133134e2b01ffb91f8f66d46a3149f7fe402ac2e3e2d1df4f8fc679e999689f6",
+        "coordinate": "com.microsoft.onnxruntime:onnxruntime-android:1.24.1",
+        "identity": {
+          "allocated_section_count": 27,
+          "allocated_sections_sha256": "47ea1b4ccf372f80f23b3c03c553a98123ee406e6bc17dcb05f107e22e9a69b6",
+          "gnu_build_id": "57dedc2b8b1bac06e31116c056cc73c2b866fe55",
+          "machine": 62
+        },
+        "kind": "resolved_dependency",
+        "name": "libonnxruntime.so",
+        "sha256": "f8875eef0e3587895fb79384908021952b0d5a8bbf55b707f7e9db54512e80ae",
+        "size_bytes": 31239096,
+        "source_entry": "jni/x86_64/libonnxruntime.so"
+      }
+    },
+    {
+      "abi": "x86_64",
+      "apk_entry": "lib/x86_64/libonnxruntime4j_jni.so",
+      "declared_pom_licenses": [
+        {
+          "name": "MIT License",
+          "url": "https://opensource.org/licenses/MIT"
+        }
+      ],
+      "mapping_gaps": [],
+      "match_method": "normalized_allocated_sections_sha256",
+      "name": "libonnxruntime4j_jni.so",
+      "notice_evidence": [],
+      "notice_status": "gap",
+      "packaged_identity": {
+        "allocated_section_count": 19,
+        "allocated_sections_sha256": "11257c4b0594b2637225846983a0910778293ee3c334fd336df715cd72e7a289",
+        "gnu_build_id": "7b8055c8bb62540025eb388d39f1daf02be26b62",
+        "machine": 62
+      },
+      "packaged_sha256": "3263e414ff17b7cfcadd7054aa808a23cc9bfad9f0b91102d30bfb08dddc08fb",
+      "packaged_size_bytes": 80592,
+      "provenance_status": "reconciled",
+      "source": {
+        "abi": "x86_64",
+        "archive_filename": "onnxruntime-android-1.24.1.aar",
+        "archive_sha256": "133134e2b01ffb91f8f66d46a3149f7fe402ac2e3e2d1df4f8fc679e999689f6",
+        "coordinate": "com.microsoft.onnxruntime:onnxruntime-android:1.24.1",
+        "identity": {
+          "allocated_section_count": 19,
+          "allocated_sections_sha256": "11257c4b0594b2637225846983a0910778293ee3c334fd336df715cd72e7a289",
+          "gnu_build_id": "7b8055c8bb62540025eb388d39f1daf02be26b62",
+          "machine": 62
+        },
+        "kind": "resolved_dependency",
+        "name": "libonnxruntime4j_jni.so",
+        "sha256": "fa557f9ea7d4d92e9270bf4943ecb99e3dc4ed9ba4c3ba599c57f8362065015b",
+        "size_bytes": 100424,
+        "source_entry": "jni/x86_64/libonnxruntime4j_jni.so"
+      }
+    },
+    {
+      "abi": "x86_64",
+      "apk_entry": "lib/x86_64/libsurface_util_jni.so",
+      "declared_pom_licenses": [
+        {
+          "name": "The Apache Software License, Version 2.0",
+          "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+        },
+        {
+          "name": "BSD License",
+          "url": "https://chromium.googlesource.com/libyuv/libyuv/+/refs/heads/main/README.chromium"
+        }
+      ],
+      "mapping_gaps": [],
+      "match_method": "exact_sha256",
+      "name": "libsurface_util_jni.so",
+      "notice_evidence": [
+        {
+          "apk_entry": "META-INF/androidx/collection/collection/LICENSE.txt",
+          "entry": "META-INF/androidx/camera/camera-core/LICENSE.txt",
+          "sha256": "809fa1ed21450f59827d1e9aec720bbc4b687434fa22283c6cb5dd82a47ab9c0",
+          "size_bytes": 10175
+        },
+        {
+          "apk_entry": "assets/offline-scanner-notices/libyuv-LICENSE.txt",
+          "full_bsd_notice": true,
+          "path": "third-party/libyuv-LICENSE.txt",
+          "sha256": "2b2cc1180c7e6988328ad2033b04b80117419db9c4c584918bbb3cfec7e9364f"
+        }
+      ],
+      "notice_status": "evidence_collected",
+      "packaged_identity": {
+        "allocated_section_count": 19,
+        "allocated_sections_sha256": "da14fd5109a708be811aac313ffe9403ade90a035a5eaf2b0167b02e5c2da496",
+        "gnu_build_id": "0443f8b36ff8731eae5ec0b6835adeaedc3aa291",
+        "machine": 62
+      },
+      "packaged_sha256": "cd425e10a365fb3695e53f1e46227d44d89f14854da4f1258ef079c80c752339",
+      "packaged_size_bytes": 4928,
+      "provenance_status": "reconciled",
+      "source": {
+        "abi": "x86_64",
+        "archive_filename": "camera-core-1.4.2.aar",
+        "archive_sha256": "bbca13760ce1587502eb15723d0e17fa0a3495d084e609c4e4c8d3c2e1c85cf8",
+        "coordinate": "androidx.camera:camera-core:1.4.2",
+        "identity": {
+          "allocated_section_count": 19,
+          "allocated_sections_sha256": "da14fd5109a708be811aac313ffe9403ade90a035a5eaf2b0167b02e5c2da496",
+          "gnu_build_id": "0443f8b36ff8731eae5ec0b6835adeaedc3aa291",
+          "machine": 62
+        },
+        "kind": "resolved_dependency",
+        "name": "libsurface_util_jni.so",
+        "sha256": "cd425e10a365fb3695e53f1e46227d44d89f14854da4f1258ef079c80c752339",
+        "size_bytes": 4928,
+        "source_entry": "jni/x86_64/libsurface_util_jni.so"
+      }
+    },
+    {
+      "abi": "arm64-v8a",
+      "apk_entry": "lib/arm64-v8a/libopencv_java4.so",
+      "mapping_gaps": [],
+      "match_method": "exact_sha256",
+      "name": "libopencv_java4.so",
+      "notice_evidence": [
+        {
+          "apk_entry": "assets/offline-scanner-notices/OpenCV-LICENSE.txt",
+          "path": "third-party/native-source-notices/OpenCV-LICENSE.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "size_bytes": 11358
+        },
+        {
+          "apk_entry": "assets/offline-scanner-notices/OpenCV-core-imgproc-java-SOURCE-NOTICES.txt",
+          "path": "third-party/native-source-notices/OpenCV-core-imgproc-java-SOURCE-NOTICES.txt",
+          "sha256": "266449046c916ece845706adbc237d5325dce7855cf6e1f7a479e15cce15f287",
+          "size_bytes": 1268486
+        }
+      ],
+      "notice_status": "evidence_collected",
+      "packaged_identity": {
+        "allocated_section_count": 24,
+        "allocated_sections_sha256": "75c07d15cd0c774583e3ef729407fddb619c971bd8dd2ce59eb3f5050cf0f127",
+        "gnu_build_id": "ade2f6e9c3abd6125733d0bdef3716b57902ebbb",
+        "machine": 183
+      },
+      "packaged_sha256": "a014a769ae11446af05cbdbd01b7273ad42f26cddfbf3f206a38290d0fb91bb9",
+      "packaged_size_bytes": 6523792,
+      "provenance_status": "reconciled",
+      "source": {
+        "abi": "arm64-v8a",
+        "identity": {
+          "allocated_section_count": 24,
+          "allocated_sections_sha256": "75c07d15cd0c774583e3ef729407fddb619c971bd8dd2ce59eb3f5050cf0f127",
+          "gnu_build_id": "ade2f6e9c3abd6125733d0bdef3716b57902ebbb",
+          "machine": 183
+        },
+        "kind": "source_build",
+        "manifest_record": {
+          "bytes": 6523792,
+          "file": "libopencv_java4.so",
+          "loadSegmentAlignmentMinimum": 16384,
+          "needed": [
+            "libdl.so",
+            "libm.so",
+            "liblog.so",
+            "libjnigraphics.so",
+            "libz.so",
+            "libc++_shared.so",
+            "libc.so"
+          ],
+          "sha256": "a014a769ae11446af05cbdbd01b7273ad42f26cddfbf3f206a38290d0fb91bb9"
+        },
+        "modules": [
+          "opencv_core",
+          "opencv_imgproc",
+          "opencv_java_bindings_generator",
+          "opencv_java"
+        ],
+        "name": "libopencv_java4.so",
+        "role": "opencv",
+        "sha256": "a014a769ae11446af05cbdbd01b7273ad42f26cddfbf3f206a38290d0fb91bb9",
+        "size_bytes": 6523792,
+        "source_archive_sha256": "fa3faf7581f1fa943c9e670cf57dd6ba1c5b4178f363a188a2c8bff1eb28b7e4",
+        "source_path": "scanner-processing-opencv/src/main/jniLibs/arm64-v8a/libopencv_java4.so"
+      }
+    },
+    {
+      "abi": "x86_64",
+      "apk_entry": "lib/x86_64/libopencv_java4.so",
+      "mapping_gaps": [],
+      "match_method": "exact_sha256",
+      "name": "libopencv_java4.so",
+      "notice_evidence": [
+        {
+          "apk_entry": "assets/offline-scanner-notices/OpenCV-LICENSE.txt",
+          "path": "third-party/native-source-notices/OpenCV-LICENSE.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "size_bytes": 11358
+        },
+        {
+          "apk_entry": "assets/offline-scanner-notices/OpenCV-core-imgproc-java-SOURCE-NOTICES.txt",
+          "path": "third-party/native-source-notices/OpenCV-core-imgproc-java-SOURCE-NOTICES.txt",
+          "sha256": "266449046c916ece845706adbc237d5325dce7855cf6e1f7a479e15cce15f287",
+          "size_bytes": 1268486
+        }
+      ],
+      "notice_status": "evidence_collected",
+      "packaged_identity": {
+        "allocated_section_count": 24,
+        "allocated_sections_sha256": "a61988893aa32609409954cdd7fe75dc0feaaf356bcc85d2accb62cc51f6d462",
+        "gnu_build_id": "b3861e80d485414770bd9f5989b5b0e9ebaea629",
+        "machine": 62
+      },
+      "packaged_sha256": "2d1b2e08719ffb2650f04b253c3852c5da8aab887691764d4809c90be0f65575",
+      "packaged_size_bytes": 10525136,
+      "provenance_status": "reconciled",
+      "source": {
+        "abi": "x86_64",
+        "identity": {
+          "allocated_section_count": 24,
+          "allocated_sections_sha256": "a61988893aa32609409954cdd7fe75dc0feaaf356bcc85d2accb62cc51f6d462",
+          "gnu_build_id": "b3861e80d485414770bd9f5989b5b0e9ebaea629",
+          "machine": 62
+        },
+        "kind": "source_build",
+        "manifest_record": {
+          "bytes": 10525136,
+          "file": "libopencv_java4.so",
+          "loadSegmentAlignmentMinimum": 16384,
+          "needed": [
+            "libdl.so",
+            "libm.so",
+            "liblog.so",
+            "libjnigraphics.so",
+            "libz.so",
+            "libc++_shared.so",
+            "libc.so"
+          ],
+          "sha256": "2d1b2e08719ffb2650f04b253c3852c5da8aab887691764d4809c90be0f65575"
+        },
+        "modules": [
+          "opencv_core",
+          "opencv_imgproc",
+          "opencv_java_bindings_generator",
+          "opencv_java"
+        ],
+        "name": "libopencv_java4.so",
+        "role": "opencv",
+        "sha256": "2d1b2e08719ffb2650f04b253c3852c5da8aab887691764d4809c90be0f65575",
+        "size_bytes": 10525136,
+        "source_archive_sha256": "fa3faf7581f1fa943c9e670cf57dd6ba1c5b4178f363a188a2c8bff1eb28b7e4",
+        "source_path": "scanner-processing-opencv/src/main/jniLibs/x86_64/libopencv_java4.so"
+      }
+    }
+  ],
+  "historical_stock_aar": {
+    "aar_sha256": "f71846a313388d9da667a59be1e921669fcf792d1ba264b3898253ca789bc3f0",
+    "artifact": "org.opencv:opencv:4.12.0",
+    "extracted_notices": [],
+    "inspected_archives": [
+      {
+        "archive": "opencv-4.12.0.aar",
+        "entry_count": 443
+      },
+      {
+        "archive": "classes.jar",
+        "entry_count": 230
+      }
+    ],
+    "native_library_hashes": [
+      {
+        "aar_entry": "jni/x86_64/libc++_shared.so",
+        "abi": "x86_64",
+        "name": "libc++_shared.so",
+        "sha256": "db9609240e60ca18b816a5e95a6bbc784e799261efbd5b30c8e2e03b540b3fa8",
+        "size_bytes": 1252080
+      },
+      {
+        "aar_entry": "jni/x86_64/libopencv_java4.so",
+        "abi": "x86_64",
+        "name": "libopencv_java4.so",
+        "sha256": "373e5a25a92bf6a683fecf4d9c73adaf478c04efad10171d865dcf78b242709a",
+        "size_bytes": 55830920
+      },
+      {
+        "aar_entry": "jni/x86/libc++_shared.so",
+        "abi": "x86",
+        "name": "libc++_shared.so",
+        "sha256": "318e833e6f7ec76cc73303da68004ebd63a1bbedd754e30440c78a90d80504d3",
+        "size_bytes": 1254988
+      },
+      {
+        "aar_entry": "jni/x86/libopencv_java4.so",
+        "abi": "x86",
+        "name": "libopencv_java4.so",
+        "sha256": "d906a2c418230a79689922000e962a6c1cea95925f430183abf331ab3669bfcc",
+        "size_bytes": 41727236
+      },
+      {
+        "aar_entry": "jni/arm64-v8a/libc++_shared.so",
+        "abi": "arm64-v8a",
+        "name": "libc++_shared.so",
+        "sha256": "4397241b4bd20a8e579bfb41d21107857e12985f6a01ca0c2a5f83380d1270b4",
+        "size_bytes": 1292904
+      },
+      {
+        "aar_entry": "jni/arm64-v8a/libopencv_java4.so",
+        "abi": "arm64-v8a",
+        "name": "libopencv_java4.so",
+        "sha256": "144bbc9ad0b0bac4ba58f7d53198aead64379e5314f68200968c703d2c1c14ab",
+        "size_bytes": 23465088
+      },
+      {
+        "aar_entry": "jni/armeabi-v7a/libc++_shared.so",
+        "abi": "armeabi-v7a",
+        "name": "libc++_shared.so",
+        "sha256": "91b49f121b3120538faff020fcf535ade1d945e65ccd793fc0b815b5799bbdf0",
+        "size_bytes": 872872
+      },
+      {
+        "aar_entry": "jni/armeabi-v7a/libopencv_java4.so",
+        "abi": "armeabi-v7a",
+        "name": "libopencv_java4.so",
+        "sha256": "933fe7879c07fe603ce5e0f6a04298fa4b07e553c6dc83744a2779161d47e773",
+        "size_bytes": 15622192
+      }
+    ],
+    "usage": "historical_inspection_only_not_final_runtime"
+  },
+  "inspected_apk_sha256": "d0ab1b494187bdd47b0be63e1197441a84cc46955ee3facb3d45de2947a08fac",
+  "license_review_status": "evidence_collected_reconciled",
+  "mapping_gaps": [],
+  "native_build": {
+    "android_api": 26,
+    "ndk_version": "28.2.13676358",
+    "path": "evidence/native-build-manifest.json",
+    "runtime_artifacts_sha256": "f02965c332a8fc247918581107cdbf4242193521a41f92dbfb5f6fde9fa67099",
+    "sha256": "112002dce280f738bb4bb369d3f374d73d09a4ffa9ec38a245cbbf4adc951749",
+    "source_archive_available_and_hash_verified": true,
+    "source_archive_sha256": "fa3faf7581f1fa943c9e670cf57dd6ba1c5b4178f363a188a2c8bff1eb28b7e4",
+    "source_url": "https://github.com/opencv/opencv/archive/refs/tags/4.12.0.zip"
+  },
+  "notice_source_limitations": [
+    "CameraX POM declares libyuv BSD licensing and an upstream main-branch URL, but does not encode the exact vendored libyuv revision. This audit verifies preservation of the collected full upstream notice, not an exact source-revision determination."
+  ],
+  "runtime_baseline": "source_built_opencv_core_imgproc_java_and_resolved_androidx",
+  "schema_version": 2,
+  "scope": "Provenance and preservation of collected license/notice evidence; not a blanket legal compliance certification.",
+  "source_notice_collection": {
+    "all_indexed_files_in_notice_collection": true,
+    "indexed_file_count": 547,
+    "notice_block_count": 857,
+    "path": "third-party/native-source-notices/inventory.json",
+    "sha256": "f6236f319c4a52f29521830235ad7bce97e7e795fc2be02bfc1f885c92e25366"
+  },
+  "source_notices": [
+    {
+      "apk_entry": "assets/offline-scanner-notices/OpenCV-LICENSE.txt",
+      "path": "third-party/native-source-notices/OpenCV-LICENSE.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "size_bytes": 11358
+    },
+    {
+      "apk_entry": "assets/offline-scanner-notices/OpenCV-core-imgproc-java-SOURCE-NOTICES.txt",
+      "path": "third-party/native-source-notices/OpenCV-core-imgproc-java-SOURCE-NOTICES.txt",
+      "sha256": "266449046c916ece845706adbc237d5325dce7855cf6e1f7a479e15cce15f287",
+      "size_bytes": 1268486
+    },
+    {
+      "apk_entry": "assets/offline-scanner-notices/Android-NDK-NOTICE.txt",
+      "path": "third-party/native-source-notices/Android-NDK-NOTICE.txt",
+      "sha256": "faf0dc52cf6ce9ab09a04b0c074a378dd2565ee1ed9bc1179d83793bcdba012e",
+      "size_bytes": 516438
+    },
+    {
+      "apk_entry": "assets/offline-scanner-notices/Android-NDK-NOTICE.toolchain.txt",
+      "path": "third-party/native-source-notices/Android-NDK-NOTICE.toolchain.txt",
+      "sha256": "789714a9076571c580cf531bdcebec776a4d889c12c3c1108adafc6e4338710a",
+      "size_bytes": 799639
+    }
+  ]
+}

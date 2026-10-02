@@ -1,0 +1,19 @@
+# Auto enhancement and preview zoom — RC10
+
+Documents, receipts and cards now start with Preset.AUTO; photographs retain PHOTO. Auto analyses an EXIF-upright, perspective-cropped original at bounded resolution. It chooses colour document when colour is present, grayscale for tonal ink, binary only for strong clean-paper/high-contrast evidence, or Original for ambiguous/photo-like/blank input. It re-evaluates when corners change. Manual presets override Auto. The review Auto enhance button toggles Auto/Original and displays its enabled state.
+
+The paper correction estimates illumination using a low-resolution morphological close and smooth field, then applies bounded multiplicative gains. It visibly lifts uneven backgrounds rather than adding a tiny fixed contrast adjustment. It does not reconstruct missing text or remove glare. Colour correction uses common RGB gain and keeps colour; saturated channels can still clip. Handwriting/colour detection is heuristic, not a new learned filter model; sparse marks below analysis resolution and unusual paper/printed photos can be misclassified. Manual Original and filters remain available.
+
+All renders start with the immutable original; the analysis decision uses the same bounded source/crop for previews and exports. Explicit brightness/contrast/illumination adjustments apply after automatic correction. Auto binary uses global Otsu only behind the strict gate to avoid hollowing solid strokes. Existing explicit BW uses the prior adaptive algorithm.
+
+Pinch zoom 1–4x and panning are available in page review and filter previews; double-tap toggles zoom/fit and Fit page restores swiping. Zoom stays while changing a filter, resets for another page/crop/rotation, and prevents a pan from selecting another page. Bounds respect the fitted image aspect ratio. Accessibility zoom/fit actions are exposed. The crop corner editor retains its existing precise controls/magnifier. Previews remain bounded; export retains its original high-resolution pipeline.
+
+## Recorded checks
+
+Five new pixel-level instrumentation tests check broad shadows and ink separation, small colour marks, faint continuous-tone writing, clean binary solid ink, preservation of continuous-tone photos/blank pages, preview/export consistency and cancellation. The shadow fixture's shaded paper changes from 150 to 232/255; lit paper is 242 and shaded ink 98. Original SHA-256 is unchanged. These are generated fixtures used for development, not held-out real-world acceptance.
+
+Final API35 and measured 16384-byte-page API37.1 processing runs each pass 30 tests; two opt-in learned-model diagnostics are skipped. Eight sample/UI tests pass on each emulator, API35 at normal font and API37.1 at 200% font. The full flow exercises actual two-pointer pinch, double-tap/fit, filter changes while zoomed, pan without page navigation, page swipes, edit/retake/delete and PDF/JPEG delivery. Export tests pass 2/2 on each. Core/camera JVM checks, Android lint and independent local published-SDK consumption pass.
+
+The 5.76MP render benchmark measures Auto at approximately 644ms API35 and 890ms 16KB emulator, with sampled native heap about 90MiB. One render per preset, emulator scheduling and 2ms approximate process-heap samples are not phone latency or worst-case memory guarantees. Existing synthetic detector regression gates pass unchanged. Evidence: rc10-processing-*.txt, rc10-ui-*.txt, rc10-export-*.txt, rc10-enhancement-values.json, rc10-shadow-*.png and rc10-resources-*.json in evidence/.
+
+Physical handheld quality, faint text, mixed images, receipts, unusual lighting and long-session performance still need user/device testing. DocQuadNet-256 weights, inference runtime, licenses and AI detection thresholds are unchanged from RC9. Simultaneous multi-document scanning remains a separate future feature; host integration has not started.

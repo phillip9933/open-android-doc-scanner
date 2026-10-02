@@ -1,0 +1,49 @@
+{
+  "inputWidth": 3200,
+  "inputHeight": 1800,
+  "sampleIntervalMillis": 2,
+  "scope": "Process heap sampled during bounded 5.76MP render; approximate peaks, not exact RSS; fixture creation excluded. Native codec allocations and scheduling can miss short-lived peaks.",
+  "opencvBuildInformation": "\nGeneral configuration for OpenCV 4.12.0 =====================================\n  Version control:               4.12.0-dirty\n\n  Platform:\n    Timestamp:                   2025-07-02T13:05:21Z\n    Host:                        Linux 5.4.0-200-generic x86_64\n    Target:                      Android 1 x86_64\n    CMake:                       3.22.1-g37088a8\n    CMake generator:             Ninja\n    CMake build tool:            \/opt\/android-sdk\/cmake\/3.22.1\/bin\/ninja\n    Configuration:               Release\n    Algorithm Hint:              ALGO_HINT_ACCURATE\n\n  CPU\/HW features:\n    Baseline:                    SSE SSE2 SSE3\n      requested:                 SSE3\n    Dispatched code generation:  SSE4_1 SSE4_2 AVX FP16 AVX2 AVX512_SKX\n      SSE4_1 (17 files):         + SSSE3 SSE4_1\n      SSE4_2 (1 files):          + SSSE3 SSE4_1 POPCNT SSE4_2\n      AVX (9 files):             + SSSE3 SSE4_1 POPCNT SSE4_2 AVX\n      FP16 (0 files):            + SSSE3 SSE4_1 POPCNT SSE4_2 AVX FP16\n      AVX2 (37 files):           + SSSE3 SSE4_1 POPCNT SSE4_2 AVX FP16 AVX2 FMA3\n      AVX512_SKX (6 files):      + SSSE3 SSE4_1 POPCNT SSE4_2 AVX FP16 AVX2 FMA3 AVX_512F AVX512_COMMON AVX512_SKX\n\n  C\/C++:\n    Built as dynamic libs?:      NO\n    C++ standard:                11\n    C++ Compiler:                \/opt\/android-sdk\/ndk\/27.2.12479018\/toolchains\/llvm\/prebuilt\/linux-x86_64\/bin\/clang++  (ver 18.0.3)\n    C++ flags (Release):         -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D__BIONIC_NO_PAGE_SIZE_MACRO -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security     -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winconsistent-missing-override -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-deprecated-enum-enum-conversion -Wno-deprecated-anon-enum-enum-conversion -fdiagnostics-show-option -Qunused-arguments  -fvisibility=hidden -fvisibility-inlines-hidden  -O3 -DNDEBUG   -DNDEBUG\n    C++ flags (Debug):           -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D__BIONIC_NO_PAGE_SIZE_MACRO -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security     -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winconsistent-missing-override -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-deprecated-enum-enum-conversion -Wno-deprecated-anon-enum-enum-conversion -fdiagnostics-show-option -Qunused-arguments  -fvisibility=hidden -fvisibility-inlines-hidden  -fno-limit-debug-info   -O0 -DDEBUG -D_DEBUG -g\n    C Compiler:                  \/opt\/android-sdk\/ndk\/27.2.12479018\/toolchains\/llvm\/prebuilt\/linux-x86_64\/bin\/clang\n    C flags (Release):           -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D__BIONIC_NO_PAGE_SIZE_MACRO -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winconsistent-missing-override -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-deprecated-enum-enum-conversion -Wno-deprecated-anon-enum-enum-conversion -fdiagnostics-show-option -Qunused-arguments  -fvisibility=hidden -fvisibility-inlines-hidden  -O3 -DNDEBUG   -DNDEBUG\n    C flags (Debug):             -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D__BIONIC_NO_PAGE_SIZE_MACRO -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winconsistent-missing-override -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-deprecated-enum-enum-conversion -Wno-deprecated-anon-enum-enum-conversion -fdiagnostics-show-option -Qunused-arguments  -fvisibility=hidden -fvisibility-inlines-hidden  -fno-limit-debug-info   -O0 -DDEBUG -D_DEBUG -g\n    Linker flags (Release):      -Wl,--exclude-libs,libippicv.a -Wl,--exclude-libs,libippiw.a -Wl,-z,max-page-size=16384 -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments  -Wl,-z,max-page-size=16384  -Wl,--as-needed -Wl,--no-undefined -Wl,--gc-sections  \n    Linker flags (Debug):        -Wl,--exclude-libs,libippicv.a -Wl,--exclude-libs,libippiw.a -Wl,-z,max-page-size=16384 -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments  -Wl,-z,max-page-size=16384  -Wl,--as-needed -Wl,--no-undefined  \n    ccache:                      YES\n    Precompiled headers:         NO\n    Extra dependencies:          z dl m log\n    3rdparty dependencies:       libcpufeatures libprotobuf ade tbb ittnotify libjpeg-turbo libwebp libpng libtiff libopenjp2 IlmImf ipphal ippiw ippicv\n\n  OpenCV modules:\n    To be built:                 calib3d core dnn features2d flann gapi highgui imgcodecs imgproc java ml objdetect photo stitching video videoio\n    Disabled:                    world\n    Disabled by dependency:      -\n    Unavailable:                 python2 python3 ts\n    Applications:                -\n    Documentation:               NO\n    Non-free algorithms:         NO\n\n  Android NDK:                   \/opt\/android-sdk\/ndk\/27.2.12479018 (ver 27.2.12479018)\n    Android ABI:                 x86_64\n    NDK toolchain:               x86_64-linux-android-clang\n    STL type:                    c++_shared\n    Native API level:            21\n  Android SDK:                   \/opt\/android-sdk (tools:  build tools: 34.0.0)\n\n  GUI:                           NONE\n\n  Media I\/O: \n    ZLib:                        z (ver 1.3.0.1)\n    JPEG:                        build-libjpeg-turbo (ver 3.1.0-70)\n      SIMD Support Request:      YES\n      SIMD Support:              YES\n    WEBP:                        build (ver decoder: 0x0209, encoder: 0x020f, demux: 0x0107)\n    AVIF:                        NO\n    PNG:                         build (ver 1.6.43)\n      SIMD Support Request:      YES\n      SIMD Support:              YES (Intel SSE)\n    TIFF:                        build (ver 42 - 4.6.0)\n    JPEG 2000:                   build (ver 2.5.3)\n    OpenEXR:                     build (ver 2.3.0)\n    GIF:                         YES\n    HDR:                         YES\n    SUNRASTER:                   YES\n    PXM:                         YES\n    PFM:                         YES\n\n  Video I\/O:\n   MEDIANDK:                     YES\n   NDK Camera:                   NO\n\n  Parallel framework:            TBB (ver 2022.1 interface 12150)\n\n  Trace:                         YES (with Intel ITT(3.25.4))\n\n  Other third-party libraries:\n    Intel IPP:                   2022.1.0 [2022.1.0]\n           at:                   \/home\/ci\/build\/o4a\/3rdparty\/ippicv\/ippicv_lnx\/icv\n    Intel IPP IW:                sources (2022.1.0)\n              at:                \/home\/ci\/build\/o4a\/3rdparty\/ippicv\/ippicv_lnx\/iw\n    Custom HAL:                  YES (ipp (ver 0.0.1))\n    Protobuf:                    build (3.19.1)\n    Flatbuffers:                 builtin\/3rdparty (23.5.9)\n\n  Python (for build):            \/usr\/bin\/python3\n\n  Java:                          export all functions\n    ant:                         NO\n    Java wrappers:               YES ()\n    Java tests:                  NO\n\n  Install to:                    \/home\/ci\/build\/o4a\/install\n-----------------------------------------------------------------\n\n",
+  "renders": [
+    {
+      "preset": "ORIGINAL",
+      "width": 3200,
+      "height": 1800,
+      "elapsedMillis": 423.119,
+      "sampledPeakNativeHeapBytes": 117715840,
+      "sampledPeakManagedHeapBytes": 18436800
+    },
+    {
+      "preset": "COLOR_DOCUMENT",
+      "width": 3200,
+      "height": 1800,
+      "elapsedMillis": 757.2183,
+      "sampledPeakNativeHeapBytes": 117737856,
+      "sampledPeakManagedHeapBytes": 18535104
+    },
+    {
+      "preset": "GRAYSCALE",
+      "width": 3200,
+      "height": 1800,
+      "elapsedMillis": 251.0965,
+      "sampledPeakNativeHeapBytes": 87195008,
+      "sampledPeakManagedHeapBytes": 4035264
+    },
+    {
+      "preset": "BLACK_WHITE",
+      "width": 3200,
+      "height": 1800,
+      "elapsedMillis": 290.0837,
+      "sampledPeakNativeHeapBytes": 87195328,
+      "sampledPeakManagedHeapBytes": 3281600
+    },
+    {
+      "preset": "PHOTO",
+      "width": 3200,
+      "height": 1800,
+      "elapsedMillis": 378.0537,
+      "sampledPeakNativeHeapBytes": 87195440,
+      "sampledPeakManagedHeapBytes": 3347136
+    }
+  ]
+}

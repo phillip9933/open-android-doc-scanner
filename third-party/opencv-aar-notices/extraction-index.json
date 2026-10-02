@@ -1,0 +1,15 @@
+{
+  "aar_sha256": "f71846a313388d9da667a59be1e921669fcf792d1ba264b3898253ca789bc3f0",
+  "extracted_notices": [],
+  "inspected_archives": [
+    {
+      "archive": "opencv-4.12.0.aar",
+      "entry_count": 443
+    },
+    {
+      "archive": "classes.jar",
+      "entry_count": 230
+    }
+  ],
+  "license_review_status": "pending"
+}

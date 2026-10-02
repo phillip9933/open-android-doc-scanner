@@ -1,0 +1,2737 @@
+[
+  {
+    "sourcePath": "modules/core/include/opencv2/core/affine.hpp",
+    "sourceSha256": "f67b0e1a0d51ed1a0cb0f0010568a3c3649aa99ab51a0183e092858be6b00da4",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/async.hpp",
+    "sourceSha256": "4ebd7dec356441c35e53447f548cb4c1074d93109a92716ab570d40469992313",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/base.hpp",
+    "sourceSha256": "e1854528b601ce022c661a8fcd312a0d9ea651c534c635e934117f3ca4912a20",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/bindings_utils.hpp",
+    "sourceSha256": "008452b3a3a28a3e7431face1301ad1f20823a1d2142e8c85b36e92bfaeef833",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/bufferpool.hpp",
+    "sourceSha256": "65dd904d4f15850ec23ad7531a8f431fd023c98c429adc59e00ae346c8976667",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/check.hpp",
+    "sourceSha256": "fb7cf749c4695f02cb311b198efa9823eac1f1e98831b776fe8ab5f976bea4d1",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/core.hpp",
+    "sourceSha256": "21a4ea4d80847984ef8eafe4746ecc18d5bcafd10564ce4c24e2416043d85798",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/core_c.h",
+    "sourceSha256": "7c5d2883897df0d8f86a322078c32132cf890a34f45fcdb9460f1bde84e97466",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/cuda/block.hpp",
+    "sourceSha256": "706494ee8db1c697ffa51541ada3ea6eace83f2c776c9fd24f755bb412bc2c6d",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/cuda/border_interpolate.hpp",
+    "sourceSha256": "ec035bb5aba46f139fe841ce5b09f0f098d330378a29b39db9f2d38f19be19c2",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/cuda/color.hpp",
+    "sourceSha256": "0092ae7b45369b4eb86bc3b9c2cd64331c93d3ad9c338285e7f842adc3dd3331",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/cuda/common.hpp",
+    "sourceSha256": "74144295b4913025b57b8a15bc4043091f2ad1ad2ad4835766ff76c7a7bfe0ca",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/cuda/datamov_utils.hpp",
+    "sourceSha256": "7f9cc05e1ba9db626bb6cdf2833b3f56c0423efa9ae8bbfac7a31ae7d4550bc4",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/cuda/detail/color_detail.hpp",
+    "sourceSha256": "79d28f503115106ed34f914e73a184e7691292afa0f2bf1abce5a50e6fa9ff41",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/cuda/detail/reduce.hpp",
+    "sourceSha256": "ce9c9f1286821b1ad2f31e0e8afe3c683503b8eafed0f329880d8aa573cffbfd",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/cuda/detail/reduce_key_val.hpp",
+    "sourceSha256": "b781ffca5b62f64332cf62988aa18728d52abb24ffb2cb4a82fcda521d7da88a",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/cuda/detail/transform_detail.hpp",
+    "sourceSha256": "72650821b8fd19a4a3b2c18a9bad2878064f41bb82206a1297c2bdbd0193aa82",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/cuda/detail/type_traits_detail.hpp",
+    "sourceSha256": "cf9aa11a5c0e8a599e93ffd40d3ae45d62d1da19a4b38a00d64c14d8caae8f2a",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/cuda/detail/vec_distance_detail.hpp",
+    "sourceSha256": "c6db61c660a173e05a32ba205a113b562316fdeefaf70dcf9c12bc1a22d31a9b",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/cuda/dynamic_smem.hpp",
+    "sourceSha256": "6c98892ee9425c177d54d8b1f434396b87124250a575cd2bbcd410b53888c9aa",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/cuda/emulation.hpp",
+    "sourceSha256": "675546d761bb50159c27b8c1afc0b7f97981bbb6a3fe80befff04e6d2ed02f82",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/cuda/filters.hpp",
+    "sourceSha256": "7be49a92d1376c9be94721c15fd1a3b6005a4db6cf1bc5d6ea2476a9ee2a3bb0",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/cuda/funcattrib.hpp",
+    "sourceSha256": "05038a7802c6f01d755f8bbfd78efe5d09790c3fb1722a8f24a68d4048ff38a3",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/cuda/functional.hpp",
+    "sourceSha256": "8932acace59199f392c2d8404d163261a89c5e2f6a72d573b4ef24078d4205bd",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/cuda/limits.hpp",
+    "sourceSha256": "ccd8bb12cc19901476bb61f5b25d62974661481f9e1126ed3af3439a85c100fa",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/cuda/reduce.hpp",
+    "sourceSha256": "1a7928067702e4f2889270cca922e6c73c9e6d2cdf88cc4b4f8dab8dee7cec7c",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/cuda/saturate_cast.hpp",
+    "sourceSha256": "63d7ce621e96bad38aa846b9bb001da72048f1dbcd49311606c35a238ae5b926",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/cuda/scan.hpp",
+    "sourceSha256": "2c3f207fdaca653a09e9167fa3c0dec7e46469c029be17942c5fff0fe564f437",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/cuda/simd_functions.hpp",
+    "sourceSha256": "5501456d3853386bfe71e11a2ab86b3e1c3122ea644d64bd1a3355bbfef48bba",
+    "noticeBlockCount": 3
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/cuda/transform.hpp",
+    "sourceSha256": "4ba3c9a282bb1e0d4fd0f00aacca8b4e00261e4c63f2c3e7f9ed472ef320b288",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/cuda/type_traits.hpp",
+    "sourceSha256": "4d88a91029fa59f1c37a0efb021efe332450c71e9c0194840fb01157fd193f77",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/cuda/utility.hpp",
+    "sourceSha256": "8c6ab8996d00802d47194035304744ea6e81c7eddb4c7a20fa4143cb647051da",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/cuda/vec_distance.hpp",
+    "sourceSha256": "f48fdf00b959c67edc38cdd107464c2901adc03dbb6c5e964267813332238195",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/cuda/vec_math.hpp",
+    "sourceSha256": "b254df03f9a8e51270f4458c97946d28bb84caf9762b9d00b3956fbc490fd90b",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/cuda/vec_traits.hpp",
+    "sourceSha256": "8d2df7d1b4b560809d409e5d9ba2e3c12a5d85098a8987c897e239ac9a8a3109",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/cuda/warp.hpp",
+    "sourceSha256": "f96ba84d3b06426b3676a1ad09e621107adaf40fc3fd388e7dcbd323cd1db55e",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/cuda/warp_reduce.hpp",
+    "sourceSha256": "9ba443e97474d2a97cb8b99eb6c22f76659ba2cb8d352dffbb1c9deb9b944373",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/cuda/warp_shuffle.hpp",
+    "sourceSha256": "8efd947fc7abae68bc81841a1243d49022a5328807143d3b818d82043eeeb82c",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/cuda.hpp",
+    "sourceSha256": "b725d6848786e49dc878c0b362f7b2b4b3c45ec2463ac03112e5041560a40748",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/cuda.inl.hpp",
+    "sourceSha256": "caff4880ae6c88f63db928666202f1468c8b16e02843acc24e31bfb0c50091b8",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/cuda_stream_accessor.hpp",
+    "sourceSha256": "e23118e9761e8eda3b9223aaf5ef040f58751a67d641953f48f29be9e354b31e",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/cuda_types.hpp",
+    "sourceSha256": "01753a8d438bacf14ac4439192542d5fc4bca88afb3918717afd7e1a36efacea",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/cv_cpu_dispatch.h",
+    "sourceSha256": "9bc32aba988a5412ff6590984bd5758a8613fe51891358d18be9f4e04ca30055",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/cvdef.h",
+    "sourceSha256": "ef683b02fcaa93f41fac8e9183dfc0dde547fe04a7a2b5f0ccc68fb22f4795ed",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/cvstd.hpp",
+    "sourceSha256": "96a1ddefb0539061389be0704b554e5ab30f20132944485f4c70644ceeb4a0d2",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/cvstd.inl.hpp",
+    "sourceSha256": "33223f6f38d88607f3da7f02683ff91aa07279240d34084e1a0fe7b19ab5ca28",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/cvstd_wrapper.hpp",
+    "sourceSha256": "babed4fc9c3d804502aa053c5add427600600f080984985812d8cce716b35ffa",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/detail/async_promise.hpp",
+    "sourceSha256": "84920f5944b2561b0f6da3784a5fd281aba39e8544651a7ac8a889e3509982f4",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/detail/dispatch_helper.impl.hpp",
+    "sourceSha256": "a6c812132580f4eaca6f35f2f19b32d40b24ef9ab0b75b51291c551c6b4224d9",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/detail/exception_ptr.hpp",
+    "sourceSha256": "30ae6e20abd03cf3621bfb392e7778aff8a90635bd4679e9f2e706c8c99b0986",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/directx.hpp",
+    "sourceSha256": "ef2b12df417633e49c8a7341e9f82d70eff7ff84fd944fa098947254ee491ea8",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/dualquaternion.hpp",
+    "sourceSha256": "ed725cacbb20ca9b17c72256504ec74d270bcf44559952508392d7b69764f1ad",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/dualquaternion.inl.hpp",
+    "sourceSha256": "1b6b478123cd15b7f24f2f3399d5c9199f7af979d9b57f0b0265a02cd4279484",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/eigen.hpp",
+    "sourceSha256": "fb98669a1bf5b6ab3c31ed3479663d0608131bc9af743f7b7e868640b3428485",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/fast_math.hpp",
+    "sourceSha256": "81719ea26aef77deda817c751a90b7c61049821aaf67e915654b2305caaa942d",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/hal/hal.hpp",
+    "sourceSha256": "0f8eadf8fd6899858ab46db329ba94770160ecf9cd8ac897dece8c6884c8d521",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/hal/intrin.hpp",
+    "sourceSha256": "eeb3be550b8d7f6492c762bcefeb2e8fe5c9c0628ccb09f2ded7f1b2f34d6aa3",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/hal/intrin_avx.hpp",
+    "sourceSha256": "a94f0297f74c4081a341d27eace3e000f6720d2419df890ffbeeccf2174d37aa",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/hal/intrin_avx512.hpp",
+    "sourceSha256": "b7fd72f1e96a00370e1096a1d61f75f6bf0355d9f2b1fff2bca64affac7aa23e",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/hal/intrin_cpp.hpp",
+    "sourceSha256": "c0f491dd72e8bd5ae0cd31d650d283593cd74afa5ca113ba7c5bae716392d2c9",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/hal/intrin_forward.hpp",
+    "sourceSha256": "ad93e16fdad234aab37ccc96bd37768f213c6ee2fedb3c6309e1057307f621f2",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/hal/intrin_lasx.hpp",
+    "sourceSha256": "4d731ad3c689efea2905db049636adb3d48d5fdf3436cd1b61a3bd283ddaa023",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/hal/intrin_legacy_ops.h",
+    "sourceSha256": "9162fd638f6523412d095dc69bc67b5d5eb0b945c185003e67b0938a79c90686",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/hal/intrin_lsx.hpp",
+    "sourceSha256": "aa31563f0a5033495e27a5bab0cde7deda49bc2c039aeeabb4ae9ed1f68b172b",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/hal/intrin_math.hpp",
+    "sourceSha256": "8d6ed7f222d15da0d73080fe407d7e3f9809b3fc5c93222cbe320f9a9f794e5c",
+    "noticeBlockCount": 3
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/hal/intrin_msa.hpp",
+    "sourceSha256": "80dfbe94520016a6d10be1444c612cdb889d606ef6f016f2a693f215be289b09",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/hal/intrin_neon.hpp",
+    "sourceSha256": "fd562189af217d1d0529fdfcf18c80c849895aa7438dc8dbfbf0c027bf939f23",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/hal/intrin_rvv071.hpp",
+    "sourceSha256": "2ddc9c4978233a8fa09d7d990349723cf6ad627cdd967c27ad6765b4ede6528b",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/hal/intrin_rvv_scalable.hpp",
+    "sourceSha256": "60e6040f2fcb239699516073bf688d2fab522806d98c0bd364e4fe9f579ac2df",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/hal/intrin_sse.hpp",
+    "sourceSha256": "9ea43239afc6dd6915c37715074d8d6351a055b3890aa71fb644864dcb9ececd",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/hal/intrin_sse_em.hpp",
+    "sourceSha256": "9a8369d287ff500756fae5577f528c360f011e04e5a4a44f5af1d697b1d1442a",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/hal/intrin_vsx.hpp",
+    "sourceSha256": "aaec43fe948c55b3b31d730358d4b266f90aede3c262cff794c293a7370c13fe",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/hal/intrin_wasm.hpp",
+    "sourceSha256": "4c63d4c9717d6c75261415c197a7b0912dd848eefa8d13fc87ad306d60ce9656",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/hal/msa_macros.h",
+    "sourceSha256": "bf5842830c95304950487c93f9f8ec5ac29ad659a316fb2ea80407229ee2a6e0",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/hal/simd_utils.impl.hpp",
+    "sourceSha256": "a7416b4d5fc41cd2df66f4fdb36a0a85374d79de3dc5d8fb38ce40be049ff772",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/llapi/llapi.h",
+    "sourceSha256": "6e88f44979ceabf8e93ce3a0ed7dc89d72ebe09728bb8c3f78ea6ac2e823afdf",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/mat.hpp",
+    "sourceSha256": "744b5bf42cd02052412870df3e8770835041cd8b8a7c935b795c4c89bac23520",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/mat.inl.hpp",
+    "sourceSha256": "a267fd0f3dd5d33720a63082a6b88ddb4438d0a84e7e5078c2c4831e1ee97248",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/matx.hpp",
+    "sourceSha256": "086ceebe87ed54c98155bfff778f02305697dc7cd9d10449f2f21a482023872b",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/matx.inl.hpp",
+    "sourceSha256": "010153afc595d6e58ba24949c85af8a6a2fc038d52ec054a35ae9eed8a97980d",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/neon_utils.hpp",
+    "sourceSha256": "ac4f537960e50684671ca6a4b95c1eb6db5ba05e8d9f42f66b930ac8702ae7f9",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/ocl.hpp",
+    "sourceSha256": "28eb3a7a8d1cc542dd5b76360a732d918dca89048c015b140f6067310229222b",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/ocl_genbase.hpp",
+    "sourceSha256": "9744e968d9bdfea84cdee4aeae0c141e300cc90ce44329accdd535952c3c48dd",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/opencl/ocl_defs.hpp",
+    "sourceSha256": "9bdcabf71097dc339f80702269616dc5755f718843759941e79dfc25284c8e89",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/opencl/opencl_info.hpp",
+    "sourceSha256": "9ab1bf080b8e1438df491a3934f1fbfce154a7ad216e91a7e3f94803694402eb",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/opencl/opencl_svm.hpp",
+    "sourceSha256": "73c8f9da9214399ecb88b7e478943ff311464db791abf5625b3b31be479c9da4",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/opencl/runtime/opencl_clblas.hpp",
+    "sourceSha256": "3b76c057001979ee78c6208f13c8b684c4f0e4d5a7b4a7d597495b80e65b95ed",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/opencl/runtime/opencl_clfft.hpp",
+    "sourceSha256": "3a68d279e239fa325d3abf0113061727251c04a4d629b2f85ce46426ef582e99",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/opencl/runtime/opencl_core.hpp",
+    "sourceSha256": "b9e8a9b925a815d26bd1ce94741581f3568027d3b93993f0372a0cc84c650115",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/opencl/runtime/opencl_core_wrappers.hpp",
+    "sourceSha256": "ba119681e962a46083f2985fcb88c325a5277bf5b119e6a7b1508807ad072662",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/opencl/runtime/opencl_gl.hpp",
+    "sourceSha256": "8c3699033b34fe4502a0c891217a00322a4c8f21ff023fd820a6a0107707d95c",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/opencl/runtime/opencl_gl_wrappers.hpp",
+    "sourceSha256": "85bb84fc5eaf8f110c3d31c42b691cdef2e9ba6a9a296a788c3e0892a934d7b7",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/opencl/runtime/opencl_svm_20.hpp",
+    "sourceSha256": "2297538b39e076d21c167fb66facc41854293a82f5d34f245083c797cd9b0ffd",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/opencl/runtime/opencl_svm_definitions.hpp",
+    "sourceSha256": "56e3927d9adff9edd71c42fe675a962660527db1374901f08a8619a876bf9c6a",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/opencl/runtime/opencl_svm_hsa_extension.hpp",
+    "sourceSha256": "e72f6ad28d18a825c8caff56eaca1642298aeb4af960b61ee1ef12e987c04719",
+    "noticeBlockCount": 3
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/opengl.hpp",
+    "sourceSha256": "44b70716a071add4946046690bb3232908d1e5b56a9ae236f50497b2d420c790",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/openvx/ovx_defs.hpp",
+    "sourceSha256": "5e07f2a4496414acb38ddaa97bdc89a60258428c8f6f80d2f3a892365c1b9668",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/operations.hpp",
+    "sourceSha256": "426e7a2a9206c603af60a2cda4e3a36a60bdc53d268df577cf1d32ae1156f843",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/optim.hpp",
+    "sourceSha256": "acfc26fa3409d2c7dc897fc816a6eab67554414a514a1a062de68a68cb351e80",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/ovx.hpp",
+    "sourceSha256": "e4b13bc11c14d59f640ac59963bd02670ca352d533160d539b6e790052051530",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/parallel/backend/parallel_for.openmp.hpp",
+    "sourceSha256": "903d8ba56eae3158e816522c5a816e9e9811e41c62e812a34bbf1dbfde81132e",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/parallel/backend/parallel_for.tbb.hpp",
+    "sourceSha256": "af6dd3c7162df172e8462b8c697f2fcddf2af1777f98a993ab3be8b33fb58b7e",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/parallel/parallel_backend.hpp",
+    "sourceSha256": "79c71d6191b0931cb1db9931ca4ecaa156cfec83bc6e4e71b8407722ed3d7194",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/persistence.hpp",
+    "sourceSha256": "992e7d7575fd671302b2beb9600a99e380485797aa6448bdbaa81d8c66b524b8",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/private.cuda.hpp",
+    "sourceSha256": "3e214a8e2fccdaf200172937960180150203f53c7d9727656721fd1ae10e5e38",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/private.hpp",
+    "sourceSha256": "c523b881396d8f9799c3496a0090554ed4fd9fb2d8020446bb702d66c681a6d1",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/quaternion.hpp",
+    "sourceSha256": "6ff8d3b19489c4b69345806b65e82770829ecca8604d96b421a27f3a30ca05d1",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/quaternion.inl.hpp",
+    "sourceSha256": "dff743f883e47035d84e52058cb9bca9fbf5d615e35bf3923097164263d6a164",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/saturate.hpp",
+    "sourceSha256": "bf418a3f44d575b17c18af968dbe3e2c8bd0663c22f8dcb53c4b0f77b5db14ba",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/simd_intrinsics.hpp",
+    "sourceSha256": "ac81c6962c8b5679dfb63fe06487c27ae197946b66b1df90ad46e410a11a5a20",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/softfloat.hpp",
+    "sourceSha256": "43c01ea3c1b3f99352437dddaca1b9b862e9d9b734c7a901f63abad5b28e3412",
+    "noticeBlockCount": 3
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/sse_utils.hpp",
+    "sourceSha256": "2d9f170fdecb359c434387e6379fe5f16f9ffc77ef8dc4ba111ca517c3359023",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/traits.hpp",
+    "sourceSha256": "6c45b2ee5137464ab4080063e38b68a6c5ac8b415e04aee8cb5c634b5dcc9861",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/types.hpp",
+    "sourceSha256": "19d8ae6170f3b6f38f545768a24c922a50774c23eeebc11e39f7c6a1f5726f08",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/types_c.h",
+    "sourceSha256": "0bab108b55e64c5f7b6a1faa3d8eb655591321efd7b30dc0a663201531f48900",
+    "noticeBlockCount": 3
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/utility.hpp",
+    "sourceSha256": "e5b9e25e349f121c3d3f2347c48afef5d18a8c7c4124acee833c0e04b9c270b0",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/utils/allocator_stats.hpp",
+    "sourceSha256": "260d7dff55a04646ae7f78bfe7af249fe2bbe368add0c934cad108703dbb56c1",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/utils/allocator_stats.impl.hpp",
+    "sourceSha256": "62b1f1d878926e7ce8fa323a75a5e8cdb184fd0c6261890963fd82dc9c26c874",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/utils/buffer_area.private.hpp",
+    "sourceSha256": "3f51e899790c855c331013f5c056a5fc1647b62e48952e311f800dd97d230ce5",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/utils/configuration.private.hpp",
+    "sourceSha256": "ee1ad185d4500def5c9b2de6c202128d2b39bbfc30235d311817776e4203f375",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/utils/filesystem.hpp",
+    "sourceSha256": "584606928e15cdfa0846f97a4f1922860b6f193e0bc3e9f15bd58796edb10b86",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/utils/filesystem.private.hpp",
+    "sourceSha256": "29bfdd3e01a425d96c7b4df685026e08b789b29de141d98df1c11a8ebca4118e",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/utils/fp_control.private.hpp",
+    "sourceSha256": "db54564f8feda1a7ec93f6865225973a18d4a0b050f1fc17055096340ed9987f",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/utils/fp_control_utils.hpp",
+    "sourceSha256": "2565900dff6e97772c2cb1434b8d136df85446e4596a708d73ae14f3cae9a8d8",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/utils/instrumentation.hpp",
+    "sourceSha256": "dcb6a1ae866d143f400f844a4761b52f64429342a7511d1f6402b87105511e9d",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/utils/lock.private.hpp",
+    "sourceSha256": "c73462ffdaa22e309e502dea13ec871275d7823baffdfa56fcffe84035f2e662",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/utils/logger.defines.hpp",
+    "sourceSha256": "03bc3fd53608846ee3ad1b1feeeb97ac68e9758f4ceb5827ecca87c58204304c",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/utils/logger.hpp",
+    "sourceSha256": "139133ff707a0fb31bb201dfa34a1630d14ac02176272b241e2d1b6a1379b470",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/utils/logtag.hpp",
+    "sourceSha256": "1ab5f6f986e02af6aec74d7881ce0676dd82b215c4a5b33087f7e8010a1808b5",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/utils/plugin_loader.private.hpp",
+    "sourceSha256": "10caa1e0036a036b5b9dbeab03a8f51e69ffba4d6c7112fd49ab2d4de2c1fe1e",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/utils/tls.hpp",
+    "sourceSha256": "3b3261c3900c2d1ab82496b6722979996cb899f3110492d7177651790b6f9aef",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/utils/trace.hpp",
+    "sourceSha256": "0f0d8b3b0c68c871d026a95c549110e4438f8b349c42864ac7f49a9b5fe72066",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/utils/trace.private.hpp",
+    "sourceSha256": "ab486cf3394ba0415e89e55d37f2e678b57b86152bb418d90ff034a0c16e6b31",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/va_intel.hpp",
+    "sourceSha256": "3da1e78ac9e178d0ff6b2ef03e3cf912582139c1531142a338ba284b3906181b",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/version.hpp",
+    "sourceSha256": "aa6df48dc2a1807bf2a1decb21d8917f18632ef4c0f6f87e3a31a62f7ebf7555",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core/vsx_utils.hpp",
+    "sourceSha256": "4c0a89863f2147258a09ed9e4f295aff35bef9e9677e8bb2f73af23cca83885d",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/include/opencv2/core.hpp",
+    "sourceSha256": "22340ba4e68f8cf463f866922530bb26065ccec8b4e0b055f991e6b03e453a03",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/perf/cuda/perf_gpumat.cpp",
+    "sourceSha256": "c84ff99b81f198d280dd4ff6a496e6c6ee6d2fe54bb2041f4e95bff5ec6bf437",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/perf/opencl/perf_arithm.cpp",
+    "sourceSha256": "2a840a4ac310c9ada3f99e4cad1ae6306509d2187ac790c367c21c9ff2acbcd1",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/perf/opencl/perf_bufferpool.cpp",
+    "sourceSha256": "55b20209363638494b267e609086307faf382ee4149b4687c0bec2ec6e1f452b",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/perf/opencl/perf_channels.cpp",
+    "sourceSha256": "0c30513677d98ca5308b2c2292a80683e7de6b69c0e1ae954bd68a14021af222",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/perf/opencl/perf_dxt.cpp",
+    "sourceSha256": "cab714cb763b9a511d4356e0484446eb2c9a59bf34c5ada2fc473ffdfb0ec531",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/perf/opencl/perf_gemm.cpp",
+    "sourceSha256": "18c39017750e5a6d7d858685ea9d7f7f31b817aec04f8e19c4ab640021a64438",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/perf/opencl/perf_matop.cpp",
+    "sourceSha256": "9dabe70529a0ce816f115497ba9bcc6d0b2414287de0799de1aa4c492c858cbf",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/perf/opencl/perf_usage_flags.cpp",
+    "sourceSha256": "691cf77d9ed1c533d02875eee596235d0d4feea917edaeacdf2524d4402e9161",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/perf/perf_allocation.cpp",
+    "sourceSha256": "04b688f7b7184295ee40d8ec7481647297a894c8d3a6cb5e41b3461a878f96cc",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/perf/perf_flip.cpp",
+    "sourceSha256": "51cd1627a74e298e11a22a8016016b465cb814d9c36c7e7425083014efa3b8af",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/perf/perf_precomp.hpp",
+    "sourceSha256": "53503ea72f3e14034a3f92b65eab058132a5cb1baf67dd8da838286a45ee3fb6",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/perf/perf_umat.cpp",
+    "sourceSha256": "92c6c97f6f755909173a2c19e2118191e88200cbd04f57b40203cfbd104487ba",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/algorithm.cpp",
+    "sourceSha256": "ad3ae48f7d4b6dd61b0bcbd230f0f8bbf92eb4d240bde2a543fd687c827ac4cd",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/alloc.cpp",
+    "sourceSha256": "9f812a69b38c886aea8583a8d67332749aa8af8c2b157fb54ffe306936e01a66",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/arithm.cpp",
+    "sourceSha256": "21f2c9f92c867c6148ad2fc992f09bd4f9d0a2326a87029422ca4b4d37fd0047",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/arithm.dispatch.cpp",
+    "sourceSha256": "166c7ba5d214189c3b4cdb4778b4a06f9dbf1bdbf788e69b639f467c9e39b66f",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/arithm.simd.hpp",
+    "sourceSha256": "96ad1d0b124b232af54db21a5eedf8482344280a3fda3b2818756ba029758e31",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/arithm_ipp.hpp",
+    "sourceSha256": "222edbfd89fee9ffb276b814521afe543e7a0727b777bd42d0ce0959ad0ecba1",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/array.cpp",
+    "sourceSha256": "40dbaab4e22f260c761dcfcd4b574f640dee23ae4efe3f039424fd5477520d18",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/async.cpp",
+    "sourceSha256": "cebe9c7b93c9530af13365670beaf738f19425e673b3ab4856ee3d0eb23f7374",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/batch_distance.cpp",
+    "sourceSha256": "0ab18fadec5e83a7bedc69c674f46ca8db889619198afffe56872d47a41d491d",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/bindings_utils.cpp",
+    "sourceSha256": "a22a6a7fa8b7e770d79d4275b2d98d39574b874d9c134f4416dac289f6fa034c",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/buffer_area.cpp",
+    "sourceSha256": "741f021ba72a976e366c08ec6afd65399108ff11b774cafd21f3f5608f6b7d5e",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/bufferpool.impl.hpp",
+    "sourceSha256": "355a8039436d7dac02e853b9ae2c115de7416e99d1924d6adacfc6ecdc559e14",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/channels.cpp",
+    "sourceSha256": "590bd92866b64c18466ce1339499c35005a50c60b55123896671c2011be4ab96",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/check.cpp",
+    "sourceSha256": "315de7e5340b8fd90c6a00ea8cf906ae1a701c9a9c12c0fa8b3b61089ee8dfe3",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/command_line_parser.cpp",
+    "sourceSha256": "0a3b28d4a3f5c3fde85a5b0161fd17dcf66cac28afb4892b982b8087ee84b153",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/conjugate_gradient.cpp",
+    "sourceSha256": "1055dfecb2a7eb856be1c98eeffd4e7f48a24aaa4f2602092378eeba21a660ea",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/convert.dispatch.cpp",
+    "sourceSha256": "5c37fe1e9330d2aa178483f89fa1857acd07c859e4d64cdb85cc08c506f33fab",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/convert.hpp",
+    "sourceSha256": "4b8bea45ddcd22a818e57a3d22e043b700ac3e5df3c38efa17a5be4bbd71d78e",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/convert.simd.hpp",
+    "sourceSha256": "42e8f82a637e8239c60d272443299638e0f255a883f247cbb36803849a3b4267",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/convert_c.cpp",
+    "sourceSha256": "8d5513652f68aa13e67f562f337932dd45db1ae3171c1daa57a8ee8df60cc10f",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/convert_scale.dispatch.cpp",
+    "sourceSha256": "3c227ff423fc7c96c7e69c8aef86fed47f5c66d1abd3c915abcda727484c66c6",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/convert_scale.simd.hpp",
+    "sourceSha256": "49b62b18c0e85a682fa76951cdc8b99506a8e390585cc4dad09795f1c2607a3a",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/copy.cpp",
+    "sourceSha256": "5af2f5b62e4dd635e9c8287db3723b814e77adf12db7395b6fa73fef45215032",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/count_non_zero.dispatch.cpp",
+    "sourceSha256": "f62f75b9ab4a01a67f2147e68a3dfc451a1590f89d966085ea067fecf67235a3",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/count_non_zero.simd.hpp",
+    "sourceSha256": "1f904cc079f549aa0ff947e8cbd0ffbdd0ac9e3f26543401952e8cb494d2b82b",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/cuda_gpu_mat.cpp",
+    "sourceSha256": "884390941c4cd2950f803d390186c1100008c6b09bdaa40a23b507c96f1457ac",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/cuda_gpu_mat_nd.cpp",
+    "sourceSha256": "f48bb5727a1beae79b433cdca9a8bcda0c52cfc9666a6950f7ed80b5d04e3330",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/cuda_host_mem.cpp",
+    "sourceSha256": "16ef5eb820d89af7875430d9a5af28a5d5afa3941a280cd7d2c87c9aceafaa07",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/cuda_info.cpp",
+    "sourceSha256": "9946080c831c19610c1ef7ff4e9b505e84e7a20260530a66e5777b89aa2e0c66",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/cuda_stream.cpp",
+    "sourceSha256": "9a29a77c83b525c94d23a1bda270e2d87d3313713ce9602243c3e8ad4127c6b5",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/datastructs.cpp",
+    "sourceSha256": "f03b2bfeec731a8610643580aea83f66359a2fff05c0e1f67fdf508cca7a055b",
+    "noticeBlockCount": 3
+  },
+  {
+    "sourcePath": "modules/core/src/directx.cpp",
+    "sourceSha256": "0492956ff0c5b8e0b8daf49ea935f4f7e05972872a26e23a20ad894c2558d0c8",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/directx.inc.hpp",
+    "sourceSha256": "028ae69e04805680b7404ef0b4b704b3cef397531496ee11e4dc166bbb60272f",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/downhill_simplex.cpp",
+    "sourceSha256": "03a31f41efe31736e99e24a2650fbbb68fee404c17495b53818b736934393aa8",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/dxt.cpp",
+    "sourceSha256": "985cacc643ed2fbac9b452f91ca3af623d1966359bfab998121789d53695a0b2",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/gl_core_3_1.cpp",
+    "sourceSha256": "21d60f5c312f01ca5ebaf735e4a25688600586d396645d1e9b82bcffdee0adee",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/gl_core_3_1.hpp",
+    "sourceSha256": "bd8005ec92064fd361609ebc3031ab81ae7eb473191c305828761b64f882b6ef",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/glob.cpp",
+    "sourceSha256": "83ea9917a432dc449e1d8fd020591beaa05e89a7799168a35cdd23943c7c8ebf",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/hal_internal.cpp",
+    "sourceSha256": "f2ccae0db80937592aa271119fc6c1521104597297f7c426897cca6471f087d4",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/hal_internal.hpp",
+    "sourceSha256": "42fd642d839406386ef2964a39378013665cf785d1a034fab97a71fc29537ae9",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/hal_replacement.hpp",
+    "sourceSha256": "39d09851861dd5c813c5f47dde4283dbb1e300bc1abfba561fa3a4294a642937",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/has_non_zero.dispatch.cpp",
+    "sourceSha256": "62b07537aa4364c95d4faead85b1a2148b211e2a98b4c3236211b16b60aee542",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/has_non_zero.simd.hpp",
+    "sourceSha256": "a7eab5b2362a79985bd16057ec82b984970c6df6b52982470ee12c66ecfa1cfa",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/intel_gpu_gemm.inl.hpp",
+    "sourceSha256": "904654286f66cdf6dcd096e0b71c9f407e98f10c99087e96249d583de4b211a3",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/kmeans.cpp",
+    "sourceSha256": "8f8ee34d448ea7fef9df8612c7aa680630528e641c015a0039ddedb7bc97f1e8",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/lapack.cpp",
+    "sourceSha256": "8cb4d60622f91793482a4c6384db0514f12574c6582629c8457062fd343e18ac",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/lda.cpp",
+    "sourceSha256": "cfe646d9f8d6ad6104da18243873ad7335e47c7c63e490539e40b3374b6be355",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/logger.cpp",
+    "sourceSha256": "f9e516e635691c46125f71e30aa0771f52e834bd698ea793fa6f301862a7d720",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/lpsolver.cpp",
+    "sourceSha256": "15175c85305de33709ababd8f39cc474d9bb6ec556125cdca356e762d3651ecc",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/lut.cpp",
+    "sourceSha256": "7a4c7783fe96cc346e29748e8f64705cec22c6c78755081c96f4d3a216fe08e0",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/mathfuncs.cpp",
+    "sourceSha256": "3c1feff159bb5c009602944a37a81b6a0a31dce0ef7e13e80a82918c6f107780",
+    "noticeBlockCount": 3
+  },
+  {
+    "sourcePath": "modules/core/src/mathfuncs.hpp",
+    "sourceSha256": "6da850b1875d2dc63e36eda54574f2594e642debc141bd2c13f37f2edade3e24",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/mathfuncs_core.dispatch.cpp",
+    "sourceSha256": "9042b07ce4daa0723d309cd680466c1ed2cbf4c3b63736e48409c8c0673d9e38",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/mathfuncs_core.simd.hpp",
+    "sourceSha256": "6b6d76e180bef9ed4d79ff3ed5e9d467655ed0af41c60a38806750b36922992b",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/matmul.dispatch.cpp",
+    "sourceSha256": "d81a5be94766699cf0f442558106b42b4056759759d91ac3005a9d67682410b2",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/matmul.simd.hpp",
+    "sourceSha256": "197b2edc01773be82be27e043cc6b89a8ca45d580ec24d583c358c89af1b6a13",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/matrix.cpp",
+    "sourceSha256": "5d245ec4f3899a8999f44a28dcee96681f47f98c9d28c18ebd0dd81132c19938",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/matrix_c.cpp",
+    "sourceSha256": "0cbc4dcfef65fb53f0876b33e3de432d76cbd5ad9f3ccf1f64d6949abb369744",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/matrix_decomp.cpp",
+    "sourceSha256": "887deb3905e1f4fbcab426be4346b4ada863051579f19e3011721704dd2ac596",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/matrix_expressions.cpp",
+    "sourceSha256": "764c79b50c1fd7b5293387dc74d2e6257e89f12cdab0430e01fd7aa8da29412e",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/matrix_iterator.cpp",
+    "sourceSha256": "6544133080561e965df66a83efcb6196c433896faeadb6e04caeb8c9aa5db619",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/matrix_operations.cpp",
+    "sourceSha256": "42818b3e135e7de9fd76f72603f578ff6c47634d1bb6ef74e889f31dcdeb1d65",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/matrix_sparse.cpp",
+    "sourceSha256": "ab96f974c17427ab172e7a67d3cc338e5184820f912af11e6951f73bdf9d751c",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/matrix_transform.cpp",
+    "sourceSha256": "ac21aca6f550bd62af6e9c0e8e4d50e7d2f67866255cedc4d9957b542663fc2d",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/matrix_wrap.cpp",
+    "sourceSha256": "7b8f5ab3232f827ca8522adb03c353a33e610c8ffab2168f5550f5e30481fbc2",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/mean.dispatch.cpp",
+    "sourceSha256": "8e52e41c7bf7f1942a5c366683d2742040f6d82db770f253b7d61cb18205133a",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/mean.simd.hpp",
+    "sourceSha256": "88b71b43ed34f0dc601890a435be0ebec91a313448ec130b338208bdf7b425b3",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/merge.dispatch.cpp",
+    "sourceSha256": "d0a71dd9d7abece162773376e968e13261d8627e5f81dcb64129a77879aaf853",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/merge.simd.hpp",
+    "sourceSha256": "4ad55e6f3bd62c7495f8a1fc1e71032f4aec7913673d4488f1a8b353a4fec465",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/minmax.cpp",
+    "sourceSha256": "d811fc22d40068e69b8203547c68e3bc2cea46f48b7dd7c4bd4d78bcc44e027f",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/norm.dispatch.cpp",
+    "sourceSha256": "a43dee5135fcad900106395037da68be33df3d547913649e179c0a7ee0300bf8",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/norm.simd.hpp",
+    "sourceSha256": "20b51b3dab88b2d1a0f6699161981c382aaee75b6d89e26341db4306b95af65c",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/ocl.cpp",
+    "sourceSha256": "e53977323231a75e0916aaa5b781a36694975a9d91c7c4d0e19c79fd2ad31715",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/ocl_disabled.impl.hpp",
+    "sourceSha256": "04d316a9cae2f950c37474029000734edc219733345ec94a34fc027838aa105c",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/opencl/runtime/opencl_clblas.cpp",
+    "sourceSha256": "67a247c29882feca50898b6b704dc1b3b4265bed07b4d91e39d571c57a750b52",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/opencl/runtime/opencl_clfft.cpp",
+    "sourceSha256": "731561c559626abd66cfd6f3a46c5e9aa749031c0efc93e3ad4347f5425868bf",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/opencl/runtime/opencl_core.cpp",
+    "sourceSha256": "5ff5d24fb1f1d799f67cfba3841ab7755a8666dd2e2b5eafbf7843bc0f164691",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/opencl/runtime/runtime_common.hpp",
+    "sourceSha256": "d335f643d0dcba01590b6226a5c2619e5b64a6401350bdbebca9dbe8ae17d359",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/opengl.cpp",
+    "sourceSha256": "4c92c205dbd6c98efa348bd02e7e9572f5cac392ddc6293906b4ed321f94f017",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/out.cpp",
+    "sourceSha256": "f8b489ebc781fa0e674330f0ed5db04e82039b9fcdf74f0ad99650f54f3938cc",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/ovx.cpp",
+    "sourceSha256": "1a2175ed2fd00d08408f07217dbf6b1cdca6d647d52b6a88e98c8bd8e1d0742c",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/parallel/factory_parallel.hpp",
+    "sourceSha256": "444aced546625daa97f7ea2f53c48e10cbe793f0b6ac0483c2f6e24d0ed72a72",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/parallel/parallel.cpp",
+    "sourceSha256": "41ee288d3d18ac6533c53a00e20287108161bc55b2f02e4cd508102a6f850c70",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/parallel/parallel.hpp",
+    "sourceSha256": "73a550f1f9381cfacb8d320b9f88c9ca2688bf0f0d4d8cbdc2f8ed34436da859",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/parallel/parallel_openmp.cpp",
+    "sourceSha256": "b27a9c7df52179b2ebbab72cb0fbab95310119f451e2fe460b17ee230861836e",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/parallel/parallel_tbb.cpp",
+    "sourceSha256": "3fbc6651ab5348d7a25643c0bf22183ee0fa995d9cad4834b4fa52ef7415b9fd",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/parallel/plugin_parallel_api.hpp",
+    "sourceSha256": "f65e25914af6d1ae00d89f7e6169f2a817e082675a8c737131b1b8d518206313",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/parallel/plugin_parallel_wrapper.impl.hpp",
+    "sourceSha256": "e37687c30b1fbe126077ca5c190de960f7f10bdd5eaea576d173f62593e2ef8f",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/parallel/registry_parallel.hpp",
+    "sourceSha256": "354593233a7555a3281ab036004cb53a8288499c5bfdc82041f41a462be53e64",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/parallel/registry_parallel.impl.hpp",
+    "sourceSha256": "1786d3ed9bc5e3e18ab84ed40c000d8145a2ad3ca259eb211451cd7f28bc8bee",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/parallel.cpp",
+    "sourceSha256": "2486aa1c38227fb6f526d0bd1cc62136db5d73f0111cde67cb69b541ff99d6d6",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/parallel_impl.cpp",
+    "sourceSha256": "0fdb6928cd1d74f357c35bd53a48c39901da9a4308d27b75c50bf3c5ff05fe58",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/parallel_impl.hpp",
+    "sourceSha256": "f995899f76417bc9dc5be79b15ad52ea3798ed1ccbff5635ab890ea48c2b223a",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/pca.cpp",
+    "sourceSha256": "28d7f41a2d8df65333a89aa5fea38f0b16ad67418512cb6103f34235a0dc24c4",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/persistence.cpp",
+    "sourceSha256": "fa594278a5b583955fee33bb32f1842f425d9adc823fc8e438464690c677bf55",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/persistence.hpp",
+    "sourceSha256": "b85282a3dd3e102accd955cbfff094f30f1183aabc711568775357ad0894118f",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/persistence_base64_encoding.cpp",
+    "sourceSha256": "c4eb32d79c94aba6c83e77c6dc55ff4f4b2b270f23a69abbbc698c7c035bb0e3",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/persistence_base64_encoding.hpp",
+    "sourceSha256": "ac3cf16163f51bb494ed6198724d49284f20714dfde057beea7d9a571aa79aab",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/persistence_impl.hpp",
+    "sourceSha256": "17f02095ddd9f1ef2608a83dc32cb214b067b62feeb1e5c58df2178442018ad5",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/persistence_json.cpp",
+    "sourceSha256": "cbfb629879f35e64323b451325697cd46b6d0098f02d0188e1d764389113207e",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/persistence_types.cpp",
+    "sourceSha256": "9052bbe9553f6e45e8054d22807b1de04a6db21b8106c598b9e88dac93cd2d8c",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/persistence_xml.cpp",
+    "sourceSha256": "433be9956020d2888b90f83cd76a7708eb16a00886b7c7d940f3af8ab10a7849",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/persistence_yml.cpp",
+    "sourceSha256": "354b915a077f3e4d486d96bfb1475a90c9fdc6c510a6f90f2fc3cd481ef7703c",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/precomp.hpp",
+    "sourceSha256": "c36a34c0251af3e39f7b5e069b74e93db489a2fcf9633088af63cd12ae804e94",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/rand.cpp",
+    "sourceSha256": "f0618dbebd651152824f205834a6625524037314dcc7642e7c20db9b77586fd2",
+    "noticeBlockCount": 3
+  },
+  {
+    "sourcePath": "modules/core/src/softfloat.cpp",
+    "sourceSha256": "439d023e20307bcefad2309e486949ddd605a42acf7e4ba6118858812564c9f8",
+    "noticeBlockCount": 6
+  },
+  {
+    "sourcePath": "modules/core/src/split.dispatch.cpp",
+    "sourceSha256": "0ef576d1c439671aeb379b8a6e6187b31725dc18ccb9378158565af630ccf655",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/split.simd.hpp",
+    "sourceSha256": "570f782814d6a95d56b6238cc34fdd9b1bc75581d1624271473bdc37952ff5d1",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/stat.dispatch.cpp",
+    "sourceSha256": "38983c1e288a3aec6b71f5704e89fdc54c0643caee1c8314d23ad304217feb4b",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/stat.hpp",
+    "sourceSha256": "adc780166ee7d0292b3e1e74e9a91a8abb2b03fb9c16199b70e4dcbf1249ee14",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/stat.simd.hpp",
+    "sourceSha256": "58709cc0c970eaadc6c02ca75be22c3eeeaa28b3f6e2401affbc07058311e796",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/stat_c.cpp",
+    "sourceSha256": "c3da8ba45d992566979d2d5726e2812404a3ed7e47066421ba57ab7ae9382fd3",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/stl.cpp",
+    "sourceSha256": "bb6429cbf421a1205289061bac387641679300c76fd3ce5b7d297189280069f7",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/sum.dispatch.cpp",
+    "sourceSha256": "22dbcb5a1e7dbabd35555e5a019a760ff55f45b55bd9aceb838075174ca35021",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/sum.simd.hpp",
+    "sourceSha256": "ebe5cc0487fd144ad3547350c0fa9f0a41f129d7bbb83e5422dcf1a799195d7d",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/system.cpp",
+    "sourceSha256": "55916e04d3308ad2e336236f522ad915681a33ed89836bf9b73bee3fa2ad0095",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/tables.cpp",
+    "sourceSha256": "f7cbc6cc09d973ca70d7eaf38d6369b9f9b364383db7edf1027b559cce3dd4c7",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/trace.cpp",
+    "sourceSha256": "e883e1e3c04ded809f524a2ea7c166d8d72870aade5f907e0439baceccdecd4b",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/types.cpp",
+    "sourceSha256": "9d49b99da4de14e20c53d3dceb730627fceadb6c107bf9428505972d07c21d72",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/umatrix.cpp",
+    "sourceSha256": "6dd8bd6a4311a396a3a260414d91b50b0a92b5a5616eaa25c1917ce82d474468",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/umatrix.hpp",
+    "sourceSha256": "7d2ebb9fee4d906a0c0440879e100062dd06bdcf61112058ad3de1c925577b90",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/utils/datafile.cpp",
+    "sourceSha256": "2acb6c829dd9aab2e5b80d9cfe488253282a25d124a202106e905e0574107fba",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/utils/filesystem.cpp",
+    "sourceSha256": "876064f150d4b8b9ac0b1b1f1ff0ee8903271da7f568322e66fe2d69202be3dd",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/utils/logtagconfig.hpp",
+    "sourceSha256": "283d1ff1e11d35d2867d8df3de4953782520333a97f96807aeaa326f89d34c53",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/utils/logtagconfigparser.cpp",
+    "sourceSha256": "0690d42023ceba55e1703088ac9fdab7c8f09d4ea64242b78fd1fe01e2471a38",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/utils/logtagconfigparser.hpp",
+    "sourceSha256": "df4319febb1d07eec032905624c7ee8db03a1b440d9751d097feae6d37249b21",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/utils/logtagmanager.cpp",
+    "sourceSha256": "65a0b9f1bc58ac063f090ccd32e450b7f1d8c96f9391c82918c09318612b1f56",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/utils/logtagmanager.hpp",
+    "sourceSha256": "c1266d01296a33fa7df06d1b7ab93a197598b1c371763fd6974d52e36f805551",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/utils/plugin_loader.impl.hpp",
+    "sourceSha256": "50665a0d798e6b0dac4421cf3bcd2eaf5fb33166efc0b4fd738c22e9354a4213",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/utils/samples.cpp",
+    "sourceSha256": "918fdb6d4b2c5a6600b3ed61d5e6af920f3412a0e3d90af8e014e9c8befa9b79",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/src/va_intel.cpp",
+    "sourceSha256": "4d3f219ae18d44743c20e438107daec81a6c2c224763faabde9b344487961f15",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/src/va_wrapper.impl.hpp",
+    "sourceSha256": "9a96c1319826ff8b7ee21fb3c76b3f69bdfb0c787e35dac493f5725d0bcc2b88",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/test/ocl/test_arithm.cpp",
+    "sourceSha256": "c3958627c9839c64c2dd38e9e50cb1e67447429b7f31c8fbbfcb4d4c560768e9",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/test/ocl/test_channels.cpp",
+    "sourceSha256": "7aad51dc3e601468370fe46580deab8e2ef86ce496611476c5325bdb3cfafc05",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/test/ocl/test_dft.cpp",
+    "sourceSha256": "bd656fe4096246f78fce528979ac633071709e93ba04b4f70497e1ab65a143ed",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/test/ocl/test_gemm.cpp",
+    "sourceSha256": "202f7c280519f5d614031f2a44d081be5a55a2fe4d2a9dcc9805d54a9e1e2a86",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/test/ocl/test_image2d.cpp",
+    "sourceSha256": "20634aae7c1f722b228a176bb07c783ef476571619b158df5a3dceb2bc0445eb",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/test/ocl/test_matrix_expr.cpp",
+    "sourceSha256": "466de9acd7261f64b0fd72137a27e66a3e8e53995c150a2c425d5079188a993a",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/test/ocl/test_matrix_operation.cpp",
+    "sourceSha256": "830f0d760dc4d0bf43e3002c9d30b6293483ff6d60138df9c48f2beb7583ef98",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/test/ocl/test_opencl.cpp",
+    "sourceSha256": "619397b174a0d798be16a850239a5e00fd488c345e88e80ec8ab22bf3d4804c2",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/test/ref_reduce_arg.impl.hpp",
+    "sourceSha256": "90e7051f2b175f9ec04b10636cf8238a833ed2c199aa1514b902801bf29e6884",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/test/test_allocator.cpp",
+    "sourceSha256": "ea0074984c36136c41727f05f47d594aa8c09ff5c2bcc6d579fcd84730b63bda",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/test/test_arithm.cpp",
+    "sourceSha256": "f53acb2d13cdbc996331257876e378b499c3058e4e3dfe302ccf7cb310da2468",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/test/test_async.cpp",
+    "sourceSha256": "ae2c912566e281e87dd4e4db4a8a7b5db5795cb355b7254e68fb99e95e7582de",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/test/test_concatenation.cpp",
+    "sourceSha256": "bf68372256923e409beb746ccb86e6fa6f30bcc50e50221dd8b4449163f71e62",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/test/test_conjugate_gradient.cpp",
+    "sourceSha256": "f78c6925cc3b6aac648d895cf45d8257d952a92111b4e185f9eb9408cdc598d2",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/test/test_countnonzero.cpp",
+    "sourceSha256": "32c15c7b8e67612fd96296e9c65dc03701ca6903277feda5cbf9d9ce276afe72",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/test/test_cuda.cpp",
+    "sourceSha256": "36790732d50fb781b0010f75ca233be3f5e6dc88797ccd2ee5e4fb03c89ee51b",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/test/test_downhill_simplex.cpp",
+    "sourceSha256": "cfa29c58b631e9eacbda84ea8b381ccdecc39b3448d4a3c603a5232854879132",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/test/test_ds.cpp",
+    "sourceSha256": "4bd7319b47135c1d4d687fa09abf8541e49f2d9109692103a6e080d0b70bb52a",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/test/test_dxt.cpp",
+    "sourceSha256": "b6fbb33d17cbf6b5e20bb16e9a47e88557f0c2fe117148b21d0c34d5efffb08f",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/test/test_eigen.cpp",
+    "sourceSha256": "e621c1127409ca8361c866b0c2be274a61e7dfaa6dce4e7b336ba542c47f469c",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/test/test_hal_core.cpp",
+    "sourceSha256": "9c4031d737aba62a59665066181676ff4334c73b55aa05d76e19a39cf452fa4e",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/test/test_hasnonzero.cpp",
+    "sourceSha256": "bc57f908c120a9bc99e9f34c566d7486366e6bb3828d3ce85f50c1c5af6130f8",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/test/test_intrin.cpp",
+    "sourceSha256": "f4ffe286c7d27953618175ec4eee56678d4d913cfeccf3921006c24d771a79d8",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/test/test_intrin128.simd.hpp",
+    "sourceSha256": "63f1e6864772f69bc9f8bd306d81cfa1004ac0ba68fb5c71dbfd6e26e60a59e4",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/test/test_intrin256.simd.hpp",
+    "sourceSha256": "3081660e29bf733f577dd698f06214d1365afb59d831996e5a64f234e1a25dbf",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/test/test_intrin512.simd.hpp",
+    "sourceSha256": "3485f20c5d173f9296e3895646ce07b709a2cc990c6ee92a568dbd8b7c7880a3",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/test/test_intrin_emulator.cpp",
+    "sourceSha256": "02e8c950a5f4ff072ad42303fac8469820eaa5b581a47dd21c4c919481f3cc52",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/test/test_intrin_utils.hpp",
+    "sourceSha256": "3307017976a476f904c2481c88951f930668078d8155353a40e5dd1a8245b5d8",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/test/test_io.cpp",
+    "sourceSha256": "cdf956df17f6df297cf223de98ef2ed0aa7469b8ebd593d0a4c29e933ecb2192",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/test/test_logger_replace.cpp",
+    "sourceSha256": "599d3d424399ac8673adc2837383d8b031977cdf97aa25fbeb41f7dfbaa26f62",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/test/test_logtagconfigparser.cpp",
+    "sourceSha256": "dbf42ba98ad50611035a12ee48df4968dbb8f1cae7da614c10ecc73ba17a8e1d",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/test/test_logtagmanager.cpp",
+    "sourceSha256": "923936a99b4e740fc2082f6ee927dc711aa3c64daa4eaf2c6fe0d546f3f5ac4a",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/test/test_lpsolver.cpp",
+    "sourceSha256": "a6223c7309efda52c9fd12fff75f83a307e4d28c4e0edc5da121be8dc80cba25",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/test/test_main.cpp",
+    "sourceSha256": "ca8b74cf302f4565cf8d7f942823a2a0b9949fccb2a283200628131a2e28e0df",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/test/test_mat.cpp",
+    "sourceSha256": "9418314fd76c643aa607138b040f547e043de87568dea0d85debcdf8b121f2d6",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/test/test_math.cpp",
+    "sourceSha256": "15469c2883e235facd4bad51d0ea993d43232d4fc27730808a80650367f2bbe5",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/test/test_misc.cpp",
+    "sourceSha256": "542181a34a2c616864edab5dd7ba408d8852faa33675edda06bf39b8a5d8deb8",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/test/test_opencl.cpp",
+    "sourceSha256": "2931ce6f1f93b7d69328abe982175914d0185f08a4ed496ff692369508b1b19e",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/test/test_operations.cpp",
+    "sourceSha256": "0c46343939a0ae24e5b566f96ade99beaa346a5599a7e458625aca03736426a8",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/test/test_precomp.hpp",
+    "sourceSha256": "a4a7ba7d666f8b4a51b438209bf0b6a9df8afa36a261574040dee1dcfecf7ba3",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/test/test_ptr.cpp",
+    "sourceSha256": "5731fee26c57ee03c9cb0ce4a2c5e30cf3d966503242a730bc2a6658b9075c41",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/test/test_quaternion.cpp",
+    "sourceSha256": "337e8ca14850e2e894be535134f0e1a8e41d42303ae273e03ce9a41a1d0f8848",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/test/test_rand.cpp",
+    "sourceSha256": "a6c00d15f9bb254710c98506ea0ae2e4f03ca7ec85b54478666985d15892e337",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/test/test_rotatedrect.cpp",
+    "sourceSha256": "3e894369523ee5ea638d03a0cd1e7261d8936261b94cd4407b509c77256e2f07",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/test/test_umat.cpp",
+    "sourceSha256": "1bbfcd5099098fbdfd60753b13820302b64e69b4d766f933fa62a37d4a220d8b",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/core/test/test_utils.cpp",
+    "sourceSha256": "a7051ed96c7f915b88a5671a52a8e494195a563b83b4f5ff969a7a612b04a09e",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/core/test/test_utils_tls.impl.hpp",
+    "sourceSha256": "851b4f8433f5cacea1cabfc04174ef3bdd1fd9722eca54321bc34762e519e935",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/include/opencv2/imgproc/bindings.hpp",
+    "sourceSha256": "f65b79fb4d9e7abcd8aa9bb8bcc2a3410c42dae8f729b8679a71bb85c7b85ee0",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/include/opencv2/imgproc/detail/gcgraph.hpp",
+    "sourceSha256": "e9e67386e93dd84a428af70e31313a0240a4df982f6c184d50180d9d6c2ea2f9",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/include/opencv2/imgproc/detail/legacy.hpp",
+    "sourceSha256": "625ce2e2c4abca32c44815e8ea6ea0d19c7d6f7db2cd142bd7e19b3770d953c4",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/include/opencv2/imgproc/imgproc.hpp",
+    "sourceSha256": "f519aaf5d2676014d46f0f29719baaa98c14c84bcf2311c10325e210a4103e70",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/include/opencv2/imgproc/imgproc_c.h",
+    "sourceSha256": "c0b4bd7f7769c966dbfada1d3ae65f8ce214fce1038339245a174ac40140ca77",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/include/opencv2/imgproc/segmentation.hpp",
+    "sourceSha256": "1f27474710e792c7ff1f1a63bac86876f53ceb0f648d32eb30b99e67d3dd5fdf",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/include/opencv2/imgproc/types_c.h",
+    "sourceSha256": "c844682f2f7d8dcbce7acdac069b41203dd8a4309946b3d23dbe22663d74a012",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/include/opencv2/imgproc.hpp",
+    "sourceSha256": "3a08bfbbd4167774564adfa92caa37d05d8527dbfdadf108c4218003e52375d0",
+    "noticeBlockCount": 3
+  },
+  {
+    "sourcePath": "modules/imgproc/perf/opencl/perf_3vs4.cpp",
+    "sourceSha256": "8aa4b65e1065af7920978eb21051e89459a239a34a007c21d9f9cf3b8401034f",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/perf/opencl/perf_accumulate.cpp",
+    "sourceSha256": "0e35c5808f72f5a4cb6f76e2eb0f66b0e47ac1cf61b5809df969e20edcb6375d",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/perf/opencl/perf_blend.cpp",
+    "sourceSha256": "58b27387d62d9efe112eb85a4e66dddf41097707bec57250f5ea0bc0d55e25af",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/perf/opencl/perf_color.cpp",
+    "sourceSha256": "a1039ed6cf39d074dc33267d91507cbdef28b93fc490814c9cde50530128daba",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/perf/opencl/perf_filters.cpp",
+    "sourceSha256": "536feed9e9b25510cc28171e07c9424a01d5dfa8308eebf50469804b73892e37",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/perf/opencl/perf_gftt.cpp",
+    "sourceSha256": "5eb13c9eb8b241db29bd411b2ad13ff8b34d7ae9aaae12181ac531c1056352f2",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/perf/opencl/perf_houghlines.cpp",
+    "sourceSha256": "7f4c764d45ea3e1d4264840e0338aba62d21ca16245b45452fefb5b8ea58ec6c",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/perf/opencl/perf_imgproc.cpp",
+    "sourceSha256": "fa1e34b78b32cd22f82df6691460a1284f18a3a91a278fc2f6fd726ddab66269",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/perf/opencl/perf_imgwarp.cpp",
+    "sourceSha256": "39a239582a2e954c799f5e4ecbd04825737e5db3b6cdf3cb6f175fbfc9289dc9",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/perf/opencl/perf_moments.cpp",
+    "sourceSha256": "ebf50f9a8771fd3f1d85935bcc8b52eaacf7f5ac0e69b74dc4590f17b0ea3bab",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/perf/opencl/perf_pyramid.cpp",
+    "sourceSha256": "d8df670309d342f46da9e9d100ff0edd255c022027eebd02558ad24c0fc99bd5",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/perf/perf_accumulate.cpp",
+    "sourceSha256": "2b6eaf284300431e54aee5ee18967e31f4c7a5f104afb70db746bf8c50b25495",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/perf/perf_bilateral.cpp",
+    "sourceSha256": "5875f73ab6a0f957ef1ed44496bd276dae56b044b76c4572a91f24dc53fc281a",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/perf/perf_blur.cpp",
+    "sourceSha256": "ff24771d9a8e979c87e6c6d144fe2b33c783965570479350247c331c0acbf9e5",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/perf/perf_canny.cpp",
+    "sourceSha256": "5c0fb5418181321c061931c4cf404b305866f375ee44a39a741fac73f8b39a3a",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/perf/perf_contours.cpp",
+    "sourceSha256": "aa4371dd8ca819680243915d064f4b0ddd8dceb3c918a59b37ef657d4ac73559",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/perf/perf_corners.cpp",
+    "sourceSha256": "0ab7938ed4ff367904413d2ec25a2b68b23795e5eb07f9ea5fc4f0af3d744ec1",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/perf/perf_cvt_color.cpp",
+    "sourceSha256": "9b1ff20e3236e0909cf1f51d354eb34ef3b044280818da42d494d8ebe70838be",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/perf/perf_distanceTransform.cpp",
+    "sourceSha256": "b6a3abbedafb750a92917eb962c431d1ec130e4cf889080167087b3e71bd7664",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/perf/perf_filter2d.cpp",
+    "sourceSha256": "93ab8c914b492a407aa0e26bd6485be9192e4240711720a87051868f373162f8",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/perf/perf_floodfill.cpp",
+    "sourceSha256": "7a1a39a2e1106085d7e277a657dc7b4d8b960b0acbaf316e3387df6a7ac0aee1",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/perf/perf_goodFeaturesToTrack.cpp",
+    "sourceSha256": "82d446224a175a9003b876b2023248dabb1d16a3a619318f0f12dd32361e12ec",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/perf/perf_histogram.cpp",
+    "sourceSha256": "c190145b1341638c7e1606372957fd1657bde735cd005c8b2e10092c719e4121",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/perf/perf_houghcircles.cpp",
+    "sourceSha256": "5c036126f5b7a8d91ccc60101c662976de52001f27908255f6993ac3a0ab4eae",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/perf/perf_houghlines.cpp",
+    "sourceSha256": "877dad509c0cb3f90c34f74dfd19363451b85d5e13b6f7f09af8b228f590f651",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/perf/perf_integral.cpp",
+    "sourceSha256": "a239c415d31a01d6c03011020408c989d335da50982950d3ab8a4b62ea3b0995",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/perf/perf_intelligent_scissors.cpp",
+    "sourceSha256": "b5ae114af81aa2cc8a159cb1761cd6a953b5adb6cb1e3bc41426bf259c4e761c",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/perf/perf_main.cpp",
+    "sourceSha256": "8bf698a8ca1f093e23c622304a46ae4ded0a4d3578bf925265dae93e34582ff8",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/perf/perf_matchTemplate.cpp",
+    "sourceSha256": "1f1a81bd215bee8e0c06e7899df865746e9c06e975f6a01912109572f12a5d85",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/perf/perf_moments.cpp",
+    "sourceSha256": "f89fbd84b9e22d159f4deee65c61379a5c574daf4c3ed3ee842d573758064051",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/perf/perf_morph.cpp",
+    "sourceSha256": "a7036e9f0a00ba31b977c3d6d4427755f95061c3146c4d4fa12e3fa41658438f",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/perf/perf_phasecorr.cpp",
+    "sourceSha256": "9cbdd84683665a014b680384b223f7938a1e403f7f78979133d53f1c99d1fce7",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/perf/perf_precomp.hpp",
+    "sourceSha256": "44deca7ca471d6cb353395b84dcfc1d327c2631401a826e62c386734b0ce30dc",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/perf/perf_pyramids.cpp",
+    "sourceSha256": "07ec3dc226cf7e13e03fd708b1e42fd5de9c293f34d3ad98777db98a5eae24ea",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/perf/perf_remap.cpp",
+    "sourceSha256": "0368a0635e79812d00416a4c811736d3a4c85d1267b20a54c77e3a946be6f346",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/perf/perf_resize.cpp",
+    "sourceSha256": "61e725598bb8e70f9a42fe11745c226c24945d8721bf269256d6df12885f07b8",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/perf/perf_sepfilters.cpp",
+    "sourceSha256": "8cdd6d3ea262850750fd020a74308c893c7cb8b5084f6849688f873dc39b9067",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/perf/perf_spatialgradient.cpp",
+    "sourceSha256": "1cf13f3468972dcc86dd40d74e536521d29f6491592923131206f8fc05693e6f",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/perf/perf_threshold.cpp",
+    "sourceSha256": "6a753ecb326482050ca665e449ccb38602edb93080597e2895b93a2b53843d00",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/perf/perf_warp.cpp",
+    "sourceSha256": "3fb98b6e0d93d1c96b89bd118787e67a95571e4102523975c38a9240dacfc4a5",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/src/_geom.h",
+    "sourceSha256": "c2395b5373a491abffdab61ca9c79161405e13c28023ffe6fa6f241e9297086b",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/accum.cpp",
+    "sourceSha256": "9785e30e1df8e386146f8632b8caea49da0e4d69b2000422004f13268e275781",
+    "noticeBlockCount": 3
+  },
+  {
+    "sourcePath": "modules/imgproc/src/accum.dispatch.cpp",
+    "sourceSha256": "0aebd23dc34639b222cdcead27df36998dcc0180f7a57bf9c89399f9c9d8b49c",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/src/accum.simd.hpp",
+    "sourceSha256": "d4aa5eb859aabd8c7a80fb2b498e41736f93c9402f8b471061787a8be6ff0572",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/src/approx.cpp",
+    "sourceSha256": "f87eb9fc016d9104581d10394c6426d8fa875366e30a0481fe86f0ad9dd68968",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/bilateral_filter.dispatch.cpp",
+    "sourceSha256": "deea306680550a765c3e155fd69c8d15a690f0f12231e2c3e0bd043fa9052d11",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/bilateral_filter.simd.hpp",
+    "sourceSha256": "0026f7b54691e635b917a135801c5878b8dbb4399981c37c6f53ad82b60ec553",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/blend.cpp",
+    "sourceSha256": "3c7e95ec8ba8e9f7f16055a220ea51820a08b8e7cfcb27bc5d70c71c4187588f",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/box_filter.dispatch.cpp",
+    "sourceSha256": "c3a9f1f7dfde718ab01e213f058562073f64df1a2ae1fa45992851b8c6af0333",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/box_filter.simd.hpp",
+    "sourceSha256": "57beb67f8c0968e15b7962c1b8b46692e6ea25dfdcc6875f1b29eb53cec9ae8e",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/canny.cpp",
+    "sourceSha256": "babe62d12fea3f8bd33e056b701afc37a2822335717d4136215f2a754da4fdc2",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/ccl_bolelli_forest.inc.hpp",
+    "sourceSha256": "47a634ab78d77f3b85d39ffd2009e14dcca32f9964f9b168d3a1052b6275c871",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/src/ccl_bolelli_forest_firstline.inc.hpp",
+    "sourceSha256": "8889b88b5da5d3c61e52547d5155133ccd69db9ab001db7c3431743a9c9698e2",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/src/ccl_bolelli_forest_lastline.inc.hpp",
+    "sourceSha256": "8ac14df51b33bb264362253a901171042e178113eee0f1f2798cc581b815f163",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/src/ccl_bolelli_forest_singleline.inc.hpp",
+    "sourceSha256": "1d1e3f24e76db6a13053905ebf0ba69a2092ca3ec973efb321eafd532cd0506b",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/src/clahe.cpp",
+    "sourceSha256": "5a17940a5ee36f064c14617d58b61dca2cf078f003504ab8eed526269b3ba345",
+    "noticeBlockCount": 3
+  },
+  {
+    "sourcePath": "modules/imgproc/src/color.cpp",
+    "sourceSha256": "184528bbfa641fc3a432465687a18e8b82e2eaff81ef45212fc6d67e344f51a4",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/src/color.hpp",
+    "sourceSha256": "55d88511e32a51384ef490588687fa97f5e5247770c99a4b683e3ee96984930f",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/src/color.simd_helpers.hpp",
+    "sourceSha256": "1888f75db0b5e64a9e0483b950fb3d232cfc5572f70a7b981c4ccf573a4af940",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/src/color_hsv.dispatch.cpp",
+    "sourceSha256": "74db571d0a277ba4fe71aa67e96e6ebe958f8f055893c88b0b63a4e9cd15c220",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/src/color_hsv.simd.hpp",
+    "sourceSha256": "36beb5d738943047a165e340f4373f33d7aa4be23e8f66873ad2447185103fac",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/src/color_lab.cpp",
+    "sourceSha256": "ab867ecd482d3f26a2fb2111b1224903e40a809b00f17f30276b6e00d934b8b6",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/color_rgb.dispatch.cpp",
+    "sourceSha256": "4376188ade20a5dc0dcdd3e061e8a9fa72d8ef122d0fb8b72f9fe9a9d3d1e003",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/src/color_rgb.simd.hpp",
+    "sourceSha256": "f6b1abd60b7ce0c7828ad50418c9ac691f8cf0d3e9c6ddf2de3b0c81b89b4047",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/src/color_yuv.dispatch.cpp",
+    "sourceSha256": "02fe343e35cb3ca5fa21347c54bfe26e2ac9b72c7943df977c291c399bfa5611",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/src/color_yuv.simd.hpp",
+    "sourceSha256": "1feaa856dbbc9954713aa94dd73e11fb071a62552ca3cd20fbe0579a886d6a21",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/src/colormap.cpp",
+    "sourceSha256": "77593e61717b8ef51035c5a3e280e1e54dc415052d5361b9aa23dbbdeb5c0928",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/src/connectedcomponents.cpp",
+    "sourceSha256": "e71b02fc77b374816ea9fb5823be49705c100e977e95ad466daf4f0c55a0dadf",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/contours.cpp",
+    "sourceSha256": "532dd2693e770acdd3a3e612d22f5b9157c46ae998759848aa791d3005031c1f",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/contours_approx.cpp",
+    "sourceSha256": "f06f2a9d1b264d9ea9ab1505dd36d7ca3572c98b9937efaca96b39a8b7971aef",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/src/contours_blockstorage.hpp",
+    "sourceSha256": "b5dcc9a11703118b10c80de369ba1938ab9c3f1e8b6dab23265417094c5c8929",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/src/contours_common.cpp",
+    "sourceSha256": "93621df3dcff1464a6f8137a934d79d67a57a515e4d8f6afd4bbdd209a06fc9a",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/src/contours_common.hpp",
+    "sourceSha256": "9d62775a8c6516078a0751708702a84caaeb4987923a058dfbf92051526bbd39",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/src/contours_link.cpp",
+    "sourceSha256": "72218fb57f5c5b98b2d41763fa6b698f2899d7690bc2cba130f4f561cd930b41",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/src/contours_new.cpp",
+    "sourceSha256": "52627e190b93d15e7d0e9ca312e7e3350901e302fe5769a914260b9024919284",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/src/convhull.cpp",
+    "sourceSha256": "bb8d42b1c4bb7d02c3cb87fc3601eaa11f4c3524f7c917ef9592b243d8dbfcce",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/corner.avx.cpp",
+    "sourceSha256": "0eff9a057662665e6acf0ed4acc05f97b524713fb4cbabd4c589f0939dab10ce",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/corner.cpp",
+    "sourceSha256": "90d7ff9ae0ba813b6afb807f7498b79e3158996eb64fdce06fc0275902fdf6dd",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/corner.hpp",
+    "sourceSha256": "ad87c7cb7014a1a2c63c71d0fcc651dc71fe2b406e23ff1282bb445ee223295c",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/cornersubpix.cpp",
+    "sourceSha256": "32d2db501c212b7c69c1b598d4f6cd599f0b758bf36a4a057b8e41206aef51e2",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/demosaicing.cpp",
+    "sourceSha256": "0301cab02d711ef8e38f1a2345e6b3f91852c4549d90576a561d9aa7a30343ec",
+    "noticeBlockCount": 3
+  },
+  {
+    "sourcePath": "modules/imgproc/src/deriv.cpp",
+    "sourceSha256": "bd40c56d2baba76732435697526a3c15f335082b6da1b02f104ddbb89feaaef8",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/distransform.cpp",
+    "sourceSha256": "2c98f099dac2bcaadac46ac51cc8cb5ba80dc26ab290301faf74b9ac9b333549",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/drawing.cpp",
+    "sourceSha256": "993d1c8e46e3b7e54ebc514f2eb3dc9436bf55a9ce2a129eb12108359a17dd14",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/emd.cpp",
+    "sourceSha256": "6538d4c81f70de012877338ce554a684a40b3c85c5cd0441489b8e197a4832bd",
+    "noticeBlockCount": 3
+  },
+  {
+    "sourcePath": "modules/imgproc/src/emd_new.cpp",
+    "sourceSha256": "d8ddce6faa78ba34feec7429af6e1a3c42c7b936c08105470e6ca456cbc2c0e8",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/featureselect.cpp",
+    "sourceSha256": "fe8e96feb7c903c2c15ca050e78d0eacf2ac514f77d740e5e121fc3619c369aa",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/filter.dispatch.cpp",
+    "sourceSha256": "c100fd672b874c8aadcb5b15a5fe80197e8baf8d0d924c0847cf7ccf185c741a",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/filter.hpp",
+    "sourceSha256": "c704f5f7d42bd5ff744799d9d0d8f505d8d44168819add2e1f73d4f5d9242d9b",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/filter.simd.hpp",
+    "sourceSha256": "a47ba2cf0d60b8496202d09ba5e56b74337acab7a25f8be4577db43d1aad5e01",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/filterengine.hpp",
+    "sourceSha256": "ffc9c6bb2983072e7006b302745d7f773266ad6c00a91f6d2ac181e2601351be",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/fixedpoint.inl.hpp",
+    "sourceSha256": "daf6e02b7a4fba0e81393f32d62cffee43362fb0a40efac2c835005090d944fa",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/src/floodfill.cpp",
+    "sourceSha256": "2def932148e7e8ed28d5da2ad88043e19fe2217a4ca9d3cfde62214d9138fd75",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/gabor.cpp",
+    "sourceSha256": "f2230202ca6f0b3541c07a7b7001b39230d4bf3d062397a489213f351647a6cf",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/generalized_hough.cpp",
+    "sourceSha256": "d8638ec92f7485ba9cd34e8d839e895253bea953d5795ea165f7502e818623a9",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/geometry.cpp",
+    "sourceSha256": "5cb89d282eaff805616b2bbd4ea93dafdf4cd7d6e5ca8a18098e183457008f3e",
+    "noticeBlockCount": 3
+  },
+  {
+    "sourcePath": "modules/imgproc/src/grabcut.cpp",
+    "sourceSha256": "3f0beac701baf341ca48d18c000ee85926f089786254fcd1805572ebeed3b5ff",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/hal_replacement.hpp",
+    "sourceSha256": "1a5b554459e4277471ff8da7a1ca8581f07d31b252639f9758801eab3c3a2d7a",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/hershey_fonts.cpp",
+    "sourceSha256": "5fa0d65264f72e5b166d07973aabd49f27cc54d0074062a8efc312bf9ab95432",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/histogram.cpp",
+    "sourceSha256": "558d93aeede8956b89f74d56e4575e4e663cc010e7751f43b5fece362ec9a0a7",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/hough.cpp",
+    "sourceSha256": "30f1450d02f931fe2ed9bd1998cc885ac61aeb937deab4936792a9f99cb9ff3c",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/imgwarp.avx2.cpp",
+    "sourceSha256": "ba7e60317b7467d9ef09ae7752eb9d5d17320f5764afa7b0652aaa293780f3d7",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/imgwarp.cpp",
+    "sourceSha256": "f737bed13946b872c7e5e5376f183e228d30b347280797525d4a1d8ad1308292",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/imgwarp.hpp",
+    "sourceSha256": "e0233176a708383a3b34dbf7f8b599dddc538a9f4befa50d5b661c7fe9ddef0f",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/imgwarp.lasx.cpp",
+    "sourceSha256": "b51509fa1797231ca4793e1c5df8d3f317cd4f7ac71014785ae0b33ee7f85bef",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/imgwarp.sse4_1.cpp",
+    "sourceSha256": "7494b15f62b525a2310197eaf63ad9db20dce52d68e74c6cf75a37cd1b0d335a",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/intelligent_scissors.cpp",
+    "sourceSha256": "0fc17eb68ce3a558c3e062848a2b60b23c389b518607a6d687408709b8128003",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/src/intersection.cpp",
+    "sourceSha256": "d76da4f89e83709ce3c61c413b8ff9d425dc4a2f272518a3da9a6ef918b1d947",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/linefit.cpp",
+    "sourceSha256": "e7d88be5052d68a41c4f51f71c07eaef7370ae2d87707133196a1edc9f25f950",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/lsd.cpp",
+    "sourceSha256": "54e8d04a4da08d787c1beaba4cff6f3711a982746847f084fae3004d6184732d",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/main.cpp",
+    "sourceSha256": "a5534f921dcf88b4898d9c42577e53f5b130407c1a4a14ca7c1480697fd912bd",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/matchcontours.cpp",
+    "sourceSha256": "fe809c857828399730d00d2cfdb3ef38b8cc64b7f74b9ffcb9e8470fbcb32cec",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/median_blur.dispatch.cpp",
+    "sourceSha256": "4d1b444de3f985c20f8ff16160f3ceb027c2f5e738bfd0a9a9cad3373ac11e51",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/median_blur.simd.hpp",
+    "sourceSha256": "92945babdfd756a28019ea93c3d3f89efd3b243329a8edf5096aa337b879407c",
+    "noticeBlockCount": 3
+  },
+  {
+    "sourcePath": "modules/imgproc/src/min_enclosing_triangle.cpp",
+    "sourceSha256": "53a4117560c1f67c3cf86576d34fcfa2389e36123cfe7461b434648ba0f1fe10",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/moments.cpp",
+    "sourceSha256": "f8ce47495eba8684cef9dd8003d33075dddfb53c2f29eea702419c5ee53257d2",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/morph.dispatch.cpp",
+    "sourceSha256": "626be31541a64796660672c75d2b007a1e5492786eef6830e9d9e4371d6e0de3",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/morph.simd.hpp",
+    "sourceSha256": "705cebdf6bc833f48d0f25f8b1ad670b40ee65ca7f8be83a70a136301c6effd0",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/phasecorr.cpp",
+    "sourceSha256": "b3394c89d97b25e36e6490e9f03db15ac6820963c945e6052a1d99e616c18460",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/precomp.hpp",
+    "sourceSha256": "a3a312542ee46764d1f7030d7c11dc36ad273f58f1987265fbfd014a76729cf0",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/pyramids.cpp",
+    "sourceSha256": "822bf1fcbe82bb7f088d2f4d3f8249833ac3658bfb18026016aa4caacfcf02e9",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/resize.avx2.cpp",
+    "sourceSha256": "6dabfd742efd71723510eb740945b5d987a6ad97735a11bd1ae1fa4f8f6a6d58",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/resize.cpp",
+    "sourceSha256": "89db2e4de92e1d03890f3e7fe517f895a36514f355da097b2c8e4c55fc1847e4",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/resize.hpp",
+    "sourceSha256": "2f9415052c7090c3a2c7f724d05c5a9701ff4366edc259b91aeb05d527b6a7de",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/resize.lasx.cpp",
+    "sourceSha256": "74f154fd6d96dd326a1f6a998dc323d47609446a2ac59160db8c972fdfe0afc2",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/resize.sse4_1.cpp",
+    "sourceSha256": "74beb9d90da1feed04bb3e8ee6ecc8d223e5f3099427d9c2a3f5e072100a9e60",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/rotcalipers.cpp",
+    "sourceSha256": "bdc631e069f14836ddd5c811d56b0d7e71e8cb7383b4f272e87576d9ea9f65a0",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/samplers.cpp",
+    "sourceSha256": "aaae361d7a4d9f7131cb4a63c179bb7ad80bc9adddaa0a4ab347dab156bd2ab7",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/segmentation.cpp",
+    "sourceSha256": "0742ea6ce71b9e94a72aa1ef0989d1b88c58907083bc5b8b85f349e06ed9848b",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/shapedescr.cpp",
+    "sourceSha256": "27da28a9f6b366af35aea790818c6b1b902453478cee81b481b8e16361fdd141",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/smooth.dispatch.cpp",
+    "sourceSha256": "8565ece97a0986fa8567de45aae4cb8f8e85a5011472634c9726da2bc022f06c",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/smooth.simd.hpp",
+    "sourceSha256": "08d05c17757483bec6c69375526141b4e772ee37cb96a7c5d4fb9ec3430b417a",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/spatialgradient.cpp",
+    "sourceSha256": "01705678a9e7ac2b61055cf412ad4d23040418ebe876d6871dbd16bbfaeae8ad",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/stackblur.cpp",
+    "sourceSha256": "c6d71995e8fc6351442129b44d61ed4a85167835dcc89a5c5440938eea409e60",
+    "noticeBlockCount": 3
+  },
+  {
+    "sourcePath": "modules/imgproc/src/subdivision2d.cpp",
+    "sourceSha256": "6dfbe56e87fdf5d3eff96d3c00bc3122e427f6e7f9e4aedf8fa83d661713cd69",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/sumpixels.avx512_skx.hpp",
+    "sourceSha256": "77b15cf1385cbf1226b3eb16515b027560d58407103e3daa23279fca46c75186",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/src/sumpixels.dispatch.cpp",
+    "sourceSha256": "5ae101949c8771c3e1a771736aaab81f2e6328060acf2ae7a071a840c7f76813",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/sumpixels.simd.hpp",
+    "sourceSha256": "0f6596797f5a50c04a71e8a53b3e281bff40f4fdf29ddd38213285d1cbe00554",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/templmatch.cpp",
+    "sourceSha256": "3ee1cd3fb781c30ad85c9c1e35a73b73881b1907cf293aa2ebb083c669bd0857",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/thresh.cpp",
+    "sourceSha256": "d397c55c0d570fe67e4656a9833d013ff3ef56dc1943c7a222600cf616400824",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/src/utils.cpp",
+    "sourceSha256": "8602ff5b7b73061cae694713acf9f598ef8c9ad68bcf1151a35a367636f6181c",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/ocl/test_accumulate.cpp",
+    "sourceSha256": "5b2e99857b62ee0eea53c39504023a2c7b2d5f4dfc08b70f57aba5a0c13c5cff",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/ocl/test_blend.cpp",
+    "sourceSha256": "bc824a9f615f05f6aa49266c15060ede0cdb9a8292434c7c84c031196089c59a",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/ocl/test_boxfilter.cpp",
+    "sourceSha256": "f4e11734cff424cd546cb0cfad94937c60ea7acb8f8a3be3694c3d72c56f342b",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/ocl/test_canny.cpp",
+    "sourceSha256": "8bff2bbd1f673e299f6eb4a9abf7ed41e29c5087439b44d2eeed9437c1784bb7",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/ocl/test_color.cpp",
+    "sourceSha256": "8cfb83668ce2ca2e7456315f506b6ac152829444df4b404db3a7eb43b3c35003",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/ocl/test_filter2d.cpp",
+    "sourceSha256": "c1b59e24aaaa253da9adb3dd8b168886a71fda5712dab4f10efaa96c73e1e318",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/ocl/test_filters.cpp",
+    "sourceSha256": "136a97a8bc6582ae3447514c59a09c04cef7c48c3ba701a5f029e4c68f93c1ac",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/ocl/test_gftt.cpp",
+    "sourceSha256": "986d5e11787b2f025e1db684c223f2b8cfabe731a6d5c9886d893ecc10e46765",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/test/ocl/test_histogram.cpp",
+    "sourceSha256": "babaf24d2e190986b662c391d32af4ca3388d5a36bad7ea159f759bce12ad0eb",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/ocl/test_houghlines.cpp",
+    "sourceSha256": "169fdf41b40fa67aadbc155a47cd3d56f188227b4ff4c23741c0aa3347c875e8",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/ocl/test_imgproc.cpp",
+    "sourceSha256": "5485980179aeee5f3d4c7837c9e8461c77568aa649143948c4380ca4b4a66c7f",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/ocl/test_match_template.cpp",
+    "sourceSha256": "3f09304a40c2c2496e43dfa0edfd47a5f71f95abad2f8e9df671c1f6c6aa19d7",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/ocl/test_medianfilter.cpp",
+    "sourceSha256": "cd080b57aa9db0f390730a991c65dad6102355b657e3f5051a94408b85bd4ba2",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/ocl/test_pyramids.cpp",
+    "sourceSha256": "4b3d94da9cb9fc54a6688e704077d43bb5705db8956adbc80eb47872a940cded",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/test/ocl/test_sepfilter2d.cpp",
+    "sourceSha256": "dbef7c82e53565cf2936866dd7d99353e68141ac255e14d89d32037137d4b637",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/ocl/test_warp.cpp",
+    "sourceSha256": "9583c195d5ed4341584a5b5f5b125068b0fb0c1482dad18d6ee2ac71c0adac34",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_approxpoly.cpp",
+    "sourceSha256": "ff391ed403bac7275ee4a64dbe10b6bc6435b24230d337e6f4d2b4dba7b232cb",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_bilateral_filter.cpp",
+    "sourceSha256": "9e7b572fa4424f4d1ede1cafa6c9bc048cc1d19910d485f1d1cda5c74296e5bc",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_boundingrect.cpp",
+    "sourceSha256": "fa1a8ce2a7e769934a04678944a084175dfbdab6271755f625046b1c3bcdb5ae",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_canny.cpp",
+    "sourceSha256": "823c0460581c80ccad27f227048fddf163f66d8df2b25042c4466a47a12a666a",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_color.cpp",
+    "sourceSha256": "655fbf2302664e2969fdbcd1956224bababe9f15f041b86d6a64b7922b643ff3",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_connectedcomponents.cpp",
+    "sourceSha256": "014716a92f07dad65adaec8860a25b6c53f8b890a676fd888cd4fa134368fd2a",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_contours.cpp",
+    "sourceSha256": "a4c5e47e5f88188f74ebfa8ec30fc4222bfabe69ef42f97c356f0ae0f1c2a310",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_contours_new.cpp",
+    "sourceSha256": "66b2e14b941833898afb2d4aa2f4ed46b65acc495aa7b8f445eda7bd7135663a",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_convhull.cpp",
+    "sourceSha256": "047fe989f11f30a81b871d55a203444b3d536c55a9fe1cd7905cf1b0c990605f",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_cornersubpix.cpp",
+    "sourceSha256": "fc439afaae9fab336ce366c6cb24cf36545b89d3477d8aee8b7dc2013713dbda",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_distancetransform.cpp",
+    "sourceSha256": "8c96472e7c6e9e27bb0e43204ff201e1ea001018052664cd2eb6f466f4fc4035",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_drawing.cpp",
+    "sourceSha256": "c7f9b86c12f4fb477e4bf3c1d8fd35ef115131d692351eea8ae15da049f52d9d",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_emd.cpp",
+    "sourceSha256": "eab568bb32a62dc03066bb545616e47134fc47b479b7539cdd0afc17c5f41230",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_filter.cpp",
+    "sourceSha256": "7c8dc886f533941da1257fc0d37063c69a41560fa4d002d6a47185a1ded48ccc",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_fitellipse.cpp",
+    "sourceSha256": "7939449e0b9e95b7f3283a765aef6a9b242e1ad0895fd8b3d332ebf1753da81f",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_fitellipse_ams.cpp",
+    "sourceSha256": "9a433bc29a60c646e5e533e96bbdd93a63b1d40ca17783cf37fced41a9fe4e14",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_fitellipse_direct.cpp",
+    "sourceSha256": "e9831586671c62fe111caed25571fd2603b3426d36d36dbc5365f36b7a3a2f17",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_floodfill.cpp",
+    "sourceSha256": "8026f67dc3cd4c65cecae9730e62cec74082c4465bc2c0651e91c07e97ed880e",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_goodfeaturetotrack.cpp",
+    "sourceSha256": "24455903098df494f497dd0fc81471812a4f306a368655960d0d4f381d1f9088",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_grabcut.cpp",
+    "sourceSha256": "0dcd45fc06a5626669d979d67ccaa2be4803f1c878a50741ace4c29be21845f7",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_histograms.cpp",
+    "sourceSha256": "fabe0465e061b7639f1968d9930e69366486ca355add9899852073c597849832",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_houghcircles.cpp",
+    "sourceSha256": "4d0fed4b394eb2706bae0fa8f5e2241f73b166edfc42e5eae15ca96261c18959",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_houghlines.cpp",
+    "sourceSha256": "8b8d55eb2175cbc17baeaa88923fe95f54180c2b25ef66a92c18f050e856e816",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_imgproc_umat.cpp",
+    "sourceSha256": "12893d0708921deaa51b418da3cec20365dddd0175b653e23a7f3bd81f700a2d",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_imgwarp.cpp",
+    "sourceSha256": "2c6052dad6085ddf8fa84a2b31b946967bae02b6aad9165a123f2162e1fb127a",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_imgwarp_strict.cpp",
+    "sourceSha256": "d1b1547176cfb165dc1eabdcdfabb0c92b930cdb2c5debce587103b0ad708181",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_intelligent_scissors.cpp",
+    "sourceSha256": "a2ae0b3fde239d2ba796909d7819c36c890069ad323cff4c321c7469445b3937",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_intersectconvexconvex.cpp",
+    "sourceSha256": "d4416ea6473c493ac1957801c6d0094f5c21aa7d400dfed2c477dc813aa5000f",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_intersection.cpp",
+    "sourceSha256": "c42b37fe513b30e5c26b07588147c18b08664956c20c3af0a098ea9905594d39",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_lsd.cpp",
+    "sourceSha256": "94aa29727df03b35672f7a584f2449d52da675ba70f0c4d5e3d3fb43403c1d15",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_main.cpp",
+    "sourceSha256": "ca8b74cf302f4565cf8d7f942823a2a0b9949fccb2a283200628131a2e28e0df",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_moments.cpp",
+    "sourceSha256": "177538242aca76ab97508a4e7b4e84416ed4a72a5d3e0d9baf1203e3dc1899fa",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_pc.cpp",
+    "sourceSha256": "3bc81ba17f51c158b45b2ba42efb6371b6dd690ce648c307e5d0a4fb04ba078b",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_precomp.hpp",
+    "sourceSha256": "48fc94127083a609dada3b55abaaf678bff00e2d332e1fb47fc6fc920de3ce18",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_pyramid.cpp",
+    "sourceSha256": "5a8939f8440c7dfab8fa6a7c93de3b840798b7f757fbc872ae8ace7d635b006e",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_resize_bitexact.cpp",
+    "sourceSha256": "5ef8e762e215705dc35249702e192fc9f2f337aa1330c998f7c75dd4dcd6f7be",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_smooth_bitexact.cpp",
+    "sourceSha256": "e4ef988b613ac11cd6c87a0c2f6f6045a346ef1c1873421a2dc274139c17db6a",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_stackblur.cpp",
+    "sourceSha256": "5c00042379cbe05c62c1c036ef8334ed241646dabf422e809c79732580b7f4d4",
+    "noticeBlockCount": 3
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_subdivision2d.cpp",
+    "sourceSha256": "499b9f200108623663506932db05a1958252b4afac8f14ec7345745985c834e9",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_templmatch.cpp",
+    "sourceSha256": "963449ba21b5e966a4c7312363e091cb73097292042bf0b6115ccc4f876c6b4c",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_templmatchmask.cpp",
+    "sourceSha256": "5548c821f05ef88de5b37af1448787b8dce74d9a4f5fedbdda2719ad40c39c2c",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_thresh.cpp",
+    "sourceSha256": "ae2f1772fd9666d8924df7bd9eaaeebbe355d7a4f343ab61528e538fb3376f5b",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/imgproc/test/test_watershed.cpp",
+    "sourceSha256": "1e55084d0b8547fe1a60be3917ab24cfc1a19b13305c3857516a5e5d93f42fcf",
+    "noticeBlockCount": 2
+  },
+  {
+    "sourcePath": "modules/java/android_sdk/build.gradle.in",
+    "sourceSha256": "129cf434d65140d4aa675545b9c4b24d6f9975f771eb19743b0b59b71e0f615d",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/java/generator/src/cpp/common.h",
+    "sourceSha256": "238521c8335d07a5bb9f9639137c93095596c5b83a81b0948c174966677adf8e",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/java/generator/src/cpp/converters.cpp",
+    "sourceSha256": "b60700f60ddf20b923835ddc2e2867a04f8fca5f46012f30f19acbc8c00718c7",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/java/generator/src/cpp/converters.h",
+    "sourceSha256": "e0c1c0a1947d29cc069ae94eef52711cd756963e6da3f8e50c38536e7979f2c3",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/java/generator/src/cpp/jni_part.cpp",
+    "sourceSha256": "7c5f4ee74434a3234e12873a78d3622a659cb4fc96903046e29cc436b25283aa",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/java/generator/src/cpp/listconverters.cpp",
+    "sourceSha256": "1e670dd850387d152b75793337c36a4911c30c6898670efe6732a4924a71cc2e",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/java/generator/src/cpp/listconverters.hpp",
+    "sourceSha256": "12a363c9badb48d486d70e9441aca76e5e8552f916db471465983a65bac0fab5",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/java/generator/src/cpp/Mat.cpp",
+    "sourceSha256": "556fca6bfbd6e223d4f891b73173394f77bda2f8b4e515e3992d4c3fc2a1982b",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/java/generator/src/cpp/opencv_java.cpp",
+    "sourceSha256": "159647f3b5a13416071521c297ba56a3c55e4ef7459e3831a221e65c15b1b0c9",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/java/generator/src/cpp/opencv_java.hpp",
+    "sourceSha256": "9e6137a3b07ecda15c1035ac9c510033c8d02e00c4dcdb64bfb48172b08adeae",
+    "noticeBlockCount": 1
+  },
+  {
+    "sourcePath": "modules/java/generator/src/cpp/utils.cpp",
+    "sourceSha256": "802fe9f31d31d550d21d3af581b53ae8700d31ee725e1f193a155c4a2d0423ee",
+    "noticeBlockCount": 1
+  }
+]

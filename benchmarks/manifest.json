@@ -1,0 +1,622 @@
+{
+  "license": "Apache-2.0",
+  "generator": "tools/generate_fixtures.py",
+  "width": 800,
+  "height": 600,
+  "cases": [
+    {
+      "id": "tuning-paper-dark",
+      "split": "tuning",
+      "category": "paper-dark",
+      "file": "tuning-paper-dark.png",
+      "corners": [
+        [
+          0.17521902377972465,
+          0.1419031719532554
+        ],
+        [
+          0.8260325406758448,
+          0.17529215358931552
+        ],
+        [
+          0.7947434292866082,
+          0.8681135225375626
+        ],
+        [
+          0.2002503128911139,
+          0.8430717863105175
+        ]
+      ],
+      "unboundedCorners": null,
+      "expectedDetection": true,
+      "sha256": "594e456ac4e6396402e7b7145368534eef9a18203ddb70d5f9c6ff22bbe41160"
+    },
+    {
+      "id": "tuning-paper-light",
+      "split": "tuning",
+      "category": "paper-light",
+      "file": "tuning-paper-light.png",
+      "corners": [
+        [
+          0.17521902377972465,
+          0.1419031719532554
+        ],
+        [
+          0.8260325406758448,
+          0.17529215358931552
+        ],
+        [
+          0.7947434292866082,
+          0.8681135225375626
+        ],
+        [
+          0.2002503128911139,
+          0.8430717863105175
+        ]
+      ],
+      "unboundedCorners": null,
+      "expectedDetection": true,
+      "sha256": "4199546fc4f399a03863ccac5ef50301add2bf5e86efdb625c336361e7517d9f"
+    },
+    {
+      "id": "tuning-receipt",
+      "split": "tuning",
+      "category": "receipt",
+      "file": "tuning-receipt.png",
+      "corners": [
+        [
+          0.3504380475594493,
+          0.0667779632721202
+        ],
+        [
+          0.6257822277847309,
+          0.10851419031719532
+        ],
+        [
+          0.5757196495619524,
+          0.9348914858096828
+        ],
+        [
+          0.31289111389236546,
+          0.8931552587646077
+        ]
+      ],
+      "unboundedCorners": null,
+      "expectedDetection": true,
+      "sha256": "efaa7740f3420ad71b6fc3410dbac0c562752f9b2f76bde465e3530dcc63c052"
+    },
+    {
+      "id": "tuning-card",
+      "split": "tuning",
+      "category": "card",
+      "file": "tuning-card.png",
+      "corners": [
+        [
+          0.16270337922403003,
+          0.2921535893155259
+        ],
+        [
+          0.8322903629536921,
+          0.2671118530884808
+        ],
+        [
+          0.851063829787234,
+          0.7762938230383973
+        ],
+        [
+          0.18147684605757197,
+          0.8013355592654424
+        ]
+      ],
+      "unboundedCorners": null,
+      "expectedDetection": true,
+      "sha256": "f767289e0a3149a276b4ce8d1a2e6c2c422e0c9fa0a6d1b9bfa1e7f4f4a78cd2"
+    },
+    {
+      "id": "tuning-colored-form",
+      "split": "tuning",
+      "category": "colored-form",
+      "file": "tuning-colored-form.png",
+      "corners": [
+        [
+          0.17521902377972465,
+          0.1419031719532554
+        ],
+        [
+          0.8260325406758448,
+          0.17529215358931552
+        ],
+        [
+          0.7947434292866082,
+          0.8681135225375626
+        ],
+        [
+          0.2002503128911139,
+          0.8430717863105175
+        ]
+      ],
+      "unboundedCorners": null,
+      "expectedDetection": true,
+      "sha256": "bb964cd8981e408a25a49be95ffd893ff8423bad1e80206315edf780eae4f958"
+    },
+    {
+      "id": "tuning-photo",
+      "split": "tuning",
+      "category": "photo",
+      "file": "tuning-photo.png",
+      "corners": [
+        [
+          0.17521902377972465,
+          0.1419031719532554
+        ],
+        [
+          0.8260325406758448,
+          0.17529215358931552
+        ],
+        [
+          0.7947434292866082,
+          0.8681135225375626
+        ],
+        [
+          0.2002503128911139,
+          0.8430717863105175
+        ]
+      ],
+      "unboundedCorners": null,
+      "expectedDetection": true,
+      "sha256": "6f931eb54eceaee217e40cf25f5bcd769f86de949978a124c0abddbe1b858f50"
+    },
+    {
+      "id": "tuning-rotation",
+      "split": "tuning",
+      "category": "rotation",
+      "file": "tuning-rotation.png",
+      "corners": [
+        [
+          0.37546933667083854,
+          0.09181969949916527
+        ],
+        [
+          0.8760951188986232,
+          0.4507512520868113
+        ],
+        [
+          0.6132665832290363,
+          0.9348914858096828
+        ],
+        [
+          0.11889862327909888,
+          0.5843071786310517
+        ]
+      ],
+      "unboundedCorners": null,
+      "expectedDetection": true,
+      "sha256": "b0dd287a4fcaa0728eb22df87e1f34ebe8bbd2dcd03d20830f591031bb0bfd72"
+    },
+    {
+      "id": "tuning-perspective",
+      "split": "tuning",
+      "category": "perspective",
+      "file": "tuning-perspective.png",
+      "corners": [
+        [
+          0.32540675844806005,
+          0.1001669449081803
+        ],
+        [
+          0.8385481852315394,
+          0.25041736227045075
+        ],
+        [
+          0.9261576971214017,
+          0.8514190317195326
+        ],
+        [
+          0.1376720901126408,
+          0.9181969949916527
+        ]
+      ],
+      "unboundedCorners": null,
+      "expectedDetection": true,
+      "sha256": "df7fc2ec57e612179d09efa06f15afe0fd32bb5c4fc691c6ccd7f41ef7978af3"
+    },
+    {
+      "id": "tuning-shadow",
+      "split": "tuning",
+      "category": "shadow",
+      "file": "tuning-shadow.png",
+      "corners": [
+        [
+          0.17521902377972465,
+          0.1419031719532554
+        ],
+        [
+          0.8260325406758448,
+          0.17529215358931552
+        ],
+        [
+          0.7947434292866082,
+          0.8681135225375626
+        ],
+        [
+          0.2002503128911139,
+          0.8430717863105175
+        ]
+      ],
+      "unboundedCorners": null,
+      "expectedDetection": true,
+      "sha256": "d6e3f793260c18e84c7e6ff253b18361a23ad7998480920bad969fa7fee5a608"
+    },
+    {
+      "id": "tuning-blur",
+      "split": "tuning",
+      "category": "blur",
+      "file": "tuning-blur.png",
+      "corners": [
+        [
+          0.17521902377972465,
+          0.1419031719532554
+        ],
+        [
+          0.8260325406758448,
+          0.17529215358931552
+        ],
+        [
+          0.7947434292866082,
+          0.8681135225375626
+        ],
+        [
+          0.2002503128911139,
+          0.8430717863105175
+        ]
+      ],
+      "unboundedCorners": null,
+      "expectedDetection": true,
+      "sha256": "22dbd8a4692b2aa9f11491062a7cdeeb82cb7d0ebb7b87060bb6e20c34b00671"
+    },
+    {
+      "id": "tuning-partial-boundary",
+      "split": "tuning",
+      "category": "partial-boundary",
+      "file": "tuning-partial-boundary.png",
+      "corners": null,
+      "unboundedCorners": [
+        [
+          -0.05006257822277847,
+          0.12520868113522537
+        ],
+        [
+          0.7884856070087609,
+          0.12520868113522537
+        ],
+        [
+          0.8010012515644556,
+          0.8681135225375626
+        ],
+        [
+          -0.025031289111389236,
+          0.8514190317195326
+        ]
+      ],
+      "expectedDetection": false,
+      "sha256": "918b2351f271d0c502e5c34dcb615ba0cc827a494d54d9eda99ca147f8612500"
+    },
+    {
+      "id": "tuning-negative",
+      "split": "tuning",
+      "category": "negative",
+      "file": "tuning-negative.png",
+      "corners": null,
+      "unboundedCorners": null,
+      "expectedDetection": false,
+      "sha256": "226d40db52cb4a9ec50998e9297a5eb6bd310decd98d28ccf62dd43d63a8e29b"
+    },
+    {
+      "id": "held-out-paper-dark",
+      "split": "held-out",
+      "category": "paper-dark",
+      "file": "held-out-paper-dark.png",
+      "corners": [
+        [
+          0.18898623279098872,
+          0.1419031719532554
+        ],
+        [
+          0.8260325406758448,
+          0.19365609348914858
+        ],
+        [
+          0.7809762202753442,
+          0.8681135225375626
+        ],
+        [
+          0.2002503128911139,
+          0.8247078464106845
+        ]
+      ],
+      "unboundedCorners": null,
+      "expectedDetection": true,
+      "sha256": "f25a0a1acca7ac02dc304c85f8a343e11a3940ccc178e23fc91122aafd4a016c"
+    },
+    {
+      "id": "held-out-paper-light",
+      "split": "held-out",
+      "category": "paper-light",
+      "file": "held-out-paper-light.png",
+      "corners": [
+        [
+          0.18898623279098872,
+          0.1419031719532554
+        ],
+        [
+          0.8260325406758448,
+          0.19365609348914858
+        ],
+        [
+          0.7809762202753442,
+          0.8681135225375626
+        ],
+        [
+          0.2002503128911139,
+          0.8247078464106845
+        ]
+      ],
+      "unboundedCorners": null,
+      "expectedDetection": true,
+      "sha256": "444e51d398f785856bdfe12b01cf945e11ceb697a037c5aa4c4d2e581e4da022"
+    },
+    {
+      "id": "held-out-receipt",
+      "split": "held-out",
+      "category": "receipt",
+      "file": "held-out-receipt.png",
+      "corners": [
+        [
+          0.3504380475594493,
+          0.0667779632721202
+        ],
+        [
+          0.6257822277847309,
+          0.10851419031719532
+        ],
+        [
+          0.5757196495619524,
+          0.9348914858096828
+        ],
+        [
+          0.31289111389236546,
+          0.8931552587646077
+        ]
+      ],
+      "unboundedCorners": null,
+      "expectedDetection": true,
+      "sha256": "b32a54660b319173a3b06d47f0baf069af06f52512423a031306b95096e37608"
+    },
+    {
+      "id": "held-out-card",
+      "split": "held-out",
+      "category": "card",
+      "file": "held-out-card.png",
+      "corners": [
+        [
+          0.16270337922403003,
+          0.2921535893155259
+        ],
+        [
+          0.8322903629536921,
+          0.2671118530884808
+        ],
+        [
+          0.851063829787234,
+          0.7762938230383973
+        ],
+        [
+          0.18147684605757197,
+          0.8013355592654424
+        ]
+      ],
+      "unboundedCorners": null,
+      "expectedDetection": true,
+      "sha256": "e0cc9a3d296c9c080b6b3e0b285e5eca89f19e047f7edca84fd04d2b4a06af2a"
+    },
+    {
+      "id": "held-out-colored-form",
+      "split": "held-out",
+      "category": "colored-form",
+      "file": "held-out-colored-form.png",
+      "corners": [
+        [
+          0.18898623279098872,
+          0.1419031719532554
+        ],
+        [
+          0.8260325406758448,
+          0.19365609348914858
+        ],
+        [
+          0.7809762202753442,
+          0.8681135225375626
+        ],
+        [
+          0.2002503128911139,
+          0.8247078464106845
+        ]
+      ],
+      "unboundedCorners": null,
+      "expectedDetection": true,
+      "sha256": "2220494847bd4072de7d292c8641fb9b8ad722ea47ba4d9689686eb30a0b36d5"
+    },
+    {
+      "id": "held-out-photo",
+      "split": "held-out",
+      "category": "photo",
+      "file": "held-out-photo.png",
+      "corners": [
+        [
+          0.18898623279098872,
+          0.1419031719532554
+        ],
+        [
+          0.8260325406758448,
+          0.19365609348914858
+        ],
+        [
+          0.7809762202753442,
+          0.8681135225375626
+        ],
+        [
+          0.2002503128911139,
+          0.8247078464106845
+        ]
+      ],
+      "unboundedCorners": null,
+      "expectedDetection": true,
+      "sha256": "76a1d1c37dcae041eb377d0923dbe758621dfd55fdf2625b14336134091353b4"
+    },
+    {
+      "id": "held-out-rotation",
+      "split": "held-out",
+      "category": "rotation",
+      "file": "held-out-rotation.png",
+      "corners": [
+        [
+          0.37546933667083854,
+          0.09181969949916527
+        ],
+        [
+          0.8760951188986232,
+          0.4507512520868113
+        ],
+        [
+          0.6132665832290363,
+          0.9348914858096828
+        ],
+        [
+          0.11889862327909888,
+          0.5843071786310517
+        ]
+      ],
+      "unboundedCorners": null,
+      "expectedDetection": true,
+      "sha256": "ff88bb5d2213a70d8849e557a69ea71bd1a67af8e3942e56376cc8e667ab9f7e"
+    },
+    {
+      "id": "held-out-perspective",
+      "split": "held-out",
+      "category": "perspective",
+      "file": "held-out-perspective.png",
+      "corners": [
+        [
+          0.32540675844806005,
+          0.1001669449081803
+        ],
+        [
+          0.8385481852315394,
+          0.25041736227045075
+        ],
+        [
+          0.9261576971214017,
+          0.8514190317195326
+        ],
+        [
+          0.1376720901126408,
+          0.9181969949916527
+        ]
+      ],
+      "unboundedCorners": null,
+      "expectedDetection": true,
+      "sha256": "1f58264e5630045c8ca87fc41fad885b5a87018b7da695f60161439af3e12d5e"
+    },
+    {
+      "id": "held-out-shadow",
+      "split": "held-out",
+      "category": "shadow",
+      "file": "held-out-shadow.png",
+      "corners": [
+        [
+          0.18898623279098872,
+          0.1419031719532554
+        ],
+        [
+          0.8260325406758448,
+          0.19365609348914858
+        ],
+        [
+          0.7809762202753442,
+          0.8681135225375626
+        ],
+        [
+          0.2002503128911139,
+          0.8247078464106845
+        ]
+      ],
+      "unboundedCorners": null,
+      "expectedDetection": true,
+      "sha256": "ca3818d14ce762ce6dca432266ee0839459dffbbcda80633037ed267d25cadd1"
+    },
+    {
+      "id": "held-out-blur",
+      "split": "held-out",
+      "category": "blur",
+      "file": "held-out-blur.png",
+      "corners": [
+        [
+          0.18898623279098872,
+          0.1419031719532554
+        ],
+        [
+          0.8260325406758448,
+          0.19365609348914858
+        ],
+        [
+          0.7809762202753442,
+          0.8681135225375626
+        ],
+        [
+          0.2002503128911139,
+          0.8247078464106845
+        ]
+      ],
+      "unboundedCorners": null,
+      "expectedDetection": true,
+      "sha256": "bd5e7443ce52ac452afbc8d7cd8dc6dbbe57d16bbd019e4910d441f15fe1db1b"
+    },
+    {
+      "id": "held-out-partial-boundary",
+      "split": "held-out",
+      "category": "partial-boundary",
+      "file": "held-out-partial-boundary.png",
+      "corners": null,
+      "unboundedCorners": [
+        [
+          -0.05006257822277847,
+          0.12520868113522537
+        ],
+        [
+          0.7884856070087609,
+          0.12520868113522537
+        ],
+        [
+          0.8010012515644556,
+          0.8681135225375626
+        ],
+        [
+          -0.025031289111389236,
+          0.8514190317195326
+        ]
+      ],
+      "expectedDetection": false,
+      "sha256": "65cd608c6275c5bdd0591245da75620620567a0d9f1908505bf83d6a4c3d2ace"
+    },
+    {
+      "id": "held-out-negative",
+      "split": "held-out",
+      "category": "negative",
+      "file": "held-out-negative.png",
+      "corners": null,
+      "unboundedCorners": null,
+      "expectedDetection": false,
+      "sha256": "0d9f5768fc4c753134a56ae4bf0af1bf76cec3683e95957dcca019cd9d131fa2"
+    }
+  ]
+}

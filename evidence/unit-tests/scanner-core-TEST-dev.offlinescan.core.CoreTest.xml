@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dev.offlinescan.core.CoreTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-01T08:40:58.494Z" hostname="PPWLT1" time="0.15">
+  <properties/>
+  <testcase name="previewRoundTripAndRotation" classname="dev.offlinescan.core.CoreTest" time="0.049"/>
+  <testcase name="modesAndLimitsAreExplicit" classname="dev.offlinescan.core.CoreTest" time="0.025"/>
+  <testcase name="validatesConvexNonIntersectingGeometry" classname="dev.offlinescan.core.CoreTest" time="0.012"/>
+  <testcase name="failedImportLeavesNoOwnedFiles" classname="dev.offlinescan.core.CoreTest" time="0.039"/>
+  <testcase name="sessionPreservesUserSourcesAndOwnsOnlyItsDirectory" classname="dev.offlinescan.core.CoreTest" time="0.024"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

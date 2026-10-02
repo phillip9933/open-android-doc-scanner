@@ -1,0 +1,8 @@
+
+dev.offlinescan.sample.ScannerAutomaticCaptureTest:...
+
+Time: 13.652
+
+OK (3 tests)
+
+

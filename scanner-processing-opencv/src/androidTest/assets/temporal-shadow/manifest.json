@@ -1,0 +1,2328 @@
+{
+  "license": "Apache-2.0",
+  "provenance": "Original synthetic shadow scenes with 8-frame small camera translation/rotation; truth generated independently. Cohort frozen before RC4 detector changes.",
+  "width": 640,
+  "height": 480,
+  "cases": [
+    {
+      "id": "tuning-light-shadow-00",
+      "sequence": "tuning-light-shadow",
+      "frameIndex": 0,
+      "split": "tuning",
+      "category": "light-shadow",
+      "file": "tuning-light-shadow-00.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.20344287949921752,
+          0.1394572025052192
+        ],
+        [
+          0.837245696400626,
+          0.17494780793319414
+        ],
+        [
+          0.7902973395931142,
+          0.922338204592902
+        ],
+        [
+          0.1486697965571205,
+          0.8492693110647181
+        ]
+      ],
+      "sha256": "f16025939e27f30389c95ce0d1573a9a10a13aac35e4252b19138488fb656cab"
+    },
+    {
+      "id": "tuning-light-shadow-01",
+      "sequence": "tuning-light-shadow",
+      "frameIndex": 1,
+      "split": "tuning",
+      "category": "light-shadow",
+      "file": "tuning-light-shadow-01.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.20933210878089248,
+          0.13292851259688904
+        ],
+        [
+          0.8428726736295101,
+          0.17595255564415813
+        ],
+        [
+          0.7909334624595882,
+          0.922755137402704
+        ],
+        [
+          0.14981951273387092,
+          0.8420612756484214
+        ]
+      ],
+      "sha256": "df7f52ce44778fd4ae4ed489d9b4bee09261e16f0e03d42d9837616bf352b083"
+    },
+    {
+      "id": "tuning-light-shadow-02",
+      "sequence": "tuning-light-shadow",
+      "frameIndex": 2,
+      "split": "tuning",
+      "category": "light-shadow",
+      "file": "tuning-light-shadow-02.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.2048568310403347,
+          0.12962098333043276
+        ],
+        [
+          0.8384695116019888,
+          0.17071164374338285
+        ],
+        [
+          0.7878109765321354,
+          0.9176707659216599
+        ],
+        [
+          0.14656033857852005,
+          0.8389334957901072
+        ]
+      ],
+      "sha256": "9a20506a109bf97490346c66f19bc479b0d66757cfa223deb4c00fa5d824ba23"
+    },
+    {
+      "id": "tuning-light-shadow-03",
+      "sequence": "tuning-light-shadow",
+      "frameIndex": 3,
+      "split": "tuning",
+      "category": "light-shadow",
+      "file": "tuning-light-shadow-03.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.1989644159678277,
+          0.1351548293484195
+        ],
+        [
+          0.8328682840561921,
+          0.16727345556272363
+        ],
+        [
+          0.7881544447442874,
+          0.9149076649463476
+        ],
+        [
+          0.14631358146414547,
+          0.8452526753115049
+        ]
+      ],
+      "sha256": "ebc11f7b1f70803112c896f458fd56b0746a002def295b8a4c4c8436f549f7fe"
+    },
+    {
+      "id": "tuning-light-shadow-04",
+      "sequence": "tuning-light-shadow",
+      "frameIndex": 4,
+      "split": "tuning",
+      "category": "light-shadow",
+      "file": "tuning-light-shadow-04.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.2016383729148888,
+          0.14212895950330232
+        ],
+        [
+          0.8356671421666061,
+          0.1695109274698948
+        ],
+        [
+          0.7940927845599254,
+          0.9174674865490609
+        ],
+        [
+          0.1519695562992707,
+          0.8526090444001484
+        ]
+      ],
+      "sha256": "f6fee654c51f0aeed53e0cee8e105c90d3f99da56f81359f743bccf841c95352"
+    },
+    {
+      "id": "tuning-light-shadow-05",
+      "sequence": "tuning-light-shadow",
+      "frameIndex": 5,
+      "split": "tuning",
+      "category": "light-shadow",
+      "file": "tuning-light-shadow-05.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.2058776789746722,
+          0.14011664862571602
+        ],
+        [
+          0.8397608957102727,
+          0.17295259949577418
+        ],
+        [
+          0.7945716739620924,
+          0.9205359409670347
+        ],
+        [
+          0.15277533315571315,
+          0.8501546585448964
+        ]
+      ],
+      "sha256": "6520c4575a84e51e599beaa629e5e59ecbd15b0af778045916368b31c661996e"
+    },
+    {
+      "id": "tuning-light-shadow-06",
+      "sequence": "tuning-light-shadow",
+      "frameIndex": 6,
+      "split": "tuning",
+      "category": "light-shadow",
+      "file": "tuning-light-shadow-06.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.20424009165264037,
+          0.13148640593414887
+        ],
+        [
+          0.83783322454937,
+          0.17311002344351853
+        ],
+        [
+          0.7868216455052568,
+          0.920026385552172
+        ],
+        [
+          0.1456083505972794,
+          0.8407497411164128
+        ]
+      ],
+      "sha256": "7cc47e248ea621bc675db2f7984ef32d14369f4e9083755ec102ea3ccf31e72d"
+    },
+    {
+      "id": "tuning-light-shadow-07",
+      "sequence": "tuning-light-shadow",
+      "frameIndex": 7,
+      "split": "tuning",
+      "category": "light-shadow",
+      "file": "tuning-light-shadow-07.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.20263889508792082,
+          0.12862170944893994
+        ],
+        [
+          0.8361916562130731,
+          0.1713249427676839
+        ],
+        [
+          0.7844649414910999,
+          0.918153771241338
+        ],
+        [
+          0.1433280775903477,
+          0.837784556872523
+        ]
+      ],
+      "sha256": "05773a7b2e08d37b12be62d08751461e166a4fdda3d18b3888e4c4f333de993c"
+    },
+    {
+      "id": "tuning-cross-shadow-00",
+      "sequence": "tuning-cross-shadow",
+      "frameIndex": 0,
+      "split": "tuning",
+      "category": "cross-shadow",
+      "file": "tuning-cross-shadow-00.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.20344287949921752,
+          0.1394572025052192
+        ],
+        [
+          0.837245696400626,
+          0.17494780793319414
+        ],
+        [
+          0.7902973395931142,
+          0.922338204592902
+        ],
+        [
+          0.1486697965571205,
+          0.8492693110647181
+        ]
+      ],
+      "sha256": "2d38721e32a3cff6f68ddb90063840a128027f5d0f40724db68a725b92998e66"
+    },
+    {
+      "id": "tuning-cross-shadow-01",
+      "sequence": "tuning-cross-shadow",
+      "frameIndex": 1,
+      "split": "tuning",
+      "category": "cross-shadow",
+      "file": "tuning-cross-shadow-01.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.20933210878089248,
+          0.13292851259688904
+        ],
+        [
+          0.8428726736295101,
+          0.17595255564415813
+        ],
+        [
+          0.7909334624595882,
+          0.922755137402704
+        ],
+        [
+          0.14981951273387092,
+          0.8420612756484214
+        ]
+      ],
+      "sha256": "c233dc4bd8b0f604fc2b0826a9909ab0f618d70eab77626d99356d1534af62c1"
+    },
+    {
+      "id": "tuning-cross-shadow-02",
+      "sequence": "tuning-cross-shadow",
+      "frameIndex": 2,
+      "split": "tuning",
+      "category": "cross-shadow",
+      "file": "tuning-cross-shadow-02.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.2048568310403347,
+          0.12962098333043276
+        ],
+        [
+          0.8384695116019888,
+          0.17071164374338285
+        ],
+        [
+          0.7878109765321354,
+          0.9176707659216599
+        ],
+        [
+          0.14656033857852005,
+          0.8389334957901072
+        ]
+      ],
+      "sha256": "457b7ecfceabe93ed3768fc19eb0866fdcddab17bdaae465fc1d7647ce4c1be1"
+    },
+    {
+      "id": "tuning-cross-shadow-03",
+      "sequence": "tuning-cross-shadow",
+      "frameIndex": 3,
+      "split": "tuning",
+      "category": "cross-shadow",
+      "file": "tuning-cross-shadow-03.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.1989644159678277,
+          0.1351548293484195
+        ],
+        [
+          0.8328682840561921,
+          0.16727345556272363
+        ],
+        [
+          0.7881544447442874,
+          0.9149076649463476
+        ],
+        [
+          0.14631358146414547,
+          0.8452526753115049
+        ]
+      ],
+      "sha256": "a0cc41cb5ad3870239a6e2ffc11c71f07374f139d57bff9db812345d1a246b57"
+    },
+    {
+      "id": "tuning-cross-shadow-04",
+      "sequence": "tuning-cross-shadow",
+      "frameIndex": 4,
+      "split": "tuning",
+      "category": "cross-shadow",
+      "file": "tuning-cross-shadow-04.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.2016383729148888,
+          0.14212895950330232
+        ],
+        [
+          0.8356671421666061,
+          0.1695109274698948
+        ],
+        [
+          0.7940927845599254,
+          0.9174674865490609
+        ],
+        [
+          0.1519695562992707,
+          0.8526090444001484
+        ]
+      ],
+      "sha256": "b47af32bd2eaa26c73e6e7b8b3de2e4de572a33d929d6d42a7d318deb54649a1"
+    },
+    {
+      "id": "tuning-cross-shadow-05",
+      "sequence": "tuning-cross-shadow",
+      "frameIndex": 5,
+      "split": "tuning",
+      "category": "cross-shadow",
+      "file": "tuning-cross-shadow-05.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.2058776789746722,
+          0.14011664862571602
+        ],
+        [
+          0.8397608957102727,
+          0.17295259949577418
+        ],
+        [
+          0.7945716739620924,
+          0.9205359409670347
+        ],
+        [
+          0.15277533315571315,
+          0.8501546585448964
+        ]
+      ],
+      "sha256": "c72d74ed742e7315c8adbd87f220f28ff1b30dc843db77653ada382c8ff1e2e1"
+    },
+    {
+      "id": "tuning-cross-shadow-06",
+      "sequence": "tuning-cross-shadow",
+      "frameIndex": 6,
+      "split": "tuning",
+      "category": "cross-shadow",
+      "file": "tuning-cross-shadow-06.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.20424009165264037,
+          0.13148640593414887
+        ],
+        [
+          0.83783322454937,
+          0.17311002344351853
+        ],
+        [
+          0.7868216455052568,
+          0.920026385552172
+        ],
+        [
+          0.1456083505972794,
+          0.8407497411164128
+        ]
+      ],
+      "sha256": "b37f59e33e97f650cffbb17841acb6517b260527b3795cea62ad5f238803dbb4"
+    },
+    {
+      "id": "tuning-cross-shadow-07",
+      "sequence": "tuning-cross-shadow",
+      "frameIndex": 7,
+      "split": "tuning",
+      "category": "cross-shadow",
+      "file": "tuning-cross-shadow-07.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.20263889508792082,
+          0.12862170944893994
+        ],
+        [
+          0.8361916562130731,
+          0.1713249427676839
+        ],
+        [
+          0.7844649414910999,
+          0.918153771241338
+        ],
+        [
+          0.1433280775903477,
+          0.837784556872523
+        ]
+      ],
+      "sha256": "bec3e08f47f049e29360393dd9fa8e86c2f2af244f13ab868556118075f4bbc6"
+    },
+    {
+      "id": "tuning-moving-penumbra-00",
+      "sequence": "tuning-moving-penumbra",
+      "frameIndex": 0,
+      "split": "tuning",
+      "category": "moving-penumbra",
+      "file": "tuning-moving-penumbra-00.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.20344287949921752,
+          0.1394572025052192
+        ],
+        [
+          0.837245696400626,
+          0.17494780793319414
+        ],
+        [
+          0.7902973395931142,
+          0.922338204592902
+        ],
+        [
+          0.1486697965571205,
+          0.8492693110647181
+        ]
+      ],
+      "sha256": "7f4da1c85419de90019caeb304cdbb9622acd9cced3dc8437ab5a53925005eff"
+    },
+    {
+      "id": "tuning-moving-penumbra-01",
+      "sequence": "tuning-moving-penumbra",
+      "frameIndex": 1,
+      "split": "tuning",
+      "category": "moving-penumbra",
+      "file": "tuning-moving-penumbra-01.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.20933210878089248,
+          0.13292851259688904
+        ],
+        [
+          0.8428726736295101,
+          0.17595255564415813
+        ],
+        [
+          0.7909334624595882,
+          0.922755137402704
+        ],
+        [
+          0.14981951273387092,
+          0.8420612756484214
+        ]
+      ],
+      "sha256": "199037a349a2fe7daf9e17eab971b1917e7e25daef26ae919db082b4976e9055"
+    },
+    {
+      "id": "tuning-moving-penumbra-02",
+      "sequence": "tuning-moving-penumbra",
+      "frameIndex": 2,
+      "split": "tuning",
+      "category": "moving-penumbra",
+      "file": "tuning-moving-penumbra-02.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.2048568310403347,
+          0.12962098333043276
+        ],
+        [
+          0.8384695116019888,
+          0.17071164374338285
+        ],
+        [
+          0.7878109765321354,
+          0.9176707659216599
+        ],
+        [
+          0.14656033857852005,
+          0.8389334957901072
+        ]
+      ],
+      "sha256": "0e33719b0676a894688770c1ed558b8130c314a8f88d9b94a96b9479e7ae1f84"
+    },
+    {
+      "id": "tuning-moving-penumbra-03",
+      "sequence": "tuning-moving-penumbra",
+      "frameIndex": 3,
+      "split": "tuning",
+      "category": "moving-penumbra",
+      "file": "tuning-moving-penumbra-03.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.1989644159678277,
+          0.1351548293484195
+        ],
+        [
+          0.8328682840561921,
+          0.16727345556272363
+        ],
+        [
+          0.7881544447442874,
+          0.9149076649463476
+        ],
+        [
+          0.14631358146414547,
+          0.8452526753115049
+        ]
+      ],
+      "sha256": "2c4d4fa85babae0aedf4c39bbf158d1421d4ea1a2308137b1c959eaa44bde3e5"
+    },
+    {
+      "id": "tuning-moving-penumbra-04",
+      "sequence": "tuning-moving-penumbra",
+      "frameIndex": 4,
+      "split": "tuning",
+      "category": "moving-penumbra",
+      "file": "tuning-moving-penumbra-04.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.2016383729148888,
+          0.14212895950330232
+        ],
+        [
+          0.8356671421666061,
+          0.1695109274698948
+        ],
+        [
+          0.7940927845599254,
+          0.9174674865490609
+        ],
+        [
+          0.1519695562992707,
+          0.8526090444001484
+        ]
+      ],
+      "sha256": "9203bc7c90972ecabcde7f0090c83288b2358128d96431d91aabd3e548740046"
+    },
+    {
+      "id": "tuning-moving-penumbra-05",
+      "sequence": "tuning-moving-penumbra",
+      "frameIndex": 5,
+      "split": "tuning",
+      "category": "moving-penumbra",
+      "file": "tuning-moving-penumbra-05.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.2058776789746722,
+          0.14011664862571602
+        ],
+        [
+          0.8397608957102727,
+          0.17295259949577418
+        ],
+        [
+          0.7945716739620924,
+          0.9205359409670347
+        ],
+        [
+          0.15277533315571315,
+          0.8501546585448964
+        ]
+      ],
+      "sha256": "9fb1fb22f1076158d5b849a1202bb31a650c6996c8ea76bbfccd74dbe46809a5"
+    },
+    {
+      "id": "tuning-moving-penumbra-06",
+      "sequence": "tuning-moving-penumbra",
+      "frameIndex": 6,
+      "split": "tuning",
+      "category": "moving-penumbra",
+      "file": "tuning-moving-penumbra-06.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.20424009165264037,
+          0.13148640593414887
+        ],
+        [
+          0.83783322454937,
+          0.17311002344351853
+        ],
+        [
+          0.7868216455052568,
+          0.920026385552172
+        ],
+        [
+          0.1456083505972794,
+          0.8407497411164128
+        ]
+      ],
+      "sha256": "09cc73bf43718e2d58bf8161f54b25fcd93fc67271f38b50e0aaa041d6cb12c2"
+    },
+    {
+      "id": "tuning-moving-penumbra-07",
+      "sequence": "tuning-moving-penumbra",
+      "frameIndex": 7,
+      "split": "tuning",
+      "category": "moving-penumbra",
+      "file": "tuning-moving-penumbra-07.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.20263889508792082,
+          0.12862170944893994
+        ],
+        [
+          0.8361916562130731,
+          0.1713249427676839
+        ],
+        [
+          0.7844649414910999,
+          0.918153771241338
+        ],
+        [
+          0.1433280775903477,
+          0.837784556872523
+        ]
+      ],
+      "sha256": "4467c75c914eb32e5df85d8ecbd88e69b9db574eddc392cd2762d8f585287978"
+    },
+    {
+      "id": "tuning-textured-light-00",
+      "sequence": "tuning-textured-light",
+      "frameIndex": 0,
+      "split": "tuning",
+      "category": "textured-light",
+      "file": "tuning-textured-light-00.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.20344287949921752,
+          0.1394572025052192
+        ],
+        [
+          0.837245696400626,
+          0.17494780793319414
+        ],
+        [
+          0.7902973395931142,
+          0.922338204592902
+        ],
+        [
+          0.1486697965571205,
+          0.8492693110647181
+        ]
+      ],
+      "sha256": "066ee50fdd2d3bcede345525f6d383200c400aa79ef7362cf87154493f2e74ee"
+    },
+    {
+      "id": "tuning-textured-light-01",
+      "sequence": "tuning-textured-light",
+      "frameIndex": 1,
+      "split": "tuning",
+      "category": "textured-light",
+      "file": "tuning-textured-light-01.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.20933210878089248,
+          0.13292851259688904
+        ],
+        [
+          0.8428726736295101,
+          0.17595255564415813
+        ],
+        [
+          0.7909334624595882,
+          0.922755137402704
+        ],
+        [
+          0.14981951273387092,
+          0.8420612756484214
+        ]
+      ],
+      "sha256": "6bcf2332c9826af1d3bff6c85e3fb9aff9ec896bff1f433d5e21836bc7c38af8"
+    },
+    {
+      "id": "tuning-textured-light-02",
+      "sequence": "tuning-textured-light",
+      "frameIndex": 2,
+      "split": "tuning",
+      "category": "textured-light",
+      "file": "tuning-textured-light-02.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.2048568310403347,
+          0.12962098333043276
+        ],
+        [
+          0.8384695116019888,
+          0.17071164374338285
+        ],
+        [
+          0.7878109765321354,
+          0.9176707659216599
+        ],
+        [
+          0.14656033857852005,
+          0.8389334957901072
+        ]
+      ],
+      "sha256": "f398ff065c9591fabc5e4d20012ce2f8f067ec3c2f854aa5e63dbe8501f67176"
+    },
+    {
+      "id": "tuning-textured-light-03",
+      "sequence": "tuning-textured-light",
+      "frameIndex": 3,
+      "split": "tuning",
+      "category": "textured-light",
+      "file": "tuning-textured-light-03.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.1989644159678277,
+          0.1351548293484195
+        ],
+        [
+          0.8328682840561921,
+          0.16727345556272363
+        ],
+        [
+          0.7881544447442874,
+          0.9149076649463476
+        ],
+        [
+          0.14631358146414547,
+          0.8452526753115049
+        ]
+      ],
+      "sha256": "97a9528262c1f11c9ce1f33cebffa07c3abbfc2ac48db0b0e398d8ae41303395"
+    },
+    {
+      "id": "tuning-textured-light-04",
+      "sequence": "tuning-textured-light",
+      "frameIndex": 4,
+      "split": "tuning",
+      "category": "textured-light",
+      "file": "tuning-textured-light-04.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.2016383729148888,
+          0.14212895950330232
+        ],
+        [
+          0.8356671421666061,
+          0.1695109274698948
+        ],
+        [
+          0.7940927845599254,
+          0.9174674865490609
+        ],
+        [
+          0.1519695562992707,
+          0.8526090444001484
+        ]
+      ],
+      "sha256": "340f94532719457dcca0c6c31a69c7855d14ce3c8a80399a7524bd9e87662ad5"
+    },
+    {
+      "id": "tuning-textured-light-05",
+      "sequence": "tuning-textured-light",
+      "frameIndex": 5,
+      "split": "tuning",
+      "category": "textured-light",
+      "file": "tuning-textured-light-05.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.2058776789746722,
+          0.14011664862571602
+        ],
+        [
+          0.8397608957102727,
+          0.17295259949577418
+        ],
+        [
+          0.7945716739620924,
+          0.9205359409670347
+        ],
+        [
+          0.15277533315571315,
+          0.8501546585448964
+        ]
+      ],
+      "sha256": "9a60f0c400d58e2b69a1136e3101d2439e397e136d399900a863aa0d7315a7bb"
+    },
+    {
+      "id": "tuning-textured-light-06",
+      "sequence": "tuning-textured-light",
+      "frameIndex": 6,
+      "split": "tuning",
+      "category": "textured-light",
+      "file": "tuning-textured-light-06.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.20424009165264037,
+          0.13148640593414887
+        ],
+        [
+          0.83783322454937,
+          0.17311002344351853
+        ],
+        [
+          0.7868216455052568,
+          0.920026385552172
+        ],
+        [
+          0.1456083505972794,
+          0.8407497411164128
+        ]
+      ],
+      "sha256": "e8f5b223df7c29e1d8e19772f4b7630f594caab25cc63aa09e1711f8e48a0528"
+    },
+    {
+      "id": "tuning-textured-light-07",
+      "sequence": "tuning-textured-light",
+      "frameIndex": 7,
+      "split": "tuning",
+      "category": "textured-light",
+      "file": "tuning-textured-light-07.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.20263889508792082,
+          0.12862170944893994
+        ],
+        [
+          0.8361916562130731,
+          0.1713249427676839
+        ],
+        [
+          0.7844649414910999,
+          0.918153771241338
+        ],
+        [
+          0.1433280775903477,
+          0.837784556872523
+        ]
+      ],
+      "sha256": "d7aeffaf85daaaa29dddd7f7078c14a5f296fea8af4398dd4be7e64375f04cae"
+    },
+    {
+      "id": "tuning-negative-shadow-00",
+      "sequence": "tuning-negative-shadow",
+      "frameIndex": 0,
+      "split": "tuning",
+      "category": "negative-shadow",
+      "file": "tuning-negative-shadow-00.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "45cc1d99fc357766d2a9c505d4e5ab3fae9af9265a113f1b01c7ef25eeaf5658"
+    },
+    {
+      "id": "tuning-negative-shadow-01",
+      "sequence": "tuning-negative-shadow",
+      "frameIndex": 1,
+      "split": "tuning",
+      "category": "negative-shadow",
+      "file": "tuning-negative-shadow-01.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "61f76a46dfaa77c1062a6bd207e704b44fc57be7d7d0f6251ac56c5b6fa78ce6"
+    },
+    {
+      "id": "tuning-negative-shadow-02",
+      "sequence": "tuning-negative-shadow",
+      "frameIndex": 2,
+      "split": "tuning",
+      "category": "negative-shadow",
+      "file": "tuning-negative-shadow-02.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "a21031fc770e1ed53ce82d912406ed379e42e1d3fb2883042a0e2fa19fee5be4"
+    },
+    {
+      "id": "tuning-negative-shadow-03",
+      "sequence": "tuning-negative-shadow",
+      "frameIndex": 3,
+      "split": "tuning",
+      "category": "negative-shadow",
+      "file": "tuning-negative-shadow-03.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "4d217b6ed620ca77bcf9c4e30875ec798e10a8669407c851d855b62d5d2f94af"
+    },
+    {
+      "id": "tuning-negative-shadow-04",
+      "sequence": "tuning-negative-shadow",
+      "frameIndex": 4,
+      "split": "tuning",
+      "category": "negative-shadow",
+      "file": "tuning-negative-shadow-04.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "42baaa6da368c4559d0cbe9b35159b88fd9893e269b4261da41a089fee544a49"
+    },
+    {
+      "id": "tuning-negative-shadow-05",
+      "sequence": "tuning-negative-shadow",
+      "frameIndex": 5,
+      "split": "tuning",
+      "category": "negative-shadow",
+      "file": "tuning-negative-shadow-05.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "5dae3e5b87d60a9753381ae0e4b82e9104f34fcabbca65bb01ac658d11623eec"
+    },
+    {
+      "id": "tuning-negative-shadow-06",
+      "sequence": "tuning-negative-shadow",
+      "frameIndex": 6,
+      "split": "tuning",
+      "category": "negative-shadow",
+      "file": "tuning-negative-shadow-06.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "4042221e2b79a15641012e9a863314529db2a9f46c12d1db6395fd255840075a"
+    },
+    {
+      "id": "tuning-negative-shadow-07",
+      "sequence": "tuning-negative-shadow",
+      "frameIndex": 7,
+      "split": "tuning",
+      "category": "negative-shadow",
+      "file": "tuning-negative-shadow-07.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "d943d5300cde44876b63538b84cb80ca1b05c4c39c07a31e44cb4968e50315ae"
+    },
+    {
+      "id": "tuning-negative-texture-00",
+      "sequence": "tuning-negative-texture",
+      "frameIndex": 0,
+      "split": "tuning",
+      "category": "negative-texture",
+      "file": "tuning-negative-texture-00.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "6192c92ef742f22b26436d330d24a3336cb8940cc4b8c55ce04c090ea953622d"
+    },
+    {
+      "id": "tuning-negative-texture-01",
+      "sequence": "tuning-negative-texture",
+      "frameIndex": 1,
+      "split": "tuning",
+      "category": "negative-texture",
+      "file": "tuning-negative-texture-01.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "733659eaeb52116b5a756ac54e2d14fbf13c0a5fd29b92d22001f5477287ad83"
+    },
+    {
+      "id": "tuning-negative-texture-02",
+      "sequence": "tuning-negative-texture",
+      "frameIndex": 2,
+      "split": "tuning",
+      "category": "negative-texture",
+      "file": "tuning-negative-texture-02.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "3c86d6109dd2171623338d9f8bd84e712397ecff87da4e92eb6ec1d93b838f90"
+    },
+    {
+      "id": "tuning-negative-texture-03",
+      "sequence": "tuning-negative-texture",
+      "frameIndex": 3,
+      "split": "tuning",
+      "category": "negative-texture",
+      "file": "tuning-negative-texture-03.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "8ffce571a8ddf67c663ecebb35a6a3971186ae55c12c7608a3a7b5410cbe0141"
+    },
+    {
+      "id": "tuning-negative-texture-04",
+      "sequence": "tuning-negative-texture",
+      "frameIndex": 4,
+      "split": "tuning",
+      "category": "negative-texture",
+      "file": "tuning-negative-texture-04.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "febade529f9199658160d4505db2011f97ccef4d6bb89125f54413360a5e0570"
+    },
+    {
+      "id": "tuning-negative-texture-05",
+      "sequence": "tuning-negative-texture",
+      "frameIndex": 5,
+      "split": "tuning",
+      "category": "negative-texture",
+      "file": "tuning-negative-texture-05.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "959292f547067b8add2d429a314f1a2c8c2fb30143f3b5853d01d3276c7d870a"
+    },
+    {
+      "id": "tuning-negative-texture-06",
+      "sequence": "tuning-negative-texture",
+      "frameIndex": 6,
+      "split": "tuning",
+      "category": "negative-texture",
+      "file": "tuning-negative-texture-06.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "f2627577fe7dce0ab2bb82afc6c05fead6d751852e7ee121f61addbdd5056f7d"
+    },
+    {
+      "id": "tuning-negative-texture-07",
+      "sequence": "tuning-negative-texture",
+      "frameIndex": 7,
+      "split": "tuning",
+      "category": "negative-texture",
+      "file": "tuning-negative-texture-07.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "793d3acf19a0ca5ae8bd7ff0700b10ecd30d6a8fc0cb42d1ec80086d3b59ff03"
+    },
+    {
+      "id": "tuning-negative-circles-00",
+      "sequence": "tuning-negative-circles",
+      "frameIndex": 0,
+      "split": "tuning",
+      "category": "negative-circles",
+      "file": "tuning-negative-circles-00.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "96f58fd07f2a775231b4dca44da6d9a8bdc99ea911d71fd73e84577df3a3b29c"
+    },
+    {
+      "id": "tuning-negative-circles-01",
+      "sequence": "tuning-negative-circles",
+      "frameIndex": 1,
+      "split": "tuning",
+      "category": "negative-circles",
+      "file": "tuning-negative-circles-01.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "6bbd3f7a6849ed45b46a65cf6f6c8fa004d6e46801746693ff1787270bb8bbae"
+    },
+    {
+      "id": "tuning-negative-circles-02",
+      "sequence": "tuning-negative-circles",
+      "frameIndex": 2,
+      "split": "tuning",
+      "category": "negative-circles",
+      "file": "tuning-negative-circles-02.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "63cf4fc19365edc268bec6f73e990312cb62b3cee5cc04f11332ddb81bdb85b8"
+    },
+    {
+      "id": "tuning-negative-circles-03",
+      "sequence": "tuning-negative-circles",
+      "frameIndex": 3,
+      "split": "tuning",
+      "category": "negative-circles",
+      "file": "tuning-negative-circles-03.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "0ae38b306c05a4e6fb5d8e86d3ea4712d5319f6da1720bd87f200e05c5249fce"
+    },
+    {
+      "id": "tuning-negative-circles-04",
+      "sequence": "tuning-negative-circles",
+      "frameIndex": 4,
+      "split": "tuning",
+      "category": "negative-circles",
+      "file": "tuning-negative-circles-04.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "c204024c9539c1a96a9e98f5cae37506bd288e4ad08d1252baeef132c57ad341"
+    },
+    {
+      "id": "tuning-negative-circles-05",
+      "sequence": "tuning-negative-circles",
+      "frameIndex": 5,
+      "split": "tuning",
+      "category": "negative-circles",
+      "file": "tuning-negative-circles-05.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "03e2a9522fe0a6b89734257faa9c74eafb62ad01d850440ce56baf2c5030d679"
+    },
+    {
+      "id": "tuning-negative-circles-06",
+      "sequence": "tuning-negative-circles",
+      "frameIndex": 6,
+      "split": "tuning",
+      "category": "negative-circles",
+      "file": "tuning-negative-circles-06.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "7fb952e35506b02e31d76f8595ac3cad65ea70842fdc6f14690439d4d7ca978c"
+    },
+    {
+      "id": "tuning-negative-circles-07",
+      "sequence": "tuning-negative-circles",
+      "frameIndex": 7,
+      "split": "tuning",
+      "category": "negative-circles",
+      "file": "tuning-negative-circles-07.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "8f021acea490dec1dce6a5df72e4b21e3400ba484f0dcccb680524553630632f"
+    },
+    {
+      "id": "held-out-light-shadow-00",
+      "sequence": "held-out-light-shadow",
+      "frameIndex": 0,
+      "split": "held-out",
+      "category": "light-shadow",
+      "file": "held-out-light-shadow-00.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.18309679602904222,
+          0.19461180431442351
+        ],
+        [
+          0.8092366264310482,
+          0.11973678028360081
+        ],
+        [
+          0.8702581911159385,
+          0.861098039265633
+        ],
+        [
+          0.22068423150281125,
+          0.9170951601966695
+        ]
+      ],
+      "sha256": "cb59d8e3258cd957b84be4b60a630b1760c775e9fd8aac982ff7bce9f8c94b43"
+    },
+    {
+      "id": "held-out-light-shadow-01",
+      "sequence": "held-out-light-shadow",
+      "frameIndex": 1,
+      "split": "held-out",
+      "category": "light-shadow",
+      "file": "held-out-light-shadow-01.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.18444775405039243,
+          0.18873564661486442
+        ],
+        [
+          0.8109511989109844,
+          0.11948477693911481
+        ],
+        [
+          0.8682306707208289,
+          0.8613771873692493
+        ],
+        [
+          0.2183888803827995,
+          0.9115401535225769
+        ]
+      ],
+      "sha256": "f3bab96528ae12b241722cdfebebec662139b20ca448fa508f7fc6693260c533"
+    },
+    {
+      "id": "held-out-light-shadow-02",
+      "sequence": "held-out-light-shadow",
+      "frameIndex": 2,
+      "split": "held-out",
+      "category": "light-shadow",
+      "file": "held-out-light-shadow-02.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.17822600281262083,
+          0.18678106378420126
+        ],
+        [
+          0.8044459239726317,
+          0.11310767924189437
+        ],
+        [
+          0.8646680072713627,
+          0.8545852715338776
+        ],
+        [
+          0.21503433740306013,
+          0.9093358024260546
+        ]
+      ],
+      "sha256": "c14a165bfff74d514679e0019e2f247f1f7f378a9663a3ed6f73d0aa94aef0dd"
+    },
+    {
+      "id": "held-out-light-shadow-03",
+      "sequence": "held-out-light-shadow",
+      "frameIndex": 3,
+      "split": "held-out",
+      "category": "light-shadow",
+      "file": "held-out-light-shadow-03.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.17657065377419118,
+          0.19267866015212776
+        ],
+        [
+          0.802165961634959,
+          0.110099823987335
+        ],
+        [
+          0.8683125175905182,
+          0.8506784259352251
+        ],
+        [
+          0.21915350995609514,
+          0.9146686074475555
+        ]
+      ],
+      "sha256": "df7f450ecb50aff6bbeae96584475ac4e417d2cf05c7e61bc1957aa752ef20df"
+    },
+    {
+      "id": "held-out-light-shadow-04",
+      "sequence": "held-out-light-shadow",
+      "frameIndex": 4,
+      "split": "held-out",
+      "category": "light-shadow",
+      "file": "held-out-light-shadow-04.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.18085504599906507,
+          0.19855138763602614
+        ],
+        [
+          0.8062850658367449,
+          0.11377370181790901
+        ],
+        [
+          0.8738942399500339,
+          0.8541172096120837
+        ],
+        [
+          0.22486388440748367,
+          0.9203891380786685
+        ]
+      ],
+      "sha256": "ffdc17713d3b635a2e99f6a197e9e4b3813ea60787e1a504469ca4946ab6579e"
+    },
+    {
+      "id": "held-out-light-shadow-05",
+      "sequence": "held-out-light-shadow",
+      "frameIndex": 5,
+      "split": "held-out",
+      "category": "light-shadow",
+      "file": "held-out-light-shadow-05.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.18146883083441206,
+          0.1953732935023097
+        ],
+        [
+          0.8074284478928055,
+          0.11786306977155862
+        ],
+        [
+          0.8702031969107309,
+          0.8589637839467198
+        ],
+        [
+          0.22076491675738064,
+          0.9176948384094571
+        ]
+      ],
+      "sha256": "6a06d1584da4fa09171ab72ebd9cb15a9f863f7f96099948eaf08912976fb504"
+    },
+    {
+      "id": "held-out-light-shadow-06",
+      "sequence": "held-out-light-shadow",
+      "frameIndex": 6,
+      "split": "held-out",
+      "category": "light-shadow",
+      "file": "held-out-light-shadow-06.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.17886672982510282,
+          0.18697263308115675
+        ],
+        [
+          0.8053295158759316,
+          0.11707023805717257
+        ],
+        [
+          0.8630425132212156,
+          0.8589028539719704
+        ],
+        [
+          0.21323023430230756,
+          0.9097416225125987
+        ]
+      ],
+      "sha256": "efad45300dc71df4d4b227e147afc6ea0bb8f9a706a0f9ef8b9ec7033f9869d2"
+    },
+    {
+      "id": "held-out-light-shadow-07",
+      "sequence": "held-out-light-shadow",
+      "frameIndex": 7,
+      "split": "held-out",
+      "category": "light-shadow",
+      "file": "held-out-light-shadow-07.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.1803618801464796,
+          0.18543532421907383
+        ],
+        [
+          0.8067219762992524,
+          0.11391400744562905
+        ],
+        [
+          0.8655121761146546,
+          0.8555960756952745
+        ],
+        [
+          0.2157749461618295,
+          0.9081141470282599
+        ]
+      ],
+      "sha256": "11cd0cd6ef468e6e871754e01ea2a0e73ee1e55e01845ad9f09560305c8ea05f"
+    },
+    {
+      "id": "held-out-cross-shadow-00",
+      "sequence": "held-out-cross-shadow",
+      "frameIndex": 0,
+      "split": "held-out",
+      "category": "cross-shadow",
+      "file": "held-out-cross-shadow-00.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.18309679602904222,
+          0.19461180431442351
+        ],
+        [
+          0.8092366264310482,
+          0.11973678028360081
+        ],
+        [
+          0.8702581911159385,
+          0.861098039265633
+        ],
+        [
+          0.22068423150281125,
+          0.9170951601966695
+        ]
+      ],
+      "sha256": "c9b4e86439374b1f9bebfd508c0f42699d8ab6dea4e017e660df82cf05d8e117"
+    },
+    {
+      "id": "held-out-cross-shadow-01",
+      "sequence": "held-out-cross-shadow",
+      "frameIndex": 1,
+      "split": "held-out",
+      "category": "cross-shadow",
+      "file": "held-out-cross-shadow-01.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.18444775405039243,
+          0.18873564661486442
+        ],
+        [
+          0.8109511989109844,
+          0.11948477693911481
+        ],
+        [
+          0.8682306707208289,
+          0.8613771873692493
+        ],
+        [
+          0.2183888803827995,
+          0.9115401535225769
+        ]
+      ],
+      "sha256": "61b63815209db05fa8a87398d6a0a90ded08c22257007ab0081cc09263a0bc90"
+    },
+    {
+      "id": "held-out-cross-shadow-02",
+      "sequence": "held-out-cross-shadow",
+      "frameIndex": 2,
+      "split": "held-out",
+      "category": "cross-shadow",
+      "file": "held-out-cross-shadow-02.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.17822600281262083,
+          0.18678106378420126
+        ],
+        [
+          0.8044459239726317,
+          0.11310767924189437
+        ],
+        [
+          0.8646680072713627,
+          0.8545852715338776
+        ],
+        [
+          0.21503433740306013,
+          0.9093358024260546
+        ]
+      ],
+      "sha256": "e7e078a543e0d41ec07a8cee13d74ce4b341c735320e9219d44a0612dbe8dfbb"
+    },
+    {
+      "id": "held-out-cross-shadow-03",
+      "sequence": "held-out-cross-shadow",
+      "frameIndex": 3,
+      "split": "held-out",
+      "category": "cross-shadow",
+      "file": "held-out-cross-shadow-03.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.17657065377419118,
+          0.19267866015212776
+        ],
+        [
+          0.802165961634959,
+          0.110099823987335
+        ],
+        [
+          0.8683125175905182,
+          0.8506784259352251
+        ],
+        [
+          0.21915350995609514,
+          0.9146686074475555
+        ]
+      ],
+      "sha256": "5c8a63e39abdf367c4b735b387fd331d52d2274d77974ff1b759629b175814d3"
+    },
+    {
+      "id": "held-out-cross-shadow-04",
+      "sequence": "held-out-cross-shadow",
+      "frameIndex": 4,
+      "split": "held-out",
+      "category": "cross-shadow",
+      "file": "held-out-cross-shadow-04.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.18085504599906507,
+          0.19855138763602614
+        ],
+        [
+          0.8062850658367449,
+          0.11377370181790901
+        ],
+        [
+          0.8738942399500339,
+          0.8541172096120837
+        ],
+        [
+          0.22486388440748367,
+          0.9203891380786685
+        ]
+      ],
+      "sha256": "06139c0c2fc4bbc64f8db7be48f98c31f3d52de9dba52b8c226b2c16317a58ca"
+    },
+    {
+      "id": "held-out-cross-shadow-05",
+      "sequence": "held-out-cross-shadow",
+      "frameIndex": 5,
+      "split": "held-out",
+      "category": "cross-shadow",
+      "file": "held-out-cross-shadow-05.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.18146883083441206,
+          0.1953732935023097
+        ],
+        [
+          0.8074284478928055,
+          0.11786306977155862
+        ],
+        [
+          0.8702031969107309,
+          0.8589637839467198
+        ],
+        [
+          0.22076491675738064,
+          0.9176948384094571
+        ]
+      ],
+      "sha256": "2b4e86236bb5157c4d03d6f97a7c3fdc9e85e60fdd8c0bfdb75e07322954d8f3"
+    },
+    {
+      "id": "held-out-cross-shadow-06",
+      "sequence": "held-out-cross-shadow",
+      "frameIndex": 6,
+      "split": "held-out",
+      "category": "cross-shadow",
+      "file": "held-out-cross-shadow-06.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.17886672982510282,
+          0.18697263308115675
+        ],
+        [
+          0.8053295158759316,
+          0.11707023805717257
+        ],
+        [
+          0.8630425132212156,
+          0.8589028539719704
+        ],
+        [
+          0.21323023430230756,
+          0.9097416225125987
+        ]
+      ],
+      "sha256": "ca5fd18c29aadd0e26d25ac40fbe1babd4d7bfe2525efd98b18931904ef99be3"
+    },
+    {
+      "id": "held-out-cross-shadow-07",
+      "sequence": "held-out-cross-shadow",
+      "frameIndex": 7,
+      "split": "held-out",
+      "category": "cross-shadow",
+      "file": "held-out-cross-shadow-07.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.1803618801464796,
+          0.18543532421907383
+        ],
+        [
+          0.8067219762992524,
+          0.11391400744562905
+        ],
+        [
+          0.8655121761146546,
+          0.8555960756952745
+        ],
+        [
+          0.2157749461618295,
+          0.9081141470282599
+        ]
+      ],
+      "sha256": "c743810184495e1b3f011c25ce2f80127b66c6a9d7057e99cd287e07ca3e00cd"
+    },
+    {
+      "id": "held-out-moving-penumbra-00",
+      "sequence": "held-out-moving-penumbra",
+      "frameIndex": 0,
+      "split": "held-out",
+      "category": "moving-penumbra",
+      "file": "held-out-moving-penumbra-00.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.18309679602904222,
+          0.19461180431442351
+        ],
+        [
+          0.8092366264310482,
+          0.11973678028360081
+        ],
+        [
+          0.8702581911159385,
+          0.861098039265633
+        ],
+        [
+          0.22068423150281125,
+          0.9170951601966695
+        ]
+      ],
+      "sha256": "85307d14b8c83826043843eab6e9e344b8e0fd794614cfaacd2819286c0b9eb7"
+    },
+    {
+      "id": "held-out-moving-penumbra-01",
+      "sequence": "held-out-moving-penumbra",
+      "frameIndex": 1,
+      "split": "held-out",
+      "category": "moving-penumbra",
+      "file": "held-out-moving-penumbra-01.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.18444775405039243,
+          0.18873564661486442
+        ],
+        [
+          0.8109511989109844,
+          0.11948477693911481
+        ],
+        [
+          0.8682306707208289,
+          0.8613771873692493
+        ],
+        [
+          0.2183888803827995,
+          0.9115401535225769
+        ]
+      ],
+      "sha256": "7d2c6e2b8d8dfd561fd4ad15d1c7b815480af16d46c80018fb34ca07ccaf11b7"
+    },
+    {
+      "id": "held-out-moving-penumbra-02",
+      "sequence": "held-out-moving-penumbra",
+      "frameIndex": 2,
+      "split": "held-out",
+      "category": "moving-penumbra",
+      "file": "held-out-moving-penumbra-02.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.17822600281262083,
+          0.18678106378420126
+        ],
+        [
+          0.8044459239726317,
+          0.11310767924189437
+        ],
+        [
+          0.8646680072713627,
+          0.8545852715338776
+        ],
+        [
+          0.21503433740306013,
+          0.9093358024260546
+        ]
+      ],
+      "sha256": "3e8b7dd938499def7f60e4ae5eb68d451502e4eee62e9275be9c1a699ddff907"
+    },
+    {
+      "id": "held-out-moving-penumbra-03",
+      "sequence": "held-out-moving-penumbra",
+      "frameIndex": 3,
+      "split": "held-out",
+      "category": "moving-penumbra",
+      "file": "held-out-moving-penumbra-03.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.17657065377419118,
+          0.19267866015212776
+        ],
+        [
+          0.802165961634959,
+          0.110099823987335
+        ],
+        [
+          0.8683125175905182,
+          0.8506784259352251
+        ],
+        [
+          0.21915350995609514,
+          0.9146686074475555
+        ]
+      ],
+      "sha256": "d27e855594e26874046bc4b6de9e321083a68f0f1a0823a03736b05f9c31c1fb"
+    },
+    {
+      "id": "held-out-moving-penumbra-04",
+      "sequence": "held-out-moving-penumbra",
+      "frameIndex": 4,
+      "split": "held-out",
+      "category": "moving-penumbra",
+      "file": "held-out-moving-penumbra-04.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.18085504599906507,
+          0.19855138763602614
+        ],
+        [
+          0.8062850658367449,
+          0.11377370181790901
+        ],
+        [
+          0.8738942399500339,
+          0.8541172096120837
+        ],
+        [
+          0.22486388440748367,
+          0.9203891380786685
+        ]
+      ],
+      "sha256": "43c75af778773cc224d24a6447fb35cefc32695efba341727945791f6a5c10e9"
+    },
+    {
+      "id": "held-out-moving-penumbra-05",
+      "sequence": "held-out-moving-penumbra",
+      "frameIndex": 5,
+      "split": "held-out",
+      "category": "moving-penumbra",
+      "file": "held-out-moving-penumbra-05.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.18146883083441206,
+          0.1953732935023097
+        ],
+        [
+          0.8074284478928055,
+          0.11786306977155862
+        ],
+        [
+          0.8702031969107309,
+          0.8589637839467198
+        ],
+        [
+          0.22076491675738064,
+          0.9176948384094571
+        ]
+      ],
+      "sha256": "389241e351706572212be1c944f960f4e7731d19295ced9d5fcb9a29e256eb9a"
+    },
+    {
+      "id": "held-out-moving-penumbra-06",
+      "sequence": "held-out-moving-penumbra",
+      "frameIndex": 6,
+      "split": "held-out",
+      "category": "moving-penumbra",
+      "file": "held-out-moving-penumbra-06.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.17886672982510282,
+          0.18697263308115675
+        ],
+        [
+          0.8053295158759316,
+          0.11707023805717257
+        ],
+        [
+          0.8630425132212156,
+          0.8589028539719704
+        ],
+        [
+          0.21323023430230756,
+          0.9097416225125987
+        ]
+      ],
+      "sha256": "92237a5f5963b78cf708546fbbeaf1779166ecc3fb3267e3043d293cc2f3f1d8"
+    },
+    {
+      "id": "held-out-moving-penumbra-07",
+      "sequence": "held-out-moving-penumbra",
+      "frameIndex": 7,
+      "split": "held-out",
+      "category": "moving-penumbra",
+      "file": "held-out-moving-penumbra-07.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.1803618801464796,
+          0.18543532421907383
+        ],
+        [
+          0.8067219762992524,
+          0.11391400744562905
+        ],
+        [
+          0.8655121761146546,
+          0.8555960756952745
+        ],
+        [
+          0.2157749461618295,
+          0.9081141470282599
+        ]
+      ],
+      "sha256": "2ecad772229fbb54b6d92d1b208eafa7b3674da097ede03bd863ec73bf282180"
+    },
+    {
+      "id": "held-out-textured-light-00",
+      "sequence": "held-out-textured-light",
+      "frameIndex": 0,
+      "split": "held-out",
+      "category": "textured-light",
+      "file": "held-out-textured-light-00.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.18309679602904222,
+          0.19461180431442351
+        ],
+        [
+          0.8092366264310482,
+          0.11973678028360081
+        ],
+        [
+          0.8702581911159385,
+          0.861098039265633
+        ],
+        [
+          0.22068423150281125,
+          0.9170951601966695
+        ]
+      ],
+      "sha256": "3b858bf7204c5b24a84045006280b55ed6e99c6f004e960f9a3f26dc7622c6fb"
+    },
+    {
+      "id": "held-out-textured-light-01",
+      "sequence": "held-out-textured-light",
+      "frameIndex": 1,
+      "split": "held-out",
+      "category": "textured-light",
+      "file": "held-out-textured-light-01.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.18444775405039243,
+          0.18873564661486442
+        ],
+        [
+          0.8109511989109844,
+          0.11948477693911481
+        ],
+        [
+          0.8682306707208289,
+          0.8613771873692493
+        ],
+        [
+          0.2183888803827995,
+          0.9115401535225769
+        ]
+      ],
+      "sha256": "66dce4480731e04525dbc30ee059ee723d5d90cf3c4cd3334d4019e3f32f5dbc"
+    },
+    {
+      "id": "held-out-textured-light-02",
+      "sequence": "held-out-textured-light",
+      "frameIndex": 2,
+      "split": "held-out",
+      "category": "textured-light",
+      "file": "held-out-textured-light-02.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.17822600281262083,
+          0.18678106378420126
+        ],
+        [
+          0.8044459239726317,
+          0.11310767924189437
+        ],
+        [
+          0.8646680072713627,
+          0.8545852715338776
+        ],
+        [
+          0.21503433740306013,
+          0.9093358024260546
+        ]
+      ],
+      "sha256": "2ee112546c530ed259a224f6249c7ed1ab29a8a7f1d5a450b89560c5aac6017b"
+    },
+    {
+      "id": "held-out-textured-light-03",
+      "sequence": "held-out-textured-light",
+      "frameIndex": 3,
+      "split": "held-out",
+      "category": "textured-light",
+      "file": "held-out-textured-light-03.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.17657065377419118,
+          0.19267866015212776
+        ],
+        [
+          0.802165961634959,
+          0.110099823987335
+        ],
+        [
+          0.8683125175905182,
+          0.8506784259352251
+        ],
+        [
+          0.21915350995609514,
+          0.9146686074475555
+        ]
+      ],
+      "sha256": "86d7e32e5c6199d231858d09a97bca83f9e5bb6d2b50fa137a91712dba3ccc3b"
+    },
+    {
+      "id": "held-out-textured-light-04",
+      "sequence": "held-out-textured-light",
+      "frameIndex": 4,
+      "split": "held-out",
+      "category": "textured-light",
+      "file": "held-out-textured-light-04.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.18085504599906507,
+          0.19855138763602614
+        ],
+        [
+          0.8062850658367449,
+          0.11377370181790901
+        ],
+        [
+          0.8738942399500339,
+          0.8541172096120837
+        ],
+        [
+          0.22486388440748367,
+          0.9203891380786685
+        ]
+      ],
+      "sha256": "92f6bf16c997c5f5ef0603469f9f40c4d41664a232e4e0ebfb88e7f8c4393f77"
+    },
+    {
+      "id": "held-out-textured-light-05",
+      "sequence": "held-out-textured-light",
+      "frameIndex": 5,
+      "split": "held-out",
+      "category": "textured-light",
+      "file": "held-out-textured-light-05.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.18146883083441206,
+          0.1953732935023097
+        ],
+        [
+          0.8074284478928055,
+          0.11786306977155862
+        ],
+        [
+          0.8702031969107309,
+          0.8589637839467198
+        ],
+        [
+          0.22076491675738064,
+          0.9176948384094571
+        ]
+      ],
+      "sha256": "38156b862d74347c3e516ca96638952dde690669e8117bd3bb498be248c27a95"
+    },
+    {
+      "id": "held-out-textured-light-06",
+      "sequence": "held-out-textured-light",
+      "frameIndex": 6,
+      "split": "held-out",
+      "category": "textured-light",
+      "file": "held-out-textured-light-06.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.17886672982510282,
+          0.18697263308115675
+        ],
+        [
+          0.8053295158759316,
+          0.11707023805717257
+        ],
+        [
+          0.8630425132212156,
+          0.8589028539719704
+        ],
+        [
+          0.21323023430230756,
+          0.9097416225125987
+        ]
+      ],
+      "sha256": "b2558b51456270f4f7756cca025351544d0efb4f11b92ed8db76f230bfda8a5b"
+    },
+    {
+      "id": "held-out-textured-light-07",
+      "sequence": "held-out-textured-light",
+      "frameIndex": 7,
+      "split": "held-out",
+      "category": "textured-light",
+      "file": "held-out-textured-light-07.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.1803618801464796,
+          0.18543532421907383
+        ],
+        [
+          0.8067219762992524,
+          0.11391400744562905
+        ],
+        [
+          0.8655121761146546,
+          0.8555960756952745
+        ],
+        [
+          0.2157749461618295,
+          0.9081141470282599
+        ]
+      ],
+      "sha256": "28f7d434066a2b54622faf4b7a29356950724205d5072a96e7a54811855f276a"
+    },
+    {
+      "id": "held-out-negative-shadow-00",
+      "sequence": "held-out-negative-shadow",
+      "frameIndex": 0,
+      "split": "held-out",
+      "category": "negative-shadow",
+      "file": "held-out-negative-shadow-00.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "3ae24b42a305099ff274b21bd8f6611e7c9e7c8db939311a5b1321c9df133b33"
+    },
+    {
+      "id": "held-out-negative-shadow-01",
+      "sequence": "held-out-negative-shadow",
+      "frameIndex": 1,
+      "split": "held-out",
+      "category": "negative-shadow",
+      "file": "held-out-negative-shadow-01.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "2bfa985b60aa2f7f96d2adea068c35a6c7a6fd084d92acb44d2e93a8604a229f"
+    },
+    {
+      "id": "held-out-negative-shadow-02",
+      "sequence": "held-out-negative-shadow",
+      "frameIndex": 2,
+      "split": "held-out",
+      "category": "negative-shadow",
+      "file": "held-out-negative-shadow-02.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "9f8bf86a4439f96e297af1fd7ccae42e34c875936d3f6e206927451d633add2b"
+    },
+    {
+      "id": "held-out-negative-shadow-03",
+      "sequence": "held-out-negative-shadow",
+      "frameIndex": 3,
+      "split": "held-out",
+      "category": "negative-shadow",
+      "file": "held-out-negative-shadow-03.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "2146fb3ced926f70bd21ba9e1e44c936fa76d784e0283f4dd0cd48c3d0db6a2e"
+    },
+    {
+      "id": "held-out-negative-shadow-04",
+      "sequence": "held-out-negative-shadow",
+      "frameIndex": 4,
+      "split": "held-out",
+      "category": "negative-shadow",
+      "file": "held-out-negative-shadow-04.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "5cf020cf6c804244b03fa4165a86196b9de322d2c8840b3e4d7fe8f4474f639f"
+    },
+    {
+      "id": "held-out-negative-shadow-05",
+      "sequence": "held-out-negative-shadow",
+      "frameIndex": 5,
+      "split": "held-out",
+      "category": "negative-shadow",
+      "file": "held-out-negative-shadow-05.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "b3b5d4db5a1602c8defc7c61329e10d0097009bd11a59f741c3b75e11963aa62"
+    },
+    {
+      "id": "held-out-negative-shadow-06",
+      "sequence": "held-out-negative-shadow",
+      "frameIndex": 6,
+      "split": "held-out",
+      "category": "negative-shadow",
+      "file": "held-out-negative-shadow-06.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "d489b66d170777343205479f695318d91550bbf63a8390693cadc5776708d48d"
+    },
+    {
+      "id": "held-out-negative-shadow-07",
+      "sequence": "held-out-negative-shadow",
+      "frameIndex": 7,
+      "split": "held-out",
+      "category": "negative-shadow",
+      "file": "held-out-negative-shadow-07.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "265ef7edfc91309bb822d44a3f1fa2648ccab8afcedc2fab8f2859e20537a75a"
+    },
+    {
+      "id": "held-out-negative-texture-00",
+      "sequence": "held-out-negative-texture",
+      "frameIndex": 0,
+      "split": "held-out",
+      "category": "negative-texture",
+      "file": "held-out-negative-texture-00.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "e1ac63903d744079f89461cc0ff1ecfd456ad58032c23150dee7f5ae143457fc"
+    },
+    {
+      "id": "held-out-negative-texture-01",
+      "sequence": "held-out-negative-texture",
+      "frameIndex": 1,
+      "split": "held-out",
+      "category": "negative-texture",
+      "file": "held-out-negative-texture-01.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "076b71e2585db324857a1fca0f058a2775a155805797c2d15dea3a63477566df"
+    },
+    {
+      "id": "held-out-negative-texture-02",
+      "sequence": "held-out-negative-texture",
+      "frameIndex": 2,
+      "split": "held-out",
+      "category": "negative-texture",
+      "file": "held-out-negative-texture-02.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "ebde3fab9d983b960ee097dd5c4d9b85125a301e91b7fd6c2f1f7663b8ed1fcc"
+    },
+    {
+      "id": "held-out-negative-texture-03",
+      "sequence": "held-out-negative-texture",
+      "frameIndex": 3,
+      "split": "held-out",
+      "category": "negative-texture",
+      "file": "held-out-negative-texture-03.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "b0ce30f5507c31ef7ef830bac7132f1003b45430ef5a0256b4b59c3969dffbb6"
+    },
+    {
+      "id": "held-out-negative-texture-04",
+      "sequence": "held-out-negative-texture",
+      "frameIndex": 4,
+      "split": "held-out",
+      "category": "negative-texture",
+      "file": "held-out-negative-texture-04.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "58e2ac5c5abe0a0b99ba07485e13f1e81563c081da25be7adec535d5139b4aab"
+    },
+    {
+      "id": "held-out-negative-texture-05",
+      "sequence": "held-out-negative-texture",
+      "frameIndex": 5,
+      "split": "held-out",
+      "category": "negative-texture",
+      "file": "held-out-negative-texture-05.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "27bfd3ae02003ee8ab5c6b6a041ff847323f926b70a3c64432b5ee665fa0b2d6"
+    },
+    {
+      "id": "held-out-negative-texture-06",
+      "sequence": "held-out-negative-texture",
+      "frameIndex": 6,
+      "split": "held-out",
+      "category": "negative-texture",
+      "file": "held-out-negative-texture-06.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "6f753dc79386fdf714fae978e9352371bc08fa186c8c5d50d19a5c01b25f388e"
+    },
+    {
+      "id": "held-out-negative-texture-07",
+      "sequence": "held-out-negative-texture",
+      "frameIndex": 7,
+      "split": "held-out",
+      "category": "negative-texture",
+      "file": "held-out-negative-texture-07.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "dda802d9a398322523f562f687ae41fa6d09412e84b8810cb3d08c307294cda4"
+    },
+    {
+      "id": "held-out-negative-circles-00",
+      "sequence": "held-out-negative-circles",
+      "frameIndex": 0,
+      "split": "held-out",
+      "category": "negative-circles",
+      "file": "held-out-negative-circles-00.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "c676968b04047f8490540704362a0ed574bf079ab31bde928395ae7d24c4b8a4"
+    },
+    {
+      "id": "held-out-negative-circles-01",
+      "sequence": "held-out-negative-circles",
+      "frameIndex": 1,
+      "split": "held-out",
+      "category": "negative-circles",
+      "file": "held-out-negative-circles-01.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "cd73c07c92fbf5c41da5e79cda612ae8aaba3d78101b6a64c780b48d7e4a7fc6"
+    },
+    {
+      "id": "held-out-negative-circles-02",
+      "sequence": "held-out-negative-circles",
+      "frameIndex": 2,
+      "split": "held-out",
+      "category": "negative-circles",
+      "file": "held-out-negative-circles-02.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "6b3b075dddfe59426d3993ac3f5f82c7f48d1dc567d15c444cbafa952e76fc82"
+    },
+    {
+      "id": "held-out-negative-circles-03",
+      "sequence": "held-out-negative-circles",
+      "frameIndex": 3,
+      "split": "held-out",
+      "category": "negative-circles",
+      "file": "held-out-negative-circles-03.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "f3c4e4e9a4e68c9cccf00cd0bc63cf5fae4db651c4634a83a591a26f7db49f83"
+    },
+    {
+      "id": "held-out-negative-circles-04",
+      "sequence": "held-out-negative-circles",
+      "frameIndex": 4,
+      "split": "held-out",
+      "category": "negative-circles",
+      "file": "held-out-negative-circles-04.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "01f46495a25d8cc4a9fafb1c333aa708aa3c4ded1c342add644e28fca967efcb"
+    },
+    {
+      "id": "held-out-negative-circles-05",
+      "sequence": "held-out-negative-circles",
+      "frameIndex": 5,
+      "split": "held-out",
+      "category": "negative-circles",
+      "file": "held-out-negative-circles-05.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "67e8ae63cb51679300701002e2d50dd137baab69f49edf0f2667d3e6f259fac3"
+    },
+    {
+      "id": "held-out-negative-circles-06",
+      "sequence": "held-out-negative-circles",
+      "frameIndex": 6,
+      "split": "held-out",
+      "category": "negative-circles",
+      "file": "held-out-negative-circles-06.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "cfcd891470dc596f0b5838c132bc1da27f99b8568a3a9989f25b39136036529e"
+    },
+    {
+      "id": "held-out-negative-circles-07",
+      "sequence": "held-out-negative-circles",
+      "frameIndex": 7,
+      "split": "held-out",
+      "category": "negative-circles",
+      "file": "held-out-negative-circles-07.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "5be6e5b198b4603de1b6dbd5a2574444406bdc83f19a67e13c6b1ad3b7f980b4"
+    }
+  ]
+}

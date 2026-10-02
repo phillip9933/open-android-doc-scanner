@@ -1,0 +1,5227 @@
+{
+  "schemaVersion": 1,
+  "modelSha256": "f0f2f52d7d79ff02d346c8f9d0c9e903407366aeea1747cdcff160c401e3e72a",
+  "coldStartIncludingStandardWarmupMillis": 354.9684,
+  "timingScope": "Whole detector including preprocessing, inference, postprocessing, document ROI quality and scene signature; fixture decoding excluded; warmed session",
+  "device": {
+    "api": 35,
+    "model": "sdk_gphone64_x86_64",
+    "abis": [
+      "x86_64",
+      "arm64-v8a"
+    ]
+  },
+  "cases": [
+    {
+      "mode": "Standard",
+      "cohort": "benchmark",
+      "id": "tuning-paper-dark",
+      "category": "paper-dark",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.94,
+      "corners": [
+        [
+          0.17412848374840206,
+          0.1411513258164649
+        ],
+        [
+          0.8263037037448102,
+          0.17465717593269026
+        ],
+        [
+          0.7949843157721493,
+          0.8674456937408404
+        ],
+        [
+          0.1991337893200675,
+          0.8423823612502307
+        ]
+      ],
+      "normalizedCornerError": 0.001009304154620927,
+      "polygonIoU": 0.9959973002173836,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 24.3348,
+      "sharpness": 3846.1754087694985,
+      "brightness": 0.921602443196248
+    },
+    {
+      "mode": "AI",
+      "cohort": "benchmark",
+      "id": "tuning-paper-dark",
+      "category": "paper-dark",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.25490077576618775,
+      "maskFraction": 0.06770833333333333,
+      "maskAgreement": 0.22596153846153846,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.352801658451791,
+          0.4486801918150117
+        ],
+        [
+          0.8211052820117056,
+          0.17525145611675716
+        ],
+        [
+          0.773806131420686,
+          0.8458139256916605
+        ],
+        [
+          0.18056400364615663,
+          0.824781675513571
+        ]
+      ],
+      "elapsedMillis": 38.7252,
+      "sharpness": 1777.947991666667,
+      "brightness": 0.4938112826797386
+    },
+    {
+      "mode": "Standard",
+      "cohort": "benchmark",
+      "id": "tuning-paper-light",
+      "category": "paper-light",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.94,
+      "corners": [
+        [
+          0.17412466604461255,
+          0.14115112967989443
+        ],
+        [
+          0.8263016611177783,
+          0.17465707099163594
+        ],
+        [
+          0.7949875925122452,
+          0.8674534517725333
+        ],
+        [
+          0.19913576785445736,
+          0.8423781256163113
+        ]
+      ],
+      "normalizedCornerError": 0.0010085392149111207,
+      "polygonIoU": 0.9959969729689125,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 13.031,
+      "sharpness": 3838.487752814499,
+      "brightness": 0.921598995633296
+    },
+    {
+      "mode": "AI",
+      "cohort": "benchmark",
+      "id": "tuning-paper-light",
+      "category": "paper-light",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.23863064282729873,
+      "maskFraction": 0.0859375,
+      "maskAgreement": 0.5748218527315915,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.36543091254231863,
+          0.44604837330609537
+        ],
+        [
+          0.8194676177943738,
+          0.17859987517435574
+        ],
+        [
+          0.6302523522719432,
+          0.7211015303886009
+        ],
+        [
+          0.3657843085731838,
+          0.6745413429913848
+        ]
+      ],
+      "elapsedMillis": 26.7989,
+      "sharpness": 1434.7479916666668,
+      "brightness": 0.8935377532679739
+    },
+    {
+      "mode": "Standard",
+      "cohort": "benchmark",
+      "id": "tuning-receipt",
+      "category": "receipt",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.9094598052938321,
+      "corners": [
+        [
+          0.34943630801011527,
+          0.06627040382155987
+        ],
+        [
+          0.6262064091980728,
+          0.1082213076092156
+        ],
+        [
+          0.5756923928807413,
+          0.9347789344543423
+        ],
+        [
+          0.3118908332647777,
+          0.8928308921316926
+        ]
+      ],
+      "normalizedCornerError": 7.01455109698711E-4,
+      "polygonIoU": 0.9949700998882864,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 11.221,
+      "sharpness": 4046.9372941590013,
+      "brightness": 0.9047726291323497
+    },
+    {
+      "mode": "AI",
+      "cohort": "benchmark",
+      "id": "tuning-receipt",
+      "category": "receipt",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.7766602151304198,
+      "corners": [
+        [
+          0.35206621119662773,
+          0.06775978255920016
+        ],
+        [
+          0.6311341946720979,
+          0.10886192389449416
+        ],
+        [
+          0.5750439063736502,
+          0.9312663607711884
+        ],
+        [
+          0.3071584459229125,
+          0.8926066567698142
+        ]
+      ],
+      "normalizedCornerError": 0.004177740851642868,
+      "polygonIoU": 0.9804093584078638,
+      "minimumCornerPeakProbability": 0.9011975674108078,
+      "maskFraction": 0.2552083333333333,
+      "maskAgreement": 0.8618090452261307,
+      "rejection": null,
+      "rawCorners": [
+        [
+          0.35206621119662773,
+          0.06775978255920016
+        ],
+        [
+          0.6311341946720979,
+          0.10886192389449416
+        ],
+        [
+          0.5750439063736502,
+          0.9312663607711884
+        ],
+        [
+          0.3071584459229125,
+          0.8926066567698142
+        ]
+      ],
+      "elapsedMillis": 25.1231,
+      "sharpness": 3926.482043087081,
+      "brightness": 0.9048456724048849
+    },
+    {
+      "mode": "Standard",
+      "cohort": "benchmark",
+      "id": "tuning-card",
+      "category": "card",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.94,
+      "corners": [
+        [
+          0.16162460093773118,
+          0.2917781036760658
+        ],
+        [
+          0.8324690911071655,
+          0.26689745928501324
+        ],
+        [
+          0.851233864616706,
+          0.7756251356689455
+        ],
+        [
+          0.18039581738035498,
+          0.8006804530116834
+        ]
+      ],
+      "normalizedCornerError": 8.438453772546895E-4,
+      "polygonIoU": 0.9962012573946438,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 9.0328,
+      "sharpness": 4209.533318663448,
+      "brightness": 0.9196675657448901
+    },
+    {
+      "mode": "AI",
+      "cohort": "benchmark",
+      "id": "tuning-card",
+      "category": "card",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.2933611350885141,
+      "maskFraction": 0.09016927083333333,
+      "maskAgreement": 0.6545961002785515,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.3640137670780755,
+          0.45027402166434527
+        ],
+        [
+          0.8324635891552662,
+          0.2639897853671355
+        ],
+        [
+          0.5883669002935302,
+          0.6805241705482991
+        ],
+        [
+          0.36768216223274625,
+          0.6790567688887633
+        ]
+      ],
+      "elapsedMillis": 27.7788,
+      "sharpness": 1594.1559833333336,
+      "brightness": 0.42166768790849674
+    },
+    {
+      "mode": "Standard",
+      "cohort": "benchmark",
+      "id": "tuning-colored-form",
+      "category": "colored-form",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.94,
+      "corners": [
+        [
+          0.17412848374840206,
+          0.1411513258164649
+        ],
+        [
+          0.8263037037448102,
+          0.17465717593269026
+        ],
+        [
+          0.7949843157721493,
+          0.8674456937408404
+        ],
+        [
+          0.1991337893200675,
+          0.8423823612502307
+        ]
+      ],
+      "normalizedCornerError": 0.001009304154620927,
+      "polygonIoU": 0.9959973002173836,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 10.5842,
+      "sharpness": 2822.176341281687,
+      "brightness": 0.8211113539230609
+    },
+    {
+      "mode": "AI",
+      "cohort": "benchmark",
+      "id": "tuning-colored-form",
+      "category": "colored-form",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.42212626620755456,
+      "maskFraction": 0.2662760416666667,
+      "maskAgreement": 0.5891016200294551,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.14541895035585847,
+          0.17189920140228362
+        ],
+        [
+          0.8244069340626783,
+          0.1777265897041623
+        ],
+        [
+          0.7913417779743269,
+          0.8659737535330438
+        ],
+        [
+          0.19903450268200784,
+          0.8427226455637479
+        ]
+      ],
+      "elapsedMillis": 26.0235,
+      "sharpness": 1292.079679166667,
+      "brightness": 0.44953724673202616
+    },
+    {
+      "mode": "Standard",
+      "cohort": "benchmark",
+      "id": "tuning-photo",
+      "category": "photo",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.94,
+      "corners": [
+        [
+          0.17436518776044094,
+          0.1411344441751422
+        ],
+        [
+          0.8265771922068184,
+          0.1746849677045084
+        ],
+        [
+          0.7951123980437247,
+          0.8674510812808628
+        ],
+        [
+          0.19940737289495325,
+          0.8423938690291063
+        ]
+      ],
+      "normalizedCornerError": 9.511401667344848E-4,
+      "polygonIoU": 0.9960759245699314,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 17.0213,
+      "sharpness": 2630.7641432242062,
+      "brightness": 0.4955248900255197
+    },
+    {
+      "mode": "AI",
+      "cohort": "benchmark",
+      "id": "tuning-photo",
+      "category": "photo",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.38809267195148467,
+      "maskFraction": 0.01953125,
+      "maskAgreement": 0.08345752608047691,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.38335927731270686,
+          0.2190907002213088
+        ],
+        [
+          0.8314982801003553,
+          0.17778096861852277
+        ],
+        [
+          0.7886492623369684,
+          0.9098616889983554
+        ],
+        [
+          0.2887305904249958,
+          0.3222164612679958
+        ]
+      ],
+      "elapsedMillis": 24.2439,
+      "sharpness": 1471.0119416666664,
+      "brightness": 0.3007386683006536
+    },
+    {
+      "mode": "Standard",
+      "cohort": "benchmark",
+      "id": "tuning-rotation",
+      "category": "rotation",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.9283914495486799,
+      "corners": [
+        [
+          0.3750932006329797,
+          0.09090648878548885
+        ],
+        [
+          0.8769879723194661,
+          0.45076180513917175
+        ],
+        [
+          0.613693437759699,
+          0.9357895872365445
+        ],
+        [
+          0.11803172651336191,
+          0.5842736656838037
+        ]
+      ],
+      "normalizedCornerError": 9.356198627302421E-4,
+      "polygonIoU": 0.9956097205873442,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 9.4758,
+      "sharpness": 5190.476553798675,
+      "brightness": 0.9156512806252829
+    },
+    {
+      "mode": "AI",
+      "cohort": "benchmark",
+      "id": "tuning-rotation",
+      "category": "rotation",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.39344300284609146,
+      "maskFraction": 0.1669921875,
+      "maskAgreement": 0.557980900409277,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.3653869555061242,
+          0.0965547390672246
+        ],
+        [
+          0.8649533991147133,
+          0.4243149471421477
+        ],
+        [
+          0.6312541220339428,
+          0.7052089447377164
+        ],
+        [
+          0.3188630542279253,
+          0.7239062625714969
+        ]
+      ],
+      "elapsedMillis": 22.1134,
+      "sharpness": 2083.2813249999995,
+      "brightness": 0.4164910212418301
+    },
+    {
+      "mode": "Standard",
+      "cohort": "benchmark",
+      "id": "tuning-perspective",
+      "category": "perspective",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.94,
+      "corners": [
+        [
+          0.3247523059508214,
+          0.09968696293965586
+        ],
+        [
+          0.8390291122627954,
+          0.2502755331989627
+        ],
+        [
+          0.9265880559420312,
+          0.8508983935393091
+        ],
+        [
+          0.13700514998116964,
+          0.9177775929512146
+        ]
+      ],
+      "normalizedCornerError": 6.940828560126225E-4,
+      "polygonIoU": 0.9968758455174376,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 9.0643,
+      "sharpness": 4663.644933494178,
+      "brightness": 0.9270258472344081
+    },
+    {
+      "mode": "AI",
+      "cohort": "benchmark",
+      "id": "tuning-perspective",
+      "category": "perspective",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.4021464711794671,
+      "corners": [
+        [
+          0.32131336456722404,
+          0.09587095252177973
+        ],
+        [
+          0.8354820394498823,
+          0.24455493915480328
+        ],
+        [
+          0.6328015367856484,
+          0.7181292178143694
+        ],
+        [
+          0.41175734713802753,
+          0.69764033799185
+        ]
+      ],
+      "normalizedCornerError": 0.17164345223720096,
+      "polygonIoU": 0.42991645380366245,
+      "minimumCornerPeakProbability": 0.607214539264361,
+      "maskFraction": 0.16861979166666666,
+      "maskAgreement": 0.6622807017543859,
+      "rejection": null,
+      "rawCorners": [
+        [
+          0.32131336456722404,
+          0.09587095252177973
+        ],
+        [
+          0.8354820394498823,
+          0.24455493915480328
+        ],
+        [
+          0.6328015367856484,
+          0.7181292178143694
+        ],
+        [
+          0.41175734713802753,
+          0.69764033799185
+        ]
+      ],
+      "elapsedMillis": 19.8016,
+      "sharpness": 1415.9205508215753,
+      "brightness": 0.9021963448531349
+    },
+    {
+      "mode": "Standard",
+      "cohort": "benchmark",
+      "id": "tuning-shadow",
+      "category": "shadow",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.94,
+      "corners": [
+        [
+          0.1744822839930258,
+          0.14130352527990922
+        ],
+        [
+          0.8264546214728372,
+          0.17491287660315244
+        ],
+        [
+          0.7951971171512056,
+          0.8674164032285985
+        ],
+        [
+          0.1992155184744719,
+          0.8424998223498771
+        ]
+      ],
+      "normalizedCornerError": 8.828691287229129E-4,
+      "polygonIoU": 0.9963790270530961,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 9.3324,
+      "sharpness": 2112.955087264485,
+      "brightness": 0.6981989234109376
+    },
+    {
+      "mode": "AI",
+      "cohort": "benchmark",
+      "id": "tuning-shadow",
+      "category": "shadow",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.22631867709970316,
+      "maskFraction": 0.08658854166666667,
+      "maskAgreement": 0.18763326226012794,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.1298055488834502,
+          0.1135619265039494
+        ],
+        [
+          0.8215599787375024,
+          0.17623920257563244
+        ],
+        [
+          0.7907086258003895,
+          0.8653824827384163
+        ],
+        [
+          0.19239198230273857,
+          0.843598636818391
+        ]
+      ],
+      "elapsedMillis": 20.4742,
+      "sharpness": 996.8818083333333,
+      "brightness": 0.37236565359477125
+    },
+    {
+      "mode": "Standard",
+      "cohort": "benchmark",
+      "id": "tuning-blur",
+      "category": "blur",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.94,
+      "corners": [
+        [
+          0.17433815737205535,
+          0.1420106108489931
+        ],
+        [
+          0.826340489426769,
+          0.17546094169251325
+        ],
+        [
+          0.7950576434474265,
+          0.8676473929097542
+        ],
+        [
+          0.1993212385762416,
+          0.8426014574125547
+        ]
+      ],
+      "normalizedCornerError": 7.10512873739737E-4,
+      "polygonIoU": 0.9972172063119277,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 10.3839,
+      "sharpness": 1.7019114454302575,
+      "brightness": 0.9216270046981959
+    },
+    {
+      "mode": "AI",
+      "cohort": "benchmark",
+      "id": "tuning-blur",
+      "category": "blur",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.3719167943930526,
+      "maskFraction": 0.08463541666666667,
+      "maskAgreement": 0.24153498871331827,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.3520615604122857,
+          0.4305303645323982
+        ],
+        [
+          0.8209587037277517,
+          0.174820436799209
+        ],
+        [
+          0.60324690692293,
+          0.4688244755987467
+        ],
+        [
+          0.17779650947487396,
+          0.8238127883840712
+        ]
+      ],
+      "elapsedMillis": 23.5697,
+      "sharpness": 0.6818166666666667,
+      "brightness": 0.49378000000000005
+    },
+    {
+      "mode": "Standard",
+      "cohort": "benchmark",
+      "id": "tuning-partial-boundary",
+      "category": "partial-boundary",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 23.2981,
+      "sharpness": 1728.1146583333336,
+      "brightness": 0.6115237009803922
+    },
+    {
+      "mode": "AI",
+      "cohort": "benchmark",
+      "id": "tuning-partial-boundary",
+      "category": "partial-boundary",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": 0.6425168020080758,
+      "maskFraction": 0.10514322916666667,
+      "maskAgreement": 0.40555555555555556,
+      "rejection": "mask-agreement",
+      "rawCorners": [
+        [
+          0.3527559890063225,
+          0.4260805897336175
+        ],
+        [
+          0.7876030584117334,
+          0.12025509439297537
+        ],
+        [
+          0.8222628322284392,
+          0.8664577184068301
+        ],
+        [
+          0.36783176962481834,
+          0.6794004991206951
+        ]
+      ],
+      "elapsedMillis": 20.8641,
+      "sharpness": 1728.1146583333336,
+      "brightness": 0.6115237009803922
+    },
+    {
+      "mode": "Standard",
+      "cohort": "benchmark",
+      "id": "tuning-negative",
+      "category": "negative",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 11.1022,
+      "sharpness": 84.43925901555554,
+      "brightness": 0.17148172385620916
+    },
+    {
+      "mode": "AI",
+      "cohort": "benchmark",
+      "id": "tuning-negative",
+      "category": "negative",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": 0.18316460987466052,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": "geometry",
+      "rawCorners": [
+        [
+          0.33544231590435125,
+          0.2192808588092713
+        ],
+        [
+          0.5363614152198503,
+          0.7328350652642622
+        ],
+        [
+          0.4454412880480889,
+          0.5524700639453458
+        ],
+        [
+          0.47886508224120405,
+          0.6342665761002678
+        ]
+      ],
+      "elapsedMillis": 20.235,
+      "sharpness": 84.43925901555554,
+      "brightness": 0.17148172385620916
+    },
+    {
+      "mode": "Standard",
+      "cohort": "challenge",
+      "id": "tuning-faint-light",
+      "category": "faint-light",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.8902088297112686,
+      "corners": [
+        [
+          0.19303052707813262,
+          0.107879809088493
+        ],
+        [
+          0.8325997896096164,
+          0.20824024872633057
+        ],
+        [
+          0.7762422367508075,
+          0.892904218673799
+        ],
+        [
+          0.14297030944904454,
+          0.7841756170095575
+        ]
+      ],
+      "normalizedCornerError": 7.819532865517363E-4,
+      "polygonIoU": 0.9969085832053455,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 10.118,
+      "sharpness": 560.1555183563835,
+      "brightness": 0.9338754970887678
+    },
+    {
+      "mode": "AI",
+      "cohort": "challenge",
+      "id": "tuning-faint-light",
+      "category": "faint-light",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.2853161780712533,
+      "maskFraction": 0.119140625,
+      "maskAgreement": 0.8839050131926122,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.3463659561961262,
+          0.257357403623383
+        ],
+        [
+          0.5864982580343115,
+          0.2389821276348633
+        ],
+        [
+          0.6321566597234906,
+          0.6781117299152788
+        ],
+        [
+          0.3516110333650542,
+          0.6757784585806162
+        ]
+      ],
+      "elapsedMillis": 18.9328,
+      "sharpness": 119.56743333333334,
+      "brightness": 0.9205627450980393
+    },
+    {
+      "mode": "Standard",
+      "cohort": "challenge",
+      "id": "tuning-gradient-shadow",
+      "category": "gradient-shadow",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.94,
+      "corners": [
+        [
+          0.19309750710975587,
+          0.10789937802729412
+        ],
+        [
+          0.8327182587004989,
+          0.20852977626026672
+        ],
+        [
+          0.7763514388110013,
+          0.893213750680193
+        ],
+        [
+          0.1429338011926073,
+          0.7842484743791789
+        ]
+      ],
+      "normalizedCornerError": 7.490775109586243E-4,
+      "polygonIoU": 0.9971913907383059,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 10.6234,
+      "sharpness": 998.1930743385593,
+      "brightness": 0.6616471043822565
+    },
+    {
+      "mode": "AI",
+      "cohort": "challenge",
+      "id": "tuning-gradient-shadow",
+      "category": "gradient-shadow",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.15096005685832614,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": "geometry",
+      "rawCorners": [
+        [
+          0.32178910630115853,
+          0.3217677974935041
+        ],
+        [
+          0.8323286506620343,
+          0.2161980644774757
+        ],
+        [
+          0.7736165785601362,
+          0.8893402889688663
+        ],
+        [
+          0.32023131366084223,
+          0.3023414265887176
+        ]
+      ],
+      "elapsedMillis": 16.8524,
+      "sharpness": 230.42209583333337,
+      "brightness": 0.6340443218954249
+    },
+    {
+      "mode": "Standard",
+      "cohort": "challenge",
+      "id": "tuning-narrow-receipt",
+      "category": "narrow-receipt",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.8103949781237167,
+      "corners": [
+        [
+          0.4510237241309576,
+          0.07605330188807663
+        ],
+        [
+          0.5068456065519147,
+          0.09729082312560189
+        ],
+        [
+          0.5506445843018344,
+          0.9341726931278642
+        ],
+        [
+          0.4848892712717669,
+          0.9176728422723598
+        ]
+      ],
+      "normalizedCornerError": 7.421653930532563E-4,
+      "polygonIoU": 0.9897614285775039,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 9.2354,
+      "sharpness": 2837.606588789094,
+      "brightness": 0.9055265209176567
+    },
+    {
+      "mode": "AI",
+      "cohort": "challenge",
+      "id": "tuning-narrow-receipt",
+      "category": "narrow-receipt",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.22152811476604317,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": "geometry",
+      "rawCorners": [
+        [
+          0.4595667545525737,
+          0.07428184961850404
+        ],
+        [
+          0.49294867543598697,
+          0.0917595529668082
+        ],
+        [
+          0.5511111565331935,
+          0.930496735216963
+        ],
+        [
+          0.5543638631294996,
+          0.9309178931647087
+        ]
+      ],
+      "elapsedMillis": 19.7548,
+      "sharpness": 193.50832500000004,
+      "brightness": 0.843082843137255
+    },
+    {
+      "mode": "Standard",
+      "cohort": "challenge",
+      "id": "tuning-clutter",
+      "category": "clutter",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.94,
+      "corners": [
+        [
+          0.19321293208209483,
+          0.10806259994927377
+        ],
+        [
+          0.8329844762060167,
+          0.2085930398656213
+        ],
+        [
+          0.7763083275661086,
+          0.8931570625221341
+        ],
+        [
+          0.14299918227226735,
+          0.784480063031322
+        ]
+      ],
+      "normalizedCornerError": 7.20879598635369E-4,
+      "polygonIoU": 0.9974224803173974,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 9.6745,
+      "sharpness": 1840.6262993726896,
+      "brightness": 0.937821110718278
+    },
+    {
+      "mode": "AI",
+      "cohort": "challenge",
+      "id": "tuning-clutter",
+      "category": "clutter",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.1734263751072286,
+      "maskFraction": 0.06640625,
+      "maskAgreement": 0.1871713985278654,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.20758773122953478,
+          0.09839842020454359
+        ],
+        [
+          0.836514970654749,
+          0.21990426806361732
+        ],
+        [
+          0.7577748329011941,
+          0.8672785745549972
+        ],
+        [
+          0.47499534430377965,
+          0.815722036593982
+        ]
+      ],
+      "elapsedMillis": 24.4752,
+      "sharpness": 824.7226645832251,
+      "brightness": 0.655108341503268
+    },
+    {
+      "mode": "Standard",
+      "cohort": "challenge",
+      "id": "tuning-strong-perspective",
+      "category": "strong-perspective",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.8691018579296793,
+      "corners": [
+        [
+          0.4194220371713494,
+          0.1842899930341954
+        ],
+        [
+          0.7011970364587848,
+          0.2762266547992685
+        ],
+        [
+          0.9196017724268909,
+          0.8173088290373051
+        ],
+        [
+          0.1252820463489906,
+          0.9174148577431294
+        ]
+      ],
+      "normalizedCornerError": 7.679286994769812E-4,
+      "polygonIoU": 0.9973482788474326,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 9.3404,
+      "sharpness": 2068.254094128661,
+      "brightness": 0.931423686872012
+    },
+    {
+      "mode": "AI",
+      "cohort": "challenge",
+      "id": "tuning-strong-perspective",
+      "category": "strong-perspective",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.10629008076282287,
+      "maskFraction": 0.16015625,
+      "maskAgreement": 0.6619433198380567,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.4118096995076188,
+          0.17851457137691384
+        ],
+        [
+          0.6980762364743968,
+          0.28422828069705947
+        ],
+        [
+          0.6014589374339945,
+          0.610574847544219
+        ],
+        [
+          0.355855988531025,
+          0.6350349970676806
+        ]
+      ],
+      "elapsedMillis": 24.6357,
+      "sharpness": 445.37730000000005,
+      "brightness": 0.8738307843137255
+    },
+    {
+      "mode": "Standard",
+      "cohort": "challenge",
+      "id": "tuning-soft-corners",
+      "category": "soft-corners",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.94,
+      "corners": [
+        [
+          0.19369942115573063,
+          0.10886609524408537
+        ],
+        [
+          0.8325365826414487,
+          0.20910983337827443
+        ],
+        [
+          0.7762409316971394,
+          0.8928535770989557
+        ],
+        [
+          0.1437231883546077,
+          0.7842546848030664
+        ]
+      ],
+      "normalizedCornerError": 4.4901256849914873E-4,
+      "polygonIoU": 0.9981223350262962,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 8.5885,
+      "sharpness": 1.131698770310901,
+      "brightness": 0.9376476860210838
+    },
+    {
+      "mode": "AI",
+      "cohort": "challenge",
+      "id": "tuning-soft-corners",
+      "category": "soft-corners",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.16466464057604782,
+      "maskFraction": 0.10904947916666667,
+      "maskAgreement": 0.16041666666666668,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.3367201103887763,
+          0.659663634317857
+        ],
+        [
+          0.8377775758891927,
+          0.1982337832884767
+        ],
+        [
+          0.6338933518929427,
+          0.6754902283501331
+        ],
+        [
+          0.3658234051533581,
+          0.675055967027971
+        ]
+      ],
+      "elapsedMillis": 22.8728,
+      "sharpness": 0.24404583333333335,
+      "brightness": 0.8847296323529412
+    },
+    {
+      "mode": "Standard",
+      "cohort": "challenge",
+      "id": "tuning-negative-circles",
+      "category": "negative-circles",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 10.5385,
+      "sharpness": 528.1012963499826,
+      "brightness": 0.7958787091503268
+    },
+    {
+      "mode": "AI",
+      "cohort": "challenge",
+      "id": "tuning-negative-circles",
+      "category": "negative-circles",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": 0.28293175093821266,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": "geometry",
+      "rawCorners": [
+        [
+          0.6041443707000923,
+          0.28079855906047907
+        ],
+        [
+          0.4605708971487526,
+          0.09300082943886967
+        ],
+        [
+          0.6951846768778257,
+          0.700080009565148
+        ],
+        [
+          0.5537650443626679,
+          0.9051874489039878
+        ]
+      ],
+      "elapsedMillis": 20.4502,
+      "sharpness": 528.1012963499826,
+      "brightness": 0.7958787091503268
+    },
+    {
+      "mode": "Standard",
+      "cohort": "challenge",
+      "id": "tuning-negative-crosshatch",
+      "category": "negative-crosshatch",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 35.2378,
+      "sharpness": 8637.606056347067,
+      "brightness": 0.7349796323529413
+    },
+    {
+      "mode": "AI",
+      "cohort": "challenge",
+      "id": "tuning-negative-crosshatch",
+      "category": "negative-crosshatch",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": 0.07783366833526757,
+      "maskFraction": 0.055013020833333336,
+      "maskAgreement": 0.06455862977602109,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.041357273825062456,
+          0.011244956071324882
+        ],
+        [
+          0.4907231724729571,
+          0.07629487092048985
+        ],
+        [
+          0.4451024074402904,
+          0.9073211094170087
+        ],
+        [
+          0.4006989405637172,
+          0.9059349495890182
+        ]
+      ],
+      "elapsedMillis": 19.0323,
+      "sharpness": 8637.606056347067,
+      "brightness": 0.7349796323529413
+    },
+    {
+      "mode": "Standard",
+      "cohort": "challenge",
+      "id": "tuning-partial",
+      "category": "partial",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 14.631,
+      "sharpness": 448.7343,
+      "brightness": 0.9046162254901962
+    },
+    {
+      "mode": "AI",
+      "cohort": "challenge",
+      "id": "tuning-partial",
+      "category": "partial",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": 0.36563543273749743,
+      "maskFraction": 0.14388020833333334,
+      "maskAgreement": 0.5074626865671642,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.3479103617339145,
+          0.2569983395424514
+        ],
+        [
+          0.8163559338959488,
+          0.13266815925530193
+        ],
+        [
+          0.7762793506842435,
+          0.9031146367679838
+        ],
+        [
+          0.3521611278178482,
+          0.5982531706278262
+        ]
+      ],
+      "elapsedMillis": 20.1488,
+      "sharpness": 448.7343,
+      "brightness": 0.9046162254901962
+    },
+    {
+      "mode": "Standard",
+      "cohort": "challenge",
+      "id": "tuning-negative-triangle",
+      "category": "negative-triangle",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 10.7892,
+      "sharpness": 14.551141666666666,
+      "brightness": 0.8790499264705883
+    },
+    {
+      "mode": "AI",
+      "cohort": "challenge",
+      "id": "tuning-negative-triangle",
+      "category": "negative-triangle",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": 0.1420186568433811,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": "geometry",
+      "rawCorners": [
+        [
+          0.39834605651458793,
+          0.2812566534082699
+        ],
+        [
+          0.3832063050449991,
+          0.26136408290728724
+        ],
+        [
+          0.5079571213548446,
+          0.8009566983836298
+        ],
+        [
+          0.430622723620164,
+          0.8411562572024295
+        ]
+      ],
+      "elapsedMillis": 16.1,
+      "sharpness": 14.551141666666666,
+      "brightness": 0.8790499264705883
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-light-shadow-00",
+      "category": "light-shadow",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.88347429672082,
+      "corners": [
+        [
+          0.20220891423228482,
+          0.13867977399790546
+        ],
+        [
+          0.8377226591683501,
+          0.17460400942698115
+        ],
+        [
+          0.7906908119435819,
+          0.9220210918160117
+        ],
+        [
+          0.14790011287004526,
+          0.8487629356633734
+        ]
+      ],
+      "normalizedCornerError": 8.682681472758898E-4,
+      "polygonIoU": 0.9964836003318807,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 8.9434,
+      "sharpness": 163.4303721725535,
+      "brightness": 0.6274509704195821
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-light-shadow-00",
+      "category": "light-shadow",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.2770641430875598,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": "geometry",
+      "rawCorners": [
+        [
+          0.5741069983621676,
+          0.2372331899457051
+        ],
+        [
+          0.5520106227566683,
+          0.2591026339645195
+        ],
+        [
+          0.6296332334971727,
+          0.738955755769085
+        ],
+        [
+          0.3362679009521745,
+          0.7428410293869064
+        ]
+      ],
+      "elapsedMillis": 19.0748,
+      "sharpness": 156.6078686607255,
+      "brightness": 0.619338720383987
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-light-shadow-01",
+      "category": "light-shadow",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.880630680834799,
+      "corners": [
+        [
+          0.20852036280251224,
+          0.13267676795251446
+        ],
+        [
+          0.8433599705919216,
+          0.1757557872460479
+        ],
+        [
+          0.7917620908270641,
+          0.9229673992554182
+        ],
+        [
+          0.14907599574772284,
+          0.8418914832918611
+        ]
+      ],
+      "normalizedCornerError": 7.483629611400012E-4,
+      "polygonIoU": 0.9973933784458062,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 6.9646,
+      "sharpness": 155.47436994316064,
+      "brightness": 0.6123705222838788
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-light-shadow-01",
+      "category": "light-shadow",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.296638584878654,
+      "maskFraction": 0.1103515625,
+      "maskAgreement": 0.6470588235294118,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.3522479952086532,
+          0.24090005535512024
+        ],
+        [
+          0.5822864863847323,
+          0.24323833770325712
+        ],
+        [
+          0.6621530783178716,
+          0.36183027316356764
+        ],
+        [
+          0.33718696479675514,
+          0.7380854872754523
+        ]
+      ],
+      "elapsedMillis": 17.5791,
+      "sharpness": 177.2597942382389,
+      "brightness": 0.6070570874183007
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-light-shadow-02",
+      "category": "light-shadow",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.8805897224834387,
+      "corners": [
+        [
+          0.20403523536838772,
+          0.12933454069780279
+        ],
+        [
+          0.8392085482511705,
+          0.17090539538765004
+        ],
+        [
+          0.7883500135584014,
+          0.9177147140116644
+        ],
+        [
+          0.1457314143964999,
+          0.8384519650045263
+        ]
+      ],
+      "normalizedCornerError": 7.833932975067891E-4,
+      "polygonIoU": 0.9972621776966101,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 6.6583,
+      "sharpness": 149.9509302506035,
+      "brightness": 0.6050236108619673
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-light-shadow-02",
+      "category": "light-shadow",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.1498381138940239,
+      "maskFraction": 0.10416666666666667,
+      "maskAgreement": 0.6570048309178744,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.35198217291378936,
+          0.23718257683513522
+        ],
+        [
+          0.5404863416827744,
+          0.2570560260781567
+        ],
+        [
+          0.6303083041080014,
+          0.7412526853594792
+        ],
+        [
+          0.335248854301115,
+          0.7382850613040383
+        ]
+      ],
+      "elapsedMillis": 19.8477,
+      "sharpness": 224.42361198929683,
+      "brightness": 0.605114825878268
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-light-shadow-03",
+      "category": "light-shadow",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 8.6011,
+      "sharpness": 247.52659674881835,
+      "brightness": 0.6063078916462419
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-light-shadow-03",
+      "category": "light-shadow",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.20586448220900155,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": "geometry",
+      "rawCorners": [
+        [
+          0.5754961090088287,
+          0.22230272146996888
+        ],
+        [
+          0.5361664469073538,
+          0.2563925656514769
+        ],
+        [
+          0.6306359006347275,
+          0.698102495778507
+        ],
+        [
+          0.3339782811752172,
+          0.7390526057337613
+        ]
+      ],
+      "elapsedMillis": 20.6449,
+      "sharpness": 247.52659674881835,
+      "brightness": 0.6063078916462419
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-light-shadow-04",
+      "category": "light-shadow",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.8806025930409395,
+      "corners": [
+        [
+          0.2007246826529612,
+          0.14206425036552525
+        ],
+        [
+          0.8365573794906052,
+          0.16929563275845289
+        ],
+        [
+          0.7947976803733747,
+          0.917678265429817
+        ],
+        [
+          0.15104483534977886,
+          0.8523639207263132
+        ]
+      ],
+      "normalizedCornerError": 8.810681197485012E-4,
+      "polygonIoU": 0.9970292684946284,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 7.5097,
+      "sharpness": 159.27509433326057,
+      "brightness": 0.6188523320111925
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-light-shadow-04",
+      "category": "light-shadow",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.3185984150660904,
+      "maskFraction": 0.12044270833333333,
+      "maskAgreement": 0.7518072289156627,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.35283800605270516,
+          0.26015662147625257
+        ],
+        [
+          0.554401416491405,
+          0.2584310931174842
+        ],
+        [
+          0.6299066252497372,
+          0.6981373912311365
+        ],
+        [
+          0.3362893939075999,
+          0.740674283011661
+        ]
+      ],
+      "elapsedMillis": 18.5402,
+      "sharpness": 230.50145151891712,
+      "brightness": 0.6131394122753269
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-light-shadow-05",
+      "category": "light-shadow",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.86,
+      "corners": [
+        [
+          0.20501404029013454,
+          0.13951027898361862
+        ],
+        [
+          0.840034668887256,
+          0.1727240288524785
+        ],
+        [
+          0.7953897655430248,
+          0.9205384995640558
+        ],
+        [
+          0.15220471189275983,
+          0.8495991986455662
+        ]
+      ],
+      "normalizedCornerError": 7.56581214331485E-4,
+      "polygonIoU": 0.99704608252341,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 14.2512,
+      "sharpness": 142.27514166492998,
+      "brightness": 0.633515726579821
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-light-shadow-05",
+      "category": "light-shadow",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.1594953573388295,
+      "maskFraction": 0.14095052083333334,
+      "maskAgreement": 0.3550185873605948,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.5741015068590148,
+          0.2371406644224845
+        ],
+        [
+          0.6636658392007546,
+          0.38225642217236433
+        ],
+        [
+          0.6443538206034626,
+          0.7396617478508261
+        ],
+        [
+          0.33916740374014215,
+          0.7430834019170458
+        ]
+      ],
+      "elapsedMillis": 16.8984,
+      "sharpness": 233.17479605674745,
+      "brightness": 0.6210185866013073
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-light-shadow-06",
+      "category": "light-shadow",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 10.0437,
+      "sharpness": 269.3469593060705,
+      "brightness": 0.6308265293096406
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-light-shadow-06",
+      "category": "light-shadow",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.31047685615063514,
+      "maskFraction": 0.1181640625,
+      "maskAgreement": 0.4247191011235955,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.5747664063606719,
+          0.23737610340464252
+        ],
+        [
+          0.662679089593034,
+          0.36354750739955993
+        ],
+        [
+          0.6169711660270919,
+          0.7208464582274795
+        ],
+        [
+          0.33481291193817525,
+          0.7413171927593956
+        ]
+      ],
+      "elapsedMillis": 21.3366,
+      "sharpness": 269.3469593060705,
+      "brightness": 0.6308265293096406
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-light-shadow-07",
+      "category": "light-shadow",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.8860419238605054,
+      "corners": [
+        [
+          0.20217420311362239,
+          0.12830573975868004
+        ],
+        [
+          0.8367944009102917,
+          0.17133703300583228
+        ],
+        [
+          0.7849790720870983,
+          0.9184535737178895
+        ],
+        [
+          0.14234271089115172,
+          0.8375368073807494
+        ]
+      ],
+      "normalizedCornerError": 6.939992582087639E-4,
+      "polygonIoU": 0.9976125471001296,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 6.8922,
+      "sharpness": 153.965003406928,
+      "brightness": 0.6469681963203943
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-light-shadow-07",
+      "category": "light-shadow",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.20058788052147053,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": "geometry",
+      "rawCorners": [
+        [
+          0.5740391054632914,
+          0.2214570578859091
+        ],
+        [
+          0.5374684199750294,
+          0.2227265945218062
+        ],
+        [
+          0.6328308244596413,
+          0.7211599934669338
+        ],
+        [
+          0.3340163224211469,
+          0.7388698274502313
+        ]
+      ],
+      "elapsedMillis": 18.8888,
+      "sharpness": 266.40698385822515,
+      "brightness": 0.6313157679738562
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-cross-shadow-00",
+      "category": "cross-shadow",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.9107778995686374,
+      "corners": [
+        [
+          0.2028381916844288,
+          0.1387888670396889
+        ],
+        [
+          0.8373674366426213,
+          0.1746093654971776
+        ],
+        [
+          0.7909839014598421,
+          0.9219984065427315
+        ],
+        [
+          0.14784720471259952,
+          0.8488062175504422
+        ]
+      ],
+      "normalizedCornerError": 7.427489585999773E-4,
+      "polygonIoU": 0.9970400430894226,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 7.5171,
+      "sharpness": 150.58305178752303,
+      "brightness": 0.5396108159338182
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-cross-shadow-00",
+      "category": "cross-shadow",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.07897673593039006,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": "geometry",
+      "rawCorners": [
+        [
+          0.5760731411196964,
+          0.22520382357706867
+        ],
+        [
+          0.5388035148885807,
+          0.2587861039815118
+        ],
+        [
+          0.6327185499425316,
+          0.7375935410237106
+        ],
+        [
+          0.34938556462191944,
+          0.7599088676478396
+        ]
+      ],
+      "elapsedMillis": 19.0075,
+      "sharpness": 105.29016146968205,
+      "brightness": 0.515496808619281
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-cross-shadow-01",
+      "category": "cross-shadow",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.910824173040975,
+      "corners": [
+        [
+          0.20853042530525975,
+          0.13280982091458474
+        ],
+        [
+          0.8436447472732408,
+          0.17567995303246797
+        ],
+        [
+          0.7915315683683529,
+          0.9229490660914618
+        ],
+        [
+          0.1488719378811214,
+          0.841879205603644
+        ]
+      ],
+      "normalizedCornerError": 8.057189461803172E-4,
+      "polygonIoU": 0.997238762309723,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 7.2907,
+      "sharpness": 142.03597768677494,
+      "brightness": 0.5298908771773045
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-cross-shadow-01",
+      "category": "cross-shadow",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.16513469734660188,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": "geometry",
+      "rawCorners": [
+        [
+          0.3336256817690812,
+          0.7001000449383485
+        ],
+        [
+          0.5534398008772637,
+          0.25881104502038754
+        ],
+        [
+          0.6308433828383757,
+          0.7413837234270618
+        ],
+        [
+          0.3362229897596801,
+          0.6978007088499569
+        ]
+      ],
+      "elapsedMillis": 20.6744,
+      "sharpness": 124.46392890608048,
+      "brightness": 0.508417049632353
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-cross-shadow-02",
+      "category": "cross-shadow",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.86,
+      "corners": [
+        [
+          0.2041118265503475,
+          0.12929755526057168
+        ],
+        [
+          0.8392292082786523,
+          0.17053635928574004
+        ],
+        [
+          0.7883547427441762,
+          0.9174646550030401
+        ],
+        [
+          0.1457544312058222,
+          0.8387512593782084
+        ]
+      ],
+      "normalizedCornerError": 7.499024131248032E-4,
+      "polygonIoU": 0.9971946963057652,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 11.7034,
+      "sharpness": 137.79155839097345,
+      "brightness": 0.5252132252423629
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-cross-shadow-02",
+      "category": "cross-shadow",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.13885574099516737,
+      "maskFraction": 0.13834635416666666,
+      "maskAgreement": 0.09090909090909091,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.32359390075663796,
+          0.7033615759492484
+        ],
+        [
+          0.820612903472121,
+          0.21998200364596832
+        ],
+        [
+          0.6364495424313659,
+          0.4863455363976507
+        ],
+        [
+          0.35076231752587195,
+          0.7402463846645481
+        ]
+      ],
+      "elapsedMillis": 17.4061,
+      "sharpness": 192.7701771616512,
+      "brightness": 0.5082910794526144
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-cross-shadow-03",
+      "category": "cross-shadow",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.9109803173298364,
+      "corners": [
+        [
+          0.19793502500661278,
+          0.13475203581477033
+        ],
+        [
+          0.83344532126912,
+          0.16720472037542092
+        ],
+        [
+          0.7891099851369192,
+          0.9148580035850487
+        ],
+        [
+          0.1456743615952002,
+          0.8451863390190513
+        ]
+      ],
+      "normalizedCornerError": 8.214974843324919E-4,
+      "polygonIoU": 0.997086354732144,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 7.7082,
+      "sharpness": 139.364640717431,
+      "brightness": 0.5269057992167522
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-cross-shadow-03",
+      "category": "cross-shadow",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.07788771008990115,
+      "maskFraction": 0.13151041666666666,
+      "maskAgreement": 0.28174603174603174,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.5734928871411358,
+          0.22287204195246338
+        ],
+        [
+          0.8179611689067907,
+          0.219517094233976
+        ],
+        [
+          0.6353030866966963,
+          0.4885172225920358
+        ],
+        [
+          0.3343583606949934,
+          0.7422827768044354
+        ]
+      ],
+      "elapsedMillis": 18.7612,
+      "sharpness": 203.67284135427477,
+      "brightness": 0.5088350311478759
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-cross-shadow-04",
+      "category": "cross-shadow",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.9164043477247168,
+      "corners": [
+        [
+          0.20078334732554787,
+          0.14188169812732354
+        ],
+        [
+          0.8364619320953919,
+          0.16930458519051375
+        ],
+        [
+          0.794800225013839,
+          0.9176739273328586
+        ],
+        [
+          0.15110319409121914,
+          0.8524323166902258
+        ]
+      ],
+      "normalizedCornerError": 8.330870912016305E-4,
+      "polygonIoU": 0.9970888666670082,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 8.5062,
+      "sharpness": 147.03240425684515,
+      "brightness": 0.5343059274814019
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-cross-shadow-04",
+      "category": "cross-shadow",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.1767390291755688,
+      "maskFraction": 0.13020833333333334,
+      "maskAgreement": 0.6502242152466368,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.33325017784670924,
+          0.34125214060605275
+        ],
+        [
+          0.5531137813486574,
+          0.2609017936264626
+        ],
+        [
+          0.6177043364465823,
+          0.7200495486043038
+        ],
+        [
+          0.3381028622086144,
+          0.7415008371433643
+        ]
+      ],
+      "elapsedMillis": 17.9086,
+      "sharpness": 161.23642600198326,
+      "brightness": 0.511846430759804
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-cross-shadow-05",
+      "category": "cross-shadow",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.913859715230382,
+      "corners": [
+        [
+          0.20470355390781225,
+          0.13940779948942517
+        ],
+        [
+          0.8401988950734864,
+          0.1733235133854633
+        ],
+        [
+          0.7955480410570778,
+          0.9214460863477869
+        ],
+        [
+          0.15230006914029248,
+          0.849275525042173
+        ]
+      ],
+      "normalizedCornerError": 0.0010699059035338598,
+      "polygonIoU": 0.9965485890343354,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 9.4917,
+      "sharpness": 153.9765313576784,
+      "brightness": 0.5435045660727246
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-cross-shadow-05",
+      "category": "cross-shadow",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.0878130700912863,
+      "maskFraction": 0.14388020833333334,
+      "maskAgreement": 0.2026359143327842,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.33290520708564575,
+          0.7005227804788698
+        ],
+        [
+          0.8212086974854765,
+          0.21977558339166783
+        ],
+        [
+          0.6451623513072876,
+          0.7396143987126802
+        ],
+        [
+          0.35085042438493796,
+          0.7578585172774113
+        ]
+      ],
+      "elapsedMillis": 22.6902,
+      "sharpness": 134.29038501145044,
+      "brightness": 0.5156964231004901
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-cross-shadow-06",
+      "category": "cross-shadow",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.86,
+      "corners": [
+        [
+          0.2033681864623812,
+          0.1312752458322557
+        ],
+        [
+          0.8382683679076597,
+          0.1728824734416664
+        ],
+        [
+          0.7877051355039705,
+          0.9202601924351516
+        ],
+        [
+          0.14478076366913398,
+          0.840312553914006
+        ]
+      ],
+      "normalizedCornerError": 8.095072968114312E-4,
+      "polygonIoU": 0.9971551867588172,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 11.8457,
+      "sharpness": 161.50285226245478,
+      "brightness": 0.5505718329232088
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-cross-shadow-06",
+      "category": "cross-shadow",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.1563862242094269,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": "geometry",
+      "rawCorners": [
+        [
+          0.3203172980334642,
+          0.7330918508676212
+        ],
+        [
+          0.6177146689948095,
+          0.6558244819156872
+        ],
+        [
+          0.6275402860905164,
+          0.6777962605157635
+        ],
+        [
+          0.32368594743308243,
+          0.6803054451999463
+        ]
+      ],
+      "elapsedMillis": 19.2696,
+      "sharpness": 191.45366955048246,
+      "brightness": 0.5221005923202615
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-cross-shadow-07",
+      "category": "cross-shadow",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.9163577501038738,
+      "corners": [
+        [
+          0.20203588226917701,
+          0.12825456753207065
+        ],
+        [
+          0.8368393420371485,
+          0.1712205165856239
+        ],
+        [
+          0.7851464757472338,
+          0.9185223292907351
+        ],
+        [
+          0.14224584193719822,
+          0.8375012425156374
+        ]
+      ],
+      "normalizedCornerError": 8.138869888550561E-4,
+      "polygonIoU": 0.9971272881056177,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 7.1603,
+      "sharpness": 163.79703366167567,
+      "brightness": 0.5522622548705618
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-cross-shadow-07",
+      "category": "cross-shadow",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.11002968755736961,
+      "maskFraction": 0.16634114583333334,
+      "maskAgreement": 0.12612612612612611,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.32283362146244754,
+          0.7011830262154879
+        ],
+        [
+          0.8355153862167932,
+          0.17682530598213905
+        ],
+        [
+          0.6354086007609898,
+          0.48717268701582833
+        ],
+        [
+          0.35030919932420734,
+          0.7416592243526382
+        ]
+      ],
+      "elapsedMillis": 16.9103,
+      "sharpness": 193.01117396223282,
+      "brightness": 0.5222640676062092
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-moving-penumbra-00",
+      "category": "moving-penumbra",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.94,
+      "corners": [
+        [
+          0.20241877605800587,
+          0.13877138660346527
+        ],
+        [
+          0.837840177763568,
+          0.17443058719686358
+        ],
+        [
+          0.7908639331841373,
+          0.9220529435760156
+        ],
+        [
+          0.1476133802150355,
+          0.8487907876463399
+        ]
+      ],
+      "normalizedCornerError": 9.536529506097649E-4,
+      "polygonIoU": 0.9961906367574822,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 6.7522,
+      "sharpness": 132.8838716129431,
+      "brightness": 0.6511125866508221
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-moving-penumbra-00",
+      "category": "moving-penumbra",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.09020440190191216,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": "geometry",
+      "rawCorners": [
+        [
+          0.34898173054419623,
+          0.7600978491735556
+        ],
+        [
+          0.8365551977020587,
+          0.17683144541365667
+        ],
+        [
+          0.7873797720453223,
+          0.9209318075833298
+        ],
+        [
+          0.3491119685073023,
+          0.7398048480974285
+        ]
+      ],
+      "elapsedMillis": 21.5666,
+      "sharpness": 156.02421503998437,
+      "brightness": 0.5717470001021243
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-moving-penumbra-01",
+      "category": "moving-penumbra",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.94,
+      "corners": [
+        [
+          0.2085293797817293,
+          0.13300906688660546
+        ],
+        [
+          0.8437192297509192,
+          0.17567019476621848
+        ],
+        [
+          0.7915755669828485,
+          0.9229715269394431
+        ],
+        [
+          0.14903752279355556,
+          0.8419511378290798
+        ]
+      ],
+      "normalizedCornerError": 7.916146374104116E-4,
+      "polygonIoU": 0.9973401551054102,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 15.9231,
+      "sharpness": 127.42258849894347,
+      "brightness": 0.6331824129909571
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-moving-penumbra-01",
+      "category": "moving-penumbra",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.06743010568274423,
+      "maskFraction": 0.09765625,
+      "maskAgreement": 0.32540675844806005,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.6029155532639969,
+          0.13656018368677234
+        ],
+        [
+          0.8474726176656053,
+          0.17750228620768316
+        ],
+        [
+          0.7878769997732683,
+          0.9217257969974838
+        ],
+        [
+          0.35131435381088244,
+          0.7390189256405336
+        ]
+      ],
+      "elapsedMillis": 37.5105,
+      "sharpness": 173.39382469681635,
+      "brightness": 0.5589357383578432
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-moving-penumbra-02",
+      "category": "moving-penumbra",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.94,
+      "corners": [
+        [
+          0.20419519632009028,
+          0.129306672548543
+        ],
+        [
+          0.8392948190894992,
+          0.17092969171829084
+        ],
+        [
+          0.7884687347480245,
+          0.9178052004454618
+        ],
+        [
+          0.14568101594015329,
+          0.8390190512622517
+        ]
+      ],
+      "normalizedCornerError": 7.852384153903577E-4,
+      "polygonIoU": 0.9972931268618709,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 11.3709,
+      "sharpness": 124.47837531960312,
+      "brightness": 0.6240961855317749
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-moving-penumbra-02",
+      "category": "moving-penumbra",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.07740255181970834,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": "geometry",
+      "rawCorners": [
+        [
+          0.33782454681369123,
+          0.7805505290120162
+        ],
+        [
+          0.8379227053369895,
+          0.17583377678083587
+        ],
+        [
+          0.7860167835748721,
+          0.919590021338028
+        ],
+        [
+          0.35241049441230726,
+          0.7815056403158153
+        ]
+      ],
+      "elapsedMillis": 19.0538,
+      "sharpness": 227.8139098712497,
+      "brightness": 0.5559530356413399
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-moving-penumbra-03",
+      "category": "moving-penumbra",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 9.2224,
+      "sharpness": 255.07285181044475,
+      "brightness": 0.5576197661356209
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-moving-penumbra-03",
+      "category": "moving-penumbra",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.06707930506033467,
+      "maskFraction": 0.07421875,
+      "maskAgreement": 0.2759526938239159,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.6007458133609996,
+          0.13862302968692986
+        ],
+        [
+          0.8335127630515331,
+          0.17304438805939207
+        ],
+        [
+          0.7849126248208215,
+          0.910213982152002
+        ],
+        [
+          0.3368166762107851,
+          0.7198514260958775
+        ]
+      ],
+      "elapsedMillis": 22.2904,
+      "sharpness": 255.07285181044475,
+      "brightness": 0.5576197661356209
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-moving-penumbra-04",
+      "category": "moving-penumbra",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.94,
+      "corners": [
+        [
+          0.2008957218898289,
+          0.14207384412235546
+        ],
+        [
+          0.8364255682928403,
+          0.16934910025436598
+        ],
+        [
+          0.7948381482403635,
+          0.9176070373793627
+        ],
+        [
+          0.1511088437416199,
+          0.852445130604973
+        ]
+      ],
+      "normalizedCornerError": 7.886720917656412E-4,
+      "polygonIoU": 0.9973776456109993,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 6.8808,
+      "sharpness": 127.56405264851222,
+      "brightness": 0.6416026322327926
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-moving-penumbra-04",
+      "category": "moving-penumbra",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.08372611923195393,
+      "maskFraction": 0.07454427083333333,
+      "maskAgreement": 0.2760416666666667,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.5857956887488244,
+          0.13934167501497516
+        ],
+        [
+          0.8359252466305711,
+          0.1738751479204125
+        ],
+        [
+          0.7909853231356623,
+          0.910044835879205
+        ],
+        [
+          0.3505413688791165,
+          0.7405102281228063
+        ]
+      ],
+      "elapsedMillis": 18.448,
+      "sharpness": 203.02910475154457,
+      "brightness": 0.5650653977736928
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-moving-penumbra-05",
+      "category": "moving-penumbra",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.94,
+      "corners": [
+        [
+          0.2048124713445558,
+          0.13920614492150854
+        ],
+        [
+          0.8402165867776351,
+          0.17365575628631108
+        ],
+        [
+          0.7955878940543212,
+          0.9212532930167528
+        ],
+        [
+          0.1522879538484636,
+          0.8496774301719879
+        ]
+      ],
+      "normalizedCornerError": 0.0010413105130132002,
+      "polygonIoU": 0.9966164732487109,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 6.3523,
+      "sharpness": 132.32485200770694,
+      "brightness": 0.6602343569741103
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-moving-penumbra-05",
+      "category": "moving-penumbra",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.1411988692439246,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": "geometry",
+      "rawCorners": [
+        [
+          0.3506132973074637,
+          0.7598753006031145
+        ],
+        [
+          0.8375781987469545,
+          0.17460946000315367
+        ],
+        [
+          0.7916935274428915,
+          0.9140664364984151
+        ],
+        [
+          0.35107934551154635,
+          0.7403465407580004
+        ]
+      ],
+      "elapsedMillis": 22.6205,
+      "sharpness": 190.93026697793536,
+      "brightness": 0.5751313316993464
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-moving-penumbra-06",
+      "category": "moving-penumbra",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.94,
+      "corners": [
+        [
+          0.2035970748238278,
+          0.1313554221648938
+        ],
+        [
+          0.8384009931585964,
+          0.17306213047856228
+        ],
+        [
+          0.7877270257638508,
+          0.92027728976412
+        ],
+        [
+          0.14470105514848827,
+          0.8408209961320603
+        ]
+      ],
+      "normalizedCornerError": 7.688998648005684E-4,
+      "polygonIoU": 0.9972993248520501,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 6.2481,
+      "sharpness": 136.56763633649905,
+      "brightness": 0.6739367578854876
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-moving-penumbra-06",
+      "category": "moving-penumbra",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.23821906895700076,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": "geometry",
+      "rawCorners": [
+        [
+          0.33318423326469737,
+          0.7397027292750696
+        ],
+        [
+          0.8378320180652454,
+          0.17602460470380432
+        ],
+        [
+          0.7850232545055275,
+          0.9201384101458868
+        ],
+        [
+          0.3230411846070883,
+          0.7185700549339525
+        ]
+      ],
+      "elapsedMillis": 17.5601,
+      "sharpness": 266.2874493130048,
+      "brightness": 0.5867405024509805
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-moving-penumbra-07",
+      "category": "moving-penumbra",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.94,
+      "corners": [
+        [
+          0.20191459971897166,
+          0.12855604291136477
+        ],
+        [
+          0.8368520949318546,
+          0.17124567723958073
+        ],
+        [
+          0.7851583721992537,
+          0.9184421575860136
+        ],
+        [
+          0.14246457839470106,
+          0.8376101813868804
+        ]
+      ],
+      "normalizedCornerError": 7.560955810583061E-4,
+      "polygonIoU": 0.9974825683489354,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 6.6999,
+      "sharpness": 137.90902448425786,
+      "brightness": 0.6767782901592517
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-moving-penumbra-07",
+      "category": "moving-penumbra",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.1208099604216109,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": "geometry",
+      "rawCorners": [
+        [
+          0.3363299902696399,
+          0.7634015964987585
+        ],
+        [
+          0.8366520644999421,
+          0.17610542086738387
+        ],
+        [
+          0.7843645601840984,
+          0.9131037585340986
+        ],
+        [
+          0.33589374589766885,
+          0.7188852730806857
+        ]
+      ],
+      "elapsedMillis": 20.931,
+      "sharpness": 264.82284972873265,
+      "brightness": 0.588006484885621
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-textured-light-00",
+      "category": "textured-light",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.9357253805989265,
+      "corners": [
+        [
+          0.20220176299688977,
+          0.13886453902342116
+        ],
+        [
+          0.8377653607900333,
+          0.17442395333193783
+        ],
+        [
+          0.7911464991799384,
+          0.9220853180925894
+        ],
+        [
+          0.14791237785565908,
+          0.8486840856396284
+        ]
+      ],
+      "normalizedCornerError": 9.891078469942943E-4,
+      "polygonIoU": 0.9960589766325773,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 7.5112,
+      "sharpness": 163.7360317752083,
+      "brightness": 0.627488125310474
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-textured-light-00",
+      "category": "textured-light",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.10571727412832363,
+      "maskFraction": 0.15299479166666666,
+      "maskAgreement": 0.5573529411764706,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.3330886018187807,
+          0.30162707775904457
+        ],
+        [
+          0.8496925554376538,
+          0.1754862163631307
+        ],
+        [
+          0.632878319170263,
+          0.7182430008709754
+        ],
+        [
+          0.35134732630682564,
+          0.7604911331403851
+        ]
+      ],
+      "elapsedMillis": 17.7324,
+      "sharpness": 155.97304155221516,
+      "brightness": 0.6082827052696078
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-textured-light-01",
+      "category": "textured-light",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.86,
+      "corners": [
+        [
+          0.20843416855282557,
+          0.1325845639228072
+        ],
+        [
+          0.8434704927727451,
+          0.17565320304851795
+        ],
+        [
+          0.7915676737324709,
+          0.9232196905773086
+        ],
+        [
+          0.1490982691234599,
+          0.8417338725010252
+        ]
+      ],
+      "normalizedCornerError": 8.020919572829802E-4,
+      "polygonIoU": 0.9970958421235604,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 24.4144,
+      "sharpness": 155.66124586441023,
+      "brightness": 0.6122572909323754
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-textured-light-01",
+      "category": "textured-light",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.12244007155141622,
+      "maskFraction": 0.13834635416666666,
+      "maskAgreement": 0.32006125574272587,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.5743554911383738,
+          0.23844491483076583
+        ],
+        [
+          0.838058925973944,
+          0.19447978956063752
+        ],
+        [
+          0.6340584924471248,
+          0.7383811085663101
+        ],
+        [
+          0.33804777704796896,
+          0.698004225734759
+        ]
+      ],
+      "elapsedMillis": 18.0179,
+      "sharpness": 174.4074819597774,
+      "brightness": 0.5961481694240197
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-textured-light-02",
+      "category": "textured-light",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.86,
+      "corners": [
+        [
+          0.20401891410102005,
+          0.12912494516809725
+        ],
+        [
+          0.8392510650435784,
+          0.170826767169433
+        ],
+        [
+          0.788418392170824,
+          0.9177577030044767
+        ],
+        [
+          0.1458170906899847,
+          0.8389031448978573
+        ]
+      ],
+      "normalizedCornerError": 7.802985313211341E-4,
+      "polygonIoU": 0.9973360701411914,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 22.9921,
+      "sharpness": 150.13590350988142,
+      "brightness": 0.6051737816052806
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-textured-light-02",
+      "category": "textured-light",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.14357808138446213,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": "geometry",
+      "rawCorners": [
+        [
+          0.32119254318790763,
+          0.7175975647883658
+        ],
+        [
+          0.8357681173649306,
+          0.1750715711818037
+        ],
+        [
+          0.7733020973643889,
+          0.9021864280186107
+        ],
+        [
+          0.3233656930428634,
+          0.6802320702660679
+        ]
+      ],
+      "elapsedMillis": 22.8801,
+      "sharpness": 218.6160379073991,
+      "brightness": 0.5941589690563726
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-textured-light-03",
+      "category": "textured-light",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 11.0168,
+      "sharpness": 239.26245394859316,
+      "brightness": 0.5953234400531047
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-textured-light-03",
+      "category": "textured-light",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.13648857003269102,
+      "maskFraction": 0.17220052083333334,
+      "maskAgreement": 0.40816326530612246,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.5855038518804005,
+          0.15461670741575895
+        ],
+        [
+          0.8317195593328331,
+          0.17413574603376433
+        ],
+        [
+          0.6303153921903065,
+          0.6792866629239661
+        ],
+        [
+          0.3392445724705025,
+          0.7429063800393295
+        ]
+      ],
+      "elapsedMillis": 22.6138,
+      "sharpness": 239.26245394859316,
+      "brightness": 0.5953234400531047
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-textured-light-04",
+      "category": "textured-light",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.9300871333181308,
+      "corners": [
+        [
+          0.20082428050498569,
+          0.14206240871885853
+        ],
+        [
+          0.8364185132471658,
+          0.16922079303431295
+        ],
+        [
+          0.7948202103136123,
+          0.9176509961871019
+        ],
+        [
+          0.15114079827813062,
+          0.8523276463175872
+        ]
+      ],
+      "normalizedCornerError": 8.11923565332261E-4,
+      "polygonIoU": 0.9972074877115318,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 8.1806,
+      "sharpness": 159.22170136583946,
+      "brightness": 0.6188570362351355
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-textured-light-04",
+      "category": "textured-light",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.2568414796683365,
+      "maskFraction": 0.126953125,
+      "maskAgreement": 0.4954268292682927,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.3501961098120316,
+          0.2609584090310237
+        ],
+        [
+          0.8355684688855829,
+          0.17600089187790036
+        ],
+        [
+          0.6316594922626405,
+          0.7176589587546832
+        ],
+        [
+          0.3394416741938028,
+          0.7419754137207156
+        ]
+      ],
+      "elapsedMillis": 16.8416,
+      "sharpness": 224.45453010236952,
+      "brightness": 0.6020679891748366
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-textured-light-05",
+      "category": "textured-light",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.9386475212000256,
+      "corners": [
+        [
+          0.20469496718740499,
+          0.1392405345583466
+        ],
+        [
+          0.8401543280660551,
+          0.17343008376888752
+        ],
+        [
+          0.7956141864548115,
+          0.9214766209303186
+        ],
+        [
+          0.1521581201826115,
+          0.8492607773056611
+        ]
+      ],
+      "normalizedCornerError": 0.0011452498130203187,
+      "polygonIoU": 0.9962973924905346,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 11.5554,
+      "sharpness": 142.5180749133777,
+      "brightness": 0.6334671814877012
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-textured-light-05",
+      "category": "textured-light",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.05104440466765968,
+      "maskFraction": 0.14388020833333334,
+      "maskAgreement": 0.2622673434856176,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.32059356311171877,
+          0.7008469663606073
+        ],
+        [
+          0.8368312093361475,
+          0.17750219678386028
+        ],
+        [
+          0.6437648761490279,
+          0.7218084131788979
+        ],
+        [
+          0.35191151608495785,
+          0.7598782890882596
+        ]
+      ],
+      "elapsedMillis": 21.3045,
+      "sharpness": 226.56144904513891,
+      "brightness": 0.6098903696895425
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-textured-light-06",
+      "category": "textured-light",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 9.715,
+      "sharpness": 259.6830369667902,
+      "brightness": 0.6195126251021242
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-textured-light-06",
+      "category": "textured-light",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.09471075159645193,
+      "maskFraction": 0.13932291666666666,
+      "maskAgreement": 0.29891956782713086,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.5713804548185327,
+          0.22509848678152614
+        ],
+        [
+          0.8355651408526229,
+          0.17637055703423274
+        ],
+        [
+          0.7682058975508678,
+          0.8620889633976675
+        ],
+        [
+          0.322576118235467,
+          0.6819445431155042
+        ]
+      ],
+      "elapsedMillis": 18.6142,
+      "sharpness": 259.6830369667902,
+      "brightness": 0.6195126251021242
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-textured-light-07",
+      "category": "textured-light",
+      "expectedDetection": true,
+      "detected": true,
+      "confidence": 0.9385032321008915,
+      "corners": [
+        [
+          0.20159108866963202,
+          0.12833061988575978
+        ],
+        [
+          0.8368122810149429,
+          0.17130899399550237
+        ],
+        [
+          0.785213415513708,
+          0.9186155577297673
+        ],
+        [
+          0.14274670568692016,
+          0.8375775264474901
+        ]
+      ],
+      "normalizedCornerError": 8.012296279199362E-4,
+      "polygonIoU": 0.9972231908655222,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 7.8422,
+      "sharpness": 153.55941166589957,
+      "brightness": 0.6469351154017347
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-textured-light-07",
+      "category": "textured-light",
+      "expectedDetection": true,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": 0,
+      "minimumCornerPeakProbability": 0.08027644033929394,
+      "maskFraction": 0.17903645833333334,
+      "maskAgreement": 0.32055378061767836,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.5864072467381225,
+          0.1520024618111149
+        ],
+        [
+          0.8347970544155614,
+          0.17611409631587413
+        ],
+        [
+          0.7681303839432975,
+          0.8654080974636887
+        ],
+        [
+          0.35022670875336187,
+          0.7421030728615877
+        ]
+      ],
+      "elapsedMillis": 20.7757,
+      "sharpness": 258.42469499790406,
+      "brightness": 0.6200486877042484
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-shadow-00",
+      "category": "negative-shadow",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 7.6399,
+      "sharpness": 23.813865896765396,
+      "brightness": 0.497208473754085
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-shadow-00",
+      "category": "negative-shadow",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": 0.010453971172178519,
+      "maskFraction": 9.765625E-4,
+      "maskAgreement": 0,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.050827029094270545,
+          0.050536688201492375
+        ],
+        [
+          0.539491658899168,
+          0.38472960685490903
+        ],
+        [
+          0.584912317260489,
+          0.8011469360317554
+        ],
+        [
+          0.47586016050978946,
+          0.8833920644399115
+        ]
+      ],
+      "elapsedMillis": 18.001,
+      "sharpness": 23.813865896765396,
+      "brightness": 0.497208473754085
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-shadow-01",
+      "category": "negative-shadow",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 12.0634,
+      "sharpness": 47.27248359358046,
+      "brightness": 0.49030551725898697
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-shadow-01",
+      "category": "negative-shadow",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": 0.023525242628395147,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": "geometry",
+      "rawCorners": [
+        [
+          0.05379872585319006,
+          0.030691049021913035
+        ],
+        [
+          0.49197643584111866,
+          0.05468551724249745
+        ],
+        [
+          0.4450688782968091,
+          0.8877252720900644
+        ],
+        [
+          0.4449096247579673,
+          0.8854108615799202
+        ]
+      ],
+      "elapsedMillis": 21.014,
+      "sharpness": 47.27248359358046,
+      "brightness": 0.49030551725898697
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-shadow-02",
+      "category": "negative-shadow",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 7.4759,
+      "sharpness": 117.50304174498451,
+      "brightness": 0.4902898029003268
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-shadow-02",
+      "category": "negative-shadow",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": 0.021814139018052382,
+      "maskFraction": 0.12369791666666667,
+      "maskAgreement": 0.11976047904191617,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.050111133094789144,
+          0.031538644122868
+        ],
+        [
+          0.5232180521793635,
+          0.04859920707485473
+        ],
+        [
+          0.5069500804013274,
+          0.9289685936839808
+        ],
+        [
+          0.4297425634030195,
+          0.925902182209866
+        ]
+      ],
+      "elapsedMillis": 16.1877,
+      "sharpness": 117.50304174498451,
+      "brightness": 0.4902898029003268
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-shadow-03",
+      "category": "negative-shadow",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 7.8085,
+      "sharpness": 127.41751583344144,
+      "brightness": 0.49080657679738565
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-shadow-03",
+      "category": "negative-shadow",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": 0.048233214600336596,
+      "maskFraction": 0.10970052083333333,
+      "maskAgreement": 0.20503048780487804,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.05009467988256096,
+          0.030627226047916973
+        ],
+        [
+          0.4765100995278079,
+          0.045485604763802
+        ],
+        [
+          0.9696986061027538,
+          0.9671654732561542
+        ],
+        [
+          0.47670805906985475,
+          0.9282437771699001
+        ]
+      ],
+      "elapsedMillis": 23.8157,
+      "sharpness": 127.41751583344144,
+      "brightness": 0.49080657679738565
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-shadow-04",
+      "category": "negative-shadow",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 12.0737,
+      "sharpness": 82.26449891864989,
+      "brightness": 0.49363628472222226
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-shadow-04",
+      "category": "negative-shadow",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": 0.01566738397491939,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": "geometry",
+      "rawCorners": [
+        [
+          0.04968730431572146,
+          0.02930018249386046
+        ],
+        [
+          0.5072753756783885,
+          0.05701862057370503
+        ],
+        [
+          0.4923152591437801,
+          0.9079622953877245
+        ],
+        [
+          0.4924689244559342,
+          0.9063612136826156
+        ]
+      ],
+      "elapsedMillis": 15.784,
+      "sharpness": 82.26449891864989,
+      "brightness": 0.49363628472222226
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-shadow-05",
+      "category": "negative-shadow",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 8.0072,
+      "sharpness": 52.397950115617114,
+      "brightness": 0.49725949754901966
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-shadow-05",
+      "category": "negative-shadow",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": 0.009852651677791481,
+      "maskFraction": 0.005208333333333333,
+      "maskAgreement": 0,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.05160115565877234,
+          0.049831611319552715
+        ],
+        [
+          0.5394303568820995,
+          0.6558773431391661
+        ],
+        [
+          0.585561525175832,
+          0.8025237033464219
+        ],
+        [
+          0.47599296714294065,
+          0.8841034032563496
+        ]
+      ],
+      "elapsedMillis": 21.0381,
+      "sharpness": 52.397950115617114,
+      "brightness": 0.49725949754901966
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-shadow-06",
+      "category": "negative-shadow",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 7.7913,
+      "sharpness": 105.69848074839909,
+      "brightness": 0.5035001404207516
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-shadow-06",
+      "category": "negative-shadow",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": 0.015936634689242578,
+      "maskFraction": 0.08040364583333333,
+      "maskAgreement": 0.023557126030624265,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.05129882643362704,
+          0.04868876891122927
+        ],
+        [
+          0.4922175996501659,
+          0.05410937494398179
+        ],
+        [
+          0.4609193980899358,
+          0.9211979059593953
+        ],
+        [
+          0.4296517869122409,
+          0.9060664307923014
+        ]
+      ],
+      "elapsedMillis": 21.8561,
+      "sharpness": 105.69848074839909,
+      "brightness": 0.5035001404207516
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-shadow-07",
+      "category": "negative-shadow",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 11.8085,
+      "sharpness": 106.86746953514945,
+      "brightness": 0.5036140344158497
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-shadow-07",
+      "category": "negative-shadow",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": 0.026378966372739072,
+      "maskFraction": 0.12434895833333333,
+      "maskAgreement": 0.18008474576271186,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.050172529552050864,
+          0.03113191956337728
+        ],
+        [
+          0.5681839972465086,
+          0.9192532578223274
+        ],
+        [
+          0.5074749179497501,
+          0.9309271252588488
+        ],
+        [
+          0.4454815727508867,
+          0.9247233895967312
+        ]
+      ],
+      "elapsedMillis": 21.3813,
+      "sharpness": 106.86746953514945,
+      "brightness": 0.5036140344158497
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-texture-00",
+      "category": "negative-texture",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 10.0588,
+      "sharpness": 49.75492306263181,
+      "brightness": 0.5864728860294118
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-texture-00",
+      "category": "negative-texture",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": 0.011875604459832165,
+      "maskFraction": 0,
+      "maskAgreement": 0,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.05047152625624045,
+          0.05229634946851077
+        ],
+        [
+          0.5400020840117934,
+          0.656999005714722
+        ],
+        [
+          0.5849660024637588,
+          0.7817069938538573
+        ],
+        [
+          0.4607062300240681,
+          0.8818114914998048
+        ]
+      ],
+      "elapsedMillis": 20.6184,
+      "sharpness": 49.75492306263181,
+      "brightness": 0.5864728860294118
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-texture-01",
+      "category": "negative-texture",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 11.6661,
+      "sharpness": 73.76765123061075,
+      "brightness": 0.5748314823325164
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-texture-01",
+      "category": "negative-texture",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": 0.011417666122931283,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": "geometry",
+      "rawCorners": [
+        [
+          0.054447500861547204,
+          0.04854309778546887
+        ],
+        [
+          0.5387886124421151,
+          0.6563156137667266
+        ],
+        [
+          0.43038417916997573,
+          0.88433357511639
+        ],
+        [
+          0.4452124169349581,
+          0.8840068959941588
+        ]
+      ],
+      "elapsedMillis": 18.574,
+      "sharpness": 73.76765123061075,
+      "brightness": 0.5748314823325164
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-texture-02",
+      "category": "negative-texture",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 17.5573,
+      "sharpness": 121.10599233448241,
+      "brightness": 0.5730596022263071
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-texture-02",
+      "category": "negative-texture",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": 0.013059287078411988,
+      "maskFraction": 0.09049479166666667,
+      "maskAgreement": 0.21750663129973474,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.04908050405761929,
+          0.04960125435340009
+        ],
+        [
+          0.5543153802589185,
+          0.9195575269626977
+        ],
+        [
+          0.5070728867204863,
+          0.9252171217993688
+        ],
+        [
+          0.41378194883888025,
+          0.9105132513368335
+        ]
+      ],
+      "elapsedMillis": 17.6118,
+      "sharpness": 121.10599233448241,
+      "brightness": 0.5730596022263071
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-texture-03",
+      "category": "negative-texture",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 17.472,
+      "sharpness": 140.26649040692647,
+      "brightness": 0.5741940231821896
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-texture-03",
+      "category": "negative-texture",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": 0.025958665321829017,
+      "maskFraction": 0.10384114583333333,
+      "maskAgreement": 0.2054380664652568,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.04986519820949845,
+          0.04992670537520257
+        ],
+        [
+          0.49183151234841577,
+          0.04561764469246828
+        ],
+        [
+          0.9694021317149251,
+          0.9668567662467105
+        ],
+        [
+          0.47663623108473385,
+          0.9279940562452668
+        ]
+      ],
+      "elapsedMillis": 20.1753,
+      "sharpness": 140.26649040692647,
+      "brightness": 0.5741940231821896
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-texture-04",
+      "category": "negative-texture",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 15.3109,
+      "sharpness": 121.39178270653619,
+      "brightness": 0.5806293530433007
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-texture-04",
+      "category": "negative-texture",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": 0.020051324657005848,
+      "maskFraction": 0.008463541666666666,
+      "maskAgreement": 0,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.04482982395827231,
+          0.010822704976052014
+        ],
+        [
+          0.49214938819703413,
+          0.0555241761613177
+        ],
+        [
+          0.5076439796386435,
+          0.9058167941420497
+        ],
+        [
+          0.49260460493497193,
+          0.9053654268353051
+        ]
+      ],
+      "elapsedMillis": 18.3678,
+      "sharpness": 121.39178270653619,
+      "brightness": 0.5806293530433007
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-texture-05",
+      "category": "negative-texture",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 17.6368,
+      "sharpness": 118.75685269097221,
+      "brightness": 0.5880312882965687
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-texture-05",
+      "category": "negative-texture",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": 0.01189169103186407,
+      "maskFraction": 0.0022786458333333335,
+      "maskAgreement": 0,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.050938079426998635,
+          0.05113850432154513
+        ],
+        [
+          0.5396963909212128,
+          0.6567321188176192
+        ],
+        [
+          0.5851222694913334,
+          0.8001697474545949
+        ],
+        [
+          0.47598883396701247,
+          0.8831316853604051
+        ]
+      ],
+      "elapsedMillis": 20.5627,
+      "sharpness": 118.75685269097221,
+      "brightness": 0.5880312882965687
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-texture-06",
+      "category": "negative-texture",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 17.2378,
+      "sharpness": 146.31463852929008,
+      "brightness": 0.5973878804125817
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-texture-06",
+      "category": "negative-texture",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": 0.011390915292620638,
+      "maskFraction": 0.030598958333333332,
+      "maskAgreement": 0.0079155672823219,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.05095299464912151,
+          0.05114852321485697
+        ],
+        [
+          0.5386827970553062,
+          0.6557123585760712
+        ],
+        [
+          0.4612930078819181,
+          0.9044100880520501
+        ],
+        [
+          0.42973140744604876,
+          0.8899868508869844
+        ]
+      ],
+      "elapsedMillis": 16.1461,
+      "sharpness": 146.31463852929008,
+      "brightness": 0.5973878804125817
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-texture-07",
+      "category": "negative-texture",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 17.5802,
+      "sharpness": 144.1683733833207,
+      "brightness": 0.597847873263889
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-texture-07",
+      "category": "negative-texture",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": 0.02516803540408213,
+      "maskFraction": 0.09765625,
+      "maskAgreement": 0.1766304347826087,
+      "rejection": "corner-evidence",
+      "rawCorners": [
+        [
+          0.049783622871227624,
+          0.048703910712805144
+        ],
+        [
+          0.554445902175978,
+          0.9117465748804926
+        ],
+        [
+          0.5068708715761987,
+          0.9274883924613052
+        ],
+        [
+          0.4604168750714211,
+          0.9248185325952302
+        ]
+      ],
+      "elapsedMillis": 17.0373,
+      "sharpness": 144.1683733833207,
+      "brightness": 0.597847873263889
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-circles-00",
+      "category": "negative-circles",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 17.5223,
+      "sharpness": 63.02004790995916,
+      "brightness": 0.578449946384804
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-circles-00",
+      "category": "negative-circles",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": 0.31718564259334203,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": "geometry",
+      "rawCorners": [
+        [
+          0.38248372638957,
+          0.13745584966007762
+        ],
+        [
+          0.6296569255780982,
+          0.4881631044887
+        ],
+        [
+          0.6018791650803079,
+          0.5476146194544866
+        ],
+        [
+          0.6902632757911623,
+          0.7396638965175062
+        ]
+      ],
+      "elapsedMillis": 17.255,
+      "sharpness": 63.02004790995916,
+      "brightness": 0.578449946384804
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-circles-01",
+      "category": "negative-circles",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 18.6681,
+      "sharpness": 87.20279896747803,
+      "brightness": 0.5668235166462419
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-circles-01",
+      "category": "negative-circles",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": 0.27967725290384726,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": "geometry",
+      "rawCorners": [
+        [
+          0.4784595442075486,
+          0.2833410503226336
+        ],
+        [
+          0.6171858895471624,
+          0.4736883163680901
+        ],
+        [
+          0.6135601580338133,
+          0.5311704208589926
+        ],
+        [
+          0.6210799010816127,
+          0.4737369945195235
+        ]
+      ],
+      "elapsedMillis": 18.9033,
+      "sharpness": 87.20279896747803,
+      "brightness": 0.5668235166462419
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-circles-02",
+      "category": "negative-circles",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 17.4788,
+      "sharpness": 126.06429292360943,
+      "brightness": 0.5650506918913399
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-circles-02",
+      "category": "negative-circles",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": 0.2649022645183994,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": "geometry",
+      "rawCorners": [
+        [
+          0.47803083050539763,
+          0.280370856794066
+        ],
+        [
+          0.5883687222016517,
+          0.552658888005153
+        ],
+        [
+          0.6010037909994378,
+          0.5321617158673785
+        ],
+        [
+          0.5687300402720359,
+          0.9058531095074461
+        ]
+      ],
+      "elapsedMillis": 18.0965,
+      "sharpness": 126.06429292360943,
+      "brightness": 0.5650506918913399
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-circles-03",
+      "category": "negative-circles",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 15.1046,
+      "sharpness": 151.09693463557562,
+      "brightness": 0.5662084992851307
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-circles-03",
+      "category": "negative-circles",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": 0.2223154997135033,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": "geometry",
+      "rawCorners": [
+        [
+          0.4773330197059618,
+          0.28047734279734615
+        ],
+        [
+          0.5879279665593691,
+          0.5545593645178734
+        ],
+        [
+          0.6021438447839806,
+          0.5129913484500315
+        ],
+        [
+          0.6177594751456914,
+          0.4726344009990937
+        ]
+      ],
+      "elapsedMillis": 21.4895,
+      "sharpness": 151.09693463557562,
+      "brightness": 0.5662084992851307
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-circles-04",
+      "category": "negative-circles",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 11.8982,
+      "sharpness": 134.44910102500918,
+      "brightness": 0.5725411560457517
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-circles-04",
+      "category": "negative-circles",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": 0.28432671883214977,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": "geometry",
+      "rawCorners": [
+        [
+          0.4787779889453151,
+          0.3006942850409276
+        ],
+        [
+          0.61711229125478,
+          0.4747326906598246
+        ],
+        [
+          0.6015520639024259,
+          0.5459302768455964
+        ],
+        [
+          0.682337995301411,
+          0.7057226663726436
+        ]
+      ],
+      "elapsedMillis": 19.9987,
+      "sharpness": 134.44910102500918,
+      "brightness": 0.5725411560457517
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-circles-05",
+      "category": "negative-circles",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 10.9187,
+      "sharpness": 133.08913397212558,
+      "brightness": 0.5798153339460784
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-circles-05",
+      "category": "negative-circles",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": 0.32614705351722983,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": "geometry",
+      "rawCorners": [
+        [
+          0.3673838176337605,
+          0.1760001541107993
+        ],
+        [
+          0.6182411390027726,
+          0.474889611462135
+        ],
+        [
+          0.6136633646043743,
+          0.532541578101189
+        ],
+        [
+          0.6897328647067872,
+          0.7224835517081177
+        ]
+      ],
+      "elapsedMillis": 17.5804,
+      "sharpness": 133.08913397212558,
+      "brightness": 0.5798153339460784
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-circles-06",
+      "category": "negative-circles",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 18.1723,
+      "sharpness": 159.2046160308414,
+      "brightness": 0.5891075112336602
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-circles-06",
+      "category": "negative-circles",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": 0.2954330770807465,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": "geometry",
+      "rawCorners": [
+        [
+          0.47860922157694646,
+          0.29985652105016336
+        ],
+        [
+          0.6289195540026382,
+          0.49036405241199893
+        ],
+        [
+          0.602076043877324,
+          0.5461637130689573
+        ],
+        [
+          0.6645676820143671,
+          0.7569196645689429
+        ]
+      ],
+      "elapsedMillis": 21.9419,
+      "sharpness": 159.2046160308414,
+      "brightness": 0.5891075112336602
+    },
+    {
+      "mode": "Standard",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-circles-07",
+      "category": "negative-circles",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": null,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "rawCorners": null,
+      "elapsedMillis": 15.4396,
+      "sharpness": 155.81730441012917,
+      "brightness": 0.589486545138889
+    },
+    {
+      "mode": "AI",
+      "cohort": "temporal-shadow",
+      "id": "tuning-negative-circles-07",
+      "category": "negative-circles",
+      "expectedDetection": false,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "normalizedCornerError": null,
+      "polygonIoU": null,
+      "minimumCornerPeakProbability": 0.24705726298020664,
+      "maskFraction": null,
+      "maskAgreement": null,
+      "rejection": "geometry",
+      "rawCorners": [
+        [
+          0.4752620179300557,
+          0.2795756663070797
+        ],
+        [
+          0.5880505003452735,
+          0.5541121230386187
+        ],
+        [
+          0.6012031229825279,
+          0.5457433525555397
+        ],
+        [
+          0.5703382893224567,
+          0.9072860861557484
+        ]
+      ],
+      "elapsedMillis": 22.5623,
+      "sharpness": 155.81730441012917,
+      "brightness": 0.589486545138889
+    }
+  ]
+}

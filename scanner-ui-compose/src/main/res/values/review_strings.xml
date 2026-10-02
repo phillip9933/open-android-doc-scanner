@@ -1,0 +1,28 @@
+<resources>
+    <string name="review_back">Back to capture</string>
+    <string name="review_screen_title">Review scan</string>
+    <string name="review_no_pages">No pages yet</string>
+    <string name="review_page_position">Page %1$d of %2$d</string>
+    <string name="review_exporting">Exporting…</string>
+    <string name="review_next">Next</string>
+    <string name="review_empty_title">Add a page to your scan</string>
+    <string name="review_empty_hint">Capture a page or import an image to continue.</string>
+    <string name="review_add_page">Add page</string>
+    <string name="review_thumbnail_description">Select page %1$d</string>
+    <string name="review_page_short">%1$d</string>
+    <string name="review_preview_loading">Preparing preview…</string>
+    <string name="review_crop">Crop</string>
+    <string name="review_filters">Filters</string>
+    <string name="review_more">More page actions</string>
+    <string name="review_rotate">Rotate</string><string name="review_more_short">More</string>
+    <string name="review_position_short">%1$d / %2$d</string>
+    <string name="review_enhance">Auto enhance</string>
+    <string name="review_crop_rotate">Crop &amp; rotate</string>
+    <string name="review_retake">Retake page</string>
+    <string name="review_delete_page">Delete page</string>
+    <string name="review_move_up">Move page left</string>
+    <string name="review_move_down">Move page right</string>
+    <string name="review_discard">Discard scans</string>
+    <string name="review_previous_page">Show previous page</string>
+    <string name="review_next_page">Show next page</string>
+</resources>

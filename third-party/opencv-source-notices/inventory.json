@@ -1,0 +1,87 @@
+[
+  {
+    "source": "https://raw.githubusercontent.com/opencv/opencv/4.12.0/3rdparty/cpufeatures/LICENSE",
+    "path": "3rdparty/cpufeatures/LICENSE",
+    "sha256": "C870D52F42A8F93023B99A85FE68D02637D6B04E5F35BBCD7F98759ADB4E4D49"
+  },
+  {
+    "source": "https://raw.githubusercontent.com/opencv/opencv/4.12.0/3rdparty/ffmpeg/license.txt",
+    "path": "3rdparty/ffmpeg/license.txt",
+    "sha256": "1F9D4168B4A9A2BDD1851023735A41D0AB09FFA5FCC1A721A99EBC1D7D35A9C5"
+  },
+  {
+    "source": "https://raw.githubusercontent.com/opencv/opencv/4.12.0/3rdparty/flatbuffers/LICENSE.txt",
+    "path": "3rdparty/flatbuffers/LICENSE.txt",
+    "sha256": "CFC7749B96F63BD31C3C42B5C471BF756814053E847C10F3EB003417BC523D30"
+  },
+  {
+    "source": "https://raw.githubusercontent.com/opencv/opencv/4.12.0/3rdparty/include/opencl/LICENSE.txt",
+    "path": "3rdparty/include/opencl/LICENSE.txt",
+    "sha256": "CFACEADFF07C2C9458283079CD0166872AA2D93D5C480F1F417BE321AA7E0F4D"
+  },
+  {
+    "source": "https://raw.githubusercontent.com/opencv/opencv/4.12.0/3rdparty/libjasper/LICENSE",
+    "path": "3rdparty/libjasper/LICENSE",
+    "sha256": "EDF9F4257CC33A1F396F9B062CA4A01DCA7C79747C7D85B8947E603E5166760E"
+  },
+  {
+    "source": "https://raw.githubusercontent.com/opencv/opencv/4.12.0/3rdparty/libjasper/copyright",
+    "path": "3rdparty/libjasper/copyright",
+    "sha256": "86C11BD7B94D24D6C372BD95F8D8998B8A69C7D82A91DD0247878B28223FEABE"
+  },
+  {
+    "source": "https://raw.githubusercontent.com/opencv/opencv/4.12.0/3rdparty/libjpeg-turbo/LICENSE.md",
+    "path": "3rdparty/libjpeg-turbo/LICENSE.md",
+    "sha256": "96F5B328ADBB78EEAAEC6980D73FD558CB1E4D62560ED615646BC3CF5E532430"
+  },
+  {
+    "source": "https://raw.githubusercontent.com/opencv/opencv/4.12.0/3rdparty/libpng/LICENSE",
+    "path": "3rdparty/libpng/LICENSE",
+    "sha256": "7317E078E2D3B5D7BA5A6159E650945153262B44B76F6700F8E9EDB261C5143E"
+  },
+  {
+    "source": "https://raw.githubusercontent.com/opencv/opencv/4.12.0/3rdparty/libspng/LICENSE",
+    "path": "3rdparty/libspng/LICENSE",
+    "sha256": "A2656F1D2643B1F9D17F263BE03EB0D0BE8FA5E0561DBCFAF0CF8EC3BEFB1413"
+  },
+  {
+    "source": "https://raw.githubusercontent.com/opencv/opencv/4.12.0/3rdparty/libtiff/COPYRIGHT",
+    "path": "3rdparty/libtiff/COPYRIGHT",
+    "sha256": "FBD6FED7938541D2C809C0826225FC85E551FDBFA8732B10F0C87E0847ACAFD7"
+  },
+  {
+    "source": "https://raw.githubusercontent.com/opencv/opencv/4.12.0/3rdparty/libwebp/COPYING",
+    "path": "3rdparty/libwebp/COPYING",
+    "sha256": "5AEC868F669E384A22372A4E8A1A6CD7D44C64CD451F960CA69CC170D1E13ACF"
+  },
+  {
+    "source": "https://raw.githubusercontent.com/opencv/opencv/4.12.0/3rdparty/openexr/LICENSE",
+    "path": "3rdparty/openexr/LICENSE",
+    "sha256": "14EBA5F05238F57C77E94F0EBD29A0B3736BA0456FF990CDA16E21B6903AC453"
+  },
+  {
+    "source": "https://raw.githubusercontent.com/opencv/opencv/4.12.0/3rdparty/openjpeg/LICENSE",
+    "path": "3rdparty/openjpeg/LICENSE",
+    "sha256": "A6AF136F3E15038A666B61F376612A07D9A4E48CB7C01ADBF3E33B3F14AB49B6"
+  },
+  {
+    "source": "https://raw.githubusercontent.com/opencv/opencv/4.12.0/3rdparty/protobuf/LICENSE",
+    "path": "3rdparty/protobuf/LICENSE",
+    "sha256": "6E5E117324AFD944DCF67F36CF329843BC1A92229A8CD9BB573D7A83130FEA7D"
+  },
+  {
+    "source": "https://raw.githubusercontent.com/opencv/opencv/4.12.0/3rdparty/quirc/LICENSE",
+    "path": "3rdparty/quirc/LICENSE",
+    "sha256": "F64A0D2030DD3BB501F303EB66097ED92CD0C63F824E515B1116DAFBCE5346FE"
+  },
+  {
+    "source": "https://raw.githubusercontent.com/opencv/opencv/4.12.0/3rdparty/zlib-ng/LICENSE.md",
+    "path": "3rdparty/zlib-ng/LICENSE.md",
+    "sha256": "6C9F0D975B41AFAA34D22F55BB8986CE69E5CB7AD327CB2B28820CD425EDF5EE"
+  },
+  {
+    "source": "https://raw.githubusercontent.com/opencv/opencv/4.12.0/3rdparty/zlib/LICENSE",
+    "path": "3rdparty/zlib/LICENSE",
+    "sha256": "845EFC77857D485D91FB3E0B884AAA929368C717AE8186B66FE1ED2495753243"
+  }
+]

@@ -1,0 +1,538 @@
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.AutoEnhancementTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+dev.offlinescan.processing.AutoEnhancementTest:
+INSTRUMENTATION_STATUS: test=smallColourStampKeepsColourAndFaintWritingKeepsContinuousTones
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.AutoEnhancementTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=smallColourStampKeepsColourAndFaintWritingKeepsContinuousTones
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.AutoEnhancementTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=previewAndExportChooseSameFilterAndCancellationLeavesNoOutput
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.AutoEnhancementTest
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=previewAndExportChooseSameFilterAndCancellationLeavesNoOutput
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.AutoEnhancementTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=broadShadowIsLiftedWithoutErasingDarkTextOrChangingOriginal
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.AutoEnhancementTest
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=broadShadowIsLiftedWithoutErasingDarkTextOrChangingOriginal
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.AutoEnhancementTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=cleanHighContrastPageUsesBinaryWithoutHollowingSolidInk
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.AutoEnhancementTest
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=cleanHighContrastPageUsesBinaryWithoutHollowingSolidInk
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.AutoEnhancementTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=continuousTonePhotoAndBlankPageArePreserved
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.AutoEnhancementTest
+INSTRUMENTATION_STATUS: current=5
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=continuousTonePhotoAndBlankPageArePreserved
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.DetectionBenchmarkTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+dev.offlinescan.processing.DetectionBenchmarkTest:
+INSTRUMENTATION_STATUS: test=measureGeneratedTuningAndHeldOutFixtures
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.DetectionBenchmarkTest
+INSTRUMENTATION_STATUS: current=6
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=measureGeneratedTuningAndHeldOutFixtures
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.DetectionChallengeTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+dev.offlinescan.processing.DetectionChallengeTest:
+INSTRUMENTATION_STATUS: test=measureSeparateChallengeFixtures
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.DetectionChallengeTest
+INSTRUMENTATION_STATUS: current=7
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=measureSeparateChallengeFixtures
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.DetectionChallengeTest
+INSTRUMENTATION_STATUS: current=8
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=measureRepeatedTuningLatency
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.DetectionChallengeTest
+INSTRUMENTATION_STATUS: current=8
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=measureRepeatedTuningLatency
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.DetectionChallengeTest
+INSTRUMENTATION_STATUS: current=9
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=tuningCornerQualityAndCameraStillParity
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.DetectionChallengeTest
+INSTRUMENTATION_STATUS: current=9
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=tuningCornerQualityAndCameraStillParity
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.DocumentQualityTest
+INSTRUMENTATION_STATUS: current=10
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+dev.offlinescan.processing.DocumentQualityTest:
+INSTRUMENTATION_STATUS: test=bitmapAndFileUseSameMetricAndUprightExifCorners
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.DocumentQualityTest
+INSTRUMENTATION_STATUS: current=10
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=bitmapAndFileUseSameMetricAndUprightExifCorners
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.DocumentQualityTest
+INSTRUMENTATION_STATUS: current=11
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=lowContrastInkStillDistinguishesModerateBlurFromSharpText
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.DocumentQualityTest
+INSTRUMENTATION_STATUS: current=11
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=lowContrastInkStillDistinguishesModerateBlurFromSharpText
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.DocumentQualityTest
+INSTRUMENTATION_STATUS: current=12
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=blankPaperAndHighContrastBorderAreNotFocusEvidence
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.DocumentQualityTest
+INSTRUMENTATION_STATUS: current=12
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=blankPaperAndHighContrastBorderAreNotFocusEvidence
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.DocumentQualityTest
+INSTRUMENTATION_STATUS: current=13
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=sharpBackgroundCannotHideDocumentBlurInAxisOrPerspectiveView
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.DocumentQualityTest
+INSTRUMENTATION_STATUS: current=13
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=sharpBackgroundCannotHideDocumentBlurInAxisOrPerspectiveView
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.DocumentQualityTest
+INSTRUMENTATION_STATUS: current=14
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=cancellationIsPreservedAndCallerBitmapSurvives
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.DocumentQualityTest
+INSTRUMENTATION_STATUS: current=14
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=cancellationIsPreservedAndCallerBitmapSurvives
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.LearnedDocumentDetectorTest
+INSTRUMENTATION_STATUS: current=15
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+dev.offlinescan.processing.LearnedDocumentDetectorTest:
+INSTRUMENTATION_STATUS: test=compareFrozenFootageAndChallengeCases
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.LearnedDocumentDetectorTest
+INSTRUMENTATION_STATUS: current=15
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=compareFrozenFootageAndChallengeCases
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.LearnedDocumentDetectorTest
+INSTRUMENTATION_STATUS: current=16
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=compareOwnPrintedDocumentsExploratory
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.LearnedDocumentDetectorTest
+INSTRUMENTATION_STATUS: current=16
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=compareOwnPrintedDocumentsExploratory
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.LearnedDocumentDetectorTest
+INSTRUMENTATION_STATUS: current=17
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=compareLicensedCameraFixturesOptIn
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.LearnedDocumentDetectorTest
+INSTRUMENTATION_STATUS: current=17
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stack=org.junit.AssumptionViolatedException: Explicit external camera fixture directory is required
+	at org.junit.Assume.assumeTrue(Assume.java:68)
+	at dev.offlinescan.processing.LearnedDocumentDetectorTest.compareLicensedCameraFixturesOptIn(LearnedDocumentDetectorTest.kt:38)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at androidx.test.ext.junit.runners.AndroidJUnit4.run(AndroidJUnit4.java:162)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+	at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:68)
+	at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:59)
+	at androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:463)
+	at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:2594)
+
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=compareLicensedCameraFixturesOptIn
+INSTRUMENTATION_STATUS_CODE: -4
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.LearnedDocumentDetectorTest
+INSTRUMENTATION_STATUS: current=18
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=fileDetectionUsesUprightExifCoordinates
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.LearnedDocumentDetectorTest
+INSTRUMENTATION_STATUS: current=18
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=fileDetectionUsesUprightExifCoordinates
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.LearnedDocumentDetectorTest
+INSTRUMENTATION_STATUS: current=19
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=offlineModelLoadsRejectsBlankAndHonorsLifetime
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.LearnedDocumentDetectorTest
+INSTRUMENTATION_STATUS: current=19
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=offlineModelLoadsRejectsBlankAndHonorsLifetime
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.LearnedDocumentDetectorTest
+INSTRUMENTATION_STATUS: current=20
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=sustainedCpuInferenceOptIn
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.LearnedDocumentDetectorTest
+INSTRUMENTATION_STATUS: current=20
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stack=org.junit.AssumptionViolatedException: Explicit sustainedAi=true is required
+	at org.junit.Assume.assumeTrue(Assume.java:68)
+	at dev.offlinescan.processing.LearnedDocumentDetectorTest.sustainedCpuInferenceOptIn(LearnedDocumentDetectorTest.kt:85)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at androidx.test.ext.junit.runners.AndroidJUnit4.run(AndroidJUnit4.java:162)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+	at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:68)
+	at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:59)
+	at androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:463)
+	at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:2594)
+
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=sustainedCpuInferenceOptIn
+INSTRUMENTATION_STATUS_CODE: -4
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.OpenCvProcessorTest
+INSTRUMENTATION_STATUS: current=21
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+dev.offlinescan.processing.OpenCvProcessorTest:
+INSTRUMENTATION_STATUS: test=invalidGeometryAndInputLimitsFailBeforeWritingAndCancellationPropagates
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.OpenCvProcessorTest
+INSTRUMENTATION_STATUS: current=21
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=invalidGeometryAndInputLimitsFailBeforeWritingAndCancellationPropagates
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.OpenCvProcessorTest
+INSTRUMENTATION_STATUS: current=22
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=uniformImageIsNotInventedAsDocument
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.OpenCvProcessorTest
+INSTRUMENTATION_STATUS: current=22
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=uniformImageIsNotInventedAsDocument
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.OpenCvProcessorTest
+INSTRUMENTATION_STATUS: current=23
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=outputIsBoundedAndRotationMetadataMatchesEncodedImage
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.OpenCvProcessorTest
+INSTRUMENTATION_STATUS: current=23
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=outputIsBoundedAndRotationMetadataMatchesEncodedImage
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.OpenCvProcessorTest
+INSTRUMENTATION_STATUS: current=24
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=perspectiveAndRotatedDocumentsProduceMeasuredCorners
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.OpenCvProcessorTest
+INSTRUMENTATION_STATUS: current=24
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=perspectiveAndRotatedDocumentsProduceMeasuredCorners
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.OpenCvProcessorTest
+INSTRUMENTATION_STATUS: current=25
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=perspectiveWarpExcludesBackgroundAndPreservesPaperColor
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.OpenCvProcessorTest
+INSTRUMENTATION_STATUS: current=25
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=perspectiveWarpExcludesBackgroundAndPreservesPaperColor
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.OpenCvProcessorTest
+INSTRUMENTATION_STATUS: current=26
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=photographAndOriginalPreserveColorWhileGrayscaleAndBwAreExplicit
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.OpenCvProcessorTest
+INSTRUMENTATION_STATUS: current=26
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=photographAndOriginalPreserveColorWhileGrayscaleAndBwAreExplicit
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.OpenCvProcessorTest
+INSTRUMENTATION_STATUS: current=27
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=exifAllEightOrientationsPreserveCornerColorsAndDimensions
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.OpenCvProcessorTest
+INSTRUMENTATION_STATUS: current=27
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=exifAllEightOrientationsPreserveCornerColorsAndDimensions
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.OpenCvProcessorTest
+INSTRUMENTATION_STATUS: current=28
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=brightnessContrastAndIlluminationKeepUniformColorWellDefined
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.OpenCvProcessorTest
+INSTRUMENTATION_STATUS: current=28
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=brightnessContrastAndIlluminationKeepUniformColorWellDefined
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.ResourceBenchmarkTest
+INSTRUMENTATION_STATUS: current=29
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+dev.offlinescan.processing.ResourceBenchmarkTest:
+INSTRUMENTATION_STATUS: test=measureBoundedHighResolutionRenderMemoryAndTime
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.ResourceBenchmarkTest
+INSTRUMENTATION_STATUS: current=29
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=measureBoundedHighResolutionRenderMemoryAndTime
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.TemporalShadowBenchmarkTest
+INSTRUMENTATION_STATUS: current=30
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+dev.offlinescan.processing.TemporalShadowBenchmarkTest:
+INSTRUMENTATION_STATUS: test=jitterMetricRemovesTrueMotionButRetainsMeasurementNoise
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.TemporalShadowBenchmarkTest
+INSTRUMENTATION_STATUS: current=30
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=jitterMetricRemovesTrueMotionButRetainsMeasurementNoise
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.TemporalShadowBenchmarkTest
+INSTRUMENTATION_STATUS: current=31
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=measureSmallMotionShadowSequences
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.TemporalShadowBenchmarkTest
+INSTRUMENTATION_STATUS: current=31
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=measureSmallMotionShadowSequences
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.TemporalShadowBenchmarkTest
+INSTRUMENTATION_STATUS: current=32
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=cancellationDuringNormalizedFallbackPreservesSignalAndBorrowedBitmap
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=dev.offlinescan.processing.TemporalShadowBenchmarkTest
+INSTRUMENTATION_STATUS: current=32
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=32
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=cancellationDuringNormalizedFallbackPreservesSignalAndBorrowedBitmap
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=
+
+Time: 11.962
+
+OK (32 tests)
+
+
+INSTRUMENTATION_CODE: -1

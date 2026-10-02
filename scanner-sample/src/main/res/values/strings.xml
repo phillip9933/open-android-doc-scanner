@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Offline Scanner</string>
+    <string name="start">Start a new scan</string>
+    <string name="completed">Pages saved: %1$d. Format: %2$s. Outputs are in the app’s private files directory.</string>
+    <string name="cancelled">Scan cancelled</string>
+    <string name="failed">Scan failed: %1$s</string>
+    <string name="mode">Capture mode</string>
+    <string name="document">Document</string><string name="receipt">Receipt</string><string name="photo">Printed photo</string><string name="card">Card (front and back)</string>
+    <style name="AppTheme" parent="android:style/Theme.Material.Light.NoActionBar"><item name="android:fontFamily">sans</item><item name="android:windowLightStatusBar">false</item></style>
+</resources>

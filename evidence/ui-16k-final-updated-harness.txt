@@ -1,0 +1,21 @@
+
+dev.offlinescan.sample.ScannerFlowTest:...
+Error in emulatorCameraManualCaptureAndCancel(dev.offlinescan.sample.ScannerFlowTest):
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 15000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:504)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:339)
+	at dev.offlinescan.sample.ScannerFlowTest.emulatorCameraManualCaptureAndCancel(ScannerFlowTest.kt:127)
+
+
+Time: 22.684
+There was 1 failure:
+1) emulatorCameraManualCaptureAndCancel(dev.offlinescan.sample.ScannerFlowTest)
+androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 15000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:504)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:339)
+	at dev.offlinescan.sample.ScannerFlowTest.emulatorCameraManualCaptureAndCancel(ScannerFlowTest.kt:127)
+
+FAILURES!!!
+Tests run: 4,  Failures: 1
+
+

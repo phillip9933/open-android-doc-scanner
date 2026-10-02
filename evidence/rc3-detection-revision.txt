@@ -1,0 +1,8 @@
+
+dev.offlinescan.processing.DetectionChallengeTest:.
+
+Time: 0.598
+
+OK (1 test)
+
+

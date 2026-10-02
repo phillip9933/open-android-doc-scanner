@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dev.offlinescan.camera.AutoCaptureGateTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-10-01T08:41:05.905Z" hostname="PPWLT1" time="0.049">
+  <properties/>
+  <testcase name="droppedFramesAndBackwardTimeCannotCountAsStability" classname="dev.offlinescan.camera.AutoCaptureGateTest" time="0.038"/>
+  <testcase name="transientDifferentSceneDoesNotUnlockAndCornerMovementAloneDoesNotUnlock" classname="dev.offlinescan.camera.AutoCaptureGateTest" time="0.001"/>
+  <testcase name="autoCallbackReservationDoesNotRepeatWithoutAnActualCapture" classname="dev.offlinescan.camera.AutoCaptureGateTest" time="0.001"/>
+  <testcase name="shutterAcceptsDuplicatesButRejectsConcurrentCapture" classname="dev.offlinescan.camera.AutoCaptureGateTest" time="0.0"/>
+  <testcase name="throttleHasBoundedRateAndResetsAfterPause" classname="dev.offlinescan.camera.AutoCaptureGateTest" time="0.001"/>
+  <testcase name="lowQualityResetsTheEntireStabilityWindow" classname="dev.offlinescan.camera.AutoCaptureGateTest" time="0.003"/>
+  <testcase name="gradualMotionIsMeasuredAgainstTheWindowAnchor" classname="dev.offlinescan.camera.AutoCaptureGateTest" time="0.0"/>
+  <testcase name="failedCaptureCanRetryAfterFreshStability" classname="dev.offlinescan.camera.AutoCaptureGateTest" time="0.001"/>
+  <testcase name="pauseDropsStabilityAndPreservesDuplicateLockWhileResetClearsIt" classname="dev.offlinescan.camera.AutoCaptureGateTest" time="0.0"/>
+  <testcase name="requiresDurationAndLocksDuplicateUntilSceneChanges" classname="dev.offlinescan.camera.AutoCaptureGateTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

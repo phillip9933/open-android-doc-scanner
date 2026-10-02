@@ -1,0 +1,205 @@
+> Task :scanner-core:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :scanner-core:compileKotlin UP-TO-DATE
+> Task :scanner-core:compileJava NO-SOURCE
+> Task :scanner-core:processResources NO-SOURCE
+> Task :scanner-core:classes UP-TO-DATE
+> Task :scanner-core:jar UP-TO-DATE
+> Task :scanner-camera:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :scanner-camera:preBuild UP-TO-DATE
+> Task :scanner-camera:preDebugBuild UP-TO-DATE
+> Task :scanner-camera:generateDebugResValues UP-TO-DATE
+> Task :scanner-camera:generateDebugResources UP-TO-DATE
+> Task :scanner-camera:packageDebugResources UP-TO-DATE
+> Task :scanner-camera:processDebugNavigationResources UP-TO-DATE
+> Task :scanner-camera:parseDebugLocalResources UP-TO-DATE
+> Task :scanner-camera:generateDebugRFile UP-TO-DATE
+> Task :scanner-processing-opencv:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :scanner-processing-opencv:preBuild UP-TO-DATE
+> Task :scanner-processing-opencv:preDebugBuild UP-TO-DATE
+> Task :scanner-processing-opencv:generateDebugResValues UP-TO-DATE
+> Task :scanner-processing-opencv:generateDebugResources UP-TO-DATE
+> Task :scanner-processing-opencv:packageDebugResources UP-TO-DATE
+> Task :scanner-processing-opencv:processDebugNavigationResources UP-TO-DATE
+> Task :scanner-processing-opencv:parseDebugLocalResources UP-TO-DATE
+> Task :scanner-processing-opencv:generateDebugRFile UP-TO-DATE
+> Task :scanner-processing-opencv:compileDebugKotlin UP-TO-DATE
+> Task :scanner-processing-opencv:javaPreCompileDebug UP-TO-DATE
+> Task :scanner-processing-opencv:compileDebugJavaWithJavac NO-SOURCE
+> Task :scanner-processing-opencv:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :scanner-camera:javaPreCompileDebug UP-TO-DATE
+> Task :scanner-camera:preDebugUnitTestBuild UP-TO-DATE
+> Task :scanner-camera:generateDebugUnitTestStubRFile UP-TO-DATE
+> Task :scanner-camera:javaPreCompileDebugUnitTest UP-TO-DATE
+> Task :scanner-processing-opencv:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :scanner-processing-opencv:processDebugJavaRes UP-TO-DATE
+> Task :scanner-sample:preBuild UP-TO-DATE
+> Task :scanner-sample:preDebugBuild UP-TO-DATE
+> Task :scanner-sample:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :scanner-sample:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :scanner-camera:compileDebugLibraryResources UP-TO-DATE
+> Task :scanner-export:preBuild UP-TO-DATE
+> Task :scanner-export:preDebugBuild UP-TO-DATE
+> Task :scanner-export:generateDebugResValues UP-TO-DATE
+> Task :scanner-export:generateDebugResources UP-TO-DATE
+> Task :scanner-export:packageDebugResources UP-TO-DATE
+> Task :scanner-export:processDebugNavigationResources UP-TO-DATE
+> Task :scanner-export:compileDebugLibraryResources UP-TO-DATE
+> Task :scanner-export:parseDebugLocalResources UP-TO-DATE
+> Task :scanner-export:generateDebugRFile UP-TO-DATE
+> Task :scanner-processing-opencv:compileDebugLibraryResources UP-TO-DATE
+> Task :scanner-camera:writeDebugAarMetadata UP-TO-DATE
+> Task :scanner-export:writeDebugAarMetadata UP-TO-DATE
+> Task :scanner-processing-opencv:writeDebugAarMetadata UP-TO-DATE
+> Task :scanner-ui-compose:preBuild UP-TO-DATE
+> Task :scanner-ui-compose:preDebugBuild UP-TO-DATE
+> Task :scanner-ui-compose:writeDebugAarMetadata UP-TO-DATE
+> Task :scanner-sample:checkDebugAarMetadata UP-TO-DATE
+> Task :scanner-ui-compose:processDebugNavigationResources
+> Task :scanner-sample:processDebugNavigationResources UP-TO-DATE
+> Task :scanner-sample:compileDebugNavigationResources UP-TO-DATE
+> Task :scanner-sample:generateDebugResValues UP-TO-DATE
+> Task :scanner-ui-compose:generateDebugResValues UP-TO-DATE
+> Task :scanner-ui-compose:generateDebugResources
+> Task :scanner-ui-compose:packageDebugResources
+> Task :scanner-sample:mapDebugSourceSetPaths
+> Task :scanner-sample:generateDebugResources UP-TO-DATE
+> Task :scanner-sample:packageDebugResources UP-TO-DATE
+> Task :scanner-sample:parseDebugLocalResources UP-TO-DATE
+> Task :scanner-sample:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :scanner-camera:extractDeepLinksDebug UP-TO-DATE
+> Task :scanner-camera:processDebugManifest UP-TO-DATE
+> Task :scanner-export:extractDeepLinksDebug UP-TO-DATE
+> Task :scanner-export:processDebugManifest UP-TO-DATE
+> Task :scanner-processing-opencv:extractDeepLinksDebug UP-TO-DATE
+> Task :scanner-processing-opencv:processDebugManifest UP-TO-DATE
+> Task :scanner-sample:extractDeepLinksDebug UP-TO-DATE
+> Task :scanner-ui-compose:extractDeepLinksDebug UP-TO-DATE
+> Task :scanner-ui-compose:processDebugManifest UP-TO-DATE
+> Task :scanner-sample:processDebugMainManifest UP-TO-DATE
+> Task :scanner-sample:processDebugManifest UP-TO-DATE
+> Task :scanner-sample:processDebugManifestForPackage UP-TO-DATE
+> Task :scanner-sample:mergeDebugResources
+> Task :scanner-export:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :scanner-ui-compose:compileDebugLibraryResources
+> Task :scanner-ui-compose:parseDebugLocalResources
+> Task :scanner-export:compileDebugKotlin UP-TO-DATE
+> Task :scanner-export:javaPreCompileDebug UP-TO-DATE
+> Task :scanner-export:compileDebugJavaWithJavac NO-SOURCE
+> Task :scanner-export:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :scanner-ui-compose:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :scanner-ui-compose:javaPreCompileDebug UP-TO-DATE
+> Task :scanner-sample:javaPreCompileDebug UP-TO-DATE
+> Task :scanner-camera:mergeDebugShaders UP-TO-DATE
+> Task :scanner-camera:compileDebugShaders NO-SOURCE
+> Task :scanner-camera:generateDebugAssets UP-TO-DATE
+> Task :scanner-camera:mergeDebugAssets UP-TO-DATE
+> Task :scanner-export:mergeDebugShaders UP-TO-DATE
+> Task :scanner-export:compileDebugShaders NO-SOURCE
+> Task :scanner-export:generateDebugAssets UP-TO-DATE
+> Task :scanner-export:mergeDebugAssets UP-TO-DATE
+> Task :scanner-processing-opencv:mergeDebugShaders UP-TO-DATE
+> Task :scanner-processing-opencv:compileDebugShaders NO-SOURCE
+> Task :scanner-processing-opencv:generateDebugAssets UP-TO-DATE
+> Task :scanner-processing-opencv:mergeDebugAssets UP-TO-DATE
+> Task :scanner-sample:mergeDebugShaders UP-TO-DATE
+> Task :scanner-sample:compileDebugShaders NO-SOURCE
+> Task :scanner-sample:generateDebugAssets UP-TO-DATE
+> Task :scanner-ui-compose:mergeDebugShaders UP-TO-DATE
+> Task :scanner-ui-compose:compileDebugShaders NO-SOURCE
+> Task :scanner-ui-compose:generateDebugAssets UP-TO-DATE
+> Task :scanner-ui-compose:mergeDebugAssets UP-TO-DATE
+> Task :scanner-sample:mergeDebugAssets UP-TO-DATE
+> Task :scanner-sample:compressDebugAssets UP-TO-DATE
+> Task :scanner-export:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :scanner-ui-compose:generateDebugRFile
+> Task :scanner-sample:desugarDebugFileDependencies UP-TO-DATE
+> Task :scanner-export:processDebugJavaRes UP-TO-DATE
+> Task :scanner-sample:checkDebugDuplicateClasses UP-TO-DATE
+> Task :scanner-sample:mergeExtDexDebug UP-TO-DATE
+> Task :scanner-processing-opencv:bundleLibRuntimeToDirDebug UP-TO-DATE
+> Task :scanner-export:bundleLibRuntimeToDirDebug UP-TO-DATE
+> Task :scanner-camera:mergeDebugJniLibFolders UP-TO-DATE
+> Task :scanner-camera:mergeDebugNativeLibs NO-SOURCE
+> Task :scanner-camera:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :scanner-export:mergeDebugJniLibFolders UP-TO-DATE
+> Task :scanner-export:mergeDebugNativeLibs NO-SOURCE
+> Task :scanner-export:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :scanner-processing-opencv:mergeDebugJniLibFolders UP-TO-DATE
+> Task :scanner-processing-opencv:mergeDebugNativeLibs UP-TO-DATE
+> Task :scanner-processing-opencv:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :scanner-sample:mergeDebugJniLibFolders UP-TO-DATE
+> Task :scanner-ui-compose:mergeDebugJniLibFolders UP-TO-DATE
+> Task :scanner-ui-compose:mergeDebugNativeLibs NO-SOURCE
+> Task :scanner-ui-compose:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :scanner-sample:mergeDebugNativeLibs UP-TO-DATE
+> Task :scanner-sample:stripDebugDebugSymbols UP-TO-DATE
+> Task :scanner-sample:validateSigningDebug UP-TO-DATE
+> Task :scanner-sample:writeDebugAppMetadata UP-TO-DATE
+> Task :scanner-sample:writeDebugSigningConfigVersions UP-TO-DATE
+> Task :scanner-sample:preDebugAndroidTestBuild SKIPPED
+> Task :scanner-sample:checkDebugAndroidTestAarMetadata UP-TO-DATE
+> Task :scanner-sample:processDebugAndroidTestNavigationResources UP-TO-DATE
+> Task :scanner-sample:compileDebugAndroidTestNavigationResources UP-TO-DATE
+> Task :scanner-sample:generateDebugAndroidTestResValues UP-TO-DATE
+> Task :scanner-sample:mapDebugAndroidTestSourceSetPaths UP-TO-DATE
+> Task :scanner-sample:generateDebugAndroidTestResources UP-TO-DATE
+> Task :scanner-sample:mergeDebugAndroidTestResources UP-TO-DATE
+> Task :scanner-sample:processDebugAndroidTestManifest UP-TO-DATE
+> Task :scanner-sample:processDebugAndroidTestResources UP-TO-DATE
+> Task :scanner-sample:javaPreCompileDebugAndroidTest UP-TO-DATE
+> Task :scanner-sample:mergeDebugAndroidTestShaders UP-TO-DATE
+> Task :scanner-sample:compileDebugAndroidTestShaders NO-SOURCE
+> Task :scanner-sample:generateDebugAndroidTestAssets UP-TO-DATE
+> Task :scanner-sample:mergeDebugAndroidTestAssets UP-TO-DATE
+> Task :scanner-sample:compressDebugAndroidTestAssets UP-TO-DATE
+> Task :scanner-sample:desugarDebugAndroidTestFileDependencies UP-TO-DATE
+> Task :scanner-sample:checkDebugAndroidTestDuplicateClasses UP-TO-DATE
+> Task :scanner-sample:mergeExtDexDebugAndroidTest UP-TO-DATE
+> Task :scanner-sample:mergeDebugAndroidTestJniLibFolders UP-TO-DATE
+> Task :scanner-sample:mergeDebugAndroidTestNativeLibs NO-SOURCE
+> Task :scanner-sample:stripDebugAndroidTestDebugSymbols NO-SOURCE
+> Task :scanner-sample:validateSigningDebugAndroidTest UP-TO-DATE
+> Task :scanner-sample:writeDebugAndroidTestSigningConfigVersions UP-TO-DATE
+> Task :scanner-camera:compileDebugKotlin
+> Task :scanner-camera:compileDebugJavaWithJavac NO-SOURCE
+> Task :scanner-camera:processDebugJavaRes UP-TO-DATE
+> Task :scanner-camera:bundleLibRuntimeToDirDebug
+> Task :scanner-camera:bundleLibRuntimeToJarDebug
+> Task :scanner-camera:bundleLibCompileToJarDebug
+> Task :scanner-sample:processDebugResources
+> Task :scanner-camera:compileDebugUnitTestKotlin
+> Task :scanner-camera:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :scanner-camera:processDebugUnitTestJavaRes UP-TO-DATE
+> Task :scanner-camera:testDebugUnitTest
+> Task :scanner-ui-compose:compileDebugKotlin
+> Task :scanner-ui-compose:compileDebugJavaWithJavac NO-SOURCE
+> Task :scanner-ui-compose:processDebugJavaRes
+> Task :scanner-ui-compose:bundleLibCompileToJarDebug
+> Task :scanner-ui-compose:bundleLibRuntimeToJarDebug
+> Task :scanner-ui-compose:bundleLibRuntimeToDirDebug
+> Task :scanner-sample:compileDebugKotlin
+> Task :scanner-sample:compileDebugJavaWithJavac NO-SOURCE
+> Task :scanner-sample:dexBuilderDebug
+> Task :scanner-sample:mergeDebugGlobalSynthetics UP-TO-DATE
+> Task :scanner-sample:processDebugJavaRes UP-TO-DATE
+> Task :scanner-sample:mergeLibDexDebugAndroidTest UP-TO-DATE
+> Task :scanner-sample:bundleDebugClassesToCompileJar
+> Task :scanner-sample:mergeProjectDexDebug
+> Task :scanner-sample:mergeLibDexDebug
+> Task :scanner-sample:compileDebugAndroidTestKotlin
+> Task :scanner-sample:compileDebugAndroidTestJavaWithJavac NO-SOURCE
+> Task :scanner-sample:dexBuilderDebugAndroidTest UP-TO-DATE
+> Task :scanner-sample:mergeDebugAndroidTestGlobalSynthetics UP-TO-DATE
+> Task :scanner-sample:processDebugAndroidTestJavaRes UP-TO-DATE
+> Task :scanner-sample:mergeDebugAndroidTestJavaResource UP-TO-DATE
+> Task :scanner-sample:mergeProjectDexDebugAndroidTest UP-TO-DATE
+> Task :scanner-sample:packageDebugAndroidTest UP-TO-DATE
+> Task :scanner-sample:createDebugAndroidTestApkListingFileRedirect UP-TO-DATE
+> Task :scanner-sample:assembleDebugAndroidTest UP-TO-DATE
+> Task :scanner-sample:mergeDebugJavaResource
+> Task :scanner-sample:packageDebug
+> Task :scanner-sample:createDebugApkListingFileRedirect UP-TO-DATE
+> Task :scanner-sample:assembleDebug
+
+BUILD SUCCESSFUL in 11s
+154 actionable tasks: 28 executed, 126 up-to-date

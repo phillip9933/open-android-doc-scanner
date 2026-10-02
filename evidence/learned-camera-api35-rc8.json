@@ -1,0 +1,212 @@
+{
+  "schemaVersion": 1,
+  "sourceManifest": {
+    "source_url": "https:\/\/github.com\/jchazalon\/smartdoc15-ch1-dataset\/releases\/download\/v2.0.0\/frames.tar.gz",
+    "release": "v2.0.0",
+    "license": "CC-BY-4.0",
+    "license_evidence": "https:\/\/github.com\/jchazalon\/smartdoc15-ch1-dataset#about-smartdoc-2015---challenge-1",
+    "scope": "real-camera diagnostic; possible model training overlap; not independent held-out evaluation",
+    "samples": [
+      {
+        "archive_path": "background01\/datasheet001\/frame_0001.jpeg",
+        "file": "background01__datasheet001__frame_0001.jpeg",
+        "bytes": 44195,
+        "sha256": "d0385a7bda58f9fd9b3d66e42548399e1aca98386f0f59cb6dba42896a453cef",
+        "corners_tl_tr_br_bl_pixels": [
+          [
+            698.087,
+            200.476
+          ],
+          [
+            1178.15,
+            191.515
+          ],
+          [
+            1253.18,
+            869.656
+          ],
+          [
+            692.141,
+            891.077
+          ]
+        ],
+        "annotation_source": "Exact image_path and coordinates in dataset author README metadata example",
+        "annotation_url": "https:\/\/github.com\/jchazalon\/smartdoc15-ch1-dataset#metadata-file-metadatacsvgz",
+        "image_size": [
+          1920,
+          1080
+        ]
+      },
+      {
+        "archive_path": "background01\/datasheet001\/frame_0002.jpeg",
+        "file": "background01__datasheet001__frame_0002.jpeg",
+        "bytes": 51208,
+        "sha256": "8c9a41a301862f10db2d36872938b15b32203160dc3e1cacf314e3c4a3a61d89"
+      },
+      {
+        "archive_path": "background01\/datasheet001\/frame_0003.jpeg",
+        "file": "background01__datasheet001__frame_0003.jpeg",
+        "bytes": 59506,
+        "sha256": "0852aad0c9a3ba3b073196da47ddb63d03a29f6bc266c357026698e51d1f2935"
+      }
+    ],
+    "partial_compressed_read_upper_bound_bytes": 122880
+  },
+  "scope": "Real camera diagnostic; possible model training overlap; only frame1 author ground truth; not independent quality acceptance",
+  "timingScope": "First inference per detector may include cold initialization; subsequent same-session runs warmed; not a latency benchmark",
+  "cases": [
+    {
+      "mode": "Standard",
+      "file": "background01__datasheet001__frame_0001.jpeg",
+      "width": 1920,
+      "height": 1080,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "polygonIoU": 0,
+      "normalizedCornerError": null,
+      "minimumCornerPeakProbability": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "elapsedMillis": 179.0877,
+      "sharpness": 2.709382698843069,
+      "brightness": 0.5479949996974098
+    },
+    {
+      "mode": "AI",
+      "file": "background01__datasheet001__frame_0001.jpeg",
+      "width": 1920,
+      "height": 1080,
+      "detected": true,
+      "confidence": 0.9287756788389554,
+      "corners": [
+        [
+          0.3644451422166755,
+          0.18180219340713105
+        ],
+        [
+          0.6162322116462389,
+          0.17812229542751634
+        ],
+        [
+          0.6531737328941845,
+          0.8106079028711063
+        ],
+        [
+          0.36256711269321357,
+          0.8245584646435486
+        ]
+      ],
+      "polygonIoU": 0.9831502814255221,
+      "normalizedCornerError": 0.003545107759038625,
+      "minimumCornerPeakProbability": 0.9427073140215397,
+      "maskAgreement": 0.9852216748768473,
+      "rejection": null,
+      "elapsedMillis": 232.3928,
+      "sharpness": 2.6427933966518125,
+      "brightness": 0.6869737977833379
+    },
+    {
+      "mode": "Standard",
+      "file": "background01__datasheet001__frame_0002.jpeg",
+      "width": 1920,
+      "height": 1080,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "minimumCornerPeakProbability": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "elapsedMillis": 41.5434,
+      "sharpness": 2.9414618474698977,
+      "brightness": 0.5627015326192206
+    },
+    {
+      "mode": "AI",
+      "file": "background01__datasheet001__frame_0002.jpeg",
+      "width": 1920,
+      "height": 1080,
+      "detected": true,
+      "confidence": 0.9338334450803827,
+      "corners": [
+        [
+          0.3638846749166113,
+          0.18096471430994387
+        ],
+        [
+          0.6165914866591211,
+          0.17766241268302874
+        ],
+        [
+          0.653586769071412,
+          0.8127035460793325
+        ],
+        [
+          0.3558629860189904,
+          0.8257581018084665
+        ]
+      ],
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "minimumCornerPeakProbability": 0.9545852994155023,
+      "maskAgreement": 0.9782608695652174,
+      "rejection": null,
+      "elapsedMillis": 34.6013,
+      "sharpness": 2.822908114243834,
+      "brightness": 0.697945085451074
+    },
+    {
+      "mode": "Standard",
+      "file": "background01__datasheet001__frame_0003.jpeg",
+      "width": 1920,
+      "height": 1080,
+      "detected": false,
+      "confidence": 0,
+      "corners": null,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "minimumCornerPeakProbability": null,
+      "maskAgreement": null,
+      "rejection": null,
+      "elapsedMillis": 29.067,
+      "sharpness": 25.56715003723693,
+      "brightness": 0.5643925048414428
+    },
+    {
+      "mode": "AI",
+      "file": "background01__datasheet001__frame_0003.jpeg",
+      "width": 1920,
+      "height": 1080,
+      "detected": true,
+      "confidence": 0.94,
+      "corners": [
+        [
+          0.3640593096507931,
+          0.18115042885433386
+        ],
+        [
+          0.616234831780958,
+          0.17738909250221666
+        ],
+        [
+          0.6481816357183711,
+          0.7963265167502749
+        ],
+        [
+          0.36399714770163183,
+          0.8205237003978508
+        ]
+      ],
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "minimumCornerPeakProbability": 0.9808289068707933,
+      "maskAgreement": 0.98,
+      "rejection": null,
+      "elapsedMillis": 26.943,
+      "sharpness": 109.63716920644966,
+      "brightness": 0.7076020842361156
+    }
+  ]
+}

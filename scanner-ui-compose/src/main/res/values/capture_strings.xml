@@ -1,0 +1,22 @@
+<resources>
+    <string name="capture_auto">Auto</string><string name="capture_manual">Manual</string>
+    <string name="capture_pause">Pause automatic capture</string><string name="capture_resume">Resume automatic capture</string>
+    <string name="capture_paused">Automatic capture paused</string>
+    <string name="capture_hold">Hold steady</string><string name="capture_find">Position a document</string>
+    <string name="capture_saving">Adding page…</string><string name="capture_added">Page added. Scan the next document.</string>
+    <string name="capture_limit">Page limit reached</string><string name="capture_next">Next</string>
+    <string name="capture_edit_page">Review page %1$d</string>
+    <string name="capture_allow">Allow camera access to scan</string>
+    <string name="capture_precision">Precise adjustment</string><string name="capture_crop_hint">Drag the corners to adjust the crop.</string>
+    <string name="capture_adjustments">Adjustments</string><string name="capture_done">Done</string>
+    <string name="capture_manual_hint">Tap the shutter to add a page</string>
+    <string name="position_document">Position a Document</string>
+    <string name="position_photo">Position a Photo</string>
+    <string name="position_receipt">Position a Receipt</string>
+    <string name="position_card">Position a Card</string>
+    <string name="scanner_settings">Scanner settings</string>
+    <string name="detection_mode">Detection mode</string>
+    <string name="detection_standard">Standard</string>
+    <string name="detection_ai">AI</string>
+    <string name="detection_ai_description">AI is the default. Both modes work offline. Choose Standard to use edge-based detection.</string>
+</resources>

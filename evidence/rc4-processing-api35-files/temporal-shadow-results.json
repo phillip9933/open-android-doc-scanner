@@ -1,0 +1,5084 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "tuning-light-shadow-00",
+      "split": "tuning",
+      "sequence": "tuning-light-shadow",
+      "category": "light-shadow",
+      "frameIndex": 0,
+      "file": "tuning-light-shadow-00.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.20344287949921752,
+          0.1394572025052192
+        ],
+        [
+          0.837245696400626,
+          0.17494780793319414
+        ],
+        [
+          0.7902973395931142,
+          0.922338204592902
+        ],
+        [
+          0.1486697965571205,
+          0.8492693110647181
+        ]
+      ],
+      "corners": [
+        [
+          0.20220891423228482,
+          0.13867977399790546
+        ],
+        [
+          0.8377226591683501,
+          0.17460400942698115
+        ],
+        [
+          0.7906908119435819,
+          0.9220210918160117
+        ],
+        [
+          0.14790011287004526,
+          0.8487629356633734
+        ]
+      ],
+      "confidence": 0.88347429672082,
+      "brightness": 0.619338720383987,
+      "sharpness": 156.6078686607255,
+      "polygonIoU": 0.9964836003318807,
+      "normalizedCornerError": 8.682681472758898E-4,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 6.1058,
+      "managedHeapBeforeBytes": 4508688,
+      "managedHeapAfterBytes": 5168144,
+      "nativeHeapBeforeBytes": 7054160,
+      "nativeHeapAfterBytes": 7063152
+    },
+    {
+      "id": "tuning-light-shadow-01",
+      "split": "tuning",
+      "sequence": "tuning-light-shadow",
+      "category": "light-shadow",
+      "frameIndex": 1,
+      "file": "tuning-light-shadow-01.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.20933210878089248,
+          0.13292851259688904
+        ],
+        [
+          0.8428726736295101,
+          0.17595255564415813
+        ],
+        [
+          0.7909334624595882,
+          0.922755137402704
+        ],
+        [
+          0.14981951273387092,
+          0.8420612756484214
+        ]
+      ],
+      "corners": [
+        [
+          0.20852036280251224,
+          0.13267676795251446
+        ],
+        [
+          0.8433599705919216,
+          0.1757557872460479
+        ],
+        [
+          0.7917620908270641,
+          0.9229673992554182
+        ],
+        [
+          0.14907599574772284,
+          0.8418914832918611
+        ]
+      ],
+      "confidence": 0.880630680834799,
+      "brightness": 0.6070570874183007,
+      "sharpness": 177.2597942382389,
+      "polygonIoU": 0.9973933784458062,
+      "normalizedCornerError": 7.483629611400012E-4,
+      "motionCompensatedCornerJitter": 4.6112839228482663E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 5.6724,
+      "managedHeapBeforeBytes": 5168144,
+      "managedHeapAfterBytes": 5827600,
+      "nativeHeapBeforeBytes": 7063232,
+      "nativeHeapAfterBytes": 7074464
+    },
+    {
+      "id": "tuning-light-shadow-02",
+      "split": "tuning",
+      "sequence": "tuning-light-shadow",
+      "category": "light-shadow",
+      "frameIndex": 2,
+      "file": "tuning-light-shadow-02.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.2048568310403347,
+          0.12962098333043276
+        ],
+        [
+          0.8384695116019888,
+          0.17071164374338285
+        ],
+        [
+          0.7878109765321354,
+          0.9176707659216599
+        ],
+        [
+          0.14656033857852005,
+          0.8389334957901072
+        ]
+      ],
+      "corners": [
+        [
+          0.20403523536838772,
+          0.12933454069780279
+        ],
+        [
+          0.8392085482511705,
+          0.17090539538765004
+        ],
+        [
+          0.7883500135584014,
+          0.9177147140116644
+        ],
+        [
+          0.1457314143964999,
+          0.8384519650045263
+        ]
+      ],
+      "confidence": 0.8805897224834387,
+      "brightness": 0.605114825878268,
+      "sharpness": 224.42361198929683,
+      "polygonIoU": 0.9972621776966101,
+      "normalizedCornerError": 7.833932975067891E-4,
+      "motionCompensatedCornerJitter": 2.8971862891736665E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 15.469,
+      "managedHeapBeforeBytes": 5827600,
+      "managedHeapAfterBytes": 6482960,
+      "nativeHeapBeforeBytes": 7074544,
+      "nativeHeapAfterBytes": 7084880
+    },
+    {
+      "id": "tuning-light-shadow-03",
+      "split": "tuning",
+      "sequence": "tuning-light-shadow",
+      "category": "light-shadow",
+      "frameIndex": 3,
+      "file": "tuning-light-shadow-03.png",
+      "expectedDetection": true,
+      "detected": false,
+      "truth": [
+        [
+          0.1989644159678277,
+          0.1351548293484195
+        ],
+        [
+          0.8328682840561921,
+          0.16727345556272363
+        ],
+        [
+          0.7881544447442874,
+          0.9149076649463476
+        ],
+        [
+          0.14631358146414547,
+          0.8452526753115049
+        ]
+      ],
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.6063078916462419,
+      "sharpness": 247.52659674881835,
+      "polygonIoU": 0,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": true,
+      "elapsedMillis": 13.4397,
+      "managedHeapBeforeBytes": 5643088,
+      "managedHeapAfterBytes": 4385616,
+      "nativeHeapBeforeBytes": 7082496,
+      "nativeHeapAfterBytes": 7039408
+    },
+    {
+      "id": "tuning-light-shadow-04",
+      "split": "tuning",
+      "sequence": "tuning-light-shadow",
+      "category": "light-shadow",
+      "frameIndex": 4,
+      "file": "tuning-light-shadow-04.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.2016383729148888,
+          0.14212895950330232
+        ],
+        [
+          0.8356671421666061,
+          0.1695109274698948
+        ],
+        [
+          0.7940927845599254,
+          0.9174674865490609
+        ],
+        [
+          0.1519695562992707,
+          0.8526090444001484
+        ]
+      ],
+      "corners": [
+        [
+          0.2007246826529612,
+          0.14206425036552525
+        ],
+        [
+          0.8365573794906052,
+          0.16929563275845289
+        ],
+        [
+          0.7947976803733747,
+          0.917678265429817
+        ],
+        [
+          0.15104483534977886,
+          0.8523639207263132
+        ]
+      ],
+      "confidence": 0.8806025930409395,
+      "brightness": 0.6131394122753269,
+      "sharpness": 230.50145151891712,
+      "polygonIoU": 0.9970292684946284,
+      "normalizedCornerError": 8.810681197485012E-4,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 4.8806,
+      "managedHeapBeforeBytes": 4385616,
+      "managedHeapAfterBytes": 5040976,
+      "nativeHeapBeforeBytes": 7039488,
+      "nativeHeapAfterBytes": 7049824
+    },
+    {
+      "id": "tuning-light-shadow-05",
+      "split": "tuning",
+      "sequence": "tuning-light-shadow",
+      "category": "light-shadow",
+      "frameIndex": 5,
+      "file": "tuning-light-shadow-05.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.2058776789746722,
+          0.14011664862571602
+        ],
+        [
+          0.8397608957102727,
+          0.17295259949577418
+        ],
+        [
+          0.7945716739620924,
+          0.9205359409670347
+        ],
+        [
+          0.15277533315571315,
+          0.8501546585448964
+        ]
+      ],
+      "corners": [
+        [
+          0.20501404029013454,
+          0.13951027898361862
+        ],
+        [
+          0.840034668887256,
+          0.1727240288524785
+        ],
+        [
+          0.7953897655430248,
+          0.9205384995640558
+        ],
+        [
+          0.15220471189275983,
+          0.8495991986455662
+        ]
+      ],
+      "confidence": 0.86,
+      "brightness": 0.6210185866013073,
+      "sharpness": 233.17479605674745,
+      "polygonIoU": 0.99704608252341,
+      "normalizedCornerError": 7.56581214331485E-4,
+      "motionCompensatedCornerJitter": 4.671050608212901E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 10.2007,
+      "managedHeapBeforeBytes": 5040976,
+      "managedHeapAfterBytes": 6282064,
+      "nativeHeapBeforeBytes": 7049904,
+      "nativeHeapAfterBytes": 7066496
+    },
+    {
+      "id": "tuning-light-shadow-06",
+      "split": "tuning",
+      "sequence": "tuning-light-shadow",
+      "category": "light-shadow",
+      "frameIndex": 6,
+      "file": "tuning-light-shadow-06.png",
+      "expectedDetection": true,
+      "detected": false,
+      "truth": [
+        [
+          0.20424009165264037,
+          0.13148640593414887
+        ],
+        [
+          0.83783322454937,
+          0.17311002344351853
+        ],
+        [
+          0.7868216455052568,
+          0.920026385552172
+        ],
+        [
+          0.1456083505972794,
+          0.8407497411164128
+        ]
+      ],
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.6308265293096406,
+      "sharpness": 269.3469593060705,
+      "polygonIoU": 0,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": true,
+      "elapsedMillis": 20.5558,
+      "managedHeapBeforeBytes": 6314832,
+      "managedHeapAfterBytes": 3877712,
+      "nativeHeapBeforeBytes": 7066576,
+      "nativeHeapAfterBytes": 7031712
+    },
+    {
+      "id": "tuning-light-shadow-07",
+      "split": "tuning",
+      "sequence": "tuning-light-shadow",
+      "category": "light-shadow",
+      "frameIndex": 7,
+      "file": "tuning-light-shadow-07.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.20263889508792082,
+          0.12862170944893994
+        ],
+        [
+          0.8361916562130731,
+          0.1713249427676839
+        ],
+        [
+          0.7844649414910999,
+          0.918153771241338
+        ],
+        [
+          0.1433280775903477,
+          0.837784556872523
+        ]
+      ],
+      "corners": [
+        [
+          0.20217420311362239,
+          0.12830573975868004
+        ],
+        [
+          0.8367944009102917,
+          0.17133703300583228
+        ],
+        [
+          0.7849790720870983,
+          0.9184535737178895
+        ],
+        [
+          0.14234271089115172,
+          0.8375368073807494
+        ]
+      ],
+      "confidence": 0.8860419238605054,
+      "brightness": 0.6313157679738562,
+      "sharpness": 266.40698385822515,
+      "polygonIoU": 0.9976125471001296,
+      "normalizedCornerError": 6.939992582087639E-4,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 6.3907,
+      "managedHeapBeforeBytes": 3877712,
+      "managedHeapAfterBytes": 4524880,
+      "nativeHeapBeforeBytes": 7031792,
+      "nativeHeapAfterBytes": 7043024
+    },
+    {
+      "id": "tuning-cross-shadow-00",
+      "split": "tuning",
+      "sequence": "tuning-cross-shadow",
+      "category": "cross-shadow",
+      "frameIndex": 0,
+      "file": "tuning-cross-shadow-00.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.20344287949921752,
+          0.1394572025052192
+        ],
+        [
+          0.837245696400626,
+          0.17494780793319414
+        ],
+        [
+          0.7902973395931142,
+          0.922338204592902
+        ],
+        [
+          0.1486697965571205,
+          0.8492693110647181
+        ]
+      ],
+      "corners": [
+        [
+          0.2028381916844288,
+          0.1387888670396889
+        ],
+        [
+          0.8373674366426213,
+          0.1746093654971776
+        ],
+        [
+          0.7909839014598421,
+          0.9219984065427315
+        ],
+        [
+          0.14784720471259952,
+          0.8488062175504422
+        ]
+      ],
+      "confidence": 0.9107778995686374,
+      "brightness": 0.515496808619281,
+      "sharpness": 105.29016146968205,
+      "polygonIoU": 0.9970400430894226,
+      "normalizedCornerError": 7.427489585999773E-4,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 5.5416,
+      "managedHeapBeforeBytes": 4524880,
+      "managedHeapAfterBytes": 5172048,
+      "nativeHeapBeforeBytes": 7043104,
+      "nativeHeapAfterBytes": 7052096
+    },
+    {
+      "id": "tuning-cross-shadow-01",
+      "split": "tuning",
+      "sequence": "tuning-cross-shadow",
+      "category": "cross-shadow",
+      "frameIndex": 1,
+      "file": "tuning-cross-shadow-01.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.20933210878089248,
+          0.13292851259688904
+        ],
+        [
+          0.8428726736295101,
+          0.17595255564415813
+        ],
+        [
+          0.7909334624595882,
+          0.922755137402704
+        ],
+        [
+          0.14981951273387092,
+          0.8420612756484214
+        ]
+      ],
+      "corners": [
+        [
+          0.20853042530525975,
+          0.13280982091458474
+        ],
+        [
+          0.8436447472732408,
+          0.17567995303246797
+        ],
+        [
+          0.7915315683683529,
+          0.9229490660914618
+        ],
+        [
+          0.1488719378811214,
+          0.841879205603644
+        ]
+      ],
+      "confidence": 0.910824173040975,
+      "brightness": 0.508417049632353,
+      "sharpness": 124.46392890608048,
+      "polygonIoU": 0.997238762309723,
+      "normalizedCornerError": 8.057189461803172E-4,
+      "motionCompensatedCornerJitter": 5.215268747509184E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 5.1617,
+      "managedHeapBeforeBytes": 5172048,
+      "managedHeapAfterBytes": 5819216,
+      "nativeHeapBeforeBytes": 7052176,
+      "nativeHeapAfterBytes": 7062064
+    },
+    {
+      "id": "tuning-cross-shadow-02",
+      "split": "tuning",
+      "sequence": "tuning-cross-shadow",
+      "category": "cross-shadow",
+      "frameIndex": 2,
+      "file": "tuning-cross-shadow-02.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.2048568310403347,
+          0.12962098333043276
+        ],
+        [
+          0.8384695116019888,
+          0.17071164374338285
+        ],
+        [
+          0.7878109765321354,
+          0.9176707659216599
+        ],
+        [
+          0.14656033857852005,
+          0.8389334957901072
+        ]
+      ],
+      "corners": [
+        [
+          0.2041118265503475,
+          0.12929755526057168
+        ],
+        [
+          0.8392292082786523,
+          0.17053635928574004
+        ],
+        [
+          0.7883547427441762,
+          0.9174646550030401
+        ],
+        [
+          0.1457544312058222,
+          0.8387512593782084
+        ]
+      ],
+      "confidence": 0.86,
+      "brightness": 0.5082910794526144,
+      "sharpness": 192.7701771616512,
+      "polygonIoU": 0.9971946963057652,
+      "normalizedCornerError": 7.499024131248032E-4,
+      "motionCompensatedCornerJitter": 2.1398001114994502E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 10.6345,
+      "managedHeapBeforeBytes": 5819216,
+      "managedHeapAfterBytes": 6867792,
+      "nativeHeapBeforeBytes": 7062144,
+      "nativeHeapAfterBytes": 7078000
+    },
+    {
+      "id": "tuning-cross-shadow-03",
+      "split": "tuning",
+      "sequence": "tuning-cross-shadow",
+      "category": "cross-shadow",
+      "frameIndex": 3,
+      "file": "tuning-cross-shadow-03.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.1989644159678277,
+          0.1351548293484195
+        ],
+        [
+          0.8328682840561921,
+          0.16727345556272363
+        ],
+        [
+          0.7881544447442874,
+          0.9149076649463476
+        ],
+        [
+          0.14631358146414547,
+          0.8452526753115049
+        ]
+      ],
+      "corners": [
+        [
+          0.19793502500661278,
+          0.13475203581477033
+        ],
+        [
+          0.83344532126912,
+          0.16720472037542092
+        ],
+        [
+          0.7891099851369192,
+          0.9148580035850487
+        ],
+        [
+          0.1456743615952002,
+          0.8451863390190513
+        ]
+      ],
+      "confidence": 0.9109803173298364,
+      "brightness": 0.5088350311478759,
+      "sharpness": 203.67284135427477,
+      "polygonIoU": 0.997086354732144,
+      "normalizedCornerError": 8.214974843324919E-4,
+      "motionCompensatedCornerJitter": 2.875580811102918E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 11.5888,
+      "managedHeapBeforeBytes": 6900560,
+      "managedHeapAfterBytes": 7547728,
+      "nativeHeapBeforeBytes": 7078080,
+      "nativeHeapAfterBytes": 7087392
+    },
+    {
+      "id": "tuning-cross-shadow-04",
+      "split": "tuning",
+      "sequence": "tuning-cross-shadow",
+      "category": "cross-shadow",
+      "frameIndex": 4,
+      "file": "tuning-cross-shadow-04.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.2016383729148888,
+          0.14212895950330232
+        ],
+        [
+          0.8356671421666061,
+          0.1695109274698948
+        ],
+        [
+          0.7940927845599254,
+          0.9174674865490609
+        ],
+        [
+          0.1519695562992707,
+          0.8526090444001484
+        ]
+      ],
+      "corners": [
+        [
+          0.20078334732554787,
+          0.14188169812732354
+        ],
+        [
+          0.8364619320953919,
+          0.16930458519051375
+        ],
+        [
+          0.794800225013839,
+          0.9176739273328586
+        ],
+        [
+          0.15110319409121914,
+          0.8524323166902258
+        ]
+      ],
+      "confidence": 0.9164043477247168,
+      "brightness": 0.511846430759804,
+      "sharpness": 161.23642600198326,
+      "polygonIoU": 0.9970888666670082,
+      "normalizedCornerError": 8.330870912016305E-4,
+      "motionCompensatedCornerJitter": 2.750894461968766E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 6.7423,
+      "managedHeapBeforeBytes": 3529552,
+      "managedHeapAfterBytes": 4209488,
+      "nativeHeapBeforeBytes": 7086624,
+      "nativeHeapAfterBytes": 7038688
+    },
+    {
+      "id": "tuning-cross-shadow-05",
+      "split": "tuning",
+      "sequence": "tuning-cross-shadow",
+      "category": "cross-shadow",
+      "frameIndex": 5,
+      "file": "tuning-cross-shadow-05.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.2058776789746722,
+          0.14011664862571602
+        ],
+        [
+          0.8397608957102727,
+          0.17295259949577418
+        ],
+        [
+          0.7945716739620924,
+          0.9205359409670347
+        ],
+        [
+          0.15277533315571315,
+          0.8501546585448964
+        ]
+      ],
+      "corners": [
+        [
+          0.20470355390781225,
+          0.13940779948942517
+        ],
+        [
+          0.8401988950734864,
+          0.1733235133854633
+        ],
+        [
+          0.7955480410570778,
+          0.9214460863477869
+        ],
+        [
+          0.15230006914029248,
+          0.849275525042173
+        ]
+      ],
+      "confidence": 0.913859715230382,
+      "brightness": 0.5156964231004901,
+      "sharpness": 134.29038501145044,
+      "polygonIoU": 0.9965485890343354,
+      "normalizedCornerError": 0.0010699059035338598,
+      "motionCompensatedCornerJitter": 6.992639611481665E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 5.1378,
+      "managedHeapBeforeBytes": 4209488,
+      "managedHeapAfterBytes": 4856656,
+      "nativeHeapBeforeBytes": 7038832,
+      "nativeHeapAfterBytes": 7048784
+    },
+    {
+      "id": "tuning-cross-shadow-06",
+      "split": "tuning",
+      "sequence": "tuning-cross-shadow",
+      "category": "cross-shadow",
+      "frameIndex": 6,
+      "file": "tuning-cross-shadow-06.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.20424009165264037,
+          0.13148640593414887
+        ],
+        [
+          0.83783322454937,
+          0.17311002344351853
+        ],
+        [
+          0.7868216455052568,
+          0.920026385552172
+        ],
+        [
+          0.1456083505972794,
+          0.8407497411164128
+        ]
+      ],
+      "corners": [
+        [
+          0.2033681864623812,
+          0.1312752458322557
+        ],
+        [
+          0.8382683679076597,
+          0.1728824734416664
+        ],
+        [
+          0.7877051355039705,
+          0.9202601924351516
+        ],
+        [
+          0.14478076366913398,
+          0.840312553914006
+        ]
+      ],
+      "confidence": 0.86,
+      "brightness": 0.5221005923202615,
+      "sharpness": 191.45366955048246,
+      "polygonIoU": 0.9971551867588172,
+      "normalizedCornerError": 8.095072968114312E-4,
+      "motionCompensatedCornerJitter": 6.071544207068314E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 11.1577,
+      "managedHeapBeforeBytes": 4856656,
+      "managedHeapAfterBytes": 5905232,
+      "nativeHeapBeforeBytes": 7048864,
+      "nativeHeapAfterBytes": 7064944
+    },
+    {
+      "id": "tuning-cross-shadow-07",
+      "split": "tuning",
+      "sequence": "tuning-cross-shadow",
+      "category": "cross-shadow",
+      "frameIndex": 7,
+      "file": "tuning-cross-shadow-07.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.20263889508792082,
+          0.12862170944893994
+        ],
+        [
+          0.8361916562130731,
+          0.1713249427676839
+        ],
+        [
+          0.7844649414910999,
+          0.918153771241338
+        ],
+        [
+          0.1433280775903477,
+          0.837784556872523
+        ]
+      ],
+      "corners": [
+        [
+          0.20203588226917701,
+          0.12825456753207065
+        ],
+        [
+          0.8368393420371485,
+          0.1712205165856239
+        ],
+        [
+          0.7851464757472338,
+          0.9185223292907351
+        ],
+        [
+          0.14224584193719822,
+          0.8375012425156374
+        ]
+      ],
+      "confidence": 0.9163577501038738,
+      "brightness": 0.5222640676062092,
+      "sharpness": 193.01117396223282,
+      "polygonIoU": 0.9971272881056177,
+      "normalizedCornerError": 8.138869888550561E-4,
+      "motionCompensatedCornerJitter": 2.7420006006201363E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 7.3651,
+      "managedHeapBeforeBytes": 5938000,
+      "managedHeapAfterBytes": 6585168,
+      "nativeHeapBeforeBytes": 7065024,
+      "nativeHeapAfterBytes": 7077152
+    },
+    {
+      "id": "tuning-moving-penumbra-00",
+      "split": "tuning",
+      "sequence": "tuning-moving-penumbra",
+      "category": "moving-penumbra",
+      "frameIndex": 0,
+      "file": "tuning-moving-penumbra-00.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.20344287949921752,
+          0.1394572025052192
+        ],
+        [
+          0.837245696400626,
+          0.17494780793319414
+        ],
+        [
+          0.7902973395931142,
+          0.922338204592902
+        ],
+        [
+          0.1486697965571205,
+          0.8492693110647181
+        ]
+      ],
+      "corners": [
+        [
+          0.20241877605800587,
+          0.13877138660346527
+        ],
+        [
+          0.837840177763568,
+          0.17443058719686358
+        ],
+        [
+          0.7908639331841373,
+          0.9220529435760156
+        ],
+        [
+          0.1476133802150355,
+          0.8487907876463399
+        ]
+      ],
+      "confidence": 0.94,
+      "brightness": 0.5717470001021243,
+      "sharpness": 156.02421503998437,
+      "polygonIoU": 0.9961906367574822,
+      "normalizedCornerError": 9.536529506097649E-4,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 5.0822,
+      "managedHeapBeforeBytes": 6585168,
+      "managedHeapAfterBytes": 7232336,
+      "nativeHeapBeforeBytes": 7077232,
+      "nativeHeapAfterBytes": 7083264
+    },
+    {
+      "id": "tuning-moving-penumbra-01",
+      "split": "tuning",
+      "sequence": "tuning-moving-penumbra",
+      "category": "moving-penumbra",
+      "frameIndex": 1,
+      "file": "tuning-moving-penumbra-01.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.20933210878089248,
+          0.13292851259688904
+        ],
+        [
+          0.8428726736295101,
+          0.17595255564415813
+        ],
+        [
+          0.7909334624595882,
+          0.922755137402704
+        ],
+        [
+          0.14981951273387092,
+          0.8420612756484214
+        ]
+      ],
+      "corners": [
+        [
+          0.2085293797817293,
+          0.13300906688660546
+        ],
+        [
+          0.8437192297509192,
+          0.17567019476621848
+        ],
+        [
+          0.7915755669828485,
+          0.9229715269394431
+        ],
+        [
+          0.14903752279355556,
+          0.8419511378290798
+        ]
+      ],
+      "confidence": 0.94,
+      "brightness": 0.5589357383578432,
+      "sharpness": 173.39382469681635,
+      "polygonIoU": 0.9973401551054102,
+      "normalizedCornerError": 7.916146374104116E-4,
+      "motionCompensatedCornerJitter": 5.272253439158783E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 10.4099,
+      "managedHeapBeforeBytes": 7265104,
+      "managedHeapAfterBytes": 4156240,
+      "nativeHeapBeforeBytes": 7083600,
+      "nativeHeapAfterBytes": 7032672
+    },
+    {
+      "id": "tuning-moving-penumbra-02",
+      "split": "tuning",
+      "sequence": "tuning-moving-penumbra",
+      "category": "moving-penumbra",
+      "frameIndex": 2,
+      "file": "tuning-moving-penumbra-02.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.2048568310403347,
+          0.12962098333043276
+        ],
+        [
+          0.8384695116019888,
+          0.17071164374338285
+        ],
+        [
+          0.7878109765321354,
+          0.9176707659216599
+        ],
+        [
+          0.14656033857852005,
+          0.8389334957901072
+        ]
+      ],
+      "corners": [
+        [
+          0.20419519632009028,
+          0.129306672548543
+        ],
+        [
+          0.8392948190894992,
+          0.17092969171829084
+        ],
+        [
+          0.7884687347480245,
+          0.9178052004454618
+        ],
+        [
+          0.14568101594015329,
+          0.8390190512622517
+        ]
+      ],
+      "confidence": 0.94,
+      "brightness": 0.5559530356413399,
+      "sharpness": 227.8139098712497,
+      "polygonIoU": 0.9972931268618709,
+      "normalizedCornerError": 7.852384153903577E-4,
+      "motionCompensatedCornerJitter": 3.055437214349401E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 7.8274,
+      "managedHeapBeforeBytes": 4189008,
+      "managedHeapAfterBytes": 4811600,
+      "nativeHeapBeforeBytes": 7032752,
+      "nativeHeapAfterBytes": 7039168
+    },
+    {
+      "id": "tuning-moving-penumbra-03",
+      "split": "tuning",
+      "sequence": "tuning-moving-penumbra",
+      "category": "moving-penumbra",
+      "frameIndex": 3,
+      "file": "tuning-moving-penumbra-03.png",
+      "expectedDetection": true,
+      "detected": false,
+      "truth": [
+        [
+          0.1989644159678277,
+          0.1351548293484195
+        ],
+        [
+          0.8328682840561921,
+          0.16727345556272363
+        ],
+        [
+          0.7881544447442874,
+          0.9149076649463476
+        ],
+        [
+          0.14631358146414547,
+          0.8452526753115049
+        ]
+      ],
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.5576197661356209,
+      "sharpness": 255.07285181044475,
+      "polygonIoU": 0,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": true,
+      "elapsedMillis": 11.3282,
+      "managedHeapBeforeBytes": 4844368,
+      "managedHeapAfterBytes": 5569360,
+      "nativeHeapBeforeBytes": 7039248,
+      "nativeHeapAfterBytes": 7053264
+    },
+    {
+      "id": "tuning-moving-penumbra-04",
+      "split": "tuning",
+      "sequence": "tuning-moving-penumbra",
+      "category": "moving-penumbra",
+      "frameIndex": 4,
+      "file": "tuning-moving-penumbra-04.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.2016383729148888,
+          0.14212895950330232
+        ],
+        [
+          0.8356671421666061,
+          0.1695109274698948
+        ],
+        [
+          0.7940927845599254,
+          0.9174674865490609
+        ],
+        [
+          0.1519695562992707,
+          0.8526090444001484
+        ]
+      ],
+      "corners": [
+        [
+          0.2008957218898289,
+          0.14207384412235546
+        ],
+        [
+          0.8364255682928403,
+          0.16934910025436598
+        ],
+        [
+          0.7948381482403635,
+          0.9176070373793627
+        ],
+        [
+          0.1511088437416199,
+          0.852445130604973
+        ]
+      ],
+      "confidence": 0.94,
+      "brightness": 0.5650653977736928,
+      "sharpness": 203.02910475154457,
+      "polygonIoU": 0.9973776456109993,
+      "normalizedCornerError": 7.886720917656412E-4,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 4.1812,
+      "managedHeapBeforeBytes": 5569360,
+      "managedHeapAfterBytes": 6216528,
+      "nativeHeapBeforeBytes": 7053344,
+      "nativeHeapAfterBytes": 7060208
+    },
+    {
+      "id": "tuning-moving-penumbra-05",
+      "split": "tuning",
+      "sequence": "tuning-moving-penumbra",
+      "category": "moving-penumbra",
+      "frameIndex": 5,
+      "file": "tuning-moving-penumbra-05.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.2058776789746722,
+          0.14011664862571602
+        ],
+        [
+          0.8397608957102727,
+          0.17295259949577418
+        ],
+        [
+          0.7945716739620924,
+          0.9205359409670347
+        ],
+        [
+          0.15277533315571315,
+          0.8501546585448964
+        ]
+      ],
+      "corners": [
+        [
+          0.2048124713445558,
+          0.13920614492150854
+        ],
+        [
+          0.8402165867776351,
+          0.17365575628631108
+        ],
+        [
+          0.7955878940543212,
+          0.9212532930167528
+        ],
+        [
+          0.1522879538484636,
+          0.8496774301719879
+        ]
+      ],
+      "confidence": 0.94,
+      "brightness": 0.5751313316993464,
+      "sharpness": 190.93026697793536,
+      "polygonIoU": 0.9966164732487109,
+      "normalizedCornerError": 0.0010413105130132002,
+      "motionCompensatedCornerJitter": 7.390338259245519E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 5.1623,
+      "managedHeapBeforeBytes": 6216528,
+      "managedHeapAfterBytes": 6863696,
+      "nativeHeapBeforeBytes": 7060288,
+      "nativeHeapAfterBytes": 7066928
+    },
+    {
+      "id": "tuning-moving-penumbra-06",
+      "split": "tuning",
+      "sequence": "tuning-moving-penumbra",
+      "category": "moving-penumbra",
+      "frameIndex": 6,
+      "file": "tuning-moving-penumbra-06.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.20424009165264037,
+          0.13148640593414887
+        ],
+        [
+          0.83783322454937,
+          0.17311002344351853
+        ],
+        [
+          0.7868216455052568,
+          0.920026385552172
+        ],
+        [
+          0.1456083505972794,
+          0.8407497411164128
+        ]
+      ],
+      "corners": [
+        [
+          0.2035970748238278,
+          0.1313554221648938
+        ],
+        [
+          0.8384009931585964,
+          0.17306213047856228
+        ],
+        [
+          0.7877270257638508,
+          0.92027728976412
+        ],
+        [
+          0.14470105514848827,
+          0.8408209961320603
+        ]
+      ],
+      "confidence": 0.94,
+      "brightness": 0.5867405024509805,
+      "sharpness": 266.2874493130048,
+      "polygonIoU": 0.9972993248520501,
+      "normalizedCornerError": 7.688998648005684E-4,
+      "motionCompensatedCornerJitter": 7.040201777790434E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 8.5599,
+      "managedHeapBeforeBytes": 6863696,
+      "managedHeapAfterBytes": 7510864,
+      "nativeHeapBeforeBytes": 7067008,
+      "nativeHeapAfterBytes": 7074400
+    },
+    {
+      "id": "tuning-moving-penumbra-07",
+      "split": "tuning",
+      "sequence": "tuning-moving-penumbra",
+      "category": "moving-penumbra",
+      "frameIndex": 7,
+      "file": "tuning-moving-penumbra-07.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.20263889508792082,
+          0.12862170944893994
+        ],
+        [
+          0.8361916562130731,
+          0.1713249427676839
+        ],
+        [
+          0.7844649414910999,
+          0.918153771241338
+        ],
+        [
+          0.1433280775903477,
+          0.837784556872523
+        ]
+      ],
+      "corners": [
+        [
+          0.20191459971897166,
+          0.12855604291136477
+        ],
+        [
+          0.8368520949318546,
+          0.17124567723958073
+        ],
+        [
+          0.7851583721992537,
+          0.9184421575860136
+        ],
+        [
+          0.14246457839470106,
+          0.8376101813868804
+        ]
+      ],
+      "confidence": 0.94,
+      "brightness": 0.588006484885621,
+      "sharpness": 264.82284972873265,
+      "polygonIoU": 0.9974825683489354,
+      "normalizedCornerError": 7.560955810583061E-4,
+      "motionCompensatedCornerJitter": 1.6671268086580567E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 7.2528,
+      "managedHeapBeforeBytes": 5331792,
+      "managedHeapAfterBytes": 4164432,
+      "nativeHeapBeforeBytes": 7072272,
+      "nativeHeapAfterBytes": 7032736
+    },
+    {
+      "id": "tuning-textured-light-00",
+      "split": "tuning",
+      "sequence": "tuning-textured-light",
+      "category": "textured-light",
+      "frameIndex": 0,
+      "file": "tuning-textured-light-00.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.20344287949921752,
+          0.1394572025052192
+        ],
+        [
+          0.837245696400626,
+          0.17494780793319414
+        ],
+        [
+          0.7902973395931142,
+          0.922338204592902
+        ],
+        [
+          0.1486697965571205,
+          0.8492693110647181
+        ]
+      ],
+      "corners": [
+        [
+          0.20220176299688977,
+          0.13886453902342116
+        ],
+        [
+          0.8377653607900333,
+          0.17442395333193783
+        ],
+        [
+          0.7911464991799384,
+          0.9220853180925894
+        ],
+        [
+          0.14791237785565908,
+          0.8486840856396284
+        ]
+      ],
+      "confidence": 0.9357253805989265,
+      "brightness": 0.6082827052696078,
+      "sharpness": 155.97304155221516,
+      "polygonIoU": 0.9960589766325773,
+      "normalizedCornerError": 9.891078469942943E-4,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 5.9085,
+      "managedHeapBeforeBytes": 4197200,
+      "managedHeapAfterBytes": 4815696,
+      "nativeHeapBeforeBytes": 7032816,
+      "nativeHeapAfterBytes": 7041808
+    },
+    {
+      "id": "tuning-textured-light-01",
+      "split": "tuning",
+      "sequence": "tuning-textured-light",
+      "category": "textured-light",
+      "frameIndex": 1,
+      "file": "tuning-textured-light-01.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.20933210878089248,
+          0.13292851259688904
+        ],
+        [
+          0.8428726736295101,
+          0.17595255564415813
+        ],
+        [
+          0.7909334624595882,
+          0.922755137402704
+        ],
+        [
+          0.14981951273387092,
+          0.8420612756484214
+        ]
+      ],
+      "corners": [
+        [
+          0.20843416855282557,
+          0.1325845639228072
+        ],
+        [
+          0.8434704927727451,
+          0.17565320304851795
+        ],
+        [
+          0.7915676737324709,
+          0.9232196905773086
+        ],
+        [
+          0.1490982691234599,
+          0.8417338725010252
+        ]
+      ],
+      "confidence": 0.86,
+      "brightness": 0.5961481694240197,
+      "sharpness": 174.4074819597774,
+      "polygonIoU": 0.9970958421235604,
+      "normalizedCornerError": 8.020919572829802E-4,
+      "motionCompensatedCornerJitter": 4.177097142852521E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 11.2616,
+      "managedHeapBeforeBytes": 4815696,
+      "managedHeapAfterBytes": 6081360,
+      "nativeHeapBeforeBytes": 7041888,
+      "nativeHeapAfterBytes": 7059376
+    },
+    {
+      "id": "tuning-textured-light-02",
+      "split": "tuning",
+      "sequence": "tuning-textured-light",
+      "category": "textured-light",
+      "frameIndex": 2,
+      "file": "tuning-textured-light-02.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.2048568310403347,
+          0.12962098333043276
+        ],
+        [
+          0.8384695116019888,
+          0.17071164374338285
+        ],
+        [
+          0.7878109765321354,
+          0.9176707659216599
+        ],
+        [
+          0.14656033857852005,
+          0.8389334957901072
+        ]
+      ],
+      "corners": [
+        [
+          0.20401891410102005,
+          0.12912494516809725
+        ],
+        [
+          0.8392510650435784,
+          0.170826767169433
+        ],
+        [
+          0.788418392170824,
+          0.9177577030044767
+        ],
+        [
+          0.1458170906899847,
+          0.8389031448978573
+        ]
+      ],
+      "confidence": 0.86,
+      "brightness": 0.5941589690563726,
+      "sharpness": 218.6160379073991,
+      "polygonIoU": 0.9973360701411914,
+      "normalizedCornerError": 7.802985313211341E-4,
+      "motionCompensatedCornerJitter": 3.2332796539552913E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 15.7404,
+      "managedHeapBeforeBytes": 6081360,
+      "managedHeapAfterBytes": 7289680,
+      "nativeHeapBeforeBytes": 7059456,
+      "nativeHeapAfterBytes": 7076240
+    },
+    {
+      "id": "tuning-textured-light-03",
+      "split": "tuning",
+      "sequence": "tuning-textured-light",
+      "category": "textured-light",
+      "frameIndex": 3,
+      "file": "tuning-textured-light-03.png",
+      "expectedDetection": true,
+      "detected": false,
+      "truth": [
+        [
+          0.1989644159678277,
+          0.1351548293484195
+        ],
+        [
+          0.8328682840561921,
+          0.16727345556272363
+        ],
+        [
+          0.7881544447442874,
+          0.9149076649463476
+        ],
+        [
+          0.14631358146414547,
+          0.8452526753115049
+        ]
+      ],
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.5953234400531047,
+      "sharpness": 239.26245394859316,
+      "polygonIoU": 0,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": true,
+      "elapsedMillis": 10.7082,
+      "managedHeapBeforeBytes": 3873616,
+      "managedHeapAfterBytes": 4823888,
+      "nativeHeapBeforeBytes": 7074896,
+      "nativeHeapAfterBytes": 7042816
+    },
+    {
+      "id": "tuning-textured-light-04",
+      "split": "tuning",
+      "sequence": "tuning-textured-light",
+      "category": "textured-light",
+      "frameIndex": 4,
+      "file": "tuning-textured-light-04.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.2016383729148888,
+          0.14212895950330232
+        ],
+        [
+          0.8356671421666061,
+          0.1695109274698948
+        ],
+        [
+          0.7940927845599254,
+          0.9174674865490609
+        ],
+        [
+          0.1519695562992707,
+          0.8526090444001484
+        ]
+      ],
+      "corners": [
+        [
+          0.20082428050498569,
+          0.14206240871885853
+        ],
+        [
+          0.8364185132471658,
+          0.16922079303431295
+        ],
+        [
+          0.7948202103136123,
+          0.9176509961871019
+        ],
+        [
+          0.15114079827813062,
+          0.8523276463175872
+        ]
+      ],
+      "confidence": 0.9300871333181308,
+      "brightness": 0.6020679891748366,
+      "sharpness": 224.45453010236952,
+      "polygonIoU": 0.9972074877115318,
+      "normalizedCornerError": 8.11923565332261E-4,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 8.8235,
+      "managedHeapBeforeBytes": 4823888,
+      "managedHeapAfterBytes": 5471056,
+      "nativeHeapBeforeBytes": 7042896,
+      "nativeHeapAfterBytes": 7053232
+    },
+    {
+      "id": "tuning-textured-light-05",
+      "split": "tuning",
+      "sequence": "tuning-textured-light",
+      "category": "textured-light",
+      "frameIndex": 5,
+      "file": "tuning-textured-light-05.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.2058776789746722,
+          0.14011664862571602
+        ],
+        [
+          0.8397608957102727,
+          0.17295259949577418
+        ],
+        [
+          0.7945716739620924,
+          0.9205359409670347
+        ],
+        [
+          0.15277533315571315,
+          0.8501546585448964
+        ]
+      ],
+      "corners": [
+        [
+          0.20469496718740499,
+          0.1392405345583466
+        ],
+        [
+          0.8401543280660551,
+          0.17343008376888752
+        ],
+        [
+          0.7956141864548115,
+          0.9214766209303186
+        ],
+        [
+          0.1521581201826115,
+          0.8492607773056611
+        ]
+      ],
+      "confidence": 0.9386475212000256,
+      "brightness": 0.6098903696895425,
+      "sharpness": 226.56144904513891,
+      "polygonIoU": 0.9962973924905346,
+      "normalizedCornerError": 0.0011452498130203187,
+      "motionCompensatedCornerJitter": 8.011515176082273E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 5.1954,
+      "managedHeapBeforeBytes": 5471056,
+      "managedHeapAfterBytes": 6118224,
+      "nativeHeapBeforeBytes": 7053312,
+      "nativeHeapAfterBytes": 7064544
+    },
+    {
+      "id": "tuning-textured-light-06",
+      "split": "tuning",
+      "sequence": "tuning-textured-light",
+      "category": "textured-light",
+      "frameIndex": 6,
+      "file": "tuning-textured-light-06.png",
+      "expectedDetection": true,
+      "detected": false,
+      "truth": [
+        [
+          0.20424009165264037,
+          0.13148640593414887
+        ],
+        [
+          0.83783322454937,
+          0.17311002344351853
+        ],
+        [
+          0.7868216455052568,
+          0.920026385552172
+        ],
+        [
+          0.1456083505972794,
+          0.8407497411164128
+        ]
+      ],
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.6195126251021242,
+      "sharpness": 259.6830369667902,
+      "polygonIoU": 0,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": true,
+      "elapsedMillis": 10.4304,
+      "managedHeapBeforeBytes": 6118224,
+      "managedHeapAfterBytes": 7039824,
+      "nativeHeapBeforeBytes": 7064624,
+      "nativeHeapAfterBytes": 7081104
+    },
+    {
+      "id": "tuning-textured-light-07",
+      "split": "tuning",
+      "sequence": "tuning-textured-light",
+      "category": "textured-light",
+      "frameIndex": 7,
+      "file": "tuning-textured-light-07.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.20263889508792082,
+          0.12862170944893994
+        ],
+        [
+          0.8361916562130731,
+          0.1713249427676839
+        ],
+        [
+          0.7844649414910999,
+          0.918153771241338
+        ],
+        [
+          0.1433280775903477,
+          0.837784556872523
+        ]
+      ],
+      "corners": [
+        [
+          0.20159108866963202,
+          0.12833061988575978
+        ],
+        [
+          0.8368122810149429,
+          0.17130899399550237
+        ],
+        [
+          0.785213415513708,
+          0.9186155577297673
+        ],
+        [
+          0.14274670568692016,
+          0.8375775264474901
+        ]
+      ],
+      "confidence": 0.9385032321008915,
+      "brightness": 0.6200486877042484,
+      "sharpness": 258.42469499790406,
+      "polygonIoU": 0.9972231908655222,
+      "normalizedCornerError": 8.012296279199362E-4,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 5.6608,
+      "managedHeapBeforeBytes": 7039824,
+      "managedHeapAfterBytes": 7686992,
+      "nativeHeapBeforeBytes": 7081184,
+      "nativeHeapAfterBytes": 7092992
+    },
+    {
+      "id": "tuning-negative-shadow-00",
+      "split": "tuning",
+      "sequence": "tuning-negative-shadow",
+      "category": "negative-shadow",
+      "frameIndex": 0,
+      "file": "tuning-negative-shadow-00.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.497208473754085,
+      "sharpness": 23.813865896765396,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 13.4034,
+      "managedHeapBeforeBytes": 7686992,
+      "managedHeapAfterBytes": 4315984,
+      "nativeHeapBeforeBytes": 7092704,
+      "nativeHeapAfterBytes": 7032880
+    },
+    {
+      "id": "tuning-negative-shadow-01",
+      "split": "tuning",
+      "sequence": "tuning-negative-shadow",
+      "category": "negative-shadow",
+      "frameIndex": 1,
+      "file": "tuning-negative-shadow-01.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.49030551725898697,
+      "sharpness": 47.27248359358046,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 6.9792,
+      "managedHeapBeforeBytes": 4315984,
+      "managedHeapAfterBytes": 5008208,
+      "nativeHeapBeforeBytes": 7034992,
+      "nativeHeapAfterBytes": 7039248
+    },
+    {
+      "id": "tuning-negative-shadow-02",
+      "split": "tuning",
+      "sequence": "tuning-negative-shadow",
+      "category": "negative-shadow",
+      "frameIndex": 2,
+      "file": "tuning-negative-shadow-02.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.4902898029003268,
+      "sharpness": 117.50304174498451,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 21.2779,
+      "managedHeapBeforeBytes": 5008208,
+      "managedHeapAfterBytes": 5704528,
+      "nativeHeapBeforeBytes": 7038992,
+      "nativeHeapAfterBytes": 7044656
+    },
+    {
+      "id": "tuning-negative-shadow-03",
+      "split": "tuning",
+      "sequence": "tuning-negative-shadow",
+      "category": "negative-shadow",
+      "frameIndex": 3,
+      "file": "tuning-negative-shadow-03.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.49080657679738565,
+      "sharpness": 127.41751583344144,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 14.4526,
+      "managedHeapBeforeBytes": 5704528,
+      "managedHeapAfterBytes": 6429520,
+      "nativeHeapBeforeBytes": 7044736,
+      "nativeHeapAfterBytes": 7049280
+    },
+    {
+      "id": "tuning-negative-shadow-04",
+      "split": "tuning",
+      "sequence": "tuning-negative-shadow",
+      "category": "negative-shadow",
+      "frameIndex": 4,
+      "file": "tuning-negative-shadow-04.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.49363628472222226,
+      "sharpness": 82.26449891864989,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 9.2732,
+      "managedHeapBeforeBytes": 6429520,
+      "managedHeapAfterBytes": 7125840,
+      "nativeHeapBeforeBytes": 7049360,
+      "nativeHeapAfterBytes": 7055920
+    },
+    {
+      "id": "tuning-negative-shadow-05",
+      "split": "tuning",
+      "sequence": "tuning-negative-shadow",
+      "category": "negative-shadow",
+      "frameIndex": 5,
+      "file": "tuning-negative-shadow-05.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.49725949754901966,
+      "sharpness": 52.397950115617114,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 12.2721,
+      "managedHeapBeforeBytes": 7125840,
+      "managedHeapAfterBytes": 7850832,
+      "nativeHeapBeforeBytes": 7056000,
+      "nativeHeapAfterBytes": 7060736
+    },
+    {
+      "id": "tuning-negative-shadow-06",
+      "split": "tuning",
+      "sequence": "tuning-negative-shadow",
+      "category": "negative-shadow",
+      "frameIndex": 6,
+      "file": "tuning-negative-shadow-06.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.5035001404207516,
+      "sharpness": 105.69848074839909,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 7.8103,
+      "managedHeapBeforeBytes": 3840848,
+      "managedHeapAfterBytes": 4569936,
+      "nativeHeapBeforeBytes": 7058880,
+      "nativeHeapAfterBytes": 7033408
+    },
+    {
+      "id": "tuning-negative-shadow-07",
+      "split": "tuning",
+      "sequence": "tuning-negative-shadow",
+      "category": "negative-shadow",
+      "frameIndex": 7,
+      "file": "tuning-negative-shadow-07.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.5036140344158497,
+      "sharpness": 106.86746953514945,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 7.0207,
+      "managedHeapBeforeBytes": 4569936,
+      "managedHeapAfterBytes": 5266256,
+      "nativeHeapBeforeBytes": 7033488,
+      "nativeHeapAfterBytes": 7039376
+    },
+    {
+      "id": "tuning-negative-texture-00",
+      "split": "tuning",
+      "sequence": "tuning-negative-texture",
+      "category": "negative-texture",
+      "frameIndex": 0,
+      "file": "tuning-negative-texture-00.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.5864728860294118,
+      "sharpness": 49.75492306263181,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 11.7423,
+      "managedHeapBeforeBytes": 5266256,
+      "managedHeapAfterBytes": 6417232,
+      "nativeHeapBeforeBytes": 7039456,
+      "nativeHeapAfterBytes": 7044512
+    },
+    {
+      "id": "tuning-negative-texture-01",
+      "split": "tuning",
+      "sequence": "tuning-negative-texture",
+      "category": "negative-texture",
+      "frameIndex": 1,
+      "file": "tuning-negative-texture-01.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.5748314823325164,
+      "sharpness": 73.76765123061075,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 16.1385,
+      "managedHeapBeforeBytes": 6417232,
+      "managedHeapAfterBytes": 7600976,
+      "nativeHeapBeforeBytes": 7044592,
+      "nativeHeapAfterBytes": 7051152
+    },
+    {
+      "id": "tuning-negative-texture-02",
+      "split": "tuning",
+      "sequence": "tuning-negative-texture",
+      "category": "negative-texture",
+      "frameIndex": 2,
+      "file": "tuning-negative-texture-02.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.5730596022263071,
+      "sharpness": 121.10599233448241,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 12.6764,
+      "managedHeapBeforeBytes": 5077840,
+      "managedHeapAfterBytes": 4987728,
+      "nativeHeapBeforeBytes": 7048240,
+      "nativeHeapAfterBytes": 7032704
+    },
+    {
+      "id": "tuning-negative-texture-03",
+      "split": "tuning",
+      "sequence": "tuning-negative-texture",
+      "category": "negative-texture",
+      "frameIndex": 3,
+      "file": "tuning-negative-texture-03.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.5741940231821896,
+      "sharpness": 140.26649040692647,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 10.2321,
+      "managedHeapBeforeBytes": 4987728,
+      "managedHeapAfterBytes": 6134608,
+      "nativeHeapBeforeBytes": 7032784,
+      "nativeHeapAfterBytes": 7037840
+    },
+    {
+      "id": "tuning-negative-texture-04",
+      "split": "tuning",
+      "sequence": "tuning-negative-texture",
+      "category": "negative-texture",
+      "frameIndex": 4,
+      "file": "tuning-negative-texture-04.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.5806293530433007,
+      "sharpness": 121.39178270653619,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 8.6726,
+      "managedHeapBeforeBytes": 6167376,
+      "managedHeapAfterBytes": 7314256,
+      "nativeHeapBeforeBytes": 7037920,
+      "nativeHeapAfterBytes": 7044992
+    },
+    {
+      "id": "tuning-negative-texture-05",
+      "split": "tuning",
+      "sequence": "tuning-negative-texture",
+      "category": "negative-texture",
+      "frameIndex": 5,
+      "file": "tuning-negative-texture-05.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.5880312882965687,
+      "sharpness": 118.75685269097221,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 16.3379,
+      "managedHeapBeforeBytes": 7314256,
+      "managedHeapAfterBytes": 3959632,
+      "nativeHeapBeforeBytes": 7045072,
+      "nativeHeapAfterBytes": 7027552
+    },
+    {
+      "id": "tuning-negative-texture-06",
+      "split": "tuning",
+      "sequence": "tuning-negative-texture",
+      "category": "negative-texture",
+      "frameIndex": 6,
+      "file": "tuning-negative-texture-06.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.5973878804125817,
+      "sharpness": 146.31463852929008,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 9.5854,
+      "managedHeapBeforeBytes": 3959632,
+      "managedHeapAfterBytes": 5110608,
+      "nativeHeapBeforeBytes": 7027632,
+      "nativeHeapAfterBytes": 7034816
+    },
+    {
+      "id": "tuning-negative-texture-07",
+      "split": "tuning",
+      "sequence": "tuning-negative-texture",
+      "category": "negative-texture",
+      "frameIndex": 7,
+      "file": "tuning-negative-texture-07.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.597847873263889,
+      "sharpness": 144.1683733833207,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 11.3094,
+      "managedHeapBeforeBytes": 5143376,
+      "managedHeapAfterBytes": 6290256,
+      "nativeHeapBeforeBytes": 7034560,
+      "nativeHeapAfterBytes": 7040960
+    },
+    {
+      "id": "tuning-negative-circles-00",
+      "split": "tuning",
+      "sequence": "tuning-negative-circles",
+      "category": "negative-circles",
+      "frameIndex": 0,
+      "file": "tuning-negative-circles-00.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.578449946384804,
+      "sharpness": 63.02004790995916,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 13.8421,
+      "managedHeapBeforeBytes": 6290256,
+      "managedHeapAfterBytes": 7404368,
+      "nativeHeapBeforeBytes": 7041040,
+      "nativeHeapAfterBytes": 7091504
+    },
+    {
+      "id": "tuning-negative-circles-01",
+      "split": "tuning",
+      "sequence": "tuning-negative-circles",
+      "category": "negative-circles",
+      "frameIndex": 1,
+      "file": "tuning-negative-circles-01.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.5668235166462419,
+      "sharpness": 87.20279896747803,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 14.4722,
+      "managedHeapBeforeBytes": 7437136,
+      "managedHeapAfterBytes": 5118800,
+      "nativeHeapBeforeBytes": 7091744,
+      "nativeHeapAfterBytes": 7077168
+    },
+    {
+      "id": "tuning-negative-circles-02",
+      "split": "tuning",
+      "sequence": "tuning-negative-circles",
+      "category": "negative-circles",
+      "frameIndex": 2,
+      "file": "tuning-negative-circles-02.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.5650506918913399,
+      "sharpness": 126.06429292360943,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 10.0082,
+      "managedHeapBeforeBytes": 5118800,
+      "managedHeapAfterBytes": 6335312,
+      "nativeHeapBeforeBytes": 7076912,
+      "nativeHeapAfterBytes": 7126768
+    },
+    {
+      "id": "tuning-negative-circles-03",
+      "split": "tuning",
+      "sequence": "tuning-negative-circles",
+      "category": "negative-circles",
+      "frameIndex": 3,
+      "file": "tuning-negative-circles-03.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.5662084992851307,
+      "sharpness": 151.09693463557562,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 9.8796,
+      "managedHeapBeforeBytes": 6335312,
+      "managedHeapAfterBytes": 7547728,
+      "nativeHeapBeforeBytes": 7126848,
+      "nativeHeapAfterBytes": 7175648
+    },
+    {
+      "id": "tuning-negative-circles-04",
+      "split": "tuning",
+      "sequence": "tuning-negative-circles",
+      "category": "negative-circles",
+      "frameIndex": 4,
+      "file": "tuning-negative-circles-04.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.5725411560457517,
+      "sharpness": 134.44910102500918,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 16.7304,
+      "managedHeapBeforeBytes": 7547728,
+      "managedHeapAfterBytes": 8792912,
+      "nativeHeapBeforeBytes": 7175728,
+      "nativeHeapAfterBytes": 7227936
+    },
+    {
+      "id": "tuning-negative-circles-05",
+      "split": "tuning",
+      "sequence": "tuning-negative-circles",
+      "category": "negative-circles",
+      "frameIndex": 5,
+      "file": "tuning-negative-circles-05.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.5798153339460784,
+      "sharpness": 133.08913397212558,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 11.514,
+      "managedHeapBeforeBytes": 3980112,
+      "managedHeapAfterBytes": 5163856,
+      "nativeHeapBeforeBytes": 7223760,
+      "nativeHeapAfterBytes": 7097712
+    },
+    {
+      "id": "tuning-negative-circles-06",
+      "split": "tuning",
+      "sequence": "tuning-negative-circles",
+      "category": "negative-circles",
+      "frameIndex": 6,
+      "file": "tuning-negative-circles-06.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.5891075112336602,
+      "sharpness": 159.2046160308414,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 10.0244,
+      "managedHeapBeforeBytes": 5163856,
+      "managedHeapAfterBytes": 6343504,
+      "nativeHeapBeforeBytes": 7097792,
+      "nativeHeapAfterBytes": 7150112
+    },
+    {
+      "id": "tuning-negative-circles-07",
+      "split": "tuning",
+      "sequence": "tuning-negative-circles",
+      "category": "negative-circles",
+      "frameIndex": 7,
+      "file": "tuning-negative-circles-07.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.589486545138889,
+      "sharpness": 155.81730441012917,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 15.1979,
+      "managedHeapBeforeBytes": 6343504,
+      "managedHeapAfterBytes": 7490384,
+      "nativeHeapBeforeBytes": 7150192,
+      "nativeHeapAfterBytes": 7200784
+    },
+    {
+      "id": "held-out-light-shadow-00",
+      "split": "held-out",
+      "sequence": "held-out-light-shadow",
+      "category": "light-shadow",
+      "frameIndex": 0,
+      "file": "held-out-light-shadow-00.png",
+      "expectedDetection": true,
+      "detected": false,
+      "truth": [
+        [
+          0.18309679602904222,
+          0.19461180431442351
+        ],
+        [
+          0.8092366264310482,
+          0.11973678028360081
+        ],
+        [
+          0.8702581911159385,
+          0.861098039265633
+        ],
+        [
+          0.22068423150281125,
+          0.9170951601966695
+        ]
+      ],
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.6090346711601307,
+      "sharpness": 95.255487895955,
+      "polygonIoU": 0,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 14.8904,
+      "managedHeapBeforeBytes": 7490384,
+      "managedHeapAfterBytes": 4688720,
+      "nativeHeapBeforeBytes": 7201120,
+      "nativeHeapAfterBytes": 7052032
+    },
+    {
+      "id": "held-out-light-shadow-01",
+      "split": "held-out",
+      "sequence": "held-out-light-shadow",
+      "category": "light-shadow",
+      "frameIndex": 1,
+      "file": "held-out-light-shadow-01.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.18444775405039243,
+          0.18873564661486442
+        ],
+        [
+          0.8109511989109844,
+          0.11948477693911481
+        ],
+        [
+          0.8682306707208289,
+          0.8613771873692493
+        ],
+        [
+          0.2183888803827995,
+          0.9115401535225769
+        ]
+      ],
+      "corners": [
+        [
+          0.18351235548460748,
+          0.18826235564110058
+        ],
+        [
+          0.8116237945210576,
+          0.11914580152017153
+        ],
+        [
+          0.868808312801264,
+          0.8613746413514184
+        ],
+        [
+          0.21725667905784576,
+          0.9112843455026112
+        ]
+      ],
+      "confidence": 0.885613439194197,
+      "brightness": 0.6041032475490196,
+      "sharpness": 101.24615777583651,
+      "polygonIoU": 0.996664206710653,
+      "normalizedCornerError": 8.849734546826669E-4,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 5.716,
+      "managedHeapBeforeBytes": 4688720,
+      "managedHeapAfterBytes": 5368656,
+      "nativeHeapBeforeBytes": 7052112,
+      "nativeHeapAfterBytes": 7072304
+    },
+    {
+      "id": "held-out-light-shadow-02",
+      "split": "held-out",
+      "sequence": "held-out-light-shadow",
+      "category": "light-shadow",
+      "frameIndex": 2,
+      "file": "held-out-light-shadow-02.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.17822600281262083,
+          0.18678106378420126
+        ],
+        [
+          0.8044459239726317,
+          0.11310767924189437
+        ],
+        [
+          0.8646680072713627,
+          0.8545852715338776
+        ],
+        [
+          0.21503433740306013,
+          0.9093358024260546
+        ]
+      ],
+      "corners": [
+        [
+          0.1771684629326683,
+          0.1866159491970393
+        ],
+        [
+          0.8049931550474821,
+          0.11271906681363866
+        ],
+        [
+          0.8653285317055676,
+          0.8545831596410212
+        ],
+        [
+          0.2141282594663321,
+          0.9091416193504164
+        ]
+      ],
+      "confidence": 0.8800747740189918,
+      "brightness": 0.6064774050245099,
+      "sharpness": 159.58690551290513,
+      "polygonIoU": 0.9969648990556809,
+      "normalizedCornerError": 8.32177794987744E-4,
+      "motionCompensatedCornerJitter": 1.9589643704622596E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 6.5713,
+      "managedHeapBeforeBytes": 5368656,
+      "managedHeapAfterBytes": 6028112,
+      "nativeHeapBeforeBytes": 7072384,
+      "nativeHeapAfterBytes": 7086752
+    },
+    {
+      "id": "held-out-light-shadow-03",
+      "split": "held-out",
+      "sequence": "held-out-light-shadow",
+      "category": "light-shadow",
+      "frameIndex": 3,
+      "file": "held-out-light-shadow-03.png",
+      "expectedDetection": true,
+      "detected": false,
+      "truth": [
+        [
+          0.17657065377419118,
+          0.19267866015212776
+        ],
+        [
+          0.802165961634959,
+          0.110099823987335
+        ],
+        [
+          0.8683125175905182,
+          0.8506784259352251
+        ],
+        [
+          0.21915350995609514,
+          0.9146686074475555
+        ]
+      ],
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.6130522620506536,
+      "sharpness": 136.56121649152965,
+      "polygonIoU": 0,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": true,
+      "elapsedMillis": 9.0778,
+      "managedHeapBeforeBytes": 6028112,
+      "managedHeapAfterBytes": 6916944,
+      "nativeHeapBeforeBytes": 7086832,
+      "nativeHeapAfterBytes": 7117200
+    },
+    {
+      "id": "held-out-light-shadow-04",
+      "split": "held-out",
+      "sequence": "held-out-light-shadow",
+      "category": "light-shadow",
+      "frameIndex": 4,
+      "file": "held-out-light-shadow-04.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.18085504599906507,
+          0.19855138763602614
+        ],
+        [
+          0.8062850658367449,
+          0.11377370181790901
+        ],
+        [
+          0.8738942399500339,
+          0.8541172096120837
+        ],
+        [
+          0.22486388440748367,
+          0.9203891380786685
+        ]
+      ],
+      "corners": [
+        [
+          0.1797537959275833,
+          0.1982318549854384
+        ],
+        [
+          0.8066674200591453,
+          0.1129238951979625
+        ],
+        [
+          0.8744760796150314,
+          0.853944539518348
+        ],
+        [
+          0.22395298977679218,
+          0.9203180502433785
+        ]
+      ],
+      "confidence": 0.86,
+      "brightness": 0.6207549657883987,
+      "sharpness": 109.38244841807685,
+      "polygonIoU": 0.9966157514120672,
+      "normalizedCornerError": 8.997791609743404E-4,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 12.7068,
+      "managedHeapBeforeBytes": 6916944,
+      "managedHeapAfterBytes": 8182608,
+      "nativeHeapBeforeBytes": 7117280,
+      "nativeHeapAfterBytes": 7145968
+    },
+    {
+      "id": "held-out-light-shadow-05",
+      "split": "held-out",
+      "sequence": "held-out-light-shadow",
+      "category": "light-shadow",
+      "frameIndex": 5,
+      "file": "held-out-light-shadow-05.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.18146883083441206,
+          0.1953732935023097
+        ],
+        [
+          0.8074284478928055,
+          0.11786306977155862
+        ],
+        [
+          0.8702031969107309,
+          0.8589637839467198
+        ],
+        [
+          0.22076491675738064,
+          0.9176948384094571
+        ]
+      ],
+      "corners": [
+        [
+          0.18010382029629105,
+          0.19516174106879725
+        ],
+        [
+          0.8078000238479494,
+          0.11782044867321817
+        ],
+        [
+          0.8707510007411012,
+          0.8590176075118091
+        ],
+        [
+          0.21985434926397915,
+          0.9177468959441354
+        ]
+      ],
+      "confidence": 0.8938345469960192,
+      "brightness": 0.6293204784517974,
+      "sharpness": 135.2938179726495,
+      "polygonIoU": 0.997230514712089,
+      "normalizedCornerError": 8.044537681029481E-4,
+      "motionCompensatedCornerJitter": 3.6111188969002045E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 10.9369,
+      "managedHeapBeforeBytes": 8182608,
+      "managedHeapAfterBytes": 4639568,
+      "nativeHeapBeforeBytes": 7145792,
+      "nativeHeapAfterBytes": 7044656
+    },
+    {
+      "id": "held-out-light-shadow-06",
+      "split": "held-out",
+      "sequence": "held-out-light-shadow",
+      "category": "light-shadow",
+      "frameIndex": 6,
+      "file": "held-out-light-shadow-06.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.17886672982510282,
+          0.18697263308115675
+        ],
+        [
+          0.8053295158759316,
+          0.11707023805717257
+        ],
+        [
+          0.8630425132212156,
+          0.8589028539719704
+        ],
+        [
+          0.21323023430230756,
+          0.9097416225125987
+        ]
+      ],
+      "corners": [
+        [
+          0.17780398666068345,
+          0.1864631807809965
+        ],
+        [
+          0.8060276088716889,
+          0.11692957994631879
+        ],
+        [
+          0.8636682085978068,
+          0.8587344370292095
+        ],
+        [
+          0.2122523436887296,
+          0.9097218816599514
+        ]
+      ],
+      "confidence": 0.8939257242755259,
+      "brightness": 0.6324829069648693,
+      "sharpness": 146.3803254530165,
+      "polygonIoU": 0.996786744894861,
+      "normalizedCornerError": 8.791802791623176E-4,
+      "motionCompensatedCornerJitter": 2.7480765932238636E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 4.9469,
+      "managedHeapBeforeBytes": 4639568,
+      "managedHeapAfterBytes": 5299024,
+      "nativeHeapBeforeBytes": 7044736,
+      "nativeHeapAfterBytes": 7064032
+    },
+    {
+      "id": "held-out-light-shadow-07",
+      "split": "held-out",
+      "sequence": "held-out-light-shadow",
+      "category": "light-shadow",
+      "frameIndex": 7,
+      "file": "held-out-light-shadow-07.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.1803618801464796,
+          0.18543532421907383
+        ],
+        [
+          0.8067219762992524,
+          0.11391400744562905
+        ],
+        [
+          0.8655121761146546,
+          0.8555960756952745
+        ],
+        [
+          0.2157749461618295,
+          0.9081141470282599
+        ]
+      ],
+      "corners": [
+        [
+          0.17938993904115533,
+          0.18504263967896342
+        ],
+        [
+          0.8070417044453763,
+          0.11352034628379182
+        ],
+        [
+          0.8660938103371557,
+          0.8552607435164006
+        ],
+        [
+          0.21505648727810178,
+          0.9080227893944616
+        ]
+      ],
+      "confidence": 0.86,
+      "brightness": 0.6288145169526145,
+      "sharpness": 137.24945575475695,
+      "polygonIoU": 0.9970932250468932,
+      "normalizedCornerError": 7.377586784656281E-4,
+      "motionCompensatedCornerJitter": 2.61211469338234E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 9.9182,
+      "managedHeapBeforeBytes": 5299024,
+      "managedHeapAfterBytes": 6564688,
+      "nativeHeapBeforeBytes": 7064112,
+      "nativeHeapAfterBytes": 7097056
+    },
+    {
+      "id": "held-out-cross-shadow-00",
+      "split": "held-out",
+      "sequence": "held-out-cross-shadow",
+      "category": "cross-shadow",
+      "frameIndex": 0,
+      "file": "held-out-cross-shadow-00.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.18309679602904222,
+          0.19461180431442351
+        ],
+        [
+          0.8092366264310482,
+          0.11973678028360081
+        ],
+        [
+          0.8702581911159385,
+          0.861098039265633
+        ],
+        [
+          0.22068423150281125,
+          0.9170951601966695
+        ]
+      ],
+      "corners": [
+        [
+          0.18197279973565827,
+          0.19457489831412098
+        ],
+        [
+          0.8094271597074422,
+          0.11952689840201301
+        ],
+        [
+          0.8713670192690447,
+          0.861504755069118
+        ],
+        [
+          0.2201267028781237,
+          0.9166340887401667
+        ]
+      ],
+      "confidence": 0.9155932460709539,
+      "brightness": 0.5095963031045753,
+      "sharpness": 67.671989777618,
+      "polygonIoU": 0.9971360297691064,
+      "normalizedCornerError": 8.28154043703106E-4,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 6.7457,
+      "managedHeapBeforeBytes": 6564688,
+      "managedHeapAfterBytes": 7244624,
+      "nativeHeapBeforeBytes": 7097136,
+      "nativeHeapAfterBytes": 7115600
+    },
+    {
+      "id": "held-out-cross-shadow-01",
+      "split": "held-out",
+      "sequence": "held-out-cross-shadow",
+      "category": "cross-shadow",
+      "frameIndex": 1,
+      "file": "held-out-cross-shadow-01.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.18444775405039243,
+          0.18873564661486442
+        ],
+        [
+          0.8109511989109844,
+          0.11948477693911481
+        ],
+        [
+          0.8682306707208289,
+          0.8613771873692493
+        ],
+        [
+          0.2183888803827995,
+          0.9115401535225769
+        ]
+      ],
+      "corners": [
+        [
+          0.1832274913406766,
+          0.18825215831368
+        ],
+        [
+          0.8117218714670462,
+          0.11915901767275985
+        ],
+        [
+          0.868957185097111,
+          0.8612978071812512
+        ],
+        [
+          0.21778905901592763,
+          0.9116641850985421
+        ]
+      ],
+      "confidence": 0.9186727108781517,
+      "brightness": 0.5074172028186275,
+      "sharpness": 73.95946903524398,
+      "polygonIoU": 0.9967989706626167,
+      "normalizedCornerError": 8.731493832313469E-4,
+      "motionCompensatedCornerJitter": 5.633741319195634E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 5.0204,
+      "managedHeapBeforeBytes": 7244624,
+      "managedHeapAfterBytes": 7899984,
+      "nativeHeapBeforeBytes": 7115680,
+      "nativeHeapAfterBytes": 7137216
+    },
+    {
+      "id": "held-out-cross-shadow-02",
+      "split": "held-out",
+      "sequence": "held-out-cross-shadow",
+      "category": "cross-shadow",
+      "frameIndex": 2,
+      "file": "held-out-cross-shadow-02.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.17822600281262083,
+          0.18678106378420126
+        ],
+        [
+          0.8044459239726317,
+          0.11310767924189437
+        ],
+        [
+          0.8646680072713627,
+          0.8545852715338776
+        ],
+        [
+          0.21503433740306013,
+          0.9093358024260546
+        ]
+      ],
+      "corners": [
+        [
+          0.1773460684535548,
+          0.18652024804243125
+        ],
+        [
+          0.8052099550945501,
+          0.11269394505663409
+        ],
+        [
+          0.8653118555273882,
+          0.8544717142417627
+        ],
+        [
+          0.21399799081495488,
+          0.9093383628093565
+        ]
+      ],
+      "confidence": 0.9104342267201497,
+      "brightness": 0.5092347707312092,
+      "sharpness": 122.26353566359415,
+      "polygonIoU": 0.9968440883299523,
+      "normalizedCornerError": 8.691926731188434E-4,
+      "motionCompensatedCornerJitter": 2.5937266957150415E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 7.8771,
+      "managedHeapBeforeBytes": 7899984,
+      "managedHeapAfterBytes": 8555344,
+      "nativeHeapBeforeBytes": 7137296,
+      "nativeHeapAfterBytes": 7153936
+    },
+    {
+      "id": "held-out-cross-shadow-03",
+      "split": "held-out",
+      "sequence": "held-out-cross-shadow",
+      "category": "cross-shadow",
+      "frameIndex": 3,
+      "file": "held-out-cross-shadow-03.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.17657065377419118,
+          0.19267866015212776
+        ],
+        [
+          0.802165961634959,
+          0.110099823987335
+        ],
+        [
+          0.8683125175905182,
+          0.8506784259352251
+        ],
+        [
+          0.21915350995609514,
+          0.9146686074475555
+        ]
+      ],
+      "corners": [
+        [
+          0.17551998661511137,
+          0.19231875060895753
+        ],
+        [
+          0.8027987567530935,
+          0.1099918150858664
+        ],
+        [
+          0.8691047747415407,
+          0.8506287231742394
+        ],
+        [
+          0.2182973867335581,
+          0.9145780378796436
+        ]
+      ],
+      "confidence": 0.918595530961675,
+      "brightness": 0.5131014731413399,
+      "sharpness": 107.99353264867996,
+      "polygonIoU": 0.9969762118432692,
+      "normalizedCornerError": 8.5181594697285E-4,
+      "motionCompensatedCornerJitter": 2.2363382551882972E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 8.652,
+      "managedHeapBeforeBytes": 6064976,
+      "managedHeapAfterBytes": 4307792,
+      "nativeHeapBeforeBytes": 7151600,
+      "nativeHeapAfterBytes": 7046320
+    },
+    {
+      "id": "held-out-cross-shadow-04",
+      "split": "held-out",
+      "sequence": "held-out-cross-shadow",
+      "category": "cross-shadow",
+      "frameIndex": 4,
+      "file": "held-out-cross-shadow-04.png",
+      "expectedDetection": true,
+      "detected": false,
+      "truth": [
+        [
+          0.18085504599906507,
+          0.19855138763602614
+        ],
+        [
+          0.8062850658367449,
+          0.11377370181790901
+        ],
+        [
+          0.8738942399500339,
+          0.8541172096120837
+        ],
+        [
+          0.22486388440748367,
+          0.9203891380786685
+        ]
+      ],
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.5160441304125817,
+      "sharpness": 83.62440968949002,
+      "polygonIoU": 0,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": true,
+      "elapsedMillis": 10.2573,
+      "managedHeapBeforeBytes": 4307792,
+      "managedHeapAfterBytes": 5036880,
+      "nativeHeapBeforeBytes": 7046400,
+      "nativeHeapAfterBytes": 7076032
+    },
+    {
+      "id": "held-out-cross-shadow-05",
+      "split": "held-out",
+      "sequence": "held-out-cross-shadow",
+      "category": "cross-shadow",
+      "frameIndex": 5,
+      "file": "held-out-cross-shadow-05.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.18146883083441206,
+          0.1953732935023097
+        ],
+        [
+          0.8074284478928055,
+          0.11786306977155862
+        ],
+        [
+          0.8702031969107309,
+          0.8589637839467198
+        ],
+        [
+          0.22076491675738064,
+          0.9176948384094571
+        ]
+      ],
+      "corners": [
+        [
+          0.17999265845746978,
+          0.19516635536396496
+        ],
+        [
+          0.8081424712905014,
+          0.11769991944964357
+        ],
+        [
+          0.8707484896348956,
+          0.8590213143930089
+        ],
+        [
+          0.21992410628309367,
+          0.9177971201398469
+        ]
+      ],
+      "confidence": 0.9241907944067821,
+      "brightness": 0.5208617238562091,
+      "sharpness": 84.14410885348849,
+      "polygonIoU": 0.9968324484131798,
+      "normalizedCornerError": 9.045900776655662E-4,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 5.461,
+      "managedHeapBeforeBytes": 5036880,
+      "managedHeapAfterBytes": 5696336,
+      "nativeHeapBeforeBytes": 7076112,
+      "nativeHeapAfterBytes": 7089584
+    },
+    {
+      "id": "held-out-cross-shadow-06",
+      "split": "held-out",
+      "sequence": "held-out-cross-shadow",
+      "category": "cross-shadow",
+      "frameIndex": 6,
+      "file": "held-out-cross-shadow-06.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.17886672982510282,
+          0.18697263308115675
+        ],
+        [
+          0.8053295158759316,
+          0.11707023805717257
+        ],
+        [
+          0.8630425132212156,
+          0.8589028539719704
+        ],
+        [
+          0.21323023430230756,
+          0.9097416225125987
+        ]
+      ],
+      "corners": [
+        [
+          0.1778006862176515,
+          0.18648613759374594
+        ],
+        [
+          0.8061164476123519,
+          0.11685993230461139
+        ],
+        [
+          0.8637477156646133,
+          0.8586425039764313
+        ],
+        [
+          0.21249669033089116,
+          0.9100995836425809
+        ]
+      ],
+      "confidence": 0.9269811844224668,
+      "brightness": 0.5230819674223857,
+      "sharpness": 98.07136749161617,
+      "polygonIoU": 0.9967582535431165,
+      "normalizedCornerError": 8.885762906413704E-4,
+      "motionCompensatedCornerJitter": 3.0406954169546536E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 6.2845,
+      "managedHeapBeforeBytes": 5696336,
+      "managedHeapAfterBytes": 6351696,
+      "nativeHeapBeforeBytes": 7089664,
+      "nativeHeapAfterBytes": 7109856
+    },
+    {
+      "id": "held-out-cross-shadow-07",
+      "split": "held-out",
+      "sequence": "held-out-cross-shadow",
+      "category": "cross-shadow",
+      "frameIndex": 7,
+      "file": "held-out-cross-shadow-07.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.1803618801464796,
+          0.18543532421907383
+        ],
+        [
+          0.8067219762992524,
+          0.11391400744562905
+        ],
+        [
+          0.8655121761146546,
+          0.8555960756952745
+        ],
+        [
+          0.2157749461618295,
+          0.9081141470282599
+        ]
+      ],
+      "corners": [
+        [
+          0.17918095907566983,
+          0.18517667494044507
+        ],
+        [
+          0.8074528862828458,
+          0.11349681164122481
+        ],
+        [
+          0.8661788270034209,
+          0.8557025168982374
+        ],
+        [
+          0.21517835850348369,
+          0.9079830065972414
+        ]
+      ],
+      "confidence": 0.9213819776922308,
+      "brightness": 0.5216305912990197,
+      "sharpness": 114.65447835269505,
+      "polygonIoU": 0.9969325620076426,
+      "normalizedCornerError": 8.34108795615543E-4,
+      "motionCompensatedCornerJitter": 3.365587654341618E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 4.9132,
+      "managedHeapBeforeBytes": 6384464,
+      "managedHeapAfterBytes": 7031632,
+      "nativeHeapBeforeBytes": 7109936,
+      "nativeHeapAfterBytes": 7131696
+    },
+    {
+      "id": "held-out-moving-penumbra-00",
+      "split": "held-out",
+      "sequence": "held-out-moving-penumbra",
+      "category": "moving-penumbra",
+      "frameIndex": 0,
+      "file": "held-out-moving-penumbra-00.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.18309679602904222,
+          0.19461180431442351
+        ],
+        [
+          0.8092366264310482,
+          0.11973678028360081
+        ],
+        [
+          0.8702581911159385,
+          0.861098039265633
+        ],
+        [
+          0.22068423150281125,
+          0.9170951601966695
+        ]
+      ],
+      "corners": [
+        [
+          0.18168994243922876,
+          0.19448970156607778
+        ],
+        [
+          0.8095609139181599,
+          0.1196052932969624
+        ],
+        [
+          0.8713449447219918,
+          0.8613891149824469
+        ],
+        [
+          0.2204439015894489,
+          0.9167975868766985
+        ]
+      ],
+      "confidence": 0.94,
+      "brightness": 0.5626081239787581,
+      "sharpness": 87.11064569167031,
+      "polygonIoU": 0.9971564754473548,
+      "normalizedCornerError": 8.174086812362457E-4,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 6.2428,
+      "managedHeapBeforeBytes": 7031632,
+      "managedHeapAfterBytes": 7678800,
+      "nativeHeapBeforeBytes": 7133776,
+      "nativeHeapAfterBytes": 7141600
+    },
+    {
+      "id": "held-out-moving-penumbra-01",
+      "split": "held-out",
+      "sequence": "held-out-moving-penumbra",
+      "category": "moving-penumbra",
+      "frameIndex": 1,
+      "file": "held-out-moving-penumbra-01.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.18444775405039243,
+          0.18873564661486442
+        ],
+        [
+          0.8109511989109844,
+          0.11948477693911481
+        ],
+        [
+          0.8682306707208289,
+          0.8613771873692493
+        ],
+        [
+          0.2183888803827995,
+          0.9115401535225769
+        ]
+      ],
+      "corners": [
+        [
+          0.183606864692122,
+          0.1885688823475911
+        ],
+        [
+          0.8115756454273113,
+          0.11923995886378264
+        ],
+        [
+          0.8690446944378046,
+          0.8612843215467317
+        ],
+        [
+          0.21759430590041975,
+          0.9116652866388687
+        ]
+      ],
+      "confidence": 0.94,
+      "brightness": 0.5568118489583335,
+      "sharpness": 96.36201476334466,
+      "polygonIoU": 0.9972684315263944,
+      "normalizedCornerError": 7.879150765096847E-4,
+      "motionCompensatedCornerJitter": 5.141390553118127E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 8.6796,
+      "managedHeapBeforeBytes": 7711568,
+      "managedHeapAfterBytes": 4328272,
+      "nativeHeapBeforeBytes": 7141936,
+      "nativeHeapAfterBytes": 7041728
+    },
+    {
+      "id": "held-out-moving-penumbra-02",
+      "split": "held-out",
+      "sequence": "held-out-moving-penumbra",
+      "category": "moving-penumbra",
+      "frameIndex": 2,
+      "file": "held-out-moving-penumbra-02.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.17822600281262083,
+          0.18678106378420126
+        ],
+        [
+          0.8044459239726317,
+          0.11310767924189437
+        ],
+        [
+          0.8646680072713627,
+          0.8545852715338776
+        ],
+        [
+          0.21503433740306013,
+          0.9093358024260546
+        ]
+      ],
+      "corners": [
+        [
+          0.17743847793965767,
+          0.1865533163504479
+        ],
+        [
+          0.8051547472094318,
+          0.11270612556515525
+        ],
+        [
+          0.86528848091978,
+          0.8545308584290484
+        ],
+        [
+          0.21396340511778375,
+          0.9093920639395815
+        ]
+      ],
+      "confidence": 0.94,
+      "brightness": 0.5595303947099675,
+      "sharpness": 150.36951155531142,
+      "polygonIoU": 0.9970582075760562,
+      "normalizedCornerError": 8.324305887214437E-4,
+      "motionCompensatedCornerJitter": 1.8529564699352015E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 4.4095,
+      "managedHeapBeforeBytes": 4361040,
+      "managedHeapAfterBytes": 5008208,
+      "nativeHeapBeforeBytes": 7041808,
+      "nativeHeapAfterBytes": 7051136
+    },
+    {
+      "id": "held-out-moving-penumbra-03",
+      "split": "held-out",
+      "sequence": "held-out-moving-penumbra",
+      "category": "moving-penumbra",
+      "frameIndex": 3,
+      "file": "held-out-moving-penumbra-03.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.17657065377419118,
+          0.19267866015212776
+        ],
+        [
+          0.802165961634959,
+          0.110099823987335
+        ],
+        [
+          0.8683125175905182,
+          0.8506784259352251
+        ],
+        [
+          0.21915350995609514,
+          0.9146686074475555
+        ]
+      ],
+      "corners": [
+        [
+          0.1759900787616821,
+          0.19230320503668547
+        ],
+        [
+          0.8028950145318707,
+          0.11016982855956402
+        ],
+        [
+          0.8691325611400925,
+          0.8505961336541824
+        ],
+        [
+          0.21814330957799066,
+          0.9146710893984928
+        ]
+      ],
+      "confidence": 0.94,
+      "brightness": 0.5674698861315359,
+      "sharpness": 135.62839178211425,
+      "polygonIoU": 0.9972636834867701,
+      "normalizedCornerError": 8.145429478756407E-4,
+      "motionCompensatedCornerJitter": 2.5221902445738076E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 4.8261,
+      "managedHeapBeforeBytes": 5008208,
+      "managedHeapAfterBytes": 5667664,
+      "nativeHeapBeforeBytes": 7051216,
+      "nativeHeapAfterBytes": 7062560
+    },
+    {
+      "id": "held-out-moving-penumbra-04",
+      "split": "held-out",
+      "sequence": "held-out-moving-penumbra",
+      "category": "moving-penumbra",
+      "frameIndex": 4,
+      "file": "held-out-moving-penumbra-04.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.18085504599906507,
+          0.19855138763602614
+        ],
+        [
+          0.8062850658367449,
+          0.11377370181790901
+        ],
+        [
+          0.8738942399500339,
+          0.8541172096120837
+        ],
+        [
+          0.22486388440748367,
+          0.9203891380786685
+        ]
+      ],
+      "corners": [
+        [
+          0.17990470498165986,
+          0.19843969491681135
+        ],
+        [
+          0.8070249831000378,
+          0.11354459430829746
+        ],
+        [
+          0.8745624296293121,
+          0.8539100575463087
+        ],
+        [
+          0.22413719665809043,
+          0.9206737705075541
+        ]
+      ],
+      "confidence": 0.94,
+      "brightness": 0.5764076286764706,
+      "sharpness": 100.12898781941733,
+      "polygonIoU": 0.9972000789017154,
+      "normalizedCornerError": 8.028660852873777E-4,
+      "motionCompensatedCornerJitter": 3.3752236803546483E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 3.9825,
+      "managedHeapBeforeBytes": 5667664,
+      "managedHeapAfterBytes": 6323024,
+      "nativeHeapBeforeBytes": 7062640,
+      "nativeHeapAfterBytes": 7073536
+    },
+    {
+      "id": "held-out-moving-penumbra-05",
+      "split": "held-out",
+      "sequence": "held-out-moving-penumbra",
+      "category": "moving-penumbra",
+      "frameIndex": 5,
+      "file": "held-out-moving-penumbra-05.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.18146883083441206,
+          0.1953732935023097
+        ],
+        [
+          0.8074284478928055,
+          0.11786306977155862
+        ],
+        [
+          0.8702031969107309,
+          0.8589637839467198
+        ],
+        [
+          0.22076491675738064,
+          0.9176948384094571
+        ]
+      ],
+      "corners": [
+        [
+          0.18006126536996211,
+          0.1951533635801304
+        ],
+        [
+          0.8080451310407717,
+          0.11788473782097067
+        ],
+        [
+          0.870961731408496,
+          0.8590861565150786
+        ],
+        [
+          0.22036144862994494,
+          0.9176137279979487
+        ]
+      ],
+      "confidence": 0.94,
+      "brightness": 0.5867019505718954,
+      "sharpness": 113.90368942844601,
+      "polygonIoU": 0.9972187504897851,
+      "normalizedCornerError": 8.053974637718776E-4,
+      "motionCompensatedCornerJitter": 3.9476558555153737E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 4.5457,
+      "managedHeapBeforeBytes": 6323024,
+      "managedHeapAfterBytes": 6982480,
+      "nativeHeapBeforeBytes": 7073616,
+      "nativeHeapAfterBytes": 7081824
+    },
+    {
+      "id": "held-out-moving-penumbra-06",
+      "split": "held-out",
+      "sequence": "held-out-moving-penumbra",
+      "category": "moving-penumbra",
+      "frameIndex": 6,
+      "file": "held-out-moving-penumbra-06.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.17886672982510282,
+          0.18697263308115675
+        ],
+        [
+          0.8053295158759316,
+          0.11707023805717257
+        ],
+        [
+          0.8630425132212156,
+          0.8589028539719704
+        ],
+        [
+          0.21323023430230756,
+          0.9097416225125987
+        ]
+      ],
+      "corners": [
+        [
+          0.17787823538396716,
+          0.18682122283759403
+        ],
+        [
+          0.8061172360380154,
+          0.11690156398133668
+        ],
+        [
+          0.8636905889291899,
+          0.8587129589981954
+        ],
+        [
+          0.21242004108079948,
+          0.9100039597303681
+        ]
+      ],
+      "confidence": 0.94,
+      "brightness": 0.5907445108251634,
+      "sharpness": 142.2199326052242,
+      "polygonIoU": 0.997117313044667,
+      "normalizedCornerError": 8.33132601260832E-4,
+      "motionCompensatedCornerJitter": 3.860244778122107E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 5.3629,
+      "managedHeapBeforeBytes": 6982480,
+      "managedHeapAfterBytes": 7637840,
+      "nativeHeapBeforeBytes": 7081904,
+      "nativeHeapAfterBytes": 7093472
+    },
+    {
+      "id": "held-out-moving-penumbra-07",
+      "split": "held-out",
+      "sequence": "held-out-moving-penumbra",
+      "category": "moving-penumbra",
+      "frameIndex": 7,
+      "file": "held-out-moving-penumbra-07.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.1803618801464796,
+          0.18543532421907383
+        ],
+        [
+          0.8067219762992524,
+          0.11391400744562905
+        ],
+        [
+          0.8655121761146546,
+          0.8555960756952745
+        ],
+        [
+          0.2157749461618295,
+          0.9081141470282599
+        ]
+      ],
+      "corners": [
+        [
+          0.1792900670350429,
+          0.18536366826289266
+        ],
+        [
+          0.8074617828347658,
+          0.11386678735125794
+        ],
+        [
+          0.866259593398252,
+          0.855660495065283
+        ],
+        [
+          0.21525536437446996,
+          0.908144295034449
+        ]
+      ],
+      "confidence": 0.94,
+      "brightness": 0.5865021446078431,
+      "sharpness": 137.81215478641727,
+      "polygonIoU": 0.9974206505545957,
+      "normalizedCornerError": 7.715404178040925E-4,
+      "motionCompensatedCornerJitter": 2.2272656299589976E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 9.6108,
+      "managedHeapBeforeBytes": 7637840,
+      "managedHeapAfterBytes": 4324176,
+      "nativeHeapBeforeBytes": 7093296,
+      "nativeHeapAfterBytes": 7042736
+    },
+    {
+      "id": "held-out-textured-light-00",
+      "split": "held-out",
+      "sequence": "held-out-textured-light",
+      "category": "textured-light",
+      "frameIndex": 0,
+      "file": "held-out-textured-light-00.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.18309679602904222,
+          0.19461180431442351
+        ],
+        [
+          0.8092366264310482,
+          0.11973678028360081
+        ],
+        [
+          0.8702581911159385,
+          0.861098039265633
+        ],
+        [
+          0.22068423150281125,
+          0.9170951601966695
+        ]
+      ],
+      "corners": [
+        [
+          0.18224396414813082,
+          0.19430843425885638
+        ],
+        [
+          0.8095335630915377,
+          0.11958722718830585
+        ],
+        [
+          0.8713584889840398,
+          0.8613690746714817
+        ],
+        [
+          0.21962633594524222,
+          0.916898051683907
+        ]
+      ],
+      "confidence": 0.9377248887293019,
+      "brightness": 0.5984749795751635,
+      "sharpness": 93.7312315511068,
+      "polygonIoU": 0.9968921258673276,
+      "normalizedCornerError": 8.617360880883091E-4,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 6.4255,
+      "managedHeapBeforeBytes": 4356944,
+      "managedHeapAfterBytes": 5004112,
+      "nativeHeapBeforeBytes": 7042816,
+      "nativeHeapAfterBytes": 7058976
+    },
+    {
+      "id": "held-out-textured-light-01",
+      "split": "held-out",
+      "sequence": "held-out-textured-light",
+      "category": "textured-light",
+      "frameIndex": 1,
+      "file": "held-out-textured-light-01.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.18444775405039243,
+          0.18873564661486442
+        ],
+        [
+          0.8109511989109844,
+          0.11948477693911481
+        ],
+        [
+          0.8682306707208289,
+          0.8613771873692493
+        ],
+        [
+          0.2183888803827995,
+          0.9115401535225769
+        ]
+      ],
+      "corners": [
+        [
+          0.1834380961158069,
+          0.1887278290967109
+        ],
+        [
+          0.8115531886488191,
+          0.11912271370094259
+        ],
+        [
+          0.8690247005323372,
+          0.8614691472578171
+        ],
+        [
+          0.21758690760208443,
+          0.9111807454371502
+        ]
+      ],
+      "confidence": 0.9377517968636314,
+      "brightness": 0.5935860779207517,
+      "sharpness": 99.13252646484375,
+      "polygonIoU": 0.9969927756905094,
+      "normalizedCornerError": 8.475833453205535E-4,
+      "motionCompensatedCornerJitter": 3.4104647173549844E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 5.123,
+      "managedHeapBeforeBytes": 5004112,
+      "managedHeapAfterBytes": 5659472,
+      "nativeHeapBeforeBytes": 7059056,
+      "nativeHeapAfterBytes": 7079248
+    },
+    {
+      "id": "held-out-textured-light-02",
+      "split": "held-out",
+      "sequence": "held-out-textured-light",
+      "category": "textured-light",
+      "frameIndex": 2,
+      "file": "held-out-textured-light-02.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.17822600281262083,
+          0.18678106378420126
+        ],
+        [
+          0.8044459239726317,
+          0.11310767924189437
+        ],
+        [
+          0.8646680072713627,
+          0.8545852715338776
+        ],
+        [
+          0.21503433740306013,
+          0.9093358024260546
+        ]
+      ],
+      "corners": [
+        [
+          0.1771612513391719,
+          0.18653342288192262
+        ],
+        [
+          0.8050632974628358,
+          0.11269488034907343
+        ],
+        [
+          0.8653687064619163,
+          0.8545377528497772
+        ],
+        [
+          0.21415347685262456,
+          0.9093452200245273
+        ]
+      ],
+      "confidence": 0.9351297431291739,
+      "brightness": 0.595910475388072,
+      "sharpness": 153.722188743496,
+      "polygonIoU": 0.9969391142444857,
+      "normalizedCornerError": 8.547640249676639E-4,
+      "motionCompensatedCornerJitter": 2.1101969588352852E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 5.2589,
+      "managedHeapBeforeBytes": 5659472,
+      "managedHeapAfterBytes": 6314832,
+      "nativeHeapBeforeBytes": 7079328,
+      "nativeHeapAfterBytes": 7093696
+    },
+    {
+      "id": "held-out-textured-light-03",
+      "split": "held-out",
+      "sequence": "held-out-textured-light",
+      "category": "textured-light",
+      "frameIndex": 3,
+      "file": "held-out-textured-light-03.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.17657065377419118,
+          0.19267866015212776
+        ],
+        [
+          0.802165961634959,
+          0.110099823987335
+        ],
+        [
+          0.8683125175905182,
+          0.8506784259352251
+        ],
+        [
+          0.21915350995609514,
+          0.9146686074475555
+        ]
+      ],
+      "corners": [
+        [
+          0.17585208815020154,
+          0.1924538622625758
+        ],
+        [
+          0.8026538380577207,
+          0.11011754324097749
+        ],
+        [
+          0.8691598985293272,
+          0.8504557390751156
+        ],
+        [
+          0.21829429006751208,
+          0.914584428420157
+        ]
+      ],
+      "confidence": 0.94,
+      "brightness": 0.6023971737132353,
+      "sharpness": 131.86986296716267,
+      "polygonIoU": 0.9973498235157355,
+      "normalizedCornerError": 7.451481807680773E-4,
+      "motionCompensatedCornerJitter": 2.802622204839172E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 5.1257,
+      "managedHeapBeforeBytes": 6314832,
+      "managedHeapAfterBytes": 6966096,
+      "nativeHeapBeforeBytes": 7093776,
+      "nativeHeapAfterBytes": 7112400
+    },
+    {
+      "id": "held-out-textured-light-04",
+      "split": "held-out",
+      "sequence": "held-out-textured-light",
+      "category": "textured-light",
+      "frameIndex": 4,
+      "file": "held-out-textured-light-04.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.18085504599906507,
+          0.19855138763602614
+        ],
+        [
+          0.8062850658367449,
+          0.11377370181790901
+        ],
+        [
+          0.8738942399500339,
+          0.8541172096120837
+        ],
+        [
+          0.22486388440748367,
+          0.9203891380786685
+        ]
+      ],
+      "corners": [
+        [
+          0.17983522496633284,
+          0.19830944958209962
+        ],
+        [
+          0.8068966119951878,
+          0.11341581739131182
+        ],
+        [
+          0.8746618980562162,
+          0.8538422145859037
+        ],
+        [
+          0.2240268394526719,
+          0.9204904603911723
+        ]
+      ],
+      "confidence": 0.94,
+      "brightness": 0.6099510825163399,
+      "sharpness": 107.25627159016926,
+      "polygonIoU": 0.9968956040410932,
+      "normalizedCornerError": 8.53819363415925E-4,
+      "motionCompensatedCornerJitter": 2.448388471357995E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 5.7998,
+      "managedHeapBeforeBytes": 6998864,
+      "managedHeapAfterBytes": 7646032,
+      "nativeHeapBeforeBytes": 7112480,
+      "nativeHeapAfterBytes": 7130432
+    },
+    {
+      "id": "held-out-textured-light-05",
+      "split": "held-out",
+      "sequence": "held-out-textured-light",
+      "category": "textured-light",
+      "frameIndex": 5,
+      "file": "held-out-textured-light-05.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.18146883083441206,
+          0.1953732935023097
+        ],
+        [
+          0.8074284478928055,
+          0.11786306977155862
+        ],
+        [
+          0.8702031969107309,
+          0.8589637839467198
+        ],
+        [
+          0.22076491675738064,
+          0.9176948384094571
+        ]
+      ],
+      "corners": [
+        [
+          0.18004351806096927,
+          0.19532507242780603
+        ],
+        [
+          0.8077754659486283,
+          0.11776064331166858
+        ],
+        [
+          0.8712259475723308,
+          0.8590240170071358
+        ],
+        [
+          0.2201974146465622,
+          0.9176667778699524
+        ]
+      ],
+      "confidence": 0.94,
+      "brightness": 0.6184469081903595,
+      "sharpness": 131.76595952299965,
+      "polygonIoU": 0.9971202906256086,
+      "normalizedCornerError": 8.451662677200815E-4,
+      "motionCompensatedCornerJitter": 3.8434129787687037E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 21.682,
+      "managedHeapBeforeBytes": 7646032,
+      "managedHeapAfterBytes": 3849040,
+      "nativeHeapBeforeBytes": 7130512,
+      "nativeHeapAfterBytes": 7143264
+    },
+    {
+      "id": "held-out-textured-light-06",
+      "split": "held-out",
+      "sequence": "held-out-textured-light",
+      "category": "textured-light",
+      "frameIndex": 6,
+      "file": "held-out-textured-light-06.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.17886672982510282,
+          0.18697263308115675
+        ],
+        [
+          0.8053295158759316,
+          0.11707023805717257
+        ],
+        [
+          0.8630425132212156,
+          0.8589028539719704
+        ],
+        [
+          0.21323023430230756,
+          0.9097416225125987
+        ]
+      ],
+      "corners": [
+        [
+          0.17796092091372595,
+          0.18635338791785094
+        ],
+        [
+          0.8060821809224157,
+          0.117065554662508
+        ],
+        [
+          0.8637842594997971,
+          0.8587707191671998
+        ],
+        [
+          0.21238126328218984,
+          0.9099420857489191
+        ]
+      ],
+      "confidence": 0.94,
+      "brightness": 0.6215420751633988,
+      "sharpness": 142.10041115926106,
+      "polygonIoU": 0.996971565803903,
+      "normalizedCornerError": 8.68917244291165E-4,
+      "motionCompensatedCornerJitter": 4.7308397896719026E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 6.3994,
+      "managedHeapBeforeBytes": 3914576,
+      "managedHeapAfterBytes": 4561744,
+      "nativeHeapBeforeBytes": 7030256,
+      "nativeHeapAfterBytes": 7049552
+    },
+    {
+      "id": "held-out-textured-light-07",
+      "split": "held-out",
+      "sequence": "held-out-textured-light",
+      "category": "textured-light",
+      "frameIndex": 7,
+      "file": "held-out-textured-light-07.png",
+      "expectedDetection": true,
+      "detected": true,
+      "truth": [
+        [
+          0.1803618801464796,
+          0.18543532421907383
+        ],
+        [
+          0.8067219762992524,
+          0.11391400744562905
+        ],
+        [
+          0.8655121761146546,
+          0.8555960756952745
+        ],
+        [
+          0.2157749461618295,
+          0.9081141470282599
+        ]
+      ],
+      "corners": [
+        [
+          0.17927892357012573,
+          0.1851416367539806
+        ],
+        [
+          0.8073640256268093,
+          0.11373283642806647
+        ],
+        [
+          0.8662789330662832,
+          0.8557458584468149
+        ],
+        [
+          0.21490189416504057,
+          0.9080978185555738
+        ]
+      ],
+      "confidence": 0.94,
+      "brightness": 0.6179219515931372,
+      "sharpness": 132.89477555074694,
+      "polygonIoU": 0.9969322747400071,
+      "normalizedCornerError": 8.609120054847027E-4,
+      "motionCompensatedCornerJitter": 2.70017709288866E-4,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 6.2451,
+      "managedHeapBeforeBytes": 4561744,
+      "managedHeapAfterBytes": 5217104,
+      "nativeHeapBeforeBytes": 7049632,
+      "nativeHeapAfterBytes": 7070496
+    },
+    {
+      "id": "held-out-negative-shadow-00",
+      "split": "held-out",
+      "sequence": "held-out-negative-shadow",
+      "category": "negative-shadow",
+      "frameIndex": 0,
+      "file": "held-out-negative-shadow-00.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.4906554202410131,
+      "sharpness": 28.645511913034653,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 7.0041,
+      "managedHeapBeforeBytes": 5217104,
+      "managedHeapAfterBytes": 5913424,
+      "nativeHeapBeforeBytes": 7070576,
+      "nativeHeapAfterBytes": 7075120
+    },
+    {
+      "id": "held-out-negative-shadow-01",
+      "split": "held-out",
+      "sequence": "held-out-negative-shadow",
+      "category": "negative-shadow",
+      "frameIndex": 1,
+      "file": "held-out-negative-shadow-01.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.4886111749387255,
+      "sharpness": 35.87557580607732,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 10.6551,
+      "managedHeapBeforeBytes": 5913424,
+      "managedHeapAfterBytes": 6642512,
+      "nativeHeapBeforeBytes": 7075200,
+      "nativeHeapAfterBytes": 7081760
+    },
+    {
+      "id": "held-out-negative-shadow-02",
+      "split": "held-out",
+      "sequence": "held-out-negative-shadow",
+      "category": "negative-shadow",
+      "frameIndex": 2,
+      "file": "held-out-negative-shadow-02.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.4904147646037582,
+      "sharpness": 83.81769581984415,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 7.9468,
+      "managedHeapBeforeBytes": 6642512,
+      "managedHeapAfterBytes": 7334736,
+      "nativeHeapBeforeBytes": 7081840,
+      "nativeHeapAfterBytes": 7087056
+    },
+    {
+      "id": "held-out-negative-shadow-03",
+      "split": "held-out",
+      "sequence": "held-out-negative-shadow",
+      "category": "negative-shadow",
+      "frameIndex": 3,
+      "file": "held-out-negative-shadow-03.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.49411846405228765,
+      "sharpness": 68.28557691951329,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 11.7429,
+      "managedHeapBeforeBytes": 7334736,
+      "managedHeapAfterBytes": 8063824,
+      "nativeHeapBeforeBytes": 7087136,
+      "nativeHeapAfterBytes": 7095952
+    },
+    {
+      "id": "held-out-negative-shadow-04",
+      "split": "held-out",
+      "sequence": "held-out-negative-shadow",
+      "category": "negative-shadow",
+      "frameIndex": 4,
+      "file": "held-out-negative-shadow-04.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.4968404181985294,
+      "sharpness": 41.93683807490668,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 7.8711,
+      "managedHeapBeforeBytes": 3996496,
+      "managedHeapAfterBytes": 4692816,
+      "nativeHeapBeforeBytes": 7073184,
+      "nativeHeapAfterBytes": 7034384
+    },
+    {
+      "id": "held-out-negative-shadow-05",
+      "split": "held-out",
+      "sequence": "held-out-negative-shadow",
+      "category": "negative-shadow",
+      "frameIndex": 5,
+      "file": "held-out-negative-shadow-05.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.5014869281045752,
+      "sharpness": 40.25298906182184,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 7.4827,
+      "managedHeapBeforeBytes": 4692816,
+      "managedHeapAfterBytes": 5385040,
+      "nativeHeapBeforeBytes": 7034464,
+      "nativeHeapAfterBytes": 7039072
+    },
+    {
+      "id": "held-out-negative-shadow-06",
+      "split": "held-out",
+      "sequence": "held-out-negative-shadow",
+      "category": "negative-shadow",
+      "frameIndex": 6,
+      "file": "held-out-negative-shadow-06.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.5036271701388889,
+      "sharpness": 54.32957712703281,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 27.5694,
+      "managedHeapBeforeBytes": 5385040,
+      "managedHeapAfterBytes": 6081360,
+      "nativeHeapBeforeBytes": 7039152,
+      "nativeHeapAfterBytes": 7045040
+    },
+    {
+      "id": "held-out-negative-shadow-07",
+      "split": "held-out",
+      "sequence": "held-out-negative-shadow",
+      "category": "negative-shadow",
+      "frameIndex": 7,
+      "file": "held-out-negative-shadow-07.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.5022928155637255,
+      "sharpness": 71.57598225894505,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 21.178,
+      "managedHeapBeforeBytes": 6081360,
+      "managedHeapAfterBytes": 6802256,
+      "nativeHeapBeforeBytes": 7045120,
+      "nativeHeapAfterBytes": 7050784
+    },
+    {
+      "id": "held-out-negative-texture-00",
+      "split": "held-out",
+      "sequence": "held-out-negative-texture",
+      "category": "negative-texture",
+      "frameIndex": 0,
+      "file": "held-out-negative-texture-00.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.5761233915441176,
+      "sharpness": 42.670606551106765,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 12.5256,
+      "managedHeapBeforeBytes": 6802256,
+      "managedHeapAfterBytes": 7527248,
+      "nativeHeapBeforeBytes": 7050864,
+      "nativeHeapAfterBytes": 7055984
+    },
+    {
+      "id": "held-out-negative-texture-01",
+      "split": "held-out",
+      "sequence": "held-out-negative-texture",
+      "category": "negative-texture",
+      "frameIndex": 1,
+      "file": "held-out-negative-texture-01.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.5714589205473856,
+      "sharpness": 49.598809016927085,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 16.1811,
+      "managedHeapBeforeBytes": 7527248,
+      "managedHeapAfterBytes": 5131088,
+      "nativeHeapBeforeBytes": 7056448,
+      "nativeHeapAfterBytes": 7034640
+    },
+    {
+      "id": "held-out-negative-texture-02",
+      "split": "held-out",
+      "sequence": "held-out-negative-texture",
+      "category": "negative-texture",
+      "frameIndex": 2,
+      "file": "held-out-negative-texture-02.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.5736929764093138,
+      "sharpness": 103.59785931641261,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 9.2828,
+      "managedHeapBeforeBytes": 5131088,
+      "managedHeapAfterBytes": 6277968,
+      "nativeHeapBeforeBytes": 7034720,
+      "nativeHeapAfterBytes": 7040448
+    },
+    {
+      "id": "held-out-negative-texture-03",
+      "split": "held-out",
+      "sequence": "held-out-negative-texture",
+      "category": "negative-texture",
+      "frameIndex": 3,
+      "file": "held-out-negative-texture-03.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.5799303257761438,
+      "sharpness": 79.80157520674598,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 10.4023,
+      "managedHeapBeforeBytes": 6277968,
+      "managedHeapAfterBytes": 7330640,
+      "nativeHeapBeforeBytes": 7040528,
+      "nativeHeapAfterBytes": 7046704
+    },
+    {
+      "id": "held-out-negative-texture-04",
+      "split": "held-out",
+      "sequence": "held-out-negative-texture",
+      "category": "negative-texture",
+      "frameIndex": 4,
+      "file": "held-out-negative-texture-04.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.5871391697303922,
+      "sharpness": 52.221987736002596,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 13.701,
+      "managedHeapBeforeBytes": 7363408,
+      "managedHeapAfterBytes": 8510288,
+      "nativeHeapBeforeBytes": 7046784,
+      "nativeHeapAfterBytes": 7053312
+    },
+    {
+      "id": "held-out-negative-texture-05",
+      "split": "held-out",
+      "sequence": "held-out-negative-texture",
+      "category": "negative-texture",
+      "frameIndex": 5,
+      "file": "held-out-negative-texture-05.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.5953323120915033,
+      "sharpness": 73.46448816883299,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 10.906,
+      "managedHeapBeforeBytes": 3951440,
+      "managedHeapAfterBytes": 5098320,
+      "nativeHeapBeforeBytes": 7050240,
+      "nativeHeapAfterBytes": 7033056
+    },
+    {
+      "id": "held-out-negative-texture-06",
+      "split": "held-out",
+      "sequence": "held-out-negative-texture",
+      "category": "negative-texture",
+      "frameIndex": 6,
+      "file": "held-out-negative-texture-06.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.5982940155228759,
+      "sharpness": 83.71752704467774,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 11.5532,
+      "managedHeapBeforeBytes": 5098320,
+      "managedHeapAfterBytes": 6245200,
+      "nativeHeapBeforeBytes": 7033136,
+      "nativeHeapAfterBytes": 7039536
+    },
+    {
+      "id": "held-out-negative-texture-07",
+      "split": "held-out",
+      "sequence": "held-out-negative-texture",
+      "category": "negative-texture",
+      "frameIndex": 7,
+      "file": "held-out-negative-texture-07.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.5948525709763073,
+      "sharpness": 75.69376643616359,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 9.9977,
+      "managedHeapBeforeBytes": 6245200,
+      "managedHeapAfterBytes": 7392080,
+      "nativeHeapBeforeBytes": 7039616,
+      "nativeHeapAfterBytes": 7045792
+    },
+    {
+      "id": "held-out-negative-circles-00",
+      "split": "held-out",
+      "sequence": "held-out-negative-circles",
+      "category": "negative-circles",
+      "frameIndex": 0,
+      "file": "held-out-negative-circles-00.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.5686389399509804,
+      "sharpness": 48.318553382703996,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 17.5851,
+      "managedHeapBeforeBytes": 7424848,
+      "managedHeapAfterBytes": 4045648,
+      "nativeHeapBeforeBytes": 7045872,
+      "nativeHeapAfterBytes": 7049424
+    },
+    {
+      "id": "held-out-negative-circles-01",
+      "split": "held-out",
+      "sequence": "held-out-negative-circles",
+      "category": "negative-circles",
+      "frameIndex": 1,
+      "file": "held-out-negative-circles-01.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.5640430325776145,
+      "sharpness": 53.12431447957357,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 11.872,
+      "managedHeapBeforeBytes": 4045648,
+      "managedHeapAfterBytes": 5229392,
+      "nativeHeapBeforeBytes": 7049504,
+      "nativeHeapAfterBytes": 7100992
+    },
+    {
+      "id": "held-out-negative-circles-02",
+      "split": "held-out",
+      "sequence": "held-out-negative-circles",
+      "category": "negative-circles",
+      "frameIndex": 2,
+      "file": "held-out-negative-circles-02.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.5661827129289216,
+      "sharpness": 108.80760119627847,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 9.7816,
+      "managedHeapBeforeBytes": 5229392,
+      "managedHeapAfterBytes": 6347600,
+      "nativeHeapBeforeBytes": 7101072,
+      "nativeHeapAfterBytes": 7150032
+    },
+    {
+      "id": "held-out-negative-circles-03",
+      "split": "held-out",
+      "sequence": "held-out-negative-circles",
+      "category": "negative-circles",
+      "frameIndex": 3,
+      "file": "held-out-negative-circles-03.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.572354434742647,
+      "sharpness": 85.3082589822451,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 9.9772,
+      "managedHeapBeforeBytes": 6347600,
+      "managedHeapAfterBytes": 7363408,
+      "nativeHeapBeforeBytes": 7150112,
+      "nativeHeapAfterBytes": 7200416
+    },
+    {
+      "id": "held-out-negative-circles-04",
+      "split": "held-out",
+      "sequence": "held-out-negative-circles",
+      "category": "negative-circles",
+      "frameIndex": 4,
+      "file": "held-out-negative-circles-04.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.5795423049428104,
+      "sharpness": 56.74289143921535,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 20.2653,
+      "managedHeapBeforeBytes": 7363408,
+      "managedHeapAfterBytes": 4500304,
+      "nativeHeapBeforeBytes": 7200496,
+      "nativeHeapAfterBytes": 7049712
+    },
+    {
+      "id": "held-out-negative-circles-05",
+      "split": "held-out",
+      "sequence": "held-out-negative-circles",
+      "category": "negative-circles",
+      "frameIndex": 5,
+      "file": "held-out-negative-circles-05.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.5875524407679739,
+      "sharpness": 79.37955403136147,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 10.2351,
+      "managedHeapBeforeBytes": 4500304,
+      "managedHeapAfterBytes": 5745488,
+      "nativeHeapBeforeBytes": 7049792,
+      "nativeHeapAfterBytes": 7100768
+    },
+    {
+      "id": "held-out-negative-circles-06",
+      "split": "held-out",
+      "sequence": "held-out-negative-circles",
+      "category": "negative-circles",
+      "frameIndex": 6,
+      "file": "held-out-negative-circles-06.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.5905394454656863,
+      "sharpness": 89.21401326369181,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 10.6336,
+      "managedHeapBeforeBytes": 5745488,
+      "managedHeapAfterBytes": 6990672,
+      "nativeHeapBeforeBytes": 7100752,
+      "nativeHeapAfterBytes": 7152624
+    },
+    {
+      "id": "held-out-negative-circles-07",
+      "split": "held-out",
+      "sequence": "held-out-negative-circles",
+      "category": "negative-circles",
+      "frameIndex": 7,
+      "file": "held-out-negative-circles-07.png",
+      "expectedDetection": false,
+      "detected": false,
+      "truth": null,
+      "corners": null,
+      "confidence": 0,
+      "brightness": 0.58709756689134,
+      "sharpness": 81.45282760107254,
+      "polygonIoU": null,
+      "normalizedCornerError": null,
+      "motionCompensatedCornerJitter": null,
+      "foundToMissingTransition": false,
+      "elapsedMillis": 15.2979,
+      "managedHeapBeforeBytes": 6990672,
+      "managedHeapAfterBytes": 8239952,
+      "nativeHeapBeforeBytes": 7152704,
+      "nativeHeapAfterBytes": 7203552
+    }
+  ],
+  "bySplit": {
+    "tuning": {
+      "frameCount": 56,
+      "positiveFrameCount": 32,
+      "negativeFrameCount": 24,
+      "detectedPositiveCount": 27,
+      "missCount": 5,
+      "falsePositiveCount": 0,
+      "accuratePositiveCount": 27,
+      "recall": 0.84375,
+      "meanPolygonIoUIncludingMisses": 0.8412539291358024,
+      "meanNormalizedCornerErrorOnMatches": 8.367893880285249E-4,
+      "matchedCornerErrorCount": 27,
+      "meanMotionCompensatedCornerJitter": 4.4896943801987527E-4,
+      "matchedAdjacentPairCount": 18,
+      "foundToMissingTransitions": 5,
+      "longestMissingRun": 1,
+      "meanElapsedMillis": 10.186244642857144,
+      "p50ElapsedMillis": 10.0244,
+      "p95ElapsedMillis": 16.7304
+    },
+    "held-out": {
+      "frameCount": 56,
+      "positiveFrameCount": 32,
+      "negativeFrameCount": 24,
+      "detectedPositiveCount": 29,
+      "missCount": 3,
+      "falsePositiveCount": 0,
+      "accuratePositiveCount": 29,
+      "recall": 0.90625,
+      "meanPolygonIoUIncludingMisses": 0.9035447209986608,
+      "meanNormalizedCornerErrorOnMatches": 8.376272665464806E-4,
+      "matchedCornerErrorCount": 29,
+      "meanMotionCompensatedCornerJitter": 3.1640605791590816E-4,
+      "matchedAdjacentPairCount": 23,
+      "foundToMissingTransitions": 2,
+      "longestMissingRun": 1,
+      "meanElapsedMillis": 9.666828571428573,
+      "p50ElapsedMillis": 8.6796,
+      "p95ElapsedMillis": 21.178
+    }
+  },
+  "bySequence": {
+    "tuning-light-shadow": {
+      "frameCount": 8,
+      "positiveFrameCount": 8,
+      "negativeFrameCount": 0,
+      "detectedPositiveCount": 6,
+      "missCount": 2,
+      "falsePositiveCount": 0,
+      "accuratePositiveCount": 6,
+      "recall": 0.75,
+      "meanPolygonIoUIncludingMisses": 0.7478533818240581,
+      "meanNormalizedCornerErrorOnMatches": 7.886121663685718E-4,
+      "matchedCornerErrorCount": 6,
+      "meanMotionCompensatedCornerJitter": 4.059840273411611E-4,
+      "matchedAdjacentPairCount": 3,
+      "foundToMissingTransitions": 2,
+      "longestMissingRun": 1,
+      "meanElapsedMillis": 10.339337500000001,
+      "p50ElapsedMillis": 6.3907,
+      "p95ElapsedMillis": 20.5558
+    },
+    "tuning-cross-shadow": {
+      "frameCount": 8,
+      "positiveFrameCount": 8,
+      "negativeFrameCount": 0,
+      "detectedPositiveCount": 8,
+      "missCount": 0,
+      "falsePositiveCount": 0,
+      "accuratePositiveCount": 8,
+      "recall": 1,
+      "meanPolygonIoUIncludingMisses": 0.9970599733753542,
+      "meanNormalizedCornerErrorOnMatches": 8.307818853299459E-4,
+      "matchedCornerErrorCount": 8,
+      "meanMotionCompensatedCornerJitter": 4.1125326501786333E-4,
+      "matchedAdjacentPairCount": 7,
+      "foundToMissingTransitions": 0,
+      "longestMissingRun": 0,
+      "meanElapsedMillis": 7.9161874999999995,
+      "p50ElapsedMillis": 6.7423,
+      "p95ElapsedMillis": 11.5888
+    },
+    "tuning-moving-penumbra": {
+      "frameCount": 8,
+      "positiveFrameCount": 8,
+      "negativeFrameCount": 0,
+      "detectedPositiveCount": 7,
+      "missCount": 1,
+      "falsePositiveCount": 0,
+      "accuratePositiveCount": 7,
+      "recall": 0.875,
+      "meanPolygonIoUIncludingMisses": 0.8724499913481824,
+      "meanNormalizedCornerErrorOnMatches": 8.407834362926072E-4,
+      "matchedCornerErrorCount": 7,
+      "meanMotionCompensatedCornerJitter": 4.88507149984044E-4,
+      "matchedAdjacentPairCount": 5,
+      "foundToMissingTransitions": 1,
+      "longestMissingRun": 1,
+      "meanElapsedMillis": 7.475487500000001,
+      "p50ElapsedMillis": 7.2528,
+      "p95ElapsedMillis": 11.3282
+    },
+    "tuning-textured-light": {
+      "frameCount": 8,
+      "positiveFrameCount": 8,
+      "negativeFrameCount": 0,
+      "detectedPositiveCount": 6,
+      "missCount": 2,
+      "falsePositiveCount": 0,
+      "accuratePositiveCount": 6,
+      "recall": 0.75,
+      "meanPolygonIoUIncludingMisses": 0.7476523699956147,
+      "meanNormalizedCornerErrorOnMatches": 8.883168903118208E-4,
+      "matchedCornerErrorCount": 6,
+      "meanMotionCompensatedCornerJitter": 5.140630657630028E-4,
+      "matchedAdjacentPairCount": 3,
+      "foundToMissingTransitions": 2,
+      "longestMissingRun": 1,
+      "meanElapsedMillis": 9.216099999999999,
+      "p50ElapsedMillis": 8.8235,
+      "p95ElapsedMillis": 15.7404
+    },
+    "tuning-negative-shadow": {
+      "frameCount": 8,
+      "positiveFrameCount": 0,
+      "negativeFrameCount": 8,
+      "detectedPositiveCount": 0,
+      "missCount": 0,
+      "falsePositiveCount": 0,
+      "accuratePositiveCount": 0,
+      "recall": null,
+      "meanPolygonIoUIncludingMisses": null,
+      "meanNormalizedCornerErrorOnMatches": null,
+      "matchedCornerErrorCount": 0,
+      "meanMotionCompensatedCornerJitter": null,
+      "matchedAdjacentPairCount": 0,
+      "foundToMissingTransitions": 0,
+      "longestMissingRun": 0,
+      "meanElapsedMillis": 11.561175,
+      "p50ElapsedMillis": 9.2732,
+      "p95ElapsedMillis": 21.2779
+    },
+    "tuning-negative-texture": {
+      "frameCount": 8,
+      "positiveFrameCount": 0,
+      "negativeFrameCount": 8,
+      "detectedPositiveCount": 0,
+      "missCount": 0,
+      "falsePositiveCount": 0,
+      "accuratePositiveCount": 0,
+      "recall": null,
+      "meanPolygonIoUIncludingMisses": null,
+      "meanNormalizedCornerErrorOnMatches": null,
+      "matchedCornerErrorCount": 0,
+      "meanMotionCompensatedCornerJitter": null,
+      "matchedAdjacentPairCount": 0,
+      "foundToMissingTransitions": 0,
+      "longestMissingRun": 0,
+      "meanElapsedMillis": 12.086825,
+      "p50ElapsedMillis": 11.3094,
+      "p95ElapsedMillis": 16.3379
+    },
+    "tuning-negative-circles": {
+      "frameCount": 8,
+      "positiveFrameCount": 0,
+      "negativeFrameCount": 8,
+      "detectedPositiveCount": 0,
+      "missCount": 0,
+      "falsePositiveCount": 0,
+      "accuratePositiveCount": 0,
+      "recall": null,
+      "meanPolygonIoUIncludingMisses": null,
+      "meanNormalizedCornerErrorOnMatches": null,
+      "matchedCornerErrorCount": 0,
+      "meanMotionCompensatedCornerJitter": null,
+      "matchedAdjacentPairCount": 0,
+      "foundToMissingTransitions": 0,
+      "longestMissingRun": 0,
+      "meanElapsedMillis": 12.7086,
+      "p50ElapsedMillis": 11.514,
+      "p95ElapsedMillis": 16.7304
+    },
+    "held-out-light-shadow": {
+      "frameCount": 8,
+      "positiveFrameCount": 8,
+      "negativeFrameCount": 0,
+      "detectedPositiveCount": 6,
+      "missCount": 2,
+      "falsePositiveCount": 0,
+      "accuratePositiveCount": 6,
+      "recall": 0.75,
+      "meanPolygonIoUIncludingMisses": 0.7476694177290305,
+      "meanNormalizedCornerErrorOnMatches": 8.397205227292742E-4,
+      "matchedCornerErrorCount": 6,
+      "meanMotionCompensatedCornerJitter": 2.732568638492167E-4,
+      "matchedAdjacentPairCount": 4,
+      "foundToMissingTransitions": 1,
+      "longestMissingRun": 1,
+      "meanElapsedMillis": 9.3455375,
+      "p50ElapsedMillis": 9.0778,
+      "p95ElapsedMillis": 14.8904
+    },
+    "held-out-cross-shadow": {
+      "frameCount": 8,
+      "positiveFrameCount": 8,
+      "negativeFrameCount": 0,
+      "detectedPositiveCount": 7,
+      "missCount": 1,
+      "falsePositiveCount": 0,
+      "accuratePositiveCount": 7,
+      "recall": 0.875,
+      "meanPolygonIoUIncludingMisses": 0.8722848205711103,
+      "meanNormalizedCornerErrorOnMatches": 8.642267444212324E-4,
+      "matchedCornerErrorCount": 7,
+      "meanMotionCompensatedCornerJitter": 3.374017868279049E-4,
+      "matchedAdjacentPairCount": 5,
+      "foundToMissingTransitions": 1,
+      "longestMissingRun": 1,
+      "meanElapsedMillis": 6.901400000000001,
+      "p50ElapsedMillis": 6.2845,
+      "p95ElapsedMillis": 10.2573
+    },
+    "held-out-moving-penumbra": {
+      "frameCount": 8,
+      "positiveFrameCount": 8,
+      "negativeFrameCount": 0,
+      "detectedPositiveCount": 8,
+      "missCount": 0,
+      "falsePositiveCount": 0,
+      "accuratePositiveCount": 8,
+      "recall": 1,
+      "meanPolygonIoUIncludingMisses": 0.9972129488784174,
+      "meanNormalizedCornerErrorOnMatches": 8.081542328083995E-4,
+      "matchedCornerErrorCount": 8,
+      "meanMotionCompensatedCornerJitter": 3.275275315939752E-4,
+      "matchedAdjacentPairCount": 7,
+      "foundToMissingTransitions": 0,
+      "longestMissingRun": 0,
+      "meanElapsedMillis": 5.957487499999999,
+      "p50ElapsedMillis": 4.8261,
+      "p95ElapsedMillis": 9.6108
+    },
+    "held-out-textured-light": {
+      "frameCount": 8,
+      "positiveFrameCount": 8,
+      "negativeFrameCount": 0,
+      "detectedPositiveCount": 8,
+      "missCount": 0,
+      "falsePositiveCount": 0,
+      "accuratePositiveCount": 8,
+      "recall": 1,
+      "meanPolygonIoUIncludingMisses": 0.9970116968160837,
+      "meanNormalizedCornerErrorOnMatches": 8.422558150070598E-4,
+      "matchedCornerErrorCount": 8,
+      "meanMotionCompensatedCornerJitter": 3.1494431733881E-4,
+      "matchedAdjacentPairCount": 7,
+      "foundToMissingTransitions": 0,
+      "longestMissingRun": 0,
+      "meanElapsedMillis": 7.757425,
+      "p50ElapsedMillis": 5.7998,
+      "p95ElapsedMillis": 21.682
+    },
+    "held-out-negative-shadow": {
+      "frameCount": 8,
+      "positiveFrameCount": 0,
+      "negativeFrameCount": 8,
+      "detectedPositiveCount": 0,
+      "missCount": 0,
+      "falsePositiveCount": 0,
+      "accuratePositiveCount": 0,
+      "recall": null,
+      "meanPolygonIoUIncludingMisses": null,
+      "meanNormalizedCornerErrorOnMatches": null,
+      "matchedCornerErrorCount": 0,
+      "meanMotionCompensatedCornerJitter": null,
+      "matchedAdjacentPairCount": 0,
+      "foundToMissingTransitions": 0,
+      "longestMissingRun": 0,
+      "meanElapsedMillis": 12.6812625,
+      "p50ElapsedMillis": 7.9468,
+      "p95ElapsedMillis": 27.5694
+    },
+    "held-out-negative-texture": {
+      "frameCount": 8,
+      "positiveFrameCount": 0,
+      "negativeFrameCount": 8,
+      "detectedPositiveCount": 0,
+      "missCount": 0,
+      "falsePositiveCount": 0,
+      "accuratePositiveCount": 0,
+      "recall": null,
+      "meanPolygonIoUIncludingMisses": null,
+      "meanNormalizedCornerErrorOnMatches": null,
+      "matchedCornerErrorCount": 0,
+      "meanMotionCompensatedCornerJitter": null,
+      "matchedAdjacentPairCount": 0,
+      "foundToMissingTransitions": 0,
+      "longestMissingRun": 0,
+      "meanElapsedMillis": 11.818712499999998,
+      "p50ElapsedMillis": 10.906,
+      "p95ElapsedMillis": 16.1811
+    },
+    "held-out-negative-circles": {
+      "frameCount": 8,
+      "positiveFrameCount": 0,
+      "negativeFrameCount": 8,
+      "detectedPositiveCount": 0,
+      "missCount": 0,
+      "falsePositiveCount": 0,
+      "accuratePositiveCount": 0,
+      "recall": null,
+      "meanPolygonIoUIncludingMisses": null,
+      "meanNormalizedCornerErrorOnMatches": null,
+      "matchedCornerErrorCount": 0,
+      "meanMotionCompensatedCornerJitter": null,
+      "matchedAdjacentPairCount": 0,
+      "foundToMissingTransitions": 0,
+      "longestMissingRun": 0,
+      "meanElapsedMillis": 13.205974999999999,
+      "p50ElapsedMillis": 10.6336,
+      "p95ElapsedMillis": 20.2653
+    }
+  },
+  "aggregate": {
+    "frameCount": 112,
+    "positiveFrameCount": 64,
+    "negativeFrameCount": 48,
+    "detectedPositiveCount": 56,
+    "missCount": 8,
+    "falsePositiveCount": 0,
+    "accuratePositiveCount": 56,
+    "recall": 0.875,
+    "meanPolygonIoUIncludingMisses": 0.8723993250672313,
+    "meanNormalizedCornerErrorOnMatches": 8.372232894038951E-4,
+    "matchedCornerErrorCount": 56,
+    "meanMotionCompensatedCornerJitter": 3.74604615034723E-4,
+    "matchedAdjacentPairCount": 41,
+    "foundToMissingTransitions": 7,
+    "longestMissingRun": 1,
+    "meanElapsedMillis": 9.926536607142861,
+    "p50ElapsedMillis": 9.6108,
+    "p95ElapsedMillis": 20.2653
+  },
+  "device": {
+    "model": "sdk_gphone64_x86_64",
+    "api": 35
+  },
+  "timingScope": "detectBitmap only after three explicit warm-ups; decoding excluded; one measured call per frame",
+  "memoryScope": "Native\/managed endpoint heap samples with fixture alive; not peak measurements or proof of leak freedom",
+  "jitterScope": "Mean per-corner residual of detected motion minus independent truth motion on adjacent matched frames. Missing pairs are excluded and counted separately; raw geometry, no tracker smoothing."
+}

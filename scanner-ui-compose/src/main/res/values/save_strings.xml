@@ -1,0 +1,21 @@
+<resources>
+    <string name="save_back">Back to page review</string>
+    <string name="save_close_scan">Close scan</string>
+    <string name="save_previous_page">Show previous page</string>
+    <string name="save_next_page">Show next page</string>
+    <string name="save_page_preview">Preview of page %1$d</string>
+    <string name="save_empty_preview">No page preview available</string>
+    <string name="save_filename_label">File name</string>
+    <string name="save_filename_accessibility">File name without extension</string>
+    <string name="save_clear_filename">Clear file name</string>
+    <string name="save_format_accessibility">Choose PDF or JPEG format</string>
+    <string name="save_pdf">PDF</string>
+    <string name="save_jpeg">JPEG</string>
+    <string name="save_location_label">Location</string>
+    <string name="save_on_device">On this device</string>
+    <string name="save_invalid_filename">Use a valid file name.</string>
+    <plurals name="save_page_position">
+        <item quantity="one">%1$d of %2$d page</item>
+        <item quantity="other">%1$d of %2$d pages</item>
+    </plurals>
+</resources>

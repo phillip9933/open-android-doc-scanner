@@ -1,0 +1,10 @@
+<resources>
+    <string name="editor_crop_rotate">Crop &amp; rotate</string><string name="editor_auto_crop">Automatic crop</string><string name="editor_no_crop">No crop</string>
+    <string name="editor_rotate">Rotate</string><string name="editor_apply">Apply</string><string name="editor_apply_all">Apply to all</string>
+    <string name="editor_no_boundary">No clear boundary found. Adjust the corners manually.</string>
+    <string name="editor_filters">Filters</string><string name="editor_adjustments">Adjustments</string>
+    <string name="discard_title">Discard scans?</string><string name="discard_message">Leaving now will discard these unsaved pages.</string>
+    <string name="discard_confirm">Discard</string><string name="discard_keep">Keep editing</string>
+    <string name="save_title">Save scan</string><string name="save_action">Save</string><string name="save_format">Format</string>
+    <string name="save_pages">Pages: %1$d</string>
+</resources>

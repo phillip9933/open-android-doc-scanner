@@ -1,0 +1,8 @@
+
+dev.offlinescan.sample.ScannerDetectionModeTest:.
+
+Time: 12.937
+
+OK (1 test)
+
+

@@ -1,0 +1,6 @@
+{
+  "status": "passed",
+  "errors": [],
+  "license_review_status": "evidence_collected_reconciled",
+  "report": "evidence/release-audit.json"
+}

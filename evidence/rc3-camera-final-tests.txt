@@ -1,0 +1,46 @@
+> Task :scanner-core:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :scanner-core:compileKotlin UP-TO-DATE
+> Task :scanner-core:compileJava NO-SOURCE
+> Task :scanner-core:processResources NO-SOURCE
+> Task :scanner-core:classes UP-TO-DATE
+> Task :scanner-core:jar UP-TO-DATE
+> Task :scanner-camera:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :scanner-camera:preBuild UP-TO-DATE
+> Task :scanner-camera:preDebugBuild UP-TO-DATE
+> Task :scanner-camera:generateDebugResValues UP-TO-DATE
+> Task :scanner-camera:generateDebugResources UP-TO-DATE
+> Task :scanner-camera:packageDebugResources UP-TO-DATE
+> Task :scanner-camera:processDebugNavigationResources UP-TO-DATE
+> Task :scanner-camera:parseDebugLocalResources UP-TO-DATE
+> Task :scanner-camera:generateDebugRFile UP-TO-DATE
+> Task :scanner-processing-opencv:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :scanner-processing-opencv:preBuild UP-TO-DATE
+> Task :scanner-processing-opencv:preDebugBuild UP-TO-DATE
+> Task :scanner-processing-opencv:generateDebugResValues UP-TO-DATE
+> Task :scanner-processing-opencv:generateDebugResources UP-TO-DATE
+> Task :scanner-processing-opencv:packageDebugResources UP-TO-DATE
+> Task :scanner-processing-opencv:processDebugNavigationResources UP-TO-DATE
+> Task :scanner-processing-opencv:parseDebugLocalResources UP-TO-DATE
+> Task :scanner-processing-opencv:generateDebugRFile UP-TO-DATE
+> Task :scanner-processing-opencv:compileDebugKotlin UP-TO-DATE
+> Task :scanner-processing-opencv:javaPreCompileDebug UP-TO-DATE
+> Task :scanner-processing-opencv:compileDebugJavaWithJavac NO-SOURCE
+> Task :scanner-processing-opencv:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :scanner-camera:compileDebugKotlin UP-TO-DATE
+> Task :scanner-camera:javaPreCompileDebug UP-TO-DATE
+> Task :scanner-camera:compileDebugJavaWithJavac NO-SOURCE
+> Task :scanner-camera:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :scanner-camera:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :scanner-camera:preDebugUnitTestBuild UP-TO-DATE
+> Task :scanner-camera:generateDebugUnitTestStubRFile UP-TO-DATE
+> Task :scanner-camera:javaPreCompileDebugUnitTest UP-TO-DATE
+> Task :scanner-camera:processDebugJavaRes UP-TO-DATE
+> Task :scanner-processing-opencv:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :scanner-processing-opencv:processDebugJavaRes UP-TO-DATE
+> Task :scanner-camera:compileDebugUnitTestKotlin
+> Task :scanner-camera:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :scanner-camera:processDebugUnitTestJavaRes UP-TO-DATE
+> Task :scanner-camera:testDebugUnitTest
+
+BUILD SUCCESSFUL in 5s
+29 actionable tasks: 2 executed, 27 up-to-date

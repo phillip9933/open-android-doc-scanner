@@ -1,0 +1,390 @@
+{
+  "license": "Apache-2.0",
+  "provenance": "Original deterministic synthetic scenes; generated before detector changes. Separate challenge cohort; existing benchmark untouched.",
+  "cases": [
+    {
+      "id": "tuning-faint-light",
+      "split": "tuning",
+      "category": "faint-light",
+      "file": "tuning-faint-light.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.1939924906132666,
+          0.10851419031719532
+        ],
+        [
+          0.8322903629536921,
+          0.20868113522537562
+        ],
+        [
+          0.7759699624530664,
+          0.8931552587646077
+        ],
+        [
+          0.1439299123904881,
+          0.7846410684474123
+        ]
+      ],
+      "sha256": "d5ca2c6fd3e4dff031d8b6f7b7a3934470cb96290a423d024aad46d367e0a1b8"
+    },
+    {
+      "id": "tuning-gradient-shadow",
+      "split": "tuning",
+      "category": "gradient-shadow",
+      "file": "tuning-gradient-shadow.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.1939924906132666,
+          0.10851419031719532
+        ],
+        [
+          0.8322903629536921,
+          0.20868113522537562
+        ],
+        [
+          0.7759699624530664,
+          0.8931552587646077
+        ],
+        [
+          0.1439299123904881,
+          0.7846410684474123
+        ]
+      ],
+      "sha256": "9599823079aab5c6f080d03853daf75b22a29f63d3e9456581c20448ec98cdf8"
+    },
+    {
+      "id": "tuning-narrow-receipt",
+      "split": "tuning",
+      "category": "narrow-receipt",
+      "file": "tuning-narrow-receipt.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.45056320400500627,
+          0.07512520868113523
+        ],
+        [
+          0.5068836045056321,
+          0.09682804674457429
+        ],
+        [
+          0.5506883604505632,
+          0.9348914858096828
+        ],
+        [
+          0.48435544430538174,
+          0.9181969949916527
+        ]
+      ],
+      "sha256": "546bd3e18db44498827d1fc674cbec468c3366cf27d137def437f39d009cf8e5"
+    },
+    {
+      "id": "tuning-clutter",
+      "split": "tuning",
+      "category": "clutter",
+      "file": "tuning-clutter.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.1939924906132666,
+          0.10851419031719532
+        ],
+        [
+          0.8322903629536921,
+          0.20868113522537562
+        ],
+        [
+          0.7759699624530664,
+          0.8931552587646077
+        ],
+        [
+          0.1439299123904881,
+          0.7846410684474123
+        ]
+      ],
+      "sha256": "6ce50ddc3065fac0f86027fe13384bdcb59f8a8a3ad20e61f592e1916b904e2d"
+    },
+    {
+      "id": "tuning-strong-perspective",
+      "split": "tuning",
+      "category": "strong-perspective",
+      "file": "tuning-strong-perspective.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.4192740926157697,
+          0.18363939899833054
+        ],
+        [
+          0.7008760951188986,
+          0.27545909849749584
+        ],
+        [
+          0.9198998748435544,
+          0.8180300500834724
+        ],
+        [
+          0.1251564455569462,
+          0.9181969949916527
+        ]
+      ],
+      "sha256": "58e2595960fdc0963984d219c7a75d7a52b3c086bf1282c3047a277851cc3d6c"
+    },
+    {
+      "id": "tuning-soft-corners",
+      "split": "tuning",
+      "category": "soft-corners",
+      "file": "tuning-soft-corners.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.1939924906132666,
+          0.10851419031719532
+        ],
+        [
+          0.8322903629536921,
+          0.20868113522537562
+        ],
+        [
+          0.7759699624530664,
+          0.8931552587646077
+        ],
+        [
+          0.1439299123904881,
+          0.7846410684474123
+        ]
+      ],
+      "sha256": "a124554443125b43f8f7ca3d870e71d1cf25759c51597002c36d810edcf112b7"
+    },
+    {
+      "id": "tuning-negative-circles",
+      "split": "tuning",
+      "category": "negative-circles",
+      "file": "tuning-negative-circles.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "156194eb61e5d613fdfd0abaa52f4988271d7b430d75c23fd9e2e3813daeba9b"
+    },
+    {
+      "id": "tuning-negative-crosshatch",
+      "split": "tuning",
+      "category": "negative-crosshatch",
+      "file": "tuning-negative-crosshatch.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "7d88cea5b614b45adb3688f29fc564eb306b8fc6581078a2b1ff171986c4d039"
+    },
+    {
+      "id": "tuning-partial",
+      "split": "tuning",
+      "category": "partial",
+      "file": "tuning-partial.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "356e55212bfc708242c36974734208f0ff6d799a41e102d2fb7a11f5e64fdd07"
+    },
+    {
+      "id": "tuning-negative-triangle",
+      "split": "tuning",
+      "category": "negative-triangle",
+      "file": "tuning-negative-triangle.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "37c3b6540fded62ada2d2269af746ee35185e67569468de1e21a5371203cdd81"
+    },
+    {
+      "id": "held-out-faint-light",
+      "split": "held-out",
+      "category": "faint-light",
+      "file": "held-out-faint-light.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.2190237797246558,
+          0.15859766277128548
+        ],
+        [
+          0.851063829787234,
+          0.10851419031719532
+        ],
+        [
+          0.8072590738423029,
+          0.8180300500834724
+        ],
+        [
+          0.11264080100125157,
+          0.8848080133555927
+        ]
+      ],
+      "sha256": "480152277ff612cf46f1e47b2940ff6ef8bdbb9f034fd32bfd2fac3af3176fe0"
+    },
+    {
+      "id": "held-out-gradient-shadow",
+      "split": "held-out",
+      "category": "gradient-shadow",
+      "file": "held-out-gradient-shadow.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.2190237797246558,
+          0.15859766277128548
+        ],
+        [
+          0.851063829787234,
+          0.10851419031719532
+        ],
+        [
+          0.8072590738423029,
+          0.8180300500834724
+        ],
+        [
+          0.11264080100125157,
+          0.8848080133555927
+        ]
+      ],
+      "sha256": "f7ff887147c8324fce081c8c827750c3aa095131a1b0a8fd837c416500af4b78"
+    },
+    {
+      "id": "held-out-narrow-receipt",
+      "split": "held-out",
+      "category": "narrow-receipt",
+      "file": "held-out-narrow-receipt.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.3379224030037547,
+          0.0667779632721202
+        ],
+        [
+          0.4005006257822278,
+          0.06176961602671119
+        ],
+        [
+          0.46307884856070086,
+          0.9181969949916527
+        ],
+        [
+          0.39173967459324155,
+          0.9365609348914858
+        ]
+      ],
+      "sha256": "eff5a34643b0923c26d515eb8f9d6f704dae23b2a7cec2da45eb2a717059958a"
+    },
+    {
+      "id": "held-out-clutter",
+      "split": "held-out",
+      "category": "clutter",
+      "file": "held-out-clutter.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.2190237797246558,
+          0.15859766277128548
+        ],
+        [
+          0.851063829787234,
+          0.10851419031719532
+        ],
+        [
+          0.8072590738423029,
+          0.8180300500834724
+        ],
+        [
+          0.11264080100125157,
+          0.8848080133555927
+        ]
+      ],
+      "sha256": "4acc7352d8432fdb4ae672fcda6950b6036083687311461dae3fed644f770334"
+    },
+    {
+      "id": "held-out-strong-perspective",
+      "split": "held-out",
+      "category": "strong-perspective",
+      "file": "held-out-strong-perspective.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.13141426783479349,
+          0.2921535893155259
+        ],
+        [
+          0.5506883604505632,
+          0.1001669449081803
+        ],
+        [
+          0.8260325406758448,
+          0.8681135225375626
+        ],
+        [
+          0.4881101376720901,
+          0.9265442404006677
+        ]
+      ],
+      "sha256": "40ab56744988ae8899b76c4cd5e418668688396293b251c28708df87d97ca1dd"
+    },
+    {
+      "id": "held-out-soft-corners",
+      "split": "held-out",
+      "category": "soft-corners",
+      "file": "held-out-soft-corners.png",
+      "expectedDetection": true,
+      "corners": [
+        [
+          0.2190237797246558,
+          0.15859766277128548
+        ],
+        [
+          0.851063829787234,
+          0.10851419031719532
+        ],
+        [
+          0.8072590738423029,
+          0.8180300500834724
+        ],
+        [
+          0.11264080100125157,
+          0.8848080133555927
+        ]
+      ],
+      "sha256": "d3b5457629365c3b0398d778ae5a749c557fed4d10417895c19a170979ffa004"
+    },
+    {
+      "id": "held-out-negative-circles",
+      "split": "held-out",
+      "category": "negative-circles",
+      "file": "held-out-negative-circles.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "833fc88064b479acb2cf6262c729d321654562e090e53d17fa44a209dfcc77ce"
+    },
+    {
+      "id": "held-out-negative-crosshatch",
+      "split": "held-out",
+      "category": "negative-crosshatch",
+      "file": "held-out-negative-crosshatch.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "7d88cea5b614b45adb3688f29fc564eb306b8fc6581078a2b1ff171986c4d039"
+    },
+    {
+      "id": "held-out-partial",
+      "split": "held-out",
+      "category": "partial",
+      "file": "held-out-partial.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "356e55212bfc708242c36974734208f0ff6d799a41e102d2fb7a11f5e64fdd07"
+    },
+    {
+      "id": "held-out-negative-triangle",
+      "split": "held-out",
+      "category": "negative-triangle",
+      "file": "held-out-negative-triangle.png",
+      "expectedDetection": false,
+      "corners": null,
+      "sha256": "37c3b6540fded62ada2d2269af746ee35185e67569468de1e21a5371203cdd81"
+    }
+  ]
+}

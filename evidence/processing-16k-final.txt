@@ -1,0 +1,10 @@
+
+dev.offlinescan.processing.DetectionBenchmarkTest:.
+dev.offlinescan.processing.OpenCvProcessorTest:........
+dev.offlinescan.processing.ResourceBenchmarkTest:.
+
+Time: 2.623
+
+OK (10 tests)
+
+

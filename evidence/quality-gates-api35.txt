@@ -1,0 +1,6 @@
+PASS held-out detection >= 80%
+PASS held-out false positives = 0
+PASS held-out IoU including misses >= .79
+PASS matched corner error <= .005
+PASS emulator warmed analysis p95 <= 100ms
+Synthetic regression gates passed. Physical image-quality acceptance remains separate.

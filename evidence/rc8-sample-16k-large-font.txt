@@ -1,0 +1,10 @@
+
+dev.offlinescan.sample.ScannerAutomaticCaptureTest:...
+dev.offlinescan.sample.ScannerDetectionModeTest:.
+dev.offlinescan.sample.ScannerFlowTest:....
+
+Time: 53.39
+
+OK (8 tests)
+
+

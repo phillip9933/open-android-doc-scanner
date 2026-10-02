@@ -1,0 +1,8 @@
+
+dev.offlinescan.sample.ScannerFlowTest:..
+
+Time: 4.562
+
+OK (2 tests)
+
+

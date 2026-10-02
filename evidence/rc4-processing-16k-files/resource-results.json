@@ -1,0 +1,49 @@
+{
+  "inputWidth": 3200,
+  "inputHeight": 1800,
+  "sampleIntervalMillis": 2,
+  "scope": "Process heap sampled during bounded 5.76MP render; approximate peaks, not exact RSS; fixture creation excluded. Native codec allocations and scheduling can miss short-lived peaks.",
+  "opencvBuildInformation": "\nGeneral configuration for OpenCV 4.12.0 =====================================\n  Version control:               4.12.0\n\n  Platform:\n    Host:                        Windows 10.0.26200 AMD64\n    Target:                      Android 1 x86_64\n    CMake:                       3.22.1-g37088a8-dirty\n    CMake generator:             Ninja\n    CMake build tool:            C:\/Users\/phil\/AppData\/Local\/Android\/Sdk\/cmake\/3.22.1\/bin\/ninja.exe\n    Configuration:               Release\n    Algorithm Hint:              ALGO_HINT_ACCURATE\n\n  CPU\/HW features:\n    Baseline:                    SSE SSE2 SSE3\n      requested:                 SSE3\n    Dispatched code generation:  SSE4_1 SSE4_2 AVX FP16 AVX2 AVX512_SKX\n      SSE4_1 (14 files):         + SSSE3 SSE4_1\n      SSE4_2 (1 files):          + SSSE3 SSE4_1 POPCNT SSE4_2\n      AVX (4 files):             + SSSE3 SSE4_1 POPCNT SSE4_2 AVX\n      FP16 (0 files):            + SSSE3 SSE4_1 POPCNT SSE4_2 AVX FP16\n      AVX2 (26 files):           + SSSE3 SSE4_1 POPCNT SSE4_2 AVX FP16 AVX2 FMA3\n      AVX512_SKX (3 files):      + SSSE3 SSE4_1 POPCNT SSE4_2 AVX FP16 AVX2 FMA3 AVX_512F AVX512_COMMON AVX512_SKX\n\n  C\/C++:\n    Built as dynamic libs?:      NO\n    C++ standard:                11\n    C++ Compiler:                C:\/Users\/phil\/AppData\/Local\/Android\/Sdk\/ndk\/28.2.13676358\/toolchains\/llvm\/prebuilt\/windows-x86_64\/bin\/clang++.exe  (ver 19.0.1)\n    C++ flags (Release):         -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security     -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winconsistent-missing-override -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-deprecated-enum-enum-conversion -Wno-deprecated-anon-enum-enum-conversion -fdiagnostics-show-option -Qunused-arguments  -fvisibility=hidden -fvisibility-inlines-hidden -O3 -DNDEBUG   -DNDEBUG\n    C++ flags (Debug):           -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security     -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winconsistent-missing-override -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-deprecated-enum-enum-conversion -Wno-deprecated-anon-enum-enum-conversion -fdiagnostics-show-option -Qunused-arguments  -fvisibility=hidden -fvisibility-inlines-hidden -fno-limit-debug-info   -O0 -DDEBUG -D_DEBUG\n    C Compiler:                  C:\/Users\/phil\/AppData\/Local\/Android\/Sdk\/ndk\/28.2.13676358\/toolchains\/llvm\/prebuilt\/windows-x86_64\/bin\/clang.exe\n    C flags (Release):           -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winconsistent-missing-override -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-deprecated-enum-enum-conversion -Wno-deprecated-anon-enum-enum-conversion -fdiagnostics-show-option -Qunused-arguments  -fvisibility=hidden -fvisibility-inlines-hidden -O3 -DNDEBUG   -DNDEBUG\n    C flags (Debug):             -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winconsistent-missing-override -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-deprecated-enum-enum-conversion -Wno-deprecated-anon-enum-enum-conversion -fdiagnostics-show-option -Qunused-arguments  -fvisibility=hidden -fvisibility-inlines-hidden -fno-limit-debug-info   -O0 -DDEBUG -D_DEBUG\n    Linker flags (Release):      -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments -Wl,-z,max-page-size=16384 -Wl,-z,max-page-size=16384  -Wl,--as-needed -Wl,--no-undefined -Wl,--gc-sections  \n    Linker flags (Debug):        -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments -Wl,-z,max-page-size=16384 -Wl,-z,max-page-size=16384  -Wl,--as-needed -Wl,--no-undefined  \n    ccache:                      NO\n    Precompiled headers:         NO\n    Extra dependencies:          z dl m log\n    3rdparty dependencies:\n\n  OpenCV modules:\n    To be built:                 core imgproc java\n    Disabled:                    dnn highgui imgcodecs videoio world\n    Disabled by dependency:      calib3d features2d flann js_bindings_generator ml objc_bindings_generator objdetect photo stitching video\n    Unavailable:                 gapi python2 python3 ts\n    Applications:                -\n    Documentation:               NO\n    Non-free algorithms:         NO\n\n  Android NDK:                   C:\/Users\/phil\/AppData\/Local\/Android\/Sdk\/ndk\/28.2.13676358 (ver 28.2.13676358)\n    Android ABI:                 x86_64\n    NDK toolchain:               x86_64-linux-android-clang\n    STL type:                    c++_shared\n    Native API level:            26\n  Android SDK:                   not used, projects are not built\n\n  GUI: \n\n  Media I\/O: \n    ZLib:                        z (ver 1.3.0.1)\n    GIF:                         YES\n    HDR:                         YES\n    SUNRASTER:                   YES\n    PXM:                         YES\n    PFM:                         YES\n\n  Video I\/O:\n   MEDIANDK:                     NO\n   NDK Camera:                   NO\n\n  Parallel framework:            pthreads\n\n  Other third-party libraries:\n    Custom HAL:                  NO\n\n  Python (for build):            C:\/Users\/phil\/.cache\/codex-runtimes\/codex-primary-runtime\/dependencies\/python\/python.exe\n\n  Java:                          export all functions\n    ant:                         NO\n    Java wrappers:               YES ()\n    Java tests:                  NO\n\n  Install to:                    C:\/Users\/phil\/Documents\/Codex\/2026-10-01\/files-pasted-by-the-user-you\/work\/native\/source-build-v2\/x86_64\/install\n-----------------------------------------------------------------\n\n",
+  "renders": [
+    {
+      "preset": "ORIGINAL",
+      "width": 3200,
+      "height": 1800,
+      "elapsedMillis": 268.6481,
+      "sampledPeakNativeHeapBytes": 87109952,
+      "sampledPeakManagedHeapBytes": 3347136
+    },
+    {
+      "preset": "COLOR_DOCUMENT",
+      "width": 3200,
+      "height": 1800,
+      "elapsedMillis": 630.692,
+      "sampledPeakNativeHeapBytes": 87111376,
+      "sampledPeakManagedHeapBytes": 3445440
+    },
+    {
+      "preset": "GRAYSCALE",
+      "width": 3200,
+      "height": 1800,
+      "elapsedMillis": 291.1541,
+      "sampledPeakNativeHeapBytes": 87111968,
+      "sampledPeakManagedHeapBytes": 3429056
+    },
+    {
+      "preset": "BLACK_WHITE",
+      "width": 3200,
+      "height": 1800,
+      "elapsedMillis": 297.312,
+      "sampledPeakNativeHeapBytes": 87112464,
+      "sampledPeakManagedHeapBytes": 3396288
+    },
+    {
+      "preset": "PHOTO",
+      "width": 3200,
+      "height": 1800,
+      "elapsedMillis": 254.5031,
+      "sampledPeakNativeHeapBytes": 87112576,
+      "sampledPeakManagedHeapBytes": 3379904
+    }
+  ]
+}

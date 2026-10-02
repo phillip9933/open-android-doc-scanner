@@ -1,0 +1,7 @@
+Offline Scanner SDK 0.1.0-rc1
+Original scanner code is distributed under the Apache License, Version 2.0.
+This distribution includes OpenCV wrappers and source-built core/imgproc/JNI,
+the Android NDK libc++ runtime, and public AndroidX/Kotlin dependencies.
+Upstream copyright/license texts are preserved in THIRD-PARTY-NOTICES.md and
+third-party/. Native notices are included in offline-scanner-notices assets.
+No endorsement by these upstream projects is implied.

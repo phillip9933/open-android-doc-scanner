@@ -1,0 +1,13 @@
+test_binary_xml_reads_utf16_permission_attribute (__main__.AuditSelfTests.test_binary_xml_reads_utf16_permission_attribute) ... ok
+test_binary_xml_reads_utf8_permission_attribute (__main__.AuditSelfTests.test_binary_xml_reads_utf8_permission_attribute) ... ok
+test_elf_accepts_16k_and_rejects_4k_and_truncation (__main__.AuditSelfTests.test_elf_accepts_16k_and_rejects_4k_and_truncation) ... ok
+test_elf_requires_address_offset_congruence (__main__.AuditSelfTests.test_elf_requires_address_offset_congruence) ... ok
+test_gnu_build_id_survives_nonload_debug_bytes (__main__.AuditSelfTests.test_gnu_build_id_survives_nonload_debug_bytes) ... ok
+test_native_zip_offset_includes_local_name_and_extra_padding (__main__.AuditSelfTests.test_native_zip_offset_includes_local_name_and_extra_padding) ... ok
+test_stripping_changes_raw_hash_but_preserves_allocated_native_identity (__main__.AuditSelfTests.test_stripping_changes_raw_hash_but_preserves_allocated_native_identity) ... ok
+test_text_manifest_detects_internet (__main__.AuditSelfTests.test_text_manifest_detects_internet) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.015s
+
+OK
