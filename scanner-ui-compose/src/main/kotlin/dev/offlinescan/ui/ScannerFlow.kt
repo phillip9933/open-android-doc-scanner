@@ -147,12 +147,15 @@ private enum class Stage { CAPTURE, CROP, APPEARANCE, REVIEW, SAVE }
 /**
  * Camera and import scanning flow. The session owns copied source images in `cacheDir`; leaving
  * this composable closes the session and discards those temporary originals. Exported files are
- * written to [outputDirectory] and returned through [onResult].
+ * written to [outputDirectory] and returned through [onResult]. Hosts may provide [saveDestination]
+ * to replace the default local destination display with their own clickable destination control.
+ * The slot receives `false` while the flow is busy.
  */
 @Composable
 fun ScannerFlow(
     config: ScanConfig = ScanConfig(detectionMode=DetectionMode.AI),
     outputDirectory: File,
+    saveDestination: (@Composable (enabled: Boolean) -> Unit)? = null,
     onResult: (ScanResult) -> Unit
 ) {
     val context = LocalContext.current
@@ -422,6 +425,7 @@ fun ScannerFlow(
                 Stage.SAVE -> ScannerSave(pages=pages.toList(),selectedId=selectedId,onSelect={selectedId=it},format=format,onFormat={format=it},
                     documentName=documentName,onDocumentNameChange={documentName=it},onBack={stage=Stage.REVIEW},onClose={discardRequested=true},
                     onFinish=::exportScan,busy=busy,progress=progress,onCancel={activeCancellation?.set(true)},
+                    saveDestination=saveDestination,
                     pageBitmap={page->rememberRenderedPreview(page,processor,config,sessionLifetime)})
             }
         }
@@ -1051,5 +1055,3 @@ private fun toScanError(t: Throwable, fallback: ErrorCode) = when (t) {
     ErrorCode.EXPORT -> R.string.error_export
     ErrorCode.STORAGE -> R.string.error_storage
 })
-
-

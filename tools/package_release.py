@@ -6,7 +6,7 @@ import shutil
 import zipfile
 
 root = Path(__file__).resolve().parents[1]
-version = '0.1.0-rc10'
+version = '0.1.0-rc11'
 apk = root / 'scanner-sample/build/outputs/apk/debug/scanner-sample-debug.apk'
 report = json.loads((root / 'evidence/release-audit.json').read_text())
 assert report['status'] == 'passed', 'Audit the final APK before packaging'
@@ -31,4 +31,3 @@ for file in sorted(release.rglob('*')):
         entries.append(hashlib.sha256(file.read_bytes()).hexdigest() + '  ' + file.relative_to(release).as_posix())
 (release / 'SHA256SUMS').write_text('\n'.join(entries) + '\n', encoding='utf-8')
 print(f'Packaged audited APK, source ZIP, and {len(entries)} checksum entries in release/.')
-

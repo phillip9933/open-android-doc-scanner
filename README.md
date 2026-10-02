@@ -2,7 +2,7 @@
 
 Independent Apache-2.0 Android document and printed-photo scanner. Kotlin, CameraX, OpenCV and Compose. Core processing works offline without Google Play services, cloud, API keys or model downloads. No network permission or analytics.
 
-**Status: public prerelease (0.1.0-rc10); physical-camera and host-app acceptance are pending.** See [quality evidence](docs/QUALITY-REPORT.md) and [backlog](docs/BACKLOG.md). Synthetic results are not parity claims or a substitute for real-camera evaluation.
+**Status: public prerelease (0.1.0-rc10); local 0.1.0-rc11 candidate adds a host-controlled save destination slot. Physical-camera and host-app acceptance remain pending.** See [quality evidence](docs/QUALITY-REPORT.md) and [backlog](docs/BACKLOG.md). Synthetic results are not parity claims or a substitute for real-camera evaluation.
 
 [Download the testing APK](https://github.com/phillip9933/open-android-doc-scanner/releases/tag/v0.1.0-rc10) · [Documentation](docs/INDEX.md) · [CI](https://github.com/phillip9933/open-android-doc-scanner/actions)
 
@@ -61,7 +61,7 @@ Config bounds quality/dimensions/pages/input pixels. Renders may be smaller due 
 Read [integration examples](docs/INTEGRATION.md), [architecture and ownership](docs/ARCHITECTURE.md), [reuse assessment](docs/REUSE-DECISION.md), [third-party notices](THIRD-PARTY-NOTICES.md).
 
 
-Current prerelease: 0.1.0-rc10. Automatic capture waits for focus, compares two untouched JPEG originals, and keeps the sharper acceptable document; rejected captures retry without adding a page. Sharpness and brightness come from the document interior. Settings offers AI (default in the sample and ready-made flow, using bundled DocQuadNet-256 CPU inference) and Standard (OpenCV edges/contours). Generated printed-document results are promising, including a torn corner; sparse synthetic scenes are substantially weaker than Standard. See [learned-model evidence and licensing limits](docs/LEARNED-DETECTOR-RC8.md) and [quality checks](docs/QUALITY-METRICS-RC8.md). Physical handheld and sustained arm64 acceptance remain pending.
+Latest public prerelease: 0.1.0-rc10. The local 0.1.0-rc11 candidate adds the optional `ScannerFlow.saveDestination` host UI slot. Automatic capture waits for focus, compares two untouched JPEG originals, and keeps the sharper acceptable document; rejected captures retry without adding a page. Sharpness and brightness come from the document interior. Settings offers AI (default in the sample and ready-made flow, using bundled DocQuadNet-256 CPU inference) and Standard (OpenCV edges/contours). Generated printed-document results are promising, including a torn corner; sparse synthetic scenes are substantially weaker than Standard. See [learned-model evidence and licensing limits](docs/LEARNED-DETECTOR-RC8.md) and [quality checks](docs/QUALITY-METRICS-RC8.md). Physical handheld and sustained arm64 acceptance remain pending.
 
 The fullscreen camera keeps its layout as pages are added. Review and save use swipe navigation, adjacent-page peeks and cached previews. Back preserves pages; retake, delete and close confirm discards. Save supports real output names and PDF/JPEG. Advanced adjustments and detection mode stay in secondary panels. Simultaneous multi-document scanning remains deferred.
 

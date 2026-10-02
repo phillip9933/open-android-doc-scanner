@@ -13,6 +13,8 @@ import androidx.activity.result.ActivityResultRegistry
 import androidx.activity.result.ActivityResultRegistryOwner
 import androidx.activity.result.contract.ActivityResultContract
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.Text
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.runtime.*
 import androidx.compose.ui.platform.LocalDensity
@@ -24,6 +26,7 @@ import androidx.core.app.ActivityOptionsCompat
 import dev.offlinescan.core.*
 import dev.offlinescan.ui.ScannerFlow
 import java.io.File
+import java.util.concurrent.atomic.AtomicInteger
 import java.util.concurrent.atomic.AtomicReference
 import org.junit.Assert.*
 import org.junit.Rule
@@ -39,6 +42,7 @@ class ScannerFlowTest {
         val bitmap=Bitmap.createBitmap(640,480,Bitmap.Config.ARGB_8888)
         try { bitmap.eraseColor(Color.rgb(80,130,180)); source.outputStream().use { bitmap.compress(Bitmap.CompressFormat.PNG,100,it) } } finally { bitmap.recycle() }
         val result=AtomicReference<ScanResult?>(null)
+        val saveDestinationRequests=AtomicInteger()
         val pickedSource=AtomicReference(source)
         val registry=object: ActivityResultRegistry() {
             override fun <I,O> onLaunch(requestCode:Int,contract:ActivityResultContract<I,O>,input:I,options:ActivityOptionsCompat?) {
@@ -51,7 +55,15 @@ class ScannerFlowTest {
                 compose.activity.setContentForTest {
                     var show by remember { mutableStateOf(true) }
                     MaterialTheme(colorScheme=darkColorScheme()) { CompositionLocalProvider(LocalActivityResultRegistryOwner provides registryOwner, LocalDensity provides Density(compose.activity.resources.displayMetrics.density,androidx.test.platform.app.InstrumentationRegistry.getArguments().getString("uiFontScale")?.toFloatOrNull() ?: 2f)) {
-                        if(show) ScannerFlow(ScanConfig(mode=ScanMode.PHOTO,autoCapture=false),destination) { result.set(it); show=false }
+                        if(show) ScannerFlow(
+                            config=ScanConfig(mode=ScanMode.PHOTO,autoCapture=false),
+                            outputDirectory=destination,
+                            saveDestination={ enabled ->
+                                OutlinedButton(onClick={saveDestinationRequests.incrementAndGet()},enabled=enabled) {
+                                    Text("Choose host folder")
+                                }
+                            }
+                        ) { result.set(it); show=false }
                     } }
                 }
             }
@@ -183,6 +195,8 @@ class ScannerFlowTest {
                 }
                 compose.onNodeWithText("Next").performClick()
                 compose.onNodeWithTag("save-screen").assertExists()
+                compose.onNodeWithText("Choose host folder").performScrollTo().assertIsEnabled().performClick()
+                assertEquals(1,saveDestinationRequests.get())
                 compose.onNodeWithContentDescription("Show previous page").assertDoesNotExist()
                 compose.onNodeWithContentDescription("Show next page").assertDoesNotExist()
                 compose.waitUntil(5_000) { compose.onAllNodesWithContentDescription("Preview of page 1").fetchSemanticsNodes().isNotEmpty() }
@@ -319,6 +333,4 @@ class ScannerFlowTest {
 }
 
 private fun MainActivity.setContentForTest(content: @Composable ()->Unit) = setContent(content=content)
-
-
 

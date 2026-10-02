@@ -74,6 +74,7 @@ internal fun ScannerSave(
     busy: Boolean,
     progress: Float,
     onCancel: () -> Unit,
+    saveDestination: (@Composable (enabled: Boolean) -> Unit)? = null,
     pageBitmap: @Composable (ScanPage) -> Bitmap?
 ) {
     val selectedIndex = pages.indexOfFirst { it.id == selectedId }.takeIf { it >= 0 } ?: 0
@@ -227,11 +228,15 @@ internal fun ScannerSave(
                 }
             }
 
-            OutlinedTextField(
-                value = stringResource(R.string.save_on_device), onValueChange = {},
-                label = { Text(stringResource(R.string.save_location_label)) }, readOnly = true,
-                singleLine = true, modifier = Modifier.fillMaxWidth()
-            )
+            if (saveDestination != null) {
+                saveDestination(!busy)
+            } else {
+                OutlinedTextField(
+                    value = stringResource(R.string.save_on_device), onValueChange = {},
+                    label = { Text(stringResource(R.string.save_location_label)) }, readOnly = true,
+                    singleLine = true, modifier = Modifier.fillMaxWidth()
+                )
+            }
 
             if (busy) {
                 Column(Modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(8.dp)) {

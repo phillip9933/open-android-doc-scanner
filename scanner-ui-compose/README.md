@@ -1,6 +1,21 @@
 # Compose flow
 
-`dev.offlinescan.ui.ScannerFlow(config, outputDirectory, onResult)` supplies one capture/import/edit/page-review session. Place it in MaterialTheme; values should stay stable for that launch. Handle Completed/Cancelled/Failed by leaving the route. Successful outputs stay host-owned; source originals are copied into private cache and discarded on disposal after in-flight processing exits.
+`dev.offlinescan.ui.ScannerFlow(config, outputDirectory, saveDestination, onResult)` supplies one capture/import/edit/page-review session. Place it in MaterialTheme; values should stay stable for that launch. Handle Completed/Cancelled/Failed by leaving the route. Successful outputs stay host-owned; source originals are copied into private cache and discarded on disposal after in-flight processing exits.
+
+`saveDestination` is an optional composable slot for a host-provided save-location control. It receives `enabled = false` while processing or exporting. When omitted, the flow retains its default read-only “On this device” destination field. Keep `onResult` last so existing trailing-lambda calls continue to work.
+
+```kotlin
+ScannerFlow(
+    config = ScanConfig(),
+    outputDirectory = outputDirectory,
+    saveDestination = { enabled ->
+        OutlinedButton(onClick = openDestinationPicker, enabled = enabled) {
+            Text(destinationLabel)
+        }
+    },
+    onResult = ::handleScanResult
+)
+```
 
 Use API26+, Camera permission for capture only, and the system picker for imports. The full review list and controls scroll together; crop has dragging, magnified detail, labeled sliders and small directional corner steps. Strings are overridable/localizable. Printed-photo mode defaults to PHOTO. UI recomposes bounded previews from original pixels and edit parameters.
 

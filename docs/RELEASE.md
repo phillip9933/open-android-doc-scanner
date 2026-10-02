@@ -1,6 +1,6 @@
 # Releases
 
-Version 0.1.0-rc10. Original code is Apache-2.0. The first public distribution is a GitHub prerelease at https://github.com/phillip9933/open-android-doc-scanner.
+Version 0.1.0-rc11 candidate. Original code is Apache-2.0. The first public distribution was prerelease v0.1.0-rc10 at https://github.com/phillip9933/open-android-doc-scanner. RC11 adds a host-owned save destination UI slot to the Compose flow; it is prepared locally for host integration review and has not been published.
 
 ## Build and package
 
@@ -11,7 +11,7 @@ Source-built OpenCV JNI for arm64-v8a/x86_64 lives in scanner-processing-opencv/
 ./gradlew publishAllPublicationsToLocalReleaseRepository
 ```
 
-The `LocalRelease` repository is exclusively `release/maven` inside this project. It contains five coordinates under `dev.offlinescan`, version `0.1.0-rc10`, with POM/Gradle metadata, release AARs/core JAR and Android source JARs. Final sample and source archive are copied into release. Keep THIRD-PARTY-NOTICES.md and third-party native/runtime notices with redistribution; applicable native notice text is included in SDK assets.
+The `LocalRelease` repository is exclusively `release/maven` inside this project. It contains five coordinates under `dev.offlinescan`, version `0.1.0-rc11`, with POM/Gradle metadata, release AARs/core JAR and Android source JARs. For this SDK-only candidate, `python tools/package_maven_release.py` copies that repository into a Maven ZIP with SHA256SUMS, release notes, and all license/notice material. No sample APK is included. Keep THIRD-PARTY-NOTICES.md and third-party native/runtime notices with redistribution; applicable native notice text is also included in SDK assets.
 
 Consume locally:
 
@@ -19,7 +19,7 @@ Consume locally:
 // Host settings.gradle.kts repositories block:
 maven { url = uri("/absolute/path/to/offline-scanner/release/maven") }
 // Host dependencies:
-implementation("dev.offlinescan:scanner-ui-compose:0.1.0-rc10")
+implementation("dev.offlinescan:scanner-ui-compose:0.1.0-rc11")
 ```
 
 Google and Maven Central remain build repositories for public AndroidX/Kotlin dependencies; they are not runtime/cloud services. The scanner adds no INTERNET permission. Hosts should audit their own full graphs/manifests independently.
@@ -30,7 +30,7 @@ Use connected supported emulators/devices for `connectedDebugAndroidTest` on pro
 
 Run tools/audit_release.py on the actual final sample APK and saved sample dependency graph. Run tools/check_quality.py against a freshly measured benchmark JSON. Full evidence and SHA256 indexes live under evidence/release.
 
-After final audits and documentation, run `python tools/package_release.py` to create the installable debug-signed sample, source ZIP and SHA256SUMS. It refuses an APK whose hash differs from the passed audit. An independent app compiled solely against this local Maven repository; its packaged native/permission checks are in evidence/published-consumer-audit.json. This is generic artifact consumption evidence, not acceptance in OpenCloud or Kura.
+`python tools/package_release.py` is the full sample APK/source packaging path and requires a current passing APK audit; it is not part of the SDK-only RC11 package. An independent app compiled solely against the local Maven repository; its packaged native/permission checks are in evidence/published-consumer-audit.json. This is generic artifact consumption evidence, not acceptance in OpenCloud or Kura.
 
 Before a stable production release, finish DEVICE-ACCEPTANCE.md, real arm64 camera/16KB tests, TalkBack/large-font UX, realistic held-out quality/auto-capture metrics, and host integration acceptance. Retain exact native-source provenance/notices. Do not describe this candidate as fully accepted or Google-equivalent.
 
