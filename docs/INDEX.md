@@ -1,6 +1,10 @@
 # Documentation
 
 - [Build and API examples](../README.md)
+- [Repository layout](README.md#repository-layout)
+- [Contributing and checks](../CONTRIBUTING.md)
+- [Security reporting](../SECURITY.md)
+- [RC11 SDK release](RELEASE-RC11.md)
 - [Host-app integration](INTEGRATION.md)
 - [Architecture and file ownership](ARCHITECTURE.md)
 - [Auto enhancement and zoom](ENHANCEMENT-RC10.md)

@@ -6,6 +6,12 @@ Independent Apache-2.0 Android document and printed-photo scanner. Kotlin, Camer
 
 [Download the latest testing APK (0.1.0-rc10)](https://github.com/phillip9933/open-android-doc-scanner/releases/tag/v0.1.0-rc10) · [Documentation](docs/INDEX.md) · [CI](https://github.com/phillip9933/open-android-doc-scanner/actions)
 
+## About this project
+
+I build projects to solve problems I run into in my own life. I share them because I believe in open source and hope others can learn from them, adapt them or find them useful.
+
+Making it public does not mean it is a polished production product or suitable for every setup. Please read the documented limitations and decide whether it fits your needs. I'm happy to help where I can, but I can't promise a support schedule.
+
 ## Build
 
 Requirements: JDK 17 or 21, Android SDK platform 36, AGP-selected build tools, NDK 28.2.13676358, public Google/Maven Central dependencies. Create an untracked `local.properties` with `sdk.dir=...` or set `ANDROID_HOME`. Run:
@@ -66,3 +72,19 @@ Latest public SDK prerelease: 0.1.0-rc11, which adds the optional `ScannerFlow.s
 The fullscreen camera keeps its layout as pages are added. Review and save use swipe navigation, adjacent-page peeks and cached previews. Back preserves pages; retake, delete and close confirm discards. Save supports real output names and PDF/JPEG. Advanced adjustments and detection mode stay in secondary panels. Simultaneous multi-document scanning remains deferred.
 
 RC10 adds per-page Auto enhancement for documents, receipts and cards, stronger bounded paper-lighting cleanup, manual filter overrides, and pinch zoom/pan in review and filter previews. Photograph mode retains Photo. See [enhancement evidence and limits](docs/ENHANCEMENT-RC10.md).
+
+## Contribute
+
+Start with [Contributing](CONTRIBUTING.md) for setup and checks, and [Security](SECURITY.md) for private vulnerability reporting. The [documentation index](docs/README.md) covers integration, architecture and release evidence.
+
+## AI usage
+
+I use AI tools to help with development, including analysis, code, tests and documentation. I care about security, privacy and protecting people's data, and I try to reflect that in how I build these projects.
+
+I document validation and known limitations so you can assess the evidence for yourself. Contributions should disclose material AI assistance and distinguish checks actually run from checks still needed.
+
+See [quality evidence](docs/QUALITY-REPORT.md), [remaining device acceptance](docs/DEVICE-ACCEPTANCE.md) and [contribution guidance](CONTRIBUTING.md#ai-usage).
+
+## License
+
+Original scanner code is licensed under [Apache-2.0](LICENSE). Retain [NOTICE](NOTICE) and [third-party notices](THIRD-PARTY-NOTICES.md); dependencies and model assets retain their own terms.

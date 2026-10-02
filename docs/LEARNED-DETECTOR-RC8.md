@@ -1,5 +1,7 @@
 # Learned detector evaluation for RC8
 
+This is the RC8 evaluation record. The ready-made flow and sample later switched to AI by default; see the RC9 section in [quality history](QUALITY-REPORT.md). The low-level `ScanConfig` default remains Standard. The measurements and limitations below are retained as historical evidence.
+
 DocQuadNet-256 loads and runs offline on the Android API 35 x86_64 emulator with
 official ONNX Runtime Android 1.24.1 CPU execution. **It has not demonstrated
 better detection than Standard in the frozen synthetic comparisons.** Runtime

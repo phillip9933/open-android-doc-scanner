@@ -1,6 +1,6 @@
 # Measured quality and release status
 
-Current public prerelease: RC10. See [enhancement and latest checks](ENHANCEMENT-RC10.md) and [learned detection](LEARNED-DETECTOR-RC8.md). Earlier sections below are historical records.
+Current public SDK prerelease: [RC11](RELEASE-RC11.md); the latest testing APK remains RC10. See [enhancement and latest checks](ENHANCEMENT-RC10.md) and [learned detection](LEARNED-DETECTOR-RC8.md). Earlier sections below are historical records.
 
 Local 0.1.0-rc1 candidate, 2026-10-01. Independently implementable first-release work is implemented and locally packaged. Required physical-device and host acceptance is unverified. This is not a Google-parity claim or a fully accepted release.
 

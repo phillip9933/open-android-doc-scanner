@@ -33,6 +33,8 @@ Deferred: OCR/searchable PDF, simultaneous multi-document detection, book dewarp
 
 ## RC8 shared detection and capture
 
+This section records RC8 behavior. In the current source, `ScanConfig` still defaults to Standard, while `ScannerFlow` and the sample default to AI. See the RC9 entry in [quality history](QUALITY-REPORT.md); this default change does not establish better detection on every input.
+
 Experimental learned single-document detection uses bundled DocQuadNet-256 and ONNX Runtime CPU inference. Both detectors return the same Detection/Quad values and document-interior quality metrics; the UI injects the selected detector for live, still and imported images. Settings switches close the old camera generation, pause capture and reset outline tracking while preserving session pages. Standard stays default; AI does not silently fall back to Standard. Standalone settings apply within the current session; hosts may supply DetectionMode in ScanConfig. Processing-only users explicitly call LearnedDocumentDetector on a worker and close it after jobs finish; OpenCvProcessor remains the Standard implementation.
 
 Automatic capture focuses with a bounded wait, validates fresh geometry, assesses two original JPEGs and commits the sharper acceptable original without fusion/recompression. Capture cancellation and lifecycle interruption remove owned staging files. Manual capture remains available when automatic quality requirements cannot be met.
