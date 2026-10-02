@@ -1,6 +1,6 @@
 # Releases
 
-Version 0.1.0-rc11 candidate. Original code is Apache-2.0. The first public distribution was prerelease v0.1.0-rc10 at https://github.com/phillip9933/open-android-doc-scanner. RC11 adds a host-owned save destination UI slot to the Compose flow; it is prepared locally for host integration review and has not been published.
+Version 0.1.0-rc11 SDK-only prerelease. Original code is Apache-2.0. The first public distribution was prerelease v0.1.0-rc10 at https://github.com/phillip9933/open-android-doc-scanner. RC11 adds a host-owned save destination UI slot to the Compose flow. The latest testing APK remains v0.1.0-rc10.
 
 ## Build and package
 
