@@ -2,9 +2,9 @@
 
 Independent Apache-2.0 Android document and printed-photo scanner. Kotlin, CameraX, OpenCV and Compose. Core processing works offline without Google Play services, cloud, API keys or model downloads. No network permission or analytics.
 
-**Status: public SDK prerelease (0.1.0-rc12; includes a standalone testing APK); physical-camera acceptance is pending.** See [quality evidence](docs/QUALITY-REPORT.md) and [backlog](docs/BACKLOG.md). Synthetic results are not parity claims or a substitute for real-camera evaluation.
+**Status: public SDK prerelease (0.7.0; includes a standalone testing APK); physical-camera acceptance is pending.** See [quality evidence](docs/QUALITY-REPORT.md) and [backlog](docs/BACKLOG.md). Synthetic results are not parity claims or a substitute for real-camera evaluation.
 
-[Download the latest testing APK (0.1.0-rc12)](https://github.com/phillip9933/open-android-doc-scanner/releases/tag/v0.1.0-rc12) · [Documentation](docs/INDEX.md) · [CI](https://github.com/phillip9933/open-android-doc-scanner/actions)
+[Download the latest testing APK (0.7.0)](https://github.com/phillip9933/open-android-doc-scanner/releases/tag/v0.7.0) · [Documentation](docs/INDEX.md) · [CI](https://github.com/phillip9933/open-android-doc-scanner/actions)
 
 ## About this project
 
@@ -67,7 +67,7 @@ Config bounds quality/dimensions/pages/input pixels. Renders may be smaller due 
 Read [integration examples](docs/INTEGRATION.md), [architecture and ownership](docs/ARCHITECTURE.md), [reuse assessment](docs/REUSE-DECISION.md), [third-party notices](THIRD-PARTY-NOTICES.md).
 
 
-Latest SDK and sample prerelease: [0.1.0-rc12](docs/RELEASE-RC12.md), with native-detail rendering, neutral paper cleanup, clearer previews and accessible sample exports. The optional `ScannerFlow.saveDestination` host UI slot remains available. Automatic capture waits for focus, compares two untouched JPEG originals, and keeps the sharper acceptable document; rejected captures retry without adding a page. Sharpness and brightness come from the document interior. Settings offers AI (default in the sample and ready-made flow, using bundled DocQuadNet-256 CPU inference) and Standard (OpenCV edges/contours). Generated printed-document results are promising, including a torn corner; sparse synthetic scenes are substantially weaker than Standard. See [learned-model evidence and licensing limits](docs/LEARNED-DETECTOR-RC8.md) and [quality checks](docs/QUALITY-METRICS-RC8.md). Physical handheld and sustained arm64 acceptance remain pending.
+Latest SDK and sample prerelease: [0.7.0](docs/RELEASE-0.7.0.md), with native-detail rendering, neutral paper cleanup, clearer previews and accessible sample exports. The optional `ScannerFlow.saveDestination` host UI slot remains available. Automatic capture waits for focus, compares two untouched JPEG originals, and keeps the sharper acceptable document; rejected captures retry without adding a page. Sharpness and brightness come from the document interior. Settings offers AI (default in the sample and ready-made flow, using bundled DocQuadNet-256 CPU inference) and Standard (OpenCV edges/contours). Generated printed-document results are promising, including a torn corner; sparse synthetic scenes are substantially weaker than Standard. See [learned-model evidence and licensing limits](docs/LEARNED-DETECTOR-RC8.md) and [quality checks](docs/QUALITY-METRICS-RC8.md). Physical handheld and sustained arm64 acceptance remain pending.
 
 The fullscreen camera keeps its layout as pages are added. Review and save use swipe navigation, adjacent-page peeks and cached previews. Back preserves pages; retake, delete and close confirm discards. Save supports real output names and PDF/JPEG. Advanced adjustments and detection mode stay in secondary panels. Simultaneous multi-document scanning remains deferred.
 
@@ -89,4 +89,4 @@ See [quality evidence](docs/QUALITY-REPORT.md), [remaining device acceptance](do
 
 Original scanner code is licensed under [Apache-2.0](LICENSE). Retain [NOTICE](NOTICE) and [third-party notices](THIRD-PARTY-NOTICES.md); dependencies and model assets retain their own terms.
 
-RC12 incorporates the accepted quality5 processing. See [release notes and validation](docs/RELEASE-RC12.md). Earlier quality1–quality5 documents preserve the tuning history.
+0.7.0 incorporates the accepted quality5 processing. See [release notes and validation](docs/RELEASE-0.7.0.md). Earlier quality1–quality5 documents preserve the tuning history.

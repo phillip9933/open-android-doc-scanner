@@ -787,10 +787,10 @@
       "android.permission.CAMERA",
       "dev.offlinescan.sample.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
     ],
-    "sha256": "4e316265348715802ead6689cd8ca5a87aef1d84db113fcf93bc09ac8b7bb2ab",
-    "size_bytes": 117261700
+    "sha256": "9150ad6b17c46a976cc21313eabed60afaf6b56e8ad517deb637c592710ad083",
+    "size_bytes": 117261696
   },
-  "created_utc": "2026-10-10T08:21:16.697702+00:00",
+  "created_utc": "2026-10-10T08:24:53.049907+00:00",
   "dependencies": {
     "configuration": "debugRuntimeClasspath",
     "coordinates_found": [
@@ -1105,7 +1105,7 @@
         "android.permission.CAMERA",
         "dev.offlinescan.sample.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
       ],
-      "sha256": "dbe98ac7b10a5624794a7552e79a262e8c04fc4ee598dff3bed31c4102419989"
+      "sha256": "c0fe7cb189d330bf83e7e1edba9003237b5aa43221332ceeb2a764a8fde38fce"
     },
     {
       "path": "scanner-sample/build/intermediates/merged_manifests/debug/processDebugManifest/AndroidManifest.xml",
@@ -1113,7 +1113,7 @@
         "android.permission.CAMERA",
         "dev.offlinescan.sample.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
       ],
-      "sha256": "dbe98ac7b10a5624794a7552e79a262e8c04fc4ee598dff3bed31c4102419989"
+      "sha256": "c0fe7cb189d330bf83e7e1edba9003237b5aa43221332ceeb2a764a8fde38fce"
     },
     {
       "path": "scanner-ui-compose/build/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/AndroidManifest.xml",

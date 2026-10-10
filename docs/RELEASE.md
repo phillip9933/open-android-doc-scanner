@@ -1,6 +1,6 @@
 # Releases
 
-Version **0.1.0-rc12** SDK and standalone sample prerelease. See [RC12 changes and validation](RELEASE-RC12.md). Original code is Apache-2.0; releases are hosted at https://github.com/phillip9933/open-android-doc-scanner/releases.
+Version **0.7.0** SDK and standalone sample prerelease. See [0.7.0 changes and validation](RELEASE-0.7.0.md). Original code is Apache-2.0; releases are hosted at https://github.com/phillip9933/open-android-doc-scanner/releases.
 
 ## Build and package
 
@@ -11,7 +11,7 @@ Source-built OpenCV JNI for arm64-v8a/x86_64 lives in scanner-processing-opencv/
 ./gradlew publishAllPublicationsToLocalReleaseRepository
 ```
 
-The `LocalRelease` repository is exclusively `release/maven` inside this project. It contains five coordinates under `dev.offlinescan`, version `0.1.0-rc12`, with POM/Gradle metadata, release AARs/core JAR and Android source JARs. For the SDK, `python tools/package_maven_release.py` copies that repository into a Maven ZIP with SHA256SUMS, release notes, and all license/notice material. The standalone debug-signed test APK is a separate release asset. Keep THIRD-PARTY-NOTICES.md and third-party native/runtime notices with redistribution; applicable native notice text is also included in SDK assets.
+The `LocalRelease` repository is exclusively `release/maven` inside this project. It contains five coordinates under `dev.offlinescan`, version `0.7.0`, with POM/Gradle metadata, release AARs/core JAR and Android source JARs. For the SDK, `python tools/package_maven_release.py` copies that repository into a Maven ZIP with SHA256SUMS, release notes, and all license/notice material. The standalone debug-signed test APK is a separate release asset. Keep THIRD-PARTY-NOTICES.md and third-party native/runtime notices with redistribution; applicable native notice text is also included in SDK assets.
 
 Consume locally:
 
@@ -19,7 +19,7 @@ Consume locally:
 // Host settings.gradle.kts repositories block:
 maven { url = uri("/absolute/path/to/offline-scanner/release/maven") }
 // Host dependencies:
-implementation("dev.offlinescan:scanner-ui-compose:0.1.0-rc12")
+implementation("dev.offlinescan:scanner-ui-compose:0.7.0")
 ```
 
 Google and Maven Central remain build repositories for public AndroidX/Kotlin dependencies; they are not runtime/cloud services. The scanner adds no INTERNET permission. Hosts should audit their own full graphs/manifests independently.

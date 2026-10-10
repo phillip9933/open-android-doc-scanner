@@ -1,6 +1,6 @@
 plugins { id("com.android.application"); kotlin("android"); id("org.jetbrains.kotlin.plugin.compose") }
 android { namespace="dev.offlinescan.sample"; compileSdk=36; ndkVersion="28.2.13676358"
-    defaultConfig { applicationId="dev.offlinescan.sample"; minSdk=26; targetSdk=36; versionCode=17; versionName="0.1.0-rc12"; testInstrumentationRunner="androidx.test.runner.AndroidJUnitRunner"; ndk { abiFilters += listOf("arm64-v8a","x86_64") } }
+    defaultConfig { applicationId="dev.offlinescan.sample"; minSdk=26; targetSdk=36; versionCode=18; versionName="0.7.0"; testInstrumentationRunner="androidx.test.runner.AndroidJUnitRunner"; ndk { abiFilters += listOf("arm64-v8a","x86_64") } }
     buildFeatures { compose=true }
     compileOptions { sourceCompatibility=JavaVersion.VERSION_17; targetCompatibility=JavaVersion.VERSION_17 }
     kotlinOptions { jvmTarget="17" }

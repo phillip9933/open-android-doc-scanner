@@ -4,7 +4,7 @@
 - [Repository layout](README.md#repository-layout)
 - [Contributing and checks](../CONTRIBUTING.md)
 - [Security reporting](../SECURITY.md)
-- [RC12 SDK and testing APK release](RELEASE-RC12.md)
+- [0.7.0 SDK and testing APK release](RELEASE-0.7.0.md)
 - [RC11 SDK release (historical)](RELEASE-RC11.md)
 - [Host-app integration](INTEGRATION.md)
 - [Architecture and file ownership](ARCHITECTURE.md)

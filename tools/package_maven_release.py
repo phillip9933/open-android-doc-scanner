@@ -32,8 +32,8 @@ for name in required_root_files:
         raise SystemExit(f"Missing required license material: {root / name}")
 if not (root / "third-party").is_dir():
     raise SystemExit("Missing third-party notices directory")
-if not (root / "docs" / "RELEASE-RC12.md").is_file():
-    raise SystemExit("Missing docs/RELEASE-RC12.md")
+if not (root / "docs" / "RELEASE-0.7.0.md").is_file():
+    raise SystemExit("Missing docs/RELEASE-0.7.0.md")
 
 release = root / "release"
 release.mkdir(exist_ok=True)
@@ -52,7 +52,7 @@ archive_inputs.extend(
     for path in sorted((root / "third-party").rglob("*"))
     if path.is_file()
 )
-archive_inputs.append((root / "docs" / "RELEASE-RC12.md", Path("RELEASE-NOTES.md")))
+archive_inputs.append((root / "docs" / "RELEASE-0.7.0.md", Path("RELEASE-NOTES.md")))
 archive_inputs.append((root / "docs" / "NATIVE-BUILD.md", Path("NATIVE-BUILD.md")))
 
 temporary_archive = archive_path.with_suffix(archive_path.suffix + ".tmp")

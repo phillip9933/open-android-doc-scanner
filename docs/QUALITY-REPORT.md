@@ -1,6 +1,6 @@
 # Measured quality and release status
 
-Current SDK and sample prerelease: [RC12](RELEASE-RC12.md). It incorporates quality5 background cleanup, full-detail export budgets, detailed previews and accessible sample exports. Validation and remaining physical-device limits are recorded in the release notes. Earlier sections below are historical records.
+Current SDK and sample prerelease: [0.7.0](RELEASE-0.7.0.md). It incorporates quality5 background cleanup, full-detail export budgets, detailed previews and accessible sample exports. Validation and remaining physical-device limits are recorded in the release notes. Earlier sections below are historical records.
 
 Local 0.1.0-rc1 candidate, 2026-10-01. Independently implementable first-release work is implemented and locally packaged. Required physical-device and host acceptance is unverified. This is not a Google-parity claim or a fully accepted release.
 
