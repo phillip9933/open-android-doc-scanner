@@ -65,4 +65,32 @@ class CaptureQualityPolicyTest {
         assertFalse(CaptureQualityPolicy.better(first, first))
         assertTrue(CaptureQualityPolicy.better(sample(200.0), first))
     }
+
+    @Test fun manualCaptureWarnsFromMeasuredSoftnessButNeverRejectsTheImage() {
+        val blurry = sample(85.0)
+        assertTrue(CaptureQualityPolicy.shouldWarnManual(blurry, 140.0, 6, focusSucceeded = false))
+        assertTrue("A confirmed focus does not hide clearly soft pixels",
+            CaptureQualityPolicy.shouldWarnManual(sample(50.0), 0.0, 0, focusSucceeded = true))
+        assertFalse("A sharp still remains acceptable when autofocus reports failure",
+            CaptureQualityPolicy.shouldWarnManual(sample(120.0), 140.0, 6, focusSucceeded = false))
+        assertFalse("Unsupported focus and blank pages do not produce speculative warnings",
+            CaptureQualityPolicy.shouldWarnManual(sample(0.0, tiles = 0), 0.0, 0, focusSucceeded = null))
+        assertFalse("Unmeasurable stills remain usable",
+            CaptureQualityPolicy.shouldWarnManual(null, 140.0, 6, focusSucceeded = false))
+    }
+
+    @Test fun manualCaptureWarnsWhenTextDetailVanishesOnlyForTheSameDetailedPage() {
+        val lostText = sample(sharpness = 0.0, tiles = 0)
+        assertTrue(CaptureQualityPolicy.shouldWarnManual(lostText, 140.0, 6,
+            focusSucceeded = false, referenceComparable = true))
+        assertFalse("A different page must not be compared with the preview's text detail",
+            CaptureQualityPolicy.shouldWarnManual(lostText, 140.0, 6,
+                focusSucceeded = false, referenceComparable = false))
+        assertFalse("A genuinely low-detail preview cannot establish that text vanished",
+            CaptureQualityPolicy.shouldWarnManual(lostText, 0.0, 1,
+                focusSucceeded = false, referenceComparable = true))
+        assertFalse("Invalid document evidence cannot trigger a false warning",
+            CaptureQualityPolicy.shouldWarnManual(lostText.copy(consistentDocument = false), 140.0, 6,
+                focusSucceeded = false, referenceComparable = true))
+    }
 }

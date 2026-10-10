@@ -156,6 +156,7 @@ fun ScannerFlow(
     config: ScanConfig = ScanConfig(detectionMode=DetectionMode.AI),
     outputDirectory: File,
     saveDestination: (@Composable (enabled: Boolean) -> Unit)? = null,
+    includeDiagnostics: Boolean = false,
     onResult: (ScanResult) -> Unit
 ) {
     val context = LocalContext.current
@@ -297,7 +298,8 @@ fun ScannerFlow(
                                                 pages = session.pages, destination = outputDirectory, format = format,
                                                 config = config, cancellation = Cancellation { if (token.get()) throw CancellationException() },
                                                 progress = { done, total -> progress = if (total <= 0) 0f else done.toFloat() / total },
-                                                documentName = documentName
+                                                documentName = documentName,
+                                                includeDiagnostics = includeDiagnostics
                                             )
                                         }
                                     }
@@ -406,6 +408,7 @@ fun ScannerFlow(
                 }
                 Stage.REVIEW -> ScannerReview(
                     pages = pages.toList(), selectedId = selectedId, pageLimit = config.pageLimit,
+                    includeDiagnostics = includeDiagnostics,
                     format = format, onFormat = { format = it },
                     onSelect = { selectedId = it }, onEdit = { editBaseline=selected?.edits;editReturn = Stage.REVIEW; stage = Stage.CROP },
                     onAppearance = { editBaseline=selected?.edits;editReturn = Stage.REVIEW; stage = Stage.APPEARANCE },
@@ -420,13 +423,15 @@ fun ScannerFlow(
                     busy = busy, progress = progress,
                     onCancelExport = { activeCancellation?.set(true) },
                     onBack = { stage = Stage.CAPTURE },
-                    pageBitmap = { page -> rememberRenderedPreview(page,processor,config,sessionLifetime) }
+                    pageBitmap = { page -> rememberRenderedPreview(page,processor,config,sessionLifetime) },
+                    detailedPageBitmap = { page -> rememberRenderedPreview(page,processor,config,sessionLifetime,3072) }
                 )
                 Stage.SAVE -> ScannerSave(pages=pages.toList(),selectedId=selectedId,onSelect={selectedId=it},format=format,onFormat={format=it},
                     documentName=documentName,onDocumentNameChange={documentName=it},onBack={stage=Stage.REVIEW},onClose={discardRequested=true},
                     onFinish=::exportScan,busy=busy,progress=progress,onCancel={activeCancellation?.set(true)},
                     saveDestination=saveDestination,
-                    pageBitmap={page->rememberRenderedPreview(page,processor,config,sessionLifetime)})
+                    pageBitmap={page->rememberRenderedPreview(page,processor,config,sessionLifetime)},
+                    detailedPageBitmap={page->rememberRenderedPreview(page,processor,config,sessionLifetime,3072)})
             }
         }
     }
@@ -500,19 +505,19 @@ private class SessionLifetime(private val session: ScanSession) {
     private val lock = Any()
     private var active = 0
     private var closeRequested = false
-    private data class PreviewKey(val id: String, val original: File, val edits: Edits)
+    private data class PreviewKey(val id: String, val original: File, val edits: Edits, val edge: Int)
     private val previews = LinkedHashMap<PreviewKey, Bitmap>(16, .75f, true)
     private var previewBytes = 0L
-    private val maximumPreviewBytes = 16L * 1024 * 1024
+    private val maximumPreviewBytes = 48L * 1024 * 1024
 
-    fun cachedPreview(page: ScanPage): Bitmap? = synchronized(lock) {
-        previews[PreviewKey(page.id,page.original,page.edits)]?.takeUnless { it.isRecycled }
+    fun cachedPreview(page: ScanPage, edge: Int): Bitmap? = synchronized(lock) {
+        previews[PreviewKey(page.id,page.original,page.edits,edge)]?.takeUnless { it.isRecycled }
     }
 
-    fun cachePreview(page: ScanPage, bitmap: Bitmap) = synchronized(lock) {
+    fun cachePreview(page: ScanPage, bitmap: Bitmap, edge: Int) = synchronized(lock) {
         if (closeRequested || bitmap.isRecycled) return@synchronized
-        val key = PreviewKey(page.id,page.original,page.edits)
-        val obsolete = previews.keys.filter { it.id == page.id }
+        val key = PreviewKey(page.id,page.original,page.edits,edge)
+        val obsolete = previews.keys.filter { it.id == page.id && (it.edits != page.edits || it.edge == edge) }
         obsolete.forEach { previewBytes -= previews.remove(it)!!.allocationByteCount }
         previews[key] = bitmap
         previewBytes += bitmap.allocationByteCount
@@ -523,8 +528,8 @@ private class SessionLifetime(private val session: ScanSession) {
     }
 
     fun retainPreviews(pages: List<ScanPage>) = synchronized(lock) {
-        val retained = pages.map { PreviewKey(it.id,it.original,it.edits) }.toSet()
-        previews.keys.filter { it !in retained }.forEach { previewBytes -= previews.remove(it)!!.allocationByteCount }
+        val retained = pages.map { it.id to it.edits }.toSet()
+        previews.keys.filter { (it.id to it.edits) !in retained }.forEach { previewBytes -= previews.remove(it)!!.allocationByteCount }
     }
 
     fun readPages(): List<ScanPage> = synchronized(lock) { session.pages }
@@ -579,12 +584,14 @@ private class SessionLifetime(private val session: ScanSession) {
     val latestBlocked = rememberUpdatedState(blocked)
     val latestOnCapture = rememberUpdatedState(onCapture)
     val latestAuto = rememberUpdatedState(autoMode && !autoPaused)
+    val manualQualityHint = stringResource(R.string.capture_quality_hint)
     val takePhoto: (Boolean) -> Unit = { automatic ->
         if (!latestBlocked.value && cameraReady) {
             takingPhoto = true
             qualityHint = null
             cameraHolder.value?.capture(File(context.cacheDir, "capture-${System.nanoTime()}.jpg"), automatic,
-                onRejected = { message -> takingPhoto = false; qualityHint = message }) { saved ->
+                onRejected = { message -> takingPhoto = false; qualityHint = message },
+                onQualityWarning = { qualityHint = manualQualityHint }) { saved ->
                 latestOnCapture.value(saved)
                 takingPhoto = false
             }
@@ -887,8 +894,8 @@ private fun captureModeName(mode: ScanMode) = when(mode) {
     onApplyAll:()->Unit,onBack:()->Unit,onNext:()->Unit) {
     var tuning by remember { mutableStateOf(false) }
     var compareOriginal by remember { mutableStateOf(false) }
-    val adjusted=rememberRenderedPreview(page,processor,config,sessionLifetime)
-    val original=rememberRenderedPreview(page.copy(edits=page.edits.copy(preset=Preset.ORIGINAL,brightness=0.0,contrast=1.0,illumination=0.0)),processor,config,sessionLifetime)
+    val adjusted=rememberRenderedPreview(page,processor,config,sessionLifetime,3072)
+    val original=rememberRenderedPreview(page.copy(edits=page.edits.copy(preset=Preset.ORIGINAL,brightness=0.0,contrast=1.0,illumination=0.0)),processor,config,sessionLifetime,3072)
     val preview=if(compareOriginal) original else adjusted
     Column(Modifier.fillMaxSize().testTag("filters-screen")) {
         Box(Modifier.weight(1f).fillMaxWidth().padding(12.dp).background(MaterialTheme.colorScheme.surfaceVariant),contentAlignment=Alignment.Center) {
@@ -932,22 +939,22 @@ private fun captureModeName(mode: ScanMode) = when(mode) {
     }
 }
 
-@Composable private fun rememberRenderedPreview(page: ScanPage, processor: ImageProcessor, config: ScanConfig, sessionLifetime: SessionLifetime): Bitmap? {
-    var bitmap by remember(page.id, page.original) { mutableStateOf(sessionLifetime.cachedPreview(page)) }
-    LaunchedEffect(page.id, page.original, page.edits) {
-        sessionLifetime.cachedPreview(page)?.let { bitmap = it; return@LaunchedEffect }
+@Composable private fun rememberRenderedPreview(page: ScanPage, processor: ImageProcessor, config: ScanConfig, sessionLifetime: SessionLifetime, edge: Int = 1024): Bitmap? {
+    var bitmap by remember(page.id, page.original, edge) { mutableStateOf(sessionLifetime.cachedPreview(page, edge)) }
+    LaunchedEffect(page.id, page.original, page.edits, edge) {
+        sessionLifetime.cachedPreview(page, edge)?.let { bitmap = it; return@LaunchedEffect }
         delay(180)
         val preview = File(page.original.parentFile, "preview-${page.id}-${System.nanoTime()}.png")
         val pendingBitmap = java.util.concurrent.atomic.AtomicReference<Bitmap?>(null)
         try {
             val job = currentCoroutineContext()[Job]
             sessionLifetime.run {
-                processor.render(page.original, page.edits, preview, ExportFormat.PNG, config.copy(maxOutputDimension = minOf(config.maxOutputDimension, 1024)),
+                processor.render(page.original, page.edits, preview, ExportFormat.PNG, config.copy(maxOutputDimension = minOf(config.maxOutputDimension, edge)),
                     Cancellation { if (job?.isActive != true) throw CancellationException() })
-                decodeThumbnail(preview, maxEdge = 1024).also { pendingBitmap.set(it) }
+                BitmapFactory.decodeFile(preview.absolutePath).also { pendingBitmap.set(it) }
             }.also { decoded ->
                 if (currentCoroutineContext().isActive) {
-                    if (decoded != null) sessionLifetime.cachePreview(page, decoded)
+                    if (decoded != null) sessionLifetime.cachePreview(page, decoded, edge)
                     bitmap = decoded
                     if (decoded != null) pendingBitmap.compareAndSet(decoded, null)
                 }

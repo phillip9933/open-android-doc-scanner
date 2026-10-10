@@ -1,6 +1,6 @@
 # Architecture and decisions
 
-One launch creates one private in-memory session. No historical library, account, upload, OCR, model download, network permission, analytics or licensing endpoint exists.
+Each scanning flow creates one private in-memory session. The sample can reopen its last completed export, but has no full historical library. No account, upload, OCR, model download, network permission, analytics or licensing endpoint exists.
 
 ## Contracts and boundaries
 
@@ -24,7 +24,7 @@ Final sample compile/target SDK is36, consistent with the current Android16 dist
 
 Corners are normalized relative to the visually upright original image, TL/TR/BR/BL in clockwise order. EXIF correction precedes detection and rendering. Editing rotation is applied after crop and is independent of corner coordinates. No fixed paper aspect ratio is imposed. Convexity, nonintersection, finite bounds, minimum area and output limits are enforced before warp. Live detection uses low resolution; export uses bounded higher resolution. Camera shared viewport crops analysis and still capture consistently, then rotates analysis upright. Detection suggestions must still be reviewed on the captured image because shutter timing can move the document.
 
-Native Mat objects, bitmaps, camera frames, PDF documents and streams have explicit lifetimes. Cancellation is checked cooperatively; single codec/native calls cannot be interrupted midway. Memory and latency gates must be evaluated on target devices. Image-based PDF uses Android PdfDocument; it can retain multiple page images, so large sessions need peak-memory acceptance before release.
+Native Mat objects, bitmaps, camera frames, PDF documents and streams have explicit lifetimes. Cancellation is checked cooperatively; single codec/native calls cannot be interrupted midway. Memory and latency gates must be evaluated on target devices. Image-based PDF streams each processed JPEG into a PDF image object without decoding it again. Only one page is processed at a time; raster resolution is independent of page count. PDF physical page dimensions use 300 pixels per inch, while ExportedPage reports actual raster dimensions. Physical-device peak-memory acceptance remains required.
 
 ## Release boundaries
 

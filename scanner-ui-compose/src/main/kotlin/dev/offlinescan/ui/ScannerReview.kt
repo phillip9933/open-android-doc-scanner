@@ -61,6 +61,7 @@ internal fun ScannerReview(
     pages: List<ScanPage>,
     selectedId: String?,
     pageLimit: Int,
+    includeDiagnostics: Boolean,
     format: ExportFormat,
     onFormat: (ExportFormat) -> Unit,
     onSelect: (String) -> Unit,
@@ -78,11 +79,12 @@ internal fun ScannerReview(
     progress: Float,
     onCancelExport: () -> Unit,
     onBack: () -> Unit,
-    pageBitmap: @Composable (ScanPage) -> Bitmap?
+    pageBitmap: @Composable (ScanPage) -> Bitmap?,
+    detailedPageBitmap: @Composable (ScanPage) -> Bitmap? = pageBitmap
 ) {
     val selectedIndex = pages.indexOfFirst { it.id == selectedId }.takeIf { it >= 0 } ?: pages.lastIndex
     val selected = pages.getOrNull(selectedIndex)
-    val selectedBitmap = selected?.let { pageBitmap(it) }
+    val selectedBitmap = selected?.let { detailedPageBitmap(it) }
     val orderedPageIds = pages.map { it.id }
     val thumbnailState = rememberLazyListState()
     var moreExpanded by remember { mutableStateOf(false) }
@@ -141,6 +143,18 @@ internal fun ScannerReview(
                 Column(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(8.dp)) {
                     Text(stringResource(R.string.review_empty_title), style = MaterialTheme.typography.titleMedium)
                     Text(stringResource(R.string.review_empty_hint), style = MaterialTheme.typography.bodyMedium)
+                }
+            }
+            if (includeDiagnostics && selected != null) {
+                Column(
+                    Modifier.align(Alignment.BottomStart).padding(12.dp)
+                        .clip(RoundedCornerShape(12.dp))
+                        .background(MaterialTheme.colorScheme.surface.copy(alpha = .94f))
+                        .padding(horizontal = 12.dp, vertical = 8.dp)
+                ) {
+                    Text(stringResource(R.string.review_diagnostic_preview), style = MaterialTheme.typography.labelMedium)
+                    Text(stringResource(R.string.review_original_dimensions, selected.width, selected.height),
+                        style = MaterialTheme.typography.bodySmall)
                 }
             }
 

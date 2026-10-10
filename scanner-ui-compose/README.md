@@ -1,6 +1,6 @@
 # Compose flow
 
-`dev.offlinescan.ui.ScannerFlow(config, outputDirectory, saveDestination, onResult)` supplies one capture/import/edit/page-review session. Place it in MaterialTheme; values should stay stable for that launch. Handle Completed/Cancelled/Failed by leaving the route. Successful outputs stay host-owned; source originals are copied into private cache and discarded on disposal after in-flight processing exits.
+`dev.offlinescan.ui.ScannerFlow(config, outputDirectory, saveDestination, includeDiagnostics, onResult)` supplies one capture/import/edit/page-review session. Place it in MaterialTheme; values should stay stable for that launch. Handle Completed/Cancelled/Failed by leaving the route. Successful outputs stay host-owned; source originals are copied into private cache and discarded on disposal after in-flight processing exits. `includeDiagnostics` defaults to `false`; when enabled, export includes untouched source images and rendered-page companions for inspection, and review labels the bounded preview with its source dimensions.
 
 `saveDestination` is an optional composable slot for a host-provided save-location control. It receives `enabled = false` while processing or exporting. When omitted, the flow retains its default read-only “On this device” destination field. Keep `onResult` last so existing trailing-lambda calls continue to work.
 
@@ -13,6 +13,7 @@ ScannerFlow(
             Text(destinationLabel)
         }
     },
+    includeDiagnostics = true,
     onResult = ::handleScanResult
 )
 ```

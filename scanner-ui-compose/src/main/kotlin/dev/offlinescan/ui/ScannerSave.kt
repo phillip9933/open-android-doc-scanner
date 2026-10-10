@@ -75,11 +75,12 @@ internal fun ScannerSave(
     progress: Float,
     onCancel: () -> Unit,
     saveDestination: (@Composable (enabled: Boolean) -> Unit)? = null,
-    pageBitmap: @Composable (ScanPage) -> Bitmap?
+    pageBitmap: @Composable (ScanPage) -> Bitmap?,
+    detailedPageBitmap: @Composable (ScanPage) -> Bitmap? = pageBitmap
 ) {
     val selectedIndex = pages.indexOfFirst { it.id == selectedId }.takeIf { it >= 0 } ?: 0
     val selectedPage = pages.getOrNull(selectedIndex)
-    val selectedBitmap = selectedPage?.let { pageBitmap(it) }
+    val selectedBitmap = selectedPage?.let { detailedPageBitmap(it) }
     val orderedPageIds = pages.map { it.id }
     val chosenFormat = if (format == ExportFormat.PDF) ExportFormat.PDF else ExportFormat.JPEG
     val validName = isValidDocumentName(documentName)

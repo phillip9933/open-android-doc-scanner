@@ -5,7 +5,7 @@ plugins {
     kotlin("jvm") version "2.2.20" apply false
     id("org.jetbrains.kotlin.plugin.compose") version "2.2.20" apply false
 }
-allprojects { group = "dev.offlinescan"; version = "0.1.0-rc11" }
+allprojects { group = "dev.offlinescan"; version = "0.1.0-rc12" }
 subprojects {
     if (name != "scanner-sample") {
         val moduleProject = this

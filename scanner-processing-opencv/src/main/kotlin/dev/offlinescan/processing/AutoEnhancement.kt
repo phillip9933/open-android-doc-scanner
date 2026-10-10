@@ -55,15 +55,12 @@ internal object AutoEnhancement {
             // Without strong paper/content evidence, leave photos, blank pages and ambiguous scenes alone.
             if(paper<145 || paperFraction<.65 || inkFraction !in .004.. .30)
                 return EnhancementRecommendation(Preset.ORIGINAL)
-            val backgrounds=tiles.indices.filter { tileCounts[it]>=16 }.map { quantile(tiles[it],tileCounts[it],.90) }.sorted()
-            val spread=if(backgrounds.size<8) 0 else backgrounds[backgrounds.size*9/10]-backgrounds[backgrounds.size/10]
             if(colored.toDouble()/count>=.0005)
                 return EnhancementRecommendation(Preset.COLOR_DOCUMENT,0.0,1.0,0.0,.65)
             val middle=if(paper>125) histogram.sliceArray(96 until paper-25).sum().toDouble()/count else 1.0
-            val dark=histogram.sliceArray(0..95).sum().toDouble()/count
-            // Strict binary gate: shadows, gray ink/pencil and tonal photographs keep continuous tones.
-            if(paper>=215 && paperFraction>=.75 && dark in .008.. .20 && middle<.001 && spread<15)
-                return EnhancementRecommendation(Preset.BLACK_WHITE)
+            // Keep Auto continuous-tone for ordinary print. A clean histogram cannot tell
+            // thin strokes, punctuation, pencil, or pale annotations from noise reliably;
+            // callers can still choose the explicit Black and white preset.
             return EnhancementRecommendation(Preset.GRAYSCALE,0.0,1.04,0.0,.85)
         } finally { gray.release(); reduced.release() }
     }

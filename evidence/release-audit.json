@@ -60,13 +60,13 @@
         "size_bytes": 10096,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 10846208
+        "zip_data_offset": 10928128
       },
       {
         "abi": "arm64-v8a",
         "all_load_segments_aligned_16k": true,
         "byte_order": "little",
-        "compressed_size_bytes": 1253544,
+        "compressed_size_bytes": 9236352,
         "compression_method": 0,
         "elf_class": 64,
         "entry": "lib/arm64-v8a/libc++_shared.so",
@@ -124,11 +124,11 @@
         ],
         "machine": 183,
         "name": "libc++_shared.so",
-        "sha256": "cd61762848882a16c8244c964a6f396c0caa0b440588a210ce9cc4ab0e6d9f0c",
-        "size_bytes": 1253544,
+        "sha256": "ab4e6c71b96b851de45a8a9bd86369e7dbc2130a44b3b4520564be94847910f2",
+        "size_bytes": 9236352,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 10862592
+        "zip_data_offset": 10944512
       },
       {
         "abi": "arm64-v8a",
@@ -185,7 +185,7 @@
         "size_bytes": 29008,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 12124160
+        "zip_data_offset": 20185088
       },
       {
         "abi": "arm64-v8a",
@@ -238,17 +238,17 @@
         ],
         "machine": 183,
         "name": "libonnxruntime.so",
-        "sha256": "50b4619acfd98bef794c85487f3b9dfa3c6939d00f3ab5974d8a49aad5eaca1b",
+        "sha256": "71592ea77d4e6aed7877bbc3139a15cb77785c7d2a5b273c2832c3e56aca91b4",
         "size_bytes": 25763824,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 12156928
+        "zip_data_offset": 20217856
       },
       {
         "abi": "arm64-v8a",
         "all_load_segments_aligned_16k": true,
         "byte_order": "little",
-        "compressed_size_bytes": 83432,
+        "compressed_size_bytes": 111976,
         "compression_method": 0,
         "elf_class": 64,
         "entry": "lib/arm64-v8a/libonnxruntime4j_jni.so",
@@ -284,11 +284,68 @@
         ],
         "machine": 183,
         "name": "libonnxruntime4j_jni.so",
-        "sha256": "21570f242553627895bfaa95224d8fc7f6dd0432381fb1739555310ee214f096",
-        "size_bytes": 83432,
+        "sha256": "05afb25116dc68608cee6195dc074c49521d4b79639195b1755463d0118db469",
+        "size_bytes": 111976,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 37928960
+        "zip_data_offset": 45989888
+      },
+      {
+        "abi": "arm64-v8a",
+        "all_load_segments_aligned_16k": true,
+        "byte_order": "little",
+        "compressed_size_bytes": 6523792,
+        "compression_method": 0,
+        "elf_class": 64,
+        "entry": "lib/arm64-v8a/libopencv_java4.so",
+        "identity": {
+          "allocated_section_count": 24,
+          "allocated_sections_sha256": "75c07d15cd0c774583e3ef729407fddb619c971bd8dd2ce59eb3f5050cf0f127",
+          "gnu_build_id": "ade2f6e9c3abd6125733d0bdef3716b57902ebbb",
+          "machine": 183
+        },
+        "load_segments": [
+          {
+            "aligned_16k": true,
+            "alignment": 16384,
+            "file_range_valid": true,
+            "file_size": 6390048,
+            "flags": 5,
+            "index": 1,
+            "memory_size": 6390048,
+            "offset": 0,
+            "virtual_address": 0
+          },
+          {
+            "aligned_16k": true,
+            "alignment": 16384,
+            "file_range_valid": true,
+            "file_size": 103656,
+            "flags": 6,
+            "index": 2,
+            "memory_size": 106208,
+            "offset": 6390048,
+            "virtual_address": 6406432
+          },
+          {
+            "aligned_16k": true,
+            "alignment": 16384,
+            "file_range_valid": true,
+            "file_size": 27720,
+            "flags": 6,
+            "index": 3,
+            "memory_size": 687512,
+            "offset": 6493704,
+            "virtual_address": 6526472
+          }
+        ],
+        "machine": 183,
+        "name": "libopencv_java4.so",
+        "sha256": "a014a769ae11446af05cbdbd01b7273ad42f26cddfbf3f206a38290d0fb91bb9",
+        "size_bytes": 6523792,
+        "uncompressed": true,
+        "zip_data_aligned_16k": true,
+        "zip_data_offset": 46104576
       },
       {
         "abi": "arm64-v8a",
@@ -334,7 +391,7 @@
         "size_bytes": 4832,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 44580864
+        "zip_data_offset": 52641792
       },
       {
         "abi": "x86_64",
@@ -391,13 +448,13 @@
         "size_bytes": 10760,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 44597248
+        "zip_data_offset": 52658176
       },
       {
         "abi": "x86_64",
         "all_load_segments_aligned_16k": true,
         "byte_order": "little",
-        "compressed_size_bytes": 1229808,
+        "compressed_size_bytes": 8808664,
         "compression_method": 0,
         "elf_class": 64,
         "entry": "lib/x86_64/libc++_shared.so",
@@ -455,11 +512,11 @@
         ],
         "machine": 62,
         "name": "libc++_shared.so",
-        "sha256": "2e855857f80819737d25a663109fedf816a5e996a85423166806014a06593256",
-        "size_bytes": 1229808,
+        "sha256": "e4cd73c8a3607269f3be58d15c21f78bff112e27f9398d6261e5f965668f8746",
+        "size_bytes": 8808664,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 44613632
+        "zip_data_offset": 52674560
       },
       {
         "abi": "x86_64",
@@ -516,7 +573,7 @@
         "size_bytes": 48104,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 45858816
+        "zip_data_offset": 61489152
       },
       {
         "abi": "x86_64",
@@ -569,17 +626,17 @@
         ],
         "machine": 62,
         "name": "libonnxruntime.so",
-        "sha256": "788d8fcf5942b4d762deb6af3b5f6af0e59ad1a2047447dafacf310950de1465",
+        "sha256": "f8875eef0e3587895fb79384908021952b0d5a8bbf55b707f7e9db54512e80ae",
         "size_bytes": 31239096,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 45907968
+        "zip_data_offset": 61538304
       },
       {
         "abi": "x86_64",
         "all_load_segments_aligned_16k": true,
         "byte_order": "little",
-        "compressed_size_bytes": 80592,
+        "compressed_size_bytes": 100424,
         "compression_method": 0,
         "elf_class": 64,
         "entry": "lib/x86_64/libonnxruntime4j_jni.so",
@@ -615,114 +672,11 @@
         ],
         "machine": 62,
         "name": "libonnxruntime4j_jni.so",
-        "sha256": "3263e414ff17b7cfcadd7054aa808a23cc9bfad9f0b91102d30bfb08dddc08fb",
-        "size_bytes": 80592,
+        "sha256": "fa557f9ea7d4d92e9270bf4943ecb99e3dc4ed9ba4c3ba599c57f8362065015b",
+        "size_bytes": 100424,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 77152256
-      },
-      {
-        "abi": "x86_64",
-        "all_load_segments_aligned_16k": true,
-        "byte_order": "little",
-        "compressed_size_bytes": 4928,
-        "compression_method": 0,
-        "elf_class": 64,
-        "entry": "lib/x86_64/libsurface_util_jni.so",
-        "identity": {
-          "allocated_section_count": 19,
-          "allocated_sections_sha256": "da14fd5109a708be811aac313ffe9403ade90a035a5eaf2b0167b02e5c2da496",
-          "gnu_build_id": "0443f8b36ff8731eae5ec0b6835adeaedc3aa291",
-          "machine": 62
-        },
-        "load_segments": [
-          {
-            "aligned_16k": true,
-            "alignment": 16384,
-            "file_range_valid": true,
-            "file_size": 2544,
-            "flags": 5,
-            "index": 1,
-            "memory_size": 2544,
-            "offset": 0,
-            "virtual_address": 0
-          },
-          {
-            "aligned_16k": true,
-            "alignment": 16384,
-            "file_range_valid": true,
-            "file_size": 576,
-            "flags": 6,
-            "index": 2,
-            "memory_size": 576,
-            "offset": 2544,
-            "virtual_address": 18928
-          }
-        ],
-        "machine": 62,
-        "name": "libsurface_util_jni.so",
-        "sha256": "cd425e10a365fb3695e53f1e46227d44d89f14854da4f1258ef079c80c752339",
-        "size_bytes": 4928,
-        "uncompressed": true,
-        "zip_data_aligned_16k": true,
-        "zip_data_offset": 87785472
-      },
-      {
-        "abi": "arm64-v8a",
-        "all_load_segments_aligned_16k": true,
-        "byte_order": "little",
-        "compressed_size_bytes": 6523792,
-        "compression_method": 0,
-        "elf_class": 64,
-        "entry": "lib/arm64-v8a/libopencv_java4.so",
-        "identity": {
-          "allocated_section_count": 24,
-          "allocated_sections_sha256": "75c07d15cd0c774583e3ef729407fddb619c971bd8dd2ce59eb3f5050cf0f127",
-          "gnu_build_id": "ade2f6e9c3abd6125733d0bdef3716b57902ebbb",
-          "machine": 183
-        },
-        "load_segments": [
-          {
-            "aligned_16k": true,
-            "alignment": 16384,
-            "file_range_valid": true,
-            "file_size": 6390048,
-            "flags": 5,
-            "index": 1,
-            "memory_size": 6390048,
-            "offset": 0,
-            "virtual_address": 0
-          },
-          {
-            "aligned_16k": true,
-            "alignment": 16384,
-            "file_range_valid": true,
-            "file_size": 103656,
-            "flags": 6,
-            "index": 2,
-            "memory_size": 106208,
-            "offset": 6390048,
-            "virtual_address": 6406432
-          },
-          {
-            "aligned_16k": true,
-            "alignment": 16384,
-            "file_range_valid": true,
-            "file_size": 27720,
-            "flags": 6,
-            "index": 3,
-            "memory_size": 687512,
-            "offset": 6493704,
-            "virtual_address": 6526472
-          }
-        ],
-        "machine": 183,
-        "name": "libopencv_java4.so",
-        "sha256": "a014a769ae11446af05cbdbd01b7273ad42f26cddfbf3f206a38290d0fb91bb9",
-        "size_bytes": 6523792,
-        "uncompressed": true,
-        "zip_data_aligned_16k": true,
-        "zip_data_offset": 38027264
+        "zip_data_offset": 92782592
       },
       {
         "abi": "x86_64",
@@ -779,7 +733,53 @@
         "size_bytes": 10525136,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 77234176
+        "zip_data_offset": 92897280
+      },
+      {
+        "abi": "x86_64",
+        "all_load_segments_aligned_16k": true,
+        "byte_order": "little",
+        "compressed_size_bytes": 4928,
+        "compression_method": 0,
+        "elf_class": 64,
+        "entry": "lib/x86_64/libsurface_util_jni.so",
+        "identity": {
+          "allocated_section_count": 19,
+          "allocated_sections_sha256": "da14fd5109a708be811aac313ffe9403ade90a035a5eaf2b0167b02e5c2da496",
+          "gnu_build_id": "0443f8b36ff8731eae5ec0b6835adeaedc3aa291",
+          "machine": 62
+        },
+        "load_segments": [
+          {
+            "aligned_16k": true,
+            "alignment": 16384,
+            "file_range_valid": true,
+            "file_size": 2544,
+            "flags": 5,
+            "index": 1,
+            "memory_size": 2544,
+            "offset": 0,
+            "virtual_address": 0
+          },
+          {
+            "aligned_16k": true,
+            "alignment": 16384,
+            "file_range_valid": true,
+            "file_size": 576,
+            "flags": 6,
+            "index": 2,
+            "memory_size": 576,
+            "offset": 2544,
+            "virtual_address": 18928
+          }
+        ],
+        "machine": 62,
+        "name": "libsurface_util_jni.so",
+        "sha256": "cd425e10a365fb3695e53f1e46227d44d89f14854da4f1258ef079c80c752339",
+        "size_bytes": 4928,
+        "uncompressed": true,
+        "zip_data_aligned_16k": true,
+        "zip_data_offset": 103432192
       }
     ],
     "path": "scanner-sample/build/outputs/apk/debug/scanner-sample-debug.apk",
@@ -787,10 +787,10 @@
       "android.permission.CAMERA",
       "dev.offlinescan.sample.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
     ],
-    "sha256": "d0ab1b494187bdd47b0be63e1197441a84cc46955ee3facb3d45de2947a08fac",
-    "size_bytes": 101613151
+    "sha256": "4e316265348715802ead6689cd8ca5a87aef1d84db113fcf93bc09ac8b7bb2ab",
+    "size_bytes": 117261700
   },
-  "created_utc": "2026-10-02T03:22:19.406695+00:00",
+  "created_utc": "2026-10-10T08:21:16.697702+00:00",
   "dependencies": {
     "configuration": "debugRuntimeClasspath",
     "coordinates_found": [
@@ -979,7 +979,7 @@
     ],
     "forbidden_coordinates": [],
     "path": "evidence/dependency-graph.txt",
-    "sha256": "7973a17d4122ca547f7401f56c186d2d4fcfa2687ef367e95a6ecee8006a27cf",
+    "sha256": "bcf0a5c67c75a0597c547cfecd32e4d6d7b5d6cdb08da795432627dcae5bb49c",
     "source_built_opencv_java_jar": {
       "path": "scanner-processing-opencv/libs/opencv-java-4.12.0.jar",
       "sha256": "60b7be2b59393bc1689b840d7b60fd75b811bb06477bdd03abee6fbc17afa5cf"
@@ -1036,68 +1036,68 @@
       "permissions": [
         "android.permission.CAMERA"
       ],
-      "sha256": "4162db773ea732efc783efa5af28a8b350e41115bba2fc1031bae0b9ed76601e"
+      "sha256": "03b2451c0f86dd34afb3eec9a88b4b3c7027c8ae3fc28ff4e5b0649f1fab6811"
     },
     {
       "path": "scanner-camera/build/intermediates/aapt_friendly_merged_manifests/release/processReleaseManifest/aapt/AndroidManifest.xml",
       "permissions": [
         "android.permission.CAMERA"
       ],
-      "sha256": "4162db773ea732efc783efa5af28a8b350e41115bba2fc1031bae0b9ed76601e"
+      "sha256": "03b2451c0f86dd34afb3eec9a88b4b3c7027c8ae3fc28ff4e5b0649f1fab6811"
     },
     {
       "path": "scanner-camera/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml",
       "permissions": [
         "android.permission.CAMERA"
       ],
-      "sha256": "4162db773ea732efc783efa5af28a8b350e41115bba2fc1031bae0b9ed76601e"
+      "sha256": "03b2451c0f86dd34afb3eec9a88b4b3c7027c8ae3fc28ff4e5b0649f1fab6811"
     },
     {
       "path": "scanner-camera/build/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml",
       "permissions": [
         "android.permission.CAMERA"
       ],
-      "sha256": "4162db773ea732efc783efa5af28a8b350e41115bba2fc1031bae0b9ed76601e"
+      "sha256": "03b2451c0f86dd34afb3eec9a88b4b3c7027c8ae3fc28ff4e5b0649f1fab6811"
     },
     {
       "path": "scanner-export/build/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/AndroidManifest.xml",
       "permissions": [],
-      "sha256": "86ad4b4d883c79cf6442c38bed14a985edc62db2c8f91706538d561a16aa6014"
+      "sha256": "7072f8809df5d01b817676baf49e7894c140218d49b88d0e43f0a6258bbfbafb"
     },
     {
       "path": "scanner-export/build/intermediates/aapt_friendly_merged_manifests/release/processReleaseManifest/aapt/AndroidManifest.xml",
       "permissions": [],
-      "sha256": "86ad4b4d883c79cf6442c38bed14a985edc62db2c8f91706538d561a16aa6014"
+      "sha256": "7072f8809df5d01b817676baf49e7894c140218d49b88d0e43f0a6258bbfbafb"
     },
     {
       "path": "scanner-export/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml",
       "permissions": [],
-      "sha256": "86ad4b4d883c79cf6442c38bed14a985edc62db2c8f91706538d561a16aa6014"
+      "sha256": "7072f8809df5d01b817676baf49e7894c140218d49b88d0e43f0a6258bbfbafb"
     },
     {
       "path": "scanner-export/build/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml",
       "permissions": [],
-      "sha256": "86ad4b4d883c79cf6442c38bed14a985edc62db2c8f91706538d561a16aa6014"
+      "sha256": "7072f8809df5d01b817676baf49e7894c140218d49b88d0e43f0a6258bbfbafb"
     },
     {
       "path": "scanner-processing-opencv/build/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/AndroidManifest.xml",
       "permissions": [],
-      "sha256": "e3b9439a7ddf07923a7a2ad9a8c43566602923b6c9891f757db96c2029ed56a0"
+      "sha256": "c85ca4b52b695f3783c0ac14e65d86adbc75583dfd537c6dce11a6677ef7db0c"
     },
     {
       "path": "scanner-processing-opencv/build/intermediates/aapt_friendly_merged_manifests/release/processReleaseManifest/aapt/AndroidManifest.xml",
       "permissions": [],
-      "sha256": "e3b9439a7ddf07923a7a2ad9a8c43566602923b6c9891f757db96c2029ed56a0"
+      "sha256": "c85ca4b52b695f3783c0ac14e65d86adbc75583dfd537c6dce11a6677ef7db0c"
     },
     {
       "path": "scanner-processing-opencv/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml",
       "permissions": [],
-      "sha256": "e3b9439a7ddf07923a7a2ad9a8c43566602923b6c9891f757db96c2029ed56a0"
+      "sha256": "c85ca4b52b695f3783c0ac14e65d86adbc75583dfd537c6dce11a6677ef7db0c"
     },
     {
       "path": "scanner-processing-opencv/build/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml",
       "permissions": [],
-      "sha256": "e3b9439a7ddf07923a7a2ad9a8c43566602923b6c9891f757db96c2029ed56a0"
+      "sha256": "c85ca4b52b695f3783c0ac14e65d86adbc75583dfd537c6dce11a6677ef7db0c"
     },
     {
       "path": "scanner-sample/build/intermediates/merged_manifest/debug/processDebugMainManifest/AndroidManifest.xml",
@@ -1105,7 +1105,7 @@
         "android.permission.CAMERA",
         "dev.offlinescan.sample.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
       ],
-      "sha256": "2e55613af2566c35ac2e922ba868727e2e690800925b6f2725d14b6f2b474d58"
+      "sha256": "dbe98ac7b10a5624794a7552e79a262e8c04fc4ee598dff3bed31c4102419989"
     },
     {
       "path": "scanner-sample/build/intermediates/merged_manifests/debug/processDebugManifest/AndroidManifest.xml",
@@ -1113,27 +1113,27 @@
         "android.permission.CAMERA",
         "dev.offlinescan.sample.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
       ],
-      "sha256": "2e55613af2566c35ac2e922ba868727e2e690800925b6f2725d14b6f2b474d58"
+      "sha256": "dbe98ac7b10a5624794a7552e79a262e8c04fc4ee598dff3bed31c4102419989"
     },
     {
       "path": "scanner-ui-compose/build/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/AndroidManifest.xml",
       "permissions": [],
-      "sha256": "1f508fa83793d65f41a2060258e9c82899c028f1f5e9a716ce38760f0595ad33"
+      "sha256": "cd1bf34b927efe05e7b5f2bbc58c32b1645825126ab798f60af3e363da4c7814"
     },
     {
       "path": "scanner-ui-compose/build/intermediates/aapt_friendly_merged_manifests/release/processReleaseManifest/aapt/AndroidManifest.xml",
       "permissions": [],
-      "sha256": "1f508fa83793d65f41a2060258e9c82899c028f1f5e9a716ce38760f0595ad33"
+      "sha256": "cd1bf34b927efe05e7b5f2bbc58c32b1645825126ab798f60af3e363da4c7814"
     },
     {
       "path": "scanner-ui-compose/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml",
       "permissions": [],
-      "sha256": "1f508fa83793d65f41a2060258e9c82899c028f1f5e9a716ce38760f0595ad33"
+      "sha256": "cd1bf34b927efe05e7b5f2bbc58c32b1645825126ab798f60af3e363da4c7814"
     },
     {
       "path": "scanner-ui-compose/build/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml",
       "permissions": [],
-      "sha256": "1f508fa83793d65f41a2060258e9c82899c028f1f5e9a716ce38760f0595ad33"
+      "sha256": "cd1bf34b927efe05e7b5f2bbc58c32b1645825126ab798f60af3e363da4c7814"
     }
   ],
   "native_build": {
@@ -1142,7 +1142,6 @@
     "path": "evidence/native-build-manifest.json",
     "runtime_artifacts_sha256": "f02965c332a8fc247918581107cdbf4242193521a41f92dbfb5f6fde9fa67099",
     "sha256": "112002dce280f738bb4bb369d3f374d73d09a4ffa9ec38a245cbbf4adc951749",
-    "source_archive_available_and_hash_verified": true,
     "source_archive_sha256": "fa3faf7581f1fa943c9e670cf57dd6ba1c5b4178f363a188a2c8bff1eb28b7e4",
     "source_url": "https://github.com/opencv/opencv/archive/refs/tags/4.12.0.zip"
   },

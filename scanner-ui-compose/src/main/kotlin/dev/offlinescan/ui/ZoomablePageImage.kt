@@ -1,7 +1,6 @@
 package dev.offlinescan.ui
 
 import android.graphics.Bitmap
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.gestures.rememberTransformableState
 import androidx.compose.foundation.gestures.transformable
@@ -14,9 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.asImageBitmap
-import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.pointer.pointerInput
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
@@ -56,9 +53,14 @@ import kotlin.math.roundToInt
             if(scale>1.01f) { scale=1f;pan=Offset.Zero }
             else { scale=2.5f;pan=clamp((Offset(size.width/2f,size.height/2f)-it)*(scale-1f),scale) }
         }) }) {
-        Image(bitmap.asImageBitmap(),description,Modifier.fillMaxSize().graphicsLayer {
-            scaleX=scale;scaleY=scale;translationX=pan.x;translationY=pan.y
-        },contentScale=ContentScale.Fit)
+        androidx.compose.foundation.Canvas(Modifier.fillMaxSize().semantics { contentDescription=description }) {
+            val fit=minOf(size.width/bitmap.width,size.height/bitmap.height)
+            val width=(bitmap.width*fit*scale).roundToInt().coerceAtLeast(1)
+            val height=(bitmap.height*fit*scale).roundToInt().coerceAtLeast(1)
+            drawImage(bitmap.asImageBitmap(),
+                dstOffset=androidx.compose.ui.unit.IntOffset(((size.width-width)/2+pan.x).roundToInt(),((size.height-height)/2+pan.y).roundToInt()),
+                dstSize=IntSize(width,height),filterQuality=androidx.compose.ui.graphics.FilterQuality.Medium)
+        }
         if(scale>1.01f) TextButton(onClick={scale=1f;pan=Offset.Zero},
             modifier=Modifier.align(Alignment.BottomStart).padding(8.dp)) { Text(fitLabel) }
     }

@@ -2,6 +2,8 @@ package dev.offlinescan.processing
 
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.graphics.ImageDecoder
+import android.os.Build
 import androidx.exifinterface.media.ExifInterface
 import dev.offlinescan.core.*
 import org.opencv.android.OpenCVLoader
@@ -33,7 +35,7 @@ class OpenCvProcessor : ImageProcessor {
         val info=metadata(source,config)
         Mats().use { mats ->
             val upright=decode(source,info,960,960L*960,mats,checked)
-            val crop=perspective(upright,corners,768,mats)
+            val crop=perspective(upright,corners,768,768L*768,mats)
             AutoEnhancement.recommend(crop,checked)
         }
     }
@@ -128,41 +130,57 @@ class OpenCvProcessor : ImageProcessor {
         val info = metadata(source, config)
         Mats().use { mats ->
             val automatic=if(edits.preset==Preset.AUTO) recommendEnhancement(source,edits.corners,config,checked) else null
-            val upright = decode(source, info, minOf(config.maxOutputDimension, RENDER_EDGE), RENDER_PIXELS, mats, checked)
+            // Small maxOutputDimension values are used for previews. Decode at up to 2x their
+            // edge for crop headroom; full-size exports decode to their requested edge.
+            val decodeEdge = if (config.maxOutputDimension <= PREVIEW_EDGE) {
+                minOf(RENDER_EDGE, maxOf(1024, config.maxOutputDimension * 2))
+            } else config.maxOutputDimension
+            val memoryPixelLimit = config.maxWorkingBytes / ESTIMATED_WORKING_BYTES_PER_PIXEL
+            val renderPixelLimit = minOf(config.maxRenderPixels, memoryPixelLimit)
+            val decodePixelLimit = minOf(renderPixelLimit, decodeEdge.toLong() * decodeEdge)
+            val upright = decode(source, info, decodeEdge, decodePixelLimit, mats, checked, exactSampling = true)
             checked.check()
-            val warped = perspective(upright, edits.corners, config.maxOutputDimension, mats)
-            upright.release()
-            val rotated = mats.mat()
-            when (Math.floorMod(edits.rotationQuarterTurns, 4)) {
-                1 -> Core.rotate(warped, rotated, Core.ROTATE_90_CLOCKWISE)
-                2 -> Core.rotate(warped, rotated, Core.ROTATE_180)
-                3 -> Core.rotate(warped, rotated, Core.ROTATE_90_COUNTERCLOCKWISE)
-                else -> warped.copyTo(rotated)
+            val warped = perspective(upright, edits.corners, config.maxOutputDimension, renderPixelLimit, mats)
+            if (warped !== upright) upright.release()
+            val rotated = when (Math.floorMod(edits.rotationQuarterTurns, 4)) {
+                1 -> mats.mat().also { Core.rotate(warped, it, Core.ROTATE_90_CLOCKWISE) }
+                2 -> mats.mat().also { Core.rotate(warped, it, Core.ROTATE_180) }
+                3 -> mats.mat().also { Core.rotate(warped, it, Core.ROTATE_90_COUNTERCLOCKWISE) }
+                else -> warped
             }
-            warped.release()
+            if (rotated !== warped) warped.release()
             checked.check()
             val result = enhance(rotated, edits, mats, checked, automatic)
-            rotated.release()
+            if (result !== rotated) rotated.release()
             var bitmap: Bitmap? = null
             try {
                 checked.check()
                 bitmap = Bitmap.createBitmap(result.cols(), result.rows(), Bitmap.Config.ARGB_8888)
                 Utils.matToBitmap(result, bitmap)
                 checked.check()
-                destination.outputStream().use { out ->
-                    if (!bitmap.compress(if (format == ExportFormat.PNG) Bitmap.CompressFormat.PNG else Bitmap.CompressFormat.JPEG, config.jpegQuality, out)) {
-                        fail(ErrorCode.EXPORT, "Image encoder failed")
+                var outputOpened = false
+                try {
+                    destination.outputStream().use { out ->
+                        outputOpened = true
+                        if (!bitmap.compress(if (format == ExportFormat.PNG) Bitmap.CompressFormat.PNG else Bitmap.CompressFormat.JPEG, config.jpegQuality, out)) {
+                            fail(ErrorCode.EXPORT, "Image encoder failed")
+                        }
                     }
+                    checked.check()
+                } catch (failure: Throwable) {
+                    if (outputOpened) destination.delete()
+                    throw failure
                 }
-                checked.check()
+                val sourceLimited = info.width.toLong() * info.height > decodePixelLimit || maxOf(info.width, info.height) > decodeEdge
+                val outputLimited = maxOf(bitmap.width, bitmap.height) >= config.maxOutputDimension ||
+                    bitmap.width.toLong() * bitmap.height >= (renderPixelLimit * .995).toLong()
                 ExportedPage(bitmap.width, bitmap.height,
-                    if(info.width.toLong()*info.height>RENDER_PIXELS || maxOf(info.width,info.height)>minOf(config.maxOutputDimension,RENDER_EDGE))
-                        listOf("Original image was downsampled before processing to respect pixel and dimension limits.") else emptyList())
+                    if (sourceLimited || outputLimited) listOf("Image resolution was limited by the preview or output size setting.") else emptyList())
             } finally { bitmap?.recycle() }
         }
     }
 
-    private data class Metadata(val width: Int, val height: Int, val orientation: Int)
+    private data class Metadata(val width: Int, val height: Int, val orientation: Int, val mimeType: String?)
 
     private fun metadata(file: File, config: ScanConfig): Metadata {
         if (!file.isFile || !file.canRead()) fail(ErrorCode.INVALID_IMAGE, "Image cannot be read")
@@ -176,21 +194,50 @@ class OpenCvProcessor : ImageProcessor {
         val orientation = try {
             ExifInterface(file).getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_NORMAL)
         } catch (e: IOException) { fail(ErrorCode.INVALID_IMAGE, "Image metadata cannot be read", e) }
-        return Metadata(w, h, if (orientation in 1..8) orientation else 1)
+        return Metadata(w, h, if (orientation in 1..8) orientation else 1, options.outMimeType)
     }
 
     /** Both dimensions and pixel count are bounded using metadata BEFORE pixel decoding. */
-    private fun decode(file: File, info: Metadata, maxEdge: Int, maxPixels: Long, mats: Mats, cancellation: Cancellation): Mat {
-        var sample = 1
-        fun width() = (info.width.toLong() + sample - 1) / sample
-        fun height() = (info.height.toLong() + sample - 1) / sample
-        while (maxOf(width(), height()) > maxEdge || width() * height() > maxPixels) sample *= 2
+    private fun decode(file: File, info: Metadata, maxEdge: Int, maxPixels: Long, mats: Mats,
+        cancellation: Cancellation, exactSampling: Boolean = false): Mat {
+        val targetScale = minOf(1.0, maxEdge.toDouble() / maxOf(info.width, info.height),
+            sqrt(maxPixels.toDouble() / (info.width.toLong() * info.height)))
+        val targetWidth = maxOf(2, floor(info.width * targetScale).toInt())
+        val targetHeight = maxOf(2, floor(info.height * targetScale).toInt())
         cancellation.check()
-        val bitmap = BitmapFactory.decodeFile(file.absolutePath, BitmapFactory.Options().apply {
-            inSampleSize = sample
-            inPreferredConfig = Bitmap.Config.ARGB_8888
-            inScaled = false
-        }) ?: fail(ErrorCode.INVALID_IMAGE, "Image decoding failed")
+        // ImageDecoder provides exact target sizing for the camera's JPEG path. Other formats
+        // retain BitmapFactory plus explicit EXIF transforms for consistent orientation behavior.
+        val imageDecoderUsed = exactSampling && Build.VERSION.SDK_INT >= 28 &&
+            info.mimeType.equals("image/jpeg", ignoreCase = true)
+        val bitmap = if (imageDecoderUsed) {
+            try {
+                val source = ImageDecoder.createSource(file)
+                ImageDecoder.decodeBitmap(source) { decoder, _, _ ->
+                    decoder.allocator = ImageDecoder.ALLOCATOR_SOFTWARE
+                    decoder.isMutableRequired = false
+                    if (targetScale < 1.0) {
+                        if (info.orientation in 5..8) decoder.setTargetSize(targetHeight, targetWidth)
+                        else decoder.setTargetSize(targetWidth, targetHeight)
+                    }
+                }
+            } catch (error: IOException) {
+                fail(ErrorCode.INVALID_IMAGE, "Image decoding failed", error)
+            } catch (error: IllegalArgumentException) {
+                fail(ErrorCode.INVALID_IMAGE, "Image decoding failed", error)
+            }
+        } else {
+            // Android 26-27 only offer power-of-two sampling. Round up the requested sample
+            // factor conservatively; newer Android versions use ImageDecoder's exact target.
+            var sample = 1
+            while (ceil(info.width.toDouble() / sample) > maxEdge ||
+                ceil(info.height.toDouble() / sample) > maxEdge ||
+                ceil(info.width.toDouble() / sample) * ceil(info.height.toDouble() / sample) > maxPixels) sample *= 2
+            BitmapFactory.decodeFile(file.absolutePath, BitmapFactory.Options().apply {
+                inSampleSize = sample
+                inPreferredConfig = Bitmap.Config.ARGB_8888
+                inScaled = false
+            }) ?: fail(ErrorCode.INVALID_IMAGE, "Image decoding failed")
+        }
         try {
             if (maxOf(bitmap.width, bitmap.height) > maxEdge || bitmap.width.toLong() * bitmap.height > maxPixels) {
                 fail(ErrorCode.RESOURCE_LIMIT, "Decoder returned an unexpectedly large image")
@@ -198,9 +245,16 @@ class OpenCvProcessor : ImageProcessor {
             if (bitmap.width < 2 || bitmap.height < 2) fail(ErrorCode.INVALID_IMAGE, "Decoded image is too small")
             cancellation.check()
             val rgba = mats.mat()
-            Utils.bitmapToMat(bitmap, rgba)
+            // Release the Java heap bitmap as soon as its pixels have crossed into native
+            // memory. Holding both through color conversion and orientation needlessly raises
+            // the peak for high-resolution camera captures.
+            try { Utils.bitmapToMat(bitmap, rgba) } finally { bitmap.recycle() }
             val rgb = mats.mat()
             Imgproc.cvtColor(rgba, rgb, Imgproc.COLOR_RGBA2RGB)
+            if (imageDecoderUsed || info.orientation == ExifInterface.ORIENTATION_NORMAL) {
+                rgba.release()
+                return rgb
+            }
             val upright = mats.mat()
             when (info.orientation) {
                 2 -> Core.flip(rgb, upright, 1)
@@ -215,10 +269,20 @@ class OpenCvProcessor : ImageProcessor {
             rgba.release()
             rgb.release()
             return upright
-        } finally { bitmap.recycle() }
+        } finally { if (!bitmap.isRecycled) bitmap.recycle() }
     }
 
-    private fun perspective(source: Mat, quad: Quad, maxDimension: Int, mats: Mats): Mat {
+    private fun perspective(source: Mat, quad: Quad, maxDimension: Int, maxPixels: Long, mats: Mats): Mat {
+        if (quad == Quad.FULL) {
+            val scale = minOf(1.0, maxDimension / maxOf(source.cols(), source.rows()).toDouble(),
+                sqrt(maxPixels.toDouble() / source.total()))
+            if (scale >= 1.0) return source
+            val output = mats.mat()
+            Imgproc.resize(source, output,
+                Size(maxOf(2, floor(source.cols() * scale).toInt()).toDouble(), maxOf(2, floor(source.rows() * scale).toInt()).toDouble()),
+                0.0, 0.0, Imgproc.INTER_AREA)
+            return output
+        }
         val p = quad.points.map { CvPoint(it.x * (source.cols() - 1), it.y * (source.rows() - 1)) }
         fun length(a: Int, b: Int) = hypot(p[a].x - p[b].x, p[a].y - p[b].y)
         for (i in p.indices) {
@@ -229,7 +293,7 @@ class OpenCvProcessor : ImageProcessor {
         }
         val width = maxOf(length(0, 1), length(3, 2)) + 1
         val height = maxOf(length(0, 3), length(1, 2)) + 1
-        val scale = minOf(1.0, maxDimension / maxOf(width, height), sqrt(OUTPUT_PIXELS / (width * height)))
+        val scale = minOf(1.0, maxDimension / maxOf(width, height), sqrt(maxPixels / (width * height)))
         val w = maxOf(2, floor(width * scale).toInt())
         val h = maxOf(2, floor(height * scale).toInt())
         val from = mats.keep(MatOfPoint2f()).apply { fromArray(*p.toTypedArray()) }
@@ -242,6 +306,10 @@ class OpenCvProcessor : ImageProcessor {
     }
 
     private fun enhance(original: Mat, requested: Edits, mats: Mats, cancellation: Cancellation, automatic: EnhancementRecommendation?): Mat {
+        val automaticIsNeutral = automatic == null || (automatic.preset == Preset.ORIGINAL &&
+            automatic.brightness == 0.0 && automatic.contrast == 1.0 && automatic.illumination == 0.0 && automatic.paperCleanup == 0.0)
+        if (automaticIsNeutral && (requested.preset == Preset.ORIGINAL || requested.preset == Preset.AUTO) &&
+            requested.brightness == 0.0 && requested.contrast == 1.0 && requested.illumination == 0.0) return original
         val input=if(automatic!=null && automatic.paperCleanup>0.0) cleanPaper(original,automatic.paperCleanup,mats,cancellation) else original
         val edits=if(automatic==null) requested else requested.copy(preset=automatic.preset,
             brightness=(requested.brightness+automatic.brightness).coerceIn(-.25,.25),
@@ -282,34 +350,92 @@ class OpenCvProcessor : ImageProcessor {
         val gray = mats.mat(); Imgproc.cvtColor(adjusted, gray, Imgproc.COLOR_RGB2GRAY)
         if (edits.preset == Preset.GRAYSCALE) return gray
         val bw = mats.mat()
+        val corrected = normalizePaperForThreshold(gray, mats, cancellation)
         val minEdge = minOf(gray.cols(), gray.rows())
-        val block = minOf(31, if (minEdge % 2 == 0) minEdge - 1 else minEdge)
-        if (block < 3 || automatic?.preset==Preset.BLACK_WHITE) Imgproc.threshold(gray, bw, 0.0, 255.0, Imgproc.THRESH_BINARY or Imgproc.THRESH_OTSU)
-        else Imgproc.adaptiveThreshold(gray, bw, 255.0, Imgproc.ADAPTIVE_THRESH_GAUSSIAN_C, Imgproc.THRESH_BINARY, block, 12.0)
+        // Scale the neighborhood with the rendered page: a 31px window is too local on a
+        // 4k page, where it follows letters instead of the paper's illumination field.
+        val requestedBlock = maxOf(31, (minEdge * 0.018).roundToInt())
+        val block = minOf(151, if (requestedBlock % 2 == 0) requestedBlock + 1 else requestedBlock)
+        if (minEdge < 3) Imgproc.threshold(corrected, bw, 0.0, 255.0, Imgproc.THRESH_BINARY or Imgproc.THRESH_OTSU)
+        else Imgproc.adaptiveThreshold(corrected, bw, 255.0, Imgproc.ADAPTIVE_THRESH_GAUSSIAN_C,
+            Imgproc.THRESH_BINARY, minOf(block, if (minEdge % 2 == 0) minEdge - 1 else minEdge), 7.0)
+        corrected.release()
         return bw
     }
 
-    /** Estimate light paper at low resolution; lift illumination without sharpening or inventing ink. */
+    /**
+     * Flatten only broad paper shading before binarization. The bounded additive correction
+     * preserves local ink contrast and avoids amplifying noise or clipping pale marks.
+     */
+    private fun normalizePaperForThreshold(gray: Mat, mats: Mats, cancellation: Cancellation): Mat {
+        val scale = minOf(1.0, 256.0 / maxOf(gray.cols(), gray.rows()))
+        val small = mats.mat()
+        Imgproc.resize(gray, small, Size(maxOf(2.0, gray.cols() * scale), maxOf(2.0, gray.rows() * scale)),
+            0.0, 0.0, Imgproc.INTER_AREA)
+        Imgproc.GaussianBlur(small, small, Size(0.0, 0.0), 10.0)
+        val background = mats.mat()
+        Imgproc.resize(small, background, gray.size(), 0.0, 0.0, Imgproc.INTER_LINEAR)
+        val normalized = mats.keep(Mat(gray.rows(), gray.cols(), CvType.CV_8UC1))
+        val sourceRow = ByteArray(gray.cols())
+        val backgroundRow = ByteArray(gray.cols())
+        for (y in 0 until gray.rows()) {
+            if (y % 32 == 0) cancellation.check()
+            gray.get(y, 0, sourceRow)
+            background.get(y, 0, backgroundRow)
+            for (x in sourceRow.indices) {
+                val source = sourceRow[x].toInt() and 255
+                val paper = backgroundRow[x].toInt() and 255
+                val lift = ((238 - paper) * 0.70).roundToInt().coerceIn(-8, 22)
+                sourceRow[x] = (source + lift).coerceIn(0, 255).toByte()
+            }
+            normalized.put(y, 0, sourceRow)
+        }
+        small.release()
+        background.release()
+        return normalized
+    }
+
+    /** Estimate paper color at low resolution; normalize illumination while preserving dark ink. */
     private fun cleanPaper(input: Mat, strength: Double, mats: Mats, cancellation: Cancellation): Mat {
-        val gray=mats.mat(); Imgproc.cvtColor(input,gray,Imgproc.COLOR_RGB2GRAY)
         val small=mats.mat(); val scale=minOf(1.0,192.0/maxOf(input.cols(),input.rows()))
-        Imgproc.resize(gray,small,Size(maxOf(2.0,floor(input.cols()*scale)),maxOf(2.0,floor(input.rows()*scale))),0.0,0.0,Imgproc.INTER_AREA)
-        val kernel=mats.keep(Imgproc.getStructuringElement(Imgproc.MORPH_ELLIPSE,Size(17.0,17.0)))
+        Imgproc.resize(input,small,Size(maxOf(2.0,floor(input.cols()*scale)),maxOf(2.0,floor(input.rows()*scale))),0.0,0.0,Imgproc.INTER_AREA)
+        val kernel=mats.keep(Imgproc.getStructuringElement(Imgproc.MORPH_ELLIPSE,Size(7.0,7.0)))
         val paper=mats.mat(); Imgproc.morphologyEx(small,paper,Imgproc.MORPH_CLOSE,kernel)
-        Imgproc.GaussianBlur(paper,paper,Size(0.0,0.0),3.0)
+        Imgproc.GaussianBlur(paper,paper,Size(0.0,0.0),1.2)
         val background=mats.mat(); Imgproc.resize(paper,background,input.size(),0.0,0.0,Imgproc.INTER_LINEAR)
-        val result=mats.keep(input.clone()); val row=ByteArray(input.cols()*3); val levels=ByteArray(input.cols())
+        val result=mats.keep(input.clone()); val row=ByteArray(input.cols()*3); val levels=ByteArray(row.size)
+        val corrected=DoubleArray(3)
         for(y in 0 until input.rows()) {
             if(y%32==0) cancellation.check()
             input.get(y,0,row); background.get(y,0,levels)
-            for(x in levels.indices) {
-                val light=(levels[x].toInt() and 255).coerceAtLeast(100)
-                val gain=1.0+strength*(242.0/light-1.0).coerceIn(0.0,.65)
-                for(c in 0..2) { val i=x*3+c; row[i]=((row[i].toInt() and 255)*gain).roundToInt().coerceIn(0,255).toByte() }
+            for(x in 0 until input.cols()) {
+                val offset=x*3
+                // Divide by each local paper channel: illumination and paper cast are
+                // corrected without adding the same brightness to dark ink.
+                for(c in 0..2) {
+                    val paperLevel=(levels[offset+c].toInt() and 255).coerceAtLeast(100)
+                    corrected[c]=((row[offset+c].toInt() and 255)*252.0/paperLevel).coerceIn(0.0,255.0)
+                }
+                val luminance=corrected[0]*.299+corrected[1]*.587+corrected[2]*.114
+                val deficit=(252.0-luminance).coerceAtLeast(0.0)
+                val chroma=corrected.maxOrNull()!!-corrected.minOrNull()!!
+                val neutralWeight=((24.0-chroma)/12.0).coerceIn(0.0,1.0)
+                // A smaller paper neighborhood follows edge shadows and broad stains.
+                // Smoothly suppress only near-paper neutral marks, fading out before
+                // pale foreground writing; avoid a hard threshold around thin strokes.
+                val paperDistance=(deficit/40.0).coerceIn(0.0,1.0)
+                val paperWeight=1.0-paperDistance*paperDistance*(3.0-2.0*paperDistance)
+                val shoulder=deficit*paperWeight*neutralWeight*minOf(.95,strength+.2)
+                // Darken clear ink gradually; near-paper tonal detail stays continuous.
+                val exponent=1.0+.3*((deficit-32.0)/64.0).coerceIn(0.0,1.0)
+                for(c in 0..2) {
+                    row[offset+c]=(252.0*Math.pow((corrected[c]/252.0).coerceIn(0.0,1.0),exponent)+shoulder)
+                        .roundToInt().coerceIn(0,255).toByte()
+                }
             }
             result.put(y,0,row)
         }
-        gray.release(); small.release(); paper.release(); kernel.release(); background.release()
+        small.release(); paper.release(); kernel.release(); background.release()
         return result
     }
 
@@ -608,9 +734,11 @@ class OpenCvProcessor : ImageProcessor {
 
     companion object {
         private const val DETECT_EDGE = 960
-        private const val RENDER_EDGE = 4096
-        private const val RENDER_PIXELS = 6_000_000L
-        private const val OUTPUT_PIXELS = 8_000_000.0
+        private const val RENDER_EDGE = 8192
+        private const val PREVIEW_EDGE = 2048
+        // A conservative working-set estimate includes decoded RGB, perspective/rotation
+        // buffers, enhancement output and the temporary ARGB bitmap used by the encoder.
+        private const val ESTIMATED_WORKING_BYTES_PER_PIXEL = 16L
         @Volatile private var initialized = false
         @Synchronized private fun ensureInitialized() {
             if (!initialized) {

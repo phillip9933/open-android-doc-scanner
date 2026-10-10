@@ -57,6 +57,10 @@ class CoreTest {
     @Test fun modesAndLimitsAreExplicit() {
         assertEquals(Preset.PHOTO,ScanConfig(mode=ScanMode.PHOTO).defaultPreset)
         assertEquals(2,ScanConfig(mode=ScanMode.CARD,cardFrontBack=true).pageLimit)
+        assertEquals(8192,ScanConfig().maxOutputDimension)
+        assertEquals(24_000_000L,ScanConfig().maxRenderPixels)
+        assertEquals(384_000_000L,ScanConfig().maxWorkingBytes)
+        assertNull(ScanOutput(emptyList(),ExportFormat.JPEG.mimeType,emptyList()).diagnostics)
         assertFailsWith<IllegalArgumentException> { ScanConfig(maxOutputDimension=100_000) }
     }
 }

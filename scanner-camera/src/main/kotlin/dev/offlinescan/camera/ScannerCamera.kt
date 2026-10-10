@@ -88,11 +88,14 @@ class ScannerCamera @JvmOverloads constructor(
     private val captureLock = Any()
     @Volatile private var pendingCapture: PendingCapture? = null
     private class PendingCapture(val staging: File, val destination: File, val onSaved: (File) -> Unit,
-        val automatic: Boolean, val reference: Detection?, val epoch: Long, val onRejected: (String) -> Unit) {
+        val automatic: Boolean, val reference: Detection?, val epoch: Long, val onRejected: (String) -> Unit,
+        val onQualityWarning: () -> Unit) {
         val files = mutableListOf(staging)
         var bestFile: File? = null
         var bestQuality: CaptureQualityPolicy.Sample? = null
         var shotCount = 0
+        var focusSucceeded: Boolean? = null
+        var manualQualityWarning = false
         @Volatile var cancelled = false
         var published = false
         var delivered = false
@@ -261,10 +264,15 @@ class ScannerCamera @JvmOverloads constructor(
     }
 
     /** Manual capture remains available even for documents with insufficient texture to judge blur. */
-    fun capture(destination: File, onSaved: (File) -> Unit) = capture(destination, false, {}, onSaved)
+    fun capture(destination: File, onSaved: (File) -> Unit) = capture(destination, false, {}, {}, onSaved)
 
     /** Automatic capture settles focus, compares two original stills, and publishes only an acceptable one. */
-    fun capture(destination: File, automatic: Boolean, onRejected: (String) -> Unit, onSaved: (File) -> Unit) = onMain {
+    fun capture(destination: File, automatic: Boolean, onRejected: (String) -> Unit, onSaved: (File) -> Unit) =
+        capture(destination, automatic, onRejected, {}, onSaved)
+
+    /** Manual captures are kept even when autofocus or the still sharpness check suggests softness. */
+    fun capture(destination: File, automatic: Boolean, onRejected: (String) -> Unit,
+        onQualityWarning: () -> Unit, onSaved: (File) -> Unit) = onMain {
         if (closed.get() || imageCapture == null || !active.get()) {
             report("Camera is not ready for capture"); return@onMain
         }
@@ -278,12 +286,13 @@ class ScannerCamera @JvmOverloads constructor(
         } catch (error: Exception) {
             gate.captureFinished(false); report("Unable to prepare the capture file", error, ErrorCode.STORAGE); return@onMain
         }
-        val pending = PendingCapture(staging, destination, onSaved, automatic, latestDetection, generation.get(), onRejected)
+        val pending = PendingCapture(staging, destination, onSaved, automatic, latestDetection, generation.get(), onRejected, onQualityWarning)
         synchronized(captureLock) {
             if (closed.get()) { staging.delete(); gate.captureFinished(false); return@onMain }
             pendingCapture = pending
         }
-        settleFocus(pending) {
+        settleFocus(pending) { focusSucceeded ->
+            pending.focusSucceeded = focusSucceeded
             val current = latestDetection
             val reference = pending.reference
             if (automatic && (reference?.corners == null || current?.corners == null ||
@@ -297,7 +306,7 @@ class ScannerCamera @JvmOverloads constructor(
     private fun captureCurrent(pending: PendingCapture): Boolean = !closed.get() && active.get() &&
         !pending.cancelled && pendingCapture === pending && generation.get() == pending.epoch
 
-    private fun settleFocus(pending: PendingCapture, ready: () -> Unit) {
+    private fun settleFocus(pending: PendingCapture, ready: (Boolean?) -> Unit) {
         val bound = camera ?: run { discardCapture(pending); return }
         val focusPoint = pending.reference?.corners?.points?.let { points ->
             Point(points.map { it.x }.average(), points.map { it.y }.average())
@@ -305,9 +314,9 @@ class ScannerCamera @JvmOverloads constructor(
         val x = focusPoint?.x?.toFloat() ?: previewView.width / 2f
         val y = focusPoint?.y?.toFloat() ?: previewView.height / 2f
         val finished = AtomicBoolean(false)
-        fun finish() {
+        fun finish(focusSucceeded: Boolean? = null) {
             if (finished.compareAndSet(false, true)) mainHandler.postDelayed({
-                if (captureCurrent(pending)) ready() else discardCapture(pending)
+                if (captureCurrent(pending)) ready(focusSucceeded) else discardCapture(pending)
             }, 250)
         }
         mainHandler.postDelayed({ finish() }, 1500)
@@ -316,7 +325,7 @@ class ScannerCamera @JvmOverloads constructor(
             val action = FocusMeteringAction.Builder(point).setAutoCancelDuration(3, TimeUnit.SECONDS).build()
             if (!bound.cameraInfo.isFocusMeteringSupported(action)) { finish(); return }
             val focus = bound.cameraControl.startFocusAndMetering(action)
-            focus.addListener({ try { focus.get() } catch (_: Exception) { }; finish() }, mainExecutor)
+            focus.addListener({ finish(try { focus.get().isFocusSuccessful } catch (_: Exception) { null }) }, mainExecutor)
         } catch (_: Exception) { finish() }
     }
 
@@ -343,10 +352,37 @@ class ScannerCamera @JvmOverloads constructor(
                                             Geometry.distance(reference.corners!!, quad) <= 0.075 &&
                                             detected.sceneSignature.size == reference.sceneSignature.size &&
                                             detected.sceneSignature.zip(reference.sceneSignature).map { (a,b) -> kotlin.math.abs(a-b) }.average() < 0.12
-                                        if (quad != null) {
+                                        if (quad != null && Geometry.valid(quad, 0.03)) {
                                             val measured = processor.assessQuality(file, quad, config, cancel)
                                             quality = CaptureQualityPolicy.Sample(measured.sharpness, measured.brightness,
                                                 measured.informativeTiles, sameDocument)
+                                        }
+                                    } else if (config.mode != dev.offlinescan.core.ScanMode.PHOTO) {
+                                        try {
+                                            val detected = stillDetector?.invoke(file, cancel) ?: processor.detect(file, config, cancel)
+                                            val reference = pending.reference
+                                            val detectedQuad = detected.corners?.takeIf { Geometry.valid(it, 0.03) && detected.confidence >= 0.50 }
+                                            val signatureMatches = reference != null && detected.sceneSignature.isNotEmpty() &&
+                                                detected.sceneSignature.size == reference.sceneSignature.size &&
+                                                detected.sceneSignature.zip(reference.sceneSignature)
+                                                    .map { (a, b) -> kotlin.math.abs(a - b) }.average() < 0.12
+                                            val geometryMatches = detectedQuad != null && reference?.corners != null &&
+                                                Geometry.distance(reference.corners!!, detectedQuad) <= 0.075
+                                            val referenceComparable = signatureMatches && (detectedQuad == null || geometryMatches)
+                                            // Preview corners are a useful fallback when blur itself prevents still detection.
+                                            val quad = detectedQuad ?: reference?.corners?.takeIf { Geometry.valid(it, 0.03) }
+                                            if (quad != null) {
+                                                val measured = processor.assessQuality(file, quad, config, cancel)
+                                                quality = CaptureQualityPolicy.Sample(measured.sharpness, measured.brightness,
+                                                    measured.informativeTiles, detectedQuad != null || referenceComparable)
+                                            }
+                                            pending.manualQualityWarning = CaptureQualityPolicy.shouldWarnManual(
+                                                quality, reference?.sharpness ?: Double.NaN,
+                                                reference?.documentDetailTiles, pending.focusSucceeded, referenceComparable)
+                                        } catch (cancelled: CancellationException) { throw cancelled }
+                                        catch (_: Exception) {
+                                            // Manual output is preserved when a camera image or detector cannot be measured.
+                                            pending.manualQualityWarning = false
                                         }
                                     }
                                     cancel.check()
@@ -402,6 +438,7 @@ class ScannerCamera @JvmOverloads constructor(
                             pending.delivered = true
                             pendingCapture = null
                             gate.captureFinished(true)
+                            if (pending.manualQualityWarning) pending.onQualityWarning()
                             pending.onSaved(pending.destination)
                         }
                     }

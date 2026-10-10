@@ -10,6 +10,7 @@
     <string name="capture_precision">Precise adjustment</string><string name="capture_crop_hint">Drag the corners to adjust the crop.</string>
     <string name="capture_adjustments">Adjustments</string><string name="capture_done">Done</string>
     <string name="capture_manual_hint">Tap the shutter to add a page</string>
+    <string name="capture_quality_hint">This page may look soft. Check it and retake if needed.</string>
     <string name="position_document">Position a Document</string>
     <string name="position_photo">Position a Photo</string>
     <string name="position_receipt">Position a Receipt</string>

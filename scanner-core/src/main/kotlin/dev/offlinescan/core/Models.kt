@@ -13,13 +13,24 @@ data class ScanConfig(
     val mode: ScanMode = ScanMode.DOCUMENT,
     val maxPages: Int = 50,
     val maxInputPixels: Long = 32_000_000,
-    val maxOutputDimension: Int = 4096,
+    val maxOutputDimension: Int = 8192,
     val jpegQuality: Int = 92,
     val autoCapture: Boolean = true,
     val cardFrontBack: Boolean = false,
-    val detectionMode: DetectionMode = DetectionMode.STANDARD
+    val detectionMode: DetectionMode = DetectionMode.STANDARD,
+    /** Pixel ceiling for decode/crop work; output is never upscaled to reach this limit. */
+    val maxRenderPixels: Long = 24_000_000,
+    /** Conservative memory allowance used to lower the render pixel ceiling on constrained jobs. */
+    val maxWorkingBytes: Long = 384_000_000
 ) {
-    init { require(maxPages in 1..100); require(maxInputPixels in 1..64_000_000); require(maxOutputDimension in 256..8192); require(jpegQuality in 1..100) }
+    init {
+        require(maxPages in 1..100)
+        require(maxInputPixels in 1..64_000_000)
+        require(maxOutputDimension in 256..8192)
+        require(jpegQuality in 1..100)
+        require(maxRenderPixels in 1..64_000_000)
+        require(maxWorkingBytes in 64_000_000..1_073_741_824)
+    }
     val defaultPreset: Preset get() = if (mode == ScanMode.PHOTO) Preset.PHOTO else Preset.AUTO
     val pageLimit: Int get() = if (mode == ScanMode.CARD && cardFrontBack) minOf(2, maxPages) else maxPages
 }
@@ -37,7 +48,8 @@ data class Edits(val corners: Quad = Quad.FULL, val rotationQuarterTurns: Int = 
 data class ScanPage(val id: String, val original: File, val width: Int, val height: Int, val edits: Edits)
 data class Detection(val corners: Quad?, val confidence: Double, val brightness: Double, val sharpness: Double, val sceneSignature: List<Double>, val documentDetailTiles: Int? = null)
 data class ExportedPage(val width: Int, val height: Int, val warnings: List<String> = emptyList())
-data class ScanOutput(val files: List<File>, val mimeType: String, val pages: List<ExportedPage>, val warnings: List<String> = emptyList()) {
+data class ScanDiagnostics(val originals: List<File>, val renderedPages: List<File>)
+data class ScanOutput(val files: List<File>, val mimeType: String, val pages: List<ExportedPage>, val warnings: List<String> = emptyList(), val diagnostics: ScanDiagnostics? = null) {
     val pageCount: Int get() = pages.size
 }
 enum class ErrorCode { PERMISSION_DENIED, INVALID_IMAGE, INVALID_GEOMETRY, RESOURCE_LIMIT, PROCESSING, CAMERA, EXPORT, STORAGE }

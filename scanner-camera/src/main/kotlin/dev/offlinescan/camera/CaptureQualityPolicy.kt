@@ -15,4 +15,18 @@ internal object CaptureQualityPolicy {
 
     fun better(candidate: Sample, incumbent: Sample?): Boolean =
         incumbent == null || candidate.sharpness > incumbent.sharpness
+
+    /** Manual captures are always kept; warn only when the still itself provides blur evidence. */
+    fun shouldWarnManual(sample: Sample?, referenceSharpness: Double, referenceDetailTiles: Int?,
+        focusSucceeded: Boolean?, referenceComparable: Boolean = true): Boolean {
+        if (sample == null || !sample.consistentDocument || sample.detailTiles !in 0..9 ||
+            !sample.sharpness.isFinite() || sample.sharpness < 0.0) return false
+        // Losing nearly all detected text detail is useful evidence only when the still matches a detailed preview.
+        if (sample.detailTiles < 2) return referenceComparable && referenceDetailTiles != null && referenceDetailTiles >= 2
+        val relativeFloor = if (focusSucceeded == false) 0.85 else 0.70
+        val threshold = maxOf(60.0, if (referenceComparable && referenceDetailTiles != null && referenceDetailTiles >= 2 && referenceSharpness.isFinite())
+            referenceSharpness * relativeFloor else 60.0)
+        // A failed AF result makes the comparison more cautious, but the still metric decides whether to warn.
+        return sample.sharpness < threshold
+    }
 }

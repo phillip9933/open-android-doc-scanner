@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Offline Scanner</string>
     <string name="start">Start a new scan</string>
-    <string name="completed">Pages saved: %1$d. Format: %2$s. Outputs are in the app’s private files directory.</string>
+    <string name="completed">Pages saved: %1$d. Format: %2$s. Use Open or Share to access your saved files.</string>
     <string name="cancelled">Scan cancelled</string>
     <string name="failed">Scan failed: %1$s</string>
     <string name="mode">Capture mode</string>

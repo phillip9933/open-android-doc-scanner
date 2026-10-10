@@ -1,0 +1,42 @@
+{
+  "version": "0.1.0-rc12",
+  "date": "2026-10-10",
+  "androidDevice": "API35 x86_64 emulator",
+  "suites": {
+    "core": {
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "camera": {
+      "tests": 63,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "processing": {
+      "tests": 38,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 2
+    },
+    "export": {
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "sample": {
+      "tests": 14,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "lint": "passed",
+  "apkAudit": "passed",
+  "auditSelfTests": 8,
+  "independentMavenConsumer": "assembleDebug passed",
+  "physicalAcceptance": "Limited user Pixel sample acceptance; broader physical-device acceptance remains pending"
+}

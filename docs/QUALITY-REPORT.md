@@ -1,6 +1,6 @@
 # Measured quality and release status
 
-Current public SDK prerelease: [RC11](RELEASE-RC11.md); the latest testing APK remains RC10. See [enhancement and latest checks](ENHANCEMENT-RC10.md) and [learned detection](LEARNED-DETECTOR-RC8.md). Earlier sections below are historical records.
+Current SDK and sample prerelease: [RC12](RELEASE-RC12.md). It incorporates quality5 background cleanup, full-detail export budgets, detailed previews and accessible sample exports. Validation and remaining physical-device limits are recorded in the release notes. Earlier sections below are historical records.
 
 Local 0.1.0-rc1 candidate, 2026-10-01. Independently implementable first-release work is implemented and locally packaged. Required physical-device and host acceptance is unverified. This is not a Google-parity claim or a fully accepted release.
 
@@ -36,7 +36,7 @@ API37's original UI harness failed at InputManager reflection before interaction
 
 Final sample lint reports only the intentional API36 target versus API37 tooling and newer Activity/Compose versions. All-module lint also records newer dependency suggestions. The sample explicitly excludes every storage domain from cloud backup and device transfer, in addition to allowBackup=false/fullBackupContent=false; hosts must choose their own backup policy. No lint errors were suppressed to report success. Final packaged UI evidence is ui-api35-delivery.txt and ui-16k-delivery.txt (all4 pass each).
 
-## Limits and exact remaining acceptance
+## Historical RC1 limits and remaining acceptance
 
 - Min API26, compile/target36, arm64-v8a/x86_64 only; no 32-bit support. Execution currently verified only on x86_64 emulators. No front-camera mirroring promise.
 - Import bounds encoded bytes/pixels. Decode is capped at 4096 source edge / 6MP, render at 8MP and configured dimension; returned warnings/dimensions expose downsampling. PDF aggregate raster budget is16MP, edge <=2048, image-based PDF only; PDF points currently follow rendered pixels. No OCR/searchable PDF, dewarping, glare stacking, generative cleanup or cloud.

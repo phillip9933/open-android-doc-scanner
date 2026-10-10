@@ -11,12 +11,17 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import dev.offlinescan.core.*
 import java.io.File
+import kotlin.math.sqrt
 import java.util.concurrent.CancellationException
 import org.junit.Assert.*
 import org.junit.After
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.opencv.android.Utils
+import org.opencv.core.Mat
+import org.opencv.core.Size
+import org.opencv.imgproc.Imgproc
 
 @RunWith(AndroidJUnit4::class)
 class OpenCvProcessorTest {
@@ -88,6 +93,31 @@ class OpenCvProcessorTest {
         }
     }
 
+    @Test fun pngExifOrientationIsAppliedAfterPowerOfTwoPreviewDecode() {
+        val bitmap = Bitmap.createBitmap(1600, 1200, Bitmap.Config.ARGB_8888)
+        val canvas = Canvas(bitmap)
+        val colors = listOf(Color.RED, Color.GREEN, Color.BLUE, Color.YELLOW)
+        val bounds = listOf(floatArrayOf(0f,0f,800f,600f), floatArrayOf(800f,0f,1600f,600f),
+            floatArrayOf(800f,600f,1600f,1200f), floatArrayOf(0f,600f,800f,1200f))
+        for (i in colors.indices) { val b=bounds[i]; canvas.drawRect(b[0],b[1],b[2],b[3],Paint().apply{color=colors[i]}) }
+        val input=File(directory,"png-orientation-preview.png")
+        try { input.outputStream().use { assertTrue(bitmap.compress(Bitmap.CompressFormat.PNG,100,it)) } }
+        finally { bitmap.recycle() }
+        ExifInterface(input).apply { setAttribute(ExifInterface.TAG_ORIENTATION, "6"); saveAttributes() }
+        val output=File(directory,"png-orientation-preview-render.png")
+        val page=processor.render(input,Edits(),output,ExportFormat.PNG,ScanConfig(maxOutputDimension=512))
+        assertTrue("PNG EXIF orientation survives bounded decode: $page",page.height>page.width)
+        val rendered=BitmapFactory.decodeFile(output.absolutePath)!!
+        try {
+            val locations=listOf(.1 to .1,.9 to .1,.9 to .9,.1 to .9)
+            val expected=listOf(Color.YELLOW,Color.RED,Color.GREEN,Color.BLUE)
+            for(i in locations.indices) {
+                val (x,y)=locations[i]
+                assertColorNear(expected[i],rendered.getPixel((x*rendered.width).toInt(),(y*rendered.height).toInt()),4)
+            }
+        } finally {rendered.recycle()}
+    }
+
     @Test fun photographAndOriginalPreserveColorWhileGrayscaleAndBwAreExplicit() {
         val input = cornerFixture("photo.png", Bitmap.CompressFormat.PNG)
         for (preset in listOf(Preset.ORIGINAL, Preset.PHOTO, Preset.GRAYSCALE, Preset.BLACK_WHITE)) {
@@ -117,6 +147,139 @@ class OpenCvProcessorTest {
         val bounds = BitmapFactory.Options().apply { inJustDecodeBounds = true }
         BitmapFactory.decodeFile(output.absolutePath, bounds)
         assertEquals(page.width, bounds.outWidth); assertEquals(page.height, bounds.outHeight)
+    }
+
+    @Test fun twelveMegapixelCaptureKeepsResolutionThroughPerspectiveCrop() {
+        val bitmap = Bitmap.createBitmap(4032, 3024, Bitmap.Config.ARGB_8888)
+        var source: File? = null
+        try {
+            val canvas = Canvas(bitmap)
+            canvas.drawColor(Color.WHITE)
+            val paint = Paint().apply { color = Color.BLACK; textSize = 44f; isAntiAlias = true }
+            for (y in 150..2850 step 105) canvas.drawText("Invoice 2026  18.75   0123456789", 170f, y.toFloat(), paint)
+            val input = File(directory, "twelve-megapixel.jpg").also { source = it }
+            input.outputStream().use { assertTrue(bitmap.compress(Bitmap.CompressFormat.JPEG, 98, it)) }
+            ExifInterface(input).apply { setAttribute(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_ROTATE_90.toString()); saveAttributes() }
+            bitmap.recycle()
+            val output = File(directory, "twelve-megapixel-render.png")
+            val page = processor.render(input, Edits(), output, ExportFormat.PNG, ScanConfig())
+            assertEquals("Full-crop Original stays at the source's native 12 MP", 4032L * 3024L, page.width.toLong() * page.height)
+            assertTrue(page.width <= 8192 && page.height <= 8192)
+            assertTrue("Full export follows EXIF 6 into portrait orientation",page.height>page.width)
+            val previewOutput = File(directory, "twelve-megapixel-preview.png")
+            val preview = processor.render(input, Edits(), previewOutput, ExportFormat.PNG,
+                ScanConfig(maxOutputDimension = 512))
+            assertTrue("EXIF 6 preview remains upright after exact downscale: $preview", preview.height > preview.width)
+            assertTrue(preview.width <= 512 && preview.height <= 512)
+            val budgetOutput = File(directory, "twelve-megapixel-budgeted.png")
+            val budgetConfig = ScanConfig(maxRenderPixels = 4_000_000, maxWorkingBytes = 64_000_000)
+            val budgeted = processor.render(input, Edits(), budgetOutput, ExportFormat.PNG, budgetConfig)
+            assertTrue("Runtime budget reduces larger input smoothly", budgeted.width.toLong() * budgeted.height <= 4_000_000)
+            assertTrue("Budget reduction is reported", budgeted.warnings.isNotEmpty())
+            val bounds = BitmapFactory.Options().apply { inJustDecodeBounds = true }
+            BitmapFactory.decodeFile(output.absolutePath, bounds)
+            assertEquals(page.width, bounds.outWidth)
+            assertEquals(page.height, bounds.outHeight)
+            // Save same-source visual evidence. The baseline is a simulated former sample=2
+            // decode; it is clearly labeled and is not a real-camera acceptance result.
+            val external = InstrumentationRegistry.getInstrumentation().targetContext.getExternalFilesDir(null)
+            if (external != null) {
+                input.copyTo(File(external, "scanner-quality-12mp-source.jpg"), overwrite = true)
+                output.copyTo(File(external, "scanner-quality-12mp-full-resolution.png"), overwrite = true)
+                previewOutput.copyTo(File(external, "scanner-quality-12mp-preview-512.png"), overwrite = true)
+                budgetOutput.copyTo(File(external, "scanner-quality-12mp-budgeted-4mp.png"), overwrite = true)
+                File(external, "scanner-quality-12mp-dimensions.json").writeText(
+                    """{"fixture":"synthetic Android bitmap, not camera acceptance","exifOrientation":6,"capture":[4032,3024],"decodeUpright":[3024,4032],"perspectiveCropBeforeOutputLimit":[3024,4032],"defaultExport":[${page.width},${page.height}],"defaultMaxRenderPixels":24000000,"defaultMaxOutputDimension":8192,"budgetedExport":[${budgeted.width},${budgeted.height}],"budgetedMaxRenderPixels":4000000,"budgetedMaxWorkingBytes":64000000}"""
+                )
+                val decoded = BitmapFactory.decodeFile(input.absolutePath)!!
+                val half = try { Bitmap.createScaledBitmap(decoded, 2016, 1512, true) } finally { decoded.recycle() }
+                val legacyInput = File(directory, "legacy-sample2.jpg")
+                try { legacyInput.outputStream().use { assertTrue(half.compress(Bitmap.CompressFormat.JPEG, 98, it)) } }
+                finally { half.recycle() }
+                ExifInterface(legacyInput).apply { setAttribute(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_ROTATE_90.toString()); saveAttributes() }
+                val legacyOutput = File(directory, "legacy-sample2-render.png")
+                val legacyPage = processor.render(legacyInput, Edits(), legacyOutput, ExportFormat.PNG, ScanConfig())
+                assertTrue("Full detail should exceed the old simulated sample=2 result", page.width.toLong() * page.height > legacyPage.width.toLong() * legacyPage.height * 1.8)
+                legacyInput.copyTo(File(external, "scanner-quality-12mp-baseline-simulated-sample2-input.png"), overwrite = true)
+                legacyOutput.copyTo(File(external, "scanner-quality-12mp-baseline-simulated-sample2-render.png"), overwrite = true)
+            }
+        } finally { if (!bitmap.isRecycled) bitmap.recycle(); source?.delete() }
+    }
+
+    @Test fun blackWhiteRetainsFaintPrintAcrossBroadPaperShadow() {
+        val bitmap = Bitmap.createBitmap(1200, 800, Bitmap.Config.ARGB_8888)
+        val row = IntArray(1200)
+        for (y in 0 until 800) {
+            val paper = 205 + 35 * y / 799
+            java.util.Arrays.fill(row, Color.rgb(paper, paper, paper))
+            bitmap.setPixels(row, 0, 1200, 0, y, 1200, 1)
+        }
+        Canvas(bitmap).drawText("Ref: 18.75, item 7", 110f, 420f, Paint().apply {
+            color = Color.rgb(168, 168, 168); textSize = 58f; isAntiAlias = true
+        })
+        val paleInk = Paint().apply { color = Color.rgb(221, 221, 221); textSize = 34f; isAntiAlias = true }
+        Canvas(bitmap).drawText("i: 7, 3.1", 110f, 610f, paleInk)
+        Canvas(bitmap).drawLine(110f, 650f, 790f, 650f, Paint().apply {
+            color = Color.rgb(221, 221, 221); strokeWidth = 1f; isAntiAlias = false
+        })
+        val input = File(directory, "shadow-faint-print.jpg")
+        try { input.outputStream().use { assertTrue(bitmap.compress(Bitmap.CompressFormat.JPEG, 98, it)) } } finally { bitmap.recycle() }
+        val output = File(directory, "shadow-faint-print-bw.png")
+        val sourceBitmap = BitmapFactory.decodeFile(input.absolutePath)!!
+        val sauvolaBlack = try { sauvolaBlackPixels(sourceBitmap, 96, 790, 320, 440) } finally { sourceBitmap.recycle() }
+        val page = processor.render(input, Edits(preset = Preset.BLACK_WHITE), output, ExportFormat.PNG, ScanConfig())
+        val cleanedOutput = File(directory, "shadow-faint-print-auto.png")
+        processor.render(input, Edits(preset = Preset.AUTO), cleanedOutput, ExportFormat.PNG, ScanConfig())
+        val legacyOutput = File(directory, "shadow-faint-print-legacy-gaussian.png")
+        val raw = BitmapFactory.decodeFile(input.absolutePath)!!
+        val rgba = Mat(); val gray = Mat(); val legacyBw = Mat()
+        try {
+            Utils.bitmapToMat(raw, rgba)
+            Imgproc.cvtColor(rgba, gray, Imgproc.COLOR_RGBA2GRAY)
+            Imgproc.adaptiveThreshold(gray, legacyBw, 255.0, Imgproc.ADAPTIVE_THRESH_GAUSSIAN_C,
+                Imgproc.THRESH_BINARY, 31, 12.0)
+            val legacyBitmap = Bitmap.createBitmap(legacyBw.cols(), legacyBw.rows(), Bitmap.Config.ARGB_8888)
+            try {
+                Utils.matToBitmap(legacyBw, legacyBitmap)
+                legacyOutput.outputStream().use { assertTrue(legacyBitmap.compress(Bitmap.CompressFormat.PNG, 100, it)) }
+            } finally { legacyBitmap.recycle() }
+        } finally { raw.recycle(); rgba.release(); gray.release(); legacyBw.release() }
+        val rendered = BitmapFactory.decodeFile(output.absolutePath)!!
+        try {
+            var blackTextPixels = 0
+            var currentThinLineHits = 0
+            var legacyThinLineHits = 0
+            val renderedPixels = IntArray(page.width * page.height)
+            rendered.getPixels(renderedPixels, 0, page.width, 0, 0, page.width, page.height)
+            for (y in page.height * 40 / 100..page.height * 55 / 100)
+                for (x in page.width * 8 / 100..page.width * 66 / 100)
+                    if (Color.red(renderedPixels[y * page.width + x]) < 128) blackTextPixels++
+            val legacy = BitmapFactory.decodeFile(legacyOutput.absolutePath)!!
+            try {
+                for (x in 110..790) {
+                    if (Color.red(rendered.getPixel(x, 650)) < 128) currentThinLineHits++
+                    if (Color.red(legacy.getPixel(x, 650)) < 128) legacyThinLineHits++
+                }
+            } finally { legacy.recycle() }
+            android.util.Log.i("BwThresholdComparison", "same synthetic source strong=$blackTextPixels paleThinLine current=$currentThinLineHits legacy=$legacyThinLineHits sauvola=$sauvolaBlack window=45 k=0.20")
+            assertTrue("Faint letters and punctuation should survive Gaussian thresholding", blackTextPixels > 500)
+            assertTrue("Sauvola comparator should also retain printed strokes", sauvolaBlack > 500)
+            assertTrue("C=7 plus correction should retain the faint 1px line better than legacy C=12: current=$currentThinLineHits legacy=$legacyThinLineHits",
+                currentThinLineHits > legacyThinLineHits)
+            assertTrue("Most of the synthetic thin line should remain visible", currentThinLineHits > 500)
+            val external = InstrumentationRegistry.getInstrumentation().targetContext.getExternalFilesDir(null)
+            if (external != null) {
+                input.copyTo(File(external, "scanner-bw-source-synthetic-shadow.jpg"), overwrite = true)
+                output.copyTo(File(external, "scanner-bw-new-adaptive-gaussian.png"), overwrite = true)
+                cleanedOutput.copyTo(File(external, "scanner-bw-auto-cleaned-grayscale.png"), overwrite = true)
+                legacyOutput.copyTo(File(external, "scanner-bw-before-fixed-gaussian-31-c12.png"), overwrite = true)
+                File(external, "scanner-bw-threshold-comparison.json").writeText(
+                    """{"fixture":"synthetic 1200x800 shaded paper with strong and pale print; not camera acceptance","legacy":"adaptive Gaussian block=31 C=12","current":"background corrected adaptive Gaussian block=scaled C=7","comparison":"Sauvola k=0.20 R=128 window=45 on same source","currentStrongInkPixels":$blackTextPixels,"sauvolaStrongInkPixels":$sauvolaBlack,"currentPaleThinLineHits":$currentThinLineHits,"legacyPaleThinLineHits":$legacyThinLineHits,"currentPaperSamples":[${Color.red(rendered.getPixel(page.width / 2, page.height / 10))},${Color.red(rendered.getPixel(page.width / 2, page.height * 9 / 10))}]}"""
+                )
+            }
+            assertEquals("Paper at both ends of the shadow is cleaned", 255, Color.red(rendered.getPixel(page.width / 2, page.height / 10)))
+            assertEquals(255, Color.red(rendered.getPixel(page.width / 2, page.height * 9 / 10)))
+        } finally { rendered.recycle() }
     }
 
     @Test fun perspectiveWarpExcludesBackgroundAndPreservesPaperColor() {
@@ -194,5 +357,43 @@ class OpenCvProcessorTest {
         assertTrue("Red differs", kotlin.math.abs(Color.red(expected) - Color.red(actual)) <= tolerance)
         assertTrue("Green differs", kotlin.math.abs(Color.green(expected) - Color.green(actual)) <= tolerance)
         assertTrue("Blue differs", kotlin.math.abs(Color.blue(expected) - Color.blue(actual)) <= tolerance)
+    }
+
+    /** Test-only classic Sauvola comparator using integral sums; source pixels are shared. */
+    private fun sauvolaBlackPixels(bitmap: Bitmap, left: Int, right: Int, top: Int, bottom: Int): Int {
+        val width = bitmap.width; val height = bitmap.height; val stride = width + 1
+        val pixels = IntArray(width * height)
+        bitmap.getPixels(pixels, 0, width, 0, 0, width, height)
+        val sums = LongArray((width + 1) * (height + 1))
+        val squares = LongArray(sums.size)
+        for (y in 1..height) {
+            var rowSum = 0L; var rowSquares = 0L
+            for (x in 1..width) {
+                val color = pixels[(y - 1) * width + x - 1]
+                val gray = (Color.red(color) * 77 + Color.green(color) * 150 + Color.blue(color) * 29) shr 8
+                rowSum += gray; rowSquares += gray.toLong() * gray
+                val index = y * stride + x; val above = index - stride
+                sums[index] = sums[above] + rowSum
+                squares[index] = squares[above] + rowSquares
+            }
+        }
+        val radius = 22; var black = 0
+        for (y in top..bottom) for (x in left..right) {
+            val x0 = maxOf(0, x - radius); val x1 = minOf(width - 1, x + radius)
+            val y0 = maxOf(0, y - radius); val y1 = minOf(height - 1, y + radius)
+            val count = (x1 - x0 + 1) * (y1 - y0 + 1).toDouble()
+            fun box(integral: LongArray): Double {
+                val a = y0 * stride + x0; val b = y0 * stride + x1 + 1
+                val c = (y1 + 1) * stride + x0; val d = (y1 + 1) * stride + x1 + 1
+                return (integral[d] - integral[b] - integral[c] + integral[a]).toDouble()
+            }
+            val mean = box(sums) / count
+            val variance = maxOf(0.0, box(squares) / count - mean * mean)
+            val threshold = mean * (1 + .20 * (sqrt(variance) / 128.0 - 1))
+            val color = pixels[y * width + x]
+            val gray = (Color.red(color) * 77 + Color.green(color) * 150 + Color.blue(color) * 29) shr 8
+            if (gray < threshold) black++
+        }
+        return black
     }
 }

@@ -32,8 +32,8 @@ for name in required_root_files:
         raise SystemExit(f"Missing required license material: {root / name}")
 if not (root / "third-party").is_dir():
     raise SystemExit("Missing third-party notices directory")
-if not (root / "docs" / "RELEASE-RC11.md").is_file():
-    raise SystemExit("Missing docs/RELEASE-RC11.md")
+if not (root / "docs" / "RELEASE-RC12.md").is_file():
+    raise SystemExit("Missing docs/RELEASE-RC12.md")
 
 release = root / "release"
 release.mkdir(exist_ok=True)
@@ -41,7 +41,10 @@ archive_path = release / f"open-android-doc-scanner-{version}-sdk-maven.zip"
 archive_inputs = [
     (path, Path("maven") / path.relative_to(maven_root))
     for path in sorted(maven_root.rglob("*"))
-    if path.is_file()
+    if path.is_file() and any(
+        path.is_relative_to(maven_root / "dev" / "offlinescan" / module / version)
+        for module in modules
+    )
 ]
 archive_inputs.extend((root / name, Path(name)) for name in required_root_files)
 archive_inputs.extend(
@@ -49,7 +52,7 @@ archive_inputs.extend(
     for path in sorted((root / "third-party").rglob("*"))
     if path.is_file()
 )
-archive_inputs.append((root / "docs" / "RELEASE-RC11.md", Path("RELEASE-NOTES.md")))
+archive_inputs.append((root / "docs" / "RELEASE-RC12.md", Path("RELEASE-NOTES.md")))
 archive_inputs.append((root / "docs" / "NATIVE-BUILD.md", Path("NATIVE-BUILD.md")))
 
 temporary_archive = archive_path.with_suffix(archive_path.suffix + ".tmp")
