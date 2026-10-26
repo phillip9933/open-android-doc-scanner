@@ -1,0 +1,17 @@
+[
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/33.3.1-jre/guava-parent-33.3.1-jre.pom",
+    "sha256": "55441db27e8869dfefe053059bdf478bdc7e95585642bf391f0023345fd56287",
+    "sha1": "94729a0ed1dc35f623edd13afa6c1c2fe9a15d7c"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.10.2/junit-bom-5.10.2.module",
+    "sha256": "de23b114b3e4119a8fe6eb17bed5a3852816698bace67071579d6d927ebb080a",
+    "sha1": "ce536748a853ae6ac09e7815fce0678a96cff778"
+  },
+  {
+    "url": "https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-bom/1.8.0/kotlinx-coroutines-bom-1.8.0.pom",
+    "sha256": "1239e9dbe1397cd5971342956b2511bc3ace7b641842e4372a088dcfa8b9ad55",
+    "sha1": "ffe074f050e215c80d7d76f740f8c1095a8da403"
+  }
+]

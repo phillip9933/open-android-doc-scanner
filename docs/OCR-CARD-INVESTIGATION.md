@@ -1,6 +1,6 @@
 # Card OCR investigation — 26 October 2026
 
-Real-camera acceptance remains open in issue #2. Local inspection of an owner-provided card showed Japanese substitutions and spurious text; the owner also reported an incorrect card number. The number and its source were not both visible, so the exact digit substitution has not been established. No private image or extracted text is included here.
+Real-camera acceptance remains open in issue #2. Local inspection of an owner-provided card showed Japanese substitutions and spurious text; the owner also reported an incorrect card number. A later local comparison of the printed number and OCR result confirmed an 8→3 substitution in a tightly selected numeric line. No private image or extracted text is included here.
 
 ## Reproducible diagnostic
 
@@ -28,3 +28,22 @@ Debug app build, test compilation and Android lint pass. Pixel 10 Pro instrument
 The extended matrix contains 117 host runs, including paired 700 px and 350 px cards, Gaussian blur radius 0.6, and enlargement of the same degraded pixels back to 1400 × 850. In the four Japanese/bilingual document/sparse configurations, the 350 px unblurred card's light-on-color Japanese sentence was exact in 0/4 runs before enlargement and 4/4 after. With blur, neither original nor enlarged pixels recovered that sentence (0/4 each). Numeric recognition remained exact in all these document/sparse cases. See `evidence/ocr-card-synthetic.json` for the scoped summary.
 
 This supports investigating an explicit small-text enlargement option, but does not justify a default change: the host engine differs from the Android build, enlargement costs memory, and it did not repair lost detail or reproduce the owner's wrong number. No automatic preprocessing or synthetic replacement of recognized characters is introduced by this update.
+
+
+## Worn and tilted digits
+
+`tools/experiments/worn_digits.py` generates two fictional eight-digit strings with Noto Sans/Serif, three levels of fixed-seed missing ink and −12°, −7°, −3°, 0°, 3°, 7° and 12° tilt. No personal identifiers or image pixels are used. The expanded 420-run host matrix compares the same 84 cases under five treatments:
+
+| Treatment | Exact / 84 | Recovered from baseline | Previously correct cases broken |
+| --- | ---: | ---: | ---: |
+| Original | 51 | 0 | 0 |
+| Pixel-estimated line straightening | 78 | 27 | 0 |
+| 2× enlargement | 50 | 2 | 3 |
+| Otsu threshold | 53 | 3 | 1 |
+| Stroke thickening | 58 | 10 | 3 |
+
+The baseline reproduced an 8→3 substitution in tilted cases. Straightening maximizes horizontal ink projection over ±12° using image pixels only; neither expected digits nor the generated angle enter the estimator. This narrow fixture is evidence for testing line straightening, not proof of general OCR reliability. Full output is in `evidence/ocr-worn-digit-synthetic.json`. Future validation must cover wider typography, non-integer angles, glare, perspective, clipping, empty/multiline regions and Android memory/coordinate mapping before any SDK default change. Phone testing is paused at the owner's request.
+
+PR CI also exposed three missing dependency metadata checksums (not mismatches). Those exact artifacts were fetched from Maven Central and matched against the CI cache SHA-1 identities and published SHA-1 values before recording SHA-256 in strict Gradle verification. Provenance is in `evidence/ocr-ci-metadata-verification.json`; no verification bypass was added.
+
+Local validation after the checksum additions: core and OCR JVM tests, sample debug assembly and sample lint pass. No phone commands were run during this offline investigation.
