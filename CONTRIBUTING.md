@@ -48,3 +48,48 @@ Include the SDK/sample version, Android version, device model, detection/capture
 PRs should describe the problem, behavior change, validation and remaining limitations. Update affected docs. Explain dependency/model changes and their license/provenance. Preserve [Apache-2.0](LICENSE), [NOTICE](NOTICE) and all applicable [third-party/model notices](THIRD-PARTY-NOTICES.md).
 
 I'm happy to help where I can, but I can't promise a response or support schedule. Keep discussion respectful and technical.
+
+## Work tracking and release policy
+
+The [public project](https://github.com/users/phillip9933/projects/1) is the live roadmap and work board. Issues are the source of truth for scope and verification; repository documents retain design decisions and historical evidence, not a duplicate live task list.
+
+### Labels and triage
+
+Every issue has exactly one purpose label:
+
+| Label | Purpose |
+| --- | --- |
+| `type:bug` | Existing behavior is broken |
+| `type:feature` | New or changed user-facing capability |
+| `type:maintenance` | Refactoring, dependencies, CI, performance or technical debt |
+| `type:docs` | Documentation-only work |
+| `type:release` | Release scope and promotion gates |
+
+Choose the purpose, not every activity: a bug fix requiring refactoring remains a bug. After triage, assign one priority: `priority:urgent` (immediate action), `priority:high` (next significant work), `priority:normal` (default accepted work), or `priority:low` (worthwhile but not currently important). Priority determines work order, not a delivery promise. Keep suspected vulnerabilities out of public issues; follow [SECURITY.md](SECURITY.md).
+
+### Work status
+
+Use the Project Status field: **Inbox → Ready → In progress → Done**, with **Blocked** when a recorded dependency prevents progress. Inbox needs assessment; Ready is accepted and sufficiently defined; In progress is actively underway. Blocked items explain what will unblock them. Done requires acceptance criteria and verification evidence; it does not mean shipped.
+
+Close rejected or duplicate issues with the appropriate reason, not as completed work. Do not use status labels. Review automatic Project workflows so rejected/duplicate closures do not become Done and completed work is not hidden before release.
+
+### Release targets and maturity
+
+A milestone names the intended stable version, such as **Android SDK 0.8.0**. Assign it only when the work is intended for that release. Unscheduled ideas have no milestone; alpha, beta and RC builds share the stable target. This Android-only SDK does not need redundant platform labels. Multi-platform repositories may use `platform:android`, `platform:desktop` and `platform:shared`. Cross-repository release issues link each repository's milestone.
+
+Each release has one owner and a separate Project **Stage** field:
+
+| Transition | Minimum evidence |
+| --- | --- |
+| Planned → Alpha | Scope, acceptance criteria and supported platforms recorded; an installable build exists |
+| Alpha → Beta | Intended features implemented; core workflows pass; remaining limitations documented |
+| Beta → RC | Release blockers resolved; required regression, upgrade/migration and data-safety tests pass; scope frozen |
+| RC → Stable | Final candidate validated; notes and limitations ready; signed/checksummed artifacts verified where applicable; release published |
+
+Dates do not pass gates. Stable means actually published. A feature entering after RC moves the release back to Beta and requires affected checks again. For the scanner, data safety includes preserving originals, ownership of outputs, cancellation/failure cleanup and interruption behavior. For Kura/Raiun, add relevant encryption, storage, backup/restore and sync checks. Host-specific card interpretation belongs in the host repository.
+
+### Issue contents and public views
+
+Every issue states its goal/problem, scope and exclusions, a **Done when** checklist, dependencies, and verification results or links before closing. Release issues also state target version, owner, included issues, gate checklists, remaining blockers and candidate/release links.
+
+**Roadmap** shows only `type:release` issues on a timeline with Stage, Estimated start and Estimated target. Dates remain blank until a defensible estimate exists. **Work board** shows bugs, features, maintenance and docs grouped by Status. GitHub displays this information; gate checklists are maintainer policy, not automatic enforcement.

@@ -1,3 +1,7 @@
+## Related issue
+
+Link the issue and acceptance criteria. Use closing keywords only when verification is complete; merging does not mean the release is Stable.
+
 ## Change
 
 Describe the problem and the resulting behavior.
