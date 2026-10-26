@@ -1,0 +1,27 @@
+[
+  {
+    "file": "Tesseract4Android-LICENSE.txt",
+    "url": "https://raw.githubusercontent.com/adaptech-cz/Tesseract4Android/4.9.0/LICENSE",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  {
+    "file": "Tesseract-LICENSE.txt",
+    "url": "https://raw.githubusercontent.com/tesseract-ocr/tesseract/5.5.3/LICENSE",
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  {
+    "file": "Leptonica-LICENSE.txt",
+    "url": "https://raw.githubusercontent.com/adaptech-cz/Tesseract4Android/4.9.0/tesseract4android/src/main/cpp/leptonica/src/leptonica-license.txt",
+    "sha256": "87829abb5bbb00b55a107365da89e9a33f86c4250169e5a1e5588505be7d5806"
+  },
+  {
+    "file": "libpng-LICENSE.txt",
+    "url": "https://raw.githubusercontent.com/pnggroup/libpng/v1.6.59/LICENSE",
+    "sha256": "bdb0a645ea18c60507d0368379b1ac5474b92255fcc2d115e07486a7672ba526"
+  },
+  {
+    "file": "libjpeg-README.txt",
+    "url": "https://raw.githubusercontent.com/adaptech-cz/Tesseract4Android/4.9.0/tesseract4android/src/main/cpp/libjpeg/src/README",
+    "sha256": "7c25493a9f64fed34d01445467341bda77bc1cdbeccbe33558659ef173fb9ff2"
+  }
+]

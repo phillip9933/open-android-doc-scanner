@@ -14,3 +14,5 @@ The [full documentation index](INDEX.md) remains the canonical map of integratio
 - `third-party/`: retained license and provenance records. Runtime notices also live in processing assets.
 
 Modules are declared in [settings.gradle.kts](../settings.gradle.kts). Build outputs and locally packaged releases are ignored; tracked evidence is historical, not a fresh result for every revision.
+
+- [Optional OCR and Kura card integration (0.8.0 development)](OCR.md)

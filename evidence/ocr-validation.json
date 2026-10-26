@@ -1,0 +1,35 @@
+{
+  "version": "0.8.0-SNAPSHOT",
+  "date": "2026-10-24",
+  "status": "development-validation-passed",
+  "core_tests": {
+    "tests": 9,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "instrumentation": {
+    "passed": 2,
+    "device": "Android API 35 x86_64 emulator",
+    "runner": "adb am instrument (Gradle connected-test startup stalled)",
+    "cases": [
+      "mixed English/Japanese synthetic text",
+      "numeric region OCR, full-image bounds, missing model and pixel budget"
+    ]
+  },
+  "build": [
+    "scanner-ocr-tesseract release AAR",
+    "scanner-ocr-tesseract lint (no errors)",
+    "scanner-sample debug compatibility build",
+    "local Maven core and OCR metadata"
+  ],
+  "native_alignment": "All eight arm64-v8a/x86_64 OCR dependency libraries have PT_LOAD alignment >= 16384",
+  "aar_sha256": "5afb6f380faec091f1e958ca9dfc77e5ee5cef4c78e989fabaaee8f070c173d8",
+  "model_assets_in_release_aar": false,
+  "limitations": [
+    "No real-card or handheld document accuracy evaluation",
+    "No arm64 runtime test",
+    "Native recognition cancellation takes effect after current call",
+    "No searchable PDF or Kura field parser"
+  ]
+}

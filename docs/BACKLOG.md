@@ -30,3 +30,5 @@ Status vocabulary: Not started; In progress; Implemented; Automatically verified
 
 Remaining checks are specified in DEVICE-ACCEPTANCE.md and QUALITY-REPORT.md. No unrelated repositories, production accounts, private images, purchases or public publishing were used.
 
+
+Optional OCR development and current acceptance evidence are recorded in [OCR integration](OCR.md) and [OCR acceptance](OCR-ACCEPTANCE.md). The [multi-document feasibility study](MULTI-DOCUMENT-DISCOVERY.md) is complete; no multi-document product feature is enabled.

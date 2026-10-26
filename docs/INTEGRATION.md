@@ -59,3 +59,7 @@ Upgrade all SDK coordinates together to `0.7.0` and recompile. Default rendering
 `includeDiagnostics` defaults to false on ScannerFlow/AndroidExporter. Enabling it retains original copies and rendered JPEG pages in the committed output, exposed as `ScanOutput.diagnostics`; hosts must delete these with the rest of their owned output. The sample enables it for testing and provides sharing, dimensions and 100% viewing. Its Pictures/Download export and last-result reopening are sample features, not automatic SDK host behavior.
 
 New optional Kotlin parameters/data-class fields require recompilation; use named `onResult` if an older positional ScannerFlow callback no longer compiles. See [0.7.0 release notes](RELEASE-0.7.0.md).
+
+## Optional OCR
+
+For English/Japanese document text and card regions, see [OCR integration](OCR.md). OCR is a separate opt-in module; existing `ScannerFlow` results are unchanged.

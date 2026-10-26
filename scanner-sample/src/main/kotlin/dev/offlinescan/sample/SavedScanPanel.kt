@@ -28,6 +28,7 @@ import org.json.JSONObject
 internal fun SavedScanPanel(output: ScanOutput) {
     val context=LocalContext.current
     val scope=rememberCoroutineScope()
+    var ocrImage by remember { mutableStateOf<File?>(null) }
     var inspection by remember { mutableStateOf<File?>(null) }
     var published by remember(output) { mutableStateOf<Map<String,Uri>>(emptyMap()) }
     var busy by remember(output) { mutableStateOf(false) }
@@ -115,9 +116,13 @@ internal fun SavedScanPanel(output: ScanOutput) {
                 OutlinedButton(onClick={share(file)}) {Text("Share original")}
             }
         }
-        rendered?.let {file->OutlinedButton(onClick={inspection=file}) {Text("Inspect export")}}
+        rendered?.let { file ->
+            OutlinedButton(onClick={inspection=file}) {Text("Inspect export")}
+            OutlinedButton(onClick={ocrImage=file}) {Text("Recognize text · page ${index+1}")}
+        }
     }
     inspection?.let { DiagnosticViewer(it) {inspection=null} }
+    ocrImage?.let { OcrTestScreen(it) {ocrImage=null} }
 }
 
 internal fun mimeFor(file:File):String {

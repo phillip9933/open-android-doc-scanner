@@ -1,0 +1,7 @@
+# Fixed OCR fixture
+
+`bilingual.png` is a synthetic 1600 × 500 white raster containing `会員番号` and `MEMBER 0012345678`. SHA-256: `219b0eb9ee610657446e1f0f2d9c2111e083746a8de4d2385ed931b55080e8cc`.
+
+Generated with Pillow 13.0.0 and Noto Sans CJK JP Regular, 64 px (TTC index 0), black text at (100,80) and (100,220). Noto fonts use SIL OFL 1.1; only rendered text pixels, not the font file, are included. This is not a photograph or personal card.
+
+Using identical pixels avoids changing the recognition input when Android changes its fallback fonts. The original Android Canvas fixture is recorded separately in the October 26 acceptance report: Pixel Android 17 read `員` as `具` at 80 px; this limitation is not considered fixed by the deterministic fixture.

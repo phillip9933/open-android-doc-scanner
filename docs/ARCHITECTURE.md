@@ -1,6 +1,6 @@
 # Architecture and decisions
 
-Each scanning flow creates one private in-memory session. The sample can reopen its last completed export, but has no full historical library. No account, upload, OCR, model download, network permission, analytics or licensing endpoint exists.
+Each scanning flow creates one private in-memory session. The sample can reopen its last completed export, but has no full historical library. No account, upload, model download, network permission, analytics or licensing endpoint exists. Optional OCR is available through scanner-core contracts and scanner-ocr-tesseract; hosts supply local models.
 
 ## Contracts and boundaries
 
@@ -28,7 +28,7 @@ Native Mat objects, bitmaps, camera frames, PDF documents and streams have expli
 
 ## Release boundaries
 
-Deferred: OCR/searchable PDF, simultaneous multi-document detection, book dewarping, multi-frame glare removal, generative reconstruction, cloud, cross-platform UI and model training. Card mode only produces images; it performs no identity verification or wallet-field extraction.
+Deferred: searchable PDF, simultaneous multi-document detection, book dewarping, multi-frame glare removal, generative reconstruction, cloud, cross-platform UI and model training. Card mode produces images that the optional OCR module can recognize. It performs no identity verification or wallet-field extraction. See [OCR ownership and integration](OCR.md).
 
 
 ## RC8 shared detection and capture
