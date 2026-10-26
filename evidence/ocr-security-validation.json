@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-24",
+  "version": "0.8.0-SNAPSHOT",
+  "status": "identified-findings-addressed",
+  "native_build": "ocr-native-build.json",
+  "jvm_tests": {
+    "scanner-core": {
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "scanner-camera": {
+      "tests": 63,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "scanner-ocr-tesseract": {
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "android_instrumentation": {
+    "passed": 4,
+    "device": "API 35 x86_64 emulator",
+    "invocation": "adb am instrument",
+    "cases": [
+      "mixed English/Japanese OCR",
+      "numeric-region OCR and coordinates",
+      "unapproved-model rejection before native load and cleanup",
+      "process-wide overlapping-job rejection"
+    ]
+  },
+  "audit_self_tests": 8,
+  "strict_dependency_verification": "passed",
+  "lint": "passed (warnings only)",
+  "native_checks": "8 libraries: exact source/binary hashes, 16 KB alignment, non-executable stack, full RELRO; final tested APK binaries match build manifest",
+  "sample_compatibility_build": "passed",
+  "local_maven_publication": "core and OCR only; no remote publication",
+  "artifacts": {
+    "scanner-ocr-tesseract/build/outputs/aar/scanner-ocr-tesseract-release.aar": "e704b1b1b1aac9ef181a57db9162853e10530026fe5a2799025a5d552c0eb3be",
+    "scanner-ocr-tesseract/build/outputs/apk/androidTest/debug/scanner-ocr-tesseract-debug-androidTest.apk": "a38bc9fc5960098e668af7de5202d51831eac9aac2ea7de283e67dc4193ff0e6"
+  },
+  "remaining_limits": [
+    "Native call cannot be interrupted mid-recognition",
+    "No native sanitizer/fuzzing validation",
+    "No physical arm64 runtime testing",
+    "Runtime model files must be host-installed approved English/Japanese revisions"
+  ]
+}

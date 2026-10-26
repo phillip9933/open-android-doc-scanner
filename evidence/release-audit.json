@@ -60,7 +60,7 @@
         "size_bytes": 10096,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 10928128
+        "zip_data_offset": 10993664
       },
       {
         "abi": "arm64-v8a",
@@ -128,7 +128,7 @@
         "size_bytes": 9236352,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 10944512
+        "zip_data_offset": 11010048
       },
       {
         "abi": "arm64-v8a",
@@ -185,7 +185,110 @@
         "size_bytes": 29008,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 20185088
+        "zip_data_offset": 20250624
+      },
+      {
+        "abi": "arm64-v8a",
+        "all_load_segments_aligned_16k": true,
+        "byte_order": "little",
+        "compressed_size_bytes": 303576,
+        "compression_method": 0,
+        "elf_class": 64,
+        "entry": "lib/arm64-v8a/libjpeg.so",
+        "identity": {
+          "allocated_section_count": 20,
+          "allocated_sections_sha256": "a334ebb0e59abb41c1f3d2e6dc94f0dd9721cc5670bbd13b275872df4844c6b1",
+          "gnu_build_id": "e44f1779f56bff5dab1abdbc6f1618defcc06943",
+          "machine": 183
+        },
+        "load_segments": [
+          {
+            "aligned_16k": true,
+            "alignment": 16384,
+            "file_range_valid": true,
+            "file_size": 298928,
+            "flags": 5,
+            "index": 1,
+            "memory_size": 298928,
+            "offset": 0,
+            "virtual_address": 0
+          },
+          {
+            "aligned_16k": true,
+            "alignment": 16384,
+            "file_range_valid": true,
+            "file_size": 2736,
+            "flags": 6,
+            "index": 2,
+            "memory_size": 4176,
+            "offset": 298928,
+            "virtual_address": 315312
+          }
+        ],
+        "machine": 183,
+        "name": "libjpeg.so",
+        "sha256": "a1c7af9d2ab440c953d10967af5ccc3982fd65b23e6c8ecdeaad7f9a86d34b89",
+        "size_bytes": 303576,
+        "uncompressed": true,
+        "zip_data_aligned_16k": true,
+        "zip_data_offset": 20283392
+      },
+      {
+        "abi": "arm64-v8a",
+        "all_load_segments_aligned_16k": true,
+        "byte_order": "little",
+        "compressed_size_bytes": 3006496,
+        "compression_method": 0,
+        "elf_class": 64,
+        "entry": "lib/arm64-v8a/libleptonica.so",
+        "identity": {
+          "allocated_section_count": 23,
+          "allocated_sections_sha256": "5b165f3ad1cf717e99b2d1b701663bb36cdf75833a9cc401197f0d1e669fa424",
+          "gnu_build_id": "81743329b33a2253fde64d933bc962d670b6f7df",
+          "machine": 183
+        },
+        "load_segments": [
+          {
+            "aligned_16k": true,
+            "alignment": 16384,
+            "file_range_valid": true,
+            "file_size": 2969776,
+            "flags": 5,
+            "index": 1,
+            "memory_size": 2969776,
+            "offset": 0,
+            "virtual_address": 0
+          },
+          {
+            "aligned_16k": true,
+            "alignment": 16384,
+            "file_range_valid": true,
+            "file_size": 15728,
+            "flags": 6,
+            "index": 2,
+            "memory_size": 16208,
+            "offset": 2969776,
+            "virtual_address": 2986160
+          },
+          {
+            "aligned_16k": true,
+            "alignment": 16384,
+            "file_range_valid": true,
+            "file_size": 18864,
+            "flags": 6,
+            "index": 3,
+            "memory_size": 19232,
+            "offset": 2985504,
+            "virtual_address": 3018272
+          }
+        ],
+        "machine": 183,
+        "name": "libleptonica.so",
+        "sha256": "27a0d612241a5d973b1479aea308036e766507c9c6484de83389bbf7a8cc5509",
+        "size_bytes": 3006496,
+        "uncompressed": true,
+        "zip_data_aligned_16k": true,
+        "zip_data_offset": 20594688
       },
       {
         "abi": "arm64-v8a",
@@ -242,7 +345,7 @@
         "size_bytes": 25763824,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 20217856
+        "zip_data_offset": 23609344
       },
       {
         "abi": "arm64-v8a",
@@ -288,7 +391,7 @@
         "size_bytes": 111976,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 45989888
+        "zip_data_offset": 49381376
       },
       {
         "abi": "arm64-v8a",
@@ -345,7 +448,53 @@
         "size_bytes": 6523792,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 46104576
+        "zip_data_offset": 49496064
+      },
+      {
+        "abi": "arm64-v8a",
+        "all_load_segments_aligned_16k": true,
+        "byte_order": "little",
+        "compressed_size_bytes": 239088,
+        "compression_method": 0,
+        "elf_class": 64,
+        "entry": "lib/arm64-v8a/libpngx.so",
+        "identity": {
+          "allocated_section_count": 20,
+          "allocated_sections_sha256": "d1cd5b3f923894420b0db275cac7d5e18fb3d913519f6e167f45d3a7d9ff27df",
+          "gnu_build_id": "6dd3b3c22d20ce10a6584f598588d2c608f3937a",
+          "machine": 183
+        },
+        "load_segments": [
+          {
+            "aligned_16k": true,
+            "alignment": 16384,
+            "file_range_valid": true,
+            "file_size": 234192,
+            "flags": 5,
+            "index": 1,
+            "memory_size": 234192,
+            "offset": 0,
+            "virtual_address": 0
+          },
+          {
+            "aligned_16k": true,
+            "alignment": 16384,
+            "file_range_valid": true,
+            "file_size": 2984,
+            "flags": 6,
+            "index": 2,
+            "memory_size": 3376,
+            "offset": 234192,
+            "virtual_address": 250576
+          }
+        ],
+        "machine": 183,
+        "name": "libpngx.so",
+        "sha256": "e894414c3e1592efc1b9ccd163b914504e9a416356746dd56a1e0263d206d0fa",
+        "size_bytes": 239088,
+        "uncompressed": true,
+        "zip_data_aligned_16k": true,
+        "zip_data_offset": 56033280
       },
       {
         "abi": "arm64-v8a",
@@ -391,7 +540,64 @@
         "size_bytes": 4832,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 52641792
+        "zip_data_offset": 56279040
+      },
+      {
+        "abi": "arm64-v8a",
+        "all_load_segments_aligned_16k": true,
+        "byte_order": "little",
+        "compressed_size_bytes": 4235128,
+        "compression_method": 0,
+        "elf_class": 64,
+        "entry": "lib/arm64-v8a/libtesseract.so",
+        "identity": {
+          "allocated_section_count": 25,
+          "allocated_sections_sha256": "5d6681878b8a79b5089436beb09477f6de35b1b43f518270e0855f67cb96a4ea",
+          "gnu_build_id": "6c048a7d56aa9fe77e64a80d834c50ca95940e98",
+          "machine": 183
+        },
+        "load_segments": [
+          {
+            "aligned_16k": true,
+            "alignment": 16384,
+            "file_range_valid": true,
+            "file_size": 4157024,
+            "flags": 5,
+            "index": 1,
+            "memory_size": 4157024,
+            "offset": 0,
+            "virtual_address": 0
+          },
+          {
+            "aligned_16k": true,
+            "alignment": 16384,
+            "file_range_valid": true,
+            "file_size": 75024,
+            "flags": 6,
+            "index": 2,
+            "memory_size": 78240,
+            "offset": 4157024,
+            "virtual_address": 4173408
+          },
+          {
+            "aligned_16k": true,
+            "alignment": 16384,
+            "file_range_valid": true,
+            "file_size": 792,
+            "flags": 6,
+            "index": 3,
+            "memory_size": 21136,
+            "offset": 4232048,
+            "virtual_address": 4264816
+          }
+        ],
+        "machine": 183,
+        "name": "libtesseract.so",
+        "sha256": "4a26cf85bbef59f64a9d114933a84ad81576f7ad7280f2ff03f90161f4a540b6",
+        "size_bytes": 4235128,
+        "uncompressed": true,
+        "zip_data_aligned_16k": true,
+        "zip_data_offset": 56295424
       },
       {
         "abi": "x86_64",
@@ -448,7 +654,7 @@
         "size_bytes": 10760,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 52658176
+        "zip_data_offset": 60538880
       },
       {
         "abi": "x86_64",
@@ -516,7 +722,7 @@
         "size_bytes": 8808664,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 52674560
+        "zip_data_offset": 60555264
       },
       {
         "abi": "x86_64",
@@ -573,7 +779,110 @@
         "size_bytes": 48104,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 61489152
+        "zip_data_offset": 69369856
+      },
+      {
+        "abi": "x86_64",
+        "all_load_segments_aligned_16k": true,
+        "byte_order": "little",
+        "compressed_size_bytes": 320024,
+        "compression_method": 0,
+        "elf_class": 64,
+        "entry": "lib/x86_64/libjpeg.so",
+        "identity": {
+          "allocated_section_count": 20,
+          "allocated_sections_sha256": "d89a31480bf62a68825f4b4ef53af5643b7b167a18ba07f19b04f7b7965f4cf7",
+          "gnu_build_id": "b714dc13525cb12c273546c8f5fe4811f6b2656b",
+          "machine": 62
+        },
+        "load_segments": [
+          {
+            "aligned_16k": true,
+            "alignment": 16384,
+            "file_range_valid": true,
+            "file_size": 315376,
+            "flags": 5,
+            "index": 1,
+            "memory_size": 315376,
+            "offset": 0,
+            "virtual_address": 0
+          },
+          {
+            "aligned_16k": true,
+            "alignment": 16384,
+            "file_range_valid": true,
+            "file_size": 2736,
+            "flags": 6,
+            "index": 2,
+            "memory_size": 4112,
+            "offset": 315376,
+            "virtual_address": 331760
+          }
+        ],
+        "machine": 62,
+        "name": "libjpeg.so",
+        "sha256": "c4adae9d3f2c309126986c6c4ea9e750897f5bf93172c59b642996365722cb06",
+        "size_bytes": 320024,
+        "uncompressed": true,
+        "zip_data_aligned_16k": true,
+        "zip_data_offset": 69419008
+      },
+      {
+        "abi": "x86_64",
+        "all_load_segments_aligned_16k": true,
+        "byte_order": "little",
+        "compressed_size_bytes": 3103376,
+        "compression_method": 0,
+        "elf_class": 64,
+        "entry": "lib/x86_64/libleptonica.so",
+        "identity": {
+          "allocated_section_count": 22,
+          "allocated_sections_sha256": "be265b114f02782ab95e80c49673e2ece7dcedf64eb2907a4bcf3147f328f19a",
+          "gnu_build_id": "64a9ba0dbeef82623eb57c0bd522753e5827907e",
+          "machine": 62
+        },
+        "load_segments": [
+          {
+            "aligned_16k": true,
+            "alignment": 16384,
+            "file_range_valid": true,
+            "file_size": 3066688,
+            "flags": 5,
+            "index": 1,
+            "memory_size": 3066688,
+            "offset": 0,
+            "virtual_address": 0
+          },
+          {
+            "aligned_16k": true,
+            "alignment": 16384,
+            "file_range_valid": true,
+            "file_size": 15672,
+            "flags": 6,
+            "index": 2,
+            "memory_size": 17600,
+            "offset": 3066688,
+            "virtual_address": 3083072
+          },
+          {
+            "aligned_16k": true,
+            "alignment": 16384,
+            "file_range_valid": true,
+            "file_size": 18952,
+            "flags": 6,
+            "index": 3,
+            "memory_size": 19304,
+            "offset": 3082368,
+            "virtual_address": 3115136
+          }
+        ],
+        "machine": 62,
+        "name": "libleptonica.so",
+        "sha256": "9f30c63f98729d193442b410e53e5d6cfc86a9c013189937fa1d51e121504129",
+        "size_bytes": 3103376,
+        "uncompressed": true,
+        "zip_data_aligned_16k": true,
+        "zip_data_offset": 69746688
       },
       {
         "abi": "x86_64",
@@ -630,7 +939,7 @@
         "size_bytes": 31239096,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 61538304
+        "zip_data_offset": 72859648
       },
       {
         "abi": "x86_64",
@@ -676,7 +985,7 @@
         "size_bytes": 100424,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 92782592
+        "zip_data_offset": 104103936
       },
       {
         "abi": "x86_64",
@@ -733,7 +1042,53 @@
         "size_bytes": 10525136,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 92897280
+        "zip_data_offset": 104218624
+      },
+      {
+        "abi": "x86_64",
+        "all_load_segments_aligned_16k": true,
+        "byte_order": "little",
+        "compressed_size_bytes": 249680,
+        "compression_method": 0,
+        "elf_class": 64,
+        "entry": "lib/x86_64/libpngx.so",
+        "identity": {
+          "allocated_section_count": 20,
+          "allocated_sections_sha256": "f7a9634d24eb9658fa7287abdc34442a25bbb3f828c96eea3932062e1b98c0e2",
+          "gnu_build_id": "2706303c28df3d321147bb9ebb8dc1db36ef4397",
+          "machine": 62
+        },
+        "load_segments": [
+          {
+            "aligned_16k": true,
+            "alignment": 16384,
+            "file_range_valid": true,
+            "file_size": 244864,
+            "flags": 5,
+            "index": 1,
+            "memory_size": 244864,
+            "offset": 0,
+            "virtual_address": 0
+          },
+          {
+            "aligned_16k": true,
+            "alignment": 16384,
+            "file_range_valid": true,
+            "file_size": 2904,
+            "flags": 6,
+            "index": 2,
+            "memory_size": 4992,
+            "offset": 244864,
+            "virtual_address": 261248
+          }
+        ],
+        "machine": 62,
+        "name": "libpngx.so",
+        "sha256": "211b10ebb613c4a8ef48912d0926488a5ace8870400d5e75a67df98ff1149e3e",
+        "size_bytes": 249680,
+        "uncompressed": true,
+        "zip_data_aligned_16k": true,
+        "zip_data_offset": 114753536
       },
       {
         "abi": "x86_64",
@@ -779,7 +1134,64 @@
         "size_bytes": 4928,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 103432192
+        "zip_data_offset": 115015680
+      },
+      {
+        "abi": "x86_64",
+        "all_load_segments_aligned_16k": true,
+        "byte_order": "little",
+        "compressed_size_bytes": 4367512,
+        "compression_method": 0,
+        "elf_class": 64,
+        "entry": "lib/x86_64/libtesseract.so",
+        "identity": {
+          "allocated_section_count": 25,
+          "allocated_sections_sha256": "2bfb393cccfbb2b3b47fcaf890fe8fcead4ecb218fc0b9e580c67ff83feecd1d",
+          "gnu_build_id": "3ab3156c67bb423727ab5464d6456d59ffd26c20",
+          "machine": 62
+        },
+        "load_segments": [
+          {
+            "aligned_16k": true,
+            "alignment": 16384,
+            "file_range_valid": true,
+            "file_size": 4289472,
+            "flags": 5,
+            "index": 1,
+            "memory_size": 4289472,
+            "offset": 0,
+            "virtual_address": 0
+          },
+          {
+            "aligned_16k": true,
+            "alignment": 16384,
+            "file_range_valid": true,
+            "file_size": 74944,
+            "flags": 6,
+            "index": 2,
+            "memory_size": 76864,
+            "offset": 4289472,
+            "virtual_address": 4305856
+          },
+          {
+            "aligned_16k": true,
+            "alignment": 16384,
+            "file_range_valid": true,
+            "file_size": 808,
+            "flags": 6,
+            "index": 3,
+            "memory_size": 21200,
+            "offset": 4364416,
+            "virtual_address": 4397184
+          }
+        ],
+        "machine": 62,
+        "name": "libtesseract.so",
+        "sha256": "829091239d11f8f34b6660b63138ef406db93d1ec065ba9c073a816e42168564",
+        "size_bytes": 4367512,
+        "uncompressed": true,
+        "zip_data_aligned_16k": true,
+        "zip_data_offset": 115032064
       }
     ],
     "path": "scanner-sample/build/outputs/apk/debug/scanner-sample-debug.apk",
@@ -787,10 +1199,10 @@
       "android.permission.CAMERA",
       "dev.offlinescan.sample.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
     ],
-    "sha256": "9150ad6b17c46a976cc21313eabed60afaf6b56e8ad517deb637c592710ad083",
-    "size_bytes": 117261696
+    "sha256": "642985be9e4cebbd09205da08c5adc96544287afbcfb3197c01e4099a09fb5ab",
+    "size_bytes": 136900456
   },
-  "created_utc": "2026-10-10T08:24:53.049907+00:00",
+  "created_utc": "2026-10-26T08:11:00.837787+00:00",
   "dependencies": {
     "configuration": "debugRuntimeClasspath",
     "coordinates_found": [
@@ -1080,6 +1492,26 @@
       "sha256": "7072f8809df5d01b817676baf49e7894c140218d49b88d0e43f0a6258bbfbafb"
     },
     {
+      "path": "scanner-ocr-tesseract/build/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/AndroidManifest.xml",
+      "permissions": [],
+      "sha256": "78cde7125dd7ab2f62d0ee66c055697ee6c87b7504ab07acef93bc17f575cdd6"
+    },
+    {
+      "path": "scanner-ocr-tesseract/build/intermediates/aapt_friendly_merged_manifests/release/processReleaseManifest/aapt/AndroidManifest.xml",
+      "permissions": [],
+      "sha256": "78cde7125dd7ab2f62d0ee66c055697ee6c87b7504ab07acef93bc17f575cdd6"
+    },
+    {
+      "path": "scanner-ocr-tesseract/build/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml",
+      "permissions": [],
+      "sha256": "78cde7125dd7ab2f62d0ee66c055697ee6c87b7504ab07acef93bc17f575cdd6"
+    },
+    {
+      "path": "scanner-ocr-tesseract/build/intermediates/merged_manifest/release/processReleaseManifest/AndroidManifest.xml",
+      "permissions": [],
+      "sha256": "78cde7125dd7ab2f62d0ee66c055697ee6c87b7504ab07acef93bc17f575cdd6"
+    },
+    {
       "path": "scanner-processing-opencv/build/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/AndroidManifest.xml",
       "permissions": [],
       "sha256": "c85ca4b52b695f3783c0ac14e65d86adbc75583dfd537c6dce11a6677ef7db0c"
@@ -1105,7 +1537,7 @@
         "android.permission.CAMERA",
         "dev.offlinescan.sample.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
       ],
-      "sha256": "c0fe7cb189d330bf83e7e1edba9003237b5aa43221332ceeb2a764a8fde38fce"
+      "sha256": "75d6c90c73ca63db48a1f93f34baaaea035d8bbb7df737a44ec5a601d79456f4"
     },
     {
       "path": "scanner-sample/build/intermediates/merged_manifests/debug/processDebugManifest/AndroidManifest.xml",
@@ -1113,7 +1545,7 @@
         "android.permission.CAMERA",
         "dev.offlinescan.sample.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
       ],
-      "sha256": "c0fe7cb189d330bf83e7e1edba9003237b5aa43221332ceeb2a764a8fde38fce"
+      "sha256": "75d6c90c73ca63db48a1f93f34baaaea035d8bbb7df737a44ec5a601d79456f4"
     },
     {
       "path": "scanner-ui-compose/build/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/AndroidManifest.xml",
@@ -1148,9 +1580,9 @@
   "native_provenance": {
     "inventory": "third-party/native-inventory.json",
     "mapping_gaps": [],
-    "packaged_native_count": 14,
+    "packaged_native_count": 22,
     "source_notice_file_count": 547,
-    "verified_native_count": 14
+    "verified_native_count": 22
   },
   "required_native_alignment": 16384,
   "schema_version": 2,

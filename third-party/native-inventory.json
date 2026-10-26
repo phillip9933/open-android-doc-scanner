@@ -174,6 +174,166 @@
     },
     {
       "abi": "arm64-v8a",
+      "apk_entry": "lib/arm64-v8a/libjpeg.so",
+      "declared_pom_licenses": [],
+      "mapping_gaps": [],
+      "match_method": "exact_sha256",
+      "name": "libjpeg.so",
+      "notice_evidence": [
+        {
+          "apk_entry": "assets/third_party_licenses/ocr/Tesseract-LICENSE.txt",
+          "entry": "assets/third_party_licenses/ocr/Tesseract-LICENSE.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "size_bytes": 11358
+        },
+        {
+          "apk_entry": "assets/third_party_licenses/ocr/Tesseract4Android-LICENSE.txt",
+          "entry": "assets/third_party_licenses/ocr/Tesseract4Android-LICENSE.txt",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "size_bytes": 11357
+        },
+        {
+          "apk_entry": "assets/third_party_licenses/ocr/Leptonica-LICENSE.txt",
+          "entry": "assets/third_party_licenses/ocr/Leptonica-LICENSE.txt",
+          "sha256": "87829abb5bbb00b55a107365da89e9a33f86c4250169e5a1e5588505be7d5806",
+          "size_bytes": 1521
+        },
+        {
+          "apk_entry": "assets/third_party_licenses/ocr/libpng-LICENSE.txt",
+          "entry": "assets/third_party_licenses/ocr/libpng-LICENSE.txt",
+          "sha256": "bdb0a645ea18c60507d0368379b1ac5474b92255fcc2d115e07486a7672ba526",
+          "size_bytes": 5345
+        },
+        {
+          "apk_entry": "assets/third_party_licenses/ocr/libjpeg-README.txt",
+          "entry": "assets/third_party_licenses/ocr/libjpeg-README.txt",
+          "sha256": "7c25493a9f64fed34d01445467341bda77bc1cdbeccbe33558659ef173fb9ff2",
+          "size_bytes": 18719
+        }
+      ],
+      "notice_status": "evidence_collected",
+      "packaged_identity": {
+        "allocated_section_count": 20,
+        "allocated_sections_sha256": "a334ebb0e59abb41c1f3d2e6dc94f0dd9721cc5670bbd13b275872df4844c6b1",
+        "gnu_build_id": "e44f1779f56bff5dab1abdbc6f1618defcc06943",
+        "machine": 183
+      },
+      "packaged_sha256": "a1c7af9d2ab440c953d10967af5ccc3982fd65b23e6c8ecdeaad7f9a86d34b89",
+      "packaged_size_bytes": 303576,
+      "provenance_status": "reconciled",
+      "source": {
+        "abi": "arm64-v8a",
+        "coordinate": "bundled OCR native sources",
+        "identity": {
+          "allocated_section_count": 20,
+          "allocated_sections_sha256": "a334ebb0e59abb41c1f3d2e6dc94f0dd9721cc5670bbd13b275872df4844c6b1",
+          "gnu_build_id": "e44f1779f56bff5dab1abdbc6f1618defcc06943",
+          "machine": 183
+        },
+        "kind": "ocr_source_build",
+        "manifest_sha256": "17c280c0aad7199690b8b67436bd0d4be8b6cff97b19ff0e319e2b4dbcb53aa0",
+        "name": "libjpeg.so",
+        "sha256": "a1c7af9d2ab440c953d10967af5ccc3982fd65b23e6c8ecdeaad7f9a86d34b89",
+        "size_bytes": 303576,
+        "source_path": "scanner-ocr-tesseract/src/main/jniLibs/arm64-v8a/libjpeg.so",
+        "sources": {
+          "libpng": {
+            "sha256": "2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5",
+            "url": "https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz"
+          },
+          "tesseract": {
+            "sha256": "9218e62793116d42a9f6d14cd9348518b27f382096eea3d0f2d1a24616bb5884",
+            "url": "https://github.com/tesseract-ocr/tesseract/archive/refs/tags/5.5.3.tar.gz"
+          },
+          "wrapper": {
+            "sha256": "4569f9093d641d13188ba2dd36a74396661eaa3f9e44637ff1cac9a36076a20e",
+            "url": "https://github.com/adaptech-cz/Tesseract4Android/archive/refs/tags/4.9.0.tar.gz"
+          }
+        }
+      }
+    },
+    {
+      "abi": "arm64-v8a",
+      "apk_entry": "lib/arm64-v8a/libleptonica.so",
+      "declared_pom_licenses": [],
+      "mapping_gaps": [],
+      "match_method": "exact_sha256",
+      "name": "libleptonica.so",
+      "notice_evidence": [
+        {
+          "apk_entry": "assets/third_party_licenses/ocr/Tesseract-LICENSE.txt",
+          "entry": "assets/third_party_licenses/ocr/Tesseract-LICENSE.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "size_bytes": 11358
+        },
+        {
+          "apk_entry": "assets/third_party_licenses/ocr/Tesseract4Android-LICENSE.txt",
+          "entry": "assets/third_party_licenses/ocr/Tesseract4Android-LICENSE.txt",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "size_bytes": 11357
+        },
+        {
+          "apk_entry": "assets/third_party_licenses/ocr/Leptonica-LICENSE.txt",
+          "entry": "assets/third_party_licenses/ocr/Leptonica-LICENSE.txt",
+          "sha256": "87829abb5bbb00b55a107365da89e9a33f86c4250169e5a1e5588505be7d5806",
+          "size_bytes": 1521
+        },
+        {
+          "apk_entry": "assets/third_party_licenses/ocr/libpng-LICENSE.txt",
+          "entry": "assets/third_party_licenses/ocr/libpng-LICENSE.txt",
+          "sha256": "bdb0a645ea18c60507d0368379b1ac5474b92255fcc2d115e07486a7672ba526",
+          "size_bytes": 5345
+        },
+        {
+          "apk_entry": "assets/third_party_licenses/ocr/libjpeg-README.txt",
+          "entry": "assets/third_party_licenses/ocr/libjpeg-README.txt",
+          "sha256": "7c25493a9f64fed34d01445467341bda77bc1cdbeccbe33558659ef173fb9ff2",
+          "size_bytes": 18719
+        }
+      ],
+      "notice_status": "evidence_collected",
+      "packaged_identity": {
+        "allocated_section_count": 23,
+        "allocated_sections_sha256": "5b165f3ad1cf717e99b2d1b701663bb36cdf75833a9cc401197f0d1e669fa424",
+        "gnu_build_id": "81743329b33a2253fde64d933bc962d670b6f7df",
+        "machine": 183
+      },
+      "packaged_sha256": "27a0d612241a5d973b1479aea308036e766507c9c6484de83389bbf7a8cc5509",
+      "packaged_size_bytes": 3006496,
+      "provenance_status": "reconciled",
+      "source": {
+        "abi": "arm64-v8a",
+        "coordinate": "bundled OCR native sources",
+        "identity": {
+          "allocated_section_count": 23,
+          "allocated_sections_sha256": "5b165f3ad1cf717e99b2d1b701663bb36cdf75833a9cc401197f0d1e669fa424",
+          "gnu_build_id": "81743329b33a2253fde64d933bc962d670b6f7df",
+          "machine": 183
+        },
+        "kind": "ocr_source_build",
+        "manifest_sha256": "17c280c0aad7199690b8b67436bd0d4be8b6cff97b19ff0e319e2b4dbcb53aa0",
+        "name": "libleptonica.so",
+        "sha256": "27a0d612241a5d973b1479aea308036e766507c9c6484de83389bbf7a8cc5509",
+        "size_bytes": 3006496,
+        "source_path": "scanner-ocr-tesseract/src/main/jniLibs/arm64-v8a/libleptonica.so",
+        "sources": {
+          "libpng": {
+            "sha256": "2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5",
+            "url": "https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz"
+          },
+          "tesseract": {
+            "sha256": "9218e62793116d42a9f6d14cd9348518b27f382096eea3d0f2d1a24616bb5884",
+            "url": "https://github.com/tesseract-ocr/tesseract/archive/refs/tags/5.5.3.tar.gz"
+          },
+          "wrapper": {
+            "sha256": "4569f9093d641d13188ba2dd36a74396661eaa3f9e44637ff1cac9a36076a20e",
+            "url": "https://github.com/adaptech-cz/Tesseract4Android/archive/refs/tags/4.9.0.tar.gz"
+          }
+        }
+      }
+    },
+    {
+      "abi": "arm64-v8a",
       "apk_entry": "lib/arm64-v8a/libonnxruntime.so",
       "declared_pom_licenses": [
         {
@@ -262,7 +422,7 @@
       "name": "libopencv_java4.so",
       "notice_evidence": [
         {
-          "apk_entry": "assets/offline-scanner-notices/OpenCV-LICENSE.txt",
+          "apk_entry": "assets/third_party_licenses/ocr/Tesseract-LICENSE.txt",
           "path": "third-party/native-source-notices/OpenCV-LICENSE.txt",
           "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
           "size_bytes": 11358
@@ -324,6 +484,86 @@
     },
     {
       "abi": "arm64-v8a",
+      "apk_entry": "lib/arm64-v8a/libpngx.so",
+      "declared_pom_licenses": [],
+      "mapping_gaps": [],
+      "match_method": "exact_sha256",
+      "name": "libpngx.so",
+      "notice_evidence": [
+        {
+          "apk_entry": "assets/third_party_licenses/ocr/Tesseract-LICENSE.txt",
+          "entry": "assets/third_party_licenses/ocr/Tesseract-LICENSE.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "size_bytes": 11358
+        },
+        {
+          "apk_entry": "assets/third_party_licenses/ocr/Tesseract4Android-LICENSE.txt",
+          "entry": "assets/third_party_licenses/ocr/Tesseract4Android-LICENSE.txt",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "size_bytes": 11357
+        },
+        {
+          "apk_entry": "assets/third_party_licenses/ocr/Leptonica-LICENSE.txt",
+          "entry": "assets/third_party_licenses/ocr/Leptonica-LICENSE.txt",
+          "sha256": "87829abb5bbb00b55a107365da89e9a33f86c4250169e5a1e5588505be7d5806",
+          "size_bytes": 1521
+        },
+        {
+          "apk_entry": "assets/third_party_licenses/ocr/libpng-LICENSE.txt",
+          "entry": "assets/third_party_licenses/ocr/libpng-LICENSE.txt",
+          "sha256": "bdb0a645ea18c60507d0368379b1ac5474b92255fcc2d115e07486a7672ba526",
+          "size_bytes": 5345
+        },
+        {
+          "apk_entry": "assets/third_party_licenses/ocr/libjpeg-README.txt",
+          "entry": "assets/third_party_licenses/ocr/libjpeg-README.txt",
+          "sha256": "7c25493a9f64fed34d01445467341bda77bc1cdbeccbe33558659ef173fb9ff2",
+          "size_bytes": 18719
+        }
+      ],
+      "notice_status": "evidence_collected",
+      "packaged_identity": {
+        "allocated_section_count": 20,
+        "allocated_sections_sha256": "d1cd5b3f923894420b0db275cac7d5e18fb3d913519f6e167f45d3a7d9ff27df",
+        "gnu_build_id": "6dd3b3c22d20ce10a6584f598588d2c608f3937a",
+        "machine": 183
+      },
+      "packaged_sha256": "e894414c3e1592efc1b9ccd163b914504e9a416356746dd56a1e0263d206d0fa",
+      "packaged_size_bytes": 239088,
+      "provenance_status": "reconciled",
+      "source": {
+        "abi": "arm64-v8a",
+        "coordinate": "bundled OCR native sources",
+        "identity": {
+          "allocated_section_count": 20,
+          "allocated_sections_sha256": "d1cd5b3f923894420b0db275cac7d5e18fb3d913519f6e167f45d3a7d9ff27df",
+          "gnu_build_id": "6dd3b3c22d20ce10a6584f598588d2c608f3937a",
+          "machine": 183
+        },
+        "kind": "ocr_source_build",
+        "manifest_sha256": "17c280c0aad7199690b8b67436bd0d4be8b6cff97b19ff0e319e2b4dbcb53aa0",
+        "name": "libpngx.so",
+        "sha256": "e894414c3e1592efc1b9ccd163b914504e9a416356746dd56a1e0263d206d0fa",
+        "size_bytes": 239088,
+        "source_path": "scanner-ocr-tesseract/src/main/jniLibs/arm64-v8a/libpngx.so",
+        "sources": {
+          "libpng": {
+            "sha256": "2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5",
+            "url": "https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz"
+          },
+          "tesseract": {
+            "sha256": "9218e62793116d42a9f6d14cd9348518b27f382096eea3d0f2d1a24616bb5884",
+            "url": "https://github.com/tesseract-ocr/tesseract/archive/refs/tags/5.5.3.tar.gz"
+          },
+          "wrapper": {
+            "sha256": "4569f9093d641d13188ba2dd36a74396661eaa3f9e44637ff1cac9a36076a20e",
+            "url": "https://github.com/adaptech-cz/Tesseract4Android/archive/refs/tags/4.9.0.tar.gz"
+          }
+        }
+      }
+    },
+    {
+      "abi": "arm64-v8a",
       "apk_entry": "lib/arm64-v8a/libsurface_util_jni.so",
       "declared_pom_licenses": [
         {
@@ -378,6 +618,86 @@
         "sha256": "ee3f0d56f81cc0a301db32dc4fd51274c3216733b4c40172768e38bc5049a265",
         "size_bytes": 4832,
         "source_entry": "jni/arm64-v8a/libsurface_util_jni.so"
+      }
+    },
+    {
+      "abi": "arm64-v8a",
+      "apk_entry": "lib/arm64-v8a/libtesseract.so",
+      "declared_pom_licenses": [],
+      "mapping_gaps": [],
+      "match_method": "exact_sha256",
+      "name": "libtesseract.so",
+      "notice_evidence": [
+        {
+          "apk_entry": "assets/third_party_licenses/ocr/Tesseract-LICENSE.txt",
+          "entry": "assets/third_party_licenses/ocr/Tesseract-LICENSE.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "size_bytes": 11358
+        },
+        {
+          "apk_entry": "assets/third_party_licenses/ocr/Tesseract4Android-LICENSE.txt",
+          "entry": "assets/third_party_licenses/ocr/Tesseract4Android-LICENSE.txt",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "size_bytes": 11357
+        },
+        {
+          "apk_entry": "assets/third_party_licenses/ocr/Leptonica-LICENSE.txt",
+          "entry": "assets/third_party_licenses/ocr/Leptonica-LICENSE.txt",
+          "sha256": "87829abb5bbb00b55a107365da89e9a33f86c4250169e5a1e5588505be7d5806",
+          "size_bytes": 1521
+        },
+        {
+          "apk_entry": "assets/third_party_licenses/ocr/libpng-LICENSE.txt",
+          "entry": "assets/third_party_licenses/ocr/libpng-LICENSE.txt",
+          "sha256": "bdb0a645ea18c60507d0368379b1ac5474b92255fcc2d115e07486a7672ba526",
+          "size_bytes": 5345
+        },
+        {
+          "apk_entry": "assets/third_party_licenses/ocr/libjpeg-README.txt",
+          "entry": "assets/third_party_licenses/ocr/libjpeg-README.txt",
+          "sha256": "7c25493a9f64fed34d01445467341bda77bc1cdbeccbe33558659ef173fb9ff2",
+          "size_bytes": 18719
+        }
+      ],
+      "notice_status": "evidence_collected",
+      "packaged_identity": {
+        "allocated_section_count": 25,
+        "allocated_sections_sha256": "5d6681878b8a79b5089436beb09477f6de35b1b43f518270e0855f67cb96a4ea",
+        "gnu_build_id": "6c048a7d56aa9fe77e64a80d834c50ca95940e98",
+        "machine": 183
+      },
+      "packaged_sha256": "4a26cf85bbef59f64a9d114933a84ad81576f7ad7280f2ff03f90161f4a540b6",
+      "packaged_size_bytes": 4235128,
+      "provenance_status": "reconciled",
+      "source": {
+        "abi": "arm64-v8a",
+        "coordinate": "bundled OCR native sources",
+        "identity": {
+          "allocated_section_count": 25,
+          "allocated_sections_sha256": "5d6681878b8a79b5089436beb09477f6de35b1b43f518270e0855f67cb96a4ea",
+          "gnu_build_id": "6c048a7d56aa9fe77e64a80d834c50ca95940e98",
+          "machine": 183
+        },
+        "kind": "ocr_source_build",
+        "manifest_sha256": "17c280c0aad7199690b8b67436bd0d4be8b6cff97b19ff0e319e2b4dbcb53aa0",
+        "name": "libtesseract.so",
+        "sha256": "4a26cf85bbef59f64a9d114933a84ad81576f7ad7280f2ff03f90161f4a540b6",
+        "size_bytes": 4235128,
+        "source_path": "scanner-ocr-tesseract/src/main/jniLibs/arm64-v8a/libtesseract.so",
+        "sources": {
+          "libpng": {
+            "sha256": "2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5",
+            "url": "https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz"
+          },
+          "tesseract": {
+            "sha256": "9218e62793116d42a9f6d14cd9348518b27f382096eea3d0f2d1a24616bb5884",
+            "url": "https://github.com/tesseract-ocr/tesseract/archive/refs/tags/5.5.3.tar.gz"
+          },
+          "wrapper": {
+            "sha256": "4569f9093d641d13188ba2dd36a74396661eaa3f9e44637ff1cac9a36076a20e",
+            "url": "https://github.com/adaptech-cz/Tesseract4Android/archive/refs/tags/4.9.0.tar.gz"
+          }
+        }
       }
     },
     {
@@ -554,6 +874,166 @@
     },
     {
       "abi": "x86_64",
+      "apk_entry": "lib/x86_64/libjpeg.so",
+      "declared_pom_licenses": [],
+      "mapping_gaps": [],
+      "match_method": "exact_sha256",
+      "name": "libjpeg.so",
+      "notice_evidence": [
+        {
+          "apk_entry": "assets/third_party_licenses/ocr/Tesseract-LICENSE.txt",
+          "entry": "assets/third_party_licenses/ocr/Tesseract-LICENSE.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "size_bytes": 11358
+        },
+        {
+          "apk_entry": "assets/third_party_licenses/ocr/Tesseract4Android-LICENSE.txt",
+          "entry": "assets/third_party_licenses/ocr/Tesseract4Android-LICENSE.txt",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "size_bytes": 11357
+        },
+        {
+          "apk_entry": "assets/third_party_licenses/ocr/Leptonica-LICENSE.txt",
+          "entry": "assets/third_party_licenses/ocr/Leptonica-LICENSE.txt",
+          "sha256": "87829abb5bbb00b55a107365da89e9a33f86c4250169e5a1e5588505be7d5806",
+          "size_bytes": 1521
+        },
+        {
+          "apk_entry": "assets/third_party_licenses/ocr/libpng-LICENSE.txt",
+          "entry": "assets/third_party_licenses/ocr/libpng-LICENSE.txt",
+          "sha256": "bdb0a645ea18c60507d0368379b1ac5474b92255fcc2d115e07486a7672ba526",
+          "size_bytes": 5345
+        },
+        {
+          "apk_entry": "assets/third_party_licenses/ocr/libjpeg-README.txt",
+          "entry": "assets/third_party_licenses/ocr/libjpeg-README.txt",
+          "sha256": "7c25493a9f64fed34d01445467341bda77bc1cdbeccbe33558659ef173fb9ff2",
+          "size_bytes": 18719
+        }
+      ],
+      "notice_status": "evidence_collected",
+      "packaged_identity": {
+        "allocated_section_count": 20,
+        "allocated_sections_sha256": "d89a31480bf62a68825f4b4ef53af5643b7b167a18ba07f19b04f7b7965f4cf7",
+        "gnu_build_id": "b714dc13525cb12c273546c8f5fe4811f6b2656b",
+        "machine": 62
+      },
+      "packaged_sha256": "c4adae9d3f2c309126986c6c4ea9e750897f5bf93172c59b642996365722cb06",
+      "packaged_size_bytes": 320024,
+      "provenance_status": "reconciled",
+      "source": {
+        "abi": "x86_64",
+        "coordinate": "bundled OCR native sources",
+        "identity": {
+          "allocated_section_count": 20,
+          "allocated_sections_sha256": "d89a31480bf62a68825f4b4ef53af5643b7b167a18ba07f19b04f7b7965f4cf7",
+          "gnu_build_id": "b714dc13525cb12c273546c8f5fe4811f6b2656b",
+          "machine": 62
+        },
+        "kind": "ocr_source_build",
+        "manifest_sha256": "17c280c0aad7199690b8b67436bd0d4be8b6cff97b19ff0e319e2b4dbcb53aa0",
+        "name": "libjpeg.so",
+        "sha256": "c4adae9d3f2c309126986c6c4ea9e750897f5bf93172c59b642996365722cb06",
+        "size_bytes": 320024,
+        "source_path": "scanner-ocr-tesseract/src/main/jniLibs/x86_64/libjpeg.so",
+        "sources": {
+          "libpng": {
+            "sha256": "2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5",
+            "url": "https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz"
+          },
+          "tesseract": {
+            "sha256": "9218e62793116d42a9f6d14cd9348518b27f382096eea3d0f2d1a24616bb5884",
+            "url": "https://github.com/tesseract-ocr/tesseract/archive/refs/tags/5.5.3.tar.gz"
+          },
+          "wrapper": {
+            "sha256": "4569f9093d641d13188ba2dd36a74396661eaa3f9e44637ff1cac9a36076a20e",
+            "url": "https://github.com/adaptech-cz/Tesseract4Android/archive/refs/tags/4.9.0.tar.gz"
+          }
+        }
+      }
+    },
+    {
+      "abi": "x86_64",
+      "apk_entry": "lib/x86_64/libleptonica.so",
+      "declared_pom_licenses": [],
+      "mapping_gaps": [],
+      "match_method": "exact_sha256",
+      "name": "libleptonica.so",
+      "notice_evidence": [
+        {
+          "apk_entry": "assets/third_party_licenses/ocr/Tesseract-LICENSE.txt",
+          "entry": "assets/third_party_licenses/ocr/Tesseract-LICENSE.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "size_bytes": 11358
+        },
+        {
+          "apk_entry": "assets/third_party_licenses/ocr/Tesseract4Android-LICENSE.txt",
+          "entry": "assets/third_party_licenses/ocr/Tesseract4Android-LICENSE.txt",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "size_bytes": 11357
+        },
+        {
+          "apk_entry": "assets/third_party_licenses/ocr/Leptonica-LICENSE.txt",
+          "entry": "assets/third_party_licenses/ocr/Leptonica-LICENSE.txt",
+          "sha256": "87829abb5bbb00b55a107365da89e9a33f86c4250169e5a1e5588505be7d5806",
+          "size_bytes": 1521
+        },
+        {
+          "apk_entry": "assets/third_party_licenses/ocr/libpng-LICENSE.txt",
+          "entry": "assets/third_party_licenses/ocr/libpng-LICENSE.txt",
+          "sha256": "bdb0a645ea18c60507d0368379b1ac5474b92255fcc2d115e07486a7672ba526",
+          "size_bytes": 5345
+        },
+        {
+          "apk_entry": "assets/third_party_licenses/ocr/libjpeg-README.txt",
+          "entry": "assets/third_party_licenses/ocr/libjpeg-README.txt",
+          "sha256": "7c25493a9f64fed34d01445467341bda77bc1cdbeccbe33558659ef173fb9ff2",
+          "size_bytes": 18719
+        }
+      ],
+      "notice_status": "evidence_collected",
+      "packaged_identity": {
+        "allocated_section_count": 22,
+        "allocated_sections_sha256": "be265b114f02782ab95e80c49673e2ece7dcedf64eb2907a4bcf3147f328f19a",
+        "gnu_build_id": "64a9ba0dbeef82623eb57c0bd522753e5827907e",
+        "machine": 62
+      },
+      "packaged_sha256": "9f30c63f98729d193442b410e53e5d6cfc86a9c013189937fa1d51e121504129",
+      "packaged_size_bytes": 3103376,
+      "provenance_status": "reconciled",
+      "source": {
+        "abi": "x86_64",
+        "coordinate": "bundled OCR native sources",
+        "identity": {
+          "allocated_section_count": 22,
+          "allocated_sections_sha256": "be265b114f02782ab95e80c49673e2ece7dcedf64eb2907a4bcf3147f328f19a",
+          "gnu_build_id": "64a9ba0dbeef82623eb57c0bd522753e5827907e",
+          "machine": 62
+        },
+        "kind": "ocr_source_build",
+        "manifest_sha256": "17c280c0aad7199690b8b67436bd0d4be8b6cff97b19ff0e319e2b4dbcb53aa0",
+        "name": "libleptonica.so",
+        "sha256": "9f30c63f98729d193442b410e53e5d6cfc86a9c013189937fa1d51e121504129",
+        "size_bytes": 3103376,
+        "source_path": "scanner-ocr-tesseract/src/main/jniLibs/x86_64/libleptonica.so",
+        "sources": {
+          "libpng": {
+            "sha256": "2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5",
+            "url": "https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz"
+          },
+          "tesseract": {
+            "sha256": "9218e62793116d42a9f6d14cd9348518b27f382096eea3d0f2d1a24616bb5884",
+            "url": "https://github.com/tesseract-ocr/tesseract/archive/refs/tags/5.5.3.tar.gz"
+          },
+          "wrapper": {
+            "sha256": "4569f9093d641d13188ba2dd36a74396661eaa3f9e44637ff1cac9a36076a20e",
+            "url": "https://github.com/adaptech-cz/Tesseract4Android/archive/refs/tags/4.9.0.tar.gz"
+          }
+        }
+      }
+    },
+    {
+      "abi": "x86_64",
       "apk_entry": "lib/x86_64/libonnxruntime.so",
       "declared_pom_licenses": [
         {
@@ -642,7 +1122,7 @@
       "name": "libopencv_java4.so",
       "notice_evidence": [
         {
-          "apk_entry": "assets/offline-scanner-notices/OpenCV-LICENSE.txt",
+          "apk_entry": "assets/third_party_licenses/ocr/Tesseract-LICENSE.txt",
           "path": "third-party/native-source-notices/OpenCV-LICENSE.txt",
           "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
           "size_bytes": 11358
@@ -704,6 +1184,86 @@
     },
     {
       "abi": "x86_64",
+      "apk_entry": "lib/x86_64/libpngx.so",
+      "declared_pom_licenses": [],
+      "mapping_gaps": [],
+      "match_method": "exact_sha256",
+      "name": "libpngx.so",
+      "notice_evidence": [
+        {
+          "apk_entry": "assets/third_party_licenses/ocr/Tesseract-LICENSE.txt",
+          "entry": "assets/third_party_licenses/ocr/Tesseract-LICENSE.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "size_bytes": 11358
+        },
+        {
+          "apk_entry": "assets/third_party_licenses/ocr/Tesseract4Android-LICENSE.txt",
+          "entry": "assets/third_party_licenses/ocr/Tesseract4Android-LICENSE.txt",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "size_bytes": 11357
+        },
+        {
+          "apk_entry": "assets/third_party_licenses/ocr/Leptonica-LICENSE.txt",
+          "entry": "assets/third_party_licenses/ocr/Leptonica-LICENSE.txt",
+          "sha256": "87829abb5bbb00b55a107365da89e9a33f86c4250169e5a1e5588505be7d5806",
+          "size_bytes": 1521
+        },
+        {
+          "apk_entry": "assets/third_party_licenses/ocr/libpng-LICENSE.txt",
+          "entry": "assets/third_party_licenses/ocr/libpng-LICENSE.txt",
+          "sha256": "bdb0a645ea18c60507d0368379b1ac5474b92255fcc2d115e07486a7672ba526",
+          "size_bytes": 5345
+        },
+        {
+          "apk_entry": "assets/third_party_licenses/ocr/libjpeg-README.txt",
+          "entry": "assets/third_party_licenses/ocr/libjpeg-README.txt",
+          "sha256": "7c25493a9f64fed34d01445467341bda77bc1cdbeccbe33558659ef173fb9ff2",
+          "size_bytes": 18719
+        }
+      ],
+      "notice_status": "evidence_collected",
+      "packaged_identity": {
+        "allocated_section_count": 20,
+        "allocated_sections_sha256": "f7a9634d24eb9658fa7287abdc34442a25bbb3f828c96eea3932062e1b98c0e2",
+        "gnu_build_id": "2706303c28df3d321147bb9ebb8dc1db36ef4397",
+        "machine": 62
+      },
+      "packaged_sha256": "211b10ebb613c4a8ef48912d0926488a5ace8870400d5e75a67df98ff1149e3e",
+      "packaged_size_bytes": 249680,
+      "provenance_status": "reconciled",
+      "source": {
+        "abi": "x86_64",
+        "coordinate": "bundled OCR native sources",
+        "identity": {
+          "allocated_section_count": 20,
+          "allocated_sections_sha256": "f7a9634d24eb9658fa7287abdc34442a25bbb3f828c96eea3932062e1b98c0e2",
+          "gnu_build_id": "2706303c28df3d321147bb9ebb8dc1db36ef4397",
+          "machine": 62
+        },
+        "kind": "ocr_source_build",
+        "manifest_sha256": "17c280c0aad7199690b8b67436bd0d4be8b6cff97b19ff0e319e2b4dbcb53aa0",
+        "name": "libpngx.so",
+        "sha256": "211b10ebb613c4a8ef48912d0926488a5ace8870400d5e75a67df98ff1149e3e",
+        "size_bytes": 249680,
+        "source_path": "scanner-ocr-tesseract/src/main/jniLibs/x86_64/libpngx.so",
+        "sources": {
+          "libpng": {
+            "sha256": "2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5",
+            "url": "https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz"
+          },
+          "tesseract": {
+            "sha256": "9218e62793116d42a9f6d14cd9348518b27f382096eea3d0f2d1a24616bb5884",
+            "url": "https://github.com/tesseract-ocr/tesseract/archive/refs/tags/5.5.3.tar.gz"
+          },
+          "wrapper": {
+            "sha256": "4569f9093d641d13188ba2dd36a74396661eaa3f9e44637ff1cac9a36076a20e",
+            "url": "https://github.com/adaptech-cz/Tesseract4Android/archive/refs/tags/4.9.0.tar.gz"
+          }
+        }
+      }
+    },
+    {
+      "abi": "x86_64",
       "apk_entry": "lib/x86_64/libsurface_util_jni.so",
       "declared_pom_licenses": [
         {
@@ -758,6 +1318,86 @@
         "sha256": "cd425e10a365fb3695e53f1e46227d44d89f14854da4f1258ef079c80c752339",
         "size_bytes": 4928,
         "source_entry": "jni/x86_64/libsurface_util_jni.so"
+      }
+    },
+    {
+      "abi": "x86_64",
+      "apk_entry": "lib/x86_64/libtesseract.so",
+      "declared_pom_licenses": [],
+      "mapping_gaps": [],
+      "match_method": "exact_sha256",
+      "name": "libtesseract.so",
+      "notice_evidence": [
+        {
+          "apk_entry": "assets/third_party_licenses/ocr/Tesseract-LICENSE.txt",
+          "entry": "assets/third_party_licenses/ocr/Tesseract-LICENSE.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "size_bytes": 11358
+        },
+        {
+          "apk_entry": "assets/third_party_licenses/ocr/Tesseract4Android-LICENSE.txt",
+          "entry": "assets/third_party_licenses/ocr/Tesseract4Android-LICENSE.txt",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "size_bytes": 11357
+        },
+        {
+          "apk_entry": "assets/third_party_licenses/ocr/Leptonica-LICENSE.txt",
+          "entry": "assets/third_party_licenses/ocr/Leptonica-LICENSE.txt",
+          "sha256": "87829abb5bbb00b55a107365da89e9a33f86c4250169e5a1e5588505be7d5806",
+          "size_bytes": 1521
+        },
+        {
+          "apk_entry": "assets/third_party_licenses/ocr/libpng-LICENSE.txt",
+          "entry": "assets/third_party_licenses/ocr/libpng-LICENSE.txt",
+          "sha256": "bdb0a645ea18c60507d0368379b1ac5474b92255fcc2d115e07486a7672ba526",
+          "size_bytes": 5345
+        },
+        {
+          "apk_entry": "assets/third_party_licenses/ocr/libjpeg-README.txt",
+          "entry": "assets/third_party_licenses/ocr/libjpeg-README.txt",
+          "sha256": "7c25493a9f64fed34d01445467341bda77bc1cdbeccbe33558659ef173fb9ff2",
+          "size_bytes": 18719
+        }
+      ],
+      "notice_status": "evidence_collected",
+      "packaged_identity": {
+        "allocated_section_count": 25,
+        "allocated_sections_sha256": "2bfb393cccfbb2b3b47fcaf890fe8fcead4ecb218fc0b9e580c67ff83feecd1d",
+        "gnu_build_id": "3ab3156c67bb423727ab5464d6456d59ffd26c20",
+        "machine": 62
+      },
+      "packaged_sha256": "829091239d11f8f34b6660b63138ef406db93d1ec065ba9c073a816e42168564",
+      "packaged_size_bytes": 4367512,
+      "provenance_status": "reconciled",
+      "source": {
+        "abi": "x86_64",
+        "coordinate": "bundled OCR native sources",
+        "identity": {
+          "allocated_section_count": 25,
+          "allocated_sections_sha256": "2bfb393cccfbb2b3b47fcaf890fe8fcead4ecb218fc0b9e580c67ff83feecd1d",
+          "gnu_build_id": "3ab3156c67bb423727ab5464d6456d59ffd26c20",
+          "machine": 62
+        },
+        "kind": "ocr_source_build",
+        "manifest_sha256": "17c280c0aad7199690b8b67436bd0d4be8b6cff97b19ff0e319e2b4dbcb53aa0",
+        "name": "libtesseract.so",
+        "sha256": "829091239d11f8f34b6660b63138ef406db93d1ec065ba9c073a816e42168564",
+        "size_bytes": 4367512,
+        "source_path": "scanner-ocr-tesseract/src/main/jniLibs/x86_64/libtesseract.so",
+        "sources": {
+          "libpng": {
+            "sha256": "2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5",
+            "url": "https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz"
+          },
+          "tesseract": {
+            "sha256": "9218e62793116d42a9f6d14cd9348518b27f382096eea3d0f2d1a24616bb5884",
+            "url": "https://github.com/tesseract-ocr/tesseract/archive/refs/tags/5.5.3.tar.gz"
+          },
+          "wrapper": {
+            "sha256": "4569f9093d641d13188ba2dd36a74396661eaa3f9e44637ff1cac9a36076a20e",
+            "url": "https://github.com/adaptech-cz/Tesseract4Android/archive/refs/tags/4.9.0.tar.gz"
+          }
+        }
       }
     }
   ],
@@ -835,7 +1475,7 @@
     ],
     "usage": "historical_inspection_only_not_final_runtime"
   },
-  "inspected_apk_sha256": "9150ad6b17c46a976cc21313eabed60afaf6b56e8ad517deb637c592710ad083",
+  "inspected_apk_sha256": "642985be9e4cebbd09205da08c5adc96544287afbcfb3197c01e4099a09fb5ab",
   "license_review_status": "evidence_collected_reconciled",
   "mapping_gaps": [],
   "native_build": {
@@ -862,7 +1502,7 @@
   },
   "source_notices": [
     {
-      "apk_entry": "assets/offline-scanner-notices/OpenCV-LICENSE.txt",
+      "apk_entry": "assets/third_party_licenses/ocr/Tesseract-LICENSE.txt",
       "path": "third-party/native-source-notices/OpenCV-LICENSE.txt",
       "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
       "size_bytes": 11358

@@ -2,9 +2,9 @@
 
 Independent Apache-2.0 Android document and printed-photo scanner. Kotlin, CameraX, OpenCV and Compose. Core processing works offline without Google Play services, cloud, API keys or model downloads. No network permission or analytics.
 
-**Status: public SDK prerelease (0.7.0; includes a standalone testing APK); physical-camera acceptance is pending.** See [quality evidence](docs/QUALITY-REPORT.md) and [backlog](docs/BACKLOG.md). Synthetic results are not parity claims or a substitute for real-camera evaluation.
+**Status: released SDK 0.7.0; optional OCR is in development for 0.8.0. Physical-camera acceptance is pending.** See [quality evidence](docs/QUALITY-REPORT.md) and [backlog](docs/BACKLOG.md). Synthetic results are not parity claims or a substitute for real-camera evaluation.
 
-[Download the latest testing APK (0.7.0)](https://github.com/phillip9933/open-android-doc-scanner/releases/tag/v0.7.0) · [Documentation](docs/INDEX.md) · [CI](https://github.com/phillip9933/open-android-doc-scanner/actions)
+[SDK release (0.7.0)](https://github.com/phillip9933/open-android-doc-scanner/releases/tag/v0.7.0) · [Documentation](docs/INDEX.md) · [CI](https://github.com/phillip9933/open-android-doc-scanner/actions)
 
 ## Roadmap and work
 
@@ -21,11 +21,16 @@ Making it public does not mean it is a polished production product or suitable f
 Requirements: JDK 17 or 21, Android SDK platform 36, AGP-selected build tools, NDK 28.2.13676358, public Google/Maven Central dependencies. Create an untracked `local.properties` with `sdk.dir=...` or set `ANDROID_HOME`. Run:
 
 ```sh
+python3 tools/prepare_ocr_test_models.py
 ./gradlew :scanner-core:test :scanner-camera:testDebugUnitTest :scanner-sample:assembleDebug lint
 ./gradlew :scanner-processing-opencv:connectedDebugAndroidTest :scanner-export:connectedDebugAndroidTest
 ```
 
-The second command requires a connected supported emulator/device. Windows uses `gradlew.bat`. Min Android 26; native arm64-v8a and x86_64. No 32-bit support. The sample reopens its last completed export; it has no full scan library. Host owns naming, persistent storage, sharing and cleanup after completion.
+The connected Android test command requires a supported emulator/device. Windows uses `gradlew.bat`. Min Android 26; native arm64-v8a and x86_64. No 32-bit support. The sample reopens its last completed export; it has no full scan library. Host owns naming, persistent storage, sharing and cleanup after completion.
+
+## Optional OCR
+
+The upcoming 0.8.0 SDK adds `scanner-ocr-tesseract` for offline English/Japanese text recognition, including word positions and confidence. Apps supply local language models. Existing apps keep their current dependencies unless they opt in. See [OCR integration and card scanning](docs/OCR.md).
 
 ## Ready-made flow
 

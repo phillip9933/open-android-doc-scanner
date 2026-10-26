@@ -19,3 +19,5 @@
 - [Future features](BACKLOG.md)
 
 Earlier RC documents and evidence preserve development comparisons. Evidence excludes private documents and personal usage notes. Machine-specific paths in historical build records are redacted; reproduce current build/audit records with the included tools.
+
+- [Optional OCR and Kura card integration (0.8.0 development)](OCR.md)

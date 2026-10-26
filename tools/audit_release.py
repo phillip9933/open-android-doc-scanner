@@ -343,6 +343,36 @@ def collect_native_candidates(root: Path) -> tuple[list[dict], dict, list[str]]:
                                "identity": identity, "manifest_record": recorded,
                                "source_archive_sha256": manifest["sourceArchiveSha256"], "modules": artifact["modules"],
                                "notices": [], "pom_licenses": []})
+    ocr_manifest_path = root / "evidence/ocr-native-build.json"
+    if ocr_manifest_path.is_file():
+        ocr_manifest = json.loads(ocr_manifest_path.read_text())
+        notice_root = root / "scanner-ocr-tesseract/src/main/assets/third_party_licenses/ocr"
+        notice_names = ("Tesseract-LICENSE.txt", "Tesseract4Android-LICENSE.txt", "Leptonica-LICENSE.txt", "libpng-LICENSE.txt", "libjpeg-README.txt")
+        notices = []
+        for name in notice_names:
+            source = notice_root / name
+            if not source.is_file():
+                gaps.append("OCR native notice missing: " + name)
+            else:
+                notices.append({"entry": "assets/third_party_licenses/ocr/" + name, "sha256": file_digest(source), "size_bytes": source.stat().st_size})
+        for recorded in ocr_manifest["libraries"]:
+            source = root / recorded["file"]
+            if not source.resolve().is_relative_to((root / "scanner-ocr-tesseract/src/main/jniLibs").resolve()):
+                gaps.append("OCR native manifest path outside module")
+                continue
+            if not source.is_file() or file_digest(source) != recorded["sha256"]:
+                gaps.append("OCR native build manifest SHA256 mismatch: " + recorded["file"])
+                continue
+            abi = source.parent.name
+            identity = elf_identity(source.read_bytes())
+            if identity["machine"] != {"arm64-v8a": 183, "x86_64": 62}.get(abi):
+                gaps.append("Wrong OCR native architecture: " + recorded["file"])
+                continue
+            candidates.append({"kind": "ocr_source_build", "abi": abi, "name": source.name,
+                               "coordinate": "bundled OCR native sources", "source_path": recorded["file"],
+                               "sha256": recorded["sha256"], "size_bytes": source.stat().st_size,
+                               "identity": identity, "sources": ocr_manifest["sources"],
+                               "manifest_sha256": file_digest(ocr_manifest_path), "notices": notices, "pom_licenses": []})
     artifacts_path = root / "evidence/runtime-artifacts.tsv"
     seen = set()
     for row in artifacts_path.read_text(encoding="utf-8-sig").splitlines():
@@ -459,6 +489,10 @@ def reconcile_native(root: Path, apk: Path, libraries: list[dict], candidates: l
                     record["declared_pom_licenses"] = candidate["pom_licenses"]
                     for notice in candidate["notices"]:
                         packaged_entry = packaged_hashes.get(notice["sha256"])
+                        # Some upstream license text uses README rather than LICENSE in its name.
+                        if candidate["kind"] == "ocr_source_build" and notice["entry"] in archive.namelist():
+                            if digest(archive.read(notice["entry"])) == notice["sha256"]:
+                                packaged_entry = notice["entry"]
                         record["notice_evidence"].append({**notice, "apk_entry": packaged_entry})
                         if packaged_entry is None:
                             gaps.append(f"Embedded dependency notice is absent/changed in APK: {candidate['coordinate']} {notice['entry']}")

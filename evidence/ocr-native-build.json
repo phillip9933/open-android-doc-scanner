@@ -1,0 +1,152 @@
+{
+  "sources": {
+    "wrapper": {
+      "url": "https://github.com/adaptech-cz/Tesseract4Android/archive/refs/tags/4.9.0.tar.gz",
+      "sha256": "4569f9093d641d13188ba2dd36a74396661eaa3f9e44637ff1cac9a36076a20e"
+    },
+    "tesseract": {
+      "url": "https://github.com/tesseract-ocr/tesseract/archive/refs/tags/5.5.3.tar.gz",
+      "sha256": "9218e62793116d42a9f6d14cd9348518b27f382096eea3d0f2d1a24616bb5884"
+    },
+    "libpng": {
+      "url": "https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.59.tar.gz",
+      "sha256": "2540302a1844ad2b2b501977abecfa850f265f97b78f065a712ab4074a89f5b5"
+    }
+  },
+  "patches": [
+    "Reject empty Plumbing stack (GHSA-f6h7-cqr4-6fx4)",
+    "Bound ReadNormProtos extraction (GHSA-5j2p-r5vc-q7f3)"
+  ],
+  "ndk": "28.2.13676358",
+  "cmake": "3.22.1",
+  "android_api": 26,
+  "libraries": [
+    {
+      "file": "scanner-ocr-tesseract/src/main/jniLibs/arm64-v8a/libjpeg.so",
+      "sha256": "a1c7af9d2ab440c953d10967af5ccc3982fd65b23e6c8ecdeaad7f9a86d34b89"
+    },
+    {
+      "file": "scanner-ocr-tesseract/src/main/jniLibs/arm64-v8a/libpngx.so",
+      "sha256": "e894414c3e1592efc1b9ccd163b914504e9a416356746dd56a1e0263d206d0fa"
+    },
+    {
+      "file": "scanner-ocr-tesseract/src/main/jniLibs/arm64-v8a/libleptonica.so",
+      "sha256": "27a0d612241a5d973b1479aea308036e766507c9c6484de83389bbf7a8cc5509"
+    },
+    {
+      "file": "scanner-ocr-tesseract/src/main/jniLibs/arm64-v8a/libtesseract.so",
+      "sha256": "4a26cf85bbef59f64a9d114933a84ad81576f7ad7280f2ff03f90161f4a540b6"
+    },
+    {
+      "file": "scanner-ocr-tesseract/src/main/jniLibs/x86_64/libjpeg.so",
+      "sha256": "c4adae9d3f2c309126986c6c4ea9e750897f5bf93172c59b642996365722cb06"
+    },
+    {
+      "file": "scanner-ocr-tesseract/src/main/jniLibs/x86_64/libpngx.so",
+      "sha256": "211b10ebb613c4a8ef48912d0926488a5ace8870400d5e75a67df98ff1149e3e"
+    },
+    {
+      "file": "scanner-ocr-tesseract/src/main/jniLibs/x86_64/libleptonica.so",
+      "sha256": "9f30c63f98729d193442b410e53e5d6cfc86a9c013189937fa1d51e121504129"
+    },
+    {
+      "file": "scanner-ocr-tesseract/src/main/jniLibs/x86_64/libtesseract.so",
+      "sha256": "829091239d11f8f34b6660b63138ef406db93d1ec065ba9c073a816e42168564"
+    }
+  ],
+  "java_sources": [
+    {
+      "file": "scanner-ocr-tesseract/src/main/java/com/googlecode/leptonica/android/AdaptiveMap.java",
+      "sha256": "c3a21bc1c8ece9cda805669bd8d738e5257a14b7b5c17a6ace114b594c65709c"
+    },
+    {
+      "file": "scanner-ocr-tesseract/src/main/java/com/googlecode/leptonica/android/Binarize.java",
+      "sha256": "f830bad516523867db042f22b313c0a79fd6da4ec6ca5422812a86d40e71768c"
+    },
+    {
+      "file": "scanner-ocr-tesseract/src/main/java/com/googlecode/leptonica/android/Box.java",
+      "sha256": "2da88b55935c69884dbd6f3e9197a5f21be8e424e1f72bc4befb9e1be2bacb04"
+    },
+    {
+      "file": "scanner-ocr-tesseract/src/main/java/com/googlecode/leptonica/android/Boxa.java",
+      "sha256": "e30491e9c0a7776a20ff4768c9fee5a44462614e76e5639bcfc1101d0332ee10"
+    },
+    {
+      "file": "scanner-ocr-tesseract/src/main/java/com/googlecode/leptonica/android/Clip.java",
+      "sha256": "0bd74d8e8ab3cd0e30ce52207308f754bf32e6d88d3392558efdc65f50066e9d"
+    },
+    {
+      "file": "scanner-ocr-tesseract/src/main/java/com/googlecode/leptonica/android/Constants.java",
+      "sha256": "e93561ca59c37280f828b426bb131b5f02faacc536f9895545d16f2c5eca5993"
+    },
+    {
+      "file": "scanner-ocr-tesseract/src/main/java/com/googlecode/leptonica/android/Convert.java",
+      "sha256": "cb0eb8b0b92155f17c19e03bb0dee3c6cc16e4c59f8ca3e7a5418ddec9b453d4"
+    },
+    {
+      "file": "scanner-ocr-tesseract/src/main/java/com/googlecode/leptonica/android/Edge.java",
+      "sha256": "f7518005de8db30b8d98f0a1c9c87f6805a04b409f6548ec9b2469af04840c74"
+    },
+    {
+      "file": "scanner-ocr-tesseract/src/main/java/com/googlecode/leptonica/android/Enhance.java",
+      "sha256": "5dcb833b55e00f99be115f6751962b64a7b83cfe03ff1c3d11e8c583d1479787"
+    },
+    {
+      "file": "scanner-ocr-tesseract/src/main/java/com/googlecode/leptonica/android/GrayQuant.java",
+      "sha256": "5a342112e4bdf4d3ce0c56e7bc14af7d0e0d2d311ce895ad6f5997255db81189"
+    },
+    {
+      "file": "scanner-ocr-tesseract/src/main/java/com/googlecode/leptonica/android/JpegIO.java",
+      "sha256": "0e3e96624a1cf2bdcc33da8f77acd9a94695234c97b5d98ceaf40483cd2143a1"
+    },
+    {
+      "file": "scanner-ocr-tesseract/src/main/java/com/googlecode/leptonica/android/MorphApp.java",
+      "sha256": "e9af52e8e504b1665dd944a372acac58ea101eb3bb86c53bb81b425b06c99e37"
+    },
+    {
+      "file": "scanner-ocr-tesseract/src/main/java/com/googlecode/leptonica/android/Pix.java",
+      "sha256": "0098d6094d2a06f0caa8890857913aef133eb84a953249ddf66881e77bc55e74"
+    },
+    {
+      "file": "scanner-ocr-tesseract/src/main/java/com/googlecode/leptonica/android/Pixa.java",
+      "sha256": "13038011608ba24fcad6dc716792783336e7a993a02b7dfe310bd1321820a530"
+    },
+    {
+      "file": "scanner-ocr-tesseract/src/main/java/com/googlecode/leptonica/android/ReadFile.java",
+      "sha256": "6c50bfad29f6ccfb9e304873cd7c2e359607d45b46690ef558e44cde2df89ad6"
+    },
+    {
+      "file": "scanner-ocr-tesseract/src/main/java/com/googlecode/leptonica/android/Rotate.java",
+      "sha256": "a75b73d9430898e8ebf3cc0fd4d1c10c5ab410ea0d5019b6d4165caf33d7784c"
+    },
+    {
+      "file": "scanner-ocr-tesseract/src/main/java/com/googlecode/leptonica/android/Scale.java",
+      "sha256": "84dd57ea8a2b1068f8083c444410bb4e60e2a4b946a15c9f1515273fb8ea1756"
+    },
+    {
+      "file": "scanner-ocr-tesseract/src/main/java/com/googlecode/leptonica/android/Skew.java",
+      "sha256": "79b4d2071d260ac44e7ac9f9db674586b4950c387d8fe1dc6c503c06f36816b9"
+    },
+    {
+      "file": "scanner-ocr-tesseract/src/main/java/com/googlecode/leptonica/android/WriteFile.java",
+      "sha256": "8a62b1c1bf232cdc0748f49ff4f735a3e23aa56626cbde4665c6d38cc2530d96"
+    },
+    {
+      "file": "scanner-ocr-tesseract/src/main/java/com/googlecode/tesseract/android/PageIterator.java",
+      "sha256": "b9cd3817c39541ad631911613d94f27353618a3f207bf26bc9cd3830c5e6152e"
+    },
+    {
+      "file": "scanner-ocr-tesseract/src/main/java/com/googlecode/tesseract/android/ResultIterator.java",
+      "sha256": "d7164d484a65a63bd5f5df9d4b76885ae4b654094c7590936aef2ef05fe05ae7"
+    },
+    {
+      "file": "scanner-ocr-tesseract/src/main/java/com/googlecode/tesseract/android/TessBaseAPI.java",
+      "sha256": "3b75cd9c8b9d32c396f50fae899eeec45dab891298ce17db8f12c773679c4768"
+    },
+    {
+      "file": "scanner-ocr-tesseract/src/main/java/com/googlecode/tesseract/android/TessPdfRenderer.java",
+      "sha256": "37e2db686e4949efcdf53b0c0c4f5af7a1e32ef6294de8135de363e81ecee978"
+    }
+  ],
+  "cxx_standard": 20
+}
