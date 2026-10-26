@@ -52,6 +52,7 @@ class TesseractTextRecognizer(private val dataDirectory: File) : TextRecognizer 
             require(bitmap.width in 1..config.maxInputDimension && bitmap.height in 1..config.maxInputDimension &&
                 bitmap.width.toLong() * bitmap.height <= config.maxInputPixels) { "OCR image exceeds pixel budget" }
             cancellation.check()
+            val prepared = if(config.straightenLine) PreparedLine.create(bitmap,config,cancellation) else null
             val api = TessBaseAPI()
             try {
                 check(api.init(modelRoot.absolutePath, config.languages.joinToString("+"), TessBaseAPI.OEM_LSTM_ONLY)) {
@@ -63,8 +64,8 @@ class TesseractTextRecognizer(private val dataDirectory: File) : TextRecognizer 
                     OcrLayout.SINGLE_LINE -> TessBaseAPI.PageSegMode.PSM_SINGLE_LINE
                 })
                 config.characterWhitelist?.let { check(api.setVariable(TessBaseAPI.VAR_CHAR_WHITELIST, it)) }
-                api.setImage(bitmap)
-                config.region?.let {
+                api.setImage(prepared?.bitmap ?: bitmap)
+                config.region?.takeIf { prepared == null }?.let {
                     val left = floor(it.left * bitmap.width).toInt()
                     val top = floor(it.top * bitmap.height).toInt()
                     api.setRectangle(left, top, ceil(it.right * bitmap.width).toInt() - left,
@@ -82,13 +83,14 @@ class TesseractTextRecognizer(private val dataDirectory: File) : TextRecognizer 
                         cancellation.check()
                         val word = iterator.getUTF8Text(level).orEmpty()
                         if (word.isNotBlank()) {
-                            val box = iterator.getBoundingBox(level)
+                            val rawBox = iterator.getBoundingBox(level)
+                            val box = prepared?.bounds(rawBox) ?: rawBox
                             words += OcrWord(word, box[0], box[1], box[2], box[3], iterator.confidence(level))
                         }
                     } while (iterator.next(level))
                 } finally { iterator.delete() }
                 return OcrPage(pageId, bitmap.width, bitmap.height, text, words)
-            } finally { api.recycle() }
+            } finally { try { api.recycle() } finally { prepared?.bitmap?.recycle() } }
         } finally { bitmap.recycle() }
     }
     companion object { private val jobLock = Semaphore(1) }

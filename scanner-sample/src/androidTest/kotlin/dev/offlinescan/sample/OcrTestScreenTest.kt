@@ -40,6 +40,18 @@ class OcrTestScreenTest {
             compose.onNodeWithText("Inspect image at 100%").performScrollTo().performClick()
             compose.onNodeWithText("100% detail").assertExists()
             compose.onAllNodesWithText("Close").onLast().performClick()
+            compose.onNodeWithText("Select text or number region").performScrollTo().performClick()
+            compose.waitUntil(10000) { compose.onAllNodesWithTag("ocr-region-image").fetchSemanticsNodes().isNotEmpty() }
+            compose.onNodeWithText("Use selected region").assertIsNotEnabled()
+            compose.onNodeWithTag("ocr-region-image").performTouchInput {
+                swipe(androidx.compose.ui.geometry.Offset(width*0.05f,height*0.1f),
+                    androidx.compose.ui.geometry.Offset(width*0.9f,height*0.6f))
+            }
+            compose.onNodeWithText("Use selected region").assertIsEnabled().performClick()
+            compose.onNodeWithText("Highlight recognized words").assertDoesNotExist()
+            compose.onNodeWithText("Recognition is limited to your selected rectangle.").assertExists()
+            compose.onNodeWithText("Use whole page").performScrollTo().performClick()
+            compose.onNodeWithText("Recognition is limited to your selected rectangle.").assertDoesNotExist()
             compose.onNodeWithText("Japanese").performScrollTo().performClick()
             compose.onNodeWithText("Highlight recognized words").assertDoesNotExist()
         } finally {image.delete()}

@@ -1,6 +1,6 @@
 plugins { id("com.android.application"); kotlin("android"); id("org.jetbrains.kotlin.plugin.compose") }
 android { namespace="dev.offlinescan.sample"; compileSdk=36; ndkVersion="28.2.13676358"
-    defaultConfig { applicationId="dev.offlinescan.sample"; minSdk=26; targetSdk=36; versionCode=19; versionName="0.8.0-SNAPSHOT"; testInstrumentationRunner="androidx.test.runner.AndroidJUnitRunner"; ndk { abiFilters += listOf("arm64-v8a","x86_64") } }
+    defaultConfig { applicationId="dev.offlinescan.sample"; minSdk=26; targetSdk=36; versionCode=20; versionName="0.8.0-beta.1"; testInstrumentationRunner="androidx.test.runner.AndroidJUnitRunner"; ndk { abiFilters += listOf("arm64-v8a","x86_64") } }
     buildFeatures { compose=true }
     sourceSets.getByName("debug").assets.srcDir(project(":scanner-ocr-tesseract").layout.buildDirectory.dir("ocr-test-assets"))
     compileOptions { sourceCompatibility=JavaVersion.VERSION_17; targetCompatibility=JavaVersion.VERSION_17 }

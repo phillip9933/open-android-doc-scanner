@@ -1,0 +1,3399 @@
+{
+  "engine": "tesseract 5.5.3",
+  "model_sha256": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2",
+  "limitation": "Synthetic host diagnostic; not physical-device accuracy.",
+  "summary": {
+    "original": {
+      "cases": 84,
+      "exact": 51,
+      "recovered": 0,
+      "regressed": 0
+    },
+    "deskew": {
+      "cases": 84,
+      "exact": 78,
+      "recovered": 27,
+      "regressed": 0
+    },
+    "enlarge2x": {
+      "cases": 84,
+      "exact": 50,
+      "recovered": 2,
+      "regressed": 3
+    },
+    "otsu": {
+      "cases": 84,
+      "exact": 53,
+      "recovered": 3,
+      "regressed": 1
+    },
+    "thicken": {
+      "cases": 84,
+      "exact": 58,
+      "recovered": 10,
+      "regressed": 3
+    }
+  },
+  "results": [
+    {
+      "case": "NotoSerif-Regular-08263859-wear0-angle-12",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "9263859",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear0-angle-12",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "8263859",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear0-angle-12",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "8263859",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear0-angle-12",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "9263859",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear0-angle-12",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "8263859",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear0-angle-7",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear0-angle-7",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear0-angle-7",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear0-angle-7",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear0-angle-7",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear0-angle-3",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear0-angle-3",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear0-angle-3",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear0-angle-3",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear0-angle-3",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear0-angle0",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear0-angle0",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear0-angle0",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear0-angle0",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear0-angle0",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear0-angle3",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear0-angle3",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear0-angle3",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear0-angle3",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear0-angle3",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear0-angle7",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "098263859",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear0-angle7",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear0-angle7",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "08263899",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear0-angle7",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "03263859",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear0-angle7",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear0-angle12",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "99263859",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear0-angle12",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear0-angle12",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "9326389",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear0-angle12",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "99263897",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear0-angle12",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "99263859",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear1-angle-12",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "9263859",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear1-angle-12",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "8263859",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear1-angle-12",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "8263859",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear1-angle-12",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "9263859",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear1-angle-12",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "8263859",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear1-angle-7",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear1-angle-7",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear1-angle-7",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear1-angle-7",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear1-angle-7",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear1-angle-3",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear1-angle-3",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear1-angle-3",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear1-angle-3",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear1-angle-3",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear1-angle0",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear1-angle0",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear1-angle0",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear1-angle0",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear1-angle0",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear1-angle3",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear1-angle3",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear1-angle3",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear1-angle3",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear1-angle3",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear1-angle7",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "098263859",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear1-angle7",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear1-angle7",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "08263899",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear1-angle7",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "093263859",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear1-angle7",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear1-angle12",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "98263899",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear1-angle12",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear1-angle12",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "9826389",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear1-angle12",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "99263899",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear1-angle12",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "993263859",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear2-angle-12",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "9263859",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear2-angle-12",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "8263859",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear2-angle-12",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "8263859",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear2-angle-12",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "9263859",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear2-angle-12",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "8263859",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear2-angle-7",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "98263859",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear2-angle-7",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear2-angle-7",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "98263859",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear2-angle-7",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear2-angle-7",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear2-angle-3",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear2-angle-3",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear2-angle-3",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear2-angle-3",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear2-angle-3",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear2-angle0",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear2-angle0",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear2-angle0",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear2-angle0",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear2-angle0",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear2-angle3",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear2-angle3",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear2-angle3",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear2-angle3",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear2-angle3",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear2-angle7",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "98263859",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear2-angle7",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear2-angle7",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "08263899",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear2-angle7",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "98263859",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear2-angle7",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear2-angle12",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear2-angle12",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear2-angle12",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "9326389",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear2-angle12",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-08263859-wear2-angle12",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "99263857",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear0-angle-12",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "9180624",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear0-angle-12",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear0-angle-12",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear0-angle-12",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "9180624",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear0-angle-12",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear0-angle-7",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear0-angle-7",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear0-angle-7",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear0-angle-7",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear0-angle-7",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear0-angle-3",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear0-angle-3",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear0-angle-3",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear0-angle-3",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear0-angle-3",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear0-angle0",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear0-angle0",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear0-angle0",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear0-angle0",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear0-angle0",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear0-angle3",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear0-angle3",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear0-angle3",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear0-angle3",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear0-angle3",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear0-angle7",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear0-angle7",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear0-angle7",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "33180624",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear0-angle7",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear0-angle7",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "33180624",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear0-angle12",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear0-angle12",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear0-angle12",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear0-angle12",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear0-angle12",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear1-angle-12",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "9180624",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear1-angle-12",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear1-angle-12",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear1-angle-12",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "9180624",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear1-angle-12",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear1-angle-7",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear1-angle-7",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear1-angle-7",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear1-angle-7",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear1-angle-7",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear1-angle-3",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear1-angle-3",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear1-angle-3",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear1-angle-3",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear1-angle-3",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear1-angle0",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear1-angle0",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear1-angle0",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear1-angle0",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear1-angle0",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear1-angle3",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear1-angle3",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear1-angle3",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear1-angle3",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear1-angle3",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear1-angle7",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear1-angle7",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear1-angle7",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "33130624",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear1-angle7",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear1-angle7",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "33180624",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear1-angle12",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear1-angle12",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear1-angle12",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear1-angle12",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear1-angle12",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear2-angle-12",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "9180624",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear2-angle-12",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear2-angle-12",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear2-angle-12",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "9180624",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear2-angle-12",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear2-angle-7",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear2-angle-7",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear2-angle-7",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear2-angle-7",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear2-angle-7",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear2-angle-3",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear2-angle-3",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear2-angle-3",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear2-angle-3",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear2-angle-3",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear2-angle0",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear2-angle0",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear2-angle0",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear2-angle0",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear2-angle0",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear2-angle3",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear2-angle3",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear2-angle3",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear2-angle3",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear2-angle3",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear2-angle7",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "33180624",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear2-angle7",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear2-angle7",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear2-angle7",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "33180624",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear2-angle7",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "33180624",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear2-angle12",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear2-angle12",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear2-angle12",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear2-angle12",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSerif-Regular-38180624-wear2-angle12",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear0-angle-12",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear0-angle-12",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "8263859",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear0-angle-12",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear0-angle-12",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear0-angle-12",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "8263859",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear0-angle-7",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear0-angle-7",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear0-angle-7",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear0-angle-7",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear0-angle-7",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear0-angle-3",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear0-angle-3",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear0-angle-3",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear0-angle-3",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear0-angle-3",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear0-angle0",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear0-angle0",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear0-angle0",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear0-angle0",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear0-angle0",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear0-angle3",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear0-angle3",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear0-angle3",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear0-angle3",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear0-angle3",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear0-angle7",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear0-angle7",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear0-angle7",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear0-angle7",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear0-angle7",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear0-angle12",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "98263897",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear0-angle12",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear0-angle12",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear0-angle12",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "98263897",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear0-angle12",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "9826387",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear1-angle-12",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear1-angle-12",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "8263859",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear1-angle-12",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear1-angle-12",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear1-angle-12",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "8263859",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear1-angle-7",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear1-angle-7",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear1-angle-7",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear1-angle-7",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear1-angle-7",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear1-angle-3",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear1-angle-3",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear1-angle-3",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear1-angle-3",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear1-angle-3",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear1-angle0",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear1-angle0",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear1-angle0",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear1-angle0",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear1-angle0",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear1-angle3",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear1-angle3",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear1-angle3",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear1-angle3",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear1-angle3",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear1-angle7",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear1-angle7",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear1-angle7",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear1-angle7",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear1-angle7",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear1-angle12",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "98263897",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear1-angle12",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear1-angle12",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear1-angle12",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "98263897",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear1-angle12",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "98263859",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear2-angle-12",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear2-angle-12",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "8263859",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear2-angle-12",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear2-angle-12",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear2-angle-12",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "8263859",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear2-angle-7",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "98263859",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear2-angle-7",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear2-angle-7",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "98263859",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear2-angle-7",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear2-angle-7",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear2-angle-3",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear2-angle-3",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear2-angle-3",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear2-angle-3",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear2-angle-3",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear2-angle0",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear2-angle0",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear2-angle0",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear2-angle0",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear2-angle0",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear2-angle3",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear2-angle3",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear2-angle3",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear2-angle3",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear2-angle3",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear2-angle7",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "98263859",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear2-angle7",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear2-angle7",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear2-angle7",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear2-angle7",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear2-angle12",
+      "expected": "08263859",
+      "method": "original",
+      "actual": "98263897",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear2-angle12",
+      "expected": "08263859",
+      "method": "deskew",
+      "actual": "08263859",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear2-angle12",
+      "expected": "08263859",
+      "method": "enlarge2x",
+      "actual": "",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear2-angle12",
+      "expected": "08263859",
+      "method": "otsu",
+      "actual": "93263897",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-08263859-wear2-angle12",
+      "expected": "08263859",
+      "method": "thicken",
+      "actual": "98263859",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear0-angle-12",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear0-angle-12",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear0-angle-12",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear0-angle-12",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear0-angle-12",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear0-angle-7",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear0-angle-7",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear0-angle-7",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear0-angle-7",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear0-angle-7",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear0-angle-3",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear0-angle-3",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear0-angle-3",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear0-angle-3",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear0-angle-3",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear0-angle0",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear0-angle0",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear0-angle0",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear0-angle0",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear0-angle0",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear0-angle3",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear0-angle3",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear0-angle3",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear0-angle3",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear0-angle3",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear0-angle7",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "33180624",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear0-angle7",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear0-angle7",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "33180624",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear0-angle7",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "33180624",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear0-angle7",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear0-angle12",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear0-angle12",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear0-angle12",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "3818002",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear0-angle12",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "",
+      "exact": false,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear0-angle12",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 0
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear1-angle-12",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear1-angle-12",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear1-angle-12",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear1-angle-12",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear1-angle-12",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear1-angle-7",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear1-angle-7",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear1-angle-7",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear1-angle-7",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear1-angle-7",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear1-angle-3",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear1-angle-3",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear1-angle-3",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear1-angle-3",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear1-angle-3",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear1-angle0",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear1-angle0",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear1-angle0",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear1-angle0",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear1-angle0",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear1-angle3",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear1-angle3",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear1-angle3",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear1-angle3",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear1-angle3",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear1-angle7",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "33180624",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear1-angle7",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear1-angle7",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "33180624",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear1-angle7",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "33180624",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear1-angle7",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear1-angle12",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear1-angle12",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear1-angle12",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "3818002",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear1-angle12",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear1-angle12",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "381 30624",
+      "exact": false,
+      "wear": 1
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear2-angle-12",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "8180624",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear2-angle-12",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear2-angle-12",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "9180624",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear2-angle-12",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "180624",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear2-angle-12",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear2-angle-7",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear2-angle-7",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear2-angle-7",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear2-angle-7",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear2-angle-7",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear2-angle-3",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear2-angle-3",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear2-angle-3",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear2-angle-3",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear2-angle-3",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear2-angle0",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear2-angle0",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear2-angle0",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear2-angle0",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear2-angle0",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear2-angle3",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear2-angle3",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear2-angle3",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear2-angle3",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear2-angle3",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear2-angle7",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear2-angle7",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear2-angle7",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "33180624",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear2-angle7",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "38130624",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear2-angle7",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "33180624",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear2-angle12",
+      "expected": "38180624",
+      "method": "original",
+      "actual": "",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear2-angle12",
+      "expected": "38180624",
+      "method": "deskew",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear2-angle12",
+      "expected": "38180624",
+      "method": "enlarge2x",
+      "actual": "38180024",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear2-angle12",
+      "expected": "38180624",
+      "method": "otsu",
+      "actual": "",
+      "exact": false,
+      "wear": 2
+    },
+    {
+      "case": "NotoSans-Regular-38180624-wear2-angle12",
+      "expected": "38180624",
+      "method": "thicken",
+      "actual": "38180624",
+      "exact": true,
+      "wear": 2
+    }
+  ]
+}

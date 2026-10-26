@@ -1,0 +1,464 @@
+{
+  "engine": "tesseract 5.5.3",
+  "limitation": "Synthetic host diagnostic. Field boxes/order are known here; no automatic field detection is implied.",
+  "model_sha256": {
+    "eng": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2",
+    "jpn": "1f5de9236d2e85f5fdf4b3c500f2d4926f8d9449f28f5394472d9e8d83b91b4d"
+  },
+  "summary": {
+    "document": {
+      "cases": 12,
+      "all_fields": 3,
+      "ordered": 3
+    },
+    "sparse": {
+      "cases": 12,
+      "all_fields": 6,
+      "ordered": 6
+    },
+    "block": {
+      "cases": 12,
+      "all_fields": 3,
+      "ordered": 3
+    },
+    "fields": {
+      "cases": 12,
+      "all_fields": 10,
+      "ordered": 10
+    }
+  },
+  "results": [
+    {
+      "size": 32,
+      "boxes": false,
+      "language": "eng+jpn",
+      "mode": "document",
+      "text": "Wp\nm\nHA\ndja\n\n0012345678\n\n氏名 山田 太郎\n\n有効 期限 2027 年 12 月 31 日",
+      "fields_found": 5,
+      "all_in_order": false
+    },
+    {
+      "size": 32,
+      "boxes": false,
+      "language": "eng+jpn",
+      "mode": "sparse",
+      "text": "会 員 番 号\n\n0012345678\n\n氏名\n\n山田 太郎\n\n有効 期限\n\n2027 年 12 月 31 日",
+      "fields_found": 6,
+      "all_in_order": true
+    },
+    {
+      "size": 32,
+      "boxes": false,
+      "language": "eng+jpn",
+      "mode": "block",
+      "text": "会 員 番号 0012345678\n氏名 山田 太郎\n有効 期限 2027 年 12 月 31 日",
+      "fields_found": 6,
+      "all_in_order": true
+    },
+    {
+      "size": 32,
+      "boxes": false,
+      "language": "eng+jpn",
+      "mode": "fields",
+      "text": "会 員 番 号\n0012345678\n氏名\n山田 太郎\n有効 期限\n202747125318",
+      "fields_found": 5,
+      "all_in_order": false
+    },
+    {
+      "size": 32,
+      "boxes": false,
+      "language": "jpn+eng",
+      "mode": "document",
+      "text": "Wp\nm\nHA\ndja\n\n0012345678\n\n氏名          山田太郎\n\n有効期限                2027年12月31日",
+      "fields_found": 5,
+      "all_in_order": false
+    },
+    {
+      "size": 32,
+      "boxes": false,
+      "language": "jpn+eng",
+      "mode": "sparse",
+      "text": "会員番号\n\n0012345678\n\n氏名\n\n山田太郎\n\n有効期限\n\n2027年12月31日",
+      "fields_found": 6,
+      "all_in_order": true
+    },
+    {
+      "size": 32,
+      "boxes": false,
+      "language": "jpn+eng",
+      "mode": "block",
+      "text": "会員番号                            0012345678\n氏名                                山田太郎\n有効期限                2027年12月31日",
+      "fields_found": 6,
+      "all_in_order": true
+    },
+    {
+      "size": 32,
+      "boxes": false,
+      "language": "jpn+eng",
+      "mode": "fields",
+      "text": "会員番号\n0012345678\n氏名\n山田太郎\n有効期限\n2027年12月31日",
+      "fields_found": 6,
+      "all_in_order": true
+    },
+    {
+      "size": 32,
+      "boxes": false,
+      "language": "jpn",
+      "mode": "document",
+      "text": "地\n岬\n遇\ndh\n\n0012345678\n\n氏名          山田太郎\n\n有効期限                2027年12月31日",
+      "fields_found": 5,
+      "all_in_order": false
+    },
+    {
+      "size": 32,
+      "boxes": false,
+      "language": "jpn",
+      "mode": "sparse",
+      "text": "会員番号\n\n0012345678\n\n氏名\n\n山田太郎\n\n有効期限\n\n2027年12月31日",
+      "fields_found": 6,
+      "all_in_order": true
+    },
+    {
+      "size": 32,
+      "boxes": false,
+      "language": "jpn",
+      "mode": "block",
+      "text": "会員番号                            0012345678\n氏名                                山田太郎\n有効期限                2027年12月31日",
+      "fields_found": 6,
+      "all_in_order": true
+    },
+    {
+      "size": 32,
+      "boxes": false,
+      "language": "jpn",
+      "mode": "fields",
+      "text": "会員番号\n0012345678\n氏名\n山田太郎\n有効期限\n2027年12月31日",
+      "fields_found": 6,
+      "all_in_order": true
+    },
+    {
+      "size": 32,
+      "boxes": true,
+      "language": "eng+jpn",
+      "mode": "document",
+      "text": "名\n\n有効 期限\n\n中\nm\nHA\ndja\n\n0012345678\n\n山田 太郎\n\n2027 年 12 月 31 日",
+      "fields_found": 4,
+      "all_in_order": false
+    },
+    {
+      "size": 32,
+      "boxes": true,
+      "language": "eng+jpn",
+      "mode": "sparse",
+      "text": "",
+      "fields_found": 0,
+      "all_in_order": false
+    },
+    {
+      "size": 32,
+      "boxes": true,
+      "language": "eng+jpn",
+      "mode": "block",
+      "text": "",
+      "fields_found": 0,
+      "all_in_order": false
+    },
+    {
+      "size": 32,
+      "boxes": true,
+      "language": "eng+jpn",
+      "mode": "fields",
+      "text": "会 員 番 号\n0012345678\n氏名\n山田 太郎\n有効 期限\n202747125318",
+      "fields_found": 5,
+      "all_in_order": false
+    },
+    {
+      "size": 32,
+      "boxes": true,
+      "language": "jpn+eng",
+      "mode": "document",
+      "text": "名\n\n有効期限\n\n中\nm\nHA\ndja\n\n0012345678\n\n山田太郎\n\n2027年12月31日",
+      "fields_found": 4,
+      "all_in_order": false
+    },
+    {
+      "size": 32,
+      "boxes": true,
+      "language": "jpn+eng",
+      "mode": "sparse",
+      "text": "",
+      "fields_found": 0,
+      "all_in_order": false
+    },
+    {
+      "size": 32,
+      "boxes": true,
+      "language": "jpn+eng",
+      "mode": "block",
+      "text": "",
+      "fields_found": 0,
+      "all_in_order": false
+    },
+    {
+      "size": 32,
+      "boxes": true,
+      "language": "jpn+eng",
+      "mode": "fields",
+      "text": "会員番号\n0012345678\n氏名\n山田太郎\n有効期限\n2027年12月31日",
+      "fields_found": 6,
+      "all_in_order": true
+    },
+    {
+      "size": 32,
+      "boxes": true,
+      "language": "jpn",
+      "mode": "document",
+      "text": "名\n\n有効期限\n\n中\n岬\n昌\ndh\n\n0012345678\n\n山田太郎\n\n2027年12月31日",
+      "fields_found": 4,
+      "all_in_order": false
+    },
+    {
+      "size": 32,
+      "boxes": true,
+      "language": "jpn",
+      "mode": "sparse",
+      "text": "",
+      "fields_found": 0,
+      "all_in_order": false
+    },
+    {
+      "size": 32,
+      "boxes": true,
+      "language": "jpn",
+      "mode": "block",
+      "text": "",
+      "fields_found": 0,
+      "all_in_order": false
+    },
+    {
+      "size": 32,
+      "boxes": true,
+      "language": "jpn",
+      "mode": "fields",
+      "text": "会員番号\n0012345678\n氏名\n山田太郎\n有効期限\n2027年12月31日",
+      "fields_found": 6,
+      "all_in_order": true
+    },
+    {
+      "size": 48,
+      "boxes": false,
+      "language": "eng+jpn",
+      "mode": "document",
+      "text": "会 員 番号 0012345678\n\n氏名 山田 太郎\n\n有効 期限 2027 年 12 月 31 日",
+      "fields_found": 6,
+      "all_in_order": true
+    },
+    {
+      "size": 48,
+      "boxes": false,
+      "language": "eng+jpn",
+      "mode": "sparse",
+      "text": "会 員 番号\n\n0012345678\n\n氏名\n\n山田 太郎\n\n有効 期限\n\n2027 年 12 月 31 日",
+      "fields_found": 6,
+      "all_in_order": true
+    },
+    {
+      "size": 48,
+      "boxes": false,
+      "language": "eng+jpn",
+      "mode": "block",
+      "text": "会 員 番号 0012345678\n氏名 山田 太朗\n有効 期限 2027 年 12 月 31 日",
+      "fields_found": 5,
+      "all_in_order": false
+    },
+    {
+      "size": 48,
+      "boxes": false,
+      "language": "eng+jpn",
+      "mode": "fields",
+      "text": "会 員 番号\n0012345678\n氏名\n山田 太郎\n有効 期限\n2027 年 12 月 31 日",
+      "fields_found": 6,
+      "all_in_order": true
+    },
+    {
+      "size": 48,
+      "boxes": false,
+      "language": "jpn+eng",
+      "mode": "document",
+      "text": "会員番号                0012345678\n\n氏名                       山田太郎\n\n有効期限        2027年12月31日",
+      "fields_found": 6,
+      "all_in_order": true
+    },
+    {
+      "size": 48,
+      "boxes": false,
+      "language": "jpn+eng",
+      "mode": "sparse",
+      "text": "会員番号\n\n0012345678\n\n氏名\n\n山田太郎\n\n有効期限\n\n2027年12月31日",
+      "fields_found": 6,
+      "all_in_order": true
+    },
+    {
+      "size": 48,
+      "boxes": false,
+      "language": "jpn+eng",
+      "mode": "block",
+      "text": "会員番号           0012345678\n氏名                山田太朗\n有効期限            2027年12月31日",
+      "fields_found": 5,
+      "all_in_order": false
+    },
+    {
+      "size": 48,
+      "boxes": false,
+      "language": "jpn+eng",
+      "mode": "fields",
+      "text": "会員番号\n0012345678\n氏名\n山田太郎\n有効期限\n2027年12月31日",
+      "fields_found": 6,
+      "all_in_order": true
+    },
+    {
+      "size": 48,
+      "boxes": false,
+      "language": "jpn",
+      "mode": "document",
+      "text": "会員番号                0012345678\n\n氏名                       山田太郎\n\n有効期限        2027年12月31日",
+      "fields_found": 6,
+      "all_in_order": true
+    },
+    {
+      "size": 48,
+      "boxes": false,
+      "language": "jpn",
+      "mode": "sparse",
+      "text": "会員番号\n\n0012345678\n\n氏名\n\n山田太郎\n\n有効期限\n\n2027年12月31日",
+      "fields_found": 6,
+      "all_in_order": true
+    },
+    {
+      "size": 48,
+      "boxes": false,
+      "language": "jpn",
+      "mode": "block",
+      "text": "会員番号           0012345678\n氏名                山田太朗\n有効期限            2027年12月31日",
+      "fields_found": 5,
+      "all_in_order": false
+    },
+    {
+      "size": 48,
+      "boxes": false,
+      "language": "jpn",
+      "mode": "fields",
+      "text": "会員番号\n0012345678\n氏名\n山田太郎\n有効期限\n2027年12月31日",
+      "fields_found": 6,
+      "all_in_order": true
+    },
+    {
+      "size": 48,
+      "boxes": true,
+      "language": "eng+jpn",
+      "mode": "document",
+      "text": "名\n\n有効 期限\n\nUM [\n加\nHA\ndh\n\n0012345678\n\n山田 太郎\n\n2027 年 12 月 31 日",
+      "fields_found": 4,
+      "all_in_order": false
+    },
+    {
+      "size": 48,
+      "boxes": true,
+      "language": "eng+jpn",
+      "mode": "sparse",
+      "text": "",
+      "fields_found": 0,
+      "all_in_order": false
+    },
+    {
+      "size": 48,
+      "boxes": true,
+      "language": "eng+jpn",
+      "mode": "block",
+      "text": "",
+      "fields_found": 0,
+      "all_in_order": false
+    },
+    {
+      "size": 48,
+      "boxes": true,
+      "language": "eng+jpn",
+      "mode": "fields",
+      "text": "会 員 番号\n0012345678\n氏名\n山田 太郎\n有効 期限\n2027 年 12 月 31 日",
+      "fields_found": 6,
+      "all_in_order": true
+    },
+    {
+      "size": 48,
+      "boxes": true,
+      "language": "jpn+eng",
+      "mode": "document",
+      "text": "名\n\n有効期限\n\nUM [\n加\nHA\ndh\n\n0012345678\n\n山田太郎\n\n2027年12月31日",
+      "fields_found": 4,
+      "all_in_order": false
+    },
+    {
+      "size": 48,
+      "boxes": true,
+      "language": "jpn+eng",
+      "mode": "sparse",
+      "text": "",
+      "fields_found": 0,
+      "all_in_order": false
+    },
+    {
+      "size": 48,
+      "boxes": true,
+      "language": "jpn+eng",
+      "mode": "block",
+      "text": "",
+      "fields_found": 0,
+      "all_in_order": false
+    },
+    {
+      "size": 48,
+      "boxes": true,
+      "language": "jpn+eng",
+      "mode": "fields",
+      "text": "会員番号\n0012345678\n氏名\n山田太郎\n有効期限\n2027年12月31日",
+      "fields_found": 6,
+      "all_in_order": true
+    },
+    {
+      "size": 48,
+      "boxes": true,
+      "language": "jpn",
+      "mode": "document",
+      "text": "名\n\n有効期限\n\n遇 [\n加\n上\ndh\n\n0012345678\n\n山田太郎\n\n2027年12月31日",
+      "fields_found": 4,
+      "all_in_order": false
+    },
+    {
+      "size": 48,
+      "boxes": true,
+      "language": "jpn",
+      "mode": "sparse",
+      "text": "",
+      "fields_found": 0,
+      "all_in_order": false
+    },
+    {
+      "size": 48,
+      "boxes": true,
+      "language": "jpn",
+      "mode": "block",
+      "text": "",
+      "fields_found": 0,
+      "all_in_order": false
+    },
+    {
+      "size": 48,
+      "boxes": true,
+      "language": "jpn",
+      "mode": "fields",
+      "text": "会員番号\n0012345678\n氏名\n山田太郎\n有効期限\n2027年12月31日",
+      "fields_found": 6,
+      "all_in_order": true
+    }
+  ]
+}

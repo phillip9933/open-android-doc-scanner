@@ -86,3 +86,29 @@ After saving a scan, select **Recognize text · page N**. Choose English, Japane
 Test both languages on documents and card fronts/backs, especially small text, glare, names and numbers with leading zeros. Check text against the image; elapsed time excludes initial model installation. This screen does not extract card fields or add searchable PDF text.
 
 Latest [October 26 verification](../evidence/ocr-closeout-validation.json) covers physical Pixel/API 26/16 KB OCR runtime tests and 38 processing plus eight export tests on 16 KB Android. Photographed document/card acceptance remains pending; see [acceptance findings](OCR-ACCEPTANCE.md).
+
+
+### Experimental single-line straightening
+
+`OcrConfig(straightenLine = true)` is opt-in and requires `SINGLE_LINE` plus an explicit `region`. It estimates small tilt from dark-text pixels, adds a white margin, and maps detected word rectangles back to the original image. It does not modify the scan or guess corrected characters. Region and padded processing are limited to 4 MP and the configured input limits; oversized regions fail rather than silently downscale. Cancellation is checked during estimation; native recognition remains non-interruptible. This is intended for a selected printed number/text line, not a full mixed-language card, handwriting or light-on-dark artwork. The test app exposes it for number fields. Recompile consumers after updating all SDK modules together.
+
+Synthetic and emulator results do not establish photographed-card accuracy. See [field testing and release gates](FIELD-TESTING.md).
+
+
+### Keep selected fields separate
+
+For a known form or user-selected regions, use `recognizeFields` to preserve caller field order and identity. It does not infer rectangles, field meaning or reading order from a whole card. Results remain raw strings with full-image word bounds; leading zeros and names are not normalized. Use the same stable upright raster for the whole call. Each field is recognized sequentially (including model verification); cancellation/failure aborts the batch without returning partial results. The limit is 32 unique, nonblank field IDs of at most 128 characters, with an explicit region per field. Runtime grows with field count; this is not a faster whole-page engine.
+
+```kotlin
+val fields = recognizer.recognizeFields(image, "front", listOf(
+    OcrFieldRequest("number", OcrConfig(
+        languages = listOf("eng"), layout = OcrLayout.SINGLE_LINE,
+        region = numberRegion, characterWhitelist = "0123456789", straightenLine = true)),
+    OcrFieldRequest("name", OcrConfig(
+        languages = listOf("jpn", "eng"), layout = OcrLayout.SINGLE_LINE,
+        region = nameRegion))
+), cancellation)
+// Host maps IDs only to its existing fields and presents editable results for confirmation.
+```
+
+Coordinates in this example come from the host or user, not an automatic form parser. Whole-page document/sparse recognition remains available. Japanese substitutions and difficult boxed forms can still fail; do not treat field selection or a confidence score as validation.

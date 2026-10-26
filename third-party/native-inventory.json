@@ -54,7 +54,7 @@
       "abi": "arm64-v8a",
       "apk_entry": "lib/arm64-v8a/libc++_shared.so",
       "mapping_gaps": [],
-      "match_method": "exact_sha256",
+      "match_method": "normalized_allocated_sections_sha256",
       "name": "libc++_shared.so",
       "notice_evidence": [
         {
@@ -77,8 +77,8 @@
         "gnu_build_id": "7befe631535aa853c4f4ac1293e49dcea34c9b6e",
         "machine": 183
       },
-      "packaged_sha256": "ab4e6c71b96b851de45a8a9bd86369e7dbc2130a44b3b4520564be94847910f2",
-      "packaged_size_bytes": 9236352,
+      "packaged_sha256": "cd61762848882a16c8244c964a6f396c0caa0b440588a210ce9cc4ab0e6d9f0c",
+      "packaged_size_bytes": 1253544,
       "provenance_status": "reconciled",
       "source": {
         "abi": "arm64-v8a",
@@ -342,7 +342,7 @@
         }
       ],
       "mapping_gaps": [],
-      "match_method": "exact_sha256",
+      "match_method": "normalized_allocated_sections_sha256",
       "name": "libonnxruntime.so",
       "notice_evidence": [],
       "notice_status": "gap",
@@ -352,7 +352,7 @@
         "gnu_build_id": "a15ecc0324c31118e944371e89ae38fa3d75b086",
         "machine": 183
       },
-      "packaged_sha256": "71592ea77d4e6aed7877bbc3139a15cb77785c7d2a5b273c2832c3e56aca91b4",
+      "packaged_sha256": "50b4619acfd98bef794c85487f3b9dfa3c6939d00f3ab5974d8a49aad5eaca1b",
       "packaged_size_bytes": 25763824,
       "provenance_status": "reconciled",
       "source": {
@@ -383,7 +383,7 @@
         }
       ],
       "mapping_gaps": [],
-      "match_method": "exact_sha256",
+      "match_method": "normalized_allocated_sections_sha256",
       "name": "libonnxruntime4j_jni.so",
       "notice_evidence": [],
       "notice_status": "gap",
@@ -393,8 +393,8 @@
         "gnu_build_id": "9f11e6c3ebfea6e7017f090d4220fae1c719a8e3",
         "machine": 183
       },
-      "packaged_sha256": "05afb25116dc68608cee6195dc074c49521d4b79639195b1755463d0118db469",
-      "packaged_size_bytes": 111976,
+      "packaged_sha256": "21570f242553627895bfaa95224d8fc7f6dd0432381fb1739555310ee214f096",
+      "packaged_size_bytes": 83432,
       "provenance_status": "reconciled",
       "source": {
         "abi": "arm64-v8a",
@@ -754,7 +754,7 @@
       "abi": "x86_64",
       "apk_entry": "lib/x86_64/libc++_shared.so",
       "mapping_gaps": [],
-      "match_method": "exact_sha256",
+      "match_method": "normalized_allocated_sections_sha256",
       "name": "libc++_shared.so",
       "notice_evidence": [
         {
@@ -777,8 +777,8 @@
         "gnu_build_id": "0f8f9b5a33c8898dc08ae1688f9b1d3d10ff68ab",
         "machine": 62
       },
-      "packaged_sha256": "e4cd73c8a3607269f3be58d15c21f78bff112e27f9398d6261e5f965668f8746",
-      "packaged_size_bytes": 8808664,
+      "packaged_sha256": "2e855857f80819737d25a663109fedf816a5e996a85423166806014a06593256",
+      "packaged_size_bytes": 1229808,
       "provenance_status": "reconciled",
       "source": {
         "abi": "x86_64",
@@ -1042,7 +1042,7 @@
         }
       ],
       "mapping_gaps": [],
-      "match_method": "exact_sha256",
+      "match_method": "normalized_allocated_sections_sha256",
       "name": "libonnxruntime.so",
       "notice_evidence": [],
       "notice_status": "gap",
@@ -1052,7 +1052,7 @@
         "gnu_build_id": "57dedc2b8b1bac06e31116c056cc73c2b866fe55",
         "machine": 62
       },
-      "packaged_sha256": "f8875eef0e3587895fb79384908021952b0d5a8bbf55b707f7e9db54512e80ae",
+      "packaged_sha256": "788d8fcf5942b4d762deb6af3b5f6af0e59ad1a2047447dafacf310950de1465",
       "packaged_size_bytes": 31239096,
       "provenance_status": "reconciled",
       "source": {
@@ -1083,7 +1083,7 @@
         }
       ],
       "mapping_gaps": [],
-      "match_method": "exact_sha256",
+      "match_method": "normalized_allocated_sections_sha256",
       "name": "libonnxruntime4j_jni.so",
       "notice_evidence": [],
       "notice_status": "gap",
@@ -1093,8 +1093,8 @@
         "gnu_build_id": "7b8055c8bb62540025eb388d39f1daf02be26b62",
         "machine": 62
       },
-      "packaged_sha256": "fa557f9ea7d4d92e9270bf4943ecb99e3dc4ed9ba4c3ba599c57f8362065015b",
-      "packaged_size_bytes": 100424,
+      "packaged_sha256": "3263e414ff17b7cfcadd7054aa808a23cc9bfad9f0b91102d30bfb08dddc08fb",
+      "packaged_size_bytes": 80592,
       "provenance_status": "reconciled",
       "source": {
         "abi": "x86_64",
@@ -1475,7 +1475,7 @@
     ],
     "usage": "historical_inspection_only_not_final_runtime"
   },
-  "inspected_apk_sha256": "642985be9e4cebbd09205da08c5adc96544287afbcfb3197c01e4099a09fb5ab",
+  "inspected_apk_sha256": "7222b8607e2308cd1645499149db06ad88a62691850667dbfe2ea3a6b7c948c1",
   "license_review_status": "evidence_collected_reconciled",
   "mapping_gaps": [],
   "native_build": {

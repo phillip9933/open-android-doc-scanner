@@ -4,7 +4,7 @@
 - [Repository layout](README.md#repository-layout)
 - [Contributing and checks](../CONTRIBUTING.md)
 - [Security reporting](../SECURITY.md)
-- [0.7.0 SDK and testing APK release](RELEASE-0.7.0.md)
+- [0.7.0 historical SDK release](RELEASE-0.7.0.md)
 - [RC11 SDK release (historical)](RELEASE-RC11.md)
 - [Host-app integration](INTEGRATION.md)
 - [Architecture and file ownership](ARCHITECTURE.md)
@@ -20,4 +20,6 @@
 
 Earlier RC documents and evidence preserve development comparisons. Evidence excludes private documents and personal usage notes. Machine-specific paths in historical build records are redacted; reproduce current build/audit records with the included tools.
 
-- [Optional OCR and Kura card integration (0.8.0 development)](OCR.md)
+- [Optional OCR and Kura card integration (0.8.0 beta)](OCR.md)
+
+- [Candidate field testing and user reports](FIELD-TESTING.md)

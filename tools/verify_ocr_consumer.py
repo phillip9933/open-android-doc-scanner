@@ -53,6 +53,10 @@ dependencies { '''+deps+' }\n')
         code+='''fun recognize(file: java.io.File, models: java.io.File): OcrPage =
  dev.offlinescan.ocr.TesseractTextRecognizer(models).recognize(file, "front",
  OcrConfig(languages=listOf("eng", "jpn"), layout=OcrLayout.SPARSE), NeverCancelled)
+fun fields(file: java.io.File, models: java.io.File): List<OcrFieldResult> =
+ dev.offlinescan.ocr.TesseractTextRecognizer(models).recognizeFields(file, "front", listOf(
+ OcrFieldRequest("number", OcrConfig(languages=listOf("eng"), layout=OcrLayout.SINGLE_LINE,
+ region=OcrRegion(0.1,0.1,0.8,0.3),characterWhitelist="0123456789",straightenLine=true))))
 '''
     (source/'Consumer.kt').write_text(code)
 subprocess.run([str(root/'gradlew'),'-p',str(work),':plain:assembleDebug',':ocr:assembleDebug','--console=plain'],check=True)

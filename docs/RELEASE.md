@@ -1,30 +1,29 @@
 # Releases
 
-Version **0.7.0** SDK and standalone sample prerelease. See [0.7.0 changes and validation](RELEASE-0.7.0.md). Original code is Apache-2.0; releases are hosted at https://github.com/phillip9933/open-android-doc-scanner/releases.
+Current prerelease: **0.8.0-beta.1**. Stable remains **0.7.0**. See [beta notes](RELEASE-0.8.0.md). The SDK is distributed as a Maven ZIP with checksums and license/provenance material; do not attach the developer sample APK as a public product.
 
 ## Build and package
 
-Source-built OpenCV JNI for arm64-v8a/x86_64 lives in scanner-processing-opencv/src/main/jniLibs and its pinned Java wrapper JAR in libs. Regeneration is described in NATIVE-BUILD.md. No native binary from the original OpenCV AAR may contribute to final resolution.
-
 ```sh
-./gradlew :scanner-core:test :scanner-camera:testDebugUnitTest :scanner-sample:assembleDebug lint
+./gradlew :scanner-core:test :scanner-camera:testDebugUnitTest :scanner-ocr-tesseract:testDebugUnitTest :scanner-sample:assembleDebug lint
 ./gradlew publishAllPublicationsToLocalReleaseRepository
+python3 tools/package_maven_release.py
+python3 tools/verify_ocr_consumer.py
 ```
 
-The `LocalRelease` repository is exclusively `release/maven` inside this project. It contains five coordinates under `dev.offlinescan`, version `0.7.0`, with POM/Gradle metadata, release AARs/core JAR and Android source JARs. For the SDK, `python tools/package_maven_release.py` copies that repository into a Maven ZIP with SHA256SUMS, release notes, and all license/notice material. The standalone debug-signed test APK is a separate release asset. Keep THIRD-PARTY-NOTICES.md and third-party native/runtime notices with redistribution; applicable native notice text is also included in SDK assets.
-
-Consume locally:
+The local-only publication target is `release/maven`. The archive contains six coordinates under `dev.offlinescan`, version `0.8.0-beta.1`, including optional `scanner-ocr-tesseract`. Native source and notice requirements remain in [NATIVE-BUILD.md](NATIVE-BUILD.md).
 
 ```kotlin
-// Host settings.gradle.kts repositories block:
-maven { url = uri("/absolute/path/to/offline-scanner/release/maven") }
-// Host dependencies:
-implementation("dev.offlinescan:scanner-ui-compose:0.7.0")
+maven { url = uri("/absolute/path/to/extracted-sdk/maven") }
+// Add to host dependencies; update every scanner module together and recompile.
+implementation("dev.offlinescan:scanner-ui-compose:0.8.0-beta.1")
+// Optional:
+implementation("dev.offlinescan:scanner-ocr-tesseract:0.8.0-beta.1")
 ```
 
-Google and Maven Central remain build repositories for public AndroidX/Kotlin dependencies; they are not runtime/cloud services. The scanner adds no INTERNET permission. Hosts should audit their own full graphs/manifests independently.
+Before publishing, validate the exact versioned archive, independent consumers, checksums and notes. Publish a GitHub prerelease for beta tags and preserve the latest stable release. The current workflow builds/audits; it does not automatically publish packages. Real-world beta feedback is permitted before stable acceptance; unverified gates stay open. See [FIELD-TESTING.md](FIELD-TESTING.md).
 
-## Evidence commands
+## Evidence commands and historical validation
 
 Use connected supported emulators/devices for `connectedDebugAndroidTest` on processing, export and sample. To preserve benchmark JSON before test-app uninstall, install the processing test APK directly, run `adb shell am instrument -w dev.offlinescan.processing.test/androidx.test.runner.AndroidJUnitRunner`, then pull its external-files benchmark/resource JSON. Inspect `getconf PAGE_SIZE` for a16KB emulator; don't infer page size from ABI/name alone.
 

@@ -135,4 +135,30 @@ class TesseractTextRecognizerTest {
             } catch (_: IllegalArgumentException) { }
         } finally { root.deleteRecursively() }
     }
+    @Test fun straightensTiltedNumericFieldAndMapsBounds() {
+        val instrumentation=InstrumentationRegistry.getInstrumentation()
+        val root=File(instrumentation.targetContext.cacheDir,"ocr-tilt-${System.nanoTime()}").apply {mkdirs()}
+        try {
+            val models=File(root,"tessdata").apply {mkdirs()}
+            instrumentation.context.assets.open("eng.traineddata").use { input ->
+                File(models,"eng.traineddata").outputStream().use {input.copyTo(it)}
+            }
+            val image=File(root,"tilted.png")
+            val fixture=instrumentation.context.assets.open("tilted-digits.png").use {android.graphics.BitmapFactory.decodeStream(it)}!!
+            val canvasImage=Bitmap.createBitmap(800,400,Bitmap.Config.ARGB_8888)
+            try {
+                Canvas(canvasImage).apply {drawColor(Color.WHITE); drawBitmap(fixture,100f,80f,null)}
+                image.outputStream().use {canvasImage.compress(Bitmap.CompressFormat.PNG,100,it)}
+            } finally {fixture.recycle();canvasImage.recycle()}
+            val config=OcrConfig(languages=listOf("eng"),layout=OcrLayout.SINGLE_LINE,
+                region=OcrRegion(0.125,0.2,0.75,0.5),characterWhitelist="0123456789",straightenLine=true)
+            val result=TesseractTextRecognizer(root).recognize(image,"tilted",config,NeverCancelled)
+            assertEquals("38180624",result.text.trim())
+            assertEquals(800,result.width)
+            assertEquals(400,result.height)
+            assertTrue(result.words.isNotEmpty())
+            assertTrue(result.words.all {it.left>=100 && it.right<=600 && it.top>=80 && it.bottom<=200 && it.left<it.right && it.top<it.bottom})
+        } finally {root.deleteRecursively()}
+    }
+
 }

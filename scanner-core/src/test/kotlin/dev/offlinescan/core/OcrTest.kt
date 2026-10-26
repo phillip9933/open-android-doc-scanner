@@ -8,6 +8,9 @@ import kotlin.test.*
 class OcrTest {
     @Test fun validatesLanguagePathsAndRegions() {
         assertEquals(listOf("eng", "jpn"), OcrConfig().languages)
+        assertFailsWith<IllegalArgumentException> { OcrConfig(straightenLine=true) }
+        assertFailsWith<IllegalArgumentException> { OcrConfig(layout=OcrLayout.SINGLE_LINE,straightenLine=true) }
+        OcrConfig(layout=OcrLayout.SINGLE_LINE,region=OcrRegion(0.1,0.1,0.8,0.3),straightenLine=true)
         for (languages in listOf(emptyList(), listOf("../eng"), listOf("eng+jpn"), listOf("eng", "eng"))) {
             assertFailsWith<IllegalArgumentException> { OcrConfig(languages = languages) }
         }

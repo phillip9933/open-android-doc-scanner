@@ -22,9 +22,12 @@ data class OcrConfig(
     val characterWhitelist: String? = null,
     val maxInputPixels: Long = 24_000_000,
     val maxInputBytes: Long = 64L * 1024 * 1024,
-    val maxInputDimension: Int = 16_384
+    val maxInputDimension: Int = 16_384,
+    /** Experimental bounded straightening for an explicitly selected dark-text single line. */
+    val straightenLine: Boolean = false
 ) {
     init {
+        require(!straightenLine || (layout == OcrLayout.SINGLE_LINE && region != null)) { "Line straightening requires a selected single-line region" }
         require(languages.size in 1..8 && languages.distinct().size == languages.size)
         require(languages.all { it.matches(Regex("[A-Za-z0-9_]+")) })
         require(characterWhitelist == null || (characterWhitelist.isNotEmpty() && '\u0000' !in characterWhitelist))
@@ -73,4 +76,42 @@ class ScanOcr(private val processor: ImageProcessor, private val recognizer: Tex
             return results
         } finally { directory.deleteRecursively() }
     }
+}
+
+/** Caller-defined field identity and recognition settings; location/meaning are not inferred. */
+data class OcrFieldRequest(val id: String, val config: OcrConfig) {
+    init {
+        require(id.isNotBlank() && id.length <= 128) { "Field ID must contain 1..128 characters" }
+        require(config.region != null) { "Field recognition requires an explicit region" }
+    }
+}
+
+data class OcrFieldResult(val id: String, val page: OcrPage)
+
+/**
+ * Recognize up to 32 caller-selected fields sequentially, retaining caller order and IDs.
+ * Use a stable upright raster for the entire call. Does not infer layout, combine text,
+ * normalize names/numbers or parallelize native recognition. Results retain full-image bounds.
+ * Returns only after every field succeeds; failures/cancellation propagate unchanged.
+ */
+fun TextRecognizer.recognizeFields(
+    image: File, pageId: String, fields: List<OcrFieldRequest>,
+    cancellation: Cancellation = NeverCancelled,
+    progress: Progress = Progress { _, _ -> }
+): List<OcrFieldResult> {
+    cancellation.check()
+    require(fields.size in 1..32) { "Field batch must contain 1..32 regions" }
+    val requests = fields.map { it.copy(config=it.config.copy(languages=it.config.languages.toList())) }
+    require(requests.size in 1..32 && requests.map { it.id }.distinct().size == requests.size) { "Field IDs must be unique" }
+    val results = ArrayList<OcrFieldResult>(requests.size)
+    progress.update(0,requests.size)
+    for (request in requests) {
+        cancellation.check()
+        val page=recognize(image,pageId,request.config,cancellation)
+        cancellation.check()
+        results += OcrFieldResult(request.id,page)
+        progress.update(results.size,requests.size)
+    }
+    cancellation.check()
+    return results
 }
