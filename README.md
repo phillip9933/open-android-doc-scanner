@@ -6,6 +6,10 @@ Independent Apache-2.0 Android document and printed-photo scanner. Kotlin, Camer
 
 [Download the latest testing APK (0.7.0)](https://github.com/phillip9933/open-android-doc-scanner/releases/tag/v0.7.0) · [Documentation](docs/INDEX.md) · [CI](https://github.com/phillip9933/open-android-doc-scanner/actions)
 
+## Roadmap and work
+
+Follow the [public roadmap and work board](https://github.com/users/phillip9933/projects/1), [release milestones](https://github.com/phillip9933/open-android-doc-scanner/milestones), and [issues](https://github.com/phillip9933/open-android-doc-scanner/issues). Work status and release maturity are separate; dates are estimates. See [the tracking convention](CONTRIBUTING.md#work-tracking-and-release-policy).
+
 ## About this project
 
 I build projects to solve problems I run into in my own life. I share them because I believe in open source and hope others can learn from them, adapt them or find them useful.

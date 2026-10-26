@@ -1,4 +1,6 @@
-# First-release backlog
+# Historical first-release backlog
+
+This is an archived implementation/acceptance snapshot, not the live task list. Follow the [public project](https://github.com/users/phillip9933/projects/1) and [issues](https://github.com/phillip9933/open-android-doc-scanner/issues) for current priorities and release targets. Status and publication statements below describe their original preparation period.
 
 Status vocabulary: Not started; In progress; Implemented; Automatically verified; Awaiting device or host-app acceptance; Blocked; Deferred beyond first release. An implemented feature may still need acceptance. No physical-device or host-app acceptance is implied by automated verification.
 

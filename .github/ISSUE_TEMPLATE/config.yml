@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security reporting
+    url: https://github.com/phillip9933/open-android-doc-scanner/blob/main/SECURITY.md
+    about: Read the private reporting guidance; do not disclose suspected vulnerabilities publicly.
