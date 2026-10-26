@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-26",
+  "status": "unreleased candidate; phone offline at owner request",
+  "jvm_tests": {
+    "scanner-core": 10,
+    "scanner-camera": 63,
+    "scanner-ocr-tesseract": 8
+  },
+  "build_lint": "passed",
+  "android": {
+    "device": "scanner-owned API37.2 x86_64 emulator",
+    "page_size": "16KB AVD; prior runtime verification retained",
+    "ocr_tests": 5,
+    "processing_tests": 39,
+    "card_cases": [
+      "rounded",
+      "small",
+      "tilted",
+      "near-equal-luminance with internal text boxes"
+    ],
+    "phone_used": false
+  },
+  "remaining": [
+    "Photographed card digit comparison with optional straightening",
+    "Japanese recognition and boxed-form reading order",
+    "Card false-positive/negative rates across real backgrounds",
+    "Detection latency/thermal impact",
+    "Multi-user field reports and release gate review"
+  ]
+}

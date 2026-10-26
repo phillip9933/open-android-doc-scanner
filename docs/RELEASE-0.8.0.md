@@ -17,3 +17,8 @@ Final validation: 79 JVM tests, 4 Android API 35 x86_64 OCR/security tests and 8
 The sample debug app now offers per-page English/Japanese OCR, document/card layouts, word highlights, selectable results and 100% image inspection. Prepare its pinned models using `tools/prepare_ocr_test_models.py` before building. This is a developer test feature; model distribution in SDK integrations remains host-owned.
 
 Latest [October 26 verification](../evidence/ocr-closeout-validation.json) covers physical Pixel/API 26/16 KB OCR runtime tests and 38 processing plus eight export tests on 16 KB Android. Photographed document/card acceptance remains pending; see [acceptance findings](OCR-ACCEPTANCE.md).
+
+
+Candidate improvements (not yet published): selected-field OCR diagnostics and optional single-line straightening; a color-edge pass and supported enclosing-boundary preference for low-grayscale-contrast cards; synthetic rounded/small/tilted card regressions. Line straightening remains off by default and requires a selected single-line region. Host applications retain editable confirmation of OCR fields. Japanese recognition and form reading-order limitations remain under acceptance; the changes do not claim to fix all OCR errors.
+
+The [field-testing plan](FIELD-TESTING.md) separates internal safety/regression checks from opt-in real-world candidate testing. The owner requested one combined rollout after testing; no release or tag is authorized until that pause is lifted.

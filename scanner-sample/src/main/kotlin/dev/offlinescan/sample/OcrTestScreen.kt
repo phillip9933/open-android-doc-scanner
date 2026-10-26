@@ -43,6 +43,7 @@ internal fun OcrTestScreen(image: File, onClose: () -> Unit) {
     var inspect by remember { mutableStateOf(false) }
     var region by remember { mutableStateOf<OcrRegion?>(null) }
     var selectRegion by remember { mutableStateOf(false) }
+    var straightenLine by remember { mutableStateOf(false) }
     var numberField by remember { mutableStateOf(false) }
     var highlights by remember { mutableStateOf(true) }
     Dialog(onDismissRequest=onClose, properties=DialogProperties(usePlatformDefaultWidth=false)) {
@@ -71,13 +72,17 @@ internal fun OcrTestScreen(image: File, onClose: () -> Unit) {
                         Switch(checked=numberField, enabled=!busy, onCheckedChange={numberField=it; result=null})
                         Text("Digits only · single number line")
                     }
+                    if(numberField) Row {
+                        Switch(checked=straightenLine, enabled=!busy, onCheckedChange={straightenLine=it; result=null})
+                        Text("Straighten number line · experimental")
+                    }
                     Text("Use digits only for a printed numeric field. Verify every digit; this does not validate a card number.")
                 }
                 Button(enabled=!busy, onClick={
                     busy=true; error=null; result=null
                     val config=OcrConfig(languages=if(numberField) listOf("eng") else languages,
                         layout=if(numberField) OcrLayout.SINGLE_LINE else layout,
-                        region=region, characterWhitelist=if(numberField) "0123456789" else null)
+                        region=region, straightenLine=numberField && straightenLine, characterWhitelist=if(numberField) "0123456789" else null)
                     scope.launch {
                         try {
                             val recognized=withContext(Dispatchers.IO) {
@@ -101,7 +106,7 @@ internal fun OcrTestScreen(image: File, onClose: () -> Unit) {
                 error?.let { Text(it, color=MaterialTheme.colorScheme.error) }
                 result?.let { page ->
                     Text("${page.words.size} words · ${elapsed} ms · ${page.width} × ${page.height}")
-                    Text(if(numberField) "English digits · single line · selected region"
+                    Text(if(numberField) "English digits · single line · selected region · straighten=$straightenLine"
                         else "${languages.joinToString(" + ")} · ${layout.name.lowercase()} · ${if(region == null) "whole page" else "selected region"}")
                     Row {
                         Switch(checked=highlights, onCheckedChange={highlights=it})

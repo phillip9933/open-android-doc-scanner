@@ -86,3 +86,10 @@ After saving a scan, select **Recognize text · page N**. Choose English, Japane
 Test both languages on documents and card fronts/backs, especially small text, glare, names and numbers with leading zeros. Check text against the image; elapsed time excludes initial model installation. This screen does not extract card fields or add searchable PDF text.
 
 Latest [October 26 verification](../evidence/ocr-closeout-validation.json) covers physical Pixel/API 26/16 KB OCR runtime tests and 38 processing plus eight export tests on 16 KB Android. Photographed document/card acceptance remains pending; see [acceptance findings](OCR-ACCEPTANCE.md).
+
+
+### Experimental single-line straightening
+
+`OcrConfig(straightenLine = true)` is opt-in and requires `SINGLE_LINE` plus an explicit `region`. It estimates small tilt from dark-text pixels, adds a white margin, and maps detected word rectangles back to the original image. It does not modify the scan or guess corrected characters. Region and padded processing are limited to 4 MP and the configured input limits; oversized regions fail rather than silently downscale. Cancellation is checked during estimation; native recognition remains non-interruptible. This is intended for a selected printed number/text line, not a full mixed-language card, handwriting or light-on-dark artwork. The test app exposes it for number fields. Recompile consumers after updating all SDK modules together.
+
+Synthetic and emulator results do not establish photographed-card accuracy. See [field testing and release gates](FIELD-TESTING.md).

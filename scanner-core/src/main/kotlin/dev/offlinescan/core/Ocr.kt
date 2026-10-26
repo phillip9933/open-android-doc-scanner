@@ -22,9 +22,12 @@ data class OcrConfig(
     val characterWhitelist: String? = null,
     val maxInputPixels: Long = 24_000_000,
     val maxInputBytes: Long = 64L * 1024 * 1024,
-    val maxInputDimension: Int = 16_384
+    val maxInputDimension: Int = 16_384,
+    /** Experimental bounded straightening for an explicitly selected dark-text single line. */
+    val straightenLine: Boolean = false
 ) {
     init {
+        require(!straightenLine || (layout == OcrLayout.SINGLE_LINE && region != null)) { "Line straightening requires a selected single-line region" }
         require(languages.size in 1..8 && languages.distinct().size == languages.size)
         require(languages.all { it.matches(Regex("[A-Za-z0-9_]+")) })
         require(characterWhitelist == null || (characterWhitelist.isNotEmpty() && '\u0000' !in characterWhitelist))

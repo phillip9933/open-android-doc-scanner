@@ -47,3 +47,10 @@ The baseline reproduced an 8→3 substitution in tilted cases. Straightening max
 PR CI also exposed three missing dependency metadata checksums (not mismatches). Those exact artifacts were fetched from Maven Central and matched against the CI cache SHA-1 identities and published SHA-1 values before recording SHA-256 in strict Gradle verification. Provenance is in `evidence/ocr-ci-metadata-verification.json`; no verification bypass was added.
 
 Local validation after the checksum additions: core and OCR JVM tests, sample debug assembly and sample lint pass. No phone commands were run during this offline investigation.
+
+
+## Android implementation and card crop candidate
+
+An opt-in `straightenLine` implementation now performs a bounded dark-ink projection search on a selected single line, adds a margin, and inverse-maps word boxes to the full image. Input and padded-region budgets are checked; cancellation and temporary bitmap cleanup are retained. Five OCR instrumentation cases pass on the scanner-owned API 37.2/16 KB x86_64 emulator, including a tilted line placed at a nonzero image offset. The physical phone was not used for this implementation.
+
+A near-equal-luminance card fixture exposed selection of an internal white panel. The detector now considers a bounded HSV saturation-edge pass and prefers a supported enclosing candidate over a much smaller interior rectangle. Synthetic small/rounded/tilted/low-contrast cards retain the card aspect after perspective crop; the card test plus existing detector/processor regression subset passes 16 tests. This adds detection work per frame and needs real-device latency/thermal validation and varied backgrounds before stable promotion. Manual corner adjustment remains available; ambiguous or clipped cards are not guaranteed automatic crops.

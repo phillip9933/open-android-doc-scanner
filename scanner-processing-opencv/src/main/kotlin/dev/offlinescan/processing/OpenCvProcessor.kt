@@ -456,17 +456,26 @@ class OpenCvProcessor : ImageProcessor {
         val luminance = ByteArray(gray.rows() * gray.cols()); gray.get(0, 0, luminance)
         var best: Quad? = null
         var confidence = 0.0
+        var saturationPixels: ByteArray? = null
         var localContrast: Mat? = null
         var localPixels: ByteArray? = null
-        // Keep accepted RC3 candidates unchanged. Only a miss reaches normalized illumination
-        // proposals, which must also demonstrate a real edge in the untouched image.
-        for (pass in 0..4) {
+        // Always compare both raw-edge thresholds before accepting an interior text box.
+        // Normalized illumination proposals remain miss-only fallbacks.
+        for (pass in 0..5) {
             cancellation.check()
             when (pass) {
                 0 -> Imgproc.Canny(blurred, edges, 35.0, 110.0)
                 1 -> Imgproc.Canny(blurred, edges, 6.0, 20.0)
-                2 -> Imgproc.threshold(blurred, edges, 0.0, 255.0, Imgproc.THRESH_BINARY or Imgproc.THRESH_OTSU)
-                3 -> {
+                2 -> {
+                    val hsv=mats.mat(); val saturation=mats.mat(); val smooth=mats.mat()
+                    Imgproc.cvtColor(rgb,hsv,Imgproc.COLOR_RGB2HSV)
+                    Core.extractChannel(hsv,saturation,1)
+                    saturationPixels=ByteArray(gray.rows()*gray.cols()).also {saturation.get(0,0,it)}
+                    Imgproc.GaussianBlur(saturation,smooth,Size(5.0,5.0),0.0)
+                    Imgproc.Canny(smooth,edges,12.0,40.0)
+                }
+                3 -> Imgproc.threshold(blurred, edges, 0.0, 255.0, Imgproc.THRESH_BINARY or Imgproc.THRESH_OTSU)
+                4 -> {
                     val normalized=normalizeIllumination(gray,mats)
                     localContrast=normalized
                     localPixels=ByteArray(gray.rows()*gray.cols()).also { normalized.get(0,0,it) }
@@ -474,7 +483,7 @@ class OpenCvProcessor : ImageProcessor {
                 }
                 else -> Imgproc.threshold(localContrast!!,edges,0.0,255.0,Imgproc.THRESH_BINARY or Imgproc.THRESH_OTSU)
             }
-            Imgproc.morphologyEx(edges, edges, Imgproc.MORPH_CLOSE, if (pass==2 || pass==4) segmentationKernel else kernel)
+            Imgproc.morphologyEx(edges, edges, Imgproc.MORPH_CLOSE, if (pass==3 || pass==5) segmentationKernel else kernel)
             val contours = ArrayList<MatOfPoint>()
             try {
                 // Dense boundary points support fitting actual side lines instead of rounded corners.
@@ -517,7 +526,7 @@ class OpenCvProcessor : ImageProcessor {
                                 val qArea = Geometry.area(quad)
                                 val solidity = (area / (qArea * (gray.cols()-1) * (gray.rows()-1))).coerceIn(0.0, 1.0)
                                 if (solidity < 0.86) continue
-                                val edgeQuality = sideEvidence(quad,luminance,gray.cols(),gray.rows(),if(pass>=3) localPixels else null) ?: continue
+                                val edgeQuality = sideEvidence(quad,if(pass==2) saturationPixels!! else luminance,gray.cols(),gray.rows(),if(pass>=4) localPixels else null) ?: continue
                                 val angles = quad.points.indices.map { i ->
                                     val a = quad.points[(i+3)%4]; val b = quad.points[i]; val c = quad.points[(i+1)%4]
                                     val ux = (a.x-b.x)*gray.cols(); val uy = (a.y-b.y)*gray.rows()
@@ -527,8 +536,19 @@ class OpenCvProcessor : ImageProcessor {
                                 if (angles.min() < 0.12) continue
                                 // Geometry alone never earns high confidence; all four measured sides matter.
                                 val score = (0.25 + 0.20*solidity + 0.18*angles.average() +
-                                    0.22*edgeQuality + 0.15*minOf(1.0,qArea/0.5)).coerceIn(0.0,if(pass>=3) 0.86 else 0.94)
-                                if (score > confidence) { confidence = score; best = quad }
+                                    0.22*edgeQuality + 0.15*minOf(1.0,qArea/0.5)).coerceIn(0.0,if(pass>=2) 0.86 else 0.94)
+                                val previous=best
+                                fun encloses(outer: Quad, inner: Quad): Boolean = inner.points.all { p ->
+                                    outer.points.indices.all { i ->
+                                        val a=outer.points[i]; val b=outer.points[(i+1)%4]
+                                        (b.x-a.x)*(p.y-a.y)-(b.y-a.y)*(p.x-a.x) >= -0.001
+                                    }
+                                }
+                                val outerCandidate=previous!=null && pass<=2 && score>=0.75 &&
+                                    qArea>Geometry.area(previous)*1.5 && encloses(quad,previous)
+                                val innerCandidate=previous!=null && pass<=2 && confidence>=0.75 &&
+                                    Geometry.area(previous)>qArea*1.5 && encloses(previous,quad)
+                                if (outerCandidate || (!innerCandidate && score > confidence)) { confidence = score; best = quad }
                                 supported=true
                                 break
                             }
@@ -539,7 +559,7 @@ class OpenCvProcessor : ImageProcessor {
             } finally { contours.forEach { it.release() } }
             // Supported edge or threshold candidates stop before additional fallbacks, avoiding
             // corrected illumination fragments displacing an already accepted document.
-            if (confidence >= 0.90 || (pass in 1..3 && best != null)) break
+            if (pass in 2..4 && best != null) break
         }
         cancellation.check()
         val quality = best?.let { documentQuality(gray, it, mats, cancellation) }
