@@ -1,0 +1,22 @@
+{
+  "version": "0.8.0-beta.1",
+  "release_kind": "prerelease",
+  "authorization": "Owner approved beta using synthetic/emulator/build verification and integrating-app feedback on 2026-10-26",
+  "jvm_test_counts": {
+    "scanner-core": 13,
+    "scanner-camera": 63,
+    "scanner-ocr-tesseract": 8
+  },
+  "build_and_lint": "passed",
+  "archive_tests": 4,
+  "audit_self_tests": 8,
+  "native_and_apk_audit": "passed",
+  "independent_consumers": "plain and OCR passed, including ordered-field and straightening API",
+  "archive_sha256": "6f68f7000817b981854dd68a5863804a28c6f388b7040af1b4e4ef4879d4af99",
+  "public_assets": [
+    "SDK Maven ZIP",
+    "SHA256SUMS"
+  ],
+  "physical_device_test_required_for_this_beta": false,
+  "remaining_acceptance": "Real-world OCR/crop quality, Japanese reading order, detector latency/thermal behavior; track issues 2 and 5 before stable promotion"
+}

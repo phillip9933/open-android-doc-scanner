@@ -2,9 +2,9 @@
 
 Independent Apache-2.0 Android document and printed-photo scanner. Kotlin, CameraX, OpenCV and Compose. Core processing works offline without Google Play services, cloud, API keys or model downloads. No network permission or analytics.
 
-**Status: released SDK 0.7.0; optional OCR is in development for 0.8.0. Physical-camera acceptance is pending.** See [quality evidence](docs/QUALITY-REPORT.md) and [backlog](docs/BACKLOG.md). Synthetic results are not parity claims or a substitute for real-camera evaluation.
+**Status: 0.8.0-beta.1 adds optional OCR and card-boundary improvements. Stable remains 0.7.0. This beta is validated with synthetic/emulator/build checks; broader real-world acceptance is open.** See [quality evidence](docs/QUALITY-REPORT.md) and [backlog](docs/BACKLOG.md). Synthetic results are not parity claims or a substitute for real-camera evaluation.
 
-[SDK release (0.7.0)](https://github.com/phillip9933/open-android-doc-scanner/releases/tag/v0.7.0) · [Documentation](docs/INDEX.md) · [CI](https://github.com/phillip9933/open-android-doc-scanner/actions)
+[SDK beta (0.8.0-beta.1)](https://github.com/phillip9933/open-android-doc-scanner/releases/tag/v0.8.0-beta.1) · [Stable SDK (0.7.0)](https://github.com/phillip9933/open-android-doc-scanner/releases/tag/v0.7.0) · [Documentation](docs/INDEX.md) · [CI](https://github.com/phillip9933/open-android-doc-scanner/actions)
 
 ## Roadmap and work
 
@@ -30,7 +30,7 @@ The connected Android test command requires a supported emulator/device. Windows
 
 ## Optional OCR
 
-The upcoming 0.8.0 SDK adds `scanner-ocr-tesseract` for offline English/Japanese text recognition, including word positions and confidence. Apps supply local language models. Existing apps keep their current dependencies unless they opt in. See [OCR integration and card scanning](docs/OCR.md).
+The 0.8.0-beta.1 SDK adds `scanner-ocr-tesseract` for offline English/Japanese text recognition, including word positions and confidence. Apps supply local language models. Existing apps keep their current dependencies unless they opt in. See [OCR integration and card scanning](docs/OCR.md).
 
 ## Ready-made flow
 
@@ -99,3 +99,5 @@ See [quality evidence](docs/QUALITY-REPORT.md), [remaining device acceptance](do
 Original scanner code is licensed under [Apache-2.0](LICENSE). Retain [NOTICE](NOTICE) and [third-party notices](THIRD-PARTY-NOTICES.md); dependencies and model assets retain their own terms.
 
 0.7.0 incorporates the accepted quality5 processing. See [release notes and validation](docs/RELEASE-0.7.0.md). Earlier quality1–quality5 documents preserve the tuning history.
+
+Beta integrations: update all SDK coordinates together and recompile. Download the Maven ZIP and verify `SHA256SUMS` from the release. See [field testing and reports](docs/FIELD-TESTING.md); no personal scans or automatic telemetry are required.

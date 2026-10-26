@@ -76,7 +76,7 @@ archive_inputs.extend(
 )
 archive_inputs.append((root / "docs" / "RELEASE-0.8.0.md", Path("RELEASE-NOTES.md")))
 archive_inputs.append((root / "docs" / "NATIVE-BUILD.md", Path("NATIVE-BUILD.md")))
-for name in ("OCR.md", "OCR-SECURITY.md"):
+for name in ("OCR.md", "OCR-SECURITY.md", "FIELD-TESTING.md", "INTEGRATION.md", "OCR-ACCEPTANCE.md", "OCR-CARD-INVESTIGATION.md"):
     archive_inputs.append((root / "docs" / name, Path("docs") / name))
 archive_inputs.append((root / "evidence/ocr-native-build.json", Path("evidence/ocr-native-build.json")))
 

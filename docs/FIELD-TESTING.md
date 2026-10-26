@@ -1,6 +1,6 @@
 # Scanner 0.8 testing and rollout
 
-Publish one candidate containing the agreed scanner/OCR changes after internal checks. Publication remains paused until the owner authorizes it. A public prerelease is for collecting broader evidence, not a declaration that accuracy acceptance passed. Keep 0.7.0 as stable until the release gates are met. Do not distribute the development APK as the SDK product.
+Publish the combined candidate after internal checks. On 26 October 2026 the owner authorized 0.8.0-beta.1 publication using synthetic/emulator/build verification and opt-in real-world reports from integrating apps. A public prerelease is for collecting broader evidence, not a declaration that accuracy acceptance passed. Keep 0.7.0 as stable until the release gates are met. Do not distribute the development APK as the SDK product.
 
 ## Internal candidate gate
 

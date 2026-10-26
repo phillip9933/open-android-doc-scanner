@@ -9,13 +9,13 @@ import zipfile
 
 MODULES=('scanner-camera','scanner-core','scanner-export','scanner-processing-opencv','scanner-ui-compose','scanner-ocr-tesseract')
 class PackagingTest(unittest.TestCase):
-    def package(self, snapshot, missing=False):
+    def package(self, snapshot, missing=False, beta=False):
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory);(root/'tools').mkdir();(root/'docs').mkdir();(root/'third-party').mkdir();(root/'evidence').mkdir()
             shutil.copy(Path(__file__).with_name('package_maven_release.py'),root/'tools/package_maven_release.py')
-            version='0.8.0-SNAPSHOT' if snapshot else '0.8.0'
+            version='0.8.0-SNAPSHOT' if snapshot else ('0.8.0-beta.1' if beta else '0.8.0')
             (root/'build.gradle.kts').write_text(f'allprojects {{ version = "{version}" }}')
-            for path in ('LICENSE','NOTICE','THIRD-PARTY-NOTICES.md','docs/RELEASE-0.8.0.md','docs/NATIVE-BUILD.md','docs/OCR.md','docs/OCR-SECURITY.md','evidence/ocr-native-build.json'):(root/path).write_text('fixture')
+            for path in ('LICENSE','NOTICE','THIRD-PARTY-NOTICES.md','docs/RELEASE-0.8.0.md','docs/NATIVE-BUILD.md','docs/OCR.md','docs/OCR-SECURITY.md','docs/FIELD-TESTING.md','docs/INTEGRATION.md','docs/OCR-ACCEPTANCE.md','docs/OCR-CARD-INVESTIGATION.md','evidence/ocr-native-build.json'):(root/path).write_text('fixture')
             for module in MODULES:
                 target=root/'release/maven/dev/offlinescan'/module/version;target.mkdir(parents=True)
                 suffix='jar' if module=='scanner-core' else 'aar'
@@ -36,10 +36,12 @@ class PackagingTest(unittest.TestCase):
             with zipfile.ZipFile(archive) as z:
                 self.assertFalse(any('20261025' in n for n in z.namelist()))
                 self.assertIn('docs/OCR.md',z.namelist())
+                self.assertIn('docs/FIELD-TESTING.md',z.namelist())
                 self.assertEqual(6,sum(n.endswith('.module') for n in z.namelist()))
             before=archive.read_bytes()
             subprocess.run([sys.executable,str(root/'tools/package_maven_release.py')],check=True,capture_output=True)
             self.assertEqual(before,archive.read_bytes())
+    def test_beta(self):self.package(False,beta=True)
     def test_stable(self):self.package(False)
     def test_snapshot_selects_current_publication(self):self.package(True)
     def test_missing_snapshot_fails(self):self.package(True,True)

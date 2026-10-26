@@ -60,13 +60,13 @@
         "size_bytes": 10096,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 10993664
+        "zip_data_offset": 11026432
       },
       {
         "abi": "arm64-v8a",
         "all_load_segments_aligned_16k": true,
         "byte_order": "little",
-        "compressed_size_bytes": 9236352,
+        "compressed_size_bytes": 1253544,
         "compression_method": 0,
         "elf_class": 64,
         "entry": "lib/arm64-v8a/libc++_shared.so",
@@ -124,11 +124,11 @@
         ],
         "machine": 183,
         "name": "libc++_shared.so",
-        "sha256": "ab4e6c71b96b851de45a8a9bd86369e7dbc2130a44b3b4520564be94847910f2",
-        "size_bytes": 9236352,
+        "sha256": "cd61762848882a16c8244c964a6f396c0caa0b440588a210ce9cc4ab0e6d9f0c",
+        "size_bytes": 1253544,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 11010048
+        "zip_data_offset": 11042816
       },
       {
         "abi": "arm64-v8a",
@@ -185,7 +185,7 @@
         "size_bytes": 29008,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 20250624
+        "zip_data_offset": 12304384
       },
       {
         "abi": "arm64-v8a",
@@ -231,7 +231,7 @@
         "size_bytes": 303576,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 20283392
+        "zip_data_offset": 12337152
       },
       {
         "abi": "arm64-v8a",
@@ -288,7 +288,7 @@
         "size_bytes": 3006496,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 20594688
+        "zip_data_offset": 12648448
       },
       {
         "abi": "arm64-v8a",
@@ -341,17 +341,17 @@
         ],
         "machine": 183,
         "name": "libonnxruntime.so",
-        "sha256": "71592ea77d4e6aed7877bbc3139a15cb77785c7d2a5b273c2832c3e56aca91b4",
+        "sha256": "50b4619acfd98bef794c85487f3b9dfa3c6939d00f3ab5974d8a49aad5eaca1b",
         "size_bytes": 25763824,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 23609344
+        "zip_data_offset": 15663104
       },
       {
         "abi": "arm64-v8a",
         "all_load_segments_aligned_16k": true,
         "byte_order": "little",
-        "compressed_size_bytes": 111976,
+        "compressed_size_bytes": 83432,
         "compression_method": 0,
         "elf_class": 64,
         "entry": "lib/arm64-v8a/libonnxruntime4j_jni.so",
@@ -387,11 +387,11 @@
         ],
         "machine": 183,
         "name": "libonnxruntime4j_jni.so",
-        "sha256": "05afb25116dc68608cee6195dc074c49521d4b79639195b1755463d0118db469",
-        "size_bytes": 111976,
+        "sha256": "21570f242553627895bfaa95224d8fc7f6dd0432381fb1739555310ee214f096",
+        "size_bytes": 83432,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 49381376
+        "zip_data_offset": 41435136
       },
       {
         "abi": "arm64-v8a",
@@ -448,7 +448,7 @@
         "size_bytes": 6523792,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 49496064
+        "zip_data_offset": 41533440
       },
       {
         "abi": "arm64-v8a",
@@ -494,7 +494,7 @@
         "size_bytes": 239088,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 56033280
+        "zip_data_offset": 48070656
       },
       {
         "abi": "arm64-v8a",
@@ -540,7 +540,7 @@
         "size_bytes": 4832,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 56279040
+        "zip_data_offset": 48316416
       },
       {
         "abi": "arm64-v8a",
@@ -597,7 +597,7 @@
         "size_bytes": 4235128,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 56295424
+        "zip_data_offset": 48332800
       },
       {
         "abi": "x86_64",
@@ -654,13 +654,13 @@
         "size_bytes": 10760,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 60538880
+        "zip_data_offset": 52576256
       },
       {
         "abi": "x86_64",
         "all_load_segments_aligned_16k": true,
         "byte_order": "little",
-        "compressed_size_bytes": 8808664,
+        "compressed_size_bytes": 1229808,
         "compression_method": 0,
         "elf_class": 64,
         "entry": "lib/x86_64/libc++_shared.so",
@@ -718,11 +718,11 @@
         ],
         "machine": 62,
         "name": "libc++_shared.so",
-        "sha256": "e4cd73c8a3607269f3be58d15c21f78bff112e27f9398d6261e5f965668f8746",
-        "size_bytes": 8808664,
+        "sha256": "2e855857f80819737d25a663109fedf816a5e996a85423166806014a06593256",
+        "size_bytes": 1229808,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 60555264
+        "zip_data_offset": 52592640
       },
       {
         "abi": "x86_64",
@@ -779,7 +779,7 @@
         "size_bytes": 48104,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 69369856
+        "zip_data_offset": 53837824
       },
       {
         "abi": "x86_64",
@@ -825,7 +825,7 @@
         "size_bytes": 320024,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 69419008
+        "zip_data_offset": 53886976
       },
       {
         "abi": "x86_64",
@@ -882,7 +882,7 @@
         "size_bytes": 3103376,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 69746688
+        "zip_data_offset": 54214656
       },
       {
         "abi": "x86_64",
@@ -935,17 +935,17 @@
         ],
         "machine": 62,
         "name": "libonnxruntime.so",
-        "sha256": "f8875eef0e3587895fb79384908021952b0d5a8bbf55b707f7e9db54512e80ae",
+        "sha256": "788d8fcf5942b4d762deb6af3b5f6af0e59ad1a2047447dafacf310950de1465",
         "size_bytes": 31239096,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 72859648
+        "zip_data_offset": 57327616
       },
       {
         "abi": "x86_64",
         "all_load_segments_aligned_16k": true,
         "byte_order": "little",
-        "compressed_size_bytes": 100424,
+        "compressed_size_bytes": 80592,
         "compression_method": 0,
         "elf_class": 64,
         "entry": "lib/x86_64/libonnxruntime4j_jni.so",
@@ -981,11 +981,11 @@
         ],
         "machine": 62,
         "name": "libonnxruntime4j_jni.so",
-        "sha256": "fa557f9ea7d4d92e9270bf4943ecb99e3dc4ed9ba4c3ba599c57f8362065015b",
-        "size_bytes": 100424,
+        "sha256": "3263e414ff17b7cfcadd7054aa808a23cc9bfad9f0b91102d30bfb08dddc08fb",
+        "size_bytes": 80592,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 104103936
+        "zip_data_offset": 88571904
       },
       {
         "abi": "x86_64",
@@ -1042,7 +1042,7 @@
         "size_bytes": 10525136,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 104218624
+        "zip_data_offset": 88653824
       },
       {
         "abi": "x86_64",
@@ -1088,7 +1088,7 @@
         "size_bytes": 249680,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 114753536
+        "zip_data_offset": 99188736
       },
       {
         "abi": "x86_64",
@@ -1134,7 +1134,7 @@
         "size_bytes": 4928,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 115015680
+        "zip_data_offset": 99450880
       },
       {
         "abi": "x86_64",
@@ -1191,7 +1191,7 @@
         "size_bytes": 4367512,
         "uncompressed": true,
         "zip_data_aligned_16k": true,
-        "zip_data_offset": 115032064
+        "zip_data_offset": 99467264
       }
     ],
     "path": "scanner-sample/build/outputs/apk/debug/scanner-sample-debug.apk",
@@ -1199,10 +1199,10 @@
       "android.permission.CAMERA",
       "dev.offlinescan.sample.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
     ],
-    "sha256": "642985be9e4cebbd09205da08c5adc96544287afbcfb3197c01e4099a09fb5ab",
-    "size_bytes": 136900456
+    "sha256": "7222b8607e2308cd1645499149db06ad88a62691850667dbfe2ea3a6b7c948c1",
+    "size_bytes": 121335652
   },
-  "created_utc": "2026-10-26T08:11:00.837787+00:00",
+  "created_utc": "2026-10-26T12:55:35.087824+00:00",
   "dependencies": {
     "configuration": "debugRuntimeClasspath",
     "coordinates_found": [
@@ -1218,6 +1218,7 @@
       "androidx.annotation:annotation:1.0.0",
       "androidx.annotation:annotation:1.1.0",
       "androidx.annotation:annotation:1.2.0",
+      "androidx.annotation:annotation:1.3.0",
       "androidx.annotation:annotation:1.6.0",
       "androidx.annotation:annotation:1.7.0",
       "androidx.annotation:annotation:1.8.0",
@@ -1391,7 +1392,7 @@
     ],
     "forbidden_coordinates": [],
     "path": "evidence/dependency-graph.txt",
-    "sha256": "bcf0a5c67c75a0597c547cfecd32e4d6d7b5d6cdb08da795432627dcae5bb49c",
+    "sha256": "0f1a21ce8831ba40b8b0c4266820fe9a07a482ce49fbfffdc51a4e5a50efef1b",
     "source_built_opencv_java_jar": {
       "path": "scanner-processing-opencv/libs/opencv-java-4.12.0.jar",
       "sha256": "60b7be2b59393bc1689b840d7b60fd75b811bb06477bdd03abee6fbc17afa5cf"
@@ -1537,7 +1538,7 @@
         "android.permission.CAMERA",
         "dev.offlinescan.sample.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
       ],
-      "sha256": "75d6c90c73ca63db48a1f93f34baaaea035d8bbb7df737a44ec5a601d79456f4"
+      "sha256": "f18b9981c1ecb75c89928f96708bd26bfa995bf15e14c09a0f9ac2e3609703c4"
     },
     {
       "path": "scanner-sample/build/intermediates/merged_manifests/debug/processDebugManifest/AndroidManifest.xml",
@@ -1545,7 +1546,7 @@
         "android.permission.CAMERA",
         "dev.offlinescan.sample.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
       ],
-      "sha256": "75d6c90c73ca63db48a1f93f34baaaea035d8bbb7df737a44ec5a601d79456f4"
+      "sha256": "f18b9981c1ecb75c89928f96708bd26bfa995bf15e14c09a0f9ac2e3609703c4"
     },
     {
       "path": "scanner-ui-compose/build/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/AndroidManifest.xml",
