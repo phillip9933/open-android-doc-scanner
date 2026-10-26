@@ -77,3 +77,41 @@ class ScanOcr(private val processor: ImageProcessor, private val recognizer: Tex
         } finally { directory.deleteRecursively() }
     }
 }
+
+/** Caller-defined field identity and recognition settings; location/meaning are not inferred. */
+data class OcrFieldRequest(val id: String, val config: OcrConfig) {
+    init {
+        require(id.isNotBlank() && id.length <= 128) { "Field ID must contain 1..128 characters" }
+        require(config.region != null) { "Field recognition requires an explicit region" }
+    }
+}
+
+data class OcrFieldResult(val id: String, val page: OcrPage)
+
+/**
+ * Recognize up to 32 caller-selected fields sequentially, retaining caller order and IDs.
+ * Use a stable upright raster for the entire call. Does not infer layout, combine text,
+ * normalize names/numbers or parallelize native recognition. Results retain full-image bounds.
+ * Returns only after every field succeeds; failures/cancellation propagate unchanged.
+ */
+fun TextRecognizer.recognizeFields(
+    image: File, pageId: String, fields: List<OcrFieldRequest>,
+    cancellation: Cancellation = NeverCancelled,
+    progress: Progress = Progress { _, _ -> }
+): List<OcrFieldResult> {
+    cancellation.check()
+    require(fields.size in 1..32) { "Field batch must contain 1..32 regions" }
+    val requests = fields.map { it.copy(config=it.config.copy(languages=it.config.languages.toList())) }
+    require(requests.size in 1..32 && requests.map { it.id }.distinct().size == requests.size) { "Field IDs must be unique" }
+    val results = ArrayList<OcrFieldResult>(requests.size)
+    progress.update(0,requests.size)
+    for (request in requests) {
+        cancellation.check()
+        val page=recognize(image,pageId,request.config,cancellation)
+        cancellation.check()
+        results += OcrFieldResult(request.id,page)
+        progress.update(results.size,requests.size)
+    }
+    cancellation.check()
+    return results
+}

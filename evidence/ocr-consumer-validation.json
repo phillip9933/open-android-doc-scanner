@@ -1,9 +1,9 @@
 {
   "sdk_version": "0.8.0-SNAPSHOT",
-  "archive_sha256": "610bc8b49c4b2a005e1d846f69f00e23225708f49ecf495cc5ec08646d6ac207",
+  "archive_sha256": "af0ef052224d5a36551b165b7ed87650ba7ebfc66936811764f1fdd962872bda",
   "consumers": {
     "plain": {
-      "apk_sha256": "86d5b280f0a0a4aa8130c009d08a325f97da4b9030b3f562454d44c5e2173286",
+      "apk_sha256": "ca1e5543d0b0781b61b047218a380f05869b5823a8c0395842e8b05c830f05f3",
       "native_libraries": [
         "lib/arm64-v8a/libandroidx.graphics.path.so",
         "lib/arm64-v8a/libc++_shared.so",
@@ -34,7 +34,7 @@
       "ocr_bundled": false
     },
     "ocr": {
-      "apk_sha256": "054bd2bfde163ea258ca0a771e7956b6fd8a2bca0afcc9ee0d050cb9532209cb",
+      "apk_sha256": "2c1e031c8d2caeb3ea012d79297d309007408d72630e764c6deb400292bdf766",
       "native_libraries": [
         "lib/arm64-v8a/libandroidx.graphics.path.so",
         "lib/arm64-v8a/libc++_shared.so",
