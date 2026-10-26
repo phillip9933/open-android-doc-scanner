@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-26",
+  "version": "0.8.0-SNAPSHOT",
+  "jvm": {
+    "scanner-core": {
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "scanner-camera": {
+      "tests": 63,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "scanner-ocr-tesseract": {
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "instrumentation": {
+    "ocr-pixel-final.txt": "dev.offlinescan.ocr.TesseractTextRecognizerTest:.\nFixed bilingual fixture: 423 ms; sampled process peak PSS 85674 KiB (50 ms sampling, includes test harness).\n...\n\nTime: 0.78\n\nOK (4 tests)",
+    "ocr-api26-final.txt": "dev.offlinescan.ocr.TesseractTextRecognizerTest:.\nFixed bilingual fixture: 582 ms; sampled process peak PSS 88499 KiB (50 ms sampling, includes test harness).\n...\n\nTime: 0.871\n\nOK (4 tests)",
+    "ocr-16k-final.txt": "dev.offlinescan.ocr.TesseractTextRecognizerTest:.\nFixed bilingual fixture: 240 ms; sampled process peak PSS 97709 KiB (50 ms sampling, includes test harness).\n...\n\nTime: 0.393\n\nOK (4 tests)",
+    "ocr-api35-ui.txt": "dev.offlinescan.sample.OcrTestScreenTest:.\n\nTime: 2.562\n\nOK (1 test)",
+    "ocr-pixel-ui.txt": "dev.offlinescan.sample.OcrTestScreenTest:.\n\nTime: 2.542\n\nOK (1 test)",
+    "processing-16k-regression.txt": "dev.offlinescan.processing.AutoEnhancementTest:........\ndev.offlinescan.processing.DetectionBenchmarkTest:.\ndev.offlinescan.processing.DetectionChallengeTest:...\ndev.offlinescan.processing.DocumentQualityTest:.....\ndev.offlinescan.processing.LearnedDocumentDetectorTest:....\ndev.offlinescan.processing.OpenCvProcessorTest:...........\ndev.offlinescan.processing.ResourceBenchmarkTest:.\ndev.offlinescan.processing.TemporalShadowBenchmarkTest:...\n\nTime: 19.294\n\nOK (38 tests)",
+    "export-16k-regression.txt": "dev.offlinescan.export.AndroidExporterTest:......\ndev.offlinescan.export.DiagnosticsExportTest:..\n\nTime: 0.943\n\nOK (8 tests)"
+  },
+  "devices": {
+    "pixel": "Pixel 10 Pro, Android 17/API 37, arm64-v8a, 4096-byte pages",
+    "api26": "Android API 26, x86_64 emulator",
+    "16k": "Android API 37.2, x86_64 emulator, 16384-byte pages"
+  },
+  "packaging_tests": 3,
+  "audit_self_tests": 8,
+  "negative_audit": "Removing the OCR libjpeg notice was rejected",
+  "known_accuracy_finding": "Android 17 default Canvas font at 80 px: 会員番号 read as 会具番号. Language reordering/layout changes did not repair it. Fixed-pixel fixture passing does not resolve this limitation.",
+  "remaining": [
+    "Owner photographed English/Japanese document and card acceptance",
+    "Full-page/sustained OCR memory and latency acceptance",
+    "Stable release promotion"
+  ],
+  "test_apk_sha256": "6bf6e8e11856ecb8a651be8652bbe21d24980d9616444806665fad2abfe3e95b"
+}

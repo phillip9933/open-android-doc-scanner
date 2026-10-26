@@ -84,3 +84,5 @@ Run `python3 tools/prepare_ocr_test_models.py`, then `./gradlew :scanner-sample:
 After saving a scan, select **Recognize text · page N**. Choose English, Japanese, or both, and Document or Card / scattered text. Recognition uses the saved rendered page (including diagnostic raster pages for PDF exports). Results show elapsed recognition time, word highlights, selectable text, and access to the existing 100% image viewer. Changing language or layout clears the old result. Closing the screen discards text; native work already running finishes before cleanup.
 
 Test both languages on documents and card fronts/backs, especially small text, glare, names and numbers with leading zeros. Check text against the image; elapsed time excludes initial model installation. This screen does not extract card fields or add searchable PDF text.
+
+Latest [October 26 verification](../evidence/ocr-closeout-validation.json) covers physical Pixel/API 26/16 KB OCR runtime tests and 38 processing plus eight export tests on 16 KB Android. Photographed document/card acceptance remains pending; see [acceptance findings](OCR-ACCEPTANCE.md).

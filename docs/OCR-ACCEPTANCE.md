@@ -46,3 +46,7 @@ python3 tools/check_ocr_native.py
 python3 tools/audit_release.py --self-test
 python3 tools/audit_release.py
 ```
+
+## Final 16 KB runtime regression
+
+The clean Android API 37.2 x86_64 / 16 KB emulator passed all four OCR tests, 38 processing tests and eight export tests. OCR fixture latency was 240 ms and sampled process peak PSS 97,709 KiB on that emulator. [Machine-readable evidence](../evidence/ocr-closeout-validation.json) includes the observed test outputs.
