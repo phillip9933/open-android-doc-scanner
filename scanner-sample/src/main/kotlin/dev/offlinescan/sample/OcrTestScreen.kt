@@ -3,6 +3,8 @@ package dev.offlinescan.sample
 import android.content.Context
 import android.graphics.BitmapFactory
 import android.os.SystemClock
+import androidx.compose.foundation.gestures.detectDragGestures
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
@@ -17,6 +19,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
@@ -38,6 +41,9 @@ internal fun OcrTestScreen(image: File, onClose: () -> Unit) {
     var busy by remember { mutableStateOf(false) }
     var error by remember { mutableStateOf<String?>(null) }
     var inspect by remember { mutableStateOf(false) }
+    var region by remember { mutableStateOf<OcrRegion?>(null) }
+    var selectRegion by remember { mutableStateOf(false) }
+    var numberField by remember { mutableStateOf(false) }
     var highlights by remember { mutableStateOf(true) }
     Dialog(onDismissRequest=onClose, properties=DialogProperties(usePlatformDefaultWidth=false)) {
         Surface(Modifier.fillMaxSize().systemBarsPadding()) {
@@ -55,9 +61,23 @@ internal fun OcrTestScreen(image: File, onClose: () -> Unit) {
                         FilterChip(selected=layout==value, enabled=!busy, onClick={layout=value; result=null}, label={Text(label)})
                     }
                 }
+                OutlinedButton(enabled=!busy, onClick={selectRegion=true}) {
+                    Text(if(region == null) "Select text or number region" else "Change selected region")
+                }
+                if(region != null) {
+                    Text("Recognition is limited to your selected rectangle.")
+                    TextButton(enabled=!busy, onClick={region=null; numberField=false; result=null}) { Text("Use whole page") }
+                    Row {
+                        Switch(checked=numberField, enabled=!busy, onCheckedChange={numberField=it; result=null})
+                        Text("Digits only · single number line")
+                    }
+                    Text("Use digits only for a printed numeric field. Verify every digit; this does not validate a card number.")
+                }
                 Button(enabled=!busy, onClick={
                     busy=true; error=null; result=null
-                    val config=OcrConfig(languages=languages, layout=layout)
+                    val config=OcrConfig(languages=if(numberField) listOf("eng") else languages,
+                        layout=if(numberField) OcrLayout.SINGLE_LINE else layout,
+                        region=region, characterWhitelist=if(numberField) "0123456789" else null)
                     scope.launch {
                         try {
                             val recognized=withContext(Dispatchers.IO) {
@@ -81,6 +101,8 @@ internal fun OcrTestScreen(image: File, onClose: () -> Unit) {
                 error?.let { Text(it, color=MaterialTheme.colorScheme.error) }
                 result?.let { page ->
                     Text("${page.words.size} words · ${elapsed} ms · ${page.width} × ${page.height}")
+                    Text(if(numberField) "English digits · single line · selected region"
+                        else "${languages.joinToString(" + ")} · ${layout.name.lowercase()} · ${if(region == null) "whole page" else "selected region"}")
                     Row {
                         Switch(checked=highlights, onCheckedChange={highlights=it})
                         Text("Highlight recognized words")
@@ -92,6 +114,9 @@ internal fun OcrTestScreen(image: File, onClose: () -> Unit) {
                 }
             }
         }
+    }
+    if(selectRegion) OcrRegionSelector(image, region, onClose={selectRegion=false}) {
+        region=it; result=null; selectRegion=false
     }
     if(inspect) DiagnosticViewer(image) { inspect=false }
 }
@@ -141,4 +166,58 @@ internal fun installSampleOcrModels(context: Context, cancellation: Cancellation
         } finally { temporary.delete() }
     }
     return directory
+}
+
+/** Selection uses normalized coordinates in the exact upright OCR raster. */
+@Composable
+private fun OcrRegionSelector(image: File, initial: OcrRegion?, onClose: () -> Unit, onSelect: (OcrRegion) -> Unit) {
+    var selected by remember { mutableStateOf(initial) }
+    val preview by produceState<android.graphics.Bitmap?>(null, image) {
+        value=withContext(Dispatchers.IO) {
+            val bounds=BitmapFactory.Options().apply { inJustDecodeBounds=true }
+            BitmapFactory.decodeFile(image.path, bounds)
+            var sample=1
+            while(maxOf(bounds.outWidth, bounds.outHeight)/sample>1600) sample*=2
+            BitmapFactory.decodeFile(image.path, BitmapFactory.Options().apply { inSampleSize=sample })
+        }
+    }
+    Dialog(onDismissRequest=onClose, properties=DialogProperties(usePlatformDefaultWidth=false)) {
+        Surface(Modifier.fillMaxSize().systemBarsPadding()) {
+            Column(Modifier.padding(16.dp), verticalArrangement=Arrangement.spacedBy(12.dp)) {
+                Text("Select a region", style=MaterialTheme.typography.titleLarge)
+                Text("Drag a rectangle around the text. Include all digits and a little blank space. The saved scan is unchanged.")
+                Row {
+                    TextButton(onClick=onClose) { Text("Cancel") }
+                    Button(enabled=selected != null, onClick={selected?.let(onSelect)}) { Text("Use selected region") }
+                }
+                preview?.let { bitmap ->
+                    val pixels=remember(bitmap) { bitmap.asImageBitmap() }
+                    BoxWithConstraints(Modifier.fillMaxWidth().weight(1f)) {
+                        val ratio=bitmap.width.toFloat()/bitmap.height
+                        val displayWidth=minOf(maxWidth, maxHeight*ratio)
+                        Canvas(Modifier.width(displayWidth).aspectRatio(ratio).testTag("ocr-region-image").pointerInput(image) {
+                            var start=Offset.Zero
+                            var end=Offset.Zero
+                            detectDragGestures(onDragStart={start=it; end=it; selected=null},
+                                onDragCancel={selected=null}) { change, delta ->
+                                change.consume()
+                                end+=delta
+                                val left=(minOf(start.x,end.x)/size.width).coerceIn(0f,1f).toDouble()
+                                val right=(maxOf(start.x,end.x)/size.width).coerceIn(0f,1f).toDouble()
+                                val top=(minOf(start.y,end.y)/size.height).coerceIn(0f,1f).toDouble()
+                                val bottom=(maxOf(start.y,end.y)/size.height).coerceIn(0f,1f).toDouble()
+                                selected=if(right-left>0.005 && bottom-top>0.005) OcrRegion(left,top,right,bottom) else null
+                            }
+                        }) {
+                            drawImage(pixels,dstSize=IntSize(size.width.toInt(),size.height.toInt()))
+                            selected?.let { r ->
+                                drawRect(Color(0xFF006E90),Offset((r.left*size.width).toFloat(),(r.top*size.height).toFloat()),
+                                    Size(((r.right-r.left)*size.width).toFloat(),((r.bottom-r.top)*size.height).toFloat()),style=Stroke(3.dp.toPx()))
+                            }
+                        }
+                    }
+                } ?: Text("Loading image…")
+            }
+        }
+    }
 }

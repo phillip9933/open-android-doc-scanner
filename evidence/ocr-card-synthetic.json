@@ -1,0 +1,90 @@
+{
+  "engine": "tesseract 5.5.3",
+  "model_sha256": {
+    "eng": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2",
+    "jpn": "1f5de9236d2e85f5fdf4b3c500f2d4926f8d9449f28f5394472d9e8d83b91b4d"
+  },
+  "limitations": "Synthetic host diagnostic only; not photographed-card or Android acceptance.",
+  "matrix_runs": 117,
+  "summary_scope": "Japanese and bilingual models with document/sparse segmentation only. Fields absent from a fixture are not accuracy failures.",
+  "summary": [
+    {
+      "fixture": "tight_card",
+      "configurations": 4,
+      "exact_number_runs": 4,
+      "exact_japanese_runs": 4
+    },
+    {
+      "fixture": "card_on_page",
+      "configurations": 4,
+      "exact_number_runs": 4,
+      "exact_japanese_runs": 4
+    },
+    {
+      "fixture": "number_region",
+      "configurations": 4,
+      "exact_number_runs": 4,
+      "exact_japanese_runs": 0
+    },
+    {
+      "fixture": "light_on_color",
+      "configurations": 4,
+      "exact_number_runs": 0,
+      "exact_japanese_runs": 4
+    },
+    {
+      "fixture": "light_on_color_inverted",
+      "configurations": 4,
+      "exact_number_runs": 0,
+      "exact_japanese_runs": 4
+    },
+    {
+      "fixture": "card_700px_blur0",
+      "configurations": 4,
+      "exact_number_runs": 4,
+      "exact_japanese_runs": 4
+    },
+    {
+      "fixture": "card_700px_blur0_upscaled",
+      "configurations": 4,
+      "exact_number_runs": 4,
+      "exact_japanese_runs": 4
+    },
+    {
+      "fixture": "card_700px_blur0.6",
+      "configurations": 4,
+      "exact_number_runs": 4,
+      "exact_japanese_runs": 4
+    },
+    {
+      "fixture": "card_700px_blur0.6_upscaled",
+      "configurations": 4,
+      "exact_number_runs": 4,
+      "exact_japanese_runs": 4
+    },
+    {
+      "fixture": "card_350px_blur0",
+      "configurations": 4,
+      "exact_number_runs": 4,
+      "exact_japanese_runs": 0
+    },
+    {
+      "fixture": "card_350px_blur0_upscaled",
+      "configurations": 4,
+      "exact_number_runs": 4,
+      "exact_japanese_runs": 4
+    },
+    {
+      "fixture": "card_350px_blur0.6",
+      "configurations": 4,
+      "exact_number_runs": 4,
+      "exact_japanese_runs": 0
+    },
+    {
+      "fixture": "card_350px_blur0.6_upscaled",
+      "configurations": 4,
+      "exact_number_runs": 4,
+      "exact_japanese_runs": 0
+    }
+  ]
+}
