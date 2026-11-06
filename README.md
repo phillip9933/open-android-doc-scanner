@@ -2,9 +2,9 @@
 
 Independent Apache-2.0 Android document and printed-photo scanner. Kotlin, CameraX, OpenCV and Compose. Core processing works offline without Google Play services, cloud, API keys or model downloads. No network permission or analytics.
 
-**Status: 0.8.0-beta.1 adds optional OCR and card-boundary improvements. Stable remains 0.7.0. This beta is validated with synthetic/emulator/build checks; broader real-world acceptance is open.** See [quality evidence](docs/QUALITY-REPORT.md) and [backlog](docs/BACKLOG.md). Synthetic results are not parity claims or a substitute for real-camera evaluation.
+**Stable SDK 0.8.0 adds optional offline English/Japanese OCR and improves card cropping.** See the [release notes](docs/RELEASE-0.8.0.md) for integration requirements and known limitations.
 
-[SDK beta (0.8.0-beta.1)](https://github.com/phillip9933/open-android-doc-scanner/releases/tag/v0.8.0-beta.1) · [Stable SDK (0.7.0)](https://github.com/phillip9933/open-android-doc-scanner/releases/tag/v0.7.0) · [Documentation](docs/INDEX.md) · [CI](https://github.com/phillip9933/open-android-doc-scanner/actions)
+[Download SDK 0.8.0](https://github.com/phillip9933/open-android-doc-scanner/releases/tag/v0.8.0) · [Documentation](docs/INDEX.md) · [CI](https://github.com/phillip9933/open-android-doc-scanner/actions)
 
 ## Roadmap and work
 
@@ -30,7 +30,7 @@ The connected Android test command requires a supported emulator/device. Windows
 
 ## Optional OCR
 
-The 0.8.0-beta.1 SDK adds `scanner-ocr-tesseract` for offline English/Japanese text recognition, including word positions and confidence. Apps supply local language models. Existing apps keep their current dependencies unless they opt in. See [OCR integration and card scanning](docs/OCR.md).
+The 0.8.0 SDK adds `scanner-ocr-tesseract` for offline English/Japanese text recognition, including word positions and confidence. Apps supply local language models. Existing apps keep their current dependencies unless they opt in. See [OCR integration and card scanning](docs/OCR.md).
 
 ## Ready-made flow
 
@@ -76,7 +76,7 @@ Config bounds quality/dimensions/pages/input pixels. Renders may be smaller due 
 Read [integration examples](docs/INTEGRATION.md), [architecture and ownership](docs/ARCHITECTURE.md), [reuse assessment](docs/REUSE-DECISION.md), [third-party notices](THIRD-PARTY-NOTICES.md).
 
 
-Latest SDK and sample prerelease: [0.7.0](docs/RELEASE-0.7.0.md), with native-detail rendering, neutral paper cleanup, clearer previews and accessible sample exports. The optional `ScannerFlow.saveDestination` host UI slot remains available. Automatic capture waits for focus, compares two untouched JPEG originals, and keeps the sharper acceptable document; rejected captures retry without adding a page. Sharpness and brightness come from the document interior. Settings offers AI (default in the sample and ready-made flow, using bundled DocQuadNet-256 CPU inference) and Standard (OpenCV edges/contours). Generated printed-document results are promising, including a torn corner; sparse synthetic scenes are substantially weaker than Standard. See [learned-model evidence and licensing limits](docs/LEARNED-DETECTOR-RC8.md) and [quality checks](docs/QUALITY-METRICS-RC8.md). Physical handheld and sustained arm64 acceptance remain pending.
+Earlier release: [0.7.0](docs/RELEASE-0.7.0.md), with native-detail rendering, neutral paper cleanup, clearer previews and accessible sample exports. The optional `ScannerFlow.saveDestination` host UI slot remains available. Automatic capture waits for focus, compares two untouched JPEG originals, and keeps the sharper acceptable document; rejected captures retry without adding a page. Sharpness and brightness come from the document interior. Settings offers AI (default in the sample and ready-made flow, using bundled DocQuadNet-256 CPU inference) and Standard (OpenCV edges/contours). Generated printed-document results are promising, including a torn corner; sparse synthetic scenes are substantially weaker than Standard. See [learned-model evidence and licensing limits](docs/LEARNED-DETECTOR-RC8.md) and [quality checks](docs/QUALITY-METRICS-RC8.md). Physical handheld and sustained arm64 acceptance remain pending.
 
 The fullscreen camera keeps its layout as pages are added. Review and save use swipe navigation, adjacent-page peeks and cached previews. Back preserves pages; retake, delete and close confirm discards. Save supports real output names and PDF/JPEG. Advanced adjustments and detection mode stay in secondary panels. Simultaneous multi-document scanning remains deferred.
 

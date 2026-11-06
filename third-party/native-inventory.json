@@ -1475,7 +1475,7 @@
     ],
     "usage": "historical_inspection_only_not_final_runtime"
   },
-  "inspected_apk_sha256": "7222b8607e2308cd1645499149db06ad88a62691850667dbfe2ea3a6b7c948c1",
+  "inspected_apk_sha256": "3982bd7a7e5f267b4ef72043adbc13f5773066ce44ae2b42379830addfbd9514",
   "license_review_status": "evidence_collected_reconciled",
   "mapping_gaps": [],
   "native_build": {

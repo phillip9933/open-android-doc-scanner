@@ -1199,10 +1199,10 @@
       "android.permission.CAMERA",
       "dev.offlinescan.sample.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
     ],
-    "sha256": "7222b8607e2308cd1645499149db06ad88a62691850667dbfe2ea3a6b7c948c1",
-    "size_bytes": 121335652
+    "sha256": "3982bd7a7e5f267b4ef72043adbc13f5773066ce44ae2b42379830addfbd9514",
+    "size_bytes": 121335640
   },
-  "created_utc": "2026-10-26T12:55:35.087824+00:00",
+  "created_utc": "2026-11-06T02:15:26.699036+00:00",
   "dependencies": {
     "configuration": "debugRuntimeClasspath",
     "coordinates_found": [
@@ -1392,7 +1392,7 @@
     ],
     "forbidden_coordinates": [],
     "path": "evidence/dependency-graph.txt",
-    "sha256": "0f1a21ce8831ba40b8b0c4266820fe9a07a482ce49fbfffdc51a4e5a50efef1b",
+    "sha256": "ac6851ed7a0040326fd95391f9af92fadccc48c544c6344367b5c98570b34838",
     "source_built_opencv_java_jar": {
       "path": "scanner-processing-opencv/libs/opencv-java-4.12.0.jar",
       "sha256": "60b7be2b59393bc1689b840d7b60fd75b811bb06477bdd03abee6fbc17afa5cf"
@@ -1538,7 +1538,7 @@
         "android.permission.CAMERA",
         "dev.offlinescan.sample.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
       ],
-      "sha256": "f18b9981c1ecb75c89928f96708bd26bfa995bf15e14c09a0f9ac2e3609703c4"
+      "sha256": "24f90561487de1075219c1460c54b70458b667cc13754e4ad709e43e984cacd8"
     },
     {
       "path": "scanner-sample/build/intermediates/merged_manifests/debug/processDebugManifest/AndroidManifest.xml",
@@ -1546,7 +1546,7 @@
         "android.permission.CAMERA",
         "dev.offlinescan.sample.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
       ],
-      "sha256": "f18b9981c1ecb75c89928f96708bd26bfa995bf15e14c09a0f9ac2e3609703c4"
+      "sha256": "24f90561487de1075219c1460c54b70458b667cc13754e4ad709e43e984cacd8"
     },
     {
       "path": "scanner-ui-compose/build/intermediates/aapt_friendly_merged_manifests/debug/processDebugManifest/aapt/AndroidManifest.xml",

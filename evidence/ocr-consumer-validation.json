@@ -1,6 +1,6 @@
 {
-  "sdk_version": "0.8.0-beta.1",
-  "archive_sha256": "6f68f7000817b981854dd68a5863804a28c6f388b7040af1b4e4ef4879d4af99",
+  "sdk_version": "0.8.0",
+  "archive_sha256": "1f350dd8442ee8a2959d48d6ef31918f717a6aeb88a04945438d587eed094ae1",
   "consumers": {
     "plain": {
       "apk_sha256": "ca1e5543d0b0781b61b047218a380f05869b5823a8c0395842e8b05c830f05f3",
