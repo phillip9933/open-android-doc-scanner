@@ -90,7 +90,7 @@ def elf_properties(data: bytes) -> dict:
 
 
 def elf_identity(data: bytes) -> dict:
-    """Identity survives debug-symbol stripping; retain both GNU build ID and allocated-section digest."""
+    """Identity survives debug-symbol stripping; hash the loaded image and retain GNU build IDs for diagnostics."""
     properties = elf_properties(data)
     endian = "<" if data[5] == 1 else ">"
     ph_offset = struct.unpack_from(endian + "Q", data, 32)[0]
@@ -114,31 +114,24 @@ def elf_identity(data: bytes) -> dict:
                 raise ValueError("Truncated ELF note")
             if name.rstrip(b"\0") == b"GNU" and note_type == 3:
                 build_ids.add(value.hex())
-    section_offset = struct.unpack_from(endian + "Q", data, 40)[0]
-    section_size, section_count, names_index = struct.unpack_from(endian + "HHH", data, 58)
-    allocated = []
-    if section_offset and section_count and section_size >= 64 and names_index < section_count:
-        if section_offset + section_size * section_count > len(data):
-            raise ValueError("ELF section table exceeds file size")
-        sections = [struct.unpack_from(endian + "IIQQQQIIQQ", data, section_offset + index * section_size)
-                    for index in range(section_count)]
-        names_section = sections[names_index]
-        names = data[names_section[4]:names_section[4] + names_section[5]]
-        for name_offset, kind, flags, address, offset, size, _, _, _, _ in sections:
-            if flags & 2 == 0:
-                continue
-            name_end = names.find(b"\0", name_offset)
-            if name_end < 0:
-                raise ValueError("Unterminated ELF section name")
-            if kind != 8 and offset + size > len(data):
-                raise ValueError("ELF allocated section exceeds file size")
-            allocated.append({"name": names[name_offset:name_end].decode("utf-8"), "type": kind,
-                              "flags": flags, "address": address, "size": size,
-                              "content_sha256": None if kind == 8 else digest(data[offset:offset + size])})
-    return {"machine": properties["machine"], "gnu_build_id": next(iter(build_ids)) if len(build_ids) == 1 else None,
-            "allocated_sections_sha256": digest(json.dumps(sorted(allocated, key=lambda item: (item["address"], item["name"])),
-                                                          sort_keys=True).encode()) if allocated else None,
-            "allocated_section_count": len(allocated)}
+    # A strip tool may rewrite the section table pointers. The dynamic loader uses
+    # the remaining ELF header, the program headers, and mapped segment bytes.
+    header = bytearray(data[:64])
+    header[40:48] = bytes(8)  # e_shoff
+    header[58:64] = bytes(6)  # e_shentsize, e_shnum, e_shstrndx
+    identity = hashlib.sha256(header)
+    identity.update(data[ph_offset:ph_offset + ph_size * ph_count])
+    for segment in properties["load_segments"]:
+        if not segment["file_range_valid"] or segment["file_size"] > segment["memory_size"]:
+            raise ValueError("Invalid ELF PT_LOAD file range")
+        start = segment["offset"]
+        end = start + segment["file_size"]
+        if start < len(header):
+            identity.update(header[start:min(end, len(header))])
+        identity.update(memoryview(data)[max(start, len(header)):end])
+    return {"machine": properties["machine"],
+            "gnu_build_id": next(iter(build_ids)) if len(build_ids) == 1 else None,
+            "load_image_sha256": identity.hexdigest()}
 
 
 def native_match(source: dict, packaged: dict) -> str | None:
@@ -147,10 +140,8 @@ def native_match(source: dict, packaged: dict) -> str | None:
     if source["sha256"] == packaged["sha256"]:
         return "exact_sha256"
     first, second = source["identity"], packaged["identity"]
-    if first["allocated_sections_sha256"] and first["allocated_sections_sha256"] == second["allocated_sections_sha256"]:
-        return "normalized_allocated_sections_sha256"
-    if first["gnu_build_id"] and first["gnu_build_id"] == second["gnu_build_id"]:
-        return "gnu_build_id"
+    if first["load_image_sha256"] == second["load_image_sha256"]:
+        return "normalized_load_image_sha256"
     return None
 
 
@@ -709,6 +700,7 @@ class AuditSelfTests(unittest.TestCase):
         names = b"\0.text\0.debug\0.shstrtab\0"
         debug_bytes = b"debug" if debug else b""
         header = bytearray(self.elf(16384))
+        struct.pack_into("<QQ", header, 96, 124, 124)
         string_offset = len(header) + len(code) + len(debug_bytes)
         payload = bytes(header) + code + debug_bytes + names
         payload += b"\0" * (-len(payload) % 8)
@@ -722,16 +714,16 @@ class AuditSelfTests(unittest.TestCase):
         struct.pack_into("<HHH", result, 58, 64, len(sections), len(sections) - 1)
         return bytes(result)
 
-    def test_stripping_changes_raw_hash_but_preserves_allocated_native_identity(self):
+    def test_stripping_changes_raw_hash_but_preserves_loaded_native_identity(self):
         source, stripped = self.section_fixture(True), self.section_fixture(False)
         self.assertNotEqual(digest(source), digest(stripped))
         first = {"sha256": digest(source), "identity": elf_identity(source)}
         second = {"sha256": digest(stripped), "identity": elf_identity(stripped)}
-        self.assertEqual("normalized_allocated_sections_sha256", native_match(first, second))
+        self.assertEqual("normalized_load_image_sha256", native_match(first, second))
         changed = self.section_fixture(False, b"c0de")
         self.assertIsNone(native_match(first, {"sha256": digest(changed), "identity": elf_identity(changed)}))
 
-    def test_gnu_build_id_survives_nonload_debug_bytes(self):
+    def test_nonload_debug_bytes_do_not_change_load_identity(self):
         result = bytearray(212)
         result[:64] = self.elf(16384)[:64]
         struct.pack_into("<H", result, 56, 2)
@@ -741,8 +733,17 @@ class AuditSelfTests(unittest.TestCase):
         first = elf_identity(bytes(result))
         self.assertEqual(bytes(range(20)).hex(), first["gnu_build_id"])
         extended = bytes(result) + b"nonallocated debug symbols"
-        self.assertEqual("gnu_build_id", native_match({"sha256": digest(result), "identity": first},
+        self.assertEqual("normalized_load_image_sha256", native_match({"sha256": digest(result), "identity": first},
                                                      {"sha256": digest(extended), "identity": elf_identity(extended)}))
+
+    def test_build_id_is_diagnostic_only(self):
+        first = {"sha256": "source", "identity": {
+            "machine": 183, "gnu_build_id": "same", "load_image_sha256": "source-load"
+        }}
+        second = {"sha256": "packaged", "identity": {
+            "machine": 183, "gnu_build_id": "same", "load_image_sha256": "packaged-load"
+        }}
+        self.assertIsNone(native_match(first, second))
 
     def binary_manifest(self, utf8: bool) -> bytes:
         values = ["uses-permission", "name", "android.permission.INTERNET"]

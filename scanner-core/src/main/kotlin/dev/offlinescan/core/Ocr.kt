@@ -24,7 +24,9 @@ data class OcrConfig(
     val maxInputBytes: Long = 64L * 1024 * 1024,
     val maxInputDimension: Int = 16_384,
     /** Experimental bounded straightening for an explicitly selected dark-text single line. */
-    val straightenLine: Boolean = false
+    val straightenLine: Boolean = false,
+    /** Cap on estimated bitmap, native image, model and OCR scratch memory. */
+    val maxWorkingBytes: Long = 192L * 1024 * 1024
 ) {
     init {
         require(!straightenLine || (layout == OcrLayout.SINGLE_LINE && region != null)) { "Line straightening requires a selected single-line region" }
@@ -34,6 +36,16 @@ data class OcrConfig(
         require(maxInputPixels in 1..64_000_000)
         require(maxInputBytes in 1..128L * 1024 * 1024)
         require(maxInputDimension in 1..32_768)
+        require(maxWorkingBytes in 1..256L * 1024 * 1024)
+    }
+
+    /** Pixel ceiling after reserving model memory and limiting spending to half the VM heap. */
+    fun inputPixelBudget(): Long {
+        val workingBytes = minOf(maxWorkingBytes, Runtime.getRuntime().maxMemory() / 2)
+        val modelAndScratchReserve = (16L + 12L * languages.size) * 1024 * 1024
+        // Account for the source bitmap, pixel conversions, native images and scratch space.
+        val bytesPerPixel = if (straightenLine) 48 else 32
+        return minOf(maxInputPixels, (workingBytes - modelAndScratchReserve).coerceAtLeast(0) / bytesPerPixel)
     }
 }
 
@@ -55,6 +67,15 @@ class ScanOcr(private val processor: ImageProcessor, private val recognizer: Tex
     ): List<OcrPage> {
         cancellation.check()
         require(pages.size in 1..scanConfig.pageLimit) { "OCR batch exceeds page limit or is empty" }
+        val boundedOcr = ocrConfig.copy(
+            maxWorkingBytes = minOf(ocrConfig.maxWorkingBytes, scanConfig.maxWorkingBytes)
+        )
+        val pixelBudget = boundedOcr.inputPixelBudget()
+        require(pixelBudget > 0) { "OCR working-memory budget is too small" }
+        val renderConfig = scanConfig.copy(
+            maxRenderPixels = minOf(scanConfig.maxRenderPixels, pixelBudget),
+            maxOutputDimension = minOf(scanConfig.maxOutputDimension, boundedOcr.maxInputDimension.coerceAtLeast(256))
+        )
         val snapshot = pages.toList()
         require(snapshot.size in 1..scanConfig.pageLimit) { "OCR batch exceeds page limit or is empty" }
         require(temporaryRoot.isDirectory || temporaryRoot.mkdirs()) { "Cannot create OCR temporary directory" }
@@ -66,9 +87,9 @@ class ScanOcr(private val processor: ImageProcessor, private val recognizer: Tex
                 cancellation.check()
                 val image = File(directory, "page.png")
                 try {
-                    processor.render(page.original, page.edits, image, ExportFormat.PNG, scanConfig, cancellation)
+                    processor.render(page.original, page.edits, image, ExportFormat.PNG, renderConfig, cancellation)
                     cancellation.check()
-                    results += recognizer.recognize(image, page.id, ocrConfig, cancellation)
+                    results += recognizer.recognize(image, page.id, boundedOcr, cancellation)
                     cancellation.check()
                     progress.update(results.size, snapshot.size)
                 } finally { image.delete() }

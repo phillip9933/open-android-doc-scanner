@@ -8,10 +8,8 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Canvas
 import android.graphics.Color
-import android.graphics.Matrix
 import android.graphics.Paint
 import android.graphics.RectF
-import androidx.exifinterface.media.ExifInterface
 import dev.offlinescan.core.*
 import java.io.File
 import java.nio.FloatBuffer
@@ -75,11 +73,7 @@ class LearnedDocumentDetector(context: Context) : AutoCloseable {
         var upright: Bitmap? = null
         try {
             cancellation.check()
-            val exif = ExifInterface(source)
-            val matrix = Matrix().apply {
-                if (exif.isFlipped) postScale(-1f, 1f)
-                postRotate(exif.rotationDegrees.toFloat())
-            }
+            val matrix = uprightExifMatrix(source)
             upright = if (matrix.isIdentity) decoded else Bitmap.createBitmap(decoded, 0, 0, decoded.width, decoded.height, matrix, true)
             return detectBitmap(upright, cancellation)
         } finally {

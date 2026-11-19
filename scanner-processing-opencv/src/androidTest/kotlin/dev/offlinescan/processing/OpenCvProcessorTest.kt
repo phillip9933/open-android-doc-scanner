@@ -83,13 +83,21 @@ class OpenCvProcessorTest {
             val page = processor.render(input, Edits(), output, ExportFormat.PNG, ScanConfig())
             assertEquals(info, page.width to page.height)
             val image = BitmapFactory.decodeFile(output.absolutePath)!!
+            val raw = BitmapFactory.decodeFile(input.path)
+            val preview = Bitmap.createBitmap(raw, 0, 0, raw.width, raw.height, uprightExifMatrix(input), true)
             try {
+                assertEquals(image.width to image.height, preview.width to preview.height)
                 val locations = listOf(.2 to .2, .8 to .2, .8 to .8, .2 to .8)
                 for (i in locations.indices) {
                     val (x, y) = locations[i]
+                    assertColorNear(colors[expected[orientation - 1][i]], preview.getPixel((x * preview.width).toInt(), (y * preview.height).toInt()), 25)
                     assertColorNear(colors[expected[orientation - 1][i]], image.getPixel((x * image.width).toInt(), (y * image.height).toInt()), 25)
                 }
-            } finally { image.recycle() }
+            } finally {
+                if (preview !== raw) preview.recycle()
+                raw.recycle()
+                image.recycle()
+            }
         }
     }
 
@@ -341,6 +349,25 @@ class OpenCvProcessorTest {
             catch (e: CancellationException) { assertSame(signal, e) }
         }
         assertEquals(80 to 60, processor.inspect(input, ScanConfig()))
+    }
+
+    @Test fun cancelledReplacementKeepsExistingRender() {
+        val input = cornerFixture("source.png", Bitmap.CompressFormat.PNG)
+        val output = File(directory, "page.png")
+        processor.render(input, Edits(), output, ExportFormat.PNG, ScanConfig())
+        val previous = output.readBytes()
+        val edits = Edits(rotationQuarterTurns = 1)
+        try {
+            processor.render(input, edits, output, ExportFormat.PNG, ScanConfig(), Cancellation {
+                if (directory.listFiles().orEmpty().any { it.name.startsWith(".scan-render-") && it.length() > 0 })
+                    throw CancellationException()
+            })
+            fail("Expected cancellation after encoding")
+        } catch (_: CancellationException) { }
+        assertArrayEquals(previous, output.readBytes())
+        assertEquals(setOf(input.name, output.name), directory.list()!!.toSet())
+        processor.render(input, edits, output, ExportFormat.PNG, ScanConfig())
+        assertEquals(60 to 80, processor.inspect(output, ScanConfig()))
     }
 
     private fun cornerFixture(name: String, format: Bitmap.CompressFormat): File {

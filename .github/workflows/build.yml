@@ -31,12 +31,6 @@ jobs:
         run: python3 tools/prepare_ocr_test_models.py
       - name: Build, JVM tests and lint
         run: ./gradlew :scanner-core:test :scanner-ocr-tesseract:testDebugUnitTest :scanner-ocr-tesseract:assembleRelease :scanner-ocr-tesseract:assembleDebugAndroidTest :scanner-camera:testDebugUnitTest :scanner-sample:assembleDebug :scanner-processing-opencv:assembleDebugAndroidTest :scanner-export:assembleDebugAndroidTest :scanner-sample:assembleDebugAndroidTest lint --console=plain
-      - name: Verify SDK archive and independent consumers
-        run: |
-          python3 tools/test_package_maven_release.py
-          ./gradlew publishAllPublicationsToLocalReleaseRepository --console=plain
-          python3 tools/package_maven_release.py
-          python3 tools/verify_ocr_consumer.py
       - name: Collect dependency evidence
         run: |
           ./gradlew :scanner-sample:writeDependencyInventory --console=plain
@@ -46,6 +40,12 @@ jobs:
         run: |
           python3 tools/audit_release.py --self-test
           python3 tools/audit_release.py
+      - name: Verify SDK archive and independent consumers
+        run: |
+          python3 tools/test_package_maven_release.py
+          ./gradlew publishAllPublicationsToLocalReleaseRepository --console=plain
+          python3 tools/package_maven_release.py
+          python3 tools/verify_ocr_consumer.py
       - name: Save build and test reports
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4

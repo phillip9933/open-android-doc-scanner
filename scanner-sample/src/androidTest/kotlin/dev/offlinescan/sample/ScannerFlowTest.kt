@@ -37,7 +37,8 @@ class ScannerFlowTest {
     @get:Rule val compose=createAndroidComposeRule<MainActivity>()
     @Test fun importCropAppearanceReviewAndPdfComplete() {
         val context=compose.activity
-        val source=File(context.cacheDir,"host-test-${System.nanoTime()}.png")
+        val importRoot = File(context.filesDir, "scans/test-import-${System.nanoTime()}").apply { mkdirs() }
+        val source = File(importRoot, "host.png")
         val destination=File(context.filesDir,"ui-export-${System.nanoTime()}")
         val bitmap=Bitmap.createBitmap(640,480,Bitmap.Config.ARGB_8888)
         try { bitmap.eraseColor(Color.rgb(80,130,180)); source.outputStream().use { bitmap.compress(Bitmap.CompressFormat.PNG,100,it) } } finally { bitmap.recycle() }
@@ -46,7 +47,7 @@ class ScannerFlowTest {
         val pickedSource=AtomicReference(source)
         val registry=object: ActivityResultRegistry() {
             override fun <I,O> onLaunch(requestCode:Int,contract:ActivityResultContract<I,O>,input:I,options:ActivityOptionsCompat?) {
-                Handler(Looper.getMainLooper()).post { dispatchResult(requestCode,Activity.RESULT_OK,Intent().setData(Uri.fromFile(pickedSource.get()))) }
+                Handler(Looper.getMainLooper()).post { dispatchResult(requestCode,Activity.RESULT_OK,Intent().setData(androidx.core.content.FileProvider.getUriForFile(context, "${context.packageName}.files", pickedSource.get()))) }
             }
         }
         val registryOwner=object: ActivityResultRegistryOwner { override val activityResultRegistry=registry }
@@ -124,7 +125,7 @@ class ScannerFlowTest {
             compose.onNodeWithText("Done").performScrollTo().performClick()
             compose.onNodeWithText("Apply").performClick()
             compose.onNodeWithContentDescription("Add page").performClick()
-            val portrait=File(context.cacheDir,"host-portrait-${System.nanoTime()}.png")
+            val portrait=File(importRoot,"host-portrait-${System.nanoTime()}.png")
             val second=Bitmap.createBitmap(480,640,Bitmap.Config.ARGB_8888)
             try { second.eraseColor(Color.rgb(170,90,60)); portrait.outputStream().use { second.compress(Bitmap.CompressFormat.PNG,100,it) } } finally { second.recycle() }
             pickedSource.set(portrait)
@@ -238,8 +239,54 @@ class ScannerFlowTest {
             assertEquals("application/pdf",output.mimeType); assertTrue(output.files.single().length()>0); assertTrue(source.exists())
             assertEquals("Test scan.pdf",output.files.single().name)
             compose.waitForIdle(); assertTrue(output.files.single().exists())
-        } finally { source.delete(); destination.deleteRecursively() }
+        } finally { importRoot.deleteRecursively(); destination.deleteRecursively() }
     }
+    @Test fun changingHostConfigStartsAnEmptySessionThatCanSave() {
+        val context = compose.activity
+        val root = File(context.filesDir, "scans/config-test-${System.nanoTime()}").apply { mkdirs() }
+        val source = File(root, "page.png")
+        val bitmap = Bitmap.createBitmap(320, 240, Bitmap.Config.ARGB_8888)
+        try {
+            bitmap.eraseColor(Color.WHITE)
+            source.outputStream().use { bitmap.compress(Bitmap.CompressFormat.PNG, 100, it) }
+        } finally { bitmap.recycle() }
+        val registry = object : ActivityResultRegistry() {
+            override fun <I,O> onLaunch(requestCode: Int, contract: ActivityResultContract<I,O>, input: I, options: ActivityOptionsCompat?) {
+                val uri = androidx.core.content.FileProvider.getUriForFile(context, "${context.packageName}.files", source)
+                Handler(Looper.getMainLooper()).post { dispatchResult(requestCode, Activity.RESULT_OK, Intent().setData(uri)) }
+            }
+        }
+        val owner = object : ActivityResultRegistryOwner { override val activityResultRegistry = registry }
+        val config = mutableStateOf(ScanConfig(mode = ScanMode.PHOTO, autoCapture = false))
+        val results = java.util.concurrent.CopyOnWriteArrayList<ScanResult>()
+        fun addPage() {
+            compose.onNodeWithContentDescription("Import image").performClick()
+            compose.waitUntil(15_000) {
+                compose.onAllNodesWithContentDescription("Review page 1").fetchSemanticsNodes().isNotEmpty()
+            }
+        }
+        try {
+            context.runOnUiThread {
+                context.setContentForTest {
+                    CompositionLocalProvider(LocalActivityResultRegistryOwner provides owner) {
+                        MaterialTheme { ScannerFlow(config.value, File(root, "output")) { results.add(it) } }
+                    }
+                }
+            }
+            addPage()
+            compose.runOnIdle { config.value = config.value.copy(maxPages = 1) }
+            compose.onNodeWithContentDescription("Review page 1").assertDoesNotExist()
+            addPage()
+            compose.onNodeWithText("Next").performClick()
+            compose.onNodeWithText("Next").performClick()
+            compose.onNodeWithText("Save").performClick()
+            compose.waitUntil(30_000) { results.isNotEmpty() }
+            val output = (results.single() as ScanResult.Completed).output
+            assertEquals(1, output.pageCount)
+            assertTrue(output.files.single().length() > 0)
+        } finally { root.deleteRecursively() }
+    }
+
     @Test fun cancelReturnsTypedCancellationOnce() {
         val result=AtomicReference<ScanResult?>(null); var callbacks=0
         compose.activity.runOnUiThread {

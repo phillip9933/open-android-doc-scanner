@@ -34,6 +34,7 @@ import dev.offlinescan.core.Geometry
 import dev.offlinescan.core.Quad
 import dev.offlinescan.core.Point
 import dev.offlinescan.core.ScanConfig
+import dev.offlinescan.core.ScanMode
 import dev.offlinescan.core.ScanError
 import dev.offlinescan.processing.OpenCvProcessor
 import java.io.File
@@ -88,7 +89,7 @@ class ScannerCamera @JvmOverloads constructor(
     private val captureLock = Any()
     @Volatile private var pendingCapture: PendingCapture? = null
     private class PendingCapture(val staging: File, val destination: File, val onSaved: (File) -> Unit,
-        val automatic: Boolean, val reference: Detection?, val epoch: Long, val onRejected: (String) -> Unit,
+        val automatic: Boolean, val mode: ScanMode, val reference: Detection?, val epoch: Long, val onRejected: (String) -> Unit,
         val onQualityWarning: () -> Unit) {
         val files = mutableListOf(staging)
         var bestFile: File? = null
@@ -272,6 +273,11 @@ class ScannerCamera @JvmOverloads constructor(
 
     /** Manual captures are kept even when autofocus or the still sharpness check suggests softness. */
     fun capture(destination: File, automatic: Boolean, onRejected: (String) -> Unit,
+        onQualityWarning: () -> Unit, onSaved: (File) -> Unit) =
+        capture(destination, automatic, config.mode, onRejected, onQualityWarning, onSaved)
+
+    /** Snapshot the UI-selected mode for all quality checks on this still. */
+    fun capture(destination: File, automatic: Boolean, mode: ScanMode, onRejected: (String) -> Unit,
         onQualityWarning: () -> Unit, onSaved: (File) -> Unit) = onMain {
         if (closed.get() || imageCapture == null || !active.get()) {
             report("Camera is not ready for capture"); return@onMain
@@ -286,7 +292,7 @@ class ScannerCamera @JvmOverloads constructor(
         } catch (error: Exception) {
             gate.captureFinished(false); report("Unable to prepare the capture file", error, ErrorCode.STORAGE); return@onMain
         }
-        val pending = PendingCapture(staging, destination, onSaved, automatic, latestDetection, generation.get(), onRejected, onQualityWarning)
+        val pending = PendingCapture(staging, destination, onSaved, automatic, mode, latestDetection, generation.get(), onRejected, onQualityWarning)
         synchronized(captureLock) {
             if (closed.get()) { staging.delete(); gate.captureFinished(false); return@onMain }
             pendingCapture = pending
@@ -357,7 +363,7 @@ class ScannerCamera @JvmOverloads constructor(
                                             quality = CaptureQualityPolicy.Sample(measured.sharpness, measured.brightness,
                                                 measured.informativeTiles, sameDocument)
                                         }
-                                    } else if (config.mode != dev.offlinescan.core.ScanMode.PHOTO) {
+                                    } else if (pending.mode != ScanMode.PHOTO) {
                                         try {
                                             val detected = stillDetector?.invoke(file, cancel) ?: processor.detect(file, config, cancel)
                                             val reference = pending.reference

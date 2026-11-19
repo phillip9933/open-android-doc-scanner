@@ -16,6 +16,9 @@ class PackagingTest(unittest.TestCase):
             version='0.8.0-SNAPSHOT' if snapshot else ('0.8.0-beta.1' if beta else '0.8.0')
             (root/'build.gradle.kts').write_text(f'allprojects {{ version = "{version}" }}')
             for path in ('LICENSE','NOTICE','THIRD-PARTY-NOTICES.md','docs/RELEASE-0.8.0.md','docs/NATIVE-BUILD.md','docs/OCR.md','docs/OCR-SECURITY.md','docs/FIELD-TESTING.md','docs/INTEGRATION.md','docs/OCR-ACCEPTANCE.md','docs/OCR-CARD-INVESTIGATION.md','evidence/ocr-native-build.json'):(root/path).write_text('fixture')
+            inventories = ("third-party/native-inventory.json", "third-party/runtime-inventory.json")
+            for inventory in inventories:
+                (root/inventory).write_text(f'{{"version": "{version}", "inventory": "{inventory}"}}')
             for module in MODULES:
                 target=root/'release/maven/dev/offlinescan'/module/version;target.mkdir(parents=True)
                 suffix='jar' if module=='scanner-core' else 'aar'
@@ -34,6 +37,8 @@ class PackagingTest(unittest.TestCase):
             self.assertEqual(0,run.returncode,run.stderr)
             archive=root/'release'/f'open-android-doc-scanner-{version}-sdk-maven.zip'
             with zipfile.ZipFile(archive) as z:
+                for inventory in inventories:
+                    self.assertEqual((root/inventory).read_bytes(), z.read(inventory))
                 self.assertFalse(any('20261025' in n for n in z.namelist()))
                 self.assertIn('docs/OCR.md',z.namelist())
                 self.assertIn('docs/FIELD-TESTING.md',z.namelist())

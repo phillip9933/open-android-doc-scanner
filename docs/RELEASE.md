@@ -6,6 +6,10 @@ Current stable release: **0.8.0**. See the [release notes](RELEASE-0.8.0.md). Th
 
 ```sh
 ./gradlew :scanner-core:test :scanner-camera:testDebugUnitTest :scanner-ocr-tesseract:testDebugUnitTest :scanner-sample:assembleDebug lint
+./gradlew :scanner-sample:writeDependencyInventory
+./gradlew :scanner-sample:dependencies --configuration debugRuntimeClasspath --console=plain > evidence/dependency-graph.txt
+python3 tools/collect_licenses.py
+python3 tools/audit_release.py
 ./gradlew publishAllPublicationsToLocalReleaseRepository
 python3 tools/package_maven_release.py
 python3 tools/verify_ocr_consumer.py

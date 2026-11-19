@@ -18,6 +18,7 @@ import androidx.compose.ui.unit.dp
 import androidx.core.content.FileProvider
 import androidx.exifinterface.media.ExifInterface
 import dev.offlinescan.core.*
+import dev.offlinescan.ui.ProviderTransfers
 import java.io.File
 import kotlinx.coroutines.*
 import org.json.JSONArray
@@ -42,13 +43,12 @@ internal fun SavedScanPanel(output: ScanOutput) {
         if(result.resultCode==Activity.RESULT_OK && uri!=null && file!=null) scope.launch {
             busy=true
             try {
-                withContext(Dispatchers.IO) {
-                    context.contentResolver.openOutputStream(uri,"w")?.use { dest -> file.inputStream().use { it.copyTo(dest) } }
-                        ?: error("Cannot open the selected document")
-                }
+                ProviderTransfers.saveDocument(context.contentResolver, uri, file)
                 message="Saved ${file.name} to your selected folder."
             } catch(e:Exception) {
-                runCatching {android.provider.DocumentsContract.deleteDocument(context.contentResolver,uri)}
+                withContext(NonCancellable) {
+                    runCatching { ProviderTransfers.deleteDocument(context.contentResolver, uri) }
+                }
                 if(e is CancellationException) throw e
                 error="Save failed: ${e.message}"
             }

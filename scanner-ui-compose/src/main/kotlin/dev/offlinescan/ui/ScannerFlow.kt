@@ -8,7 +8,6 @@ import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Matrix
-import android.net.Uri
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.compose.BackHandler
@@ -67,6 +66,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.key
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableIntStateOf
@@ -102,7 +102,7 @@ import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.content.ContextCompat
-import androidx.exifinterface.media.ExifInterface
+import dev.offlinescan.processing.uprightExifMatrix
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import dev.offlinescan.camera.ScannerCamera
 import dev.offlinescan.camera.AutoCaptureGate
@@ -128,7 +128,6 @@ import dev.offlinescan.export.AndroidExporter
 import dev.offlinescan.processing.LearnedDocumentDetector
 import dev.offlinescan.processing.OpenCvProcessor
 import java.io.File
-import java.io.FileOutputStream
 import java.util.concurrent.atomic.AtomicBoolean
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
@@ -138,6 +137,8 @@ import kotlinx.coroutines.currentCoroutineContext
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
 
 private const val MAX_IMPORT_BYTES = 64L * 1024L * 1024L
@@ -160,6 +161,21 @@ fun ScannerFlow(
     onResult: (ScanResult) -> Unit
 ) {
     val context = LocalContext.current
+    // A different host configuration starts a new session, including its UI and callbacks.
+    key(context, config) {
+        ScannerSessionFlow(context, config, outputDirectory, saveDestination, includeDiagnostics, onResult)
+    }
+}
+
+@Composable
+private fun ScannerSessionFlow(
+    context: Context,
+    config: ScanConfig,
+    outputDirectory: File,
+    saveDestination: (@Composable (enabled: Boolean) -> Unit)?,
+    includeDiagnostics: Boolean,
+    onResult: (ScanResult) -> Unit
+) {
     val scope = rememberCoroutineScope()
     val delivered = remember { AtomicBoolean(false) }
     val disposed = remember { AtomicBoolean(false) }
@@ -258,10 +274,7 @@ fun ScannerFlow(
                 try {
                     val importFile = File(context.cacheDir, "import-${System.nanoTime()}.img")
                     source = importFile
-                    withContext(Dispatchers.IO) {
-                        val job = currentCoroutineContext()[Job]
-                        copyBoundedUri(context, uri, importFile, Cancellation { if (job?.isActive != true) throw CancellationException() })
-                    }
+                    ProviderTransfers.importImage(context.contentResolver, uri, importFile, MAX_IMPORT_BYTES)
                     val targetId = replaceTargetId
                     val operationJob = currentCoroutineContext()[Job]
                     val page = sessionLifetime.run {
@@ -384,7 +397,7 @@ fun ScannerFlow(
                     canAdd = pages.size < config.pageLimit || replaceTargetId != null,
                     onPage = { id -> pendingRetakeIndex = null; selectedId = id; stage = Stage.REVIEW },
                     onCancel = { if (!busy) { if(pages.isEmpty()) deliver(ScanResult.Cancelled) else discardRequested=true } },
-                    pageBitmap = { page -> rememberRenderedPreview(page,processor,config,sessionLifetime) },
+                    pageBitmap = { page -> rememberRenderedPreview(page,processor,config,sessionLifetime,384) },
                     busy = busy,
                     obscured = discardRequested || deleteRequestedId != null || retakeRequestedId != null || error != null,
                     error = error?.let { userMessage(it) },
@@ -423,14 +436,14 @@ fun ScannerFlow(
                     busy = busy, progress = progress,
                     onCancelExport = { activeCancellation?.set(true) },
                     onBack = { stage = Stage.CAPTURE },
-                    pageBitmap = { page -> rememberRenderedPreview(page,processor,config,sessionLifetime) },
+                    pageBitmap = { page -> rememberRenderedPreview(page,processor,config,sessionLifetime,384) },
                     detailedPageBitmap = { page -> rememberRenderedPreview(page,processor,config,sessionLifetime,3072) }
                 )
                 Stage.SAVE -> ScannerSave(pages=pages.toList(),selectedId=selectedId,onSelect={selectedId=it},format=format,onFormat={format=it},
                     documentName=documentName,onDocumentNameChange={documentName=it},onBack={stage=Stage.REVIEW},onClose={discardRequested=true},
                     onFinish=::exportScan,busy=busy,progress=progress,onCancel={activeCancellation?.set(true)},
                     saveDestination=saveDestination,
-                    pageBitmap={page->rememberRenderedPreview(page,processor,config,sessionLifetime)},
+                    pageBitmap={page->rememberRenderedPreview(page,processor,config,sessionLifetime,384)},
                     detailedPageBitmap={page->rememberRenderedPreview(page,processor,config,sessionLifetime,3072)})
             }
         }
@@ -505,26 +518,25 @@ private class SessionLifetime(private val session: ScanSession) {
     private val lock = Any()
     private var active = 0
     private var closeRequested = false
-    private data class PreviewKey(val id: String, val original: File, val edits: Edits, val edge: Int)
+    private data class PreviewKey(val id: String, val original: File, val edits: Edits, val config: ScanConfig)
     private val previews = LinkedHashMap<PreviewKey, Bitmap>(16, .75f, true)
     private var previewBytes = 0L
-    private val maximumPreviewBytes = 48L * 1024 * 1024
+    private val maximumPreviewBytes = minOf(48L * 1024 * 1024, Runtime.getRuntime().maxMemory() / 8)
 
-    fun cachedPreview(page: ScanPage, edge: Int): Bitmap? = synchronized(lock) {
-        previews[PreviewKey(page.id,page.original,page.edits,edge)]?.takeUnless { it.isRecycled }
+    fun cachedPreview(page: ScanPage, config: ScanConfig): Bitmap? = synchronized(lock) {
+        previews[PreviewKey(page.id, page.original, page.edits, config)]?.takeUnless { it.isRecycled }
     }
 
-    fun cachePreview(page: ScanPage, bitmap: Bitmap, edge: Int) = synchronized(lock) {
-        if (closeRequested || bitmap.isRecycled) return@synchronized
-        val key = PreviewKey(page.id,page.original,page.edits,edge)
-        val obsolete = previews.keys.filter { it.id == page.id && (it.edits != page.edits || it.edge == edge) }
-        obsolete.forEach { previewBytes -= previews.remove(it)!!.allocationByteCount }
-        previews[key] = bitmap
+    fun cachePreview(page: ScanPage, bitmap: Bitmap, config: ScanConfig): Boolean = synchronized(lock) {
+        if (closeRequested || bitmap.isRecycled) return@synchronized false
+        val key = PreviewKey(page.id, page.original, page.edits, config)
+        previews.put(key, bitmap)?.let { previewBytes -= it.allocationByteCount }
         previewBytes += bitmap.allocationByteCount
         while (previewBytes > maximumPreviewBytes && previews.isNotEmpty()) {
             previewBytes -= previews.remove(previews.keys.first())!!.allocationByteCount
         }
         // Evicted images may still be drawn by Compose: release cache references, never recycle them.
+        true
     }
 
     fun retainPreviews(pages: List<ScanPage>) = synchronized(lock) {
@@ -534,7 +546,9 @@ private class SessionLifetime(private val session: ScanSession) {
 
     fun readPages(): List<ScanPage> = synchronized(lock) { session.pages }
 
-    suspend fun <T> run(block: () -> T): T {
+    suspend fun <T> run(block: () -> T): T = imageWork.withLock { runOnWorker(block) }
+
+    private suspend fun <T> runOnWorker(block: () -> T): T {
         synchronized(lock) {
             check(!closeRequested) { "Scan session is closing" }
             active++
@@ -547,6 +561,11 @@ private class SessionLifetime(private val session: ScanSession) {
                 if (closeRequested && active == 0) session.close()
             }
         }
+    }
+
+    companion object {
+        // Allow only one SDK session render/import/export to reserve native image memory at once.
+        private val imageWork = Mutex()
     }
 
     fun closeWhenIdle() = synchronized(lock) {
@@ -589,7 +608,7 @@ private class SessionLifetime(private val session: ScanSession) {
         if (!latestBlocked.value && cameraReady) {
             takingPhoto = true
             qualityHint = null
-            cameraHolder.value?.capture(File(context.cacheDir, "capture-${System.nanoTime()}.jpg"), automatic,
+            cameraHolder.value?.capture(File(context.cacheDir, "capture-${System.nanoTime()}.jpg"), automatic, latestCaptureMode.value,
                 onRejected = { message -> takingPhoto = false; qualityHint = message },
                 onQualityWarning = { qualityHint = manualQualityHint }) { saved ->
                 latestOnCapture.value(saved)
@@ -894,9 +913,12 @@ private fun captureModeName(mode: ScanMode) = when(mode) {
     onApplyAll:()->Unit,onBack:()->Unit,onNext:()->Unit) {
     var tuning by remember { mutableStateOf(false) }
     var compareOriginal by remember { mutableStateOf(false) }
-    val adjusted=rememberRenderedPreview(page,processor,config,sessionLifetime,3072)
-    val original=rememberRenderedPreview(page.copy(edits=page.edits.copy(preset=Preset.ORIGINAL,brightness=0.0,contrast=1.0,illumination=0.0)),processor,config,sessionLifetime,3072)
-    val preview=if(compareOriginal) original else adjusted
+    val previewPage = if (compareOriginal) {
+        page.copy(edits = page.edits.copy(preset = Preset.ORIGINAL, brightness = 0.0, contrast = 1.0, illumination = 0.0))
+    } else page
+    val preview = key(compareOriginal) {
+        rememberRenderedPreview(previewPage, processor, config, sessionLifetime, 3072)
+    }
     Column(Modifier.fillMaxSize().testTag("filters-screen")) {
         Box(Modifier.weight(1f).fillMaxWidth().padding(12.dp).background(MaterialTheme.colorScheme.surfaceVariant),contentAlignment=Alignment.Center) {
             if(preview!=null) ZoomablePageImage(preview,stringResource(R.string.page_image_description),Triple(page.id,page.edits.corners,page.edits.rotationQuarterTurns),Modifier.fillMaxSize().padding(8.dp))
@@ -940,21 +962,36 @@ private fun captureModeName(mode: ScanMode) = when(mode) {
 }
 
 @Composable private fun rememberRenderedPreview(page: ScanPage, processor: ImageProcessor, config: ScanConfig, sessionLifetime: SessionLifetime, edge: Int = 1024): Bitmap? {
-    var bitmap by remember(page.id, page.original, edge) { mutableStateOf(sessionLifetime.cachedPreview(page, edge)) }
-    LaunchedEffect(page.id, page.original, page.edits, edge) {
-        sessionLifetime.cachedPreview(page, edge)?.let { bitmap = it; return@LaunchedEffect }
+    val previewConfig = remember(config, edge) {
+        val budget = minOf(config.maxWorkingBytes, Runtime.getRuntime().maxMemory() / 3, 192L * 1024 * 1024)
+        config.copy(
+            maxOutputDimension = minOf(config.maxOutputDimension, edge),
+            maxWorkingBytes = budget.coerceAtLeast(64_000_000),
+            maxRenderPixels = minOf(config.maxRenderPixels, (budget / 24).coerceAtLeast(1))
+        )
+    }
+    var bitmap by remember(page.id, page.original, previewConfig) {
+        mutableStateOf(sessionLifetime.cachedPreview(page, previewConfig))
+    }
+    LaunchedEffect(page, processor, previewConfig) {
+        sessionLifetime.cachedPreview(page, previewConfig)?.let { bitmap = it; return@LaunchedEffect }
         delay(180)
         val preview = File(page.original.parentFile, "preview-${page.id}-${System.nanoTime()}.png")
         val pendingBitmap = java.util.concurrent.atomic.AtomicReference<Bitmap?>(null)
         try {
             val job = currentCoroutineContext()[Job]
             sessionLifetime.run {
-                processor.render(page.original, page.edits, preview, ExportFormat.PNG, config.copy(maxOutputDimension = minOf(config.maxOutputDimension, edge)),
-                    Cancellation { if (job?.isActive != true) throw CancellationException() })
-                BitmapFactory.decodeFile(preview.absolutePath).also { pendingBitmap.set(it) }
+                sessionLifetime.cachedPreview(page, previewConfig) ?: run {
+                    processor.render(page.original, page.edits, preview, ExportFormat.PNG, previewConfig,
+                        Cancellation { if (job?.isActive != true) throw CancellationException() })
+                    val decoded = BitmapFactory.decodeFile(preview.absolutePath)
+                    pendingBitmap.set(decoded)
+                    if (decoded != null && job?.isActive == true &&
+                        sessionLifetime.cachePreview(page, decoded, previewConfig)) pendingBitmap.set(null)
+                    decoded
+                }
             }.also { decoded ->
                 if (currentCoroutineContext().isActive) {
-                    if (decoded != null) sessionLifetime.cachePreview(page, decoded, edge)
                     bitmap = decoded
                     if (decoded != null) pendingBitmap.compareAndSet(decoded, null)
                 }
@@ -995,11 +1032,8 @@ private fun decodeThumbnail(file: File, maxEdge: Int = 1800): Bitmap? {
     while (bounds.outWidth / sample > maxEdge || bounds.outHeight / sample > maxEdge) sample *= 2
     val decoded = BitmapFactory.decodeFile(file.absolutePath, BitmapFactory.Options().apply { inSampleSize = sample; inPreferredConfig = Bitmap.Config.RGB_565 }) ?: return null
     return try {
-        val exif = ExifInterface(file)
-        val degrees = exif.rotationDegrees
-        val flip = exif.isFlipped
-        if (degrees == 0 && !flip) decoded else {
-            val matrix = Matrix().apply { postRotate(degrees.toFloat()); if (flip) postScale(-1f, 1f) }
+        val matrix = uprightExifMatrix(file)
+        if (matrix.isIdentity) decoded else {
             Bitmap.createBitmap(decoded, 0, 0, decoded.width, decoded.height, matrix, true).also { if (it !== decoded) decoded.recycle() }
         }
     } catch (_: Exception) { decoded }
@@ -1032,19 +1066,6 @@ private fun withCorner(edits: Edits, index: Int, point: Point): Edits {
 
 private fun cornerName(i: Int) = when(i) { 0 -> R.string.corner_top_left; 1 -> R.string.corner_top_right; 2 -> R.string.corner_bottom_right; else -> R.string.corner_bottom_left }
 private fun presetName(p: Preset) = when(p) { Preset.AUTO -> R.string.preset_auto; Preset.ORIGINAL -> R.string.preset_original; Preset.COLOR_DOCUMENT -> R.string.preset_color; Preset.GRAYSCALE -> R.string.preset_grayscale; Preset.BLACK_WHITE -> R.string.preset_black_white; Preset.PHOTO -> R.string.preset_photo }
-
-private fun copyBoundedUri(context: Context, uri: Uri, source: File, cancellation: Cancellation) {
-    try {
-        val input = context.contentResolver.openInputStream(uri) ?: throw ScanException(ScanError(ErrorCode.INVALID_IMAGE, "Unable to open image"))
-        input.use { stream -> FileOutputStream(source).use { out ->
-            val buffer = ByteArray(32 * 1024); var total = 0L
-            while (true) { cancellation.check(); val count = stream.read(buffer); if (count < 0) break; total += count
-                if (total > MAX_IMPORT_BYTES) throw ScanException(ScanError(ErrorCode.RESOURCE_LIMIT, "Image exceeds import size limit"))
-                out.write(buffer, 0, count)
-            }
-        } }
-    } catch (t: Throwable) { source.delete(); throw t }
-}
 
 private fun toScanError(t: Throwable, fallback: ErrorCode) = when (t) {
     is ScanException -> t.error

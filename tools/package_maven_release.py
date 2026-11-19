@@ -90,6 +90,9 @@ with zipfile.ZipFile(temporary_archive, "w", compression=zipfile.ZIP_DEFLATED, c
         archive.writestr(info, source.read_bytes())
 
 with zipfile.ZipFile(temporary_archive) as archive:
+    for inventory in ("third-party/native-inventory.json", "third-party/runtime-inventory.json"):
+        if archive.read(inventory) != (root / inventory).read_bytes():
+            raise ValueError(f"Archived inventory differs from the current build: {inventory}")
     bad_member = archive.testzip()
     if bad_member:
         temporary_archive.unlink()

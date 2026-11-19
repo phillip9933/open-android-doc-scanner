@@ -16,6 +16,7 @@ import dev.offlinescan.camera.ScannerCamera
 import dev.offlinescan.core.Detection
 import dev.offlinescan.core.Quad
 import dev.offlinescan.core.ScanConfig
+import dev.offlinescan.core.ScanMode
 import dev.offlinescan.core.ScanError
 import dev.offlinescan.processing.DocumentQuality
 import dev.offlinescan.processing.OpenCvProcessor
@@ -117,6 +118,24 @@ class ScannerAutomaticCaptureTest {
             assertEquals(0,saved.get()); assertFalse(destination.exists())
             assertOnly(harness.directory,resumed)
             assertTrue(harness.errors.isEmpty())
+        } finally { dispose(harness) }
+    }
+
+    @Test fun manualQualityChecksFollowTheModeAtShutterTime() {
+        val harness = mount(rejectStills = false)
+        try {
+            compose.waitUntil(15_000) { harness.frames.get() > 0 || harness.errors.isNotEmpty() }
+            assertTrue("Camera errors: ${harness.errors}", harness.errors.isEmpty())
+            for (mode in listOf(ScanMode.PHOTO, ScanMode.DOCUMENT)) {
+                val destination = File(harness.directory, "${mode.name}.jpg")
+                val delivered = AtomicReference<File?>()
+                compose.runOnUiThread {
+                    harness.camera.get()!!.capture(destination, false, mode, {}, {}) { delivered.set(it) }
+                }
+                compose.waitUntil(15_000) { delivered.get() != null || harness.errors.isNotEmpty() }
+                assertEquals(destination, delivered.get())
+                assertEquals(if (mode == ScanMode.PHOTO) 0 else 1, harness.originals.size)
+            }
         } finally { dispose(harness) }
     }
 

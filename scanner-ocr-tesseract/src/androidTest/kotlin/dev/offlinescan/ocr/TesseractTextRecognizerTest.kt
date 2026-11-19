@@ -135,6 +135,38 @@ class TesseractTextRecognizerTest {
             } catch (_: IllegalArgumentException) { }
         } finally { root.deleteRecursively() }
     }
+    @Test fun smallFieldKeepsDetailWhenThePageExceedsTheDecodeBudget() {
+        val instrumentation = InstrumentationRegistry.getInstrumentation()
+        val root = File(instrumentation.targetContext.cacheDir, "region-detail-${System.nanoTime()}").apply { mkdirs() }
+        try {
+            val models = File(root, "tessdata").apply { mkdirs() }
+            instrumentation.context.assets.open("eng.traineddata").use { input ->
+                File(models, "eng.traineddata").outputStream().use { input.copyTo(it) }
+            }
+            val image = File(root, "card.jpg")
+            val bitmap = Bitmap.createBitmap(4000, 3000, Bitmap.Config.ARGB_8888)
+            try {
+                Canvas(bitmap).apply {
+                    drawColor(Color.WHITE)
+                    drawText("0012345678", 1730f, 1520f, Paint(Paint.ANTI_ALIAS_FLAG).apply {
+                        color = Color.BLACK
+                        textSize = 28f
+                    })
+                }
+                image.outputStream().use { bitmap.compress(Bitmap.CompressFormat.JPEG, 98, it) }
+            } finally { bitmap.recycle() }
+            val config = OcrConfig(languages = listOf("eng"), layout = OcrLayout.SINGLE_LINE,
+                region = OcrRegion(.425, .49, .575, .51), characterWhitelist = "0123456789",
+                maxWorkingBytes = 30L * 1024 * 1024)
+            val result = TesseractTextRecognizer(root).recognize(image, "card", config, NeverCancelled)
+            assertEquals("0012345678", result.text.trim())
+            assertEquals(4000 to 3000, result.width to result.height)
+            assertTrue(result.words.isNotEmpty())
+            assertTrue(result.words.all { it.left in 1725..1900 && it.top in 1485..1519 &&
+                it.right in (it.left + 1)..1920 && it.bottom in 1505..1528 })
+        } finally { root.deleteRecursively() }
+    }
+
     @Test fun straightensTiltedNumericFieldAndMapsBounds() {
         val instrumentation=InstrumentationRegistry.getInstrumentation()
         val root=File(instrumentation.targetContext.cacheDir,"ocr-tilt-${System.nanoTime()}").apply {mkdirs()}

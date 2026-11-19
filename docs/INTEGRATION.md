@@ -8,6 +8,8 @@ Include the scanner modules in the host build (or consume the generated local Ma
 
 The UI library merges CAMERA permission and camera hardware is optional. Import uses Android's document provider; no broad media/storage permission is requested. A processing-only consumer has no CAMERA permission. OpenCloud/Kura should choose their supported min SDK, application theme, native ABIs and FileProvider. API 26/64-bit support is the SDK default; incompatible host requirements need an explicit compatibility decision.
 
+Keep the host's `ScanConfig` values stable while collecting pages. Changing a value starts a fresh scanner session and discards the previous session's unsaved pages. The mode picker inside the scanner changes how the next page is captured and keeps pages already collected.
+
 ## OpenCloud-shaped adapter
 
 ```kotlin

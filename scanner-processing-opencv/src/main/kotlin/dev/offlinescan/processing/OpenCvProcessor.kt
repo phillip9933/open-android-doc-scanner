@@ -22,6 +22,8 @@ import org.opencv.core.Size
 import org.opencv.imgproc.Imgproc
 import java.io.File
 import java.io.IOException
+import java.nio.file.Files
+import java.nio.file.StandardCopyOption
 import kotlin.math.*
 
 /** Quality of untouched document pixels, sampled independently of the surrounding scene. */
@@ -158,18 +160,18 @@ class OpenCvProcessor : ImageProcessor {
                 bitmap = Bitmap.createBitmap(result.cols(), result.rows(), Bitmap.Config.ARGB_8888)
                 Utils.matToBitmap(result, bitmap)
                 checked.check()
-                var outputOpened = false
+                val temporary = File.createTempFile(".scan-render-", ".tmp", destination.absoluteFile.parentFile)
                 try {
-                    destination.outputStream().use { out ->
-                        outputOpened = true
+                    temporary.outputStream().use { out ->
                         if (!bitmap.compress(if (format == ExportFormat.PNG) Bitmap.CompressFormat.PNG else Bitmap.CompressFormat.JPEG, config.jpegQuality, out)) {
                             fail(ErrorCode.EXPORT, "Image encoder failed")
                         }
                     }
                     checked.check()
-                } catch (failure: Throwable) {
-                    if (outputOpened) destination.delete()
-                    throw failure
+                    Files.move(temporary.toPath(), destination.toPath(),
+                        StandardCopyOption.ATOMIC_MOVE, StandardCopyOption.REPLACE_EXISTING)
+                } finally {
+                    temporary.delete()
                 }
                 val sourceLimited = info.width.toLong() * info.height > decodePixelLimit || maxOf(info.width, info.height) > decodeEdge
                 val outputLimited = maxOf(bitmap.width, bitmap.height) >= config.maxOutputDimension ||
