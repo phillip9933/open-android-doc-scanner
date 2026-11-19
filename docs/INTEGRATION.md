@@ -10,6 +10,8 @@ The UI library merges CAMERA permission and camera hardware is optional. Import 
 
 Keep the host's `ScanConfig` values stable while collecting pages. Changing a value starts a fresh scanner session and discards the previous session's unsaved pages. The mode picker inside the scanner changes how the next page is captured and keeps pages already collected.
 
+For AI-assisted page detection with a custom configuration, pass `ScanConfig(detectionMode = DetectionMode.AI)`. The ready-made flow uses AI when called without a configuration. An explicitly constructed `ScanConfig()` defaults to Standard. Custom capture UIs can use one `DocumentOutlineFallback` per analysis stream, pass monotonic milliseconds to `onFrame`, and use `onStill` for an acquired image. The low-level learned and OpenCV detectors remain independently callable.
+
 ## OpenCloud-shaped adapter
 
 ```kotlin

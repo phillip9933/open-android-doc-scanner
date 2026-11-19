@@ -2,7 +2,7 @@
 
 Independent Apache-2.0 Android document and printed-photo scanner. Kotlin, CameraX, OpenCV and Compose. Core processing works offline without Google Play services, cloud, API keys or model downloads. No network permission or analytics.
 
-**Stable SDK 0.8.0 adds optional offline English/Japanese OCR and improves card cropping.** See the [release notes](docs/RELEASE-0.8.0.md) for integration requirements and known limitations.
+**Next SDK release: 1.0.0.** This checkout adds edge-based recovery when AI misses a page, faster boundary detection, and clearer OCR on small card fields. See the [1.0.0 candidate notes](docs/RELEASE-1.0.0.md).
 
 [Download SDK 0.8.0](https://github.com/phillip9933/open-android-doc-scanner/releases/tag/v0.8.0) · [Documentation](docs/INDEX.md) · [CI](https://github.com/phillip9933/open-android-doc-scanner/actions)
 

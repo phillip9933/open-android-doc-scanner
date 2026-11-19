@@ -4,6 +4,7 @@
 - [Repository layout](README.md#repository-layout)
 - [Contributing and checks](../CONTRIBUTING.md)
 - [Security reporting](../SECURITY.md)
+- [SDK 1.0.0 candidate](RELEASE-1.0.0.md)
 - [Stable SDK 0.8.0](RELEASE-0.8.0.md)
 - [0.7.0 historical SDK release](RELEASE-0.7.0.md)
 - [RC11 SDK release (historical)](RELEASE-RC11.md)

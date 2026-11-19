@@ -58,8 +58,9 @@ for name in required_root_files:
         raise SystemExit(f"Missing required license material: {root / name}")
 if not (root / "third-party").is_dir():
     raise SystemExit("Missing third-party notices directory")
-if not (root / "docs" / "RELEASE-0.8.0.md").is_file():
-    raise SystemExit("Missing docs/RELEASE-0.8.0.md")
+release_notes = root / "docs" / f"RELEASE-{version.split('-', 1)[0]}.md"
+if not release_notes.is_file():
+    raise SystemExit(f"Missing {release_notes.relative_to(root)}")
 
 release = root / "release"
 release.mkdir(exist_ok=True)
@@ -74,7 +75,7 @@ archive_inputs.extend(
     for path in sorted((root / "third-party").rglob("*"))
     if path.is_file()
 )
-archive_inputs.append((root / "docs" / "RELEASE-0.8.0.md", Path("RELEASE-NOTES.md")))
+archive_inputs.append((release_notes, Path("RELEASE-NOTES.md")))
 archive_inputs.append((root / "docs" / "NATIVE-BUILD.md", Path("NATIVE-BUILD.md")))
 for name in ("OCR.md", "OCR-SECURITY.md", "FIELD-TESTING.md", "INTEGRATION.md", "OCR-ACCEPTANCE.md", "OCR-CARD-INVESTIGATION.md"):
     archive_inputs.append((root / "docs" / name, Path("docs") / name))

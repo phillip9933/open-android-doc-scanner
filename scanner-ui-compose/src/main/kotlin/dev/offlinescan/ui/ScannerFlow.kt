@@ -107,6 +107,8 @@ import androidx.lifecycle.compose.LocalLifecycleOwner
 import dev.offlinescan.camera.ScannerCamera
 import dev.offlinescan.camera.AutoCaptureGate
 import dev.offlinescan.core.Cancellation
+import android.os.SystemClock
+import dev.offlinescan.core.DocumentOutlineFallback
 import dev.offlinescan.core.DetectionMode
 import dev.offlinescan.core.Detection
 import dev.offlinescan.core.Edits
@@ -357,13 +359,17 @@ private fun ScannerSessionFlow(
                         cameraHolder.value?.close(); cameraHolder.value = null
                         detectionMode = mode
                     },
-                    bitmapDetector = { bitmap, cancel ->
-                        if (detectionMode == DetectionMode.AI) learnedDetector.detectBitmap(bitmap,cancel)
-                        else processor.detectBitmap(bitmap,cancel)
+                    bitmapDetector = { outlineFallback, bitmap, cancel ->
+                        if (detectionMode != DetectionMode.AI) processor.detectBitmap(bitmap, cancel)
+                        else {
+                            val ai = learnedDetector.detectBitmap(bitmap, cancel)
+                            if (captureMode == ScanMode.PHOTO) ai else outlineFallback.onFrame(ai, SystemClock.elapsedRealtime()) {
+                                processor.detectBitmap(bitmap, cancel)
+                            }
+                        }
                     },
                     stillDetector = { file, cancel ->
-                        if (detectionMode == DetectionMode.AI) learnedDetector.detect(file,captureConfig,cancel)
-                        else processor.detect(file,captureConfig,cancel)
+                        detectStill(file, captureConfig, cancel, learnedDetector, processor)
                     },
                     onMode = { mode -> cameraHolder.value?.setAutoCaptureEnabled(false); captureMode = mode },
                     cameraHolder = cameraHolder,
@@ -404,7 +410,9 @@ private fun ScannerSessionFlow(
                     onCameraError = { scanError -> cameraError = true; error = scanError }
                 )
                 Stage.CROP -> selected?.let { page ->
-                    EditStage(page,processor,config,sessionLifetime,onEdits = { edits ->
+                    EditStage(page, sessionLifetime, redetect = { cancel ->
+                        detectStill(page.original, captureConfig, cancel, learnedDetector, processor)
+                    }, onEdits = { edits ->
                         try { session.update(page.id, edits); syncPages() }
                         catch (t: Exception) { error = toScanError(t, ErrorCode.INVALID_GEOMETRY) }
                     }, onBack = { editBaseline?.let { session.update(page.id,it);syncPages() };stage = editReturn }, onNext = { stage = editReturn })
@@ -494,6 +502,13 @@ private fun updateEdits(page: ScanPage, session: ScanSession,
     catch (t: Exception) { setError(toScanError(t, ErrorCode.PROCESSING)) }
 }
 
+private fun detectStill(file: File, config: ScanConfig, cancellation: Cancellation,
+                       learned: LearnedDocumentDetector, standard: ImageProcessor): Detection =
+    if (config.detectionMode == DetectionMode.STANDARD) standard.detect(file, config, cancellation)
+    else DocumentOutlineFallback.onStill(learned.detect(file, config, cancellation)) {
+        standard.detect(file, config, cancellation)
+    }
+
 private fun importPage(
     session: ScanSession,
     processor: ImageProcessor,
@@ -504,7 +519,7 @@ private fun importPage(
     learnedDetector: LearnedDocumentDetector
 ): ScanPage {
     val imported = if (replaceId == null) session.`import`(source) else session.replace(replaceId, source)
-    val detected = try { if(config.mode == ScanMode.PHOTO) null else if(config.detectionMode == DetectionMode.AI) learnedDetector.detect(imported.original,config,cancellation) else processor.detect(imported.original, config, cancellation) }
+    val detected = try { if (config.mode == ScanMode.PHOTO) null else detectStill(imported.original, config, cancellation, learnedDetector, processor) }
     catch (cancelled: CancellationException) { throw cancelled }
     catch (_: Exception) { null }
     val corners = detected?.corners
@@ -579,7 +594,7 @@ private class SessionLifetime(private val session: ScanSession) {
     autoCaptureAllowed: Boolean,
     onMode: (ScanMode) -> Unit,
     onDetectionMode: (DetectionMode) -> Unit,
-    bitmapDetector: (Bitmap,Cancellation) -> Detection,
+    bitmapDetector: (DocumentOutlineFallback, Bitmap, Cancellation) -> Detection,
     stillDetector: (File,Cancellation) -> Detection,
     cameraHolder: androidx.compose.runtime.MutableState<ScannerCamera?>, onPermission: () -> Unit, onImport: () -> Unit,
     onCapture: (File) -> Unit, onReview: () -> Unit, pages: List<ScanPage>, canAdd: Boolean,
@@ -647,11 +662,21 @@ private class SessionLifetime(private val session: ScanSession) {
                     AndroidView(factory = { ctx -> PreviewView(ctx).also { it.scaleType = PreviewView.ScaleType.FILL_CENTER } },
                         modifier = Modifier.fillMaxSize()) { view ->
                         if (cameraHolder.value == null) {
+                            // This state belongs to one camera's analysis worker.
+                            var streamMode = config.mode
+                            var fallback = DocumentOutlineFallback()
                             val camera = ScannerCamera(context, lifecycleOwner, view, config.copy(autoCapture=autoCaptureAllowed),
                                 onAnalysis = { result -> detection = if(latestCaptureMode.value==ScanMode.PHOTO) result.copy(corners=null) else result; cameraReady = true },
                                 onAutoCapture = { if (latestAuto.value && !latestBlocked.value) latestTakePhoto.value(true) },
                                 onError = { takingPhoto = false; cameraReady = false; onCameraError(it) },autoCaptureGate=autoCaptureGate,
-                                bitmapDetector={bitmap,cancel -> latestBitmapDetector.value(bitmap,cancel)},
+                                bitmapDetector = { bitmap, cancel ->
+                                    val mode = latestCaptureMode.value
+                                    if (mode != streamMode) {
+                                        streamMode = mode
+                                        fallback = DocumentOutlineFallback()
+                                    }
+                                    latestBitmapDetector.value(fallback, bitmap, cancel)
+                                },
                                 stillDetector={file,cancel -> latestStillDetector.value(file,cancel)})
                             camera.setAutoCaptureEnabled(!blocked && autoMode && !autoPaused)
                             cameraHolder.value = camera
@@ -784,7 +809,7 @@ private fun captureModeName(mode: ScanMode) = when(mode) {
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
-@Composable private fun EditStage(page: ScanPage, processor: ImageProcessor, config: ScanConfig, sessionLifetime:SessionLifetime,
+@Composable private fun EditStage(page: ScanPage, sessionLifetime: SessionLifetime, redetect: (Cancellation) -> Detection,
     onEdits:(Edits)->Unit,onBack:()->Unit,onNext:()->Unit) {
     val bitmap=rememberBitmap(page.original)
     val scope=rememberCoroutineScope()
@@ -829,7 +854,7 @@ private fun captureModeName(mode: ScanMode) = when(mode) {
                 detecting=true;noBoundary=false
                 scope.launch { try {
                     val job=currentCoroutineContext()[Job]
-                    val found=sessionLifetime.run { processor.detect(page.original,config,Cancellation{if(job?.isActive!=true) throw CancellationException()}) }
+                    val found=sessionLifetime.run { redetect(Cancellation { if (job?.isActive != true) throw CancellationException() }) }
                     val corners=found.corners
                     if(corners!=null&&found.confidence>=.6&&Geometry.valid(corners)) { edits=edits.copy(corners=corners);onEdits(edits) } else noBoundary=true
                 } catch(cancelled:CancellationException) { throw cancelled } catch(_:Exception) { noBoundary=true } finally { detecting=false } }

@@ -2,6 +2,8 @@
 
 Current stable release: **0.8.0**. See the [release notes](RELEASE-0.8.0.md). The SDK is distributed as a Maven ZIP with checksums and license/provenance material; do not attach the developer sample APK as a public product.
 
+The next release target is **1.0.0**. See the [candidate notes](RELEASE-1.0.0.md).
+
 ## Build and package
 
 ```sh
@@ -15,14 +17,14 @@ python3 tools/package_maven_release.py
 python3 tools/verify_ocr_consumer.py
 ```
 
-The local-only publication target is `release/maven`. The archive contains six coordinates under `dev.offlinescan`, version `0.8.0`, including optional `scanner-ocr-tesseract`. Native source and notice requirements remain in [NATIVE-BUILD.md](NATIVE-BUILD.md).
+The local-only publication target is `release/maven`. The archive contains six coordinates under `dev.offlinescan`, version `1.0.0`, including optional `scanner-ocr-tesseract`. Native source and notice requirements remain in [NATIVE-BUILD.md](NATIVE-BUILD.md).
 
 ```kotlin
 maven { url = uri("/absolute/path/to/extracted-sdk/maven") }
 // Add to host dependencies; update every scanner module together and recompile.
-implementation("dev.offlinescan:scanner-ui-compose:0.8.0")
+implementation("dev.offlinescan:scanner-ui-compose:1.0.0")
 // Optional:
-implementation("dev.offlinescan:scanner-ocr-tesseract:0.8.0")
+implementation("dev.offlinescan:scanner-ocr-tesseract:1.0.0")
 ```
 
 Before publishing, validate the exact versioned archive, independent consumers, checksums and notes. Publish a GitHub prerelease for beta tags and preserve the latest stable release. The current workflow builds/audits; it does not automatically publish packages. Real-world beta feedback is permitted before stable acceptance; unverified gates stay open. See [FIELD-TESTING.md](FIELD-TESTING.md).

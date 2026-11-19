@@ -1,10 +1,10 @@
 # Offline OCR and card integration
 
-The unreleased 0.8.0 update adds an optional `scanner-ocr-tesseract` module. Existing scanning apps do not load OCR or language models unless they add this module. `scanner-core` provides the engine-neutral contracts so hosts can also use another recognizer.
+The SDK includes an optional `scanner-ocr-tesseract` module. Existing scanning apps do not load OCR or language models unless they add this module. `scanner-core` provides the engine-neutral contracts so hosts can also use another recognizer.
 
 ## Dependencies and models
 
-Add `dev.offlinescan:scanner-ocr-tesseract:<SDK version>` alongside the scanner modules. Until 0.8.0 is released, use the local Maven publication or a source build. Do not add the original Tesseract4Android dependency alongside this module: the Java/JNI class names overlap. No JitPack repository is needed: the module includes rebuilt native libraries and attributed Java/JNI bindings. The build uses Tesseract 5.5.3 with two explicit model-parser fixes, libpng 1.6.59, Leptonica 1.85.0 and libjpeg 9f. See [native rebuild and security evidence](OCR-SECURITY.md).
+Add `dev.offlinescan:scanner-ocr-tesseract:<SDK version>` alongside the scanner modules. Use the same SDK version for every scanner dependency. Do not add the original Tesseract4Android dependency alongside this module: the Java/JNI class names overlap. No JitPack repository is needed: the module includes rebuilt native libraries and attributed Java/JNI bindings. The build uses Tesseract 5.5.3 with two explicit model-parser fixes, libpng 1.6.59, Leptonica 1.85.0 and libjpeg 9f. See [native rebuild and security evidence](OCR-SECURITY.md).
 
 Package the approved `eng.traineddata` and `jpn.traineddata` files from [tessdata_fast revision 87416418](https://github.com/tesseract-ocr/tessdata_fast/tree/87416418657359cb625c412a48b6e1d6d41c29bd) with the host app and copy them to a private `filesDir/ocr/tessdata/` directory. Pass its parent `filesDir/ocr` to the recognizer. Install atomically before workers begin. Retain the model license. No user setup or network connection is needed when the host bundles these files.
 

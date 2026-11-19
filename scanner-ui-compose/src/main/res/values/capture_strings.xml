@@ -19,5 +19,5 @@
     <string name="detection_mode">Detection mode</string>
     <string name="detection_standard">Standard</string>
     <string name="detection_ai">AI</string>
-    <string name="detection_ai_description">AI is the default. Both modes work offline. Choose Standard to use edge-based detection.</string>
+    <string name="detection_ai_description">AI checks for a page first. After repeated misses, it also checks the page edges. Choose Standard to use edges alone. Both modes work offline.</string>
 </resources>

@@ -570,7 +570,7 @@ class OpenCvProcessor : ImageProcessor {
 
     private fun wholeFrameSharpness(gray:Mat,mats:Mats):Double {
         val laplacian=mats.mat(); val mean=mats.keep(MatOfDouble()); val deviation=mats.keep(MatOfDouble())
-        Imgproc.Laplacian(gray,laplacian,CvType.CV_64F)
+        Imgproc.Laplacian(gray,laplacian,CvType.CV_16S)
         Core.meanStdDev(laplacian,mean,deviation)
         return deviation.toArray()[0].pow(2).coerceAtLeast(0.0).also { laplacian.release() }
     }
@@ -595,28 +595,35 @@ class OpenCvProcessor : ImageProcessor {
         val scores=ArrayList<Double>(9); val informative=ArrayList<Double>(9)
         var luminance=0.0
         val mean=mats.keep(MatOfDouble()); val deviation=mats.keep(MatOfDouble())
+        // Filter the shared document ROI once. OpenCV reads the parent image at ROI edges,
+        // just as it does for individual tiles. A 3x3 Laplacian of 8-bit pixels fits in 16 bits.
+        val region = mats.keep(document.submat(marginY, h - marginY, marginX, w - marginX))
+        val detailPixels = mats.mat()
+        val laplacian = mats.mat()
+        Imgproc.GaussianBlur(region, detailPixels, Size(0.0, 0.0), 10.0)
+        Core.absdiff(region, detailPixels, detailPixels)
+        cancellation.check()
+        Imgproc.Laplacian(region, laplacian, CvType.CV_16S)
+        val regionWidth = w - 2 * marginX
+        val regionHeight = h - 2 * marginY
         for (row in 0..2) for (col in 0..2) {
             cancellation.check()
-            val left=marginX+(w-2*marginX)*col/3; val right=marginX+(w-2*marginX)*(col+1)/3
-            val top=marginY+(h-2*marginY)*row/3; val bottom=marginY+(h-2*marginY)*(row+1)/3
-            val tile=document.submat(top,bottom,left,right); val laplacian=Mat(); val field=Mat(); val detailPixels=Mat()
-            try {
-                Core.meanStdDev(tile,mean,deviation)
-                luminance+=mean.toArray()[0]/255.0
-                val detail=deviation.toArray()[0]
-                // Smooth illumination gradients are not focus evidence. Broad ink texture can
-                // remain informative after moderate blur, unlike a sharpness-dependent test.
-                Imgproc.GaussianBlur(tile,field,Size(0.0,0.0),10.0)
-                Core.absdiff(tile,field,detailPixels)
-                val localDetail=Core.mean(detailPixels).`val`[0]
-                Imgproc.Laplacian(tile,laplacian,CvType.CV_64F)
-                // Tile boundary reflection must not create artificial energy in the score.
-                val interior=laplacian.submat(1,laplacian.rows()-1,1,laplacian.cols()-1)
-                try { Core.meanStdDev(interior,mean,deviation) } finally { interior.release() }
-                val score=deviation.toArray()[0].pow(2).coerceAtLeast(0.0)
-                scores.add(score)
-                if (detail>=8.0 && localDetail>=3.0) informative.add(score)
-            } finally { tile.release(); laplacian.release(); field.release(); detailPixels.release() }
+            val left = regionWidth * col / 3
+            val right = regionWidth * (col + 1) / 3
+            val top = regionHeight * row / 3
+            val bottom = regionHeight * (row + 1) / 3
+            val tile = mats.keep(region.submat(top, bottom, left, right))
+            Core.meanStdDev(tile, mean, deviation)
+            luminance += mean.toArray()[0] / 255.0
+            val detail = deviation.toArray()[0]
+            val residual = mats.keep(detailPixels.submat(top, bottom, left, right))
+            val localDetail = Core.mean(residual).`val`[0]
+            // Exclude each tile's one-pixel border from the sharpness score.
+            val interior = mats.keep(laplacian.submat(top + 1, bottom - 1, left + 1, right - 1))
+            Core.meanStdDev(interior, mean, deviation)
+            val score = deviation.toArray()[0].pow(2).coerceAtLeast(0.0)
+            scores.add(score)
+            if (detail >= 8.0 && localDetail >= 3.0) informative.add(score)
         }
         // Ignore blank tiles rather than treating blank margins as blur; one detailed tile can
         // describe a sparse receipt, while informativeTiles lets callers avoid blank-paper rejection.

@@ -13,23 +13,24 @@ class PackagingTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory);(root/'tools').mkdir();(root/'docs').mkdir();(root/'third-party').mkdir();(root/'evidence').mkdir()
             shutil.copy(Path(__file__).with_name('package_maven_release.py'),root/'tools/package_maven_release.py')
-            version='0.8.0-SNAPSHOT' if snapshot else ('0.8.0-beta.1' if beta else '0.8.0')
+            version='1.0.0-SNAPSHOT' if snapshot else ('1.0.0-beta.1' if beta else '1.0.0')
             (root/'build.gradle.kts').write_text(f'allprojects {{ version = "{version}" }}')
-            for path in ('LICENSE','NOTICE','THIRD-PARTY-NOTICES.md','docs/RELEASE-0.8.0.md','docs/NATIVE-BUILD.md','docs/OCR.md','docs/OCR-SECURITY.md','docs/FIELD-TESTING.md','docs/INTEGRATION.md','docs/OCR-ACCEPTANCE.md','docs/OCR-CARD-INVESTIGATION.md','evidence/ocr-native-build.json'):(root/path).write_text('fixture')
+            for path in ('LICENSE','NOTICE','THIRD-PARTY-NOTICES.md','docs/RELEASE-1.0.0.md','docs/NATIVE-BUILD.md','docs/OCR.md','docs/OCR-SECURITY.md','docs/FIELD-TESTING.md','docs/INTEGRATION.md','docs/OCR-ACCEPTANCE.md','docs/OCR-CARD-INVESTIGATION.md','evidence/ocr-native-build.json'):(root/path).write_text('fixture')
+            (root/'docs/RELEASE-0.8.0.md').write_text('older release notes')
             inventories = ("third-party/native-inventory.json", "third-party/runtime-inventory.json")
             for inventory in inventories:
                 (root/inventory).write_text(f'{{"version": "{version}", "inventory": "{inventory}"}}')
             for module in MODULES:
                 target=root/'release/maven/dev/offlinescan'/module/version;target.mkdir(parents=True)
                 suffix='jar' if module=='scanner-core' else 'aar'
-                value='0.8.0-20261026.010101-2' if snapshot else version
+                value='1.0.0-20261026.010101-2' if snapshot else version
                 entries=[]
                 for ext in (suffix,'pom','module'):
                     (target/f'{module}-{value}.{ext}').write_text('current')
                     entries.append(f'<snapshotVersion><extension>{ext}</extension><value>{value}</value></snapshotVersion>')
                 if snapshot:
                     (target/'maven-metadata.xml').write_text('<metadata><versioning><snapshotVersions>'+''.join(entries)+'</snapshotVersions></versioning></metadata>')
-                    (target/f'{module}-0.8.0-20261025.010101-1.{suffix}').write_text('stale')
+                    (target/f'{module}-1.0.0-20261025.010101-1.{suffix}').write_text('stale')
                 if missing and module=='scanner-core':(target/f'{module}-{value}.jar').unlink()
             run=subprocess.run([sys.executable,str(root/'tools/package_maven_release.py')],capture_output=True,text=True)
             if missing:
@@ -37,6 +38,7 @@ class PackagingTest(unittest.TestCase):
             self.assertEqual(0,run.returncode,run.stderr)
             archive=root/'release'/f'open-android-doc-scanner-{version}-sdk-maven.zip'
             with zipfile.ZipFile(archive) as z:
+                self.assertEqual(b'fixture', z.read('RELEASE-NOTES.md'))
                 for inventory in inventories:
                     self.assertEqual((root/inventory).read_bytes(), z.read(inventory))
                 self.assertFalse(any('20261025' in n for n in z.namelist()))

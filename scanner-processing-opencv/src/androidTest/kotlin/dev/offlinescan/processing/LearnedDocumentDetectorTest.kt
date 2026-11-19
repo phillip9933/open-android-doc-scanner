@@ -307,6 +307,68 @@ class LearnedDocumentDetectorTest {
         }
     }
 
+    /** Three live-cadence frames per held-out scene. Include misses in coverage and wrong-outline counts. */
+    @Test fun firstCorrectOutlineWithEdgeFallback() {
+        val instrumentation = InstrumentationRegistry.getInstrumentation()
+        val assets = instrumentation.context.assets
+        val context = instrumentation.targetContext
+        val standard = OpenCvProcessor()
+        val rows = JSONArray()
+        LearnedDocumentDetector(context).use { learned ->
+            val warm = Bitmap.createBitmap(64, 64, Bitmap.Config.ARGB_8888)
+            try {
+                learned.detectBitmap(warm)
+                standard.detectBitmap(warm)
+            } finally { warm.recycle() }
+            for (cohort in listOf("benchmark", "challenge", "temporal-shadow")) {
+                val cases = assets.open("$cohort/manifest.json").bufferedReader().use { JSONObject(it.readText()).getJSONArray("cases") }
+                for (i in 0 until cases.length()) {
+                    val fixture = cases.getJSONObject(i)
+                    if (fixture.getString("split") != "held-out") continue
+                    val truth = if (fixture.isNull("corners")) null else quad(fixture.getJSONArray("corners"))
+                    val image = assets.open("$cohort/${fixture.getString("file")}").use { BitmapFactory.decodeStream(it) }!!
+                    val policy = DocumentOutlineFallback()
+                    val frames = JSONArray()
+                    try {
+                        val start = SystemClock.elapsedRealtimeNanos()
+                        repeat(3) { frame ->
+                            val wait = (start + frame * 180_000_000L - SystemClock.elapsedRealtimeNanos()) / 1_000_000
+                            if (wait > 0) SystemClock.sleep(wait)
+                            val ai = learned.detectBitmap(image)
+                            val aiMs = (SystemClock.elapsedRealtimeNanos() - start) / 1e6
+                            var probed = false
+                            val selected = policy.onFrame(ai, SystemClock.elapsedRealtime()) {
+                                probed = true
+                                standard.detectBitmap(image)
+                            }
+                            val selectedMs = (SystemClock.elapsedRealtimeNanos() - start) / 1e6
+                            fun overlap(d: Detection): Any {
+                                val q = d.corners ?: return JSONObject.NULL
+                                if (d.confidence < 0.60 || !Geometry.valid(q)) return JSONObject.NULL
+                                return truth?.let { intersectionOverUnion(q, it) } ?: 0.0
+                            }
+                            frames.put(JSONObject().put("aiMs", aiMs).put("assistedMs", selectedMs)
+                                .put("aiIoU", overlap(ai)).put("assistedIoU", overlap(selected)).put("probed", probed))
+                        }
+                    } finally { image.recycle() }
+                    rows.put(JSONObject().put("cohort", cohort).put("id", fixture.getString("id"))
+                        .put("positive", fixture.getBoolean("expectedDetection")).put("frames", frames))
+                }
+            }
+        }
+        val cases = (0 until rows.length()).map { rows.getJSONObject(it) }
+        fun hasOutline(row: JSONObject, field: String, minimum: Double): Boolean {
+            val frames = row.getJSONArray("frames")
+            return (0 until frames.length()).any { frames.getJSONObject(it).optDouble(field) >= minimum }
+        }
+        File(context.getExternalFilesDir(null), "first-correct-outline.json").writeText(rows.toString())
+        assertTrue(cases.any { !it.getBoolean("positive") })
+        assertTrue(cases.none { !it.getBoolean("positive") && hasOutline(it, "assistedIoU", 0.0) })
+        val positives = cases.filter { it.getBoolean("positive") }
+        assertTrue(positives.count { hasOutline(it, "assistedIoU", .75) } >
+            positives.count { hasOutline(it, "aiIoU", .75) })
+    }
+
     private fun finite(result: Detection) {
         assertTrue(result.confidence.isFinite() && result.confidence in 0.0..1.0)
         assertTrue(result.brightness.isFinite() && result.brightness in 0.0..1.0)

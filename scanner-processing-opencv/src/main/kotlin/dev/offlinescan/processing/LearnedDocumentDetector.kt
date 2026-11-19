@@ -12,6 +12,8 @@ import android.graphics.Paint
 import android.graphics.RectF
 import dev.offlinescan.core.*
 import java.io.File
+import java.nio.ByteBuffer
+import java.nio.ByteOrder
 import java.nio.FloatBuffer
 import java.security.MessageDigest
 import kotlin.math.*
@@ -24,6 +26,7 @@ class LearnedDocumentDetector(context: Context) : AutoCloseable {
     private val assets = context.applicationContext.assets
     private val quality = OpenCvProcessor()
     private var session: OrtSession? = null
+    private var preprocessing: ModelInput? = null
     private var closed = false
     internal data class ModelEvidence(val corners: Quad, val minimumPeak: Double, val maskFraction: Double?, val agreement: Double?, val rejection: String?)
     internal var lastEvidence: ModelEvidence? = null
@@ -37,12 +40,13 @@ class LearnedDocumentDetector(context: Context) : AutoCloseable {
         if (bitmap.isRecycled || bitmap.width < 2 || bitmap.height < 2)
             throw ScanException(ScanError(ErrorCode.INVALID_IMAGE, "Camera image is unavailable"))
         val geometry = Letterbox(bitmap.width, bitmap.height)
-        val input = preprocess(bitmap, geometry)
+        val input = preprocessing ?: ModelInput().also { preprocessing = it }
+        input.update(bitmap, geometry)
         val decoded = try {
             val environment = OrtEnvironment.getEnvironment()
             val active = session ?: loadSession(environment).also { session = it }
             cancellation.check()
-            OnnxTensor.createTensor(environment, FloatBuffer.wrap(input), longArrayOf(1, 3, 256, 256)).use { tensor ->
+            OnnxTensor.createTensor(environment, input.buffer, longArrayOf(1, 3, 256, 256)).use { tensor ->
                 active.run(mapOf("input" to tensor)).use { result ->
                     @Suppress("UNCHECKED_CAST")
                     val corners = result.get("corner_heatmaps").orElseThrow().value as Array<Array<Array<FloatArray>>>
@@ -62,11 +66,9 @@ class LearnedDocumentDetector(context: Context) : AutoCloseable {
     /** Uses the same upright coordinate convention and resource bounds as Standard. */
     fun detect(source: File, config: ScanConfig, cancellation: Cancellation = NeverCancelled): Detection {
         cancellation.check()
-        quality.inspect(source, config)
-        val bounds = BitmapFactory.Options().apply { inJustDecodeBounds = true }
-        BitmapFactory.decodeFile(source.absolutePath, bounds)
+        val (width, height) = quality.inspect(source, config)
         var sample = 1
-        while (maxOf(bounds.outWidth, bounds.outHeight) / sample > 960) sample *= 2
+        while (maxOf(width, height) / sample > 960) sample *= 2
         val decoded = BitmapFactory.decodeFile(source.absolutePath, BitmapFactory.Options().apply {
             inSampleSize = sample; inPreferredConfig = Bitmap.Config.ARGB_8888
         }) ?: throw ScanException(ScanError(ErrorCode.INVALID_IMAGE, "Image cannot be decoded"))
@@ -96,7 +98,12 @@ class LearnedDocumentDetector(context: Context) : AutoCloseable {
 
     @Synchronized
     override fun close() {
-        if (!closed) { closed = true; session?.close(); session = null }
+        if (closed) return
+        closed = true
+        preprocessing?.close()
+        preprocessing = null
+        session?.close()
+        session = null
         // OrtEnvironment is shared across the application; do not close it here.
     }
 
@@ -107,24 +114,34 @@ class LearnedDocumentDetector(context: Context) : AutoCloseable {
         fun normalized(x: Double, y: Double) = Point((x-left)/(width*scale), (y-top)/(height*scale))
     }
 
-    private fun preprocess(bitmap: Bitmap, geometry: Letterbox): FloatArray {
-        val letterbox = Bitmap.createBitmap(256, 256, Bitmap.Config.ARGB_8888)
-        try {
-            val canvas = Canvas(letterbox)
+    // detectBitmap and close are synchronized; each detector owns one reusable workspace.
+    private class ModelInput : AutoCloseable {
+        private val pixels = IntArray(256 * 256)
+        private val channels = FloatArray(3 * pixels.size)
+        val buffer: FloatBuffer = ByteBuffer.allocateDirect(channels.size * Float.SIZE_BYTES)
+            .order(ByteOrder.nativeOrder()).asFloatBuffer()
+        private val letterbox = Bitmap.createBitmap(256, 256, Bitmap.Config.ARGB_8888)
+        private val canvas = Canvas(letterbox)
+        private val paint = Paint(Paint.FILTER_BITMAP_FLAG or Paint.DITHER_FLAG or Paint.ANTI_ALIAS_FLAG)
+
+        fun update(bitmap: Bitmap, geometry: Letterbox) {
             canvas.drawColor(Color.BLACK)
             canvas.drawBitmap(bitmap, null, RectF(geometry.left.toFloat(), geometry.top.toFloat(),
-                (geometry.left+geometry.width*geometry.scale).toFloat(), (geometry.top+geometry.height*geometry.scale).toFloat()),
-                Paint(Paint.FILTER_BITMAP_FLAG or Paint.DITHER_FLAG or Paint.ANTI_ALIAS_FLAG))
-            val pixels = IntArray(256*256)
+                (geometry.left + geometry.width * geometry.scale).toFloat(),
+                (geometry.top + geometry.height * geometry.scale).toFloat()), paint)
             letterbox.getPixels(pixels, 0, 256, 0, 0, 256, 256)
-            return FloatArray(3*pixels.size).also { result ->
-                for (i in pixels.indices) {
-                    result[i] = ((pixels[i] ushr 16) and 255) / 255f
-                    result[pixels.size+i] = ((pixels[i] ushr 8) and 255) / 255f
-                    result[2*pixels.size+i] = (pixels[i] and 255) / 255f
-                }
+            for (i in pixels.indices) {
+                val rgb = pixels[i]
+                channels[i] = ((rgb ushr 16) and 255) / 255f
+                channels[pixels.size + i] = ((rgb ushr 8) and 255) / 255f
+                channels[2 * pixels.size + i] = (rgb and 255) / 255f
             }
-        } finally { letterbox.recycle() }
+            buffer.clear()
+            buffer.put(channels)
+            buffer.flip()
+        }
+
+        override fun close() = letterbox.recycle()
     }
 
     /** No background rectangle fallback: uncertain/non-finite masks and unsupported quads are rejected. */
