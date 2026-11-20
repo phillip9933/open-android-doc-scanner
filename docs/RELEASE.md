@@ -1,8 +1,6 @@
 # Releases
 
-Current stable release: **0.8.0**. See the [release notes](RELEASE-0.8.0.md). The SDK is distributed as a Maven ZIP with checksums and license/provenance material; do not attach the developer sample APK as a public product.
-
-The next release target is **1.0.0**. See the [candidate notes](RELEASE-1.0.0.md).
+The [stable SDK 1.0.0 release](https://github.com/phillip9933/open-android-doc-scanner/releases/tag/v1.0.0) includes the six-module Maven ZIP and its SHA-256 checksum. See the [release notes and upgrade instructions](RELEASE-1.0.0.md).
 
 ## Build and package
 
@@ -27,7 +25,7 @@ implementation("dev.offlinescan:scanner-ui-compose:1.0.0")
 implementation("dev.offlinescan:scanner-ocr-tesseract:1.0.0")
 ```
 
-Before publishing, validate the exact versioned archive, independent consumers, checksums and notes. Publish a GitHub prerelease for beta tags and preserve the latest stable release. The current workflow builds/audits; it does not automatically publish packages. Real-world beta feedback is permitted before stable acceptance; unverified gates stay open. See [FIELD-TESTING.md](FIELD-TESTING.md).
+Before publishing, validate the exact versioned archive, independent consumers, checksums and notes. Publish a GitHub prerelease for beta tags and preserve the latest stable release. Pushing a stable version tag such as `v1.0.0` runs the build and audit workflow. After both independent consumers pass, Actions publishes the verified SDK ZIP and checksum as the latest GitHub release. Real-world beta feedback is permitted before stable acceptance; unverified gates stay open. See [FIELD-TESTING.md](FIELD-TESTING.md).
 
 ## Evidence commands and historical validation
 

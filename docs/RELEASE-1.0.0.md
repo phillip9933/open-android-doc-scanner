@@ -1,4 +1,4 @@
-# Scanner SDK 1.0.0 candidate
+# Scanner SDK 1.0.0
 
 ## Page detection
 

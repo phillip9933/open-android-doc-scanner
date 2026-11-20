@@ -2,6 +2,7 @@ name: Build and audit
 on:
   push:
     branches: [main]
+    tags: ['v[0-9]+.[0-9]+.[0-9]+']
   pull_request:
   workflow_dispatch:
 permissions:
@@ -58,3 +59,36 @@ jobs:
             **/build/test-results/
             evidence/release-audit.json
             evidence/ocr-consumer-validation.json
+      - name: Stage the verified stable SDK
+        if: github.ref_type == 'tag' && github.event_name == 'push'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: stable-sdk
+          if-no-files-found: error
+          path: |
+            release/open-android-doc-scanner-*-sdk-maven.zip
+            release/SHA256SUMS
+
+  publish:
+    if: github.ref_type == 'tag' && github.event_name == 'push'
+    needs: build
+    runs-on: ubuntu-24.04
+    permissions:
+      actions: read
+      contents: write
+    steps:
+      - name: Publish the verified Maven ZIP and checksum
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          version="${GITHUB_REF_NAME#v}"
+          [[ "$version" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]
+          gh run download "$GITHUB_RUN_ID" --repo "$GITHUB_REPOSITORY" --name stable-sdk
+          archive="open-android-doc-scanner-${version}-sdk-maven.zip"
+          test -s "$archive"
+          sha256sum --check --strict SHA256SUMS
+          unzip -p "$archive" RELEASE-NOTES.md > release-notes.md
+          gh release create "$GITHUB_REF_NAME" "$archive" SHA256SUMS \
+            --repo "$GITHUB_REPOSITORY" --verify-tag --latest \
+            --title "Scanner SDK $version" --notes-file release-notes.md
