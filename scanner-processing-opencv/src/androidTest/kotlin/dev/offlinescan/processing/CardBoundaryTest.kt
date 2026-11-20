@@ -11,6 +11,33 @@ import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
 class CardBoundaryTest {
+    @Test fun tiltedCardIncludesBothTheDarkPanelAndTheLighterStock() {
+        val image = Bitmap.createBitmap(900, 800, Bitmap.Config.ARGB_8888)
+        try {
+            val canvas = Canvas(image)
+            canvas.drawColor(Color.rgb(214,216,214))
+            val paint = Paint(Paint.ANTI_ALIAS_FLAG)
+            paint.color = Color.rgb(205,207,205)
+            canvas.drawRect(32f,120f,475f,638f,paint)
+            val projected = floatArrayOf(155f,239f,786f,316f,719f,578f,221f,518f)
+            val plane = Matrix()
+            check(plane.setPolyToPoly(floatArrayOf(0f,0f,1080f,0f,1080f,680f,0f,680f),0,projected,0,4))
+            canvas.concat(plane)
+            paint.color = Color.rgb(174,202,220)
+            canvas.drawRect(0f,0f,1080f,680f,paint)
+            paint.color = Color.rgb(42,86,129)
+            canvas.drawRect(0f,0f,291f,680f,paint)
+            paint.color = Color.BLACK
+            paint.textSize = 48f
+            canvas.drawText("MEMBER 001234",340f,450f,paint)
+            val actual = requireNotNull(OpenCvProcessor().detectBitmap(image).corners)
+            for ((i, corner) in actual.points.withIndex()) {
+                val error = kotlin.math.hypot(corner.x*900-projected[i*2], corner.y*800-projected[i*2+1])
+                assertTrue("Outer corner $i is ${error}px from the reference", error < 12)
+            }
+        } finally { image.recycle() }
+    }
+
     @Test fun proposesOuterRoundedCardInsteadOfInternalNumberBox() {
         val root=File(InstrumentationRegistry.getInstrumentation().targetContext.cacheDir,"cards-${System.nanoTime()}").apply {mkdirs()}
         try {

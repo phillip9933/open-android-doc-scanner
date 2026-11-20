@@ -381,7 +381,7 @@ private fun ScannerSessionFlow(
                         permissionLauncher.launch(Manifest.permission.CAMERA)
                     },
                     onImport = { importLauncher.launch("image/*") },
-                    onCapture = { file ->
+                    onCapture = { file, stillDetection ->
                         busy = true
                         activeOperationJob = scope.launch {
                             try {
@@ -389,7 +389,7 @@ private fun ScannerSessionFlow(
                                 val operationJob = currentCoroutineContext()[Job]
                                 val page = sessionLifetime.run {
                                     importPage(session, processor, captureConfig, file, targetId,
-                                        Cancellation { if (operationJob?.isActive != true) throw CancellationException() }, learnedDetector)
+                                        Cancellation { if (operationJob?.isActive != true) throw CancellationException() }, learnedDetector, stillDetection)
                                 }
                                 file.delete()
                                 acceptPage(page, targetId)
@@ -505,8 +505,11 @@ private fun updateEdits(page: ScanPage, session: ScanSession,
 private fun detectStill(file: File, config: ScanConfig, cancellation: Cancellation,
                        learned: LearnedDocumentDetector, standard: ImageProcessor): Detection =
     if (config.detectionMode == DetectionMode.STANDARD) standard.detect(file, config, cancellation)
-    else DocumentOutlineFallback.onStill(learned.detect(file, config, cancellation)) {
-        standard.detect(file, config, cancellation)
+    else {
+        val ai = learned.detect(file, config, cancellation)
+        val edges = { standard.detect(file, config, cancellation) }
+        if (config.mode == ScanMode.PHOTO) DocumentOutlineFallback.onStill(ai, edges)
+        else DocumentOutlineFallback.refineStill(ai, edges)
     }
 
 private fun importPage(
@@ -516,10 +519,11 @@ private fun importPage(
     source: File,
     replaceId: String?,
     cancellation: Cancellation,
-    learnedDetector: LearnedDocumentDetector
+    learnedDetector: LearnedDocumentDetector,
+    stillDetection: Detection? = null
 ): ScanPage {
     val imported = if (replaceId == null) session.`import`(source) else session.replace(replaceId, source)
-    val detected = try { if (config.mode == ScanMode.PHOTO) null else detectStill(imported.original, config, cancellation, learnedDetector, processor) }
+    val detected = try { if (config.mode == ScanMode.PHOTO) null else stillDetection ?: detectStill(imported.original, config, cancellation, learnedDetector, processor) }
     catch (cancelled: CancellationException) { throw cancelled }
     catch (_: Exception) { null }
     val corners = detected?.corners
@@ -597,7 +601,7 @@ private class SessionLifetime(private val session: ScanSession) {
     bitmapDetector: (DocumentOutlineFallback, Bitmap, Cancellation) -> Detection,
     stillDetector: (File,Cancellation) -> Detection,
     cameraHolder: androidx.compose.runtime.MutableState<ScannerCamera?>, onPermission: () -> Unit, onImport: () -> Unit,
-    onCapture: (File) -> Unit, onReview: () -> Unit, pages: List<ScanPage>, canAdd: Boolean,
+    onCapture: (File, Detection?) -> Unit, onReview: () -> Unit, pages: List<ScanPage>, canAdd: Boolean,
     onPage: (String) -> Unit, onCancel: () -> Unit, pageBitmap: @Composable (ScanPage) -> Bitmap?,
     busy: Boolean, obscured:Boolean, error: String?, onCameraError: (ScanError) -> Unit) {
     val lifecycleOwner = LocalLifecycleOwner.current
@@ -623,10 +627,10 @@ private class SessionLifetime(private val session: ScanSession) {
         if (!latestBlocked.value && cameraReady) {
             takingPhoto = true
             qualityHint = null
-            cameraHolder.value?.capture(File(context.cacheDir, "capture-${System.nanoTime()}.jpg"), automatic, latestCaptureMode.value,
+            cameraHolder.value?.captureWithDetection(File(context.cacheDir, "capture-${System.nanoTime()}.jpg"), automatic, latestCaptureMode.value,
                 onRejected = { message -> takingPhoto = false; qualityHint = message },
-                onQualityWarning = { qualityHint = manualQualityHint }) { saved ->
-                latestOnCapture.value(saved)
+                onQualityWarning = { qualityHint = manualQualityHint }) { saved, stillDetection ->
+                latestOnCapture.value(saved, stillDetection)
                 takingPhoto = false
             }
         }

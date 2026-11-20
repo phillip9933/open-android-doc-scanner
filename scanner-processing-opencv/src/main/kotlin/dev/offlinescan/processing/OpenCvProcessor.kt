@@ -404,6 +404,7 @@ class OpenCvProcessor : ImageProcessor {
         val kernel=mats.keep(Imgproc.getStructuringElement(Imgproc.MORPH_ELLIPSE,Size(7.0,7.0)))
         val paper=mats.mat(); Imgproc.morphologyEx(small,paper,Imgproc.MORPH_CLOSE,kernel)
         Imgproc.GaussianBlur(paper,paper,Size(0.0,0.0),1.2)
+        preserveColoredMarks(paper)
         val background=mats.mat(); Imgproc.resize(paper,background,input.size(),0.0,0.0,Imgproc.INTER_LINEAR)
         val result=mats.keep(input.clone()); val row=ByteArray(input.cols()*3); val levels=ByteArray(row.size)
         val corrected=DoubleArray(3)
@@ -425,13 +426,13 @@ class OpenCvProcessor : ImageProcessor {
                 // A smaller paper neighborhood follows edge shadows and broad stains.
                 // Smoothly suppress only near-paper neutral marks, fading out before
                 // pale foreground writing; avoid a hard threshold around thin strokes.
-                val paperDistance=(deficit/40.0).coerceIn(0.0,1.0)
+                val paperDistance=((deficit-12.0)/28.0).coerceIn(0.0,1.0)
                 val paperWeight=1.0-paperDistance*paperDistance*(3.0-2.0*paperDistance)
-                val shoulder=deficit*paperWeight*neutralWeight*minOf(.95,strength+.2)
+                val shoulder=deficit*paperWeight*neutralWeight*minOf(.99,strength+.32)
                 // Darken clear ink gradually; near-paper tonal detail stays continuous.
-                val exponent=1.0+.3*((deficit-32.0)/64.0).coerceIn(0.0,1.0)
+                val inkGain = 1.0 - 0.55 * (deficit/252.0) * ((deficit-32.0)/46.0).coerceIn(0.0,1.0)
                 for(c in 0..2) {
-                    row[offset+c]=(252.0*Math.pow((corrected[c]/252.0).coerceIn(0.0,1.0),exponent)+shoulder)
+                    row[offset+c]=(corrected[c]*inkGain+shoulder)
                         .roundToInt().coerceIn(0,255).toByte()
                 }
             }
@@ -439,6 +440,42 @@ class OpenCvProcessor : ImageProcessor {
         }
         small.release(); paper.release(); kernel.release(); background.release()
         return result
+    }
+
+    /** A highlighter can fill the local paper window. Keep its color out of the illumination
+     * estimate when it differs markedly from the page's typical red/green and blue/green cast.
+     */
+    private fun preserveColoredMarks(field: Mat) {
+        val pixels = ByteArray(field.rows() * field.cols() * 3)
+        field.get(0, 0, pixels)
+        fun medianDifference(channel: Int): Int {
+            val histogram = IntArray(511)
+            for (i in pixels.indices step 3) {
+                val difference = (pixels[i+channel].toInt() and 255) - (pixels[i+1].toInt() and 255)
+                histogram[255+difference]++
+            }
+            var sum = 0
+            for (i in histogram.indices) {
+                sum += histogram[i]
+                if (sum*2 >= pixels.size/3) return i-255
+            }
+            return 0
+        }
+        val redCast = medianDifference(0)
+        val blueCast = medianDifference(2)
+        for (i in pixels.indices step 3) {
+            val red = pixels[i].toInt() and 255
+            val green = pixels[i+1].toInt() and 255
+            val blue = pixels[i+2].toInt() and 255
+            val departure = maxOf(abs(red-green-redCast), abs(blue-green-blueCast))
+            val weight = ((departure-24)/24.0).coerceIn(0.0,1.0)
+            if (weight == 0.0) continue
+            val light = maxOf(red-redCast, green, blue-blueCast)
+            pixels[i] = (red + weight*(light+redCast-red)).roundToInt().coerceIn(0,255).toByte()
+            pixels[i+1] = (green + weight*(light-green)).roundToInt().coerceIn(0,255).toByte()
+            pixels[i+2] = (blue + weight*(light+blueCast-blue)).roundToInt().coerceIn(0,255).toByte()
+        }
+        field.put(0, 0, pixels)
     }
 
     private fun detectMat(rgb: Mat, mats: Mats, cancellation: Cancellation): Detection {
@@ -458,34 +495,51 @@ class OpenCvProcessor : ImageProcessor {
         val luminance = ByteArray(gray.rows() * gray.cols()); gray.get(0, 0, luminance)
         var best: Quad? = null
         var confidence = 0.0
-        var saturationPixels: ByteArray? = null
         var localContrast: Mat? = null
         var localPixels: ByteArray? = null
         // Always compare both raw-edge thresholds before accepting an interior text box.
         // Normalized illumination proposals remain miss-only fallbacks.
-        for (pass in 0..5) {
+        var recoveredPanel = false
+        for (pass in OutlinePass.entries) {
+            val panel = best
+            var evidence = luminance
             cancellation.check()
             when (pass) {
-                0 -> Imgproc.Canny(blurred, edges, 35.0, 110.0)
-                1 -> Imgproc.Canny(blurred, edges, 6.0, 20.0)
-                2 -> {
+                OutlinePass.EDGES -> Imgproc.Canny(blurred, edges, 35.0, 110.0)
+                OutlinePass.FAINT_EDGES -> Imgproc.Canny(blurred, edges, 6.0, 20.0)
+                OutlinePass.SATURATION -> {
                     val hsv=mats.mat(); val saturation=mats.mat(); val smooth=mats.mat()
                     Imgproc.cvtColor(rgb,hsv,Imgproc.COLOR_RGB2HSV)
                     Core.extractChannel(hsv,saturation,1)
-                    saturationPixels=ByteArray(gray.rows()*gray.cols()).also {saturation.get(0,0,it)}
+                    evidence=ByteArray(gray.rows()*gray.cols()).also {saturation.get(0,0,it)}
                     Imgproc.GaussianBlur(saturation,smooth,Size(5.0,5.0),0.0)
                     Imgproc.Canny(smooth,edges,12.0,40.0)
                 }
-                3 -> Imgproc.threshold(blurred, edges, 0.0, 255.0, Imgproc.THRESH_BINARY or Imgproc.THRESH_OTSU)
-                4 -> {
+                OutlinePass.COLOR_PANEL -> {
+                    if (panel == null) continue
+                    val channel = panelColorChannel(rgb, panel, mats) ?: break
+                    evidence = ByteArray(luminance.size).also { channel.get(0, 0, it) }
+                    Imgproc.GaussianBlur(channel, channel, Size(5.0, 5.0), 0.0)
+                    Imgproc.threshold(channel, edges, 0.0, 255.0, Imgproc.THRESH_BINARY or Imgproc.THRESH_OTSU)
+                }
+                OutlinePass.COLOR_BACKDROP -> {
+                    if (panel == null) continue
+                    if (recoveredPanel) break
+                    val (distance, threshold) = backdropDifference(rgb, mats) ?: break
+                    evidence = ByteArray(luminance.size).also { distance.get(0, 0, it) }
+                    Imgproc.GaussianBlur(distance, distance, Size(5.0, 5.0), 0.0)
+                    Imgproc.threshold(distance, edges, threshold, 255.0, Imgproc.THRESH_BINARY)
+                }
+                OutlinePass.THRESHOLD -> Imgproc.threshold(blurred, edges, 0.0, 255.0, Imgproc.THRESH_BINARY or Imgproc.THRESH_OTSU)
+                OutlinePass.LOCAL_EDGES -> {
                     val normalized=normalizeIllumination(gray,mats)
                     localContrast=normalized
                     localPixels=ByteArray(gray.rows()*gray.cols()).also { normalized.get(0,0,it) }
                     Imgproc.Canny(normalized,edges,6.0,20.0)
                 }
-                else -> Imgproc.threshold(localContrast!!,edges,0.0,255.0,Imgproc.THRESH_BINARY or Imgproc.THRESH_OTSU)
+                OutlinePass.LOCAL_THRESHOLD -> Imgproc.threshold(localContrast!!,edges,0.0,255.0,Imgproc.THRESH_BINARY or Imgproc.THRESH_OTSU)
             }
-            Imgproc.morphologyEx(edges, edges, Imgproc.MORPH_CLOSE, if (pass==3 || pass==5) segmentationKernel else kernel)
+            Imgproc.morphologyEx(edges, edges, Imgproc.MORPH_CLOSE, if (pass.segmented) segmentationKernel else kernel)
             val contours = ArrayList<MatOfPoint>()
             try {
                 // Dense boundary points support fitting actual side lines instead of rounded corners.
@@ -528,7 +582,8 @@ class OpenCvProcessor : ImageProcessor {
                                 val qArea = Geometry.area(quad)
                                 val solidity = (area / (qArea * (gray.cols()-1) * (gray.rows()-1))).coerceIn(0.0, 1.0)
                                 if (solidity < 0.86) continue
-                                val edgeQuality = sideEvidence(quad,if(pass==2) saturationPixels!! else luminance,gray.cols(),gray.rows(),if(pass>=4) localPixels else null) ?: continue
+                                val edgeQuality = sideEvidence(quad, evidence, gray.cols(), gray.rows(),
+                                    if (pass.normalized) localPixels else null) ?: continue
                                 val angles = quad.points.indices.map { i ->
                                     val a = quad.points[(i+3)%4]; val b = quad.points[i]; val c = quad.points[(i+1)%4]
                                     val ux = (a.x-b.x)*gray.cols(); val uy = (a.y-b.y)*gray.rows()
@@ -538,7 +593,7 @@ class OpenCvProcessor : ImageProcessor {
                                 if (angles.min() < 0.12) continue
                                 // Geometry alone never earns high confidence; all four measured sides matter.
                                 val score = (0.25 + 0.20*solidity + 0.18*angles.average() +
-                                    0.22*edgeQuality + 0.15*minOf(1.0,qArea/0.5)).coerceIn(0.0,if(pass>=2) 0.86 else 0.94)
+                                    0.22*edgeQuality + 0.15*minOf(1.0,qArea/0.5)).coerceIn(0.0,if (pass == OutlinePass.EDGES || pass == OutlinePass.FAINT_EDGES) .94 else .86)
                                 val previous=best
                                 fun encloses(outer: Quad, inner: Quad): Boolean = inner.points.all { p ->
                                     outer.points.indices.all { i ->
@@ -546,11 +601,22 @@ class OpenCvProcessor : ImageProcessor {
                                         (b.x-a.x)*(p.y-a.y)-(b.y-a.y)*(p.x-a.x) >= -0.001
                                     }
                                 }
-                                val outerCandidate=previous!=null && pass<=2 && score>=0.75 &&
-                                    qArea>Geometry.area(previous)*1.5 && encloses(quad,previous)
-                                val innerCandidate=previous!=null && pass<=2 && confidence>=0.75 &&
-                                    Geometry.area(previous)>qArea*1.5 && encloses(previous,quad)
-                                if (outerCandidate || (!innerCandidate && score > confidence)) { confidence = score; best = quad }
+                                val preferOuter = !pass.segmented && !pass.normalized && previous != null && score >= .75 &&
+                                    qArea > Geometry.area(previous)*1.5 && encloses(quad, previous)
+                                val keepOuter = !pass.segmented && !pass.normalized && previous != null && confidence >= .75 &&
+                                    Geometry.area(previous) > qArea*1.5 && encloses(previous, quad)
+                                if (pass == OutlinePass.COLOR_PANEL || pass == OutlinePass.COLOR_BACKDROP) {
+                                    // A panel that runs to the card edges shares part of its outline.
+                                    // A larger rectangle surrounding the whole card could be the desk.
+                                    if (panel == null || score < .75 || qArea <= Geometry.area(panel)*1.15 ||
+                                        qArea <= Geometry.area(previous ?: panel) || !continuesPanel(quad, panel)) continue
+                                    confidence = score
+                                    best = quad
+                                    recoveredPanel = true
+                                } else if (preferOuter || (!keepOuter && score > confidence)) {
+                                    confidence = score
+                                    best = quad
+                                }
                                 supported=true
                                 break
                             }
@@ -561,11 +627,91 @@ class OpenCvProcessor : ImageProcessor {
             } finally { contours.forEach { it.release() } }
             // Supported edge or threshold candidates stop before additional fallbacks, avoiding
             // corrected illumination fragments displacing an already accepted document.
-            if (pass in 2..4 && best != null) break
+            if ((pass == OutlinePass.COLOR_BACKDROP || pass == OutlinePass.THRESHOLD || pass == OutlinePass.LOCAL_EDGES) && best != null) break
         }
         cancellation.check()
         val quality = best?.let { documentQuality(gray, it, mats, cancellation) }
         return Detection(best, if (best == null) 0.0 else confidence, quality?.brightness ?: brightness, quality?.sharpness ?: wholeFrameSharpness(gray,mats), scene, quality?.informativeTiles)
+    }
+
+    private enum class OutlinePass(val segmented: Boolean = false, val normalized: Boolean = false) {
+        EDGES, FAINT_EDGES, SATURATION, COLOR_PANEL(segmented = true), COLOR_BACKDROP(segmented = true), THRESHOLD(segmented = true),
+        LOCAL_EDGES(normalized = true), LOCAL_THRESHOLD(segmented = true, normalized = true)
+    }
+
+    private fun continuesPanel(outer: Quad, panel: Quad): Boolean {
+        val sides = outer.points
+        val panelCorners = panel.points
+        var sharedSides = 0
+        for (i in sides.indices) {
+            val a = sides[i]
+            val b = sides[(i+1)%4]
+            val dx = b.x-a.x
+            val dy = b.y-a.y
+            val tolerance = 0.008 * hypot(dx, dy)
+            var onSide = 0
+            for (corner in panelCorners) {
+                val cross = dx*(corner.y-a.y) - dy*(corner.x-a.x)
+                if (cross < -tolerance) return false
+                if (cross <= tolerance) onSide++
+            }
+            if (onSide >= 2) sharedSides++
+        }
+        return sharedSides >= 2
+    }
+
+    /** Project RGB onto the dominant color difference inside a potential printed panel.
+     * A lighter stock of the same hue can then form one region with that panel.
+     */
+    private fun panelColorChannel(rgb: Mat, quad: Quad, mats: Mats): Mat? {
+        val corners = quad.points
+        val samples = Array(3) { IntArray(9) }
+        for (i in 0 until 9) {
+            val u = (i % 3 + 0.5) / 3
+            val v = (i / 3 + 0.5) / 3
+            val weights = doubleArrayOf((1-u)*(1-v), u*(1-v), u*v, (1-u)*v)
+            val x = corners.indices.sumOf { corners[it].x * weights[it] }
+            val y = corners.indices.sumOf { corners[it].y * weights[it] }
+            val pixel = rgb.get((y*(rgb.rows()-1)).roundToInt(), (x*(rgb.cols()-1)).roundToInt())
+            for (c in 0..2) samples[c][i] = pixel[c].toInt()
+        }
+        val median = samples.map { it.sort(); it[4] }
+        val high = median.indices.maxBy { median[it] }
+        val low = median.indices.minBy { median[it] }
+        if (median[high] - median[low] < 28) return null
+        val weights = FloatArray(4)
+        weights[high] = 0.5f
+        weights[low] = -0.5f
+        weights[3] = 128f
+        val transform = mats.keep(Mat(1, 4, CvType.CV_32F))
+        transform.put(0, 0, weights)
+        return mats.mat().also { Core.transform(rgb, it, transform) }
+    }
+
+    /** A dark and a light panel can straddle the desk brightness while both differ from
+     * the desk's color. Use the frame perimeter only when it gives a consistent background.
+     */
+    private fun backdropDifference(rgb: Mat, mats: Mats): Pair<Mat, Double>? {
+        val thumbnail = mats.mat()
+        Imgproc.resize(rgb, thumbnail, Size(32.0, 32.0), 0.0, 0.0, Imgproc.INTER_AREA)
+        val pixels = ByteArray(32*32*3)
+        thumbnail.get(0, 0, pixels)
+        val border = (1..30).flatMap { i -> listOf(32+i, 30*32+i, i*32+1, i*32+30) }
+        fun value(index: Int, channel: Int) = pixels[3*index+channel].toInt() and 255
+        val center = IntArray(3) { c -> border.map { value(it,c) }.sorted()[border.size/2] }
+        val spread = border.map { i -> (0..2).maxOf { c -> abs(value(i,c)-center[c]) } }.sorted()
+        val deviation = spread[spread.size*9/10]
+        if (deviation > 24) return null
+        val difference = mats.mat()
+        Core.absdiff(rgb, Scalar(center[0].toDouble(), center[1].toDouble(), center[2].toDouble()), difference)
+        val distance = mats.mat()
+        val channel = mats.mat()
+        Core.extractChannel(difference, distance, 0)
+        for (c in 1..2) {
+            Core.extractChannel(difference, channel, c)
+            Core.max(distance, channel, distance)
+        }
+        return distance to maxOf(8.0, deviation + 6.0)
     }
 
     private fun wholeFrameSharpness(gray:Mat,mats:Mats):Double {

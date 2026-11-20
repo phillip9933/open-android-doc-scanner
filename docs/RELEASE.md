@@ -1,6 +1,6 @@
 # Releases
 
-The [stable SDK 1.0.0 release](https://github.com/phillip9933/open-android-doc-scanner/releases/tag/v1.0.0) includes the six-module Maven ZIP and its SHA-256 checksum. See the [release notes and upgrade instructions](RELEASE-1.0.0.md).
+The [stable SDK 1.1.0 release](https://github.com/phillip9933/open-android-doc-scanner/releases/tag/v1.1.0) includes the six-module Maven ZIP and its SHA-256 checksum. See the [release notes and upgrade instructions](RELEASE-1.1.0.md).
 
 ## Build and package
 
@@ -15,17 +15,17 @@ python3 tools/package_maven_release.py
 python3 tools/verify_ocr_consumer.py
 ```
 
-The local-only publication target is `release/maven`. The archive contains six coordinates under `dev.offlinescan`, version `1.0.0`, including optional `scanner-ocr-tesseract`. Native source and notice requirements remain in [NATIVE-BUILD.md](NATIVE-BUILD.md).
+The local-only publication target is `release/maven`. The archive contains six coordinates under `dev.offlinescan`, version `1.1.0`, including optional `scanner-ocr-tesseract`. Native source and notice requirements remain in [NATIVE-BUILD.md](NATIVE-BUILD.md).
 
 ```kotlin
 maven { url = uri("/absolute/path/to/extracted-sdk/maven") }
 // Add to host dependencies; update every scanner module together and recompile.
-implementation("dev.offlinescan:scanner-ui-compose:1.0.0")
+implementation("dev.offlinescan:scanner-ui-compose:1.1.0")
 // Optional:
-implementation("dev.offlinescan:scanner-ocr-tesseract:1.0.0")
+implementation("dev.offlinescan:scanner-ocr-tesseract:1.1.0")
 ```
 
-Before publishing, validate the exact versioned archive, independent consumers, checksums and notes. Publish a GitHub prerelease for beta tags and preserve the latest stable release. Pushing a stable version tag such as `v1.0.0` runs the build and audit workflow. After both independent consumers pass, Actions publishes the verified SDK ZIP and checksum as the latest GitHub release. Real-world beta feedback is permitted before stable acceptance; unverified gates stay open. See [FIELD-TESTING.md](FIELD-TESTING.md).
+Before publishing, validate the exact versioned archive, independent consumers, checksums and notes. Publish a GitHub prerelease for beta tags and preserve the latest stable release. Pushing a stable version tag such as `v1.1.0` runs the build and audit workflow. After both independent consumers pass, Actions publishes the verified SDK ZIP and checksum as the latest GitHub release. Real-world beta feedback is permitted before stable acceptance; unverified gates stay open. See [FIELD-TESTING.md](FIELD-TESTING.md).
 
 ## Evidence commands and historical validation
 

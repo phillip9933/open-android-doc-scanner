@@ -142,6 +142,52 @@ import org.junit.runner.RunWith
             assertEquals(0,luma(manual,.14,.164));assertEquals(255,luma(manual,.15,.12))
         } finally {automatic.recycle();manual.recycle()}
     }
+    @Test fun dimRuledGridGetsPaperCleanupWhileFaintPrintRetainsItsTones() {
+        val grid = Bitmap.createBitmap(600, 600, Bitmap.Config.ARGB_8888)
+        val paint = Paint().apply { color = Color.rgb(53,53,53); strokeWidth = 3f }
+        Canvas(grid).apply {
+            drawColor(Color.rgb(122,122,122))
+            for (at in 60..540 step 60) {
+                drawLine(60f, at.toFloat(), 540f, at.toFloat(), paint)
+                drawLine(at.toFloat(), 60f, at.toFloat(), 540f, paint)
+            }
+        }
+        val gridFile = File(directory, "dim-grid.png")
+        gridFile.outputStream().use { grid.compress(Bitmap.CompressFormat.PNG,100,it) }
+        grid.recycle()
+        val gridOutput = render(gridFile)
+        try {
+            val paper = luma(gridOutput, .55, .55)
+            assertTrue(paper > 225)
+            assertTrue(paper-luma(gridOutput, .50, .55) > 100)
+        } finally { gridOutput.recycle() }
+
+        val faint = fixture("faint.png", paper = 182, ink = 150)
+        val faintOutput = render(faint)
+        try {
+            assertTrue(luma(faintOutput, .14, .145)-luma(faintOutput, .14, .164) >= 30)
+        } finally { faintOutput.recycle() }
+    }
+
+    @Test fun autoPreservesTintedCardStockAlongsideASaturatedPanel() {
+        val card = Bitmap.createBitmap(720, 450, Bitmap.Config.ARGB_8888)
+        val stock = Color.rgb(176, 203, 224)
+        Canvas(card).apply {
+            drawColor(stock)
+            drawRect(0f, 0f, 210f, 450f, Paint().apply { color = Color.rgb(35, 86, 140) })
+            drawText("MEMBER 001234", 245f, 260f, Paint().apply { color = Color.BLACK; textSize = 40f })
+        }
+        val file = File(directory, "two-tone.png")
+        file.outputStream().use { card.compress(Bitmap.CompressFormat.PNG, 100, it) }
+        card.recycle()
+        val image = render(file)
+        try {
+            val pixel = image.getPixel(image.width*3/4, image.height/4)
+            assertTrue("Card stock should keep its blue tint", Color.blue(pixel)-Color.red(pixel) >= 40)
+            assertTrue("Card stock should retain its lightness", kotlin.math.abs(Color.green(pixel)-Color.green(stock)) < 10)
+        } finally { image.recycle() }
+    }
+
     @Test fun continuousTonePhotoAndBlankPageArePreserved() {
         val image=Bitmap.createBitmap(800,1000,Bitmap.Config.ARGB_8888)
         for(y in 0 until 1000) for(x in 0 until 800) image.setPixel(x,y,Color.rgb(x*255/799,y*255/999,(x+y)*255/1798))

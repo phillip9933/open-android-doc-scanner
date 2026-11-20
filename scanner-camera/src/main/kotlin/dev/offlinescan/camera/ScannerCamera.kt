@@ -88,12 +88,13 @@ class ScannerCamera @JvmOverloads constructor(
     private var boundScaleType: PreviewView.ScaleType? = null
     private val captureLock = Any()
     @Volatile private var pendingCapture: PendingCapture? = null
-    private class PendingCapture(val staging: File, val destination: File, val onSaved: (File) -> Unit,
+    private class PendingCapture(val staging: File, val destination: File, val onSaved: (File, Detection?) -> Unit,
         val automatic: Boolean, val mode: ScanMode, val reference: Detection?, val epoch: Long, val onRejected: (String) -> Unit,
         val onQualityWarning: () -> Unit) {
         val files = mutableListOf(staging)
         var bestFile: File? = null
         var bestQuality: CaptureQualityPolicy.Sample? = null
+        var bestDetection: Detection? = null
         var shotCount = 0
         var focusSucceeded: Boolean? = null
         var manualQualityWarning = false
@@ -278,7 +279,12 @@ class ScannerCamera @JvmOverloads constructor(
 
     /** Snapshot the UI-selected mode for all quality checks on this still. */
     fun capture(destination: File, automatic: Boolean, mode: ScanMode, onRejected: (String) -> Unit,
-        onQualityWarning: () -> Unit, onSaved: (File) -> Unit) = onMain {
+        onQualityWarning: () -> Unit, onSaved: (File) -> Unit) =
+        captureWithDetection(destination, automatic, mode, onRejected, onQualityWarning) { file, _ -> onSaved(file) }
+
+    /** Deliver the saved original together with its still-image detection, when available. */
+    fun captureWithDetection(destination: File, automatic: Boolean, mode: ScanMode, onRejected: (String) -> Unit,
+        onQualityWarning: () -> Unit, onSaved: (File, Detection?) -> Unit) = onMain {
         if (closed.get() || imageCapture == null || !active.get()) {
             report("Camera is not ready for capture"); return@onMain
         }
@@ -349,8 +355,10 @@ class ScannerCamera @JvmOverloads constructor(
                                     val cancel = Cancellation { if (!captureCurrent(pending)) throw CancellationException() }
                                     cancel.check()
                                     var quality: CaptureQualityPolicy.Sample? = null
+                                    var stillDetection: Detection? = null
                                     if (pending.automatic) {
                                         val detected = stillDetector?.invoke(file, cancel) ?: processor.detect(file, config, cancel)
+                                        stillDetection = detected
                                         val quad = detected.corners
                                         val reference = pending.reference
                                         val sameDocument = quad != null && reference?.corners != null &&
@@ -366,6 +374,7 @@ class ScannerCamera @JvmOverloads constructor(
                                     } else if (pending.mode != ScanMode.PHOTO) {
                                         try {
                                             val detected = stillDetector?.invoke(file, cancel) ?: processor.detect(file, config, cancel)
+                                            stillDetection = detected
                                             val reference = pending.reference
                                             val detectedQuad = detected.corners?.takeIf { Geometry.valid(it, 0.03) && detected.confidence >= 0.50 }
                                             val signatureMatches = reference != null && detected.sceneSignature.isNotEmpty() &&
@@ -398,7 +407,9 @@ class ScannerCamera @JvmOverloads constructor(
                                         val acceptable = !pending.automatic || (assessed != null && CaptureQualityPolicy.acceptable(
                                             assessed, pending.reference?.sharpness ?: 0.0, pending.reference?.documentDetailTiles))
                                         if (acceptable && (!pending.automatic || CaptureQualityPolicy.better(assessed!!, pending.bestQuality))) {
-                                            pending.bestFile = file; pending.bestQuality = assessed
+                                            pending.bestFile = file
+                                            pending.bestQuality = assessed
+                                            pending.bestDetection = stillDetection
                                         }
                                         if (pending.automatic && pending.shotCount < 2) {
                                             try {
@@ -445,7 +456,7 @@ class ScannerCamera @JvmOverloads constructor(
                             pendingCapture = null
                             gate.captureFinished(true)
                             if (pending.manualQualityWarning) pending.onQualityWarning()
-                            pending.onSaved(pending.destination)
+                            pending.onSaved(pending.destination, pending.bestDetection)
                         }
                     }
                 } catch (error: Exception) { captureFailure(pending,"Unable to save the capture",error,ErrorCode.STORAGE,allowBest=false) }

@@ -52,9 +52,15 @@ class ScannerAutomaticCaptureTest {
         val destination=File(harness.directory,"accepted.jpg")
         val saved=AtomicReference<File?>(null)
         val rejected=AtomicReference<String?>(null)
+        val selectedDetection = AtomicReference<Detection?>()
         try {
             awaitReady(harness)
-            compose.runOnUiThread { harness.camera.get()!!.capture(destination,true,{rejected.set(it)},{saved.set(it)}) }
+            compose.runOnUiThread {
+                harness.camera.get()!!.captureWithDetection(destination, true, ScanMode.DOCUMENT, { rejected.set(it) }, {}) { file, detection ->
+                    selectedDetection.set(detection)
+                    saved.set(file)
+                }
+            }
             compose.waitUntil(20_000) { saved.get()!=null || rejected.get()!=null || harness.errors.isNotEmpty() }
             assertTrue("Camera errors: ${harness.errors}",harness.errors.isEmpty())
             assertNull("Automatic capture rejected real virtualscene pixels: ${harness.originals}",rejected.get())
@@ -63,6 +69,7 @@ class ScannerAutomaticCaptureTest {
             assertEquals("Automatic capture must compare exactly two encoded originals",2,originals.size)
             val best=originals.maxBy { it.quality.sharpness }
             assertEquals("Saved JPEG must be the chosen original, without recompression",best.sha256,sha256(destination))
+            assertEquals(best.quality.sharpness, requireNotNull(selectedDetection.get()).sharpness, 0.0)
             assertOnly(harness.directory,destination)
             val image=BitmapFactory.decodeFile(destination.absolutePath)
             assertNotNull("Delivered file must decode as an image",image)

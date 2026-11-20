@@ -4,13 +4,51 @@ import kotlin.math.abs
 import kotlin.math.hypot
 
 object Geometry {
-    fun area(q: Quad): Double = abs(q.points.indices.sumOf { i -> val a=q.points[i]; val b=q.points[(i+1)%4]; a.x*b.y-b.x*a.y })/2
+    fun area(q: Quad): Double = polygonArea(q.points)
+
+    private fun polygonArea(points: List<Point>): Double = abs(points.indices.sumOf { i ->
+        val a = points[i]
+        val b = points[(i+1) % points.size]
+        a.x*b.y - b.x*a.y
+    }) / 2
+
     fun valid(q: Quad, minArea: Double = 0.005): Boolean {
         val p=q.points
         if (p.any { !it.x.isFinite() || !it.y.isFinite() || it.x !in 0.0..1.0 || it.y !in 0.0..1.0 }) return false
         val cross=p.indices.map { i -> val a=p[i]; val b=p[(i+1)%4]; val c=p[(i+2)%4]; (b.x-a.x)*(c.y-b.y)-(b.y-a.y)*(c.x-b.x) }
         return cross.all { it > 1e-8 } && area(q)>=minArea
     }
+    /** Sutherland-Hodgman clipping in normalized coordinates; clockwise screen-space interior is left of each directed edge. */
+    internal fun intersectionOverUnion(a: Quad, b: Quad): Double {
+        var polygon = a.points
+        val clip = b.points
+        for (i in clip.indices) {
+            val edgeStart = clip[i]
+            val edgeEnd = clip[(i + 1) % 4]
+            fun signedDistance(p: Point) = (edgeEnd.x - edgeStart.x) * (p.y - edgeStart.y) - (edgeEnd.y - edgeStart.y) * (p.x - edgeStart.x)
+            if (polygon.isEmpty()) return 0.0
+            val output = ArrayList<Point>()
+            var previous = polygon.last()
+            var previousDistance = signedDistance(previous)
+            for (current in polygon) {
+                val currentDistance = signedDistance(current)
+                val previousInside = previousDistance >= -1e-12
+                val currentInside = currentDistance >= -1e-12
+                if (previousInside != currentInside) {
+                    val t = (previousDistance / (previousDistance - currentDistance)).coerceIn(0.0, 1.0)
+                    output.add(Point(previous.x + (current.x - previous.x) * t, previous.y + (current.y - previous.y) * t))
+                }
+                if (currentInside) output.add(current)
+                previous = current
+                previousDistance = currentDistance
+            }
+            polygon = output
+        }
+        val intersection = polygonArea(polygon)
+        val union = Geometry.area(a) + Geometry.area(b) - intersection
+        return if (union <= 0) 0.0 else (intersection / union).coerceIn(0.0, 1.0)
+    }
+
     fun requireValid(q: Quad) { if (!valid(q)) throw ScanException(ScanError(ErrorCode.INVALID_GEOMETRY,"Corners must form a clockwise convex region inside the image")) }
     fun rotate(p: Point, quarterTurns: Int): Point = when ((quarterTurns%4+4)%4) { 1 -> Point(1-p.y,p.x); 2 -> Point(1-p.x,1-p.y); 3 -> Point(p.y,1-p.x); else -> p }
     fun distance(a: Quad,b: Quad): Double = a.points.zip(b.points).map { (x,y) -> hypot(x.x-y.x,x.y-y.y) }.average()
