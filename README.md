@@ -2,6 +2,10 @@
 
 Independent Apache-2.0 Android document and printed-photo scanner. Kotlin, CameraX, OpenCV and Compose. Core processing works offline without Google Play services, cloud, API keys or model downloads. No network permission or analytics.
 
+<a href="https://github.com/phillip9933/open-android-doc-scanner/releases/tag/v1.1.0"><img src="docs/badges/github-releases.svg" alt="Download Scanner SDK 1.1.0 from GitHub Releases" height="40"></a>
+
+**Support:** [Buy me a coffee](https://buymeacoffee.com/phillip9933) · [GitHub Sponsors](https://github.com/sponsors/phillip9933)
+
 **Scanner SDK 1.1.0** finds angled pages sooner, keeps the full border on two-tone cards, and reduces show-through while preserving pencil and colored marks. See the [1.1.0 release notes](docs/RELEASE-1.1.0.md).
 
 [Download SDK 1.1.0](https://github.com/phillip9933/open-android-doc-scanner/releases/tag/v1.1.0) · [Documentation](docs/INDEX.md) · [CI](https://github.com/phillip9933/open-android-doc-scanner/actions)
@@ -86,12 +90,6 @@ RC10 adds per-page Auto enhancement for documents, receipts and cards, stronger 
 
 Start with [Contributing](CONTRIBUTING.md) for setup and checks, and [Security](SECURITY.md) for private vulnerability reporting. The [documentation index](docs/README.md) covers integration, architecture and release evidence.
 
-## AI usage
-
-I use AI tools to help with development, including analysis, code, tests and documentation. I care about security, privacy and protecting people's data, and I try to reflect that in how I build these projects.
-
-I document validation and known limitations so you can assess the evidence for yourself. Contributions should disclose material AI assistance and distinguish checks actually run from checks still needed.
-
 See [quality evidence](docs/QUALITY-REPORT.md), [remaining device acceptance](docs/DEVICE-ACCEPTANCE.md) and [contribution guidance](CONTRIBUTING.md#ai-usage).
 
 ## License
@@ -101,3 +99,7 @@ Original scanner code is licensed under [Apache-2.0](LICENSE). Retain [NOTICE](N
 0.7.0 incorporates the accepted quality5 processing. See [release notes and validation](docs/RELEASE-0.7.0.md). Earlier quality1–quality5 documents preserve the tuning history.
 
 Beta integrations: update all SDK coordinates together and recompile. Download the Maven ZIP and verify `SHA256SUMS` from the release. See [field testing and reports](docs/FIELD-TESTING.md); no personal scans or automatic telemetry are required.
+
+## AI usage
+
+I use AI tools for analysis, implementation, tests, and documentation. I decide what ships and take responsibility for maintaining it. Project-specific testing and known limitations are documented separately.
