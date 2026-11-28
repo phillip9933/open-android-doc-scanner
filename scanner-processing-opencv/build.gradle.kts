@@ -5,7 +5,10 @@ android { namespace="dev.offlinescan.processing"; compileSdk=36; ndkVersion="28.
     kotlinOptions { jvmTarget="17" }
 }
 dependencies { api(project(":scanner-core")); implementation(files("libs/opencv-java-4.12.0.jar")); implementation("androidx.exifinterface:exifinterface:1.4.1")
-    compileOnly("androidx.annotation:annotation:1.11.0")
+    val annotations = "androidx.annotation:annotation:1.11.0"
+    compileOnly(annotations)
+    // ExifInterface also brings annotations at runtime. Keep both classpaths consistent.
+    constraints { runtimeOnly(annotations) }
     implementation("com.microsoft.onnxruntime:onnxruntime-android:1.24.1")
     androidTestImplementation("androidx.test.ext:junit:1.2.1"); androidTestImplementation("androidx.test:runner:1.6.2") }
 
