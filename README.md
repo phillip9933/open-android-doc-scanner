@@ -97,7 +97,7 @@ Read [integration examples](docs/INTEGRATION.md), [architecture and ownership](d
 
 ## Privacy and security
 
-The SDK processes scans on the device without network permission, analytics or a cloud service. The Compose flow uses the camera permission for capture and the Android document picker for import. The host app controls how it stores, shares and deletes the exported files. See [security reporting](SECURITY.md).
+The SDK processes scans on the device and does not request internet access. Source builds using CameraX 1.7.0 include a Media3 permission to read network connection state. The sample removes it. Hosts that do not need it can use the [manifest opt-out](docs/INTEGRATION.md#camera-permissions). The Compose flow uses the camera permission for capture and the Android document picker for import. The host app controls how it stores, shares and deletes the exported files. See [security reporting](SECURITY.md).
 
 ## Contribute
 

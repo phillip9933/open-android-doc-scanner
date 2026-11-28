@@ -577,6 +577,8 @@ def audit(root: Path, apk: Path, graph: Path, aar: Path | None) -> dict:
             report["merged_manifests"].append({"path": relative(path, root), "sha256": file_digest(path), "permissions": permissions})
             if "android.permission.INTERNET" in permissions:
                 errors.append("INTERNET permission in " + relative(path, root))
+            if path.is_relative_to(root / "scanner-sample") and "android.permission.ACCESS_NETWORK_STATE" in permissions:
+                errors.append("Unexpected ACCESS_NETWORK_STATE permission in " + relative(path, root))
         except Exception as error:
             errors.append(f"Cannot parse merged manifest {relative(path, root)}: {error}")
     if not apk.is_file():

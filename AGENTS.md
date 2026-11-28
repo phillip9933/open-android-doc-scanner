@@ -22,7 +22,7 @@ Keep signing material outside Git in `../private/signing/`. Do not read, print, 
 ## This project
 
 - **Purpose and tier:** Public Android scanner SDK and sample app. The SDK is for Android app developers; the sample demonstrates the scanner flow. Apply the native/mobile and library/distribution profiles.
-- **Platform and capabilities:** Android API 26 or later on arm64-v8a and x86_64. The SDK handles camera images, imported files and optional offline OCR. It has no network permission. Use synthetic development fixtures.
+- **Platform and capabilities:** Android API 26 or later on arm64-v8a and x86_64. The SDK handles camera images, imported files and optional offline OCR. It does not request internet access. See [camera permissions](docs/INTEGRATION.md#camera-permissions) for the optional host manifest override. Use synthetic development fixtures.
 - **Distribution:** The [GitHub release](https://github.com/phillip9933/open-android-doc-scanner/releases) supplies the SDK Maven archive and its checksum. The sample is a development app, not a store release.
 - **Setup and run:** Use the toolchain in the [Build section](README.md#build). Prepare the pinned OCR test models with `python3 tools/prepare_ocr_test_models.py`. Use `./gradlew :scanner-sample:installDebug` on an approved test device or emulator, then open **Offline Scanner**.
 - **Tests and checks:** See the [contribution instructions](CONTRIBUTING.md) and [build workflow](.github/workflows/build.yml) for the JVM, lint, package and consumer checks. Use the [device acceptance checklist](docs/DEVICE-ACCEPTANCE.md) for connected tests. No measured suite timing or branch-protection policy was verified here.

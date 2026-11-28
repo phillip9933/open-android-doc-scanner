@@ -12,6 +12,23 @@ Keep the host's `ScanConfig` values stable while collecting pages. Changing a va
 
 For AI-assisted page detection with a custom configuration, pass `ScanConfig(detectionMode = DetectionMode.AI)`. The ready-made flow uses AI when called without a configuration. An explicitly constructed `ScanConfig()` defaults to Standard. Custom capture UIs can use one `DocumentOutlineFallback` per analysis stream, pass monotonic milliseconds to `onFrame`, and use `refineStill` for a captured or imported document. The viewfinder checks edges on the first AI miss and skips one repeated check after an unsuccessful probe in the same scene. On still documents the ready-made flow uses the edge detector’s corners when both outlines cover the same page (at least 90% intersection-over-union). The existing `onStill` method runs the edge detector only after an AI miss. The low-level learned and OpenCV detectors remain independently callable.
 
+## Camera permissions
+
+This section applies to source builds with CameraX 1.7.0. The published Scanner SDK 1.1.0 uses CameraX 1.4.2.
+
+CameraX 1.7.0 brings Media3 through its video library. An app that includes the scanner camera or Compose flow gets `android.permission.ACCESS_NETWORK_STATE` in its merged manifest by default. This permission lets code read connection state. It does not grant internet access. Still capture, crop, export and offline OCR work without it.
+
+If your app and its other libraries do not need connection state, add the following to the **app** manifest. The scanner sample uses this configuration. Leave the permission in place if another part of the app needs it.
+
+```xml
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"
+        tools:node="remove" />
+    <!-- Existing app declarations -->
+</manifest>
+```
+
 ## OpenCloud-shaped adapter
 
 ```kotlin

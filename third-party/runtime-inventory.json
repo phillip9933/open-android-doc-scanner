@@ -68,8 +68,8 @@
     "noticeStatus": "POM declaration only; see full upstream license texts"
   },
   {
-    "coordinate": "androidx.annotation:annotation-jvm:1.9.1",
-    "sha256": "1e343917ebf27ba96fe4dc52b1cad7fd32b738fbc6355bb6cd5b3b305d7212d0",
+    "coordinate": "androidx.annotation:annotation-jvm:1.11.0",
+    "sha256": "a83b827cc17fd6b41c7bf5e7a2a2b40a0895b00b3e30fdfdb820b49dc7b667f3",
     "pomLicenses": [
       {
         "name": "The Apache Software License, Version 2.0",
@@ -77,7 +77,7 @@
       }
     ],
     "embeddedNoticeFiles": [
-      "third-party/runtime-notices/androidx.annotation_annotation-jvm_1.9.1/META-INF_androidx_annotation_annotation_LICENSE.txt"
+      "third-party/runtime-notices/androidx.annotation_annotation-jvm_1.11.0/META-INF_androidx_annotation_annotation_LICENSE.txt"
     ],
     "noticeStatus": "preserved"
   },
@@ -142,8 +142,8 @@
     "noticeStatus": "POM declaration only; see full upstream license texts"
   },
   {
-    "coordinate": "androidx.camera:camera-camera2:1.4.2",
-    "sha256": "cafb962aa98c9a580f4d24edb8ef24bb58bf7b5ab06af612570bef4a7c08efb7",
+    "coordinate": "androidx.camera.featurecombinationquery:featurecombinationquery:1.7.0",
+    "sha256": "0414dcf4d92a4a5fbb57ea7557e8edc90c25527a083f84ee49d7b0a6558b347e",
     "pomLicenses": [
       {
         "name": "The Apache Software License, Version 2.0",
@@ -151,31 +151,87 @@
       }
     ],
     "embeddedNoticeFiles": [
-      "third-party/runtime-notices/androidx.camera_camera-camera2_1.4.2/META-INF_androidx_camera_camera-camera2_LICENSE.txt"
+      "third-party/runtime-notices/androidx.camera.featurecombinationquery_featurecombinationquery_1.7.0/META-INF_androidx_camera_featurecombinationquery_featurecombinationquery_LICENSE.txt"
     ],
     "noticeStatus": "preserved"
   },
   {
-    "coordinate": "androidx.camera:camera-core:1.4.2",
-    "sha256": "bbca13760ce1587502eb15723d0e17fa0a3495d084e609c4e4c8d3c2e1c85cf8",
+    "coordinate": "androidx.camera.viewfinder:viewfinder-core:1.5.1",
+    "sha256": "31179ed5509e4d6d8d667efb91a039cac897b2bfd800d4c6e0b5bed376b4fa69",
+    "pomLicenses": [
+      {
+        "name": "The Apache Software License, Version 2.0",
+        "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      }
+    ],
+    "embeddedNoticeFiles": [
+      "third-party/runtime-notices/androidx.camera.viewfinder_viewfinder-core_1.5.1/META-INF_androidx_camera_viewfinder_viewfinder-core_LICENSE.txt"
+    ],
+    "noticeStatus": "preserved"
+  },
+  {
+    "coordinate": "androidx.camera:camera-camera2-pipe:1.7.0",
+    "sha256": "804466f35c15cd1e649981b2af51cee23125608bd8d08cdfbde0e65ba18beaee",
+    "pomLicenses": [
+      {
+        "name": "The Apache Software License, Version 2.0",
+        "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      }
+    ],
+    "embeddedNoticeFiles": [
+      "third-party/runtime-notices/androidx.camera_camera-camera2-pipe_1.7.0/META-INF_androidx_camera_camera-camera2-pipe_LICENSE.txt"
+    ],
+    "noticeStatus": "preserved"
+  },
+  {
+    "coordinate": "androidx.camera:camera-camera2:1.7.0",
+    "sha256": "c5d6196f5b62165bae422871f640499947d3ee80b85e91a6f258c1aa8a06b184",
+    "pomLicenses": [
+      {
+        "name": "The Apache Software License, Version 2.0",
+        "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      }
+    ],
+    "embeddedNoticeFiles": [
+      "third-party/runtime-notices/androidx.camera_camera-camera2_1.7.0/META-INF_androidx_camera_camera-camera2_LICENSE.txt"
+    ],
+    "noticeStatus": "preserved"
+  },
+  {
+    "coordinate": "androidx.camera:camera-common:1.7.0",
+    "sha256": "8e6eb6127087e778d50b2c5295a0944bae98db5aea544d5284307d40e18863c5",
+    "pomLicenses": [
+      {
+        "name": "The Apache Software License, Version 2.0",
+        "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      }
+    ],
+    "embeddedNoticeFiles": [
+      "third-party/runtime-notices/androidx.camera_camera-common_1.7.0/META-INF_androidx_camera_camera-common_LICENSE.txt"
+    ],
+    "noticeStatus": "preserved"
+  },
+  {
+    "coordinate": "androidx.camera:camera-core:1.7.0",
+    "sha256": "049523079931c0e65438f8ce91fa29de0c2736ef80e76f624afbcba50738b159",
     "pomLicenses": [
       {
         "name": "The Apache Software License, Version 2.0",
         "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
       },
       {
-        "name": "BSD License",
-        "url": "https://chromium.googlesource.com/libyuv/libyuv/+/refs/heads/main/README.chromium"
+        "name": "BSD-3-Clause",
+        "url": "https://opensource.org/licenses/BSD-3-Clause"
       }
     ],
     "embeddedNoticeFiles": [
-      "third-party/runtime-notices/androidx.camera_camera-core_1.4.2/META-INF_androidx_camera_camera-core_LICENSE.txt"
+      "third-party/runtime-notices/androidx.camera_camera-core_1.7.0/META-INF_androidx_camera_camera-core_LICENSE.txt"
     ],
     "noticeStatus": "preserved"
   },
   {
-    "coordinate": "androidx.camera:camera-lifecycle:1.4.2",
-    "sha256": "8355383d86060ba2ac260f749305b7a3bcc9fa80b534b46e814e2140871998ce",
+    "coordinate": "androidx.camera:camera-lifecycle:1.7.0",
+    "sha256": "129ae5d3384fd63d67a85bbda971a1dc0e1a83f123404d855ab515d762eeed59",
     "pomLicenses": [
       {
         "name": "The Apache Software License, Version 2.0",
@@ -183,13 +239,13 @@
       }
     ],
     "embeddedNoticeFiles": [
-      "third-party/runtime-notices/androidx.camera_camera-lifecycle_1.4.2/META-INF_androidx_camera_camera-lifecycle_LICENSE.txt"
+      "third-party/runtime-notices/androidx.camera_camera-lifecycle_1.7.0/META-INF_androidx_camera_camera-lifecycle_LICENSE.txt"
     ],
     "noticeStatus": "preserved"
   },
   {
-    "coordinate": "androidx.camera:camera-video:1.4.2",
-    "sha256": "f26d4a7a0cc63b40b71854b7c0d702ed50cf2bbf2a843f40bb3d7231f0360479",
+    "coordinate": "androidx.camera:camera-video:1.7.0",
+    "sha256": "161422da5644c65d60b6136eb86ec3dbc82efbd1012042d2b9ed3bc0ea57f309",
     "pomLicenses": [
       {
         "name": "The Apache Software License, Version 2.0",
@@ -197,13 +253,13 @@
       }
     ],
     "embeddedNoticeFiles": [
-      "third-party/runtime-notices/androidx.camera_camera-video_1.4.2/META-INF_androidx_camera_camera-video_LICENSE.txt"
+      "third-party/runtime-notices/androidx.camera_camera-video_1.7.0/META-INF_androidx_camera_camera-video_LICENSE.txt"
     ],
     "noticeStatus": "preserved"
   },
   {
-    "coordinate": "androidx.camera:camera-view:1.4.2",
-    "sha256": "9b4881e451330fad587833dd57da275084a8a1032f9429c364c2d9641426b123",
+    "coordinate": "androidx.camera:camera-view:1.7.0",
+    "sha256": "d21b9f168e8172f8d5b031f8ac820224f1750a7d64d788e89362d2cd392a41b5",
     "pomLicenses": [
       {
         "name": "The Apache Software License, Version 2.0",
@@ -211,7 +267,7 @@
       }
     ],
     "embeddedNoticeFiles": [
-      "third-party/runtime-notices/androidx.camera_camera-view_1.4.2/META-INF_androidx_camera_camera-view_LICENSE.txt"
+      "third-party/runtime-notices/androidx.camera_camera-view_1.7.0/META-INF_androidx_camera_camera-view_LICENSE.txt"
     ],
     "noticeStatus": "preserved"
   },
@@ -474,6 +530,20 @@
     "noticeStatus": "POM declaration only; see full upstream license texts"
   },
   {
+    "coordinate": "androidx.core:core-backported-fixes:1.0.0",
+    "sha256": "874722634db5f60745ab2f64d734dd81d3ee4eb71f175263e6565dabea54713d",
+    "pomLicenses": [
+      {
+        "name": "The Apache Software License, Version 2.0",
+        "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      }
+    ],
+    "embeddedNoticeFiles": [
+      "third-party/runtime-notices/androidx.core_core-backported-fixes_1.0.0/META-INF_androidx_core_core-backported-fixes_LICENSE.txt"
+    ],
+    "noticeStatus": "preserved"
+  },
+  {
     "coordinate": "androidx.core:core-ktx:1.13.1",
     "sha256": "19ba50d094c7368ede1b4ccf1195ceb83e35970736593f823e5af716f8d05d70",
     "pomLicenses": [
@@ -584,8 +654,8 @@
     "noticeStatus": "POM declaration only; see full upstream license texts"
   },
   {
-    "coordinate": "androidx.exifinterface:exifinterface:1.4.1",
-    "sha256": "17e17a6b86bb54074d3a7ecfa695ab920eaff4cf667a8371ed82e377580cfcf6",
+    "coordinate": "androidx.exifinterface:exifinterface:1.4.2",
+    "sha256": "6bb2b68682a2023c55f35f941444ffea0157947b061e4fd7606ba935e2e77425",
     "pomLicenses": [
       {
         "name": "The Apache Software License, Version 2.0",
@@ -593,7 +663,7 @@
       }
     ],
     "embeddedNoticeFiles": [
-      "third-party/runtime-notices/androidx.exifinterface_exifinterface_1.4.1/META-INF_androidx_exifinterface_exifinterface_LICENSE.txt"
+      "third-party/runtime-notices/androidx.exifinterface_exifinterface_1.4.2/META-INF_androidx_exifinterface_exifinterface_LICENSE.txt"
     ],
     "noticeStatus": "preserved"
   },
@@ -814,6 +884,42 @@
     "noticeStatus": "POM declaration only; see full upstream license texts"
   },
   {
+    "coordinate": "androidx.media3:media3-common:1.9.0",
+    "sha256": "714114bf8a56fe44f0f78b499ae7ea3bed52391313794c8abdc1b687700d42aa",
+    "pomLicenses": [
+      {
+        "name": "The Apache Software License, Version 2.0",
+        "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      }
+    ],
+    "embeddedNoticeFiles": [],
+    "noticeStatus": "POM declaration only; see full upstream license texts"
+  },
+  {
+    "coordinate": "androidx.media3:media3-container:1.9.0",
+    "sha256": "f73cea4fe8a2bf9eb6462bfb7a547d1aaf55395d0007eed6fadb129b56927c0d",
+    "pomLicenses": [
+      {
+        "name": "The Apache Software License, Version 2.0",
+        "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      }
+    ],
+    "embeddedNoticeFiles": [],
+    "noticeStatus": "POM declaration only; see full upstream license texts"
+  },
+  {
+    "coordinate": "androidx.media3:media3-muxer:1.9.0",
+    "sha256": "452b182d84cfe20d1154d999107b9aac7c218ad8ee208d35d067916a92a02031",
+    "pomLicenses": [
+      {
+        "name": "The Apache Software License, Version 2.0",
+        "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      }
+    ],
+    "embeddedNoticeFiles": [],
+    "noticeStatus": "POM declaration only; see full upstream license texts"
+  },
+  {
     "coordinate": "androidx.profileinstaller:profileinstaller:1.4.0",
     "sha256": "d502141fcce902430f62b674c32aecd0f75262e7ee2cd15c74adb617cd13130a",
     "pomLicenses": [
@@ -864,28 +970,32 @@
     "noticeStatus": "POM declaration only; see full upstream license texts"
   },
   {
-    "coordinate": "androidx.tracing:tracing-ktx:1.2.0",
-    "sha256": "c33f9cbd931e6190ca38aa09bf8a7a8a19391d4b0fb7a7605a6b59f2d42580d1",
+    "coordinate": "androidx.tracing:tracing-android:1.3.0",
+    "sha256": "f59782bbe3470a6b0c531cef262dd1fc9d9a0233490bb5e6d553e1fe6a1816b2",
     "pomLicenses": [
       {
         "name": "The Apache Software License, Version 2.0",
         "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
       }
     ],
-    "embeddedNoticeFiles": [],
-    "noticeStatus": "POM declaration only; see full upstream license texts"
+    "embeddedNoticeFiles": [
+      "third-party/runtime-notices/androidx.tracing_tracing-android_1.3.0/META-INF_androidx_tracing_tracing_LICENSE.txt"
+    ],
+    "noticeStatus": "preserved"
   },
   {
-    "coordinate": "androidx.tracing:tracing:1.2.0",
-    "sha256": "6faa90390d1fdbf0adb9a99bf99de67b94c6c6f35aea9510593a9d17973736a2",
+    "coordinate": "androidx.tracing:tracing-ktx:1.3.0",
+    "sha256": "7df502d572295cf23c6da4a38b3f199a4794dfcd947780cd36110eea407a0a4d",
     "pomLicenses": [
       {
         "name": "The Apache Software License, Version 2.0",
         "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
       }
     ],
-    "embeddedNoticeFiles": [],
-    "noticeStatus": "POM declaration only; see full upstream license texts"
+    "embeddedNoticeFiles": [
+      "third-party/runtime-notices/androidx.tracing_tracing-ktx_1.3.0/META-INF_androidx_tracing_tracing-ktx_LICENSE.txt"
+    ],
+    "noticeStatus": "preserved"
   },
   {
     "coordinate": "androidx.vectordrawable:vectordrawable-animated:1.1.0",
@@ -943,9 +1053,71 @@
     "noticeStatus": "POM declaration only; see full upstream license texts"
   },
   {
-    "coordinate": "com.google.guava:listenablefuture:1.0",
-    "sha256": "e4ad7607e5c0477c6f890ef26a49cb8d1bb4dffb650bab4502afee64644e3069",
+    "coordinate": "com.google.code.findbugs:jsr305:3.0.2",
+    "sha256": "766ad2a0783f2687962c8ad74ceecc38a28b9f72a2d085ee438b7813e928d0c7",
+    "pomLicenses": [
+      {
+        "name": "The Apache Software License, Version 2.0",
+        "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      }
+    ],
+    "embeddedNoticeFiles": [],
+    "noticeStatus": "POM declaration only; see full upstream license texts"
+  },
+  {
+    "coordinate": "com.google.dagger:dagger:2.59",
+    "sha256": "94d5b23812cc12fa903c9ac4a42978e7e7b2622e6b51c17f8b12037ceece43cd",
+    "pomLicenses": [
+      {
+        "name": "Apache 2.0",
+        "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+      }
+    ],
+    "embeddedNoticeFiles": [],
+    "noticeStatus": "POM declaration only; see full upstream license texts"
+  },
+  {
+    "coordinate": "com.google.errorprone:error_prone_annotations:2.28.0",
+    "sha256": "f3fc8a3a0a4020706a373b00e7f57c2512dd26d1f83d28c7d38768f8682b231e",
+    "pomLicenses": [
+      {
+        "name": "Apache 2.0",
+        "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      }
+    ],
+    "embeddedNoticeFiles": [],
+    "noticeStatus": "POM declaration only; see full upstream license texts"
+  },
+  {
+    "coordinate": "com.google.guava:failureaccess:1.0.2",
+    "sha256": "8a8f81cf9b359e3f6dfa691a1e776985c061ef2f223c9b2c80753e1b458e8064",
     "pomLicenses": [],
+    "embeddedNoticeFiles": [],
+    "noticeStatus": "POM declaration only; see full upstream license texts"
+  },
+  {
+    "coordinate": "com.google.guava:guava:33.3.1-android",
+    "sha256": "2c3e41d1b380f2044d257947a3aa82dabf3ae4b978622745254aa18b6cf89ab0",
+    "pomLicenses": [],
+    "embeddedNoticeFiles": [],
+    "noticeStatus": "POM declaration only; see full upstream license texts"
+  },
+  {
+    "coordinate": "com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava",
+    "sha256": "b372a037d4230aa57fbeffdef30fd6123f9c0c2db85d0aced00c91b974f33f99",
+    "pomLicenses": [],
+    "embeddedNoticeFiles": [],
+    "noticeStatus": "POM declaration only; see full upstream license texts"
+  },
+  {
+    "coordinate": "com.google.j2objc:j2objc-annotations:3.0.0",
+    "sha256": "88241573467ddca44ffd4d74aa04c2bbfd11bf7c17e0c342c94c9de7a70a7c64",
+    "pomLicenses": [
+      {
+        "name": "Apache License, Version 2.0",
+        "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      }
+    ],
     "embeddedNoticeFiles": [],
     "noticeStatus": "POM declaration only; see full upstream license texts"
   },
@@ -962,12 +1134,60 @@
     "noticeStatus": "POM declaration only; see full upstream license texts"
   },
   {
+    "coordinate": "jakarta.inject:jakarta.inject-api:2.0.1",
+    "sha256": "f7dc98062fccf14126abb751b64fab12c312566e8cbdc8483598bffcea93af7c",
+    "pomLicenses": [
+      {
+        "name": "The Apache Software License, Version 2.0",
+        "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      }
+    ],
+    "embeddedNoticeFiles": [
+      "third-party/runtime-notices/jakarta.inject_jakarta.inject-api_2.0.1/META-INF_LICENSE.txt",
+      "third-party/runtime-notices/jakarta.inject_jakarta.inject-api_2.0.1/META-INF_NOTICE.md"
+    ],
+    "noticeStatus": "preserved"
+  },
+  {
+    "coordinate": "javax.inject:javax.inject:1",
+    "sha256": "91c77044a50c481636c32d916fd89c9118a72195390452c81065080f957de7ff",
+    "pomLicenses": [],
+    "embeddedNoticeFiles": [],
+    "noticeStatus": "POM declaration only; see full upstream license texts"
+  },
+  {
+    "coordinate": "org.checkerframework:checker-qual:3.43.0",
+    "sha256": "3fbc2e98f05854c3df16df9abaa955b91b15b3ecac33623208ed6424640ef0f6",
+    "pomLicenses": [
+      {
+        "name": "The MIT License",
+        "url": "http://opensource.org/licenses/MIT"
+      }
+    ],
+    "embeddedNoticeFiles": [
+      "third-party/runtime-notices/org.checkerframework_checker-qual_3.43.0/META-INF_LICENSE.txt"
+    ],
+    "noticeStatus": "preserved"
+  },
+  {
     "coordinate": "org.jetbrains.kotlin:kotlin-stdlib:2.2.20",
     "sha256": "8836ccffd3585fadda9901244b20d42901d2f3cd581058d8434e2ffabcf3a3e7",
     "pomLicenses": [
       {
         "name": "Apache-2.0",
         "url": "http://www.apache.org/licenses/LICENSE-2.0.txt"
+      }
+    ],
+    "embeddedNoticeFiles": [],
+    "noticeStatus": "POM declaration only; see full upstream license texts"
+  },
+  {
+    "coordinate": "org.jetbrains.kotlinx:atomicfu-jvm:0.28.0",
+    "sha256": "39576ec46b83412ff7a2909d24cccbba90400e91f9aa67b250309bc0872ecf52",
+    "pomLicenses": [
+      {
+        "name": "Apache-2.0",
+        "url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
       }
     ],
     "embeddedNoticeFiles": [],
