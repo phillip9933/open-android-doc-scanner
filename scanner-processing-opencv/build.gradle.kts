@@ -9,7 +9,7 @@ dependencies { api(project(":scanner-core")); implementation(files("libs/opencv-
     compileOnly(annotations)
     // ExifInterface also brings annotations at runtime. Keep both classpaths consistent.
     constraints { runtimeOnly(annotations) }
-    implementation("com.microsoft.onnxruntime:onnxruntime-android:1.24.1")
+    implementation("com.microsoft.onnxruntime:onnxruntime-android:1.32.0")
     androidTestImplementation("androidx.test.ext:junit:1.2.1"); androidTestImplementation("androidx.test:runner:1.6.2") }
 
 
