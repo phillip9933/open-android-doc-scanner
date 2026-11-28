@@ -1,6 +1,6 @@
 # Architecture and decisions
 
-Each scanning flow creates one private in-memory session. The sample can reopen its last completed export, but has no full historical library. No account, upload, model download, network permission, analytics or licensing endpoint exists. Optional OCR is available through scanner-core contracts and scanner-ocr-tesseract; hosts supply local models.
+Each scanning flow creates one private in-memory session. The sample can reopen its last completed export, but has no full historical library. Scanning requires no account, upload, model download or internet access. See [camera permissions](INTEGRATION.md#camera-permissions) for the network-state permission in the CameraX dependency graph. Optional OCR is available through scanner-core contracts and scanner-ocr-tesseract; hosts supply local models.
 
 ## Scope
 
@@ -16,7 +16,7 @@ This public Android library combines native/mobile controls and library distribu
 
 ## Platform
 
-Android API 26 minimum, compile/target 36, Java 17 bytecode. API 26 avoids legacy storage/platform lifecycle support; OpenCloud and Kura actual minimum/API compatibility still requires host acceptance. No changes made to either host repository. Native targets arm64-v8a for modern devices and x86_64 for emulators. 32-bit devices are excluded intentionally. AGP 8.13.2, Gradle 8.13, Kotlin 2.2.20 and CameraX 1.4.2 pinned. OpenCV 4.12.0 Java wrappers accompany source-built core/imgproc/JNI only, using NDK 28.2.13676358. Stock AAR native binaries are excluded because the x86 configuration includes IPP. Exact source/toolchain/flags/notices are retained. Both ABIs pass ELF/ZIP 16 KB alignment; the final x86_64 processing/export runtime was executed with PAGE_SIZE=16384. Physical arm64 acceptance remains pending.
+Android API 26 minimum, compile/target 36, Java 17 bytecode. API 26 avoids legacy storage/platform lifecycle support; OpenCloud and Kura actual minimum/API compatibility still requires host acceptance. No changes made to either host repository. Native targets arm64-v8a for modern devices and x86_64 for emulators. 32-bit devices are excluded intentionally. AGP 8.13.2, Gradle 8.13, Kotlin 2.2.20 and CameraX 1.7.0 pinned. OpenCV 4.12.0 Java wrappers accompany source-built core/imgproc/JNI only, using NDK 28.2.13676358. Stock AAR native binaries are excluded because the x86 configuration includes IPP. Exact source/toolchain/flags/notices are retained. Both ABIs pass ELF/ZIP 16 KB alignment; the final x86_64 processing/export runtime was executed with PAGE_SIZE=16384. Physical arm64 acceptance remains pending.
 
 ## Ownership and interruption
 

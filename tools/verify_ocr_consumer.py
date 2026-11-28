@@ -11,6 +11,8 @@ import re
 import subprocess
 import zipfile
 
+from audit_release import apk_permissions
+
 root = Path(__file__).resolve().parents[1]
 version = re.search(r'allprojects\s*\{[^}]*version\s*=\s*"([^"]+)"', (root/'build.gradle.kts').read_text()).group(1)
 archive = root/'release'/f'open-android-doc-scanner-{version}-sdk-maven.zip'
@@ -38,7 +40,13 @@ for flavor in ('plain','ocr'):
     module=work/flavor
     source=module/'src/main/java/example'
     source.mkdir(parents=True,exist_ok=True)
-    (module/'src/main/AndroidManifest.xml').write_text('<manifest xmlns:android="http://schemas.android.com/apk/res/android"><application android:label="Scanner consumer" /></manifest>')
+    # Exercise both a default host and the documented host permission opt-out.
+    opt_out = ('<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" tools:node="remove" />'
+               if flavor == 'ocr' else '')
+    (module/'src/main/AndroidManifest.xml').write_text(
+        '<manifest xmlns:android="http://schemas.android.com/apk/res/android" '
+        'xmlns:tools="http://schemas.android.com/tools">' + opt_out +
+        '<application android:label="Scanner consumer" /></manifest>')
     deps='implementation("dev.offlinescan:scanner-ui-compose:'+version+'"); implementation("dev.offlinescan:scanner-processing-opencv:'+version+'")'
     if flavor=='ocr': deps+='; implementation("dev.offlinescan:scanner-ocr-tesseract:'+version+'")'
     (module/'build.gradle.kts').write_text('''plugins { id("com.android.application"); kotlin("android") }
@@ -64,11 +72,15 @@ report={'sdk_version':version,'archive_sha256':hashlib.sha256(archive.read_bytes
 for flavor in ('plain','ocr'):
     apk=work/flavor/f'build/outputs/apk/debug/{flavor}-debug.apk'
     with zipfile.ZipFile(apk) as z:
+        permissions = apk_permissions(z.read('AndroidManifest.xml'))
+        assert 'android.permission.INTERNET' not in permissions, (flavor, permissions)
+        has_network_state = 'android.permission.ACCESS_NETWORK_STATE' in permissions
+        assert has_network_state == (flavor == 'plain'), (flavor, permissions)
         names=z.namelist()
         native=[n for n in names if n.startswith('lib/') and n.endswith('.so')]
         ocr_libs=[n for n in native if n.endswith('/libtesseract.so')]
         assert bool(ocr_libs)==(flavor=='ocr'), (flavor,ocr_libs)
         assert not any(n.endswith('.traineddata') for n in names), 'Models must remain host-owned'
-        report['consumers'][flavor]={'apk_sha256':hashlib.sha256(apk.read_bytes()).hexdigest(),'native_libraries':native,'models_bundled':False,'ocr_bundled':bool(ocr_libs)}
+        report['consumers'][flavor]={'apk_sha256':hashlib.sha256(apk.read_bytes()).hexdigest(),'native_libraries':native,'models_bundled':False,'ocr_bundled':bool(ocr_libs),'permissions':permissions}
 (root/'evidence/ocr-consumer-validation.json').write_text(json.dumps(report,indent=2)+'\n')
 print('Independent plain/OCR hosts compiled from archived Maven artifacts; optional native/model ownership checks passed.')

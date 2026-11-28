@@ -10,7 +10,7 @@ dependencies { implementation(project(":scanner-ui-compose")); implementation(pr
 dependencies {
     androidTestImplementation(project(":scanner-camera"))
     androidTestImplementation(project(":scanner-processing-opencv"))
-    androidTestImplementation("androidx.camera:camera-view:1.4.2")
+    androidTestImplementation(libs.camera.view)
     androidTestImplementation("androidx.test:rules:1.6.1")
     androidTestImplementation(platform("androidx.compose:compose-bom:2025.04.01"))
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
