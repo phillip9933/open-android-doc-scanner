@@ -12,6 +12,10 @@ Use JDK 17 or 21, Android SDK platform 36 and NDK 28.2.13676358. Set `ANDROID_HO
 
 CI uses JDK 21 and build-tools 35.0.0. [Native build reproduction](docs/NATIVE-BUILD.md) covers rebuilding the bundled native libraries; it is separate from ordinary Kotlin/app builds.
 
+## Dependency updates
+
+Dependabot checks the root Gradle build and GitHub Actions each week. Review each update in its own pull request. For a Gradle update, review the affected entries in `gradle/verification-metadata.xml` against the upstream artifacts. For an action update, verify the full commit ID against the publisher’s release. Run the build and audit checks before merging. Bundled native libraries and model assets have separate update and provenance instructions in [Native build reproduction](docs/NATIVE-BUILD.md) and [OCR integration](docs/OCR.md).
+
 ## Choose tests by change
 
 | Change | Validation |
