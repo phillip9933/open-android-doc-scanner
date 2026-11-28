@@ -1,14 +1,29 @@
 # Open Android Doc Scanner
 
-Independent Apache-2.0 Android document and printed-photo scanner. Kotlin, CameraX, OpenCV and Compose. Core processing works offline without Google Play services, cloud, API keys or model downloads. No network permission or analytics.
+An offline Android SDK for scanning documents, cards and printed photos. Add the Compose scanner to an app, or use the image processing and export modules with your own interface.
 
 <a href="https://github.com/phillip9933/open-android-doc-scanner/releases/tag/v1.1.0"><img src="docs/badges/github-releases.svg" alt="Download Scanner SDK 1.1.0 from GitHub Releases" height="40"></a>
 
 **Support:** [Buy me a coffee](https://buymeacoffee.com/phillip9933) · [GitHub Sponsors](https://github.com/sponsors/phillip9933)
 
-**Scanner SDK 1.1.0** finds angled pages sooner, keeps the full border on two-tone cards, and reduces show-through while preserving pencil and colored marks. See the [1.1.0 release notes](docs/RELEASE-1.1.0.md).
+## Features
 
-[Download SDK 1.1.0](https://github.com/phillip9933/open-android-doc-scanner/releases/tag/v1.1.0) · [Documentation](docs/INDEX.md) · [CI](https://github.com/phillip9933/open-android-doc-scanner/actions)
+- Detect page edges in the camera preview, capture automatically when the page is steady, and let the user correct the crop.
+- Adjust contrast and reduce shadows and show-through on documents. Use Photo mode to preserve color and detail on printed photos.
+- Review and reorder pages, export a PDF or page images, or capture the front and back of a card.
+- Read printed English and Japanese text with the optional OCR module. It returns text, word positions and confidence scores. The host app supplies the language files and decides how to use the results.
+
+## Screenshots
+
+These Android emulator captures show the sample app with synthetic pages. The camera is from RC4 and the review screen is from RC10.
+
+<img src="evidence/rc4-camera-fullscreen-16k.png" alt="Scanner camera with the capture controls below the viewfinder" width="220"> <img src="evidence/rc10-review-large.png" alt="Page review with large text and controls for editing the scan" width="220">
+
+See the [scanner design and capture details](docs/design.md).
+
+## Add the SDK to an app
+
+The SDK supports Android 8.0 (API 26) and later on `arm64-v8a` and `x86_64`. Download the Maven ZIP and `SHA256SUMS` from the [1.1.0 release](https://github.com/phillip9933/open-android-doc-scanner/releases/tag/v1.1.0). In the download directory, run `sha256sum --check SHA256SUMS`. Extract the ZIP and add its `maven` directory to the host’s Gradle repositories. Use version `1.1.0` for all scanner modules. See the [release notes](docs/RELEASE-1.1.0.md) and [integration guide](docs/INTEGRATION.md).
 
 ## Roadmap and work
 
@@ -30,11 +45,11 @@ python3 tools/prepare_ocr_test_models.py
 ./gradlew :scanner-processing-opencv:connectedDebugAndroidTest :scanner-export:connectedDebugAndroidTest
 ```
 
-The connected Android test command requires a supported emulator/device. Windows uses `gradlew.bat`. Min Android 26; native arm64-v8a and x86_64. No 32-bit support. The sample reopens its last completed export; it has no full scan library. Host owns naming, persistent storage, sharing and cleanup after completion.
+To run the sample on a test device or emulator, use `./gradlew :scanner-sample:installDebug` and open **Offline Scanner**. The connected Android test command requires a supported emulator/device. Windows uses `gradlew.bat`. Min Android 26; native arm64-v8a and x86_64. No 32-bit support. The sample reopens its last completed export; it has no full scan library. Host owns naming, persistent storage, sharing and cleanup after completion.
 
 ## Optional OCR
 
-The 0.8.0 SDK adds `scanner-ocr-tesseract` for offline English/Japanese text recognition, including word positions and confidence. Apps supply local language models. Existing apps keep their current dependencies unless they opt in. See [OCR integration and card scanning](docs/OCR.md).
+Add `dev.offlinescan:scanner-ocr-tesseract:1.1.0` to use offline text recognition. Bundle the approved English and Japanese language files with the host app. The SDK archive includes the OCR engine. The language files for the sample debug build come from the model preparation command above. See [OCR integration and card scanning](docs/OCR.md).
 
 ## Ready-made flow
 
@@ -80,25 +95,19 @@ Config bounds quality/dimensions/pages/input pixels. Renders may be smaller due 
 Read [integration examples](docs/INTEGRATION.md), [architecture and ownership](docs/ARCHITECTURE.md), [reuse assessment](docs/REUSE-DECISION.md), [third-party notices](THIRD-PARTY-NOTICES.md).
 
 
-Earlier release: [0.7.0](docs/RELEASE-0.7.0.md), with native-detail rendering, neutral paper cleanup, clearer previews and accessible sample exports. The optional `ScannerFlow.saveDestination` host UI slot remains available. Automatic capture waits for focus, compares two untouched JPEG originals, and keeps the sharper acceptable document; rejected captures retry without adding a page. Sharpness and brightness come from the document interior. Settings offers AI (default in the sample and ready-made flow, using bundled DocQuadNet-256 CPU inference) and Standard (OpenCV edges/contours). Generated printed-document results are promising, including a torn corner; sparse synthetic scenes are substantially weaker than Standard. See [learned-model evidence and licensing limits](docs/LEARNED-DETECTOR-RC8.md) and [quality checks](docs/QUALITY-METRICS-RC8.md). Physical handheld and sustained arm64 acceptance remain pending.
+## Privacy and security
 
-The fullscreen camera keeps its layout as pages are added. Review and save use swipe navigation, adjacent-page peeks and cached previews. Back preserves pages; retake, delete and close confirm discards. Save supports real output names and PDF/JPEG. Advanced adjustments and detection mode stay in secondary panels. Simultaneous multi-document scanning remains deferred.
-
-RC10 adds per-page Auto enhancement for documents, receipts and cards, stronger bounded paper-lighting cleanup, manual filter overrides, and pinch zoom/pan in review and filter previews. Photograph mode retains Photo. See [enhancement evidence and limits](docs/ENHANCEMENT-RC10.md).
+The SDK processes scans on the device without network permission, analytics or a cloud service. The Compose flow uses the camera permission for capture and the Android document picker for import. The host app controls how it stores, shares and deletes the exported files. See [security reporting](SECURITY.md).
 
 ## Contribute
 
 Start with [Contributing](CONTRIBUTING.md) for setup and checks, and [Security](SECURITY.md) for private vulnerability reporting. The [documentation index](docs/README.md) covers integration, architecture and release evidence.
 
-See [quality evidence](docs/QUALITY-REPORT.md), [remaining device acceptance](docs/DEVICE-ACCEPTANCE.md) and [contribution guidance](CONTRIBUTING.md#ai-usage).
+See the [page detector’s model provenance and licensing limits](docs/LEARNED-DETECTOR-RC8.md), [quality evidence](docs/QUALITY-REPORT.md), [remaining device acceptance](docs/DEVICE-ACCEPTANCE.md) and [contribution guidance](CONTRIBUTING.md#ai-usage).
 
 ## License
 
 Original scanner code is licensed under [Apache-2.0](LICENSE). Retain [NOTICE](NOTICE) and [third-party notices](THIRD-PARTY-NOTICES.md); dependencies and model assets retain their own terms.
-
-0.7.0 incorporates the accepted quality5 processing. See [release notes and validation](docs/RELEASE-0.7.0.md). Earlier quality1–quality5 documents preserve the tuning history.
-
-Beta integrations: update all SDK coordinates together and recompile. Download the Maven ZIP and verify `SHA256SUMS` from the release. See [field testing and reports](docs/FIELD-TESTING.md); no personal scans or automatic telemetry are required.
 
 ## AI usage
 

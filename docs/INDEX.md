@@ -10,7 +10,9 @@
 - [0.7.0 historical SDK release](RELEASE-0.7.0.md)
 - [RC11 SDK release (historical)](RELEASE-RC11.md)
 - [Host-app integration](INTEGRATION.md)
+- [Optional OCR and Kura card integration](OCR.md)
 - [Architecture and file ownership](ARCHITECTURE.md)
+- [Scanner interface and visual identity](design.md)
 - [Auto enhancement and zoom](ENHANCEMENT-RC10.md)
 - [Learned detector, measured comparisons and model licensing](LEARNED-DETECTOR-RC8.md)
 - [Capture quality gates](QUALITY-METRICS-RC8.md)
@@ -22,7 +24,5 @@
 - [Future features](BACKLOG.md)
 
 Earlier RC documents and evidence preserve development comparisons. Evidence excludes private documents and personal usage notes. Machine-specific paths in historical build records are redacted; reproduce current build/audit records with the included tools.
-
-- [Optional OCR and Kura card integration (0.8.0)](OCR.md)
 
 - [Field testing and user reports](FIELD-TESTING.md)

@@ -44,7 +44,7 @@ ScannerFlow(config = ScanConfig(mode = ScanMode.CARD, cardFrontBack = true),
 }
 ```
 
-Host explicitly chooses front/back order, categories and attachment rules. The SDK does no verification, OCR, extraction or automatic wallet insertion. Card images can contain sensitive data; host storage/backup policy remains host responsibility.
+Host explicitly chooses front/back order, categories and attachment rules. Card capture returns images. The host can pass them to the [optional OCR module](OCR.md) to read text. The host verifies names and numbers before it adds a card. Card images can contain sensitive data; host storage/backup policy remains host responsibility.
 
 ## Acceptance recipe
 
@@ -56,9 +56,9 @@ Host explicitly chooses front/back order, categories and attachment rules. The S
 
 These examples have not been integrated or accepted in OpenCloud or Kura. No host-specific API names are represented as verified calls.
 
-## 0.7.0 output detail and sample diagnostics
+## Output detail and sample diagnostics
 
-Upgrade all SDK coordinates together to `0.7.0` and recompile. Default rendering allows 8192 pixels per edge and 24MP, bounded by the 384MB working estimate; inspect actual output dimensions and warnings. PDF preserves the per-page render budget regardless of document length.
+Update all scanner modules together and recompile the host. See the [1.1.0 upgrade notes](RELEASE-1.1.0.md). Default rendering allows 8192 pixels per edge and 24MP, bounded by the 384MB working estimate; inspect actual output dimensions and warnings. PDF preserves the per-page render budget regardless of document length.
 
 `includeDiagnostics` defaults to false on ScannerFlow/AndroidExporter. Enabling it retains original copies and rendered JPEG pages in the committed output, exposed as `ScanOutput.diagnostics`; hosts must delete these with the rest of their owned output. The sample enables it for testing and provides sharing, dimensions and 100% viewing. Its Pictures/Download export and last-result reopening are sample features, not automatic SDK host behavior.
 

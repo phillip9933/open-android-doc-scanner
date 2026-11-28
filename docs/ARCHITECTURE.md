@@ -2,6 +2,10 @@
 
 Each scanning flow creates one private in-memory session. The sample can reopen its last completed export, but has no full historical library. No account, upload, model download, network permission, analytics or licensing endpoint exists. Optional OCR is available through scanner-core contracts and scanner-ocr-tesseract; hosts supply local models.
 
+## Scope
+
+This public Android library combines native/mobile controls and library distribution controls. App developers can use the scanner interface or call the processing API. The sample app shows the scanner on a device. The published GitHub release contains a Maven archive and its checksum, not a store app. See the [design guide](design.md) for the sample and the shared scanner interface.
+
 ## Contracts and boundaries
 
 `scanner-core` is Kotlin/JVM with configuration, normalized upright geometry, immutable edit parameters, typed outcomes, processing contracts and owned session files. It has no Android, CameraX, Compose or OpenCV dependency. `ImageProcessor` accepts `File` and returns project value types. Original session images are preserved and every render starts from the original.
