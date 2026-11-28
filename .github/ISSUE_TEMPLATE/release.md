@@ -33,10 +33,10 @@ Link issues; state exclusions. Do not promise unestimated dates.
 - [ ] Scope frozen.
 
 ### RC → Stable
-- [ ] Final candidate validated.
+- [ ] Final candidate validated. Record its commit and the result of the [Daybreak release check](https://github.com/phillip9933/open-android-doc-scanner/blob/main/docs/RELEASE.md#daybreak-release-check) before tagging.
 - [ ] Release notes and known limitations ready.
 - [ ] Signed/checksummed artifacts verified where applicable.
-- [ ] Release published.
+- [ ] Release published. Confirm the tag resolves to the evaluated candidate commit.
 
 ## Dependencies and remaining blockers
 
