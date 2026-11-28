@@ -13,7 +13,7 @@ android {
 }
 dependencies {
     api(project(":scanner-core"))
-    implementation("androidx.annotation:annotation:1.3.0")
+    implementation("androidx.annotation:annotation:1.11.0")
     testImplementation(kotlin("test"))
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
     androidTestImplementation("androidx.test:runner:1.6.2")
