@@ -27,6 +27,14 @@ implementation("dev.offlinescan:scanner-ocr-tesseract:1.1.0")
 
 Before publishing, validate the exact versioned archive, independent consumers, checksums and notes. Publish a GitHub prerelease for beta tags and preserve the latest stable release. Pushing a stable version tag such as `v1.1.0` runs the build and audit workflow. After both independent consumers pass, Actions publishes the verified SDK ZIP and checksum as the latest GitHub release. Real-world beta feedback is permitted before stable acceptance; unverified gates stay open. See [FIELD-TESTING.md](FIELD-TESTING.md).
 
+## Daybreak release check
+
+Before pushing a stable tag, record the candidate commit with `git rev-parse HEAD`. Check Daybreak for a successful scan of that exact commit in this repository. Review all open repository findings against the candidate, including findings from earlier scans. Test each applicable fix. If a fix changes the candidate, repeat the check on the new commit.
+
+Keep finding details and test evidence in the private security record. In the release tracker, record the candidate commit and the gate result. List any scan coverage gap separately from unresolved findings. Keep the gate open while a scan is missing, pending or failed, or while a release-blocking finding remains open.
+
+After publication, resolve the release tag to its commit with `git rev-parse 'TAG^{commit}'` (replace `TAG` with the published tag). Compare it with the recorded candidate commit. If the commits differ, reopen the gate and verify the published revision.
+
 ## Evidence commands and historical validation
 
 Use connected supported emulators/devices for `connectedDebugAndroidTest` on processing, export and sample. To preserve benchmark JSON before test-app uninstall, install the processing test APK directly, run `adb shell am instrument -w dev.offlinescan.processing.test/androidx.test.runner.AndroidJUnitRunner`, then pull its external-files benchmark/resource JSON. Inspect `getconf PAGE_SIZE` for a16KB emulator; don't infer page size from ABI/name alone.
