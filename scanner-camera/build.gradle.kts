@@ -5,7 +5,7 @@ android { namespace="dev.offlinescan.camera"; compileSdk=36; ndkVersion="28.2.13
     kotlinOptions { jvmTarget="17" }
 }
 dependencies { api(project(":scanner-core")); implementation(project(":scanner-processing-opencv"))
-    api("androidx.camera:camera-view:1.4.2"); implementation("androidx.camera:camera-camera2:1.4.2"); implementation("androidx.camera:camera-lifecycle:1.4.2")
+    api("androidx.camera:camera-view:1.4.2"); implementation("androidx.camera:camera-camera2:1.7.0"); implementation("androidx.camera:camera-lifecycle:1.4.2")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.7"); testImplementation("junit:junit:4.13.2") }
 
 
